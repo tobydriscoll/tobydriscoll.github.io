@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{center}
+  \bf Exercises
+\end{center}
+
+\begin{enumerate}
+\item Here is data on how much distance $d$ is required for a car to
+  stop when it is moving with speed $v$. 
+  \begin{tabular}{crrrrrrr}
+    v & 0 & 10 & 20 & 30 & 40 & 50 & 60 \\
+    d & 0 & 5 & 20 & 46 & 70 & 102 & 153
+  \end{tabular}
+  What is the maximum speed of the car if it is to stop with $d=60$?
+  Compute two ways.
+  \begin{enumerate}
+  \item Interpolate $v$ as a function of $d$ using a cubic spline.
+  \item Interpolate $d$ as a function of $v$ and apply \texttt{fzero}.
+  \end{enumerate}
+  Compare the answers.
+
+
+
+\end{enumerate}
+
+\end{document}
