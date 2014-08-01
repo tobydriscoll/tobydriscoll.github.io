@@ -1,0 +1,346 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>morning1</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-08-01"><meta name="DC.source" content="morning1.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+      });
+    </script></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Making matrices</a></li><li><a href="#5">Loops</a></li><li><a href="#8">No loops</a></li><li><a href="#10">Other 'atomic' operations</a></li></ul></div><h2>Making matrices<a name="1"></a></h2><p>Toby Driscoll, July 2014</p><pre class="codeinput">clear, close <span class="string">all</span>
+</pre><p>Suppose we want to construct the <span class="MathJax_Preview"><img src="morning1_eq68137.png" alt="$n\times n$"></span><script type="math/tex">n\times n</script> matrix whose <span class="MathJax_Preview"><img src="morning1_eq32240.png" alt="$(i,j)$"></span><script type="math/tex">(i,j)</script> entry is 1 if <span class="MathJax_Preview"><img src="morning1_eq73220.png" alt="$i=j$"></span><script type="math/tex">i=j</script>, <span class="MathJax_Preview"><img src="morning1_eq82919.png" alt="$-2$"></span><script type="math/tex">-2</script> if <span class="MathJax_Preview"><img src="morning1_eq61067.png" alt="$|i-j|=1$"></span><script type="math/tex">|i-j|=1</script>, and zero otherwise.</p><p>We're always free to type in the elements one by one.</p><pre class="codeinput">A = [ 1 -2 0 0 0 0 0;
+      0 1 -2 1 0 0 0;
+      0 0 1 -2 1 0 0;
+      0 0 0 1 -2 1 0;
+      0 0 0 0 1 -2 1;
+      0 0 0 0 0 1 -2 ]
+</pre><pre class="codeoutput">
+A =
+
+     1    -2     0     0     0     0     0
+     0     1    -2     1     0     0     0
+     0     0     1    -2     1     0     0
+     0     0     0     1    -2     1     0
+     0     0     0     0     1    -2     1
+     0     0     0     0     0     1    -2
+
+</pre><p>What a drag. And what if <span class="MathJax_Preview"><img src="morning1_eq53139.png" alt="$n=1000$"></span><script type="math/tex">n=1000</script>...?</p><h2>Loops<a name="5"></a></h2><p>Here's an easy method for any size, using a pair of nested loops.</p><pre class="codeinput">n = 7;
+<span class="keyword">for</span> i = 1:n
+    <span class="keyword">for</span> j = 1:n
+        <span class="keyword">if</span> i==j
+            A(i,j) = 1;
+        <span class="keyword">elseif</span> abs(i-j)==1
+            A(i,j) = -2;
+        <span class="keyword">else</span>
+            A(i,j) = 0;
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+A
+</pre><pre class="codeoutput">
+A =
+
+     1    -2     0     0     0     0     0
+    -2     1    -2     0     0     0     0
+     0    -2     1    -2     0     0     0
+     0     0    -2     1    -2     0     0
+     0     0     0    -2     1    -2     0
+     0     0     0     0    -2     1    -2
+     0     0     0     0     0    -2     1
+
+</pre><p>That's straightforward but not exactly compact. You could do better in this case with just one loop, filling in just the nonzeros.</p><pre class="codeinput">n = 7;
+A = zeros(n);   <span class="comment">% start with all zero n by n</span>
+A(1,1) = 1;  A(1,2) = -2;
+<span class="keyword">for</span> i = 2:n-1
+    A(i,i) = 1;
+    A(i,i-1) = -2;
+    A(i,i+1) = -2;
+<span class="keyword">end</span>
+A(n,n-1) = -2;  A(n,n) = 1;
+A
+</pre><pre class="codeoutput">
+A =
+
+     1    -2     0     0     0     0     0
+    -2     1    -2     0     0     0     0
+     0    -2     1    -2     0     0     0
+     0     0    -2     1    -2     0     0
+     0     0     0    -2     1    -2     0
+     0     0     0     0    -2     1    -2
+     0     0     0     0     0    -2     1
+
+</pre><p>We could even shorten the lines inside the loop to <tt>A(i,i-1:i+1)=[-2,1,-2]</tt>.</p><h2>No loops<a name="8"></a></h2><p>Note, however, that <span class="MathJax_Preview"><img src="morning1_eq31461.png" alt="$A$"></span><script type="math/tex">A</script> is easily described in terms of its diagonals. By using the <tt>diag</tt> command, it's easy to construct it with no loops at all.</p><pre class="codeinput">A = diag(ones(1,n)) + diag(-2*ones(1,n-1),1) + diag(-2*ones(1,n-1),-1)
+</pre><pre class="codeoutput">
+A =
+
+     1    -2     0     0     0     0     0
+    -2     1    -2     0     0     0     0
+     0    -2     1    -2     0     0     0
+     0     0    -2     1    -2     0     0
+     0     0     0    -2     1    -2     0
+     0     0     0     0    -2     1    -2
+     0     0     0     0     0    -2     1
+
+</pre><p>Easiest of all is if you know that a matrix defined by <span class="MathJax_Preview"><img src="morning1_eq54754.png" alt="$a_{i,j}=a_{i-j}$"></span><script type="math/tex">a_{i,j}=a_{i-j}</script> is called a Toeplitz matrix, and there is a command for building them.</p><pre class="codeinput">A = toeplitz( [1 -2 zeros(1,n-2) ] )
+</pre><pre class="codeoutput">
+A =
+
+     1    -2     0     0     0     0     0
+    -2     1    -2     0     0     0     0
+     0    -2     1    -2     0     0     0
+     0     0    -2     1    -2     0     0
+     0     0     0    -2     1    -2     0
+     0     0     0     0    -2     1    -2
+     0     0     0     0     0    -2     1
+
+</pre><h2>Other 'atomic' operations<a name="10"></a></h2><p>In addition to <tt>zeros</tt>, <tt>diag</tt>, and <tt>toeplitz</tt>, there are other commands to make common matrix building blocks without loops.</p><pre class="codeinput">I = eye(5)
+J = ones(5)
+</pre><pre class="codeoutput">
+I =
+
+     1     0     0     0     0
+     0     1     0     0     0
+     0     0     1     0     0
+     0     0     0     1     0
+     0     0     0     0     1
+
+
+J =
+
+     1     1     1     1     1
+     1     1     1     1     1
+     1     1     1     1     1
+     1     1     1     1     1
+     1     1     1     1     1
+
+</pre><pre class="codeinput">U = triu(J)
+L = tril(J,1)
+</pre><pre class="codeoutput">
+U =
+
+     1     1     1     1     1
+     0     1     1     1     1
+     0     0     1     1     1
+     0     0     0     1     1
+     0     0     0     0     1
+
+
+L =
+
+     1     1     0     0     0
+     1     1     1     0     0
+     1     1     1     1     0
+     1     1     1     1     1
+     1     1     1     1     1
+
+</pre><pre class="codeinput">R = rand(5)      <span class="comment">% uniform random in [0,1]</span>
+N = randn(5)     <span class="comment">% normal random</span>
+</pre><pre class="codeoutput">
+R =
+
+    0.8147    0.0975    0.1576    0.1419    0.6557
+    0.9058    0.2785    0.9706    0.4218    0.0357
+    0.1270    0.5469    0.9572    0.9157    0.8491
+    0.9134    0.9575    0.4854    0.7922    0.9340
+    0.6324    0.9649    0.8003    0.9595    0.6787
+
+
+N =
+
+    1.0347    0.8884    1.4384   -0.1022   -0.0301
+    0.7269   -1.1471    0.3252   -0.2414   -0.1649
+   -0.3034   -1.0689   -0.7549    0.3192    0.6277
+    0.2939   -0.8095    1.3703    0.3129    1.0933
+   -0.7873   -2.9443   -1.7115   -0.8649    1.1093
+
+</pre><pre class="codeinput">x = 0:0.2:1             <span class="comment">% equally spaced with given spacing</span>
+y = linspace(0,1,6)     <span class="comment">% equally spaced with given number</span>
+</pre><pre class="codeoutput">
+x =
+
+         0    0.2000    0.4000    0.6000    0.8000    1.0000
+
+
+y =
+
+         0    0.2000    0.4000    0.6000    0.8000    1.0000
+
+</pre><pre class="codeinput">xtrans = x'             <span class="comment">% transpose</span>
+</pre><pre class="codeoutput">
+xtrans =
+
+         0
+    0.2000
+    0.4000
+    0.6000
+    0.8000
+    1.0000
+
+</pre><pre class="codeinput">R = repmat(x',[1 3])    <span class="comment">% copy some matrix over and over</span>
+</pre><pre class="codeoutput">
+R =
+
+         0         0         0
+    0.2000    0.2000    0.2000
+    0.4000    0.4000    0.4000
+    0.6000    0.6000    0.6000
+    0.8000    0.8000    0.8000
+    1.0000    1.0000    1.0000
+
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 8.1<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Making matrices
+% Toby Driscoll, July 2014
+clear, close all
+
+%% 
+% Suppose we want to construct the $n\times n$ matrix whose $(i,j)$ entry
+% is 1 if $i=j$, $-2$ if $|i-j|=1$, and zero otherwise. 
+%%
+% We're always free to type in the elements one by one.
+A = [ 1 -2 0 0 0 0 0;
+      0 1 -2 1 0 0 0;
+      0 0 1 -2 1 0 0;
+      0 0 0 1 -2 1 0;
+      0 0 0 0 1 -2 1;
+      0 0 0 0 0 1 -2 ]
+  
+%%
+% What a drag. And what if $n=1000$...?
+
+%% Loops
+% Here's an easy method for any size, using a pair of nested loops.
+n = 7;
+for i = 1:n
+    for j = 1:n
+        if i==j
+            A(i,j) = 1;
+        elseif abs(i-j)==1
+            A(i,j) = -2;
+        else
+            A(i,j) = 0;
+        end
+    end
+end
+A
+
+%%
+% That's straightforward but not exactly compact. You could do better in
+% this case with just one loop, filling in just the nonzeros. 
+n = 7;
+A = zeros(n);   % start with all zero n by n
+A(1,1) = 1;  A(1,2) = -2;
+for i = 2:n-1
+    A(i,i) = 1;
+    A(i,i-1) = -2;
+    A(i,i+1) = -2;
+end
+A(n,n-1) = -2;  A(n,n) = 1;
+A
+
+%%
+% We could even shorten the lines inside the loop to
+% |A(i,i-1:i+1)=[-2,1,-2]|. 
+
+%% No loops
+% Note, however, that $A$ is easily described in terms of its diagonals. By
+% using the |diag| command, it's easy to construct it with no loops at
+% all.
+A = diag(ones(1,n)) + diag(-2*ones(1,n-1),1) + diag(-2*ones(1,n-1),-1)
+
+%%
+% Easiest of all is if you know that a matrix defined by
+% $a_{i,j}=a_{i-j}$ is called a Toeplitz matrix, and there is a command for
+% building them. 
+A = toeplitz( [1 -2 zeros(1,n-2) ] )
+
+%% Other 'atomic' operations
+% In addition to |zeros|, |diag|, and |toeplitz|, there are other commands
+% to make common matrix building blocks without loops.
+I = eye(5)
+J = ones(5)
+
+%%
+U = triu(J)
+L = tril(J,1)
+
+%%
+R = rand(5)      % uniform random in [0,1]
+N = randn(5)     % normal random
+
+%%
+x = 0:0.2:1             % equally spaced with given spacing
+y = linspace(0,1,6)     % equally spaced with given number
+
+%%
+xtrans = x'             % transpose
+
+%%
+R = repmat(x',[1 3])    % copy some matrix over and over
+
+
+
+
+
+##### SOURCE END #####
+--></body></html>

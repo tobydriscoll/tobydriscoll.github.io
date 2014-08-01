@@ -1,0 +1,341 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>afternoon</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-08-01"><meta name="DC.source" content="afternoon.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+      });
+    </script></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Interpolation of data</a></li><li><a href="#2">Raw data</a></li><li><a href="#8">Piecewise linear interpolation</a></li><li><a href="#10">Piecewise constant</a></li><li><a href="#11">Piecewise cubic</a></li><li><a href="#14">Interpolation in 2D</a></li></ul></div><h2>Interpolation of data<a name="1"></a></h2><p>Toby Driscoll, July 2014</p><pre class="codeinput">clear, close <span class="string">all</span>
+</pre><h2>Raw data<a name="2"></a></h2><p>Here is some experimental data in a spreadsheet.</p><pre class="codeinput">blink = importdata(<span class="string">'blink_data.xlsx'</span>)
+</pre><pre class="codeoutput">
+blink = 
+
+          data: [133x2 double]
+      textdata: {'Time'  'Raw data'}
+    colheaders: {'Time'  'Raw data'}
+
+</pre><p>We want the numeric part.</p><pre class="codeinput">t = blink.data(:,1);   <span class="comment">% first column</span>
+y = blink.data(:,2);   <span class="comment">% second column</span>
+</pre><pre class="codeinput">plot(t,y,<span class="string">'o'</span>)
+hold <span class="string">on</span>
+</pre><img vspace="5" hspace="5" src="afternoon_01.png" alt=""> <p>Suppose we want to turn these data into a function. One way we already know is the best-fit line, but that is clearly ridiculous in this case.</p><p>While we could 'fit' other kinds of functions, another approach is to interpolate the data: find a function that passes through all the given points. Obviously, there are infinitely many functions that do so, but we have some standard methods, all implemented by the built-in function <tt>interp1</tt>.</p><p>We'll evaluate the candidates at values of t between the given ones.</p><pre class="codeinput">tInterp = linspace(min(t),max(t),10*length(t))';
+</pre><h2>Piecewise linear interpolation<a name="8"></a></h2><p>The simplest idea is to draw a straight line between each neighboring pair of points.</p><pre class="codeinput">y1 = interp1( t, y, tInterp, <span class="string">'linear'</span> );
+plot(tInterp,y1,<span class="string">'b-'</span>)
+</pre><img vspace="5" hspace="5" src="afternoon_02.png" alt=""> <p>It's going to be difficult to tell the methods apart by showing all of the data, so we will zoom in. Also, we'll create a tableau for the different methods.</p><pre class="codeinput">subplot(2,2,1)   <span class="comment">% 4 by 1 array of plots</span>
+plot(t,y,<span class="string">'o'</span>)
+hold <span class="string">on</span>
+plot(tInterp,y1,<span class="string">'b-'</span>)
+xlim([36 41])
+</pre><img vspace="5" hspace="5" src="afternoon_03.png" alt=""> <h2>Piecewise constant<a name="10"></a></h2><p>A different interpolation method is to find a piecewise constant approximation--take on the y-value of the nearest point.</p><pre class="codeinput">y2 = interp1( t, y, tInterp, <span class="string">'nearest'</span> );
+subplot(2,2,2)
+plot(t,y,<span class="string">'o'</span>)
+hold <span class="string">on</span>
+plot(tInterp,y2,<span class="string">'b-'</span>)
+xlim([36 41])
+</pre><img vspace="5" hspace="5" src="afternoon_04.png" alt=""> <h2>Piecewise cubic<a name="11"></a></h2><p>The two interpolants so far are not very smooth (C_0 and C_{-1}, respectively). Not only can we not differentiate them easily, but the lack of smoothness also limits their convergence rate in the case where the discrete values are samples of a smooth function.</p><p>A common smoother interpolant is piecewise cubic with two continuous derivatives. There are two ways to construct these.</p><pre class="codeinput">y3 = interp1( t, y, tInterp, <span class="string">'spline'</span> );
+subplot(2,2,3)
+plot(t,y,<span class="string">'o'</span>)
+hold <span class="string">on</span>
+plot(tInterp,y3,<span class="string">'b-'</span>)
+xlim([36 41])
+
+y4 = interp1( t, y, tInterp, <span class="string">'pchip'</span> );
+subplot(2,2,4)
+plot(t,y,<span class="string">'o'</span>)
+hold <span class="string">on</span>
+plot(tInterp,y4,<span class="string">'b-'</span>)
+xlim([36 41])
+</pre><img vspace="5" hspace="5" src="afternoon_05.png" alt=""> <p>The differences are very subtle here. Splines are smoother (C_3 at most points) but can oscillate more. The other piecewise cubic always has the same local extrema as the original data.</p><h2>Interpolation in 2D<a name="14"></a></h2><p>You may not realize it, but it's likely that you have done 2D interpolation on your phone. This is often done when an image is resized.</p><p>An image is a discrete function of two variables (row and column position). It's usually vector-valued, with intensity of red, green, and blue light.</p><p>Here we will use a grayscale image, which is just a scalar function giving the intensity.</p><pre class="codeinput">X = imread(<span class="string">'lipid.bmp'</span>);
+imageSize = size(X)
+</pre><pre class="codeoutput">
+imageSize =
+
+   440   840
+
+</pre><p>The values range from 0 (black) to 255 (white).</p><pre class="codeinput">globalMax = max(max(X))
+globalMin = min(min(X))
+</pre><pre class="codeoutput">
+globalMax =
+
+  255
+
+
+globalMin =
+
+    0
+
+</pre><p>Let's have a look.</p><pre class="codeinput">clf
+image(X)
+axis <span class="string">equal</span>            <span class="comment">% circles look like circles</span>
+colormap(gray(256))   <span class="comment">% map [0,255] to [black,white]</span>
+</pre><img vspace="5" hspace="5" src="afternoon_06.png" alt=""> <p>For efficient storage, integer numbers over a small range are represented by 8-bit chunks.</p><pre class="codeinput">class(X)
+</pre><pre class="codeoutput">
+ans =
+
+uint8
+
+</pre><p>We need to convert them to 'floating point' or 'double precision' numbers, which are the computer analog of real numbers.</p><pre class="codeinput">X = double(X);
+</pre><p>Suppose we want to enlarge the image by 25% in each dimension. There is one catch: the first dimension of X is the y coordinate (veritcal), and the second dimension is x. So we have to switch them.</p><pre class="codeinput">iInterp = linspace(1, imageSize(2), round(1.25*imageSize(2)) );
+jInterp = linspace(1, imageSize(1), round(1.25*imageSize(1)) );
+</pre><p>There is a special command called <tt>meshgrid</tt> that transforms these coordinate vectors into coordinate matrices appropriate as 2D functions.</p><pre class="codeinput">[IInterp,JInterp] = meshgrid(iInterp,jInterp);
+</pre><p>There is an <tt>interp2</tt> command for 2D interpolation using essentially the same four methods.</p><pre class="codeinput">X1 = interp2( 1:imageSize(2), 1:imageSize(1), X, IInterp, JInterp, <span class="string">'nearest'</span> );
+clf
+image(X1)
+axis <span class="string">equal</span>
+</pre><img vspace="5" hspace="5" src="afternoon_07.png" alt=""> <p>Here are the remaining methods.</p><pre class="codeinput">subplot(2,2,1)
+image(X1)
+axis([720 780 70 130])
+
+X2 = interp2( 1:imageSize(2), 1:imageSize(1), X, IInterp, JInterp, <span class="string">'linear'</span> );
+subplot(2,2,2)
+image(X2)
+axis([720 780 70 130])
+
+X3 = interp2( 1:imageSize(2), 1:imageSize(1), X, IInterp, JInterp, <span class="string">'spline'</span> );
+subplot(2,2,3)
+image(X3)
+axis([720 780 70 130])
+
+X4 = interp2( 1:imageSize(2), 1:imageSize(1), X, IInterp, JInterp, <span class="string">'cubic'</span> );
+subplot(2,2,4)
+image(X4)
+axis([720 780 70 130])
+</pre><img vspace="5" hspace="5" src="afternoon_08.png" alt=""> <p>The last two methods are somewhat sharper than the first two.</p><p class="footer"><br>
+      Published with MATLAB&reg; 8.1<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Interpolation of data
+% Toby Driscoll, July 2014
+clear, close all
+
+%% Raw data
+% Here is some experimental data in a spreadsheet.
+blink = importdata('blink_data.xlsx')
+
+%%
+% We want the numeric part.
+t = blink.data(:,1);   % first column
+y = blink.data(:,2);   % second column
+
+%%
+plot(t,y,'o')
+hold on
+
+%%
+% Suppose we want to turn these data into a function. One way we already
+% know is the best-fit line, but that is clearly ridiculous in this case.
+
+%%
+% While we could 'fit' other kinds of functions, another approach is to
+% interpolate the data: find a function that passes through all the given
+% points. Obviously, there are infinitely many functions that do so, but we
+% have some standard methods, all implemented by the built-in function
+% |interp1|.
+
+%%
+% We'll evaluate the candidates at values of t between the given ones.
+tInterp = linspace(min(t),max(t),10*length(t))';
+
+%% Piecewise linear interpolation
+% The simplest idea is to draw a straight line between each neighboring
+% pair of points. 
+y1 = interp1( t, y, tInterp, 'linear' );
+plot(tInterp,y1,'b-')
+
+%%
+% It's going to be difficult to tell the methods apart by showing all of
+% the data, so we will zoom in. Also, we'll create a tableau for the
+% different methods.
+subplot(2,2,1)   % 4 by 1 array of plots
+plot(t,y,'o')
+hold on
+plot(tInterp,y1,'b-')
+xlim([36 41])
+
+%% Piecewise constant
+% A different interpolation method is to find a piecewise constant
+% approximationREPLACE_WITH_DASH_DASHtake on the y-value of the nearest point.
+y2 = interp1( t, y, tInterp, 'nearest' );
+subplot(2,2,2)   
+plot(t,y,'o')
+hold on
+plot(tInterp,y2,'b-')
+xlim([36 41])
+
+%% Piecewise cubic
+% The two interpolants so far are not very smooth (C_0 and C_{-1},
+% respectively). Not only can we not differentiate them easily, but the
+% lack of smoothness also limits their convergence rate in the case where
+% the discrete values are samples of a smooth function. 
+
+%%
+% A common smoother interpolant is piecewise cubic with two continuous
+% derivatives. There are two ways to construct these.
+y3 = interp1( t, y, tInterp, 'spline' );
+subplot(2,2,3)   
+plot(t,y,'o')
+hold on
+plot(tInterp,y3,'b-')
+xlim([36 41])
+
+y4 = interp1( t, y, tInterp, 'pchip' );
+subplot(2,2,4)   
+plot(t,y,'o')
+hold on
+plot(tInterp,y4,'b-')
+xlim([36 41])
+
+%%
+% The differences are very subtle here. Splines are smoother (C_3 at most
+% points) but can oscillate more. The other piecewise cubic always has the
+% same local extrema as the original data. 
+
+%% Interpolation in 2D
+% You may not realize it, but it's likely that you have done 2D
+% interpolation on your phone. This is often done when an image is
+% resized. 
+
+%%
+% An image is a discrete function of two variables (row and column
+% position). It's usually vector-valued, with intensity of red, green, and
+% blue light.
+
+%%
+% Here we will use a grayscale image, which is just a scalar function
+% giving the intensity.
+X = imread('lipid.bmp');
+imageSize = size(X)
+
+
+%%
+% The values range from 0 (black) to 255 (white).
+globalMax = max(max(X))
+globalMin = min(min(X))
+
+%% 
+% Let's have a look.
+clf
+image(X)
+axis equal            % circles look like circles
+colormap(gray(256))   % map [0,255] to [black,white]
+
+%%
+% For efficient storage, integer numbers over a small range are
+% represented by 8-bit chunks. 
+class(X)
+
+%% 
+% We need to convert them to 'floating point' or 'double precision'
+% numbers, which are the computer analog of real numbers. 
+X = double(X);      
+
+%%
+% Suppose we want to enlarge the image by 25% in each dimension. There is
+% one catch: the first dimension of X is the y coordinate (veritcal), and
+% the second dimension is x. So we have to switch them.
+iInterp = linspace(1, imageSize(2), round(1.25*imageSize(2)) );
+jInterp = linspace(1, imageSize(1), round(1.25*imageSize(1)) );
+
+%%
+% There is a special command called |meshgrid| that transforms these
+% coordinate vectors into coordinate matrices appropriate as 2D functions.
+[IInterp,JInterp] = meshgrid(iInterp,jInterp);
+
+%%
+% There is an |interp2| command for 2D interpolation using essentially the
+% same four methods. 
+X1 = interp2( 1:imageSize(2), 1:imageSize(1), X, IInterp, JInterp, 'nearest' );
+clf
+image(X1)
+axis equal
+
+%%
+
+%%
+% Here are the remaining methods. 
+subplot(2,2,1)
+image(X1)
+axis([720 780 70 130])
+
+X2 = interp2( 1:imageSize(2), 1:imageSize(1), X, IInterp, JInterp, 'linear' );
+subplot(2,2,2)
+image(X2)
+axis([720 780 70 130])
+
+X3 = interp2( 1:imageSize(2), 1:imageSize(1), X, IInterp, JInterp, 'spline' );
+subplot(2,2,3)
+image(X3)
+axis([720 780 70 130])
+
+X4 = interp2( 1:imageSize(2), 1:imageSize(1), X, IInterp, JInterp, 'cubic' );
+subplot(2,2,4)
+image(X4)
+axis([720 780 70 130])
+
+%%
+% The last two methods are somewhat sharper than the first two. 
+
+
+
+##### SOURCE END #####
+--></body></html>

@@ -1,0 +1,253 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>afternoon</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-08-01"><meta name="DC.source" content="afternoon.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+      });
+    </script></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Functions of functions</a></li><li><a href="#3">Quadrature</a></li><li><a href="#7">Rootfinding</a></li><li><a href="#10">ODEs</a></li><li><a href="#14">Parameters</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> afternoon
+</pre><h2>Functions of functions<a name="2"></a></h2><p>Toby Driscoll, July 2014</p><pre class="codeinput">close <span class="string">all</span>, clear
+</pre><h2>Quadrature<a name="3"></a></h2><p>There are many problems that have a function as data. For example, take the problem of transforming a function into its definite integral. Approximating this transformation numerically is called quadrature.</p><p>In order to use a function as data, we need to create it anonymously, or refer to it with an @ sign in front (handle).</p><pre class="codeinput">integral( @sin,0,pi )
+</pre><pre class="codeoutput">
+ans =
+
+    2.0000
+
+</pre><pre class="codeinput">f = @(x) sin(x).*cos(x);
+integral(f,-pi,pi)
+</pre><pre class="codeoutput">
+ans =
+
+   6.9389e-17
+
+</pre><pre class="codeinput">erf1 = 2/sqrt(pi)*integral(@(t) exp(-t.^2),0,1)
+error = erf(1) - erf1
+</pre><pre class="codeoutput">
+erf1 =
+
+    0.8427
+
+
+error =
+
+     0
+
+</pre><h2>Rootfinding<a name="7"></a></h2><p>Another prototypical problem is to find a root of a function. The built-in <tt>fzero</tt> is excellent for this.</p><pre class="codeinput">fzero(@sin,[1 4])
+</pre><pre class="codeoutput">
+ans =
+
+    3.1416
+
+</pre><p>You can give either a starting point or a starting interval.</p><pre class="codeinput">fzero(@sin,2.5)
+</pre><pre class="codeoutput">
+ans =
+
+    3.1416
+
+</pre><p>The starting interval is greatly preferred.</p><h2>ODEs<a name="10"></a></h2><p>The third classic problem with a function as data is an ordinary differential equation, <span class="MathJax_Preview"><img src="afternoon_eq67122.png" alt="$dy/dt = f(t,y)$"></span><script type="math/tex">dy/dt = f(t,y)</script>. In this case the function data is <span class="MathJax_Preview"><img src="afternoon_eq07790.png" alt="$f(t,y)$"></span><script type="math/tex">f(t,y)</script>. Here is the logistic equation:</p><pre class="codeinput">f = @(t,y) y.*(1-y);
+</pre><p>And here is its solution for <span class="MathJax_Preview"><img src="afternoon_eq16293.png" alt="$t\in[0,10]$"></span><script type="math/tex">t\in[0,10]</script>, <span class="MathJax_Preview"><img src="afternoon_eq42775.png" alt="$y(0)=0.05$"></span><script type="math/tex">y(0)=0.05</script>.</p><pre class="codeinput">[t,y] = ode45( f, [0 10], 0.05 );
+plot(t,y,<span class="string">'o-'</span>)
+</pre><img vspace="5" hspace="5" src="afternoon_01.png" alt=""> <p>Second order problems have to be rewritten in first order form. For example, consider <span class="MathJax_Preview"><img src="afternoon_eq72955.png" alt="$u'' - u(1-u^2)u' + u = 0$"></span><script type="math/tex">u'' - u(1-u^2)u' + u = 0</script>. Introducing <span class="MathJax_Preview"><img src="afternoon_eq44762.png" alt="$y_1=u$"></span><script type="math/tex">y_1=u</script> and <span class="MathJax_Preview"><img src="afternoon_eq65980.png" alt="$y_2=u'$"></span><script type="math/tex">y_2=u'</script> leads to</p><pre class="codeinput">f = @(t,y) [ y(2); (1-y(1)^2)*y(2) - y(1) ];
+[t,y] = ode45( f, [0 20], [1;0] );
+plot(t,y,<span class="string">'o-'</span>)
+</pre><img vspace="5" hspace="5" src="afternoon_02.png" alt=""> <p>Here it is in the phase plane.</p><pre class="codeinput">plot(y(:,1),y(:,2))
+</pre><img vspace="5" hspace="5" src="afternoon_03.png" alt=""> <h2>Parameters<a name="14"></a></h2><p>These kinds of problems are where nested and anonymous functions can be handy. Let's consider the ODE above with a parameter <span class="MathJax_Preview"><img src="afternoon_eq68803.png" alt="$\mu$"></span><script type="math/tex">\mu</script>: <span class="MathJax_Preview"><img src="afternoon_eq02994.png" alt="$u'' - \mu u(1-u^2)u' + u = 0$"></span><script type="math/tex">u'' - \mu u(1-u^2)u' + u = 0</script>. We want to write a function for it that includes the parameter.</p><pre class="codeinput"><span class="keyword">function</span> dydt = myode(t,y,mu)
+
+dydt = zeros(size(y));
+dydt(1) = y(2);
+dydt(2) = mu*(1-y(1)^2)*y(2) - y(1);
+
+<span class="keyword">end</span>
+</pre><p>(This function is actually nested inside the one for this file.) However, the ODE solver functions will accept functions of t and y only. We can bridge the gap using a "wrapper" anonymous function.</p><pre class="codeinput">mu = 10;
+f = @(t,y) myode(t,y,mu)
+</pre><pre class="codeoutput">
+f = 
+
+    @(t,y)myode(t,y,mu)
+
+</pre><p>Now <tt>f</tt> is usable by <tt>ode45</tt> but also includes the assigned value of <tt>mu</tt>.</p><pre class="codeinput">[t,y] = ode45( f, [0 60], [1;0] );
+plot(t,y,<span class="string">'o-'</span>)
+</pre><img vspace="5" hspace="5" src="afternoon_04.png" alt=""> <p>Because <tt>myode</tt> is nested, it would have access to <tt>mu</tt> in the parent function if we left it out of the argument list.</p><pre class="codeinput"><span class="keyword">function</span> dydt = myode2(t,y)
+
+dydt = zeros(size(y));
+dydt(1) = y(2);
+dydt(2) = mu*(1-y(1)^2)*y(2) - y(1);
+
+<span class="keyword">end</span>
+</pre><pre class="codeinput">[t,y] = ode45( @myode2, [0 60], [1;0] );
+plot(y(:,1),y(:,2))
+</pre><img vspace="5" hspace="5" src="afternoon_05.png" alt=""> <p>The wrapper style is usually preferable, but there are some circumstances where the shared workspace of a nested function is useful.</p><pre class="codeinput"><span class="keyword">end</span>
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 8.1<br></p></div><!--
+##### SOURCE BEGIN #####
+function afternoon
+
+%% Functions of functions
+% Toby Driscoll, July 2014
+close all, clear
+
+%% Quadrature
+% There are many problems that have a function as data. For example, take
+% the problem of transforming a function into its definite integral.
+% Approximating this transformation numerically is called quadrature.
+
+%%
+% In order to use a function as data, we need to create it anonymously, or
+% refer to it with an @ sign in front (handle).
+integral( @sin,0,pi )
+
+%%
+f = @(x) sin(x).*cos(x);
+integral(f,-pi,pi)
+
+%%
+erf1 = 2/sqrt(pi)*integral(@(t) exp(-t.^2),0,1)
+error = erf(1) - erf1
+
+%% Rootfinding
+% Another prototypical problem is to find a root of a function. The
+% built-in |fzero| is excellent for this. 
+fzero(@sin,[1 4])
+
+%%
+% You can give either a starting point or a starting interval.
+fzero(@sin,2.5)
+
+%%
+% The starting interval is greatly preferred.
+
+%% ODEs
+% The third classic problem with a function as data is an ordinary
+% differential equation, $dy/dt = f(t,y)$. In this case the function data
+% is $f(t,y)$. Here is the logistic equation:
+f = @(t,y) y.*(1-y);
+
+%%
+% And here is its solution for $t\in[0,10]$, $y(0)=0.05$.
+[t,y] = ode45( f, [0 10], 0.05 );
+plot(t,y,'o-')
+
+%%
+% Second order problems have to be rewritten in first order form. For
+% example, consider $u'' - u(1-u^2)u' + u = 0$. Introducing $y_1=u$ and
+% $y_2=u'$ leads to
+f = @(t,y) [ y(2); (1-y(1)^2)*y(2) - y(1) ];
+[t,y] = ode45( f, [0 20], [1;0] );
+plot(t,y,'o-')
+
+%%
+% Here it is in the phase plane.
+plot(y(:,1),y(:,2))
+
+%% Parameters
+% These kinds of problems are where nested and anonymous functions can be
+% handy. Let's consider the ODE above with a parameter $\mu$: $u'' - \mu
+% u(1-u^2)u' + u = 0$. We want to write a function for it that includes the
+% parameter.
+
+function dydt = myode(t,y,mu)
+
+dydt = zeros(size(y));
+dydt(1) = y(2); 
+dydt(2) = mu*(1-y(1)^2)*y(2) - y(1);
+
+end
+
+%%
+% (This function is actually nested inside the one for this file.) However,
+% the ODE solver functions will accept functions of t and y only. We can
+% bridge the gap using a "wrapper" anonymous function.
+mu = 10;
+f = @(t,y) myode(t,y,mu)
+
+%%
+% Now |f| is usable by |ode45| but also includes the assigned value of
+% |mu|.
+[t,y] = ode45( f, [0 60], [1;0] );
+plot(t,y,'o-')
+
+%%
+% Because |myode| is nested, it would have access to |mu| in the parent
+% function if we left it out of the argument list.
+function dydt = myode2(t,y)
+
+dydt = zeros(size(y));
+dydt(1) = y(2); 
+dydt(2) = mu*(1-y(1)^2)*y(2) - y(1);
+
+end
+
+%%
+[t,y] = ode45( @myode2, [0 60], [1;0] );
+plot(y(:,1),y(:,2))
+
+%%
+% The wrapper style is usually preferable, but there are some circumstances
+% where the shared workspace of a nested function is useful. 
+
+end
+
+
+##### SOURCE END #####
+--></body></html>

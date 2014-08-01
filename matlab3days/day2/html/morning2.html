@@ -1,0 +1,300 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>morning2</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-08-01"><meta name="DC.source" content="morning2.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+      });
+    </script></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Arrays</a></li><li><a href="#3">Elementwise operations</a></li><li><a href="#10">Reduction operations</a></li><li><a href="#13">bsxfun</a></li></ul></div><h2>Arrays<a name="1"></a></h2><p>Toby Driscoll, July 2014</p><pre class="codeinput">clear, close <span class="string">all</span>, format <span class="string">short</span>
+</pre><p>A table of numbers can be seen either as an array (accessed by multidimensional indices rather than a linear one) or a matrix (an array with special mathematical properties). MATLAB does not make a formal distinction, but there are functions and expressions for both points of view.</p><h2>Elementwise operations<a name="3"></a></h2><pre class="codeinput">A = repmat( (1:6)', [1 5] )
+B = tril( 2*ones(6,5) )
+</pre><pre class="codeoutput">
+A =
+
+     1     1     1     1     1
+     2     2     2     2     2
+     3     3     3     3     3
+     4     4     4     4     4
+     5     5     5     5     5
+     6     6     6     6     6
+
+
+B =
+
+     2     0     0     0     0
+     2     2     0     0     0
+     2     2     2     0     0
+     2     2     2     2     0
+     2     2     2     2     2
+     2     2     2     2     2
+
+</pre><p>Arrays and matrices are added the same way. Scalar multiplication is the same too.</p><pre class="codeinput">ApluB = A + B
+Atimes3 = 3*A
+</pre><pre class="codeoutput">
+ApluB =
+
+     3     1     1     1     1
+     4     4     2     2     2
+     5     5     5     3     3
+     6     6     6     6     4
+     7     7     7     7     7
+     8     8     8     8     8
+
+
+Atimes3 =
+
+     3     3     3     3     3
+     6     6     6     6     6
+     9     9     9     9     9
+    12    12    12    12    12
+    15    15    15    15    15
+    18    18    18    18    18
+
+</pre><p>However, multiplication is different. For these sizes, AB isn't even defined in the matrix sense. But if we just want to multiply corresponding elements, we have an operation.</p><pre class="codeinput">AdottimesB = A.*B
+</pre><pre class="codeoutput">
+AdottimesB =
+
+     2     0     0     0     0
+     4     4     0     0     0
+     6     6     6     0     0
+     8     8     8     8     0
+    10    10    10    10    10
+    12    12    12    12    12
+
+</pre><p>Similarly, <tt>A^2</tt> is not defined, but <tt>A.^2</tt> is.</p><pre class="codeinput">Apow2 = A.^2
+</pre><pre class="codeoutput">
+Apow2 =
+
+     1     1     1     1     1
+     4     4     4     4     4
+     9     9     9     9     9
+    16    16    16    16    16
+    25    25    25    25    25
+    36    36    36    36    36
+
+</pre><p>We even have a valid...</p><pre class="codeinput">ApowB = A.*B
+</pre><pre class="codeoutput">
+ApowB =
+
+     2     0     0     0     0
+     4     4     0     0     0
+     6     6     6     0     0
+     8     8     8     8     0
+    10    10    10    10    10
+    12    12    12    12    12
+
+</pre><p>Finally, as you might expect, we have elementwise division.</p><pre class="codeinput">BoverA = B./A
+</pre><pre class="codeoutput">
+BoverA =
+
+    2.0000         0         0         0         0
+    1.0000    1.0000         0         0         0
+    0.6667    0.6667    0.6667         0         0
+    0.5000    0.5000    0.5000    0.5000         0
+    0.4000    0.4000    0.4000    0.4000    0.4000
+    0.3333    0.3333    0.3333    0.3333    0.3333
+
+</pre><p>Note that scalars are "expanded" into the correct size with these operations.</p><pre class="codeinput">OneOverA = 1./A
+</pre><pre class="codeoutput">
+OneOverA =
+
+    1.0000    1.0000    1.0000    1.0000    1.0000
+    0.5000    0.5000    0.5000    0.5000    0.5000
+    0.3333    0.3333    0.3333    0.3333    0.3333
+    0.2500    0.2500    0.2500    0.2500    0.2500
+    0.2000    0.2000    0.2000    0.2000    0.2000
+    0.1667    0.1667    0.1667    0.1667    0.1667
+
+</pre><h2>Reduction operations<a name="10"></a></h2><p>Anothey type of array function is to apply a vector function over and over to the rows or columns. For example:</p><pre class="codeinput">colSumA = sum(A,1)
+rowSumA = sum(A,2)
+</pre><pre class="codeoutput">
+colSumA =
+
+    21    21    21    21    21
+
+
+rowSumA =
+
+     5
+    10
+    15
+    20
+    25
+    30
+
+</pre><p>Note how the dimension is lowered by one, and the shape is different depending on the direction in which the operation is done.</p><p>The functions <tt>mean</tt>, <tt>std</tt>, <tt>max</tt>, <tt>min</tt> all behave this way too.</p><h2>bsxfun<a name="13"></a></h2><p>Sometimes you want to apply an operation to each column or row, but with different numbers. The function <tt>bsxfun</tt> applies any binary operation, first replicating any argument along a singleton dimension.</p><p>For example, if we want to multiply each column of A by the reciprocal of its column sum, we enter</p><pre class="codeinput">bsxfun( @times, A, 1./colSumA )
+</pre><pre class="codeoutput">
+ans =
+
+    0.0476    0.0476    0.0476    0.0476    0.0476
+    0.0952    0.0952    0.0952    0.0952    0.0952
+    0.1429    0.1429    0.1429    0.1429    0.1429
+    0.1905    0.1905    0.1905    0.1905    0.1905
+    0.2381    0.2381    0.2381    0.2381    0.2381
+    0.2857    0.2857    0.2857    0.2857    0.2857
+
+</pre><p>Another common scenario is to find all the pairwise differences of two vectors, which bsxfun makes easy.</p><pre class="codeinput">x = (1:5);
+y = (10:10:60);
+allXMinusY = bsxfun( @minus, x, y' )
+</pre><pre class="codeoutput">
+allXMinusY =
+
+    -9    -8    -7    -6    -5
+   -19   -18   -17   -16   -15
+   -29   -28   -27   -26   -25
+   -39   -38   -37   -36   -35
+   -49   -48   -47   -46   -45
+   -59   -58   -57   -56   -55
+
+</pre><p>Carefully study why this result is different:</p><pre class="codeinput">bsxfun( @minus, x', y )
+</pre><pre class="codeoutput">
+ans =
+
+    -9   -19   -29   -39   -49   -59
+    -8   -18   -28   -38   -48   -58
+    -7   -17   -27   -37   -47   -57
+    -6   -16   -26   -36   -46   -56
+    -5   -15   -25   -35   -45   -55
+
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 8.1<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Arrays
+% Toby Driscoll, July 2014
+clear, close all, format short
+
+%% 
+% A table of numbers can be seen either as an array (accessed by
+% multidimensional indices rather than a linear one) or a matrix (an array with
+% special mathematical properties). MATLAB does not make a formal distinction,
+% but there are functions and expressions for both points of view.
+
+%% Elementwise operations
+A = repmat( (1:6)', [1 5] )
+B = tril( 2*ones(6,5) )
+
+%%
+% Arrays and matrices are added the same way. Scalar multiplication is the same
+% too.
+ApluB = A + B
+Atimes3 = 3*A
+
+%%
+% However, multiplication is different. For these sizes, AB isn't even defined
+% in the matrix sense. But if we just want to multiply corresponding elements,
+% we have an operation.
+AdottimesB = A.*B
+
+%%
+% Similarly, |A^2| is not defined, but |A.^2| is.
+Apow2 = A.^2
+
+%%
+% We even have a valid...
+ApowB = A.*B
+
+%%
+% Finally, as you might expect, we have elementwise division.
+BoverA = B./A
+
+%%
+% Note that scalars are "expanded" into the correct size with these operations.
+OneOverA = 1./A
+
+%% Reduction operations
+% Anothey type of array function is to apply a vector function over and over to
+% the rows or columns. For example:
+colSumA = sum(A,1)
+rowSumA = sum(A,2)
+
+%%
+% Note how the dimension is lowered by one, and the shape is different depending
+% on the direction in which the operation is done. 
+
+%%
+% The functions |mean|, |std|, |max|, |min| all behave this way too. 
+
+%% bsxfun
+% Sometimes you want to apply an operation to each column or row, but with
+% different numbers. The function |bsxfun| applies any binary operation, first
+% replicating any argument along a singleton dimension.
+
+%%
+% For example, if we want to multiply each column of A by the reciprocal of its
+% column sum, we enter
+bsxfun( @times, A, 1./colSumA )
+
+%%
+% Another common scenario is to find all the pairwise differences of two
+% vectors, which bsxfun makes easy.
+x = (1:5);
+y = (10:10:60);
+allXMinusY = bsxfun( @minus, x, y' )
+
+%%
+% Carefully study why this result is different:
+bsxfun( @minus, x', y )
+
+##### SOURCE END #####
+--></body></html>
