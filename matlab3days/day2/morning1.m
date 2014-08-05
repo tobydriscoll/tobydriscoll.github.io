@@ -118,7 +118,7 @@ vectorForm = reshape(A,[numel(A) 1])
 A([2 3],:) = A([3 2],:)   % swap rows
 
 %%
-A( A<5 ) = NaN;    % assign scalar to each
+A( A<5 ) = NaN    % assign scalar to each
 
 
 

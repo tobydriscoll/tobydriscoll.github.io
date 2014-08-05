@@ -127,5 +127,5 @@ V * D / V
 V
 
 %%
-% However, it is still true that $AV=VD$.
+% However, it is still true that $JV=VD$.
 norm( J*V - V*D )
