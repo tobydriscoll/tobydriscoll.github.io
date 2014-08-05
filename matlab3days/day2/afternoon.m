@@ -95,3 +95,37 @@ x = A \ b
 % The expression |A\| is the mathematical equivalent of $A^{-1}$ multiplied
 % on the left. However, in computation we never use the inverse, because
 % doing so is much slower. 
+
+%% Eigenvalues
+% Next to solving linear systems, the second most common task in linear
+% algebra is to find the eigenvalues of a square matrix.
+A = magic(4)
+
+%%
+[V,D] = eig(A)
+
+%%
+% If the matrix is diagonalizable, we find that $A=VDV^{-1}$. Remember, we
+% never use a matrix inverse. To get an inverse from the right, use |/|.
+V * D / V
+
+%%
+% Here is a Jordan block. It has one distinct eigenvalue.
+J = toeplitz([1 0 0 0 0],[1 1 0 0 0])
+
+%%
+[V,D] = eig(J);
+eigval = diag(D)
+
+%%
+% We now get the wrong result for $VDV^{-1}$. 
+V * D / V
+
+%%
+% The reason is that $V$ is singular. All the columns are multiples of the
+% first.
+V
+
+%%
+% However, it is still true that $AV=VD$.
+norm( J*V - V*D )

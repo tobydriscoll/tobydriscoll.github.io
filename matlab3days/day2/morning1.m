@@ -88,5 +88,38 @@ xtrans = x'             % transpose
 R = repmat(x',[1 3])    % copy some matrix over and over
 
 
+%% Indexing
+% The rows and columns of a matrix can be selected either by "direct"
+% reference to the desired indices, or by "logical" indexes. 
+A = magic(4)
+
+%%
+rows2and3 = A(2:3,:)
+lastColumn = A(:,end)
+oddRowsInColumn2 = A( logical([1 0 1 0]), 2 )
+
+%%
+% In addition, every matrix is really stored as a linearly addressed block
+% of memory. You can use a linear index instead.
+first7 = A( 1:7 )
+biggerThan6 = A( A>6 )
+
+%%
+% You can explicitly reshape a matrix as long as the number of elements
+% doesn't change. 
+twoByEight = reshape(A,[2 8])
+vectorForm = reshape(A,[numel(A) 1])
+
+%%
+% The last statement is also found by using |A(:)|. 
+
+%%
+% Note that assignment is also possible with the same syntax.
+A([2 3],:) = A([3 2],:)   % swap rows
+
+%%
+A( A<5 ) = NaN;    % assign scalar to each
+
+
 
 

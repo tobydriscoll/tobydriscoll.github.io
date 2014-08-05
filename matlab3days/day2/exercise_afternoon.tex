@@ -45,7 +45,23 @@ A=
 \item Use backslash to solve the original linear system. Is the result valid?
 \end{enumerate}
 
-
+\item The eigenvalues of Toeplitz matrices are interesting.
+  \begin{enumerate}
+  \item Let $A$ be the $10\times 10$ matrix
+    \[
+    \begin{bmatrix}
+      1 & -1 & 0 & \cdots & 0 \\
+      -2 & 1 & -1 & \cdots & 0 \\
+      & \ddots & \ddots & \ddots & \\
+      0 & 0 & \cdots & -2 & 1 
+    \end{bmatrix}
+    \].
+    Plot its eigenvalues as crosses (\texttt{'x'}) in the complex plane.
+  \item Repeat (a) for the same matrix at size 50, 100, and
+    200. Superimpose all the plots.
+  \item Repeat (a)--(b) for the Toeplitz matrix whose first row starts
+    with $4,-1,1$, and whose first column starts with $4,-2,1$. 
+ \end{enumerate}
 
 \end{enumerate}
 

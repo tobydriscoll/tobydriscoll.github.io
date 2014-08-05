@@ -40,6 +40,13 @@ BoverA = B./A
 % Note that scalars are "expanded" into the correct size with these operations.
 OneOverA = 1./A
 
+%%
+% Mathematical functions are also defined elementwise for vectors and
+% (often) matrices. As a rule, if you want to evaluate an expression at
+% many points at once, use array operations.
+t = linspace(0,10,501);
+plot( t, t.^2.*besselj(2,t) - cos(t) )
+
 %% Reduction operations
 % Anothey type of array function is to apply a vector function over and over to
 % the rows or columns. For example:
@@ -51,7 +58,11 @@ rowSumA = sum(A,2)
 % on the direction in which the operation is done. 
 
 %%
-% The functions |mean|, |std|, |max|, |min| all behave this way too. 
+% The functions |mean|, |std|, |max|, |min|, and |diff| all behave this way
+% too. However, sometimes the dimension argument is the third, not the
+% second.
+min(A,2)      % whoops
+min(A,[],2)   % yay
 
 %% bsxfun
 % Sometimes you want to apply an operation to each column or row, but with
@@ -59,13 +70,14 @@ rowSumA = sum(A,2)
 % replicating any argument along a singleton dimension.
 
 %%
-% For example, if we want to multiply each column of A by the reciprocal of its
-% column sum, we enter
-bsxfun( @times, A, 1./colSumA )
+% For example, if we want to multiply each row of A by the its row number,
+% we enter
+m = size(A,1);   % number of rows
+bsxfun( @times, A, (1:m)' )
 
 %%
-% Another common scenario is to find all the pairwise differences of two
-% vectors, which bsxfun makes easy.
+% A common scenario is to find all the pairwise differences of elements in
+% two vectors, which bsxfun makes easy.
 x = (1:5);
 y = (10:10:60);
 allXMinusY = bsxfun( @minus, x, y' )

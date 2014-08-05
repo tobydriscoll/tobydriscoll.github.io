@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>afternoon</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-08-01"><meta name="DC.source" content="afternoon.m"><style type="text/css">
+      --><title>afternoon</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-08-05"><meta name="DC.source" content="afternoon.m"><style type="text/css">
 
 body {
   background-color: white;
@@ -66,7 +66,7 @@ p.footer {
       MathJax.Hub.Config({
         jax: ["input/TeX","output/HTML-CSS"],
       });
-    </script></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Elimination</a></li><li><a href="#9">Automation</a></li><li><a href="#18">Backslash</a></li></ul></div><h2>Elimination<a name="1"></a></h2><p>Toby Driscoll, July 2014</p><pre class="codeinput">clear, close <span class="string">all</span>
+    </script></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Elimination</a></li><li><a href="#9">Automation</a></li><li><a href="#18">Backslash</a></li><li><a href="#20">Eigenvalues</a></li></ul></div><h2>Elimination<a name="1"></a></h2><p>Toby Driscoll, July 2014</p><pre class="codeinput">clear, close <span class="string">all</span>
 </pre><p>Let's walk through Gaussian elimination for a particular linear system of equations.</p><pre class="codeinput">A = [ 2 1 1 0; 4 3 3 1; 8 7 9 5; 6 7 9 8 ]
 b = [ 4; 9; 17; 12];
 </pre><pre class="codeoutput">
@@ -181,7 +181,92 @@ x =
     0.0000
    -1.0000
 
-</pre><p>This performs a factorization and two triangular solves automatically. The expression <tt>A\</tt> is the mathematical equivalent of <span class="MathJax_Preview"><img src="afternoon_eq05299.png" alt="$A^{-1}$"></span><script type="math/tex">A^{-1}</script> multiplied on the left. However, in computation we never use the inverse, because doing so is much slower.</p><p class="footer"><br>
+</pre><p>This performs a factorization and two triangular solves automatically. The expression <tt>A\</tt> is the mathematical equivalent of <span class="MathJax_Preview"><img src="afternoon_eq05299.png" alt="$A^{-1}$"></span><script type="math/tex">A^{-1}</script> multiplied on the left. However, in computation we never use the inverse, because doing so is much slower.</p><h2>Eigenvalues<a name="20"></a></h2><p>Next to solving linear systems, the second most common task in linear algebra is to find the eigenvalues of a square matrix.</p><pre class="codeinput">A = magic(4)
+</pre><pre class="codeoutput">
+A =
+
+    16     2     3    13
+     5    11    10     8
+     9     7     6    12
+     4    14    15     1
+
+</pre><pre class="codeinput">[V,D] = eig(A)
+</pre><pre class="codeoutput">
+V =
+
+   -0.5000   -0.8236    0.3764   -0.2236
+   -0.5000    0.4236    0.0236   -0.6708
+   -0.5000    0.0236    0.4236    0.6708
+   -0.5000    0.3764   -0.8236    0.2236
+
+
+D =
+
+   34.0000         0         0         0
+         0    8.9443         0         0
+         0         0   -8.9443         0
+         0         0         0    0.0000
+
+</pre><p>If the matrix is diagonalizable, we find that <span class="MathJax_Preview"><img src="afternoon_eq16106.png" alt="$A=VDV^{-1}$"></span><script type="math/tex">A=VDV^{-1}</script>. Remember, we never use a matrix inverse. To get an inverse from the right, use <tt>/</tt>.</p><pre class="codeinput">V * D / V
+</pre><pre class="codeoutput">
+ans =
+
+   16.0000    2.0000    3.0000   13.0000
+    5.0000   11.0000   10.0000    8.0000
+    9.0000    7.0000    6.0000   12.0000
+    4.0000   14.0000   15.0000    1.0000
+
+</pre><p>Here is a Jordan block. It has one distinct eigenvalue.</p><pre class="codeinput">J = toeplitz([1 0 0 0 0],[1 1 0 0 0])
+</pre><pre class="codeoutput">
+J =
+
+     1     1     0     0     0
+     0     1     1     0     0
+     0     0     1     1     0
+     0     0     0     1     1
+     0     0     0     0     1
+
+</pre><pre class="codeinput">[V,D] = eig(J);
+eigval = diag(D)
+</pre><pre class="codeoutput">
+eigval =
+
+     1
+     1
+     1
+     1
+     1
+
+</pre><p>We now get the wrong result for <span class="MathJax_Preview"><img src="afternoon_eq07280.png" alt="$VDV^{-1}$"></span><script type="math/tex">VDV^{-1}</script>.</p><pre class="codeinput">V * D / V
+</pre><pre class="codeoutput">Warning: Matrix is close to singular or badly
+scaled. Results may be inaccurate. RCOND =
+2.430865e-63. 
+
+ans =
+
+     1     0     0     0     0
+     0     1     0     0     0
+     0     0     1     0     0
+     0     0     0     1     0
+     0     0     0     0     1
+
+</pre><p>The reason is that <span class="MathJax_Preview"><img src="afternoon_eq20021.png" alt="$V$"></span><script type="math/tex">V</script> is singular. All the columns are multiples of the first.</p><pre class="codeinput">V
+</pre><pre class="codeoutput">
+V =
+
+    1.0000   -1.0000    1.0000   -1.0000    1.0000
+         0    0.0000   -0.0000    0.0000   -0.0000
+         0         0    0.0000   -0.0000    0.0000
+         0         0         0    0.0000   -0.0000
+         0         0         0         0    0.0000
+
+</pre><p>However, it is still true that <span class="MathJax_Preview"><img src="afternoon_eq35119.png" alt="$AV=VD$"></span><script type="math/tex">AV=VD</script>.</p><pre class="codeinput">norm( J*V - V*D )
+</pre><pre class="codeoutput">
+ans =
+
+   4.4409e-16
+
+</pre><p class="footer"><br>
       Published with MATLAB&reg; 8.1<br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Elimination
@@ -282,5 +367,38 @@ x = A \ b
 % on the left. However, in computation we never use the inverse, because
 % doing so is much slower. 
 
+%% Eigenvalues
+% Next to solving linear systems, the second most common task in linear
+% algebra is to find the eigenvalues of a square matrix.
+A = magic(4)
+
+%%
+[V,D] = eig(A)
+
+%%
+% If the matrix is diagonalizable, we find that $A=VDV^{-1}$. Remember, we
+% never use a matrix inverse. To get an inverse from the right, use |/|.
+V * D / V
+
+%%
+% Here is a Jordan block. It has one distinct eigenvalue.
+J = toeplitz([1 0 0 0 0],[1 1 0 0 0])
+
+%%
+[V,D] = eig(J);
+eigval = diag(D)
+
+%%
+% We now get the wrong result for $VDV^{-1}$. 
+V * D / V
+
+%%
+% The reason is that $V$ is singular. All the columns are multiples of the
+% first.
+V
+
+%%
+% However, it is still true that $AV=VD$.
+norm( J*V - V*D )
 ##### SOURCE END #####
 --></body></html>
