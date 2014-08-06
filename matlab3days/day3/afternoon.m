@@ -72,17 +72,14 @@ plot(t,y,'o-')
 % |ode45| desirable. For example,
 f = @(t,r) r.^2-r.^3;
 [t,y] = ode45(f,[0 160],0.01);
-plot(t,y,'.-')
+plot(t,y,'o-')
 
 %%
 % Using the "stiff solver" |ode15s| requires many fewer time points (though
 % each is more expensive to compute!).
 [t,y] = ode15s(f,[0 160],0.01);
 hold on
-plot(t,y+0.5,'.-r')
-
-%%
-clf
+plot(t,y+0.5,'o-r')
 
 %%
 % Second order problems have to be rewritten in first order form. For
@@ -90,7 +87,7 @@ clf
 % $y_2=u'$ leads to
 f = @(t,y) [ y(2); (1-y(1)^2)*y(2) - y(1) ];
 [t,y] = ode45( f, [0 20], [1;0] );
-plot(t,y,'o-')
+clf, plot(t,y,'o-')
 
 %%
 % Here it is in the phase plane.

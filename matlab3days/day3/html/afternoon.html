@@ -66,7 +66,7 @@ p.footer {
       MathJax.Hub.Config({
         jax: ["input/TeX","output/HTML-CSS"],
       });
-    </script></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Functions of functions</a></li><li><a href="#3">Quadrature</a></li><li><a href="#7">Rootfinding</a></li><li><a href="#13">ODEs</a></li><li><a href="#20">Parameters</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> afternoon
+    </script></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Functions of functions</a></li><li><a href="#3">Quadrature</a></li><li><a href="#7">Rootfinding</a></li><li><a href="#13">ODEs</a></li><li><a href="#19">Parameters</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> afternoon
 </pre><h2>Functions of functions<a name="2"></a></h2><p>Toby Driscoll, July 2014</p><pre class="codeinput">close <span class="string">all</span>, clear
 </pre><h2>Quadrature<a name="3"></a></h2><p>There are many problems that have a function as data. For example, take the problem of transforming a function into its definite integral. Approximating this transformation numerically is called quadrature.</p><p>In order to use a function as data, we need to create it anonymously, or refer to it with an @ sign in front (handle).</p><pre class="codeinput">integral( @sin,0,pi )
 </pre><pre class="codeoutput">
@@ -175,16 +175,15 @@ four =
 plot(t,y,<span class="string">'o-'</span>)
 </pre><img vspace="5" hspace="5" src="afternoon_01.png" alt=""> <p>Certain problems are called "stiff" and make alternatives to <tt>ode45</tt> desirable. For example,</p><pre class="codeinput">f = @(t,r) r.^2-r.^3;
 [t,y] = ode45(f,[0 160],0.01);
-plot(t,y,<span class="string">'.-'</span>)
+plot(t,y,<span class="string">'o-'</span>)
 </pre><img vspace="5" hspace="5" src="afternoon_02.png" alt=""> <p>Using the "stiff solver" <tt>ode15s</tt> requires many fewer time points (though each is more expensive to compute!).</p><pre class="codeinput">[t,y] = ode15s(f,[0 160],0.01);
 hold <span class="string">on</span>
-plot(t,y+0.5,<span class="string">'.-r'</span>)
-</pre><img vspace="5" hspace="5" src="afternoon_03.png" alt=""> <pre class="codeinput">clf
-</pre><img vspace="5" hspace="5" src="afternoon_04.png" alt=""> <p>Second order problems have to be rewritten in first order form. For example, consider <span class="MathJax_Preview"><img src="afternoon_eq72955.png" alt="$u'' - u(1-u^2)u' + u = 0$"></span><script type="math/tex">u'' - u(1-u^2)u' + u = 0</script>. Introducing <span class="MathJax_Preview"><img src="afternoon_eq44762.png" alt="$y_1=u$"></span><script type="math/tex">y_1=u</script> and <span class="MathJax_Preview"><img src="afternoon_eq65980.png" alt="$y_2=u'$"></span><script type="math/tex">y_2=u'</script> leads to</p><pre class="codeinput">f = @(t,y) [ y(2); (1-y(1)^2)*y(2) - y(1) ];
+plot(t,y+0.5,<span class="string">'o-r'</span>)
+</pre><img vspace="5" hspace="5" src="afternoon_03.png" alt=""> <p>Second order problems have to be rewritten in first order form. For example, consider <span class="MathJax_Preview"><img src="afternoon_eq72955.png" alt="$u'' - u(1-u^2)u' + u = 0$"></span><script type="math/tex">u'' - u(1-u^2)u' + u = 0</script>. Introducing <span class="MathJax_Preview"><img src="afternoon_eq44762.png" alt="$y_1=u$"></span><script type="math/tex">y_1=u</script> and <span class="MathJax_Preview"><img src="afternoon_eq65980.png" alt="$y_2=u'$"></span><script type="math/tex">y_2=u'</script> leads to</p><pre class="codeinput">f = @(t,y) [ y(2); (1-y(1)^2)*y(2) - y(1) ];
 [t,y] = ode45( f, [0 20], [1;0] );
-plot(t,y,<span class="string">'o-'</span>)
-</pre><img vspace="5" hspace="5" src="afternoon_05.png" alt=""> <p>Here it is in the phase plane.</p><pre class="codeinput">plot(y(:,1),y(:,2))
-</pre><img vspace="5" hspace="5" src="afternoon_06.png" alt=""> <h2>Parameters<a name="20"></a></h2><p>These kinds of problems are where nested and anonymous functions can be handy. Let's consider the ODE above with a parameter <span class="MathJax_Preview"><img src="afternoon_eq68803.png" alt="$\mu$"></span><script type="math/tex">\mu</script>: <span class="MathJax_Preview"><img src="afternoon_eq02994.png" alt="$u'' - \mu u(1-u^2)u' + u = 0$"></span><script type="math/tex">u'' - \mu u(1-u^2)u' + u = 0</script>. We want to write a function for it that includes the parameter.</p><pre class="codeinput"><span class="keyword">function</span> dydt = myode(t,y,mu)
+clf, plot(t,y,<span class="string">'o-'</span>)
+</pre><img vspace="5" hspace="5" src="afternoon_04.png" alt=""> <p>Here it is in the phase plane.</p><pre class="codeinput">plot(y(:,1),y(:,2))
+</pre><img vspace="5" hspace="5" src="afternoon_05.png" alt=""> <h2>Parameters<a name="19"></a></h2><p>These kinds of problems are where nested and anonymous functions can be handy. Let's consider the ODE above with a parameter <span class="MathJax_Preview"><img src="afternoon_eq68803.png" alt="$\mu$"></span><script type="math/tex">\mu</script>: <span class="MathJax_Preview"><img src="afternoon_eq02994.png" alt="$u'' - \mu u(1-u^2)u' + u = 0$"></span><script type="math/tex">u'' - \mu u(1-u^2)u' + u = 0</script>. We want to write a function for it that includes the parameter.</p><pre class="codeinput"><span class="keyword">function</span> dydt = myode(t,y,mu)
 
 dydt = zeros(size(y));
 dydt(1) = y(2);
@@ -200,7 +199,7 @@ f =
 
 </pre><p>Now <tt>f</tt> is usable by <tt>ode45</tt> but also includes the assigned value of <tt>mu</tt>.</p><pre class="codeinput">[t,y] = ode45( f, [0 60], [1;0] );
 plot(t,y,<span class="string">'o-'</span>)
-</pre><img vspace="5" hspace="5" src="afternoon_07.png" alt=""> <p>Because <tt>myode</tt> is nested, it would have access to <tt>mu</tt> in the parent function if we left it out of the argument list.</p><pre class="codeinput"><span class="keyword">function</span> dydt = myode2(t,y)
+</pre><img vspace="5" hspace="5" src="afternoon_06.png" alt=""> <p>Because <tt>myode</tt> is nested, it would have access to <tt>mu</tt> in the parent function if we left it out of the argument list.</p><pre class="codeinput"><span class="keyword">function</span> dydt = myode2(t,y)
 
 dydt = zeros(size(y));
 dydt(1) = y(2);
@@ -209,7 +208,7 @@ dydt(2) = mu*(1-y(1)^2)*y(2) - y(1);
 <span class="keyword">end</span>
 </pre><pre class="codeinput">[t,y] = ode45( @myode2, [0 60], [1;0] );
 plot(y(:,1),y(:,2))
-</pre><img vspace="5" hspace="5" src="afternoon_08.png" alt=""> <p>The wrapper style is usually preferable, but there are some circumstances where the shared workspace of a nested function is useful.</p><pre class="codeinput"><span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="afternoon_07.png" alt=""> <p>The wrapper style is usually preferable, but there are some circumstances where the shared workspace of a nested function is useful.</p><pre class="codeinput"><span class="keyword">end</span>
 </pre><p class="footer"><br>
       Published with MATLAB&reg; 8.3<br></p></div><!--
 ##### SOURCE BEGIN #####
@@ -287,17 +286,14 @@ plot(t,y,'o-')
 % |ode45| desirable. For example,
 f = @(t,r) r.^2-r.^3;
 [t,y] = ode45(f,[0 160],0.01);
-plot(t,y,'.-')
+plot(t,y,'o-')
 
 %%
 % Using the "stiff solver" |ode15s| requires many fewer time points (though
 % each is more expensive to compute!).
 [t,y] = ode15s(f,[0 160],0.01);
 hold on
-plot(t,y+0.5,'.-r')
-
-%%
-clf
+plot(t,y+0.5,'o-r')
 
 %%
 % Second order problems have to be rewritten in first order form. For
@@ -305,7 +301,7 @@ clf
 % $y_2=u'$ leads to
 f = @(t,y) [ y(2); (1-y(1)^2)*y(2) - y(1) ];
 [t,y] = ode45( f, [0 20], [1;0] );
-plot(t,y,'o-')
+clf, plot(t,y,'o-')
 
 %%
 % Here it is in the phase plane.
