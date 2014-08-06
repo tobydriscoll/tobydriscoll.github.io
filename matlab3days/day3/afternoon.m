@@ -32,7 +32,29 @@ fzero(@sin,[1 4])
 fzero(@sin,2.5)
 
 %%
-% The starting interval is greatly preferred.
+% Giving the starting interval is preferred. It often takes fewer
+% iterations, because the first step is to find an interval anyway.
+fzero(@sin,[1 4],optimset('display','iter'))
+
+%%
+fzero(@sin,2.5,optimset('display','iter'))
+
+%%
+% Here's a more substantial example. The Lambert W function is defined as
+% the inverse of the function $xe^x$. In other words, $W(x)e^{W(x)}=x$. For
+% any given value of $x$, we can solve $we^w-x=0$ for $w$ to get $W(x)=w$. 
+    function w = lambertW(x)
+        f = @(w) w*exp(w) - x;
+        guess = log(x);
+        w = fzero(f,guess);
+    end
+
+%%
+format long
+point05 = lambertW( 0.05*exp(0.05) )
+four = lambertW( 4*exp(4) )
+
+
 
 %% ODEs
 % The third classic problem with a function as data is an ordinary
@@ -44,6 +66,23 @@ f = @(t,y) y.*(1-y);
 % And here is its solution for $t\in[0,10]$, $y(0)=0.05$.
 [t,y] = ode45( f, [0 10], 0.05 );
 plot(t,y,'o-')
+
+%%
+% Certain problems are called "stiff" and make alternatives to
+% |ode45| desirable. For example,
+f = @(t,r) r.^2-r.^3;
+[t,y] = ode45(f,[0 160],0.01);
+plot(t,y,'.-')
+
+%%
+% Using the "stiff solver" |ode15s| requires many fewer time points (though
+% each is more expensive to compute!).
+[t,y] = ode15s(f,[0 160],0.01);
+hold on
+plot(t,y+0.5,'.-r')
+
+%%
+clf
 
 %%
 % Second order problems have to be rewritten in first order form. For
