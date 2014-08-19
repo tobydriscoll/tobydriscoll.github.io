@@ -1,0 +1,200 @@
+<html>
+<head>
+<title>SurfaceIntegrals.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="5"><u><b></font><font size="5" face="Lucida Bright">Surface area and surface integrals</b></u></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>restart; with(LinearAlgebra): with(VectorCalculus): with(plots):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the names &x, CrossProduct and DotProduct have been rebound</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the assigned names &lt;,&gt; and &lt;|&gt; now have a global binding</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, these protected names have been redefined and unprotected: *, +, ., D, Vector, diff, int, limit, series</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the name changecoords has been redefined</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>setoptions3d(axes=boxed);</b></font></td>
+</tr>
+</table></p>
+<dl><a name="MapleAutoBookmark2" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Parametric surfaces</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">A surface can in principle be described by a two-parameter vector function. &nbsp;</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">As usual, it's a good idea to tell Maple that the parameters are real.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>assume(u,real,v,real);</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">For example,</font><font color="#000000" size="3" face="Lucida Bright"> the cone</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>implicitplot3d( x^2+y^2=z^2, x=-1..1, y=-1..1, z=-1..1 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/SurfaceIntegrals_1.gif" width="273" height="218" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">is much better displayed in parametric form. &nbsp;(Here we mean the position vector r, not the cylindrical coordinate r.)</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= [ u*cos(v), u*sin(v), u ];</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_2.gif" width="198" height="13" alt="r := [u*cos(v), u*sin(v), u]" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Note here that x^2 + y^2 does in fact equal z^2:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>simplify(r[1]^2 + r[2]^2 - r[3]^2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_3.gif" width="7" height="13" alt="0" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( r, u=-1..1, v=0..2*Pi );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/SurfaceIntegrals_4.gif" width="311" height="192" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">A sphere is naturally expressed when the two parameters are the angles in spherical coordinates. </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= [ 2*sin(u)*cos(v), 2*sin(u)*sin(v), 2*cos(u) ];</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_5.gif" width="310" height="13" alt="r := [2*sin(u)*cos(v), 2*sin(u)*sin(v), 2*cos(u)]" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( r, u=0..Pi, v=0..2*Pi, scaling=constrained );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/SurfaceIntegrals_6.gif" width="329" height="289" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Parameterizations are not unique:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>p1:= plot3d( [ x,y,x^2+y^2 ], x=-1..1, y=-1..1, color=red):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>p2:= plot3d( [ u*cos(v), u*sin(v), u^2 ], u=0..sqrt(2), v=0..2*Pi, color=blue, style=wireframe &nbsp;):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>display( p1, p2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/SurfaceIntegrals_7.gif" width="319" height="228" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="center"><font size="3"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">In addition to the sin/cos parameterization trick, there is also a sinh/cosh trick for hyperbolic surfaces.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= [ cosh(u)*cos(v), cosh(u)*sin(v), sinh(u) ];</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_8.gif" width="302" height="13" alt="r := [cosh(u)*cos(v), cosh(u)*sin(v), sinh(u)]" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">On a one-sheet hyperboloid, x^2 + y^2 - z^2 = 1.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>simplify( r[1]^2 + r[2]^2 - r[3]^2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_9.gif" width="7" height="13" alt="1" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( r, u=-1..1, v=0..2*Pi );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/SurfaceIntegrals_10.gif" width="308" height="200" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Here is a fancy parameterization: the torus.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>torus:= [ (2+cos(u))*cos(v), (2+cos(u))*sin(v), 2+sin(u) ];</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_11.gif" width="393" height="13" alt="torus := [(cos(u)+2)*cos(v), (cos(u)+2)*sin(v), sin(u)+2]" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( torus, u=0..2*Pi, v=0..2*Pi, scaling=constrained );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/SurfaceIntegrals_12.gif" width="415" height="265" alt="[Plot]" align="center"></p>
+</dl>
+<dl><a name="MapleAutoBookmark3" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Surface integrals</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Once you have a parameterization, surface area (as well as other surface integrals) is straightforward. &nbsp;</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Example: Surface area of the torus above.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= &lt; (2+cos(u))*cos(v), (2+cos(u))*sin(v), 2+sin(u) &gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_13.gif" width="437" height="17" alt="r := Vector[column]([[(cos(u)+2)*cos(v)], [(cos(u)+2)*sin(v)], [sin(u)+2]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>ru:= diff( r ,u );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_14.gif" width="349" height="17" alt="ru := Vector[column]([[-sin(u)*cos(v)], [-sin(u)*sin(v)], [cos(u)]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>rv:= diff( r ,v );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_15.gif" width="341" height="17" alt="rv := Vector[column]([[-(cos(u)+2)*sin(v)], [(cos(u)+2)*cos(v)], [0]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>dS:= simplify( Norm( ru &x rv, 2 ) );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_16.gif" width="105" height="13" alt="dS := cos(u)+2" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>A:= int( dS, [u,v]=Region(0..2*Pi,0..2*Pi) );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SurfaceIntegrals_17.gif" width="54" height="22" alt="A := 8*Pi^2" align="center">
+</font></p>
+</dl>
+<p></p>
+</body>
+</html>

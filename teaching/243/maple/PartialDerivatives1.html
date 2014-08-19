@@ -1,0 +1,474 @@
+<html>
+<head>
+<title>PartialDerivatives.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="5"><u><b></font><font size="5" face="Lucida Bright">Partial derivatives and linearization</b></u></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>restart;</b></font></td>
+</tr>
+</table></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">In this worksheet we look at the fundamentals of using partial derivatives in Maple.</font></p>
+<dl><a name="MapleAutoBookmark2" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Basics</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The commands for partial derivatives look exactly the same as for ordinary derivatives. Use </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><b>diff</b></font><font size="3" face="Lucida Bright">.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( sin(x)*cos(y), x );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_1.gif" width="71" height="13" alt="cos(x)*cos(y)" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">From the definition (not to be used in everyday work), </font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>limit( (sin(x+h)*cos(y) - sin(x)*cos(y)) / h, h=0 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_2.gif" width="71" height="13" alt="cos(x)*cos(y)" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The other first partial:</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( sin(x)*cos(y), y );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_3.gif" width="76" height="13" alt="-sin(x)*sin(y)" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">For an unknown or "generic" function:</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( g(x,y,z), z );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_4.gif" width="70" height="37" alt="diff(g(x, y, z), z)" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">It was important above to say which variables </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>g</i></font><font size="3" face="Lucida Bright"> depends on. &nbsp;Compare to </font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( g, z );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_5.gif" width="7" height="13" alt="0" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">To take higher-order derivatives, specify more of the independent variables.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( x^3*y^2, x );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_6.gif" width="40" height="21" alt="3*x^2*y^2" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( x^3*y^2, x,x );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_7.gif" width="34" height="21" alt="6*x*y^2" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( x^3*y^2, x,y );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_8.gif" width="34" height="21" alt="6*x^2*y" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( g(x,y), x,y,x );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_9.gif" width="86" height="58" alt="diff(g(x, y), `$`(x, 2), y)" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Maple assumes the order of derivatives may be changed freely (as is always the case for the functions we'll encounter).</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">If you want the derivative at the point (1,2,3), you must differentiate before evaluation.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= x*y^2*z^3:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>pt:= {x=-1,y=2,z=-3}:</b></font></td>
+</tr>
+</table></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">WRONG:</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( eval(f,pt), z );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_10.gif" width="7" height="13" alt="0" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">RIGHT:</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( diff(f,z), pt );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_11.gif" width="28" height="13" alt="-108" align="center">
+</font></p>
+<dl><a name="MapleAutoBookmark3" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">Implicit differentiation</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Let's use the Law of Cosines. &nbsp;In a triangle with side lengths </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>a</i></font><font size="3" face="Lucida Bright">, </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>b</i></font><font size="3" face="Lucida Bright">, </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>c</i></font><font size="3" face="Lucida Bright">, the angle </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>A</i></font><font size="3" face="Lucida Bright"> opposite side </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>a</i></font><font size="3" face="Lucida Bright"> satisfies</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>LC:= &nbsp;a^2 = b^2 + c^2 - 2*b*c*cos( A );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_12.gif" width="194" height="21" alt="LC := a^2 = b^2+c^2-2*b*c*cos(A)" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">This is the syntax for finding </font><font size="3"><img src="images/PartialDerivatives_13.gif" width="32" height="44" alt="Diff(A, b)" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>implicitdiff( LC, A, b );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_14.gif" width="79" height="33" alt="-(b-c*cos(A))/(b*c*sin(A))" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Here is how you would find </font><font size="3"><img src="images/PartialDerivatives_15.gif" width="29" height="44" alt="Diff(c, a)" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>implicitdiff( LC, c, a );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_16.gif" width="89" height="33" alt="-a/(-c+b*cos(A))" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Ideal gas law examples:</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>implicitdiff( P*V=R*T, P, T);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_17.gif" width="8" height="33" alt="R/V" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>implicitdiff( P*V=R*T, V, P);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_18.gif" width="19" height="33" alt="-V/P" align="center">
+</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark4" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">Functional form (optional)</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">If you define an arrow function using -&gt;, then you differentiate using </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><b>D</b></font><font size="3" face="Lucida Bright">. &nbsp;Since the variable names are irrelevant to an arrow function, you refer to them by number.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= (x,y,z) -&gt; exp(x-y)*sin(x*z);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_19.gif" width="169" height="28" alt="f := proc (x, y, z) options operator, arrow; exp(x-y)*sin(x*z) end proc" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>D[1](f);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_20.gif" width="256" height="28" alt="proc (x, y, z) options operator, arrow; exp(x-y)*sin(x*z)+exp(x-y)*cos(x*z)*z end proc" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The result above is the same as</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff( f(x,y,z), x );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_21.gif" width="197" height="27" alt="exp(x-y)*sin(x*z)+exp(x-y)*cos(x*z)*z" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>D[2](f);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_22.gif" width="150" height="28" alt="proc (x, y, z) options operator, arrow; -exp(x-y)*sin(x*z) end proc" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>D[1](%);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_23.gif" width="260" height="28" alt="proc (x, y, z) options operator, arrow; -exp(x-y)*sin(x*z)-exp(x-y)*cos(x*z)*z end proc" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>D[2,1](f);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_24.gif" width="260" height="28" alt="proc (x, y, z) options operator, arrow; -exp(x-y)*sin(x*z)-exp(x-y)*cos(x*z)*z end proc" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">One of the main advantages of this form is in evaluating at a point.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>D[1](f)(2,3,Pi);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_25.gif" width="38" height="28" alt="exp(-1)*Pi" align="center">
+</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark5" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">Chain rule</b></font></p>
+<p><font color="#000000" size="3" face="Lucida Bright">Maple automatically applies the chain rule. &nbsp;For instance, if x and y both depend on s and t,</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>z:= exp(x(s,t))*sin(y(s,t));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_26.gif" width="120" height="25" alt="z := exp(x(s, t))*sin(y(s, t))" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>diff(z,s);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_27.gif" width="356" height="45" alt="diff(x(s, t), s)*exp(x(s, t))*sin(y(s, t))+exp(x(s, t))*cos(y(s, t))*diff(y(s, t), s)" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( %, {x(s,t)=s*t,y(s,t)=s^3*t^2} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_28.gif" width="229" height="27" alt="t*exp(s*t)*sin(s^3*t^2)+3*exp(s*t)*cos(s^3*t^2)*s^2*t^2" align="center">
+</font></p>
+</dl>
+</dl>
+<dl><a name="MapleAutoBookmark6" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Linearization</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Let's compute the linearization of </font><font size="3"><img src="images/PartialDerivatives_29.gif" width="73" height="38" alt="4-x^2-2*y^2" align="center">
+</font><font size="3"></font><font size="3" face="Lucida Bright"> at the point (0,1). </font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= 4 - x^2 - 2*y^2:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>pt:= { x=0, y=1 }:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>fx:= diff( f, x );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_30.gif" width="56" height="13" alt="fx := -2*x" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>fy:= diff( f, y );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_31.gif" width="58" height="13" alt="fy := -4*y" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( fx, pt ); &nbsp;eval( fy, pt );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_32.gif" width="7" height="13" alt="0" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_33.gif" width="14" height="13" alt="-4" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">This is the textbook definition for the linearization.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>L:= eval(f,pt) + (x-0)*eval(fx,pt) + (y-1)*eval(fy,pt);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_34.gif" width="68" height="13" alt="L := 6-4*y" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">In fact, </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>z=L(x,y)</i></font><font size="3" face="Lucida Bright"> is just the equation for a plane.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( L, x=0..2,y=1..3, axes=boxed );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">If we plot </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>f</i></font><font size="3" face="Lucida Bright"> and </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>L</i></font><font size="3" face="Lucida Bright"> together, we get a good idea of the quality of the approximation.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( {f,L}, x=-0.5..0.5,y=0.5..1.5, axes=boxed );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/PartialDerivatives_35.gif" width="482" height="286" alt="[Plot]" align="center"></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">By turning the graph in Maple you can see that the linearization is very good near the center point, but less so as you get farther away.</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The main use for linearization is in approximation and estimation. It gives a good idea how </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>f</i></font><font size="3" face="Lucida Bright"> responds when the variable values are changed a little bit. Put another way, if the variable values are uncertain (and nothing in this world is certain), then </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>f</i></font><font size="3" face="Lucida Bright"> could potentially have a range of values. Linearization gives us an idea of that range.</font></p>
+<dl><a name="MapleAutoBookmark7" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">The example of a new generation</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">A can of Pepsi could be modeled as a cylinder of radius r=1 inch and height h=5 inches. The factory foreman says that they can produce cans to within a tolerance of 1% in both dimensions. What effect could this have on the volume of the can?</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The volume is</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>V:= Pi*r^2*h;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_36.gif" width="64" height="22" alt="V := Pi*r^2*h" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">We find the partial derivatives needed for the linearization.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Vr:= diff( V, r );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_37.gif" width="75" height="15" alt="Vr := 2*Pi*r*h" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Vh:= diff( V, h );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_38.gif" width="60" height="22" alt="Vh := Pi*r^2" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The linearization in differential form is</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>dV:= Vr*dr + Vh*dh;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_39.gif" width="153" height="22" alt="dV := 2*Pi*r*h*dr+Pi*r^2*dh" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">We know that dr can be as large as 0.01*r and dh can be 0.01*h.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>dV:= eval( dV, {dr=r/100, dh=h/100 } );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_40.gif" width="96" height="33" alt="dV := 3/100*Pi*r^2*h" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Evaluate this for the original can.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>can:= { r=1, h=5 }:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( dV, can );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_41.gif" width="25" height="33" alt="3/20*Pi" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>evalf( % );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_42.gif" width="80" height="13" alt=".4712388981" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">This answer is in cubic inches.</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark8" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">Up-chucking</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">A woodchuck wants to chuck a box made of wood 1/2-inch thick with inside dimensions 5 ft x 3 ft x 2 ft. The box has no top. How much wood would the woodchuck chuck?</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The volume of wood is the volume of the outside of the box minus the volume of the inside. &nbsp;The inside volume is given by</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>V:= l*w*h;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_43.gif" width="58" height="13" alt="V := l*w*h" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">To get to the outside of the box, we increase each dimension by 1/2 inch. This changes </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>l</i></font><font size="3" face="Lucida Bright"> and </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>w</i></font><font size="3" face="Lucida Bright"> by 1 inch total but </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>h</i></font><font size="3" face="Lucida Bright"> by only 1/2 an inch (because the top is missing). The resulting change in volume is about</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>dVdl:= diff(V,l);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_44.gif" width="68" height="13" alt="dVdl := w*h" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>dVdw:= diff(V,w);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_45.gif" width="68" height="13" alt="dVdw := l*h" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>dVdh:= diff(V,h);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_46.gif" width="68" height="13" alt="dVdh := l*w" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>dV:= dVdl*(1) + dVdw*(1) + dVdh*(1/2);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_47.gif" width="137" height="33" alt="dV := w*h+l*h+1/2*l*w" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>box:= { l=60, w=36, h=24 }:</b></font></td>
+</tr>
+</table></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( dV, box );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/PartialDerivatives_48.gif" width="28" height="13" alt="3384" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">This is in cubic inches. </font></p>
+</dl>
+</dl>
+<p></p>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<html>
+<head>
+<title>Optimization.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="5"><u><b></font><font size="5" face="Lucida Bright">Optimization</b></u></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>restart; with(LinearAlgebra): with(VectorCalculus): with(student):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the names &x, CrossProduct and DotProduct have been rebound</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the assigned names &lt;,&gt; and &lt;|&gt; now have a global binding</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, these protected names have been redefined and unprotected: *, +, ., D, Vector, diff, int, limit, series</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the protected name D has had its previous binding removed and has been assigned</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">In this worksheet we look at finding local and absolute minima and maxima for a function. &nbsp;Often this is called "optimization," because one is looking for a minimum cost or maximum benefit.</font></p>
+<dl><a name="MapleAutoBookmark2" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">About using </font><font size="5" face="Lucida Bright"></font><font color="#ff0000" size="5" face="Lucida Bright">solve</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The downside of using </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">solve</font><font color="#000000" size="3" face="Lucida Bright"> to solve equations is that it can find solutions we don't really want. &nbsp;It also uses a potentially confusing syntax for the results. </font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">For instance, here is a system for two variables. </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>soln:= solve( { x^3-y=0, y^3-x=0 }, {x,y} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_1.gif" width="721" height="21" alt="soln := {y = 0, x = 0}, {y = RootOf(_Z^2+1, label = _L4), x = -RootOf(_Z^2+1, label = _L4)}, {y = 1, x = 1}, {y = -1, x = -1}, {y = RootOf(-RootOf(_Z^2+1, label = _L3)+_Z^2, label = _L5), x = RootOf(-..." align="center"><img src="images/Optimization_2.gif" width="721" height="21" alt="soln := {y = 0, x = 0}, {y = RootOf(_Z^2+1, label = _L4), x = -RootOf(_Z^2+1, label = _L4)}, {y = 1, x = 1}, {y = -1, x = -1}, {y = RootOf(-RootOf(_Z^2+1, label = _L3)+_Z^2, label = _L5), x = RootOf(-..." align="center"><img src="images/Optimization_3.gif" width="721" height="21" alt="soln := {y = 0, x = 0}, {y = RootOf(_Z^2+1, label = _L4), x = -RootOf(_Z^2+1, label = _L4)}, {y = 1, x = 1}, {y = -1, x = -1}, {y = RootOf(-RootOf(_Z^2+1, label = _L3)+_Z^2, label = _L5), x = RootOf(-..." align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The results are less than crystal clear. &nbsp;To force Maple to say more, use </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>allvalues</b></font><font color="#000000" size="3" face="Lucida Bright">.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>map( allvalues, {soln} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_4.gif" width="733" height="60" alt="{{y = 0, x = 0}, {y = 1, x = 1}, {y = -1, x = -1}, {x = I*(1/2*2^(1/2)+1/2*I*2^(1/2)), y = 1/2*2^(1/2)+1/2*I*2^(1/2)}, {y = I, x = -I}, {y = -I, x = I}, {x = I*(-1/2*2^(1/2)-1/2*I*2^(1/2)), y = -1/2*2..." align="center"><img src="images/Optimization_5.gif" width="733" height="55" alt="{{y = 0, x = 0}, {y = 1, x = 1}, {y = -1, x = -1}, {x = I*(1/2*2^(1/2)+1/2*I*2^(1/2)), y = 1/2*2^(1/2)+1/2*I*2^(1/2)}, {y = I, x = -I}, {y = -I, x = I}, {x = I*(-1/2*2^(1/2)-1/2*I*2^(1/2)), y = -1/2*2..." align="center"><img src="images/Optimization_6.gif" width="733" height="60" alt="{{y = 0, x = 0}, {y = 1, x = 1}, {y = -1, x = -1}, {x = I*(1/2*2^(1/2)+1/2*I*2^(1/2)), y = 1/2*2^(1/2)+1/2*I*2^(1/2)}, {y = I, x = -I}, {y = -I, x = I}, {x = I*(-1/2*2^(1/2)-1/2*I*2^(1/2)), y = -1/2*2..." align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">By inspection we can see that many of the alternatives use imaginary numbers (the capital </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">I</font><font color="#000000" size="3" face="Lucida Bright">). &nbsp;This is reasonable from a certain point of view, but in MATH 243 we want only real solutions. &nbsp;In the list above only {x = 0, y = 0}, &nbsp;{x = -1, y = -1}, and {y = 1, x = 1} are purely real. &nbsp;You may have to perform a similar manual "filtering" of solutions when solving optimization problems.</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark3" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Local min/max</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">As an example, let us find all local min/max points of </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= 1 / (x^2+2*y^2-3*y-1);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_7.gif" width="135" height="41" alt="f := 1/(x^2+2*y^2-3*y-1)" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">and find the values of </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">f</font><font color="#000000" size="3" face="Lucida Bright"> at those points. &nbsp;We first find the partial derivatives.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>fx:= diff( f, x );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_8.gif" width="166" height="48" alt="fx := -2*x/(x^2+2*y^2-3*y-1)^2" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>fy:= diff( f, y );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_9.gif" width="167" height="48" alt="fy := -(4*y-3)/(x^2+2*y^2-3*y-1)^2" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Now we set both to zero and find all critical points.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eqns:= { fx=0, fy=0 };</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_10.gif" width="394" height="55" alt="eqns := {-2*x/(x^2+2*y^2-3*y-1)^2 = 0, -(4*y-3)/(x^2+2*y^2-3*y-1)^2 = 0}" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>critpt:= solve( eqns, {x,y} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_11.gif" width="143" height="38" alt="critpt := {x = 0, y = 3/4}" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We could boil all this down to one step:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>solve( {diff(f,x),diff(f,y)}, {x,y} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_12.gif" width="92" height="38" alt="{x = 0, y = 3/4}" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The only critical point is (0,3/4). To determine its character, we need second derivatives.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>fxx:= diff( fx, x ):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fxy:= diff( fx, y ):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>fyy:= diff( fy, y ):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The discriminant is</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>disc:= simplify( fxx*fyy - fxy^2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_13.gif" width="216" height="55" alt="disc := -4*(6*x^2-18*y+11+12*y^2)/(x^2+2*y^2-3*y-1)^5" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We evaluate at the critical point to find</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( disc, critpt );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_14.gif" width="35" height="33" alt="32768/83521" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">This is positive, so we have found a min or max. &nbsp;We need to check the sign of </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( fxx, critpt );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_15.gif" width="28" height="33" alt="(-128)/289" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">This is negative, so we conclude that (0,3/4) is a local max. &nbsp;A graph is a good way to check.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( f, x=-1..1,y=1/4..1, axes=boxed );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/Optimization_16.gif" width="525" height="212" alt="[Plot]" align="center"></p>
+</dl>
+<dl><a name="MapleAutoBookmark4" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Absolute extrema on bounded domains</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">When finding global extreme values, you can skip checking second derivatives. &nbsp;However, you must check the boundary as well as interior critical points.</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Let's find the min and max of </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= x^2+x*y+y^2-6*x;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_17.gif" width="136" height="21" alt="f := x^2+x*y+y^2-6*x" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">on the rectangle for </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">x</font><font color="#000000" size="3" face="Lucida Bright"> between 0 and 5, and </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">y</font><font color="#000000" size="3" face="Lucida Bright"> between -3 and 3.</font></p>
+<dl><a name="MapleAutoBookmark5" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">Step 1: Critical points in the interior</b></font></p>
+</dl>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>cp:= solve( {diff(f,x),diff(f,y)}, {x,y} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_18.gif" width="119" height="13" alt="cp := {y = -2, x = 4}" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">This is interior to the domain, so it represents a possible max/min location.</font></p>
+<dl><a name="MapleAutoBookmark6" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">Step 2: Critical points on the boundary</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">There are four sides to the boundary. &nbsp;On each of them, </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">f</font><font color="#000000" size="3" face="Lucida Bright"> &nbsp;is a function of one variable. &nbsp;We can optimize these expressions quite easily using </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">maximize</font><font color="#000000" size="3" face="Lucida Bright"> and </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">minimize</font><font color="#000000" size="3" face="Lucida Bright"> from the </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">student</font><font color="#000000" size="3" face="Lucida Bright"> package.</font></p>
+<dl><a name="MapleAutoBookmark7" />
+<p align="left"><font size="3"><i><b></font><font size="3" face="Lucida Bright">West side</b></i></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">This is defined by </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">x=0</font><font color="#000000" size="3" face="Lucida Bright">, so </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( f, x=0 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_19.gif" width="13" height="21" alt="y^2" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">This is a function of </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">y</font><font color="#000000" size="3" face="Lucida Bright"> only. We need to find extreme values of this for </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">y</font><font color="#000000" size="3" face="Lucida Bright"> between -3 and 3. &nbsp;We know how to do this from Calc I, but there is a shortcut in the </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>student</b></font><font color="#000000" size="3" face="Lucida Bright"> package.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>minimize( y^2, y=-3..3, location );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_20.gif" width="84" height="13" alt="0, {[{y = 0}, 0]}" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>maximize( y^2, y=-3..3, location );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_21.gif" width="160" height="13" alt="9, {[{y = -3}, 9], [{y = 3}, 9]}" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We see that a min value of 0 is assumed at the middle of the side and a max value of 9 is taken at the ends.</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark8" />
+<p align="left"><font size="3"><i><b></font><font size="3" face="Lucida Bright">East side</b></i></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Now we have </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">x=5</font><font color="#000000" size="3" face="Lucida Bright">.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>East:= eval( f, x=5 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_22.gif" width="125" height="21" alt="East := -5+5*y+y^2" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>minimize( East, y=-3..3, location );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_23.gif" width="159" height="55" alt="(-45)/4, {[{y = (-5)/2}, (-45)/4]}" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>maximize( East, y=-3..3, location );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_24.gif" width="98" height="13" alt="19, {[{y = 3}, 19]}" align="center">
+</font></p>
+<p align="center"><font size="3"></font></p>
+</dl>
+<dl><a name="MapleAutoBookmark9" />
+<p align="left"><font size="3"><i><b></font><font size="3" face="Lucida Bright">North side</b></i></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">In this case we set </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">y=3</font><font color="#000000" size="3" face="Lucida Bright"> and let </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">x</font><font color="#000000" size="3" face="Lucida Bright"> range between 0 and 5.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>North:= eval( f, y=3 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_25.gif" width="124" height="21" alt="North := x^2-3*x+9" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>minimize( North, x=0..5, location );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_26.gif" width="137" height="55" alt="27/4, {[{x = 3/2}, 27/4]}" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>maximize( North, x=0..5, location );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_27.gif" width="97" height="13" alt="19, {[{x = 5}, 19]}" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Can you see how copy & paste may be useful!?</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark10" />
+<p align="left"><font size="3"><i><b></font><font size="3" face="Lucida Bright">South side</b></i></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>South:= eval( f, y=-3 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_28.gif" width="124" height="21" alt="South := x^2-9*x+9" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>minimize( South, x=0..5, location );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_29.gif" width="151" height="55" alt="(-45)/4, {[{x = 9/2}, (-45)/4]}" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>maximize( South, x=0..5, location );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_30.gif" width="83" height="13" alt="9, {[{x = 0}, 9]}" align="center">
+</font></p>
+</dl>
+</dl>
+<dl><a name="MapleAutoBookmark11" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">Step 3: Take inventory</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We found one interior critical point.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( f, cp );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_31.gif" width="21" height="13" alt="-12" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Here are the minimum values on the boundary sides.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>minboundary:= [ 0, -45/4, 27/4, -45/4 ];</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_32.gif" width="204" height="38" alt="minboundary := [0, (-45)/4, 27/4, (-45)/4]" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>evalf( minboundary );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_33.gif" width="272" height="13" alt="[0., -11.25000000, 6.750000000, -11.25000000]" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">So -12 is the absolute minimum, taken at (4,-2). &nbsp;The candidates for maximum are</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>maxboundary:= [ 9, 19, 19, 9];</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_34.gif" width="173" height="13" alt="maxboundary := [9, 19, 19, 9]" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Clearly 19 is the max, taken at (5,3). &nbsp;(We had two copies of this corner point.) &nbsp;A plot helps confirm the results.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( f, x=0..5,y=-3..3, axes=boxed, view=-12..19);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/Optimization_35.gif" width="608" height="230" alt="[Plot]" align="center"></p>
+</dl>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+</dl>
+<dl><a name="MapleAutoBookmark12" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Constrained optimization</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Example: </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i>Find the point(s) on the surface</i></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i> </i></font></p>
+<p align="center"><font face="Lucida Bright"><img src="images/Optimization_36.gif" width="72" height="38" alt="z^2 = x*y+4" align="center">
+</font></p>
+<p align="left"><i><font color="#000000" size="3" face="Lucida Bright">closest to the origin.</i></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">It may help to start by plotting the surface:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plots[implicitplot3d]( z^2=x*y+4, x=-5..5,y=-5..5,z=-5..5, scaling=constrained,axes=boxed);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/Optimization_37.gif" width="438" height="299" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The first and most important step is to identify the objective function (what to minimize) and the constraint. &nbsp;Here, we want to minimize distance to the origin, but that's the same as minimizing the square of the distance. which avoids a nasty square root. &nbsp;So</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= x^2 + y^2 + z^2;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_38.gif" width="99" height="21" alt="f := x^2+y^2+z^2" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The constraint is given by </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">g=0</font><font color="#000000" size="3" face="Lucida Bright">, where:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>g:= z^2 - x*y - 4;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_39.gif" width="94" height="21" alt="g := z^2-x*y-4" align="center">
+</font></p>
+<dl><a name="MapleAutoBookmark13" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">First method: Substitution</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">This is often the easiest, but isn't available in every problem. &nbsp;The constraint gives us a relation among the variables that can eliminate one of them.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>isolate( g=0, z^2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_40.gif" width="72" height="21" alt="z^2 = x*y+4" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f2:= eval( f, % );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_41.gif" width="136" height="21" alt="f2 := x^2+y^2+x*y+4" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Now we have a function of 2 variables in which the constraint is automatic, so we can treat it as an unconstrained problem.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>cp:= solve( { diff(f2,x), diff(f2,y) }, {x,y} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_42.gif" width="112" height="13" alt="cp := {y = 0, x = 0}" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">From the graph it is clear that this point must represent a minimum distance to the origin. &nbsp;(To be thorough we should check second derivatives.) &nbsp;To finish the problem, we see from </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">g</font><font color="#000000" size="3" face="Lucida Bright"> that if </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">x</font><font color="#000000" size="3" face="Lucida Bright"> and </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">y</font><font color="#000000" size="3" face="Lucida Bright"> are both zero, then </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">z</font><font color="#000000" size="3" face="Lucida Bright"> is plus or minus 2. &nbsp;So the answer to the problem is "(0,0,2) and (0,0,-2)."</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark14" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">Second method: Lagrange multipliers</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Substitution may be messy or impossible, depending on what the constraint looks like. &nbsp;(Taking a square root, for example, means carrying out two cases with positive and negative signs.) &nbsp;Lagrange multipliers are more cumbersome but foolproof.</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">There is a trick to making Lagrange multipliers convenient in Maple. First define the combined function using a Lagrange multiplier. &nbsp;It's </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i>critical</i></font><font color="#000000" size="3" face="Lucida Bright"> here that the constraint be expressed as g=0 and </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">not as g=k for some other constant k. </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>F:= f - lambda*g;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_43.gif" width="201" height="22" alt="F := x^2+y^2+z^2-lambda*(z^2-x*y-4)" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Now we take the gradient as though there are four variables.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>gradF:= Gradient( F, [x,y,z,lambda] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_44.gif" width="447" height="26" alt="gradF := Vector[column]([[2*x+lambda*y], [2*y+lambda*x], [2*z-2*lambda*z], [-z^2+x*y+4]], ["x", "y", "z", "lambda"], "field")" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Notice that taking the derivative of </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">F</font><font color="#000000" size="3" face="Lucida Bright"> with respect to </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">lambda</font><font color="#000000" size="3" face="Lucida Bright"> just returns the constraint function </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">g. &nbsp;</font></p>
+<p align="center"><font size="3"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Here are the Lagrange conditions. &nbsp;(</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>equate</b></font><font color="#000000" size="3" face="Lucida Bright"> is a function in the </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>student</b></font><font color="#000000" size="3" face="Lucida Bright"> package.)</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>LM:= equate( gradF, &lt;0,0,0,0&gt; );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_45.gif" width="412" height="22" alt="LM := {2*x+lambda*y = 0, 2*y+lambda*x = 0, 2*z-2*lambda*z = 0, -z^2+x*y+4 = 0}" align="center">
+</font></p>
+<p align="center"><font size="3"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We solve for the 4 unknowns:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>soln:= solve( LM, {x,y,z,lambda} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_46.gif" width="694" height="15" alt="soln := {lambda = 2, y = 2, z = 0, x = -2}, {y = -2, x = 2, lambda = 2, z = 0}, {x = 2*RootOf(_Z^2+1, label = _L2), lambda = -2, z = 0, y = 2*RootOf(_Z^2+1, label = _L2)}, {z = 2, x = 0, y = 0, lambda..." align="center"><img src="images/Optimization_47.gif" width="694" height="22" alt="soln := {lambda = 2, y = 2, z = 0, x = -2}, {y = -2, x = 2, lambda = 2, z = 0}, {x = 2*RootOf(_Z^2+1, label = _L2), lambda = -2, z = 0, y = 2*RootOf(_Z^2+1, label = _L2)}, {z = 2, x = 0, y = 0, lambda..." align="center"><img src="images/Optimization_48.gif" width="694" height="15" alt="soln := {lambda = 2, y = 2, z = 0, x = -2}, {y = -2, x = 2, lambda = 2, z = 0}, {x = 2*RootOf(_Z^2+1, label = _L2), lambda = -2, z = 0, y = 2*RootOf(_Z^2+1, label = _L2)}, {z = 2, x = 0, y = 0, lambda..." align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We use </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>allvalue</font><font color="#000000" size="3" face="Lucida Bright">s</b></font><font color="#000000" size="3" face="Lucida Bright"> to expand the roots:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>vals:= map( allvalues, {soln} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_49.gif" width="762" height="15" alt="vals := {{x = 2*I, y = 2*I, lambda = -2, z = 0}, {x = -2*I, y = -2*I, lambda = -2, z = 0}, {z = 2, x = 0, y = 0, lambda = 1}, {x = 0, z = -2, y = 0, lambda = 1}, {lambda = 2, y = 2, z = 0, x = -2}, {y..." align="center"><img src="images/Optimization_50.gif" width="762" height="15" alt="vals := {{x = 2*I, y = 2*I, lambda = -2, z = 0}, {x = -2*I, y = -2*I, lambda = -2, z = 0}, {z = 2, x = 0, y = 0, lambda = 1}, {x = 0, z = -2, y = 0, lambda = 1}, {lambda = 2, y = 2, z = 0, x = -2}, {y..." align="center"><img src="images/Optimization_51.gif" width="762" height="15" alt="vals := {{x = 2*I, y = 2*I, lambda = -2, z = 0}, {x = -2*I, y = -2*I, lambda = -2, z = 0}, {z = 2, x = 0, y = 0, lambda = 1}, {x = 0, z = -2, y = 0, lambda = 1}, {lambda = 2, y = 2, z = 0, x = -2}, {y..." align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">There are 4 real solutions in this list. Now we have to try each one in </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">f</font><font color="#000000" size="3" face="Lucida Bright"> and pick the smallest. &nbsp;Copy/paste is handy for this.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( f, vals[3] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_52.gif" width="7" height="13" alt="4" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( f, vals[4] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_53.gif" width="7" height="13" alt="4" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( f, vals[5] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_54.gif" width="7" height="13" alt="8" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval( f, vals[6] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_55.gif" width="7" height="13" alt="8" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The minimum values are given by</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>vals[3], vals[4];</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/Optimization_56.gif" width="324" height="15" alt="{z = 2, x = 0, y = 0, lambda = 1}, {x = 0, z = -2, y = 0, lambda = 1}" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">I.e., the solution to the problem are the points (0,0,-2) and (0,0,2).</font></p>
+</dl>
+</dl>
+<p></p>
+<p></p>
+</body>
+</html>

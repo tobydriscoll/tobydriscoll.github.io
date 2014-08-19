@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <TITLE>Eigenmodes of isospectral drums</TITLE>
+  <link rel="stylesheet" type="text/css" href="http://www.math.udel.edu/~driscoll/common/style.css">
+</head>
+
+<body bgcolor=white>
+<div id="banner">
+  <div class="name">Toby Driscoll</div>
+  <div id="navbar">
+  <a href="http://www.math.udel.edu/~driscoll/index.html">home</a> |
+  <a href="http://www.math.udel.edu/~driscoll/cv.pdf">vita</a> |
+  <a href="http://www.math.udel.edu/~driscoll/research/index.html">research</a> |
+  <a href="http://www.math.udel.edu/~driscoll/teaching/index.html">teaching</a> |
+  <a href="http://www.math.udel.edu/~driscoll/software/index.html">software</a>
+  </div>
+</div> <!--end banner-->
+
+<div id="content">
+<table width=100%>
+  <tr><td class="linkcol">
+   <!--dl>
+   <dt>UD links</dt>
+   <dd><a href="http://www.math.udel.edu/research/na/NA.html">Software@UD Math</a></dd>
+   <dd><a href="http://www.math.udel.edu/">UD Math</a></dd>
+   </dl-->
+   <!--dl>
+    <dt>Other links</dt>
+    <dd><a href="http://www.mathworks.com/matlabcentral">MATLAB Central</a></dd>
+   </dl-->
+  </td>  <!-- end linkcol-->
+  <td width=12 class="divider"><img width=1 height=1 src="spacer.gif"></td>
+  <td class="maincol">
+<h3>Isospectral drums</h3>
+
+<IMG align="right" src="drums.gif">In 1991, mathematicians Gordon, Webb,
+and Wolpert (<I>Invent. Math.</I> 110, pp 1--22) solved a famous problem
+posed by M. Kac: "Can one hear the shape of a drum?" That is, do the Dirichlet
+eigenvalues of a membrane determine the shape of the membrane? Their answer
+was "No!", and they used a powerful mathematical technique to produce a
+counterexample, which in its simplest form is a pair of eight-sided nonconvex
+polygons.
+<P>
+Gordon, Webb, and Wolpert also noted that a more elementary technique known
+as <I>transplantation</I> can be used to show that the spectrum of the Laplacian
+with Dirichlet conditions is the same for both regions. However, actually
+finding what the eigenvalues are is far more difficult; in fact, it's essentially
+impossible to do analytically.
+<P>
+Determining the spectrum is also difficult to do numerically, at least to
+very high precision. Standard finite-element approaches, as implemented in
+PLTMG and the PDE Toolbox for MATLAB, are unable to produce more than a few
+accurate digits using reasonable time and storage. Surprisingly, the method
+of fundamental solutions, a well-known approach that was used successfully
+to compute the eigenvalues of the L-shaped membrane thirty years ago, fails
+to produce reliable results for these drums. Some progress can be made with
+<A href="conformal.html">Schwarz-Christoffel mapping</A> techniques to
+transplant the polygons to squares, but accurate estimates again would require
+unreasonably large machine resources.
+<P>
+Wu, Sprung, and Martorell (<I>Physical Review E </I>, Jan 1995) present the
+results of computations with a "mode matching" method and finite differences.
+Their work appears to improve upon the accuracy of the first 25 eigenvalues,
+but there is not much indicating how accurate their numbers are. Furthermore,
+their mode matching method can't be used on general polygons.
+<P>
+A little-known method due to Descloux and Tolley performs far better than
+all of these. The underlying principle is to exploit the well-known expansions
+of an eigenfunction near the corners. The criterion that selects eigenvalues
+is the matching of values and normal derivatives of the local expansions
+at interfaces within the polygons. Using this method in MATLAB, and incorporating
+a crucial improvement, I have computed 25 eigenvalues and modes for each
+polygon to about 12 digits of accuracy. Each eigenpair takes just a few minutes
+on a Sun workstation.
+<P>
+Here are some side-by-side comparisons of the first twelve modes, with estimates
+of the eigenvalues. Exercise: Find an analytic expression for the ninth
+eigenvalue!
+<P>
+<A href="gww1-4.gif"><IMG src="gww-thumb1.gif" alt="Modes
+1-4"></A>
+<A href="gww5-8.gif"><IMG src="gww-thumb2.gif" alt="Modes
+1-4"></A>
+<A href="gww9-12.gif"><IMG src="gww-thumb3.gif" alt="Modes
+1-4"></A>
+<P>
+Physicists Sridhar and Kudrolli at Northeastern University have actually
+built microwave cavities in the shapes of the two polygons and determined
+54 eigenvalues experimentally. Their results, however, are accurate only
+to about 0.1%. Take <A href="modes136.gif">another look at modes 1,3, and
+6,</A> to compare directly with
+<A target=_top href="http://sagar.physics.neu.edu/isospec.html">Sridhar and
+Kudrolli's experimental results</A>. For more details, see <I>Physical Review
+Letters,</I> April 4, 1994, or <I>Science News,</I> September 17, 1994.
+<P>
+One of the most basic uses of eigenmodes is to represent vibrations governed
+by the wave equation. Below are a few animations of such vibrations, based
+on combinations of the first sixteen modes. Each movie runs for three periods
+of the first mode, and is about 200K-300K in MPEG format.
+<UL>
+  <LI>
+    <A href="drum-anim1.mpg">Mode <VAR>n</VAR> contributes (1/ <VAR>n</VAR>)^2
+    to the solution.</A>
+  <LI>
+    <A href="drum-anim2.mpg">Mode <VAR>n</VAR> contributes 1/ <VAR>n</VAR> to
+    the solution.</A>
+  <LI>
+    <A href="drum-anim3.mpg">Odd mode <VAR>n</VAR> contributes 1/ <VAR>n</VAR>
+    to the solution with an alternating sign.</A>
+  <LI>
+    <A href="drum-anim4.mpg">Approximation to the drums being "plucked" at their
+    centers.</A>
+</UL>
+<P>
+You can obtain a copy of <A href="../pubs/drums.pdf"> "Eigenmodes of isospectral
+drums,"</A> which appeared in the March 1997 <I>SIAM Review</I>. For hard
+copies with color figures, <A HREF="mailto:driscoll@math.udel.edu">send me mail</A>.
+You can see more examples of isospectral regions in this
+<A target=_top href="http://www.geom.umn.edu/docs/doyle/drum/cover/cover.html">
+paper by Buser, Conway, Doyle, and Semmler.</A> They also produce a pair
+of "homophonic" drums: each has a special point at which the corresponding
+normalized eigenfunctions have identical values. These drums therefore sound
+alike when struck at the special points (the pair above would sound different
+if played in the conventional manner).
+</td></tr>
+</table>
+
+</div>
+
+</body>
+</html>

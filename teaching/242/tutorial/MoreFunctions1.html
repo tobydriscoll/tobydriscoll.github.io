@@ -1,0 +1,183 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>MoreFunctions.html</title>
+<!-- Created by Maple 10.03, Linux -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>restart;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Logarithms</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">The natural logarithm is defined as the </font><font color="#000000" size="3" face="Times New Roman"><strong>ln</strong></font><font color="#000000" size="3" face="Times New Roman"> command.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Int( 1/t, t=1..x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_1.gif" width="64" height="74" alt="Int(1/t, t = 1 .. x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>value(%) assuming x&gt;0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_2.gif" width="49" height="32" alt="ln(x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>diff( ln(x), x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_3.gif" width="26" height="50" alt="1/x" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>plot( ln(x), x=0..5 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/MoreFunctions_4.gif" width="382" height="252" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">General logarithms can be found with </font><font color="#000000" size="3" face="Times New Roman"><strong>log</strong></font><font color="#000000" size="3" face="Times New Roman">, giving the base of the log in a special way.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>log[10](x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_5.gif" width="69" height="50" alt="ln(x)/ln(10)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>plot( [ log[2](x), ln(x), log[4](x) ], x=0..5, color=[red,green,blue] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/MoreFunctions_6.gif" width="436" height="227" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Exponentials</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">General exponentials are written using the caret </font><font color="#000000" size="3" face="Times New Roman"><strong>^</strong></font><font color="#000000" size="3" face="Times New Roman"> for exponential notation.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>2^x;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_7.gif" width="25" height="42" alt="2^x" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>diff( 10^x, x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_8.gif" width="93" height="42" alt="10^x*ln(10)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">For the natural (base-</font><font color="#000000" size="3" face="Times New Roman"><em>e</em></font><font color="#000000" size="3" face="Times New Roman">) exponential, however, it's better to use the function </font><font color="#000000" size="3" face="Times New Roman"><strong>exp</strong></font><font color="#000000" size="3" face="Times New Roman"> instead. In fact, the number </font><font color="#000000" size="3" face="Times New Roman"><em>e</em></font><font color="#000000" size="3" face="Times New Roman"> is not defined.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>exp(x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_9.gif" width="23" height="42" alt="exp(x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>e^x;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_10.gif" width="23" height="42" alt="e^x" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">If you look carefully, you will see that the two previous results are a little different (the font of the </font><font color="#000000" size="3" face="Times New Roman"><em>e</em></font><font color="#000000" size="3" face="Times New Roman">).</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>diff( exp(x), x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_11.gif" width="23" height="42" alt="exp(x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>diff( e^x, x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_12.gif" width="69" height="42" alt="e^x*ln(e)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">You are free to define </font><font color="#000000" size="3" face="Times New Roman"><em>e </em></font><font color="#000000" size="3" face="Times New Roman">and then use the caret form, but it's easy to forget the defintion step and get confusing results.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>e:= exp(1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_13.gif" width="47" height="32" alt="exp(1)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>diff( e^x, x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_14.gif" width="43" height="42" alt="(exp(1))^x" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark4" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Inverse trig functions</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">We do not use the "-1" notation for inverse functions in Maple. The inverse trig functions all have names beginning with </font><font color="#000000" size="3" face="Times New Roman"><strong>arc</strong></font><font color="#000000" size="3" face="Times New Roman">.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>arccos(0);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_15.gif" width="40" height="50" alt="1/2*Pi" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>diff( arctan(x), x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_16.gif" width="64" height="50" alt="1/(1+x^2)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>csc( arctan(x) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_17.gif" width="83" height="68" alt="(1+x^2)^(1/2)/x" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark5" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Hyperbolic functions</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">All the hyperbolic functions are defined as you would expect.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>int( sinh(x), x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_18.gif" width="70" height="32" alt="cosh(x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>limit( tanh(x), x=infinity );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/MoreFunctions_19.gif" width="18" height="32" alt="1" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>plot( [cosh(x),sinh(x),tanh(x)], x=-2..2, color=[red,black,blue] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/MoreFunctions_20.gif" width="382" height="228" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</body>
+</html>

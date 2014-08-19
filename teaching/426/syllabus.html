@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>MATH 426 Syllabus</title>
+  <style type="text/css"> 
+body {  width:80%; }
+
+.maincol {
+  vertical-align: top;
+  padding-left:1em;
+}
+
+.maincol dt {
+  font-style:italic;
+  color:#2c3272;
+}
+
+.maincol dd {  padding:0.5ex 0ex 1ex 0ex; }
+
+.maincol th {
+  text-align:left;
+  text-decoration:underline;
+}
+  
+h2 {
+  font-size:x-large;
+  border-bottom:thin solid black;
+  width:100%;
+}
+  </style>
+  <link rel=StyleSheet type="text/css" href="syllabus.css">
+</head>
+
+<body>
+
+<div id="content">
+<table width="100%">
+<tr>
+   <td class="maincol">
+  
+    <h2>Course information for MATH 426/CISC 410:<br>Numerical Analysis I</h2>
+    <dl>
+    <dt>Instructor</dt>
+      <dd>Prof. Toby Driscoll<br>
+        515 Ewing Hall<br>
+        831-3383 or driscoll(AT)udel.edu<br>
+        <i>Office hours:</i>Mondays and Thursdays, 10:30-12:00<br>
+      </dd>
+    
+    <dt>Meetings</dt>
+      <dd>MWF 1:25-2:15, in 207 Ewing. You are responsible for what is covered in class.</dd>
+    
+    <dt>Required textbook</dt>
+      <dd>Driscoll and Braun, <i>Fundamentals of Numerical Analysis</i>, in development. Can be ordered at <a href="http://www.lulu.com/content/paperback-book/fundamentals-of-numerical-analysis/7590092">
+	  lulu.com</a>.</dd>
+	  <dd>Get <a href="Chapter1.pdf">Chapter 1</a>, get <a href="Chapter2.pdf">Chapter 2</a>.</dd>
+    
+
+    <dt>Academic integrity</dt>
+      <dd>You are expected and encouraged to discuss problems with others.
+        However, the work you turn in must be completely your own. <b>Sharing
+        or copying of work may result in grade penalties for all involved
+        parties.</b> I reserve the right to refer all instances of
+        academic dishonesty to the Office of Student Conduct without warning and on the
+        first offense. You should carefully read <a href="http://www.udel.edu/studentconduct/ai.html">the official
+        university policies regarding academic integrity</a>.
+      </dd>
+
+
+    <dt>MATLAB</dt>
+	<dd>You will be using MATLAB, the leading computing environment in science and engineering. 
+	No prior experience with MATLAB is required. 
+	(You should, however, have taken at least one course in programming.) There are lots of 
+	<a href="http://www.mathworks.com/products/matlab/examples.html">official video tutorials</a> available.</dd>
+
+    <dt>Canvas</dt>
+	<dd>We will be making heavy use of Canvas, a Sakai alternative. You will spend a lot of time interacting
+	with the <a href="www.udel.edu/canvas">Canvas course site</a>. Most class dates 
+	will have an associated Canvas module that has deadlines.</dd>
+	 
+	 <dt>Flipping</dt>
+	 <dd>This course will be "flipped", meaning that you will be responsible for viewing video content and answering
+	 short quizzes <b>before</b> class, then working on assignments <b>during</b> class to be uploaded by the end of
+	 the period.</dd>
+	 
+   
+	  <dt>Exams</dt>
+	  <dd>There will be two midterms (<b>October 3</b> and <b>November 2</b>) and one final exam.
+      
+ 
+    <dt>Grading</dt>
+		<dd>
+        <table>
+		<tr><td>Canvas quizzes</td><td></td><td>10%</td><td>(after dropping lowest 5)</td></tr>
+		<tr>
+		  <td>Collected classwork</td><td width="12"><br></td><td>40%</td><td>(after dropping lowest 5)</td>
+        </tr>
+         <tr>
+			<td>Midterm exam</td><td></td><td>2 x 15%</td>
+        </tr>
+		<tr>
+			<td>Final exam</td><td></td><td>20%</td>
+        </tr>
+        </table>
+  	    </dd>
+        <dt></dt>
+        <dd>
+		<p>You live in a heavily quantified world. Once in numerical form, data can be subjected
+		to algorithms in order to yield insights. While the breadth and pace of these efforts have accelerated
+		recently, the tradition of applying algorithms to numerical representations of reality
+		goes back to the roots of civilization in virtually all major cultures. In the twentieth century, these efforts picked 
+		up steam as automatic and reprogrammable computers were invented. Soon there will be very few areas of scientific and
+		economic activity left untouched by numerical algorithms.</p>     
+		
+		<p>Because the real numbers are an abstraction that we can only approximate, the mathematics of numerical computation is 
+		subtle at times. Mathematically equivalent formulas may be quite different in terms of a
+		computer implementation, so multiple approaches to the same problem may be necessary. In fact, most of this semester 
+		will be spent on seemingly "elementary" algebra problems. Our motivation for these problems come from major areas of 
+		current research, such as image processing, machine learning, and molecular dynamics. While we only skim the surface of these 
+		huge subjects, applications of them and in other areas of computing very often boil down to the same kinds of 
+		algebraic problems, just as advanced mathematics often involves some algebraic manipulation along the way.</p>
+        
+       <p>Here is an overview of the topics we will study:</p>
+       <table cellspacing="8" frame="hsides">
+        <tr>
+          <td width=100>Linear algebra</td>
+          <td>MATLAB, matrix multiplication, identity, inverse </td>
+        </tr>
+        <tr>
+          <td>Floating point arithmetic</td>
+          <td>Roundoff error, conditioning, stability</td>
+        </tr>
+          <tr>
+          <td>Linear systems of equations</td>
+          <td>LU and PLU factorization, operation counting, norms, condition numbers</td>
+        </tr>
+        <tr>
+          <td>Linear least squares</td>
+          <td>Normal equations, QR factorization, pseudoinverse</td>
+        </tr>
+        <tr>
+          <td>Nonlinear equations and least squares</td>
+		  <td>Newton and quasi-Newton methods, Gauss-Newton iterations, globalizing convergence</td>
+        </tr>
+        <tr>
+         <td>Eigenvalues</td>
+          <td>Power iteration, inverse iteration, Schur factorization, singular value decomposition</td>
+        </tr>
+		<tr>
+		<td>Large scale problems</td>
+		<td>(time permitting) Sparse matrices, matrix-free iteration, Krylov subspaces, GMRES, conjugate gradients </td>
+		</tr>
+      </table></dd>
+        
+    </dl>
+
+  </td><!-- end maincol-->
+</tr>
+</table>
+
+</div> <!-- end content-->
+   
+</body>
+</html>

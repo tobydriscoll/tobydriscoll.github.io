@@ -1,0 +1,183 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>CollectionsEquations.html</title>
+<!-- Created by Maple 10.03, Linux -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Collections</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Several items (numbers, variables, expressions, etc.) separated by commas form a </font><font color="#000000" size="3" face="Times New Roman"><strong>sequence</strong></font><font color="#000000" size="3" face="Times New Roman">. &nbsp;A sequence can be assigned to a name.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>x,sqrt(2),evalf(Pi);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_1.gif" width="166" height="40" alt="x, 2^(1/2), 3.141592654" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>s:= %;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_2.gif" width="198" height="40" alt="x, 2^(1/2), 3.141592654" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">If you enclose a sequence in brackets [], you get a </font><font color="#000000" size="3" face="Times New Roman"><strong>list</strong></font><font color="#000000" size="3" face="Times New Roman">. &nbsp;Many Maple commands accept lists as arguments, and you can extract one or more of the members of a given list.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>L:= [s,s];</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_3.gif" width="384" height="40" alt="[x, 2^(1/2), 3.141592654, x, 2^(1/2), 3.141592654]" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>L[3];</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_4.gif" width="112" height="32" alt="3.141592654" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>L[2..5];</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_5.gif" width="220" height="40" alt="[2^(1/2), 3.141592654, x, 2^(1/2)]" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">If you enclose a sequence in braces {}, you get a </font><font color="#000000" size="3" face="Times New Roman"><strong>set</strong></font><font color="#000000" size="3" face="Times New Roman">. &nbsp;In a set, the elements have no fixed ordering and duplicates are removed.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>T:= {s,1,sqrt(2)};</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_6.gif" width="242" height="40" alt="{1, x, 2^(1/2), 3.141592654}" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">To convert a list or set back into a sequence, use the command </font><font color="#ff0000" size="3" face="monospace"><strong>op</strong></font><font color="#000000" size="3" face="Times New Roman">.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>op(L);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_7.gif" width="333" height="40" alt="x, 2^(1/2), 3.141592654, x, 2^(1/2), 3.141592654" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>op(T);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_8.gif" width="185" height="40" alt="1, x, 2^(1/2), 3.141592654" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Equations</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">An equation in Maple is an expression with an equals sign in it. Remember, </font><font color="#ff0000" size="3" face="monospace"><strong>=</strong></font><font color="#000000" size="3" face="Times New Roman"> and </font><font color="#ff0000" size="3" face="monospace"><strong>:=</strong></font><font color="#000000" size="3" face="Times New Roman"> are quite different to Maple.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>x^2 = 1;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_9.gif" width="55" height="42" alt="x^2 = 1" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>x^2 := 1;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#ff00ff" size="3" face="monospace">Error, invalid left hand side of assignment</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">You can solve many simple equations (and even some not-simple ones) using </font><font color="#ff0000" size="3" face="monospace"><strong>solve</strong></font><font color="#000000" size="3" face="Times New Roman">. If multiple solutions are found, a sequence is returned.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>solve( x^2=1, x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_10.gif" width="45" height="32" alt="1, -1" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>solve( x^4=1, x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_11.gif" width="81" height="32" alt="-1, 1, I, -I" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Notice that you can get complex numbers (</font><font color="#ff0000" size="3" face="monospace"><strong>I</strong></font><font color="#000000" size="3" face="Times New Roman"> is the square root of -1) as results. We are not interested in those solutions for this course.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">You don't always get every possible solution. The following equation has infinitely many solutions, of course.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>solve( sin(theta)=1/2, theta );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_12.gif" width="40" height="50" alt="1/6*Pi" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">In some cases, </font><font color="#ff0000" size="3" face="monospace"><strong>solve</strong></font><font color="#000000" size="3" face="Times New Roman"> doesn't give you the kind of information you might really want. When this happens, you may be able to get numerical answers using </font><font color="#ff0000" size="3" face="monospace"><strong>evalf</strong></font><font color="#000000" size="3" face="Times New Roman">.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>solve( sin(x^2)=tan(x)+1, x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_13.gif" width="261" height="42" alt="RootOf(tan(_Z)-sin(_Z^2)+1)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_14.gif" width="120" height="26" alt="-.5858173541" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Or, you can try </font><font color="#ff0000" size="3" face="monospace"><strong>fsolve</strong></font><font color="#000000" size="3" face="Times New Roman"> to get purely numerical (and approximate) answers.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>fsolve( sin(x^2)=tan(x)+1, x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_15.gif" width="120" height="26" alt="-.5858173541" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">You can give </font><font color="#ff0000" size="3" face="monospace"><strong>fsolve</strong></font><font color="#000000" size="3" face="Times New Roman"> a starting approximation. This can affect the answer and reveal solutions missed by </font><font color="#ff0000" size="3" face="monospace"><strong>solve</strong></font><font color="#000000" size="3" face="Times New Roman">.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>fsolve( sin(x^2)=tan(x)+1, x=2 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_16.gif" width="112" height="32" alt="2.057865867" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">You can also try to solve a set of equations with a set of unknown variables. </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>eqns:= { u^2+2*u*v=2, u-v+v^2=1 };</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_17.gif" width="311" height="42" alt="{u^2+2*u*v = 2, u-v+v^2 = 1}" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>solve( eqns, {u,v} );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_18.gif" width="536" height="52" alt="{v = RootOf(_Z^2-4*_Z^3+4*_Z+_Z^4-1, label = _L24), u = RootOf(_Z^2-4*_Z^3+4*_Z+_Z^4-1, label = _L24)-RootOf(_Z^2-4*_Z^3+4*_Z+_Z^4-1, label = _L24)^2+1}" align="center" border="0"><br><img src="images/CollectionsEquations_19.gif" width="536" height="42" alt="{v = RootOf(_Z^2-4*_Z^3+4*_Z+_Z^4-1, label = _L24), u = RootOf(_Z^2-4*_Z^3+4*_Z+_Z^4-1, label = _L24)-RootOf(_Z^2-4*_Z^3+4*_Z+_Z^4-1, label = _L24)^2+1}" align="center" border="0"><br><img src="images/CollectionsEquations_20.gif" width="536" height="52" alt="{v = RootOf(_Z^2-4*_Z^3+4*_Z+_Z^4-1, label = _L24), u = RootOf(_Z^2-4*_Z^3+4*_Z+_Z^4-1, label = _L24)-RootOf(_Z^2-4*_Z^3+4*_Z+_Z^4-1, label = _L24)^2+1}" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Here we show that </font><font color="#ff0000" size="3" face="monospace"><strong>allvalues</strong></font><font color="#000000" size="3" face="Times New Roman"> is another way to locate multiple solutions. This may be useful when you get RootOf in your results.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_21.gif" width="317" height="32" alt="{u = 1.186986879, v = .2489758561}" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>evalf(allvalues([%%]));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CollectionsEquations_22.gif" width="536" height="42" alt="[{u = 1.186986879-0.8154495437e-10*I, v = .2489758558-0.1624245242e-9*I}], [{v = 1.291366890+0.2768809307e-9*I, u = .623738445-0.4382288021e-9*I}], [{v = 3.379878124-0.1311034851e-9*I, u = -7.04369800..." align="center" border="0"><br><img src="images/CollectionsEquations_23.gif" width="536" height="42" alt="[{u = 1.186986879-0.8154495437e-10*I, v = .2489758558-0.1624245242e-9*I}], [{v = 1.291366890+0.2768809307e-9*I, u = .623738445-0.4382288021e-9*I}], [{v = 3.379878124-0.1311034851e-9*I, u = -7.04369800..." align="center" border="0"><br><img src="images/CollectionsEquations_24.gif" width="536" height="42" alt="[{u = 1.186986879-0.8154495437e-10*I, v = .2489758558-0.1624245242e-9*I}], [{v = 1.291366890+0.2768809307e-9*I, u = .623738445-0.4382288021e-9*I}], [{v = 3.379878124-0.1311034851e-9*I, u = -7.04369800..." align="center" border="0"><br><img src="images/CollectionsEquations_25.gif" width="536" height="42" alt="[{u = 1.186986879-0.8154495437e-10*I, v = .2489758558-0.1624245242e-9*I}], [{v = 1.291366890+0.2768809307e-9*I, u = .623738445-0.4382288021e-9*I}], [{v = 3.379878124-0.1311034851e-9*I, u = -7.04369800..." align="center" border="0"><br><img src="images/CollectionsEquations_26.gif" width="536" height="42" alt="[{u = 1.186986879-0.8154495437e-10*I, v = .2489758558-0.1624245242e-9*I}], [{v = 1.291366890+0.2768809307e-9*I, u = .623738445-0.4382288021e-9*I}], [{v = 3.379878124-0.1311034851e-9*I, u = -7.04369800..." align="center" border="0"><br><img src="images/CollectionsEquations_27.gif" width="536" height="42" alt="[{u = 1.186986879-0.8154495437e-10*I, v = .2489758558-0.1624245242e-9*I}], [{v = 1.291366890+0.2768809307e-9*I, u = .623738445-0.4382288021e-9*I}], [{v = 3.379878124-0.1311034851e-9*I, u = -7.04369800..." align="center" border="0"><br><img src="images/CollectionsEquations_28.gif" width="536" height="42" alt="[{u = 1.186986879-0.8154495437e-10*I, v = .2489758558-0.1624245242e-9*I}], [{v = 1.291366890+0.2768809307e-9*I, u = .623738445-0.4382288021e-9*I}], [{v = 3.379878124-0.1311034851e-9*I, u = -7.04369800..." align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">In this answer, the results appear to be complex, but the imaginary parts are so small that they probably just represent arithmetic rounding errors in floating-point calculations.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Solving equations is done not for fun but for some purpose. You need to keep the application in mind in order to find meaningful and reasonable solutions to such problems.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR" content="Mozilla/4.73 [en] (X11; U; SunOS 5.7 sun4u) [Netscape]">
+  <title>Schwarz-Christoffel mapping</title>
+  <link rel="stylesheet" type="text/css" href="../common/style.css">
+</head>
+
+<body bgcolor=white>
+<div id="banner">
+  <div class="name">Toby Driscoll</div>
+  <div id="navbar">
+  <a href="../index.html">home</a> |
+  <a href="../cv.pdf">vita</a> |
+  <a href="index.html">research</a> |
+  <a href="../teaching/index.html">teaching</a> |
+  <a href="../software/index.html">software</a>
+  </div>
+</div> <!--end banner-->
+
+<div id="content">
+<table width=100%>
+  <tr><td class="linkcol">
+   <dl>
+   <dt>UD links</dt>
+   <dd><a href="http://www.math.udel.edu/~driscoll/SC">SC Toolbox</a></dd>
+   <dd><a href="http://www.math.udel.edu">UD Math</a></dd>
+   <dd><a href="http://www.math.udel.edu/research/na/NA.html">Numerical Analysis</a></dd>
+   </dl>
+   <dl>
+    <dt>Other links</dt>
+    <dd><a href="http://netlib.org/conformal/index.html">Netlib/conformal</a></dd>
+    <dd><a href="http://www.math.utk.edu/~kens/#software">CirclePack</a></dd>
+    <dd><a href="http://www.math.washington.edu/~marshall/zipper.html">Zipper</a></dd>
+   </dl>
+  </td>  <!-- end linkcol-->
+  <td width=12 class="divider"><img width=1 height=1 src="spacer.gif"></td>
+  <td class="maincol">
+
+<h3>Schwarz-Christoffel mapping</h3>
+
+
+<p><b>My book, <i>Schwarz-Christoffel Mapping</i> with
+            L. N. Trefethen, is now
+  <a href="http://www.cup.org/titles/catalogue.asp?isbn=0521807263">available</a>
+            from Cambridge University Press.</b></p>
+
+<p>
+A <b>conformal map</b> of a region in the complex plane is an
+analytic (smooth) function whose derivative never vanishes within the
+region. Graphically, a&nbsp;<img SRC="sc-L.gif" ALT="Map to an L"
+height=140 width=139 align=RIGHT>conformal map transforms any pair of
+curves intersecting at a point in the region so that the image curves
+intersect at the same angle. Conformal maps are both mathematically
+interesting and practically useful. Because of the preservation of
+angles, a conformal map of a square grid in the plane results in a
+curvilinear orthogonal grid. Furthermore, the transplantation by a
+conformal map of a solution to Laplace's equation is still a solution
+in the image region, so that conformal maps can be used in heat
+transfer, electrostatics, steady fluid flows, and other phyiscal
+applications in which Laplace's equation arises.
+
+<p><img SRC="sc-probe.gif" height=152 width=152 align=LEFT> In general
+it's impossible to write down a simple formula for the conformal map
+from one region to another. But for the important special case of a
+map from the upper half-plane (Im <i>z</i> > 0) to a polygon, there is
+such a formula, discovered independently by Schwarz and Christoffel in
+the 1860's. There are two catches, however. The first is that except
+for some very simple polygons, the formula requires an integral that
+has no closed form. The second, more fundamental catch is that you
+first need to find out the values of some unspecified constants in the
+formula. These constants are the "pre-images" of the vertices of the
+polygon on the real axis. To find these <i>prevertices</i>, you need
+to solve a set of highly nonlinear equations. Both of these issues can
+be surmounted by using a computer.
+
+<p>In the late 1970's <a
+href="http://www.comlab.ox.ac.uk/oucl/people/nick.trefethen.html"
+target="_top">Nick Trefethen</a> publicly released the Fortran package
+<a href="http://www.netlib.org/conformal/scpdbl"
+target="_top">SCPACK</a>, which is a fast and reliable tool for maps
+between the unit disk and a polygon. Subsequently, I have written
+(with Trefethen's blessing) the natural successor to SCPACK, the <a
+href="../SC">Schwarz-Christoffel Toolbox for MATLAB</a>.  <p><img
+SRC="sc-star.gif" height=152 width=152 align=LEFT><a
+href="http://www.mathworks.com" target="_top">MATLAB</a> is an
+interactive high-level environment for numerical analysis and
+scientific computing.The SC Toolbox exploits its interactivity and
+powerful graphics, making the computation of conformal maps easier and
+more flexible than ever before. In addition, the toolbox adds maps to
+and from the half-plane, a strip, and a rectangle, and maps from a
+disk to the exterior of a polygon.
+
+<p><img SRC="sc-maze.gif" height=136 width=168 align=RIGHT> A
+limitation of every traditional numerical conformal mapping method
+goes by the name of <i>crowding</i>. This occurs whenever the target
+region has elongated or pinched regions.  <a
+href="http://www.cs.cornell.edu/Info/People/vavasis/vavasis.html"
+target="_top">Steve Vavasis</a> and I wrote a <a
+href="../pubs/crdt.pdf">paper</a> describing a new algorithm for SC
+mapping that avoids the problems normally encountered with
+crowding. This algorithm is based on complex cross-ratios and Delaunay
+triangulations, and it allows the solution of problems that are not
+feasible for any other algorithm we know of. The new method is
+incorporated into the latest version of the toolbox.
+
+<p>You can read a <a href="../pubs/sc.pdf">detailed overview</a> of an
+older version of the SC Toolbox, which appeared in the
+June 1996 ACM Transactions on Mathematical Software. You can also <a
+href="http://www.math.udel.edu/~driscoll/SC">download the
+toolbox</a>. It runs best under version 6 of MATLAB (though an older
+            version for MATLAB 4.1 still exists). 
+
+<p>
+In conjunction with <a
+href="http://www.math.psu.edu/dna/Overview.html" TARGET="_top">Doug
+Arnold,</a> who has put together a wonderful page of <a
+href="http://www.math.psu.edu/dna/complex-g.html"
+TARGET="_top">graphics for complex analysis</a>, I have created a few
+<a href="http://www.math.psu.edu/dna/complex-g.html#sc"
+TARGET="_top">animations</a> illustrating Schwarz-Christoffel
+maps.</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>

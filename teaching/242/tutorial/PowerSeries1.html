@@ -1,0 +1,209 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>PowerSeries.html</title>
+<!-- Created by Maple 10.03, Linux -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="center"><font color="#000000" size="5" face="Times New Roman"><strong>Power series and Taylor series</strong></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Power series and convergence intervals</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">A power series is best thought of as a function. It turns each value of a variable </font><font color="#000000" size="3" face="Times New Roman"><em>x</em></font><font color="#000000" size="3" face="Times New Roman"> into the sum of a series. The variable always appears as <img src="images/PowerSeries_1.gif" width="73" height="42" alt="(x-a)^n" align="center" border="0">within the series. In this example, the center point </font><font color="#000000" size="3" face="Times New Roman"><em>a=0</em></font><font color="#000000" size="3" face="Times New Roman">.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>c:= n-&gt;(-3)^n/sqrt(n+1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_2.gif" width="138" height="62" alt="proc (n) options operator, arrow; (-3)^n/sqrt(n+1) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>s:= x-&gt; sum(c(n)*x^n,n=0..infinity);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_3.gif" width="158" height="70" alt="proc (x) options operator, arrow; sum(c(n)*x^n, n = 0 .. infinity) end proc" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>s(x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_4.gif" width="117" height="70" alt="sum((-3)^n*x^n/(n+1)^(1/2), n = 0 .. infinity)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Maple can give a little insight about a power series through a graph.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>plot(s(x),x=-0.5..0.5);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/PowerSeries_5.gif" width="518" height="240" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">From the graph, it appears unlikely that the series is convergent all the way down to </font><font color="#000000" size="3" face="Times New Roman"><em>x=-</em></font><font color="#000000" size="3" face="Times New Roman">0.5</font><font color="#000000" size="3" face="Times New Roman"><em>. </em></font><font color="#000000" size="3" face="Times New Roman">Maple can help you identify what the radius of convergence is. Often the Ratio Test is useful in this respect.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>abs( (c(n+1)*x^(n+1)) / (c(n)*x^n) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_6.gif" width="212" height="62" alt="abs((-3)^(n+1)*x^(n+1)*(n+1)^(1/2)/((n+2)^(1/2)*(-3)^n*x^n))" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>simplify( % );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_7.gif" width="114" height="58" alt="3*abs(x*(n+1)^(1/2)/(n+2)^(1/2))" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>L:= limit( %, n=infinity );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_8.gif" width="75" height="32" alt="3*abs(x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>solve( L&lt;1, x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_9.gif" width="295" height="50" alt="RealRange(Open(-1/3), Open(1/3))" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Notice how </font><font color="#000000" size="3" face="Times New Roman"><strong>solve</strong></font><font color="#000000" size="3" face="Times New Roman"> can solve inequalities. The radius of convergence is 1/3. Observe that in the graph above, Maple computed "values" of the power series outside its interval of convergence. These values have to be regarded as suspect at best.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">The endpoints of the interval of convergence always must be checked independently. At the right end,</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>simplify( s(1/3) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_10.gif" width="110" height="70" alt="sum((-1)^n/(n+1)^(1/2), n = 0 .. infinity)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">This is a convergent alternating series. At the left end,</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>simplify( s(-1/3) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_11.gif" width="24" height="26" alt="infinity" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">It is now clear that the interval of convergence is the half-open interval (-1/3,1/3].</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Taylor series and Taylor polynomials</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">The most important type of power series is a Taylor series. It is a different way to express a function </font><font color="#000000" size="3" face="Times New Roman"><em>f(x)</em></font><font color="#000000" size="3" face="Times New Roman">.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>taylor( exp(x), x=0 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_12.gif" width="392" height="50" alt="series(1+x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+O(x^6),x,6)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">The term <img src="images/PowerSeries_13.gif" width="61" height="42" alt="O(x^6)" align="center" border="0">in the above is Maple's way of showing the power of the first nonzero term it left out. You can ask for more or fewer terms.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>taylor( exp(x), x=0, 10 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_14.gif" width="536" height="50" alt="series(1+x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+1/720*x^6+1/5040*x^7+1/40320*x^8+1/362880*x^9+O(x^10),x,10)" align="center" border="0"><br><img src="images/PowerSeries_15.gif" width="536" height="50" alt="series(1+x+1/2*x^2+1/6*x^3+1/24*x^4+1/120*x^5+1/720*x^6+1/5040*x^7+1/40320*x^8+1/362880*x^9+O(x^10),x,10)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">While Maple can compute as many terms as you like, it's not so simple to get it to say what we write: <img src="images/PowerSeries_16.gif" width="77" height="70" alt="" align="center" border="0">It's basically up to you to find the pattern to express things this way when possible. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">The expansion point of the series has an important effect.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>taylor( exp(x), x=1 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_17.gif" width="536" height="50" alt="series(exp(1)+exp(1)*(x-1)+1/2*exp(1)*(x-1)^2+1/6*exp(1)*(x-1)^3+1/24*exp(1)*(x-1)^4+1/120*exp(1)*(x-1)^5+O((x-1)^6),x = 1,6)" align="center" border="0"><br><img src="images/PowerSeries_18.gif" width="536" height="50" alt="series(exp(1)+exp(1)*(x-1)+1/2*exp(1)*(x-1)^2+1/6*exp(1)*(x-1)^3+1/24*exp(1)*(x-1)^4+1/120*exp(1)*(x-1)^5+O((x-1)^6),x = 1,6)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>taylor( exp(x), x=-2 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_19.gif" width="536" height="50" alt="series(exp(-2)+exp(-2)*(x+2)+1/2*exp(-2)*(x+2)^2+1/6*exp(-2)*(x+2)^3+1/24*exp(-2)*(x+2)^4+1/120*exp(-2)*(x+2)^5+O((x+2)^6),x = -2,6)" align="center" border="0"><br><img src="images/PowerSeries_20.gif" width="536" height="50" alt="series(exp(-2)+exp(-2)*(x+2)+1/2*exp(-2)*(x+2)^2+1/6*exp(-2)*(x+2)^3+1/24*exp(-2)*(x+2)^4+1/120*exp(-2)*(x+2)^5+O((x+2)^6),x = -2,6)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>taylor( cos(x), x=0 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_21.gif" width="212" height="50" alt="series(1-1/2*x^2+1/24*x^4+O(x^6),x,6)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>taylor( cos(x), x=Pi/2 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_22.gif" width="507" height="60" alt="series(-(x-1/2*Pi)+1/6*(x-1/2*Pi)^3-1/120*(x-1/2*Pi)^5+O((x-1/2*Pi)^6),x = 1/2*Pi,6)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">If we keep just the first </font><font color="#000000" size="3" face="Times New Roman"><em>n</em></font><font color="#000000" size="3" face="Times New Roman">+1 terms of a Taylor series and drop the rest, we get the </font><font color="#000000" size="3" face="Times New Roman"><em>n</em></font><font color="#000000" size="3" face="Times New Roman">th degree polynomial known as a Taylor polynomial, <img src="images/PowerSeries_23.gif" width="62" height="32" alt="" align="center" border="0">This is the only polynomial of degree </font><font color="#000000" size="3" face="Times New Roman"><em>n</em></font><font color="#000000" size="3" face="Times New Roman"> or less that matches the value of </font><font color="#000000" size="3" face="Times New Roman"><em>f</em></font><font color="#000000" size="3" face="Times New Roman"> and its first </font><font color="#000000" size="3" face="Times New Roman"><em>n</em></font><font color="#000000" size="3" face="Times New Roman"> derivatives at the expansion point </font><font color="#000000" size="3" face="Times New Roman"><em>x=a</em></font><font color="#000000" size="3" face="Times New Roman">. We can ask Maple to convert a Taylor series it found into a Taylor polynomial.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>f:= cos(x)-sin(5*x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_24.gif" width="169" height="32" alt="cos(x)-sin(5*x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>taylor( f, x=Pi/2, 4 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_25.gif" width="529" height="60" alt="series(-1-(x-1/2*Pi)+25/2*(x-1/2*Pi)^2+1/6*(x-1/2*Pi)^3+O((x-1/2*Pi)^4),x = 1/2*Pi,4)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>T3:= convert( %, polynom );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_26.gif" width="418" height="60" alt="-1-x+1/2*Pi+25/2*(x-1/2*Pi)^2+1/6*(x-1/2*Pi)^3" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>eval( [f, T3], x=Pi/2 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_27.gif" width="70" height="32" alt="[-1, -1]" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>eval( [diff(f,x), diff(T3,x)], x=Pi/2 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_28.gif" width="70" height="32" alt="[-1, -1]" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>eval( [diff(f,x,x), diff(T3,x,x)], x=Pi/2 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_29.gif" width="74" height="32" alt="[25, 25]" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>eval( [diff(f,x,x,x), diff(T3,x,x,x)], x=Pi/2 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_30.gif" width="54" height="32" alt="[1, 1]" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Close to the value </font><font color="#000000" size="3" face="Times New Roman"><em>x=a, <img src="images/PowerSeries_31.gif" width="53" height="32" alt="T[n](x)" align="center" border="0"></em></font><font color="#000000" size="3" face="Times New Roman"> can be a very good approximation to the original </font><font color="#000000" size="3" face="Times New Roman"><em>f</em></font><font color="#000000" size="3" face="Times New Roman">. In fact it is a generalization of the familiar tangent line approximation.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>T1:= convert( taylor(f,x=Pi/2,2), polynom );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/PowerSeries_32.gif" width="148" height="50" alt="-1-x+1/2*Pi" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>plot( [f,T1,T3], x=Pi/2-1/2..Pi/2+1/2, color=[black,blue,red] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/PowerSeries_33.gif" width="518" height="297" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</body>
+</html>

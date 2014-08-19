@@ -1,0 +1,97 @@
+<head>
+	<title>Toby Driscoll: Research</title>
+	<meta name=keywords content="numerical analysis, scientific computing, applied mathematics, Chebyshev, spectral methods, radial basis functions, conformal mapping, software">
+	<meta name=description content="Toby Driscoll's research">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/modern.css" rel="stylesheet"> 
+	<link href="../css/modern-responsive.css" rel="stylesheet"> 
+	<style>
+	@media (max-width: 767px){
+		.grid img {
+			display: none;
+			}
+	}
+	dt {
+		font-weight: bold;
+	}
+	</style> 
+</head>
+
+<body class="metrouicss">
+
+<div class="nav-bar">
+	<div class="nav-bar-inner">
+		<span class="element"><img height=32 src="../images/tobyhead-med.jpg" alt="Picture of Toby"></span>
+		
+		<ul class="menu">
+		  <li><a href="http://www.math.udel.edu/~driscoll">Home</a></li>
+		  <li class="divider"></li>
+		  <li><a href="http://www.math.udel.edu/~driscoll/about.html">About</a></li>
+		  <li><a href="http://www.math.udel.edu/~driscoll/research/">Research</a></li>
+		  <li><a href="http://www.math.udel.edu/~driscoll/teaching/">Teaching</a></li>
+		  <li><a href="http://www.math.udel.edu/~driscoll/papers/">Papers</a></li>
+		  <li><a href="http://www.math.udel.edu/~driscoll/software/">Software</a></li>
+		  <li><a href="http://www.math.udel.edu/~driscoll/books">Books</a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div class="page secondary">
+	<div class="page-header">
+		<div class="page-header-content">
+			<h2>Research topics</h2>
+		</div>
+	</div>
+	
+	<div class="page-region">
+		<div class="page-region-content">
+		<p>Please see my <a href="../papers/index.html">list of papers</a> for references, or <a href="../cv.pdf">my CV</a> for links to most of them.</p>
+		
+		<p>One of my strong interests is in <a href="../software/index.html">numerical software</a>. I think numerical mathematicians who are experts on computation in particular areas serve themselves and the research community well when they take time to write or contribute to software projects. Who is better suited to write them?</p>
+
+		<h3>Most active interests</h3>
+			<dl>
+			<dt>Spectral collocation (pseudospectral) methods for PDEs</dt>
+			<dd>Spectral collocation methods use all the available point values of a function to estimate derivatives (or integrals) of that function. Compared to finite differences, spectral collocation methods use data far more efficiently and can operate on much smaller discretizations. Compared to Galerkin methods, they are easier to implement especially for time-dependent, variable-coefficient, and nonlinear problems. Much of my work connected to spectral methods is reflected in the <a href="http://www.chebfun.org">chebfun project</a>.</dd>
+			<dt>Radial basis functions for PDEs</dt>
+			<dd>RBFs are already well-loved for interpolation in many dimensions. By differentiating such interpolants, it is possible to simulate PDEs in many dimensions over scattered points without   grids. These approximations can combine spectral accuracy with fine resolution in selected regions of activity.</dd>
+			<dt>Mathematical biology and other applications</dt>
+			<dd>I am part of two interdisciplinary groups seeking to apply modeling and computation to human biology. One project (led by colleague <a href="http://www.math.udel.edu/~braun/">Dr. Richard Braun</a>) is fundamental research into understanding the dynamic properties of the ocular tear film. The other project is applying modeling of the heart and circulation in order to aid clinicians in understanding patients with <a href="http://en.wikipedia.org/wiki/Hypoplastic_left_heart_syndrome">hypoplastic left heart syndrome</a> at bedside and in real time.</dd>
+			</dl>
+
+		<h3>Projects with less current activity</h3>
+			<dl>
+			<dt>Numerical conformal mapping</dt>
+			<dd>My primary contribution is in Schwarz-Christoffel mapping, though I have worked on other mapping methods as well. In particular, I am author of a <a href="books/index.html">book</a> and the <a href="../SC/index.html">Schwarz-Christoffel Toolbox for MATLAB</a>. Read more on this topic <a href="conformal.html">here</a>.
+			</dd>
+			<dt>Eigenmodes of differential operators</dt>
+			<dd>I have been interested in spectrally accurate methods for the Laplace eigenvalue problem on 2D regions, particularly in the presence of corners or other singularities. The best known example is the computation for the isospectral drums in answer to the question, <a href="drums.html">"Can one hear the shape of a drum?"</a> I also computed in a nonlinear eigenvalue problem arising in micro-electromechanical systems (MEMS). Eigenmodes of operators are one of the flagship features in <a href="http://www.chebfun.org">Chebfun</a>.
+			</dd> 			
+			<dt>Sampling of rare events</dt>
+			<dd>Stanislaw Ulam mused while playing solitaire that while an exact analysis of the probability of winning a game was impossible, one could get a fair picture by keeping track of successes and failures while playing. He then realized that with the new computing power available to the Manhattan Project, one might do the same sort of thing to study nuclear chain reactions. The descendants of his methods are used to simulate many phenomena that defy rigorous analysis. I am particularly attracted to methods that gather statistics about rarely occurring events, using techniques called importance sampling and multicanonical Monte Carlo.</dd>
+			</dl>
+		<h3>Graduate students supervised</h3>
+		  <ul>
+		  <li><a href="http://math.la.asu.edu/~platte/">Dr. Rodrigo Platte</a>, Ph.D., 2005. Now on tenure track at Arizona State University.</li>
+		  <li><a href="http://www.math.umassd.edu/~aheryudono/">Dr. Alfa R. H. Heryudono</a>, Ph.D., 2008. Now on tenure track at the University of Massachusetts, Dartmouth.</li>
+		  <li>Dr. Quan Deng, Ph.D., 2013. Now working at Amazon, Inc.</li>
+		  <li>Shawn Abernethy, M.S. with thesis, 2013. Working at The SI Organization.</li>
+		  <li>Lei Chen, Ph.D. candidate.</li>
+		  </ul>
+		  
+		  <h3>&nbsp;</h3>
+		  <p class="tertiary-text">Page styled with <a href="http://metroui.org.ua">Metro UI CSS</a></p>
+		  
+		</div>
+	</div>
+	
+	<div class="page-region">
+		<div class="page-region-content">
+			
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

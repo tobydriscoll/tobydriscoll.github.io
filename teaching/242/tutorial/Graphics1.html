@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Graphics.html</title>
+<!-- Created by Maple 10.03, Linux -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>restart;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Graphics</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">A basic plot of an expression:</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>plot( sin(theta), theta=0..4*Pi );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Graphics_1.gif" width="485" height="248" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">A lot of options are available by right-clicking a graph or using the second row of buttons at the top of the window after a graph has been clicked.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Give a list of expressions to get multiple curves.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>plot( [sin(theta),cos(theta)], theta=0..4*Pi );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Graphics_2.gif" width="473" height="243" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">A more flexible way to get multiple curves is to use the </font><font color="#ff0000" size="3" face="monospace"><strong>display</strong></font><font color="#000000" size="3" face="Times New Roman"> command. This command, like many, lies in an external package that first has to be loaded using </font><font color="#ff0000" size="3" face="monospace"><strong>with</strong></font><font color="#000000" size="3" face="Times New Roman">:</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>with(plots):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">The colon at the end of a command is an alternative to the semicolon. It prevents output from being displayed, which is what you want using </font><font color="#ff0000" size="3" face="monospace"><strong>with</strong></font><font color="#000000" size="3" face="Times New Roman">.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">To combine separate plots, assign the results of </font><font color="#ff0000" size="3" face="monospace"><strong>plot</strong></font><font color="#000000" size="3" face="Times New Roman"> commands to names and then call </font><font color="#ff0000" size="3" face="monospace"><strong>display</strong></font><font color="#000000" size="3" face="Times New Roman">.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>p1:= plot( [1-x,-1+x], x=0..1, color=red ):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>p2:= plot( [1+x,-1-x], x=-1..0, color=blue ):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>display({p1,p2});</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Graphics_3.gif" width="352" height="360" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Implicit plotting</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Some curves are more easily described by implicit equations. For example, a circle <img src="images/Graphics_4.gif" width="94" height="42" alt="x^2+y^2 = 1" align="center" border="0"> cannot be represented by a single function <img src="images/Graphics_5.gif" width="73" height="32" alt="y = f(x)" align="center" border="0">, as it fails the vertical-line test. Instead, you can use </font><font color="#ff0000" size="3" face="monospace"><strong>implicitplot</strong></font><font color="#000000" size="3" face="Times New Roman">, also found in the </font><font color="#ff0000" size="3" face="monospace"><strong>plots</strong></font><font color="#000000" size="3" face="Times New Roman"> package.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>implicitplot( x^2+y^2=1, x=-1..1,y=-1..1 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Graphics_6.gif" width="335" height="277" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">If you stretch out the axes containing the circle above, it can actually look like an ellipse. To prevent this, add </font><font color="#ff0000" size="3" face="monospace"><strong>scaling=constrained</strong></font><font color="#000000" size="3" face="Times New Roman"> as an argument to </font><font color="#ff0000" size="3" face="monospace"><strong>plot</strong></font><font color="#000000" size="3" face="Times New Roman">, or select it from the right-click menu of the figure.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">The diamond above is easily recreated using</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>implicitplot( abs(x)+abs(y)=1, x=-1..1,y=-1..1 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Graphics_7.gif" width="337" height="260" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Notice, however, that corners on the implicit plot are not as sharp as they should be. An extra argument can help.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>implicitplot( abs(x)+abs(y)=1, x=-1..1,y=-1..1, numpoints=8000 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Graphics_8.gif" width="337" height="274" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</body>
+</html>

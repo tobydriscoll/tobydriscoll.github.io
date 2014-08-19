@@ -1,0 +1,51 @@
+image(adam)
+axis equal
+shg
+size(adam)
+Z = mean(double(adam),3);
+image(Z),axis equal
+shg
+colormap(gray(256))
+shg
+Z = Z(101:700,201:700);
+image(Z),axis equal
+shg
+size(Z)
+Z(1:10,1:10)
+A = blur(8,1.5)
+A = blur(12,2.5)
+A(5,:)'
+A = blur(12,.5)
+A(5,:)'
+A = blur(700,5);
+image(A),axis equal
+shg
+image(Z),axis equal
+shg
+image(A*Z),axis equal
+size(Z)
+A = blur(600,5);
+image(A*Z),axis equal
+shg
+A = blur(500,5);
+image(A*Z),axis equal
+image(Z*A'),axis equal
+shg
+subplot(2,2,1)
+shg
+image(Z*A'),axis equal
+subplot(2,2,2)
+image(Z),axis equal
+shg
+P = zeros(15); P(8,8)=255;
+subplot(2,1,3), image(A*P*A')
+A=blur(15,.33);
+subplot(2,2,1), image(A*P*A')
+A=blur(15,.67);
+subplot(2,2,2), image(A*P*A')
+A=blur(15,1);
+subplot(2,2,3), image(A*P*A')
+A=blur(15,1.33);
+subplot(2,2,4), image(A*P*A')
+shg
+colormap(flipud(gray(256)))

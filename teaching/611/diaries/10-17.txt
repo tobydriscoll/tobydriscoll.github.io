@@ -1,0 +1,36 @@
+m=5;
+A = toeplitz([1;-ones(m-1,1)],[1 zeros(1,m-1)]); A(:,m)=1
+[L,U]=lu(A)
+m=50;
+A=[2 1 1 0; 4 3 3 1; 8 7 9 5; 6 7 9 8 ];
+A = toeplitz([1;-ones(m-1,1)],[1 zeros(1,m-1)]); A(:,m)=1;
+x = rand(50,1);
+b = A*x;
+[L,U]=lu(A);
+x1 = U\(L\b);
+norm(x-x1)/norm(x)
+m=55;
+A = toeplitz([1;-ones(m-1,1)],[1 zeros(1,m-1)]); A(:,m)=1;
+[L,U]=lu(A);
+x=[];
+x = rand(50,1);
+b = A*x;
+x = rand(m,1);
+b = A*x;
+x1 = U\(L\b);
+norm(x-x1)/norm(x)
+cond(A)
+[Q,R]=qr(A);
+x2=R\(Q'*b);
+norm(x-x2)/norm(x)
+x3 = A\b;
+norm(x-x3)/norm(x)
+edit cholesky
+A = rand(6,4)+1i*rand(6,4)
+B=A'*A
+R=cholesky(B)
+R'*R - B
+chol(B)
+A=[2 1 1 0; 4 3 3 1; 8 7 9 5; 6 7 9 8 ]
+A=A+A'
+chol(A)

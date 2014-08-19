@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>LineIntegrals.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="5"><u><b></font><font size="5" face="Lucida Bright">Line/path integrals</b></u></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>restart; with(LinearAlgebra): with(VectorCalculus):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the names &x, CrossProduct and DotProduct have been rebound</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the assigned names &lt;,&gt; and &lt;|&gt; now have a global binding</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, these protected names have been redefined and unprotected: *, +, ., D, Vector, diff, int, limit, series</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We have used line integrals in two fundamentally different forms, as</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"> an integral for scalar functions and as an integral for vector fields. &nbsp;Maple distinguishes between these types and calls them </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i>path integrals</i></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"> and </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i>line integrals</i></font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">, respectively.</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The path integral of a scalar function f(x,y,z) over a path </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>r</b></font><font color="#000000" size="3" face="Lucida Bright">(t) is defined by</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= &lt;x(t),y(t),z(t)&gt;:</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>int( f(x(t),y(t),z(t))*Norm(diff(r,t),2), t=a..b );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_1.gif" width="350" height="69" alt="int(f(x(t), y(t), z(t))*(abs(diff(x(t), t))^2+abs(diff(y(t), t))^2+abs(diff(z(t), t))^2)^(1/2), t = (a .. b))" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">However, the </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>VectorCalculus</b></font><font color="#000000" size="3" face="Lucida Bright"> package makes this easier using </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>PathInt</b></font><font color="#000000" size="3" face="Lucida Bright">. &nbsp;For example,</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>PathInt( z+(x*y)^2, [x,y,z]=Path(&lt;cos(3*t),sin(3*t),4*t&gt;,t=0..6*Pi), inert );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_2.gif" width="369" height="70" alt="Int((4*t+cos(3*t)^2*sin(3*t)^2)*(16+9*sin(3*t)^2+9*cos(3*t)^2)^(1/2), t = (0 .. 6*Pi))" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>value(%);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_3.gif" width="81" height="33" alt="15/4*Pi+360*Pi^2" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">There are some nice predefined path types that save you from having to define a parameterization. For example,</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>PathInt(x*y-z, [x,y,z]=LineSegments(&lt;0,0,0&gt;,&lt;1,1,1&gt;,&lt;-1,-2,-3&gt;), inert );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_4.gif" width="341" height="69" alt="Int((t^2-t)*3^(1/2), t = (0 .. 1))+Int(((1-2*t)*(1-3*t)-1+4*t)*29^(1/2), t = (0 .. 1))" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>PathInt( x^2+y^2, [x,y]=Circle(&lt;1,1&gt;,1), inert );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_5.gif" width="318" height="70" alt="Int(((1+cos(t))^2+(1+sin(t))^2)*(sin(t)^2+cos(t)^2)^(1/2), t = (0 .. 2*Pi))" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">For integration of a vector field, use </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>LineInt</b></font><font color="#000000" size="3" face="Lucida Bright">. &nbsp;For example, to find work done by the force field</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>F:= VectorField( &lt;x^2*y,y^2*x&gt;, 'cartesian'[x,y] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_6.gif" width="123" height="25" alt="F := Vector[column]([[x^2*y], [y^2*x]], ["x", "y"], "field")" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">over the parabola </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright">y=x^2</font><font color="#000000" size="3" face="Lucida Bright"> , between (-1,1) and (1,1), we would use</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>LineInt( F, Path( &lt;t,t^2&gt;, t=-1..1 ), inert );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_7.gif" width="89" height="69" alt="Int(t^4+2*t^6, t = (-1 .. 1))" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>value(%);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_8.gif" width="14" height="33" alt="34/35" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Note that we could get the same thing manually by a regular integral of </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>F</b></font><font color="#000000" size="3" face="Lucida Bright"> . </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>dr</b></font><font color="#000000" size="3" face="Lucida Bright">.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:=&lt;t,t^2&gt;:</font><font color="#ff0000" size="3" face="Monospaced">
+<br>int( evalVF(F,r) . diff(&lt;t,t^2&gt;,t), t=-1..1 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_9.gif" width="14" height="33" alt="34/35" align="center">
+</font></p>
+<dl><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Lucida Bright"><b>Fundamental Theorem of Line Integrals</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The FTLI says that for conservative fields, the potential can be used as an antiderivative to evaluate any line integral. &nbsp;Here is a demonstration. </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>SetCoordinates(cartesian[x,y,z]);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_10.gif" width="80" height="17" alt="cartesian[x, y, z]" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>F:= VectorField( &lt;1+y+z, x+z, x+y&gt; );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_11.gif" width="251" height="18" alt="F := Vector[column]([[y+1+z], [x+z], [x+y]], ["x", "y", "z"], "field")" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= t -&gt; &lt; t^3, sqrt(t), 2*t/(1+t) &gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_12.gif" width="616" height="45" alt="r := proc (t) options operator, arrow; VectorCalculus:-<,>(t^3, sqrt(t), VectorCalculus:-*(VectorCalculus:-*(2, t), 1/VectorCalculus:-+(1, t))) end proc" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>LineInt( F, Path(r(t),t=1..2) );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_13.gif" width="68" height="33" alt="28/3*2^(1/2)+44/3" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We now compare to the difference in values of the potential function at the endpoints.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>phi:= ScalarPotential(F);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_14.gif" width="136" height="15" alt="phi := (y+1+z)*x+z*y" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>phi:= unapply( phi,[x,y,z] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_15.gif" width="195" height="15" alt="phi := proc (x, y, z) options operator, arrow; (y+1+z)*x+z*y end proc" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>A:= r(1); &nbsp;B:= r(2);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_16.gif" width="100" height="17" alt="A := Vector[column]([[1], [1], [1]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_17.gif" width="142" height="33" alt="B := Vector[column]([[8], [2^(1/2)], [4/3]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>phi( B[1],B[2],B[3] ) - phi( A[1],A[2],A[3] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/LineIntegrals_18.gif" width="68" height="33" alt="28/3*2^(1/2)+44/3" align="center">
+</font></p>
+</dl>
+<p></p>
+</body>
+</html>

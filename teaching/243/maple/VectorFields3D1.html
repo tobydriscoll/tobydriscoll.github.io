@@ -1,0 +1,314 @@
+<html>
+<head>
+<title>VectorFields3D.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="5"><u><b></font><font size="5" face="Lucida Bright">Vector fields in three dimensions</b></u></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>restart; with(LinearAlgebra): with(VectorCalculus): with(plots):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the names &x, CrossProduct and DotProduct have been rebound</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the assigned names &lt;,&gt; and &lt;|&gt; now have a global binding</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, these protected names have been redefined and unprotected: *, +, ., D, Vector, diff, int, limit, series</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the name changecoords has been redefined</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>setoptions3d(axes=boxed);</b></font></td>
+</tr>
+</table></p>
+<dl><a name="MapleAutoBookmark2" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Divergence and curl</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Divergence and curl are very simple. &nbsp;Remember to set coordinates when using vector fields, however.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>SetCoordinates( cartesian[x,y,z] ):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>F:= VectorField( &lt;x^2*exp(y*z), x*z/y, cos(x+y)&gt; );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_1.gif" width="229" height="39" alt="F := Vector[column]([[x^2*exp(y*z)], [x*z/y], [cos(x+y)]], ["x", "y", "z"], "field")" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Divergence( F );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_2.gif" width="81" height="46" alt="2*x*exp(y*z)-x*z/y^2" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Curl( F );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_3.gif" width="436" height="46" alt="Vector[column]([[-sin(x+y)-x/y], [x^2*y*exp(y*z)+sin(x+y)], [z/y-x^2*z*exp(y*z)]], ["x", "y", "z"], "field")" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Here is verification of a fundamental identity for an arbitrary vector field F.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>F:= VectorField( &lt;P(x,y,z), Q(x,y,z), R(x,y,z)&gt; );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_4.gif" width="257" height="18" alt="F := Vector[column]([[P(x, y, z)], [Q(x, y, z)], [R(x, y, z)]], ["x", "y", "z"], "field")" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Curl(F);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_5.gif" width="735" height="50" alt="Vector[column]([[diff(R(x, y, z), y)-diff(Q(x, y, z), z)], [diff(P(x, y, z), z)-diff(R(x, y, z), x)], [diff(Q(x, y, z), x)-diff(P(x, y, z), y)]], ["x", "y", "z"], "field")" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Divergence(%);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_6.gif" width="7" height="13" alt="0" align="center">
+</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark3" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Parametric surfaces</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">A surface can in principle be described by a two-parameter vector function </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>r</b></font><font color="#000000" size="3" face="Lucida Bright">(u,v).</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">As usual, it's a good idea to tell Maple that the parameters are real.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>assume(u,real,v,real);</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">For example, the cone we have seen many times before as an implicit function,</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>implicitplot3d( x^2+y^2=z^2, x=-1..1, y=-1..1, z=-1..1 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/VectorFields3D_7.gif" width="273" height="218" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">is much better displayed in parametric form. &nbsp;(Here we mean the position vector r, not the cylindrical coordinate r.)</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= &lt; u*cos(v), u*sin(v), u &gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_8.gif" width="258" height="17" alt="r := Vector[column]([[u*cos(v)], [u*sin(v)], [u]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Note here that x^2 + y^2 does in fact equal z^2:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>simplify(r[1]^2 + r[2]^2 - r[3]^2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_9.gif" width="7" height="13" alt="0" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>plot3d</b></font><font color="#000000" size="3" face="Lucida Bright"> accepts parametric forms directly.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( r, u=-1..1, v=0..2*Pi, labels=["x","y","z"] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/VectorFields3D_10.gif" width="311" height="192" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">A sphere is naturally expressed using the angles in spherical coordinates as the two parameters. </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= &lt; 2*sin(u)*cos(v), 2*sin(u)*sin(v), 2*cos(u) &gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_11.gif" width="370" height="17" alt="r := Vector[column]([[2*sin(u)*cos(v)], [2*sin(u)*sin(v)], [2*cos(u)]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( r, u=0..Pi, v=0..2*Pi, scaling=constrained );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/VectorFields3D_12.gif" width="329" height="289" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">When a surface has one variable that can be expressed explicitly in terms of the other two, the independent ones can be used as the parameters.</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">For example, to get the part of the surface x + y^2 + z^2 = 9 that has nonnegative x, we first note that x=f(y,z). &nbsp;The requirement on x implies that y^2 + z^2 is less than 9. &nbsp;This is the interior of a circle. &nbsp;We can express this surface as</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= &lt; 9-u^2-v^2, u, v&gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_13.gif" width="246" height="25" alt="r := Vector[column]([[-u^2+9-v^2], [u], [v]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( r, u=-3..3, v=-sqrt(9-u^2)..sqrt(9-u^2), labels=["x","y","z"] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/VectorFields3D_14.gif" width="270" height="303" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Parameterizations are not unique, however, and this one can be improved if we employ the usual sin/cos trick on y and z. &nbsp;(Equivalently, we use polar coordinates for the interior of y^2+z^2=9.) &nbsp;</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= &lt; 9 - u^2, u*cos(v), u*sin(v) &gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_15.gif" width="304" height="25" alt="r := Vector[column]([[-u^2+9], [u*cos(v)], [u*sin(v)]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( r, u=0..3, v=0..2*Pi, labels=["x","y","z"] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/VectorFields3D_16.gif" width="286" height="300" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">In addition to the sin/cos parameterization trick, there is also a sinh/cosh trick for hyperbolic surfaces.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= &lt; cosh(u)*cos(v), cosh(u)*sin(v), sinh(u) &gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_17.gif" width="362" height="17" alt="r := Vector[column]([[cosh(u)*cos(v)], [cosh(u)*sin(v)], [sinh(u)]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">This is actually the one-sheet hyperboloid, x^2 + y^2 - z^2 = 1.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>simplify( r[1]^2 + r[2]^2 - r[3]^2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_18.gif" width="7" height="13" alt="1" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( r, u=-1..1, v=0..2*Pi );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/VectorFields3D_19.gif" width="308" height="200" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Here is a fancy parameterization: the torus.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>torus:= &lt; (2+cos(u))*cos(v), (2+cos(u))*sin(v), 2+sin(u) &gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_20.gif" width="461" height="17" alt="torus := Vector[column]([[(cos(u)+2)*cos(v)], [(cos(u)+2)*sin(v)], [sin(u)+2]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot3d( torus, u=0..2*Pi, v=0..2*Pi, scaling=constrained );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/VectorFields3D_21.gif" width="415" height="265" alt="[Plot]" align="center"></p>
+</dl>
+<dl><a name="MapleAutoBookmark4" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Surface integrals</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Once you have a parameterization, surface integrals (including surface area) are straightforward using the VectorCalculus function SurfaceInt.</font></p>
+<dl><a name="MapleAutoBookmark5" />
+<p align="left"><font size="5" face="Serif"><b>Surface area of a torus</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Example: Surface area of the torus above.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= &lt; (2+cos(u))*cos(v), (2+cos(u))*sin(v), 2+sin(u) &gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_22.gif" width="437" height="17" alt="r := Vector[column]([[(cos(u)+2)*cos(v)], [(cos(u)+2)*sin(v)], [sin(u)+2]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>SurfaceInt( 1, [x,y,z]=Surface( r, u=0..2*Pi, v=0..2*Pi), inert );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_23.gif" width="505" height="70" alt="Int(Int((cos(u)^2*(cos(u)+2)^2*cos(v)^2+cos(u)^2*(cos(u)+2)^2*sin(v)^2+(-sin(u)*cos(v)^2*(cos(u)+2)-sin(u)*sin(v)^2*(cos(u)+2))^2)^(1/2), v = (0 .. 2*Pi)), u = (0 .. 2*Pi))" align="center"><img src="images/VectorFields3D_24.gif" width="505" height="21" alt="Int(Int((cos(u)^2*(cos(u)+2)^2*cos(v)^2+cos(u)^2*(cos(u)+2)^2*sin(v)^2+(-sin(u)*cos(v)^2*(cos(u)+2)-sin(u)*sin(v)^2*(cos(u)+2))^2)^(1/2), v = (0 .. 2*Pi)), u = (0 .. 2*Pi))" align="center"><img src="images/VectorFields3D_25.gif" width="505" height="35" alt="Int(Int((cos(u)^2*(cos(u)+2)^2*cos(v)^2+cos(u)^2*(cos(u)+2)^2*sin(v)^2+(-sin(u)*cos(v)^2*(cos(u)+2)-sin(u)*sin(v)^2*(cos(u)+2))^2)^(1/2), v = (0 .. 2*Pi)), u = (0 .. 2*Pi))" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>value(%);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_26.gif" width="24" height="22" alt="8*Pi^2" align="center">
+</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark6" />
+<p align="left"><font size="5" face="Serif"><b>Numerical surface integrals</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">In most cases, a surface integral cannot be evaluated exactly using familiar functions. &nbsp;But one can usually get a good numerical estimate.</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">For example, integrate </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= exp(x*y + y^2*z);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_27.gif" width="89" height="32" alt="f := exp(x*y+y^2*z)" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">over the region defined by z = x^2 + y, where x and y lie in a triangle</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>T:= Triangle( &lt;0,0&gt;,&lt;1,0&gt;,&lt;1,1&gt; ):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Define the surface parameterization:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>r:= &lt; u, v, u^2+v &gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_28.gif" width="211" height="25" alt="r := Vector[column]([[u], [v], [u^2+v]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Q:= SurfaceInt( f, [x,y,z]=Surface( r, [u,v]=T ) , inert );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_29.gif" width="355" height="69" alt="Q := Int(Int(exp(u*v+v^2*(u^2+v))*(2+4*u^2)^(1/2), v = (0 .. u)), u = (0 .. 1))" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Notice how Q was built up: f defines the integrand, r defines the surface in terms of u and v, and finally the domain of (u,v) can be specified the same way as for double integrals using int. </font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Maple is unable to evaluate this integral exactly.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>value(Q);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_30.gif" width="325" height="69" alt="int(int(exp(u*v+v^2*(u^2+v))*(2+4*u^2)^(1/2), v = (0 .. u)), u = (0 .. 1))" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">However, we can get a numerical answer.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>evalf(Q);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/VectorFields3D_31.gif" width="73" height="13" alt="2.028341952" align="center">
+</font></p>
+</dl>
+</dl>
+<p></p>
+</body>
+</html>

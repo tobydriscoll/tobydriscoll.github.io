@@ -1,0 +1,258 @@
+<html>
+<head>
+<title>Gradients.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="5" face="Lucida Bright"><u><b></font><font color="#000000" size="5" face="Lucida Bright">Gradients and directional derivatives</b></u></font></p>
+<dl><a name="MapleAutoBookmark2" />
+<p align="left"><font size="5" face="Serif"><b>Gradients and directional derivatives</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Gradients are defined in the VectorCalculus package.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>restart; with(LinearAlgebra): with(VectorCalculus): with(plots):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the names &x, CrossProduct and DotProduct have been rebound</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the assigned names &lt;,&gt; and &lt;|&gt; now have a global binding</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, these protected names have been redefined and unprotected: *, +, ., D, Vector, diff, int, limit, series</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the name changecoords has been redefined</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>Gradient</b></font><font color="#000000" size="3" face="Lucida Bright"> function takes gradients of expressions.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= x*y*ln(x);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_1.gif" width="73" height="13" alt="f := x*y*ln(x)" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Gradient(f,[x,y]);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_2.gif" width="155" height="18" alt="Vector[column]([[y*ln(x)+y], [x*ln(x)]], ["x", "y"], "field")" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Gradient( sin(x*z)*cos(y+z), [x,y,z] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_3.gif" width="538" height="18" alt="Vector[column]([[cos(x*z)*z*cos(y+z)], [-sin(x*z)*sin(y+z)], [cos(x*z)*x*cos(y+z)-sin(x*z)*sin(y+z)]], ["x", "y", "z"], "field")" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The gradient is actually what is known as a </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i>vector field,</i></font><font color="#000000" size="3" face="Lucida Bright"> meaning a vector whose components are functions of the space variables. &nbsp;(That's why the unit vectors above have a bar over them.) &nbsp;You can evaluate a field at a point to get a vector.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>evalVF( Gradient(f,[x,y]), &lt;2,1&gt; );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_4.gif" width="147" height="17" alt="Vector[column]([[ln(2)+1], [2*ln(2)]], ["x", "y"])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">With a gradient vector you can get the derivative at a point in any direction. &nbsp;Remember to take the dot product with a </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i>unit</i></font><font color="#000000" size="3" face="Lucida Bright"> vector.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>% . &lt;1,-1&gt;/sqrt(2);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_5.gif" width="100" height="33" alt="1/2*(-ln(2)+1)*2^(1/2)" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">You can see the special relationship between gradients and level curves using </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>gradplot</b></font><font color="#000000" size="3" face="Lucida Bright"> as follows.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>p1:= contourplot(f, x=1..2,y=0..1, contours=16):</font><font color="#ff0000" size="3" face="Monospaced">
+<br>p2:= gradplot(f, x=1..2,y=0..1, color=blue ):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>display({p1,p2},axes=boxed,scaling=constrained);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/Gradients_6.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+</dl>
+<dl><a name="MapleAutoBookmark3" />
+<p align="left"><font size="5" face="Serif"><b>Examples</b></font></p>
+<dl><a name="MapleAutoBookmark4" />
+<p align="left"><font size="5" face="Serif"><b>Gradient as an unknown</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i>Suppose that the directional derivative of a function f(x,y) at (2,-1) equals 2*sqrt(2) in the direction of </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>i</b></i></font><font color="#000000" size="3" face="Lucida Bright"><i>+</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>j </b></i></font><font color="#000000" size="3" face="Lucida Bright"><i>and -3 in the direction of -</font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>j</b></i></font><font color="#000000" size="3" face="Lucida Bright"><i>. &nbsp;What is the maximum possible directional derivative of f at (2,-1)?</i></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We set up the gradient as an unknown. Once this is found, the answer is simple.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>gradf:= &lt;a,b&gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_7.gif" width="116" height="17" alt="gradf := Vector[column]([[a], [b]], ["x", "y"])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Now for the data given in the problem:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eq1:= &nbsp;gradf . (&lt;1,1&gt;/sqrt(2)) = 2*sqrt(2);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_8.gif" width="186" height="33" alt="eq1 := 1/2*a*2^(1/2)+1/2*b*2^(1/2) = 2*2^(1/2)" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eq2:= &nbsp;gradf . (&lt;0,-1&gt;) = -3;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_9.gif" width="87" height="13" alt="eq2 := -b = -3" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We use these two pieces of information to find the unknowns.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>s:= solve( {eq1,eq2}, {a,b} );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_10.gif" width="105" height="13" alt="s := {a = 1, b = 3}" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The answer to the problem is thus</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>Norm( subs(s,gradf), 2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_11.gif" width="25" height="16" alt="10^(1/2)" align="center">
+</font></p>
+</dl>
+<dl><a name="MapleAutoBookmark5" />
+<p align="left"><font size="5" face="Serif"><b>Tangent line</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i>Find an equation for the line tangent to the ellipse x^2 - x*y + y^2 = 7 at the point (-2,1).</i></font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>ellipse:= &nbsp;x^2 - x*y + y^2 = 7;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_12.gif" width="154" height="21" alt="ellipse := x^2-x*y+y^2 = 7" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The ellipse is a level curve of the function</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= lhs(ellipse);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_13.gif" width="101" height="21" alt="f := x^2-x*y+y^2" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Hence the gradient of f is normal to the ellipse, and hence normal to all tangent lines for the ellipse.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>n:= evalVF( Gradient(f,[x,y]), &lt;-2,1&gt; );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_14.gif" width="107" height="17" alt="n := Vector[column]([[-5], [4]], ["x", "y"])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">To get an equation for a line, we need a vector parallel to it, not normal to it. &nbsp;A simple trick (in the 2D case) is to reverse the components and flip the sign of one of them.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>v:= &lt;4,5&gt;;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_15.gif" width="91" height="17" alt="v := Vector[column]([[4], [5]], ["x", "y"])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Check:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>v.n;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_16.gif" width="7" height="13" alt="0" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Hence v must be parallel to the line, which we can now express as</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>line:= &lt;-2,1&gt; + t*v;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_17.gif" width="193" height="17" alt="line := Vector[column]([[-2+4*t], [1+5*t]], ["x", "y"])" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>p1:=implicitplot(ellipse,x=-4..4,y=-4..4,color=red):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>p2:=plot([line[1],line[2],t=-1..1],color=blue):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>display({p1,p2},scaling=constrained);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/Gradients_18.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+</dl>
+<dl><a name="MapleAutoBookmark6" />
+<p align="left"><font size="5" face="Serif"><b>Tangent plane</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><i>Find the plane tangent to z^2 = x*y + 1 at the point (1,3,-2).</i></font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We define the given surface as a level surface of </font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= z^2 - x*y;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_19.gif" width="70" height="21" alt="f := z^2-x*y" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Hence grad f is normal to the surface and to the tangent plane.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>n:= evalVF( Gradient(f,[x,y,z]), &lt;1,3,-2&gt; );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_20.gif" width="130" height="17" alt="n := Vector[column]([[-3], [-1], [-4]], ["x", "y", "z"])" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The plane is therefore</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plane:= &nbsp;n.( &lt;x,y,z&gt;-&lt;1,3,-2&gt; ) = 0;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/Gradients_21.gif" width="177" height="13" alt="plane := -3*x-2-y-4*z = 0" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>implicitplot3d( {f=1,plane}, x=0..2, y=2..4,z=-3..-1,axes=boxed );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/Gradients_22.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+</dl>
+</dl>
+<p></p>
+</body>
+</html>

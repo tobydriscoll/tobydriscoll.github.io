@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>MATLAB at UD</title>
+    <link rel=StyleSheet type="text/css" href="common/style.css">
+  </head>
+  
+  
+  <body>
+    
+
+    <h3>Using MATLAB at UD</h3>
+    <ul>
+    <li>MATLAB is installed in a few (not most) public PC and Mac labs. Try Smith, Spencer, or DuPont Lab. Your department may have
+    its own lab with access.</li>
+
+    <li>If you have your own computer, you can buy the <a
+    href="http://www.mathworks.com/products/studentversion/">student
+    version</a> of MATLAB for about $100.</li>
+
+    <li>You can use your "composer" account on copland. (For UNIX account help, <a
+    href="http://www.udel.edu/topics/os/unix/index.html"> go
+    here</a>.) Running graphically (e.g., being able to see the fancy interface and figure windows) 
+    from strauss or brahms requires an "X server"
+    on your computer. X is a standard allowing another computer to open windows on your display.
+    It does not ship with Windows. <b>By itself, telnet from Windows or Mac will not
+    give you access to MATLAB graphics.</b>
+    You can make an X connection from an X terminal in a lab, or from your own PC using
+    free software <a href="http://x.cygwin.com">Cygwin/X</a>. (I have no Mac OSX experience, but it should be possible from there as well.)
+    <p>Once you have logged on, first enter
+    <blockquote>
+      <pre>newgrp xxxx</pre>
+    </blockquote>
+    at the UNIX prompt in a shell window. Here "xxxx" is a <i>project number</i> assigned to the course, available
+    from your instructor. This step makes sure that your
+    activities are not charged against your general email
+    account. You must then tell the mainframe where to display its windows. This is fairly automatic
+    in Exceed; from a public terminal you should ask for local help on setting your "DISPLAY variable".
+    Finally, enter
+    <blockquote>
+      <pre>matlab &amp;</pre>
+    </blockquote>
+    at the prompt to run MATLAB.</p> </li>
+    </ul>
+
+
+    <h3>Printing from MATLAB at an X terminal</h3>
+
+    If you are using an X terminal (such as those in Smith Hall), and you
+    have trouble printing to the local printers, try one of the following
+    alternatives.
+    <ul>
+      <li>
+	Work around the problem by always printing in two steps:
+	<pre>
+>> print -f1 myfig.ps
+>> !qpr -q smips myfig.ps</pre>
+	This would print Figure 1 on the Smith printer. (Check with
+	someone at the lab for the correct queue name in other labs.)
+      <li>
+	Set up MATLAB to print correctly, but for only one lab, as
+	follows:
+	<ol>
+	  <li>Exit MATLAB if it is running. At the prompt type
+<pre>
+strauss.udel.edu% cd ~; mkdir matlab
+</pre>
+	    If a "File exists" error occurs, ignore it.
+	  <li>Start MATLAB and enter
+<pre>
+>> cd matlab
+>> !pwd
+>> edit printopt</pre>
+When the Editor opens, look for the comment "Put your own changes to
+	    the defaults here." On the next line, enter
+<pre>
+pcmd = 'qpr -q smips';
+</pre>
+	    This is correct for Smith; you need to replace smips with
+	    something else in another lab (ask for help). 
+	  <li>Click
+	    <b>File/Save As...</b> in the Editor. In the "Path or
+	    folder name" box, enter the output you got from "!pwd"
+	    above. Then click <b>OK</b>. You can close the Editor if
+	    you wish.  
+	  <li>To check, enter
+<pre>
+>> printopt
+</pre>
+	    The result should be
+<pre>
+ans = 
+
+qpr -q smips
+</pre>
+	    or whatever you used for pcmd. Now all printing should
+	    work as expected forever.
+     </ol>
+     </ul>
+    <hr>
+
+<!-- Created: Tue Aug 21 15:57:44 EDT 2001 -->
+  </body>
+</html>

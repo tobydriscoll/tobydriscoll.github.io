@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>LaruentSeries.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="5" face="Lucida Bright"><u><b></font><font color="#000000" size="5" face="Lucida Bright">Taylor and Laurent series in Maple</b></u></font></p>
+<p></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The </font><font color="#000000" size="3" face="Lucida Bright"></font><font color="#000000" size="3" face="Lucida Bright"><b>series</b></font><font color="#000000" size="3" face="Lucida Bright"> command in Maple is capable of generating all kinds of Laurent series, though sometimes a little "trickeration" is in order.</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">If you ask for an expansion at a point of analyticity, you get a Taylor series.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>series( sin(z), z=Pi/2, 8);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_1.gif" width="416" height="50" alt="series(1-1/2*(z-1/2*Pi)^2+1/24*(z-1/2*Pi)^4-1/720*(z-1/2*Pi)^6+O(z-1/2*Pi^8),z-1/2*Pi,8)" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>series( 1/(1-z), z=0, 6);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_2.gif" width="198" height="21" alt="series(1+z+z^2+z^3+z^4+z^5+O(z^6),z,6)" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>series( log(z), z=I, 6);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_3.gif" width="438" height="33" alt="series(1/2*I*Pi-I*(z-I)+1/2*(z-I)^2+1/3*I*(z-I)^3-1/4*(z-I)^4-1/5*I*(z-I)^5+O(z-I^6),z-I,6)" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">You get no information about the disk of convergence for these series. &nbsp;That's always determined by the nearest singularity. For example,</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>S:= unapply( convert( series(tan(z),z=0,32), polynom), z);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_4.gif" width="981" height="33" alt="S := proc (z) options operator, arrow; z+1/3*z^3+2/15*z^5+17/315*z^7+62/2835*z^9+1382/155925*z^11+21844/6081075*z^13+929569/638512875*z^15+6404582/10854718875*z^17+443861162/1856156927625*z^19+1888846..." align="center"><img src="images/LaruentSeries_5.gif" width="981" height="33" alt="S := proc (z) options operator, arrow; z+1/3*z^3+2/15*z^5+17/315*z^7+62/2835*z^9+1382/155925*z^11+21844/6081075*z^13+929569/638512875*z^15+6404582/10854718875*z^17+443861162/1856156927625*z^19+1888846..." align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot( [Im(S(I*y)),Im(tan(I*y))], y=-1.7..1.7 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/LaruentSeries_6.gif" width="552" height="265" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Maple will produce certain Laurent series without any special effort. &nbsp;For instance, cot(z) is not analytic at z=0, but can be expanded there.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>series( cot(z), z=0, 6 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_7.gif" width="200" height="36" alt="series(z^(-1)-1/3*z-1/45*z^3-2/945*z^5+O(z^6),z,6)" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">This series is valid only in the annulus 0&lt;|z|&lt;Pi. &nbsp;</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>S:= unapply( convert(series(cot(z),z=0,24),polynom), z);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_8.gif" width="1067" height="33" alt="S := proc (z) options operator, arrow; 1/z-1/3*z-1/45*z^3-2/945*z^5-1/4725*z^7-2/93555*z^9-1382/638512875*z^11-4/18243225*z^13-3617/162820783125*z^15-87734/38979295480125*z^17-349222/1531329465290625*..." align="center"><img src="images/LaruentSeries_9.gif" width="1067" height="33" alt="S := proc (z) options operator, arrow; 1/z-1/3*z-1/45*z^3-2/945*z^5-1/4725*z^7-2/93555*z^9-1382/638512875*z^11-4/18243225*z^13-3617/162820783125*z^15-87734/38979295480125*z^17-349222/1531329465290625*..." align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot( [Im(S(I*y)),Im(cot(I*y))], y=0.1..3.5 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/LaruentSeries_10.gif" width="618" height="260" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Here is a useful case study of a function with two singularities.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>f:= z-&gt;1/((z-1)*(z-2));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_11.gif" width="126" height="33" alt="f := proc (z) options operator, arrow; 1/((z-1)*(z-2)) end proc" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">We have a Taylor series valid for |z|&lt;1:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>S1:= unapply( convert( series(f(z),z=0,24), polynom ), z);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_12.gif" width="1024" height="33" alt="S1 := proc (z) options operator, arrow; 1/2+3/4*z+7/8*z^2+15/16*z^3+31/32*z^4+63/64*z^5+127/128*z^6+255/256*z^7+511/512*z^8+1023/1024*z^9+2047/2048*z^10+4095/4096*z^11+8191/8192*z^12+16383/16384*z^13+..." align="center"><img src="images/LaruentSeries_13.gif" width="1024" height="33" alt="S1 := proc (z) options operator, arrow; 1/2+3/4*z+7/8*z^2+15/16*z^3+31/32*z^4+63/64*z^5+127/128*z^6+255/256*z^7+511/512*z^8+1023/1024*z^9+2047/2048*z^10+4095/4096*z^11+8191/8192*z^12+16383/16384*z^13+..." align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The function is also analytic in the annulus |z|&gt;2. &nbsp;One way to think of this is to let w=1/z and find a Taylor series at w=0 (valid for |w|&lt;1/2):</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>subs( w=1/z, series( f(1/w), w=0, 8) );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_14.gif" width="227" height="46" alt="1/z^2+3/z^3+7/z^4+15/z^5+31/z^6+63/z^7+O(1/z^8)" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The usual shorthand for this is to say that the series is expanded at z=infinity.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>S2:= unapply( convert( series(f(z),z=infinity,24), polynom ), z);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_15.gif" width="1068" height="41" alt="S2 := proc (z) options operator, arrow; 1/z^2+3/z^3+7/z^4+15/z^5+31/z^6+63/z^7+127/z^8+255/z^9+511/z^10+1023/z^11+2047/z^12+4095/z^13+8191/z^14+16383/z^15+32767/z^16+65535/z^17+131071/z^18+262143/z^19..." align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">To get a series in the remaining annulus 1&lt;|z|&lt;2, we have to be sneaky. &nbsp;First, separate the singularities into two pieces.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>convert( f(z), parfrac );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_16.gif" width="71" height="33" alt="1/(z-2)-1/(z-1)" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Now, 1/(z-2) is analytic for |z|&lt;2, so we can expand at zero.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>S31:= convert( series(1/(z-2),z=0,40), polynom )</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, inserted missing semicolon at end of statement, ...0), polynom );</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_17.gif" width="1074" height="33" alt="S31 := -1/4*z-1/2-1/64*z^5-1/8589934592*z^32-1/17179869184*z^33-1/34359738368*z^34-1/8*z^2-1/68719476736*z^35-1/137438953472*z^36-1/274877906944*z^37-1/549755813888*z^38-1/1099511627776*z^39-1/131072*..." align="center"><img src="images/LaruentSeries_18.gif" width="1074" height="33" alt="S31 := -1/4*z-1/2-1/64*z^5-1/8589934592*z^32-1/17179869184*z^33-1/34359738368*z^34-1/8*z^2-1/68719476736*z^35-1/137438953472*z^36-1/274877906944*z^37-1/549755813888*z^38-1/1099511627776*z^39-1/131072*..." align="center"><img src="images/LaruentSeries_19.gif" width="1074" height="33" alt="S31 := -1/4*z-1/2-1/64*z^5-1/8589934592*z^32-1/17179869184*z^33-1/34359738368*z^34-1/8*z^2-1/68719476736*z^35-1/137438953472*z^36-1/274877906944*z^37-1/549755813888*z^38-1/1099511627776*z^39-1/131072*..." align="center"><img src="images/LaruentSeries_20.gif" width="1074" height="33" alt="S31 := -1/4*z-1/2-1/64*z^5-1/8589934592*z^32-1/17179869184*z^33-1/34359738368*z^34-1/8*z^2-1/68719476736*z^35-1/137438953472*z^36-1/274877906944*z^37-1/549755813888*z^38-1/1099511627776*z^39-1/131072*..." align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">And 1/(z-1) is analytic for |z|&gt;1, so we can expand at infinity.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>S32:= convert( series(1/(z-1),z=infinity,40), polynom )</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, inserted missing semicolon at end of statement, ...0), polynom );</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_21.gif" width="1069" height="41" alt="S32 := 1/z^33+1/z^34+1/z^35+1/z^36+1/z^37+1/z^38+1/z^39+1/z^10+1/z^9+1/z^22+1/z^24+1/z^25+1/z^26+1/z^27+1/z^28+1/z^29+1/z^17+1/z^23+1/z^30+1/z^32+1/z^31+1/z^16+1/z^18+1/z^19+1/z^20+1/z^21+1/z+1/z^2+1/..." align="center"><img src="images/LaruentSeries_22.gif" width="1069" height="41" alt="S32 := 1/z^33+1/z^34+1/z^35+1/z^36+1/z^37+1/z^38+1/z^39+1/z^10+1/z^9+1/z^22+1/z^24+1/z^25+1/z^26+1/z^27+1/z^28+1/z^29+1/z^17+1/z^23+1/z^30+1/z^32+1/z^31+1/z^16+1/z^18+1/z^19+1/z^20+1/z^21+1/z+1/z^2+1/..." align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">The combination of the two is valid in the intersection, 1&lt;|z|&lt;2.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>S3:= unapply( S31-S32, z):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">Here we validate the convergence properties along the negative real axis.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot( [f(x),S1(x),S2(x),S3(x)], x=-4..0, f=0..0.6, numpoints=200 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/LaruentSeries_23.gif" width="784" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><font color="#000000" size="3" face="Lucida Bright">If instead we expand at z=2, we have two annuli, 0&lt;|z-2|&lt;1 and |z-2|&gt;1. &nbsp;The first is an ordinary Taylor expansion. &nbsp;The second is done quickly using variable substitution again:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>subs( w=z-2, series( f(w+2), w=infinity, 6 ) );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" size="3" face="Lucida Bright"><img src="images/LaruentSeries_24.gif" width="305" height="46" alt="1/(z-2)^2-1/(z-2)^3+1/(z-2)^4-1/(z-2)^5+O(1/(z-2)^6)" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

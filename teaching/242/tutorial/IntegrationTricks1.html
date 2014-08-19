@@ -1,0 +1,252 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>IntegrationTricks.html</title>
+<!-- Created by Maple 10.03, Linux -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>restart; &nbsp;with(student):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">The methods and commands in this tutorial are not strictly necessary, because Maple uses them behind the scenes when they are needed. But they can help you learn about the integration techniques we are covering without the need to do lots of algebra. </font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Integration by parts</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">There is no elementary technique for this integral.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Int( ln(x), x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_1.gif" width="80" height="42" alt="Int(ln(x), x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Applying parts, however, makes it easy.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>intparts( %, ln(x) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_2.gif" width="117" height="42" alt="ln(x)*x-Int(1, x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>value(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_3.gif" width="84" height="32" alt="ln(x)*x-x" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">You can get some nice "reduction formulas" this way.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Int( x^n*sin(x), x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_4.gif" width="109" height="42" alt="Int(x^n*sin(x), x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>intparts( %, x^n );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_5.gif" width="261" height="60" alt="-x^n*cos(x)-Int(-x^n*n*cos(x)/x, x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>simplify(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_6.gif" width="251" height="46" alt="-x^n*cos(x)+n*Int(x^(n-1)*cos(x), x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong></strong></font><font color="#000000" size="4" face="Serif"><strong>Substitutions</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Int( sqrt(4-x^2)/x^2, x=1..2 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_7.gif" width="116" height="88" alt="Int((4-x^2)^(1/2)/x^2, x = 1 .. 2)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>changevar( x=2*sin(theta), %, theta );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_8.gif" width="274" height="126" alt="Int(1/2*(4-4*sin(theta)^2)^(1/2)*cos(theta)/sin(theta)^2, theta = 1/6*Pi .. 1/2*Pi)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>simplify(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_9.gif" width="136" height="122" alt="Int(cos(theta)^2/sin(theta)^2, theta = 1/6*Pi .. 1/2*Pi)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>value(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_10.gif" width="82" height="50" alt="3^(1/2)-1/3*Pi" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark4" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong></strong></font><font color="#000000" size="4" face="Serif"><strong>Partial fractions</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">In class we only cover distinct linear factors, but there are partial fraction expressions for all possible kinds of rational functions. Maple will also do long division if the degree of the numerator is greater than that of the denominator.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>r:= (x^4-2*x+1) / (2*x^3 + 3*x^2 -2*x );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_11.gif" width="170" height="62" alt="(x^4-2*x+1)/(2*x^3+3*x^2-2*x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>convert(r,parfrac);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_12.gif" width="351" height="50" alt="1/2*x-3/4-1/2/x+21/10/(x+2)+1/20/(2*x-1)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>int(%,x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_13.gif" width="435" height="50" alt="1/4*x^2-3/4*x-1/2*ln(x)+21/10*ln(x+2)+1/40*ln(2*x-1)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Here is what happens with repeated linear factors in the denominator.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>r:= x^2 / ( (x-1)^3*(x+2) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_14.gif" width="172" height="60" alt="x^2/((x-1)^3*(x+2))" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>convert(r,parfrac);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_15.gif" width="408" height="50" alt="1/3/(x-1)^3-4/27/(x+2)+5/9/(x-1)^2+4/27/(x-1)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">And here is an irreducible quadratic factor.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>r:= 1 / ( (x^2+1)*(x-2) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_16.gif" width="174" height="50" alt="1/((x^2+1)*(x-2))" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>convert(r,parfrac);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_17.gif" width="184" height="52" alt="1/5*(-x-2)/(x^2+1)+1/5/(x-2)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark5" />
+<p align="left"><font color="#000000" size="5" face="Serif"><strong>Improper integrals</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">You can evaluate improper integrals by the definition. But you may have to be very explicit about assumptions on certain values and one-sided limits.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>plot( ln(x), x=0..1 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/IntegrationTricks_18.gif" width="382" height="190" alt="Plot" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Int( ln(x), x=a..1 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_19.gif" width="90" height="66" alt="Int(ln(x), x = a .. 1)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>value(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_20.gif" width="130" height="32" alt="-a*ln(a)+a-1" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>limit( %, a=0, right);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_21.gif" width="26" height="32" alt="-1" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Int( sec(x), x=0..a );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_22.gif" width="99" height="66" alt="Int(sec(x), x = 0 .. a)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>value(%) assuming a&gt;0 and a&lt;Pi/2;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_23.gif" width="225" height="32" alt="ln(1+sin(a))-ln(cos(a))" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>limit( %, a=Pi/2, left );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_24.gif" width="24" height="26" alt="infinity" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">In many cases Maple will handle improper integrals automatically and tell you if the integral is not possible.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Int( 1/(x-2), x=1..3 );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_25.gif" width="89" height="74" alt="Int(1/(x-2), x = 1 .. 3)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>value(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_26.gif" width="85" height="32" alt="undefined" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Int( ln(x)/x^2, x=1..infinity );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_27.gif" width="103" height="74" alt="Int(ln(x)/x^2, x = 1 .. infinity)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>value(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/IntegrationTricks_28.gif" width="18" height="32" alt="1" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</body>
+</html>

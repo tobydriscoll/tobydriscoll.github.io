@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>QuadricSurfaces.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="center"><font size="5"><u><b></font><font size="5" face="Lucida Bright">Cylinders and quadric surfaces</b></u></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">restart; with(plots):</b></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#0000ff" size="3" face="Monospaced">Warning, the name changecoords has been redefined</font><font color="#0000ff" size="3" face="Monospaced">
+<br></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">A quadric surface is one defined by an equation that is quadratic in </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>x</i></font><font size="3" face="Lucida Bright">, </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>y</i></font><font size="3" face="Lucida Bright">, and </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>z</i></font><font size="3" face="Lucida Bright">:</font></p>
+<p align="center"><font size="3"><img src="images/QuadricSurfaces_1.gif" width="372" height="38" alt="a*x^2+b*y^2+c*z^2+d*x*y+f*x*z+g*y*z+h*x+k*y+l*z = m" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">If </font><font size="3"><img src="images/QuadricSurfaces_2.gif" width="7" height="22" alt="a" align="center">
+</font><font size="3"></font><font size="3" face="Lucida Bright"> through </font><font size="3"><img src="images/QuadricSurfaces_3.gif" width="7" height="22" alt="g" align="center">
+</font><font size="3"></font><font size="3" face="Lucida Bright"> are all zero, a plane results. Follow in the textbook to see the general forms of the equations.</font></p>
+<dl><a name="MapleAutoBookmark2" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Read me</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">All the surfaces below can be plotted using </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><b>implicitplot3d</b></font><font size="3" face="Lucida Bright">. The basic syntax is </font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">implicitplot3d( eqn, x=-a..a,y=-b..b,z=-c..c );</b></font></td>
+</tr>
+</table></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The equation is written just as you would on paper, e.g., x^2-y^2+2*z^2=2. The ranges tell what region of space to show. </font></p>
+<p><font size="3"></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">However, there are two disadvantages to this method:</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">It may be slow, and</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">In some cases, it may produce an ugly or even misleading plot.</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">In a few of the examples there are different plotting commands to give a better view. &nbsp;Don't worry about learning those commands, just study the figures.</font></p>
+<p><font size="3"></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">I recommend that you type or paste the commands into maple and run them, so that you can rotate the surfaces around and understand the pictures better.</font></p>
+<p><font size="3"></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The following line sets up plots for nice output.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">setoptions3d(axes=boxed,scaling=constrained,style=hidden);</b></font></td>
+</tr>
+</table></p>
+</dl>
+<p><font size="3"></font></p>
+<dl><a name="MapleAutoBookmark3" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Cylinder</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Any equation that is missing one variable generates a cylinder.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">implicitplot3d( y=x^2, x=-2..2,y=-1..4,z=-3..3 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="images/QuadricSurfaces_4.gif" width="365" height="274" alt="[Plot]" align="center"></p>
+</dl>
+<dl><a name="MapleAutoBookmark4" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Ellipsoid</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">This is the 3D version of an ellipse, an "egg" with three principal axes. If all axes are equal, a sphere results.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">implicitplot3d(x^2+y^2/1+z^2/4=1, x=-2..2,y=-2..2,z=-2..2, grid=[21,21,21]);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/QuadricSurfaces_5.gif" width="298" height="267" alt="[Plot]" align="center"></font></p>
+</dl>
+<dl><a name="MapleAutoBookmark5" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Paraboloid</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">This is a parabola in two planes and an ellipse in the third.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">implicitplot3d(2*x=y^2+4*z^2, x=-1..5,y=-2..2,z=-2..2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/QuadricSurfaces_6.gif" width="340" height="340" alt="[Plot]" align="center"></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Here is a better version.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">plot3d([u^2/2,u*sin(phi),u*cos(phi)/2],u=-2..2,phi=0..2*Pi, axes=normal,labels=["x","y","z"]);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/QuadricSurfaces_7.gif" width="283" height="298" alt="[Plot]" align="center"></font></p>
+</dl>
+<dl><a name="MapleAutoBookmark6" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Cone</b></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">implicitplot3d(x^2+z^2=y^2, x=-2..2,y=-2..2,z=-2..2 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/QuadricSurfaces_8.gif" width="307" height="308" alt="[Plot]" align="center"></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Here the picture is really misleading. You can see a gap between the "two pieces." A real cone comes all the way together at a point. This is more accurate:</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">plot3d([u*cos(v),u,u*sin(v)], u=-2..2,v=0..2*Pi, labels=["x","y","z"]);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/QuadricSurfaces_9.gif" width="321" height="308" alt="[Plot]" align="center"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+</dl>
+<dl><a name="MapleAutoBookmark7" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Hyperboloids</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">These come in two flavors: one-sheet and two-sheet.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">implicitplot3d(x^2-y^2/4+z^2=1, x=-4..4,y=-4..4,z=-4..4, grid=[21,21,21] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/QuadricSurfaces_10.gif" width="340" height="340" alt="[Plot]" align="center"></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Two sheets:</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">implicitplot3d(y^2/4-x^2-z^2=1, x=-3..3,y=-6..6,z=-3..3 );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/QuadricSurfaces_11.gif" width="454" height="377" alt="[Plot]" align="center"></font></p>
+</dl>
+<dl><a name="MapleAutoBookmark8" />
+<p align="left"><font size="5"><b></font><font size="5" face="Lucida Bright">Saddle</b></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">This is the surface that has a "decreasing direction" and an "increasing direction".</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">implicitplot3d(2*y^2-x^2=z, x=-2..2,y=-2..2,z=-3..2, grid=[21,21,21]);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/QuadricSurfaces_12.gif" width="433" height="359" alt="[Plot]" align="center"></font></p>
+</dl>
+<p></p>
+</body>
+</html>

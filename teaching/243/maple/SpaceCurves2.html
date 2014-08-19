@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>SpaceCurves.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<dl><a name="MapleAutoBookmark8" />
+<p align="left"><font size="4"><b></font><font size="4" face="Lucida Bright">Example: Proud Mary</b></font></p>
+<p><font size="3"><i></font><font size="3" face="Lucida Bright">The Mississippi River in Hannibal, MO runs due south between straight shores and is 400 m wide (not really!). The speed of the water is given in m/min by</i></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>water:= 10 - (x-200)^2/4000;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SpaceCurves_57.gif" width="171" height="33" alt="water := 10-1/4000*(x-200)^2" align="center">
+</font></p>
+<p><i><font size="3" face="Lucida Bright">where x is the distance from the west shore. The speed profile is </i></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot(water,x=0..400);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/SpaceCurves_58.gif" width="440" height="210" alt="[Plot]" align="center"></font></p>
+<p><i><font size="3" face="Lucida Bright">A ferry starts from the west bank and heads due east at all times, at a speed of 50 m/min. How far south of the launch point does the ferry land?</i></font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Note that there are just 2 dimensions in this problem. The only thing we start with is total velocity, which is the vector sum of the boat's own motion and the water's.</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>vel:= evalm( [50,0] + [0,-water] );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SpaceCurves_59.gif" width="205" height="38" alt="vel := vector([50, -10+1/4000*(x-200)^2])" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">This expression depends on the </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>x</i></font><font size="3" face="Lucida Bright"> position of the boat. Fortunately, it's obvious that </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>x=</i></font><font size="3" face="Lucida Bright">50</font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>t</i></font><font size="3" face="Lucida Bright">, because the ferry heads east at constant speed 50. So</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>vel:= eval( evalm(vel), x=50*t );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SpaceCurves_60.gif" width="221" height="38" alt="vel := vector([50, -10+1/4000*(50*t-200)^2])" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">Since velocity is </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>d</i></font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><b>r</b></font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>/dt</i></font><font size="3" face="Lucida Bright">, we can integrate to find the position vector &nbsp;</font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><b>r</b></font><font size="3" face="Lucida Bright">. </font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>pos:= map( int, vel, t );</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SpaceCurves_61.gif" width="254" height="38" alt="pos := vector([50*t, -10*t+1/600000*(50*t-200)^3])" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">The boat reaches the east shore at </font><font size="3" face="Lucida Bright"></font><font size="3" face="Lucida Bright"><i>t=8</i></font><font size="3" face="Lucida Bright"> min. What is the vertical coordinate at the start and finish?</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>y:= pos[2];</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SpaceCurves_62.gif" width="193" height="33" alt="y := -10*t+1/600000*(50*t-200)^3" align="center">
+</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>eval(y,t=8) - eval(y,t=0);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Lucida Bright"><img src="images/SpaceCurves_63.gif" width="28" height="33" alt="(-160)/3" align="center">
+</font></p>
+<p><font size="3"></font><font size="3" face="Lucida Bright">This is how many meters the ferry drifts (south) due to the current. A plot of the path:</font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>plot( [pos[1],pos[2],t=0..8], 0..400,-80..0);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font size="3"><img src="images/SpaceCurves_64.gif" width="334" height="206" alt="[Plot]" align="center"></font></p>
+<p><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+</dl>
+</body>
+</html>
