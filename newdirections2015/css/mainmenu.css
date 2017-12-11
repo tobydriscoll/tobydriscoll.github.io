@@ -1,0 +1,102 @@
+/* MAIN-MENU+    This CSS is for the drop-down sub-menus from the main menu. */
+
+#main-menu {
+	margin: 0px 0px 0px 0px;
+	color: inherit;
+	background: #4d506d /* The color of the top header bar */	top; 
+	text-transform: uppercase;
+	font-size: 11px;
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#main-menu a {
+    margin: 0px 0px 0px 0px;
+	padding: 0px 8px 0px 15px;
+	color: #FFF;
+	background: transparent url(../images/bullets.gif) no-repeat left center;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#main-menu a:hover {
+	color:#cbbb53;
+/*	background: transparent url(../images/bullets_hover.gif) no-repeat left center; */
+	background: transparent url(../images/bullets.gif) no-repeat left center;
+}
+
+#main-menu ul {
+	margin: 0px;
+	padding: 7px 0px 0px 0px;
+	list-style: none;
+}
+
+#main-menu li {
+	display: inline;
+}
+
+
+#main-menu ul ul {
+   margin: 0px;
+   padding: 0px;
+   padding-left: 10px;
+}
+
+#main-menu ul li {
+   margin: 0px;
+   padding: 0px;
+   margin-left: 3px;
+   float: left; 
+   padding-bottom:7px;
+}
+
+#main-menu ul ul a {
+   margin-top: 0px;
+   padding-top: 0px;
+   padding-bottom: 0px;
+   margin-bottom: 5px;
+}
+
+#main-menu ul ul li {
+   margin-bottom: 0px;
+   margin-top: 0px;
+   padding-top: 0px;
+   padding-bottom: 0px;
+   float: none;
+}
+
+nav {
+	text-align: center;
+}
+
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul {
+		display: block; 
+	}
+
+nav ul {
+	
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
+    padding-bottom: 0px;
+}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+		nav ul li a {
+			display: block;
+		}
+	nav ul ul {
+		background: #4d506d; 
+        border-radius: 5px; 
+        padding: 0px;
+		position: absolute; 
+        top: 100%;
+        text-align: left;
+	}
+

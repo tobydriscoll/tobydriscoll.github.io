@@ -1,0 +1,169 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Exponential, logistic, and Gompertz growth</title><meta name="generator" content="MATLAB 8.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-01-25"><meta name="DC.source" content="gompertz.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+      });
+    </script></head><body><div class="content"><h1>Exponential, logistic, and Gompertz growth</h1><!--introduction--><p>Toby Driscoll, June 15, 2015</p><!--/introduction--><p>(Chebfun example applics/Gompertz.m) [Tags: #ODE, #IVP]</p><p>If the per-capita growth rate of a population is held constant, exponential growth of the population results.</p><pre class="codeinput">exponentialPCRate = @(P) 0.5;
+N = chebop( @(t,P) diff(P) - P.*exponentialPCRate(P), [0 25] );
+N.lbc = 0.2;
+exponentialResult = N\0;
+plot( exponentialResult )
+xlabel(<span class="string">'t'</span>), ylabel(<span class="string">'P(t)'</span>), title(<span class="string">'Exponential growth'</span>)
+</pre><img vspace="5" hspace="5" src="gompertz_01.png" alt=""> <p>The result is unbounded growth, which is not biologically realistic. A common way to remedy this defect is the <b>logistic model</b>. In this model, the per capita growth rate decreases linearly to zero as the population <span class="MathJax_Preview"><img src="gompertz_eq02661806082982697695.png" alt="$P$"></span><script type="math/tex">P</script> approaches a fixed value, known as the <b>carrying capacity</b>. For example, a carrying capacity of <span class="MathJax_Preview"><img src="gompertz_eq11104567085004029912.png" alt="$P=6$"></span><script type="math/tex">P=6</script> is imposed through</p><pre class="codeinput">logisticPCRate = @(P) 0.5*(6-P)/5.8;
+</pre><p>Here is the resulting growth.</p><pre class="codeinput">N = chebop( @(t,P) diff(P) - P.*logisticPCRate(P), [0 25] );
+N.lbc = 0.2;
+logisticResult = N\0;
+plot( [exponentialResult, logisticResult] )
+ylim([0 8])
+xlabel(<span class="string">'t'</span>), ylabel(<span class="string">'P(t)'</span>), legend(<span class="string">'exp'</span>,<span class="string">'logistic'</span>)
+</pre><img vspace="5" hspace="5" src="gompertz_02.png" alt=""> <p>The logistic model is appealingly simple and adequate for some situations, but it is far too generic to capture other phenomena. Another way to limit growth is the <b>Gompertz model</b>, in which, for example,</p><pre class="codeinput">GompertzPCRate = @(P) 0.5*log(6./P)/log(6/0.2);
+</pre><p>Compared to the logistic model, the Gompertz model shuts down growth more rapidly until <span class="MathJax_Preview"><img src="gompertz_eq02661806082982697695.png" alt="$P$"></span><script type="math/tex">P</script> gets close to the carrying capacity.</p><pre class="codeinput">plot( chebfun(logisticPCRate,[0.2 6]) ), hold <span class="string">on</span>
+plot( chebfun(GompertzPCRate,[0.2 6]) )
+xlabel(<span class="string">'P'</span>), ylabel(<span class="string">'P''/P'</span>)
+</pre><img vspace="5" hspace="5" src="gompertz_03.png" alt=""> <p>The solutions reflect this difference, of course.</p><pre class="codeinput">N = chebop( @(t,P) diff(P) - P.*GompertzPCRate(P), [0 25] );
+N.lbc = 0.2;
+GompertzResult = N\0;
+clf, plot( [exponentialResult, logisticResult, GompertzResult] )
+ylim([0 8])
+xlabel(<span class="string">'t'</span>), ylabel(<span class="string">'P(t)'</span>), legend(<span class="string">'exp'</span>,<span class="string">'logistic'</span>,<span class="string">'Gompertz'</span>)
+</pre><img vspace="5" hspace="5" src="gompertz_04.png" alt=""> <p>The Gompertz model has been recognized for some time as a reasonable model for some tumors [1-2]. However, it too is considered inadequate for many realistic uses. At least some of the attention paid to the logistic and Gompertz models has to be attributed to the fact that they have analytic solutions.</p><p>References:</p><p>1. Laird, A. K. Dynamics of growih in tumors and in normal organisms. Nati. Cancer Inst. Monogr. 30: 15-28, 1969.</p><p>2. Winsor, C. P. The Gompertz curve as a growih curve. Proc. Natl. Acad. Sci. USA 18: 1-7, 1932.</p><p class="footer"><br>
+      Published with MATLAB&reg; 8.4<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Exponential, logistic, and Gompertz growth
+% Toby Driscoll, June 15, 2015
+
+%%
+% (Chebfun example applics/Gompertz.m)
+% [Tags: #ODE, #IVP]
+
+%%
+% If the per-capita growth rate of a population is held constant, exponential
+% growth of the population results. 
+exponentialPCRate = @(P) 0.5;
+N = chebop( @(t,P) diff(P) - P.*exponentialPCRate(P), [0 25] );
+N.lbc = 0.2;
+exponentialResult = N\0;
+plot( exponentialResult )
+xlabel('t'), ylabel('P(t)'), title('Exponential growth')
+
+%% 
+% The result is unbounded growth, which is not biologically realistic. A
+% common way to remedy this defect is the *logistic model*. In this model,
+% the per capita growth rate decreases linearly to zero as the population
+% $P$ approaches a fixed value, known as the *carrying capacity*. For
+% example, a carrying capacity of $P=6$ is imposed through
+logisticPCRate = @(P) 0.5*(6-P)/5.8;
+
+%%
+% Here is the resulting growth.
+N = chebop( @(t,P) diff(P) - P.*logisticPCRate(P), [0 25] );
+N.lbc = 0.2;
+logisticResult = N\0;
+plot( [exponentialResult, logisticResult] )
+ylim([0 8])
+xlabel('t'), ylabel('P(t)'), legend('exp','logistic')
+
+%%
+% The logistic model is appealingly simple and adequate for some
+% situations, but it is far too generic to capture other phenomena. Another
+% way to limit growth is the *Gompertz model*, in which, for example,
+GompertzPCRate = @(P) 0.5*log(6./P)/log(6/0.2);
+
+%%
+% Compared to the logistic model, the Gompertz model shuts down growth more
+% rapidly until $P$ gets close to the carrying capacity.
+plot( chebfun(logisticPCRate,[0.2 6]) ), hold on
+plot( chebfun(GompertzPCRate,[0.2 6]) )
+xlabel('P'), ylabel('P''/P')
+
+%%
+% The solutions reflect this difference, of course.
+N = chebop( @(t,P) diff(P) - P.*GompertzPCRate(P), [0 25] );
+N.lbc = 0.2;
+GompertzResult = N\0;
+clf, plot( [exponentialResult, logisticResult, GompertzResult] )
+ylim([0 8])
+xlabel('t'), ylabel('P(t)'), legend('exp','logistic','Gompertz')
+
+%%
+% The Gompertz model has been recognized for some time as a reasonable model
+% for some tumors [1-2]. However, it too is considered inadequate for many
+% realistic uses. At least some of the attention paid to the logistic and
+% Gompertz models has to be attributed to the fact that they have analytic
+% solutions.
+
+%%
+% References:
+%
+% 1. Laird, A. K. Dynamics of growih in tumors and in normal organisms.
+% Nati. Cancer Inst. Monogr. 30: 15-28, 1969.
+%
+% 2. Winsor, C. P. The Gompertz curve as a growih curve. Proc. Natl. Acad. 
+% Sci. USA 18: 1-7, 1932.
+
+
+##### SOURCE END #####
+--></body></html>

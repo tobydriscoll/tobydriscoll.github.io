@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Participants</title>
+<!--#include virtual="includes/head.html" -->
+  <style type="text/css">
+    table tr {vertical-align: top;}
+  </style>
+</head>
+
+<body>
+<div id="headimg"></div>
+<div id="wrapper"> <!-- WRAPPER -->
+<!--#include virtual="includes/header.html" -->
+	<!--#include virtual="includes/mainmenu.html" -->
+</center>
+
+<h2 class="bigger">New directions in numerical computation, 25-28 August 2015: <p> <font size=2> In celebration of Nick Trefethen's 60th birthday</font></h2>
+
+
+	<div id="mycontent"> <!-- CONTENT -->
+
+
+<h2> Contact us </h2> 
+<p>We are happy to answer any questions you may have. Please feel free to <a href="mailto:new.direction2015@maths.ox.ac.uk">contact us</a>. The conference email address is: 
+
+<p>
+<center><b>new.direction2015@maths.ox.ac.uk</b></center> <br>
+
+<p>
+The conference secretary is <a href="https://www.maths.ox.ac.uk/people/profiles/helen.taylor">Helen Taylor</a>. You may wish to <a href="mailto:htaylor@maths.ox.ac.uk">contact her</a> directly if your query is about dietary requirements, <a href="Accommodation.shtml">accommodation</a>, <a href="Travel.shtml">travel</a>, etc.  
+
+<h2> Meet the organisers </h2>
+<ul> 
+<li><a href="http://www.math.udel.edu/~driscoll/">Toby Driscoll</a>, University of Delaware</li> 
+<li><a href="http://people.maths.ox.ac.uk/suli/index.html">Endre S&uuml;li</a>, University of Oxford</li> 
+<li><a href="https://www.maths.ox.ac.uk/people/profiles/helen.taylor">Helen Taylor</a>, University of Oxford</li> 
+<li><a href="http://math.mit.edu/~ajt/">Alex Townsend</a>, MIT </li> 
+</ul> 
+
+<div id="container4">
+	<div id="container3">
+		<div id="container2">
+			<div id="container1">
+				<div id="col1">
+					<!-- Column one start -->
+					<center><h2>Toby Driscoll</h2></center>
+<p>
+<img src="images/TobyDriscoll.jpg" alt="Toby Driscoll" width="200">
+
+<p>
+Toby was a PhD student at Cornell University under the supervision of Nick Trefethen. He has worked with Trefethen on <a href="http://www.math.udel.edu/~driscoll/SC/index.html">Schwarz-Chrisoffel mapping</a> and is a key contributor to the <a href="http://www.chebfun.org/">Chebfun project</a>. 
+					<!-- Column one end -->
+				</div>
+				<div id="col2">
+					<!-- Column two start -->
+					<center><h2>Endre S&uuml;li</h2>
+<p>
+<img src="images/EndreSuli.jpg" alt="Endre Suli" width="140"></center>
+<p>
+Endre has been a close colleague of Nick's at Oxford for over 17 years.
+					<!-- Column two end -->
+				</div>
+				<div id="col3">
+					<!-- Column three start -->
+					<center><h2>Helen Taylor</h2></center>
+<p>
+<img src="images/HelenTaylor.jpg" alt="Helen Taylor" width="200">
+
+<p> Helen works very hard keeping everything running smoothly in the <a href="https://www.maths.ox.ac.uk/groups/numerical-analysis">Oxford Numerical Analysis Group</a>. She is also the conference secretary.
+					<!-- Column three end -->
+				</div>
+				<div id="col4">
+					<!-- Column four start -->
+					<center><h2>Alex Townsend</h2></center>
+<p>
+					<img src="images/AlexTownsend.jpg" alt="Alex Townsend" width="180">
+<p> Alex was a PhD student at Oxford University under the supervision of Nick Trefethen. He has worked with Nick on a <a href="http://www.chebfun.org/docs/guide/guide11.html">2D extension of Chebfun</a>. 
+					<!-- Column four end -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+
+
+	</div> <!-- END CONTENT -->
+<div class="hr1"> <hr /></div>
+<!--#include virtual="includes/footer.html" -->
+</div> <!-- END WRAPPER -->
+<div id="footimg"></div>
+<!--#include virtual="includes/googleanalytics.html" -->
+</body>
+</html>

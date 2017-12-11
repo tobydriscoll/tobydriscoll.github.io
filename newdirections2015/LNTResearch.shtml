@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Trefethen's research</title>
+<!--#include virtual="includes/head.html" -->
+  <style type="text/css">
+    table tr {vertical-align: top;}
+  </style>
+</head>
+
+<body>
+<div id="headimg"></div>
+<div id="wrapper"> <!-- WRAPPER -->
+<!--#include virtual="includes/header.html" -->
+	<!--#include virtual="includes/mainmenu.html" -->
+</center><h2 class="bigger">New directions in numerical computation, 25-28 August 2015: <p> <font size=2> In celebration of Nick Trefethen's 60th birthday</font></h2>
+
+	<div id="mycontent"> <!-- CONTENT -->
+<h2> Trefethen's research </h2> 
+Nick Trefethen has published over a hundred papers spanning many areas within numerical analysis and applied mathematics. An annotated list of his principal publications can be found <a><a href="http://people.maths.ox.ac.uk/trefethen/LNTpubs.pdf">here</a>.   
+
+<h2> Short Biography</h2>
+<p>
+This is a short biography of Nick Trefethen (also appears <a href="https://people.maths.ox.ac.uk/trefethen/bio.txt">here</a>):  
+</p>
+<p>
+Nick Trefethen is Professor of Numerical Analysis and Head of
+the Numerical Analysis Group in the Oxford University Mathematical
+Institute.  He was educated at Harvard University (AB 1977,
+summa cum laude) and Stanford University (MS 1980 and PhD 1982)
+and has held professorial positions at New York University (Courant
+Institute), MIT, Cornell University, and Oxford University.  He is
+a Fellow of the Royal Society (London) and a member of the National
+Academy of Engineering (USA), and served as President of
+SIAM (Society for Industrial and Applied Mathematics) during 2011-2012.
+</p>
+<p>
+As an author he is known for his books Numerical Linear Algebra
+(SIAM, 1997, with David Bau, III), Spectral Methods in MATLAB (SIAM,
+2000), Schwarz-Christoffel Mapping (Cambridge U. Press, 2002, with
+Tobin Driscoll) and Spectra and Pseudospectra: The Behavior of
+Nonnormal Matrices and Operators (Princeton, 2005, with Mark Embree);
+he also won the Catherine Richards Prize for the best article in
+Mathematics Today in 2000.  He has served as editor for many of the
+leading research journals in numerical analysis, and spent four years
+as Section Editor in charge of the major review articles in SIAM Review.
+</p>
+<p>
+As a teacher he has won awards for graduate-level instruction at
+MIT, Cornell, and Oxford.  An outgrowth of one of his graduate courses
+at Oxford was the 2002 "SIAM 100-Dollar, 100-Digit Challenge",
+which became the subject of a 2004 SIAM book by Bornemann, Laurie,
+Wagon and Waldvogel and its 2006 Springer successor in German.
+</p>
+<p>
+Trefethen is a Highly Cited Researcher according to
+www.isihighlycited.com.  His approximately 100 publications in
+research journals span a number of areas within numerical analysis
+and applied mathematics, including non-normal eigenvalue problems
+and applications, spectral methods for differential equations,
+numerical linear algebra, fluid mechanics, computational complex
+analysis, and approximation theory.  He is well known for his work on 
+the pseudospectra, for the study of non-normal matrices and
+operators, and as the inventor of Chebfun.
+</p>
+<p>
+Trefethen was the first winner of the Fox Prize in Numerical Analysis
+and was a Presidential Young Investigator.  During 1998/99 he was
+the honorary Rouse Ball Lecturer in Applied Mathematics at the
+University of Cambridge.  He received fellowships from the NSF
+(both graduate and post-doctoral), Hertz Foundation, and IBM.
+He is a frequent invited speaker at international conferences,
+including the quadrennial International Congress of Mathematicians
+(Berlin, 1998) and the International Congress on Applied Mathematics
+(Hamburg, 1995).  
+</p>
+<p>
+Trefethen was born August 30, 1955, grew up in Lexington,
+Massachusetts, and attended Shady Hill School and Phillips
+Exeter Academy.
+</p>
+	</div> <!-- END CONTENT -->
+<div class="hr1"> <hr /></div>
+<!--#include virtual="includes/footer.html" -->
+</div> <!-- END WRAPPER -->
+<div id="footimg"></div>
+<!--#include virtual="includes/googleanalytics.html" -->
+</body>
+</html>

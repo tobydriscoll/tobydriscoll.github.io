@@ -1,0 +1,226 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>thiele</title><meta name="generator" content="MATLAB 8.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-01-29"><meta name="DC.source" content="thiele.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"],
+      });
+    </script></head><body><div class="content"><h1></h1><!--introduction--><p>A simple form of life insurance is purchased for a length of time <span class="MathJax_Preview"><img src="thiele_eq14593889327204786447.png" alt="$\tau$"></span><script type="math/tex">\tau</script> (the term of the policy) and costs the insured party a fixed amount <span class="MathJax_Preview"><img src="thiele_eq02661806082982697695.png" alt="$P$"></span><script type="math/tex">P</script> per year (the premium). If the insured dies during the term of the policy, the insurer must pay a benefit of <span class="MathJax_Preview"><img src="thiele_eq14663648698641962978.png" alt="$S$"></span><script type="math/tex">S</script>. Otherwise, the insured receives nothing.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#4">Force of mortality</a></li><li><a href="#7">What is the age of minimum mortality, according to these data?</a></li><li><a href="#8">Calculating the reserve</a></li><li><a href="#13">Calculating premiums</a></li></ul></div><p>The insurer is required to keep an amount of capital in reserve for this policy, in order to be able to pay out all the claims likely to result from a pooled group of individuals. This is done via the celebrated Thiele differential equation, first derived in 1875 and published in 1910 [1].</p><p>Let <span class="MathJax_Preview"><img src="thiele_eq01644379165749410306.png" alt="$V(t)$"></span><script type="math/tex">V(t)</script> for <span class="MathJax_Preview"><img src="thiele_eq13277324907404397369.png" alt="$0\le t \le \tau$"></span><script type="math/tex">0\le t \le \tau</script> be the amount of the reserve. Obviously, once the policy expires, no reserve is needed; hence, <span class="MathJax_Preview"><img src="thiele_eq07671002282744763875.png" alt="$V(\tau)=0$"></span><script type="math/tex">V(\tau)=0</script>. Let the force of interest (more widely known as the continuously compounded interest rate) be denoted <span class="MathJax_Preview"><img src="thiele_eq06646721004341227832.png" alt="$\delta$"></span><script type="math/tex">\delta</script>, and let the force of mortality, a measure of the probability of a person dying in a small increment of time, be denoted as a function of age <span class="MathJax_Preview"><img src="thiele_eq12428413953531653171.png" alt="$x$"></span><script type="math/tex">x</script> by <span class="MathJax_Preview"><img src="thiele_eq04816032395554121222.png" alt="$\mu(x)$"></span><script type="math/tex">\mu(x)</script>. If the policy is issued at <span class="MathJax_Preview"><img src="thiele_eq16912281546434447644.png" alt="$t=0$"></span><script type="math/tex">t=0</script> to an individual of age <span class="MathJax_Preview"><img src="thiele_eq05147331747641807187.png" alt="$A$"></span><script type="math/tex">A</script>, then</p><p><span class="MathJax_Preview"><img src="thiele_eq17557001845369318064.png" alt="$$\frac{dV}{dt}=  P + \delta V(t) - \mu(A+t) \bigl(S-V(t)\bigr).$$"></span><script type="math/tex">\frac{dV}{dt}=  P + \delta V(t) - \mu(A+t) \bigl(S-V(t)\bigr).</script></p><h2>Force of mortality<a name="4"></a></h2><p>According to a study by the U.S. Social Security Administration, the force of mortality (using years as the unit of time) for an individual born in the U.S. in 1969 takes on the values [2]</p><pre class="codeinput">mu_values = [0.02350 0.00211 0.02376 0.03429 0.04938 0.38292];
+</pre><p>at the ages</p><pre class="codeinput">mu_ages = [0 30 60 65 70 100];
+</pre><p>In order to represent <span class="MathJax_Preview"><img src="thiele_eq05371638286043275527.png" alt="$\mu$"></span><script type="math/tex">\mu</script> as a smooth function of time, we'll use Chebfun's <tt>spline</tt> command.</p><pre class="codeinput">mu = chebfun.spline( mu_ages, mu_values );
+plot(mu)
+xlabel(<span class="string">'age'</span>), ylabel(<span class="string">'force of mortality'</span>)
+</pre><img vspace="5" hspace="5" src="thiele_01.png" alt=""> <h2>What is the age of minimum mortality, according to these data?<a name="7"></a></h2><pre class="codeinput">[~,agemin] = min(mu)
+</pre><pre class="codeoutput">
+agemin =
+
+   33.6496
+
+</pre><h2>Calculating the reserve<a name="8"></a></h2><p>Let's get ready to issue a life insurance policy. We set a constant interest rate of 3 percent, an annual premium of 800 dollars, and a policy value of a million dollars. The term of the policy is set at 10 years.</p><pre class="codeinput">delta = 0.03;  P = 800;  S = 1e6;  tau = 10;
+</pre><p>Given any starting age <span class="MathJax_Preview"><img src="thiele_eq05147331747641807187.png" alt="$A$"></span><script type="math/tex">A</script>, we can define a differential operator that encodes the Thiele equation:</p><pre class="codeinput">thieleDE = @(A) @(t,V) diff(V) - (P + 0.03*V - mu(A+t)*(S-V));
+</pre><p>Then we can also define a function of <span class="MathJax_Preview"><img src="thiele_eq05147331747641807187.png" alt="$A$"></span><script type="math/tex">A</script> that returns the solution of the equation.</p><pre class="codeinput">reserve = @(A) (chebop( thieleDE(A), [0 tau], [], 0 )) \ 0;
+</pre><p>Here are the reserve amounts for policies issued to individuals of ages 25, 45, and 65:</p><pre class="codeinput">plot( [reserve(25),reserve(45),reserve(65)] )
+xlabel(<span class="string">'time'</span>), ylabel(<span class="string">'reserve amount'</span>)
+legend(<span class="string">'25 yr old'</span>,<span class="string">'45 yr old'</span>,<span class="string">'65 yr old'</span>)
+</pre><img vspace="5" hspace="5" src="thiele_02.png" alt=""> <p>As you would expect, the amount of cash kept on hand is much higher for the older policy holders. Alternatively, the insurer could decide on a maximum amount of cash to keep on hand and charge higher premiums for older customers.</p><h2>Calculating premiums<a name="13"></a></h2><pre>Instead of calculating the reserve for a given premium, we might want to
+invert the calculation. Suppose the maximum cash reserve we wish to
+allocate is $V_0$. If, as in our previous solutions, the maximum of
+$V(t)$ occurs at the initial time, then we should add the condition
+$V(0)=V_0$.</pre><p>We now have a first-order equation and two boundary conditions. However, we also allow the premium <span class="MathJax_Preview"><img src="thiele_eq02661806082982697695.png" alt="$P$"></span><script type="math/tex">P</script> to be a degree of freedom. Chebfun can solve for the value of a scalar parameter in this situation.</p><p>Let's fix <span class="MathJax_Preview"><img src="thiele_eq10146517566371138690.png" alt="$A=45$"></span><script type="math/tex">A=45</script> this time. When we chose the premium to be 800, we found the reserve to be highest at the initial time and that about 74000 dollars were required. What premium would we need to charge to lower that amount to say, <span class="MathJax_Preview"><img src="thiele_eq12879816083435628989.png" alt="$V_0=70000$"></span><script type="math/tex">V_0=70000</script> dollars? The BVP we solve is</p><pre class="codeinput">thieleDE = @(t,V,P) diff(V) - (P + 0.03*V - mu(45+t)*(S-V));
+L = chebop( thieleDE, [0 tau] );
+L.lbc = @(V,P) V-70000;
+L.rbc = @(V,P) V;
+</pre><p>The solution for the reserve barely changes...</p><pre class="codeinput">u = L\0;  [V,P] = deal(u);
+hold <span class="string">on</span>, plot(V,<span class="string">'k'</span>)
+</pre><img vspace="5" hspace="5" src="thiele_03.png" alt=""> <p>...yet the premium has increased by 50 percent.</p><pre class="codeinput">P
+
+<span class="comment">%   [1] J.P. Gram, "Professor Thiele som aktuar." Dansk Forsikringsarbog</span>
+<span class="comment">%   (1910), pp. 26-37.</span>
+<span class="comment">%</span>
+<span class="comment">%   [2] Life tables for the United States Social Security, Area 1900-2100,</span>
+<span class="comment">%   http://www.ssa.gov/OACT/NOTES/as120/LifeTables_Tbl_8.html#wp1004907.</span>
+</pre><pre class="codeoutput">
+P =
+
+   1.2257e+03
+
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 8.4<br></p></div><!--
+##### SOURCE BEGIN #####
+%%
+% A simple form of life insurance is purchased for a length of time $\tau$
+% (the term of the policy) and costs the insured party a fixed amount $P$
+% per year (the premium). If the insured dies during the term of the
+% policy, the insurer must pay a benefit of $S$. Otherwise, the insured
+% receives nothing.
+
+%%
+% The insurer is required to keep an amount of capital in reserve for this
+% policy, in order to be able to pay out all the claims likely to result
+% from a pooled group of individuals. This is done via the celebrated
+% Thiele differential equation, first derived in 1875 and published in 1910
+% [1].
+
+%%
+% Let $V(t)$ for $0\le t \le \tau$ be the amount of the reserve. Obviously, once
+% the policy expires, no reserve is needed; hence, $V(\tau)=0$. Let the
+% force of interest (more widely known as the continuously compounded
+% interest rate) be denoted $\delta$, and let the force of mortality, a measure
+% of the probability of a person dying in a small increment of time, be
+% denoted as a function of age $x$ by $\mu(x)$. If the policy is issued at
+% $t=0$ to an individual of age $A$, then
+
+%%
+% $$\frac{dV}{dt}=  P + \delta V(t) - \mu(A+t) \bigl(S-V(t)\bigr).$$
+%
+
+%% Force of mortality
+% According to a study by the U.S. Social Security Administration, the
+% force of mortality (using years as the unit of time) for an individual
+% born in the U.S. in 1969 takes on the values [2]
+mu_values = [0.02350 0.00211 0.02376 0.03429 0.04938 0.38292];
+
+%%
+% at the ages
+mu_ages = [0 30 60 65 70 100];
+
+%%
+% In order to represent $\mu$ as a smooth function of time, we'll use
+% Chebfun's |spline| command.
+mu = chebfun.spline( mu_ages, mu_values );
+plot(mu)
+xlabel('age'), ylabel('force of mortality')
+
+%% What is the age of minimum mortality, according to these data?
+[~,agemin] = min(mu)
+
+%% Calculating the reserve
+% Let's get ready to issue a life insurance policy. We set a constant
+% interest rate of 3 percent, an annual premium of 800 dollars, and a
+% policy value of a million dollars. The term of the policy is set at 10
+% years.
+delta = 0.03;  P = 800;  S = 1e6;  tau = 10;
+
+%%
+% Given any starting age $A$, we can define a differential operator that
+% encodes the Thiele equation:
+thieleDE = @(A) @(t,V) diff(V) - (P + 0.03*V - mu(A+t)*(S-V));
+
+%%
+% Then we can also define a function of $A$ that returns the solution of the
+% equation.
+reserve = @(A) (chebop( thieleDE(A), [0 tau], [], 0 )) \ 0;
+
+%%
+% Here are the reserve amounts for policies issued to individuals of ages
+% 25, 45, and 65:
+plot( [reserve(25),reserve(45),reserve(65)] )
+xlabel('time'), ylabel('reserve amount')
+legend('25 yr old','45 yr old','65 yr old')
+
+%%
+% As you would expect, the amount of cash kept on hand is much higher for
+% the older policy holders. Alternatively, the insurer could decide on a
+% maximum amount of cash to keep on hand and charge higher premiums for
+% older customers.
+
+%% Calculating premiums
+%  Instead of calculating the reserve for a given premium, we might want to
+%  invert the calculation. Suppose the maximum cash reserve we wish to
+%  allocate is $V_0$. If, as in our previous solutions, the maximum of
+%  $V(t)$ occurs at the initial time, then we should add the condition
+%  $V(0)=V_0$.
+
+%%
+% We now have a first-order equation and two boundary conditions. However,
+% we also allow the premium $P$ to be a degree of freedom. Chebfun can solve
+% for the value of a scalar parameter in this situation.
+
+%%
+% Let's fix $A=45$ this time. When we chose the premium to be 800, we found
+% the reserve to be highest at the initial time and that about 74000
+% dollars were required. What premium would we need to charge to lower that
+% amount to say, $V_0=70000$ dollars? The BVP we solve is
+thieleDE = @(t,V,P) diff(V) - (P + 0.03*V - mu(45+t)*(S-V));
+L = chebop( thieleDE, [0 tau] );
+L.lbc = @(V,P) V-70000;
+L.rbc = @(V,P) V;
+
+%% 
+% The solution for the reserve barely changes...
+u = L\0;  [V,P] = deal(u);
+hold on, plot(V,'k')
+
+%%
+% ...yet the premium has increased by 50 percent.
+P
+
+%   [1] J.P. Gram, "Professor Thiele som aktuar." Dansk Forsikringsarbog
+%   (1910), pp. 26-37.
+%
+%   [2] Life tables for the United States Social Security, Area 1900-2100,
+%   http://www.ssa.gov/OACT/NOTES/as120/LifeTables_Tbl_8.html#wp1004907.
+     
+##### SOURCE END #####
+--></body></html>
