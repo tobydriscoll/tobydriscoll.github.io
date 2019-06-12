@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Folkmar Bornemann on Toby Driscoll</title>
+    <link>https://tobydriscoll.github.io/authors/folkmar-bornemann/</link>
+    <description>Recent content in Folkmar Bornemann on Toby Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Jan 2008 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tobydriscoll.github.io/authors/folkmar-bornemann/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Chebop System for Automatic Solution of Differential Equations</title>
+      <link>https://tobydriscoll.github.io/publication/driscoll-chebop-system-automatic-2008-a/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/driscoll-chebop-system-automatic-2008-a/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>John A Pelesko on Toby Driscoll</title>
+    <link>https://tobydriscoll.github.io/authors/john-a-pelesko/</link>
+    <description>Recent content in John A Pelesko on Toby Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tobydriscoll.github.io/authors/john-a-pelesko/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Transformative Model for Undergraduate Quantitative Biology Education</title>
+      <link>https://tobydriscoll.github.io/publication/usher-transformative-model-undergraduate-2010-a/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/usher-transformative-model-undergraduate-2010-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Effect of the Small-Aspect-Ratio Approximation on Canonical Electrostatic MEMS Models</title>
+      <link>https://tobydriscoll.github.io/publication/pelesko-effect-smallaspectratio-approximation-2005/</link>
+      <pubDate>Sat, 01 Jan 2005 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/pelesko-effect-smallaspectratio-approximation-2005/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Approximations in Canonical Electrostatic MEMS Models</title>
+      <link>https://tobydriscoll.github.io/publication/driscoll-approximations-canonical-electrostatic-2004/</link>
+      <pubDate>Thu, 01 Jan 2004 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/driscoll-approximations-canonical-electrostatic-2004/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

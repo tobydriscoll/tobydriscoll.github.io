@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joseph K Brosch on Toby Driscoll</title>
+    <link>https://tobydriscoll.github.io/authors/joseph-k-brosch/</link>
+    <description>Recent content in Joseph K Brosch on Toby Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tobydriscoll.github.io/authors/joseph-k-brosch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simulation of parabolic flow on an eye-shaped domain with moving boundary</title>
+      <link>https://tobydriscoll.github.io/publication/driscoll-simulation-parabolic-flow-2018/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/driscoll-simulation-parabolic-flow-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blink Characterization Using Curve Fitting and Clustering Algorithms</title>
+      <link>https://tobydriscoll.github.io/publication/brosch-blink-characterization-using-2017/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/brosch-blink-characterization-using-2017/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

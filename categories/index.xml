@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Toby Driscoll</title>
+    <link>https://tobydriscoll.github.io/categories/</link>
+    <description>Recent content in Categories on Toby Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Feb 2018 20:54:56 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tobydriscoll.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>academia</title>
+      <link>https://tobydriscoll.github.io/categories/academia/</link>
+      <pubDate>Fri, 02 Feb 2018 20:54:56 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/categories/academia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computing</title>
+      <link>https://tobydriscoll.github.io/categories/computing/</link>
+      <pubDate>Fri, 02 Feb 2018 20:54:56 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/categories/computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>teaching</title>
+      <link>https://tobydriscoll.github.io/categories/teaching/</link>
+      <pubDate>Fri, 02 Feb 2018 20:54:56 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/categories/teaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math</title>
+      <link>https://tobydriscoll.github.io/categories/math/</link>
+      <pubDate>Fri, 03 Feb 2017 20:16:10 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/categories/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>society and culture</title>
+      <link>https://tobydriscoll.github.io/categories/society-and-culture/</link>
+      <pubDate>Sun, 18 Dec 2016 15:28:34 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/categories/society-and-culture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uncategorized</title>
+      <link>https://tobydriscoll.github.io/categories/uncategorized/</link>
+      <pubDate>Tue, 20 Sep 2016 19:52:34 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/categories/uncategorized/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>matlab</title>
+      <link>https://tobydriscoll.github.io/categories/matlab/</link>
+      <pubDate>Thu, 30 Jul 2015 21:14:51 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/categories/matlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>science</title>
+      <link>https://tobydriscoll.github.io/categories/science/</link>
+      <pubDate>Fri, 24 Jul 2015 01:06:45 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/categories/science/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

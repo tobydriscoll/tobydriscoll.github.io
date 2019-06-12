@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>L Nikodym on Toby Driscoll</title>
+    <link>https://tobydriscoll.github.io/authors/l-nikodym/</link>
+    <description>Recent content in L Nikodym on Toby Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jan 1997 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tobydriscoll.github.io/authors/l-nikodym/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pseudospectral Methods for Large-Scale Bioacoustic Models</title>
+      <link>https://tobydriscoll.github.io/publication/wojcik-pseudospectral-methods-largescale-1997/</link>
+      <pubDate>Wed, 01 Jan 1997 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/wojcik-pseudospectral-methods-largescale-1997/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

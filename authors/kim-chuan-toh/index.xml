@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kim-Chuan Toh on Toby Driscoll</title>
+    <link>https://tobydriscoll.github.io/authors/kim-chuan-toh/</link>
+    <description>Recent content in Kim-Chuan Toh on Toby Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jan 1998 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tobydriscoll.github.io/authors/kim-chuan-toh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>From Potential Theory to Matrix Iterations in Six Steps</title>
+      <link>https://tobydriscoll.github.io/publication/driscoll-potential-theory-matrix-1998-a/</link>
+      <pubDate>Thu, 01 Jan 1998 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/driscoll-potential-theory-matrix-1998-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matrix Iterations: The Six Gaps between Potential Theory and Convergence</title>
+      <link>https://tobydriscoll.github.io/publication/driscoll-matrix-iterations-six-1996/</link>
+      <pubDate>Mon, 01 Jan 1996 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/driscoll-matrix-iterations-six-1996/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

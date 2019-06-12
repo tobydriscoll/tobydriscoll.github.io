@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LN Trefethen on Toby Driscoll</title>
+    <link>https://tobydriscoll.github.io/authors/ln-trefethen/</link>
+    <description>Recent content in LN Trefethen on Toby Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jan 2009 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tobydriscoll.github.io/authors/ln-trefethen/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chebfun Version 2</title>
+      <link>https://tobydriscoll.github.io/publication/trefethen-chebfun-version-2009/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/trefethen-chebfun-version-2009/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conformal Mapping and Convergence of Krylov Iterations</title>
+      <link>https://tobydriscoll.github.io/publication/driscoll-conformal-mapping-convergence-1994/</link>
+      <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/driscoll-conformal-mapping-convergence-1994/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

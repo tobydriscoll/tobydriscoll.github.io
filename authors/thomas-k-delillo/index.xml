@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thomas K DeLillo on Toby Driscoll</title>
+    <link>https://tobydriscoll.github.io/authors/thomas-k-delillo/</link>
+    <description>Recent content in Thomas K DeLillo on Toby Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Jan 2008 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tobydriscoll.github.io/authors/thomas-k-delillo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Radial and Circular Slit Maps of Unbounded Multiply Connected Circle Domains</title>
+      <link>https://tobydriscoll.github.io/publication/delillo-radial-circular-slit-2008-a/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/delillo-radial-circular-slit-2008-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computation of Multiply Connected Schwarz-Christoffel Maps for Exterior Domains</title>
+      <link>https://tobydriscoll.github.io/publication/delillo-computation-multiply-connected-2006-a/</link>
+      <pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/delillo-computation-multiply-connected-2006-a/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asgeir Birkisson on Toby Driscoll</title>
+    <link>https://tobydriscoll.github.io/authors/asgeir-birkisson/</link>
+    <description>Recent content in Asgeir Birkisson on Toby Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Jan 2013 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tobydriscoll.github.io/authors/asgeir-birkisson/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automatic Linearity Detection</title>
+      <link>https://tobydriscoll.github.io/publication/birkisson-automatic-linearity-detection-2013/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/birkisson-automatic-linearity-detection-2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic Fréchet Differentiation for the Numerical Solution of Boundary-Value Problems</title>
+      <link>https://tobydriscoll.github.io/publication/birkisson-automatic-frechet-differentiation-2012-a/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.github.io/publication/birkisson-automatic-frechet-differentiation-2012-a/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
