@@ -1,6 +1,0 @@
-t = linspace(0,2*pi,200);
-A=[1 3;4 2]/4;
-for i=1:200, v=A*[cos(t(i));sin(t(i))]; plot(v(1),v(2),'o'), hold on, end
-ginput(1)
-norm(ans)
-norm(A)
