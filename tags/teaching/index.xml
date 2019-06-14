@@ -33,7 +33,7 @@
 
 &lt;/figure&gt;
 
-&lt;p&gt;This textbook is designed to introduce undergraduates in math, computer science, engineering, and related fields to the principles and practice of numerical computation. Our approach emphasizes linear algebra and approximation. The text presents mathematical underpinnings and analysis, complemented with 45 functions and over 160 examples coded in MATLAB, all &lt;a href=&#34;http://github.com/tobydriscoll/fnc-extras&#34; target=&#34;_blank&#34;&gt;available for download&lt;/a&gt;. Previous experience in MATLAB is not required.&lt;/p&gt;
+&lt;p&gt;This textbook is designed to introduce undergraduates in math, computer science, engineering, and related fields to the principles and practice of numerical computation. Our approach emphasizes linear algebra and approximation. The text presents mathematical underpinnings and analysis, complemented with 45 functions and over 160 examples coded in MATLAB, all &lt;a href=&#34;http://github.com/tobydriscoll/fnc-extras&#34; target=&#34;_blank&#34;&gt;available for download&lt;/a&gt;. Previous experience in MATLAB is not required. The functions and examples have also been implemented in Julia and Python.&lt;/p&gt;
 
 &lt;p&gt;The text is organized to be useful for either a one-semester introduction or two-semester sequence, with the most advanced techniques and concepts held back for the second half of the book.&lt;/p&gt;
 
@@ -43,7 +43,7 @@
 
 &lt;p&gt;The book&amp;rsquo;s functions and example scripts can be &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/raw/master/Fundamentals%20of%20Numerical%20Computation.mltbx&#34; target=&#34;_blank&#34;&gt;downloaded as a MATLAB toolbox&lt;/a&gt; and installed by double-clicking the file. Alternatively, you can visit the &lt;a href=&#34;http://github.com/tobydriscoll/fnc-extras&#34; target=&#34;_blank&#34;&gt;Github page&lt;/a&gt; that has the needed files, as well as suggested in-class labs and projects, slides for instructors, and links to some (slightly outdated) videos linked to the text.&lt;/p&gt;
 
-&lt;p&gt;There are also &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/tree/master/julia&#34; target=&#34;_blank&#34;&gt;Julia versions&lt;/a&gt; of the function and example files.&lt;/p&gt;
+&lt;p&gt;There are also &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/tree/master/julia&#34; target=&#34;_blank&#34;&gt;Julia versions&lt;/a&gt; and &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/tree/master/python&#34; target=&#34;_blank&#34;&gt;Python versions&lt;/a&gt; of the function and example files.&lt;/p&gt;
 
 &lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
 
