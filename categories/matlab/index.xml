@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>matlab on Toby Driscoll</title>
-    <link>https://tobydriscoll.github.io/categories/matlab/</link>
+    <link>https://tobydriscoll.net/categories/matlab/</link>
     <description>Recent content in matlab on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 30 Jul 2015 21:14:51 +0000</lastBuildDate>
     
-	    <atom:link href="https://tobydriscoll.github.io/categories/matlab/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tobydriscoll.net/categories/matlab/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>showall</title>
-      <link>https://tobydriscoll.github.io/blog/showall/</link>
+      <link>https://tobydriscoll.net/blog/showall/</link>
       <pubDate>Thu, 30 Jul 2015 21:14:51 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/showall/</guid>
+      <guid>https://tobydriscoll.net/blog/showall/</guid>
       <description>&lt;p&gt;I just scratched a &lt;a href=&#34;http://matlab.com&#34; target=&#34;_blank&#34;&gt;MATLAB&lt;/a&gt; itch. So many times I&amp;rsquo;ve seen&amp;mdash;and experienced myself&amp;mdash;people popping open figure windows in MATLAB, then trying to juggle them and move them around the screen so that you can see all of them at once. If you know what you&amp;rsquo;re doing, you can dock them into the desktop and lay them out there, but it&amp;rsquo;s still a lot of clicks.&lt;/p&gt;
 
 &lt;p&gt;So, I present &lt;a href=&#34;http://www.mathworks.com/matlabcentral/fileexchange/52344-showall&#34; target=&#34;_blank&#34;&gt;showall.m&lt;/a&gt;, a little function that will automatically bring forward all the figures (or the ones you specify) and lay them out in a grid. Now you can master your figures!&lt;/p&gt;

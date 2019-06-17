@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kevin W Aiton on Toby Driscoll</title>
-    <link>https://tobydriscoll.github.io/authors/kevin-w-aiton/</link>
+    <link>https://tobydriscoll.net/authors/kevin-w-aiton/</link>
     <description>Recent content in Kevin W Aiton on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://tobydriscoll.github.io/authors/kevin-w-aiton/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tobydriscoll.net/authors/kevin-w-aiton/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Preconditioned Nonlinear Iterations for Overlapping Chebyshev Discretizations with Independent Grids</title>
-      <link>https://tobydriscoll.github.io/publication/aiton-preconditioned-nonlinear-iterations-2019/</link>
+      <link>https://tobydriscoll.net/publication/aiton-preconditioned-nonlinear-iterations-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/aiton-preconditioned-nonlinear-iterations-2019/</guid>
+      <guid>https://tobydriscoll.net/publication/aiton-preconditioned-nonlinear-iterations-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An Adaptive Partition of Unity Method for Multivariate Chebyshev Polynomial Approximations</title>
-      <link>https://tobydriscoll.github.io/publication/aiton-adaptive-partition-unity-2018-a/</link>
+      <link>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018-a/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/aiton-adaptive-partition-unity-2018-a/</guid>
+      <guid>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018-a/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An adaptive partition of unity method for Chebyshev polynomial interpolation</title>
-      <link>https://tobydriscoll.github.io/publication/aiton-adaptive-partition-unity-2018/</link>
+      <link>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/aiton-adaptive-partition-unity-2018/</guid>
+      <guid>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018/</guid>
       <description></description>
     </item>
     

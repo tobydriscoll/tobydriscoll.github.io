@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>book on Toby Driscoll</title>
-    <link>https://tobydriscoll.github.io/tags/book/</link>
+    <link>https://tobydriscoll.net/tags/book/</link>
     <description>Recent content in book on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://tobydriscoll.github.io/tags/book/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tobydriscoll.net/tags/book/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fundamentals of Numerical Computation</title>
-      <link>https://tobydriscoll.github.io/project/fnc/</link>
+      <link>https://tobydriscoll.net/project/fnc/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/project/fnc/</guid>
+      <guid>https://tobydriscoll.net/project/fnc/</guid>
       <description>
 
 &lt;ul&gt;
@@ -203,8 +203,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/Runge.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/Runge_hu0f548cfd05e38926eebe46ea28dd5be0_124060_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge_hu0f548cfd05e38926eebe46ea28dd5be0_124060_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -212,8 +212,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/ac.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/ac_hu95970c6c9ea6fae0dbfcfa14ef2df26c_38616_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ac.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ac_hu95970c6c9ea6fae0dbfcfa14ef2df26c_38616_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -221,8 +221,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/ad.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/ad_hu793d1d9b879a97c8ab6c3a18cece99e9_129083_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ad.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ad_hu793d1d9b879a97c8ab6c3a18cece99e9_129083_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -230,8 +230,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/blur.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/blur_hu56bbdb49eb2c4fc0bc1ea93c89180c13_145139_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/blur.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/blur_hu56bbdb49eb2c4fc0bc1ea93c89180c13_145139_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -239,8 +239,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/gmres.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/gmres_hub77fff9e6573c7ccbab0d5ca05b6cb46_50706_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres_hub77fff9e6573c7ccbab0d5ca05b6cb46_50706_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -248,8 +248,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/heat.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/heat_hu7f9a8ee2cd7da742aa215ef640b44411_101473_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/heat.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/heat_hu7f9a8ee2cd7da742aa215ef640b44411_101473_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -257,8 +257,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/int.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/int_hu525f77ce78fc11d3dc29e5787fb4ca47_59355_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/int.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/int_hu525f77ce78fc11d3dc29e5787fb4ca47_59355_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -266,8 +266,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/oregon.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/oregon_hu4c9c9cae9716966acab1b15af67e8952_53949_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon_hu4c9c9cae9716966acab1b15af67e8952_53949_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -275,8 +275,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/pois.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/pois_hu6a09c7b9238211c8194e1ca1518f29c4_83948_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/pois.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/pois_hu6a09c7b9238211c8194e1ca1518f29c4_83948_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -284,8 +284,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/sparse.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/sparse_hu3ef95519f45740ea365b74f9f07a4274_406244_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse_hu3ef95519f45740ea365b74f9f07a4274_406244_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -293,8 +293,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/stab.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/stab_hu2c15c64b385ef2b8e92ecbe02eba8949_28268_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/stab.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/stab_hu2c15c64b385ef2b8e92ecbe02eba8949_28268_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -302,8 +302,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/traffic.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/traffic_hu6ba28221845bc3855a564180a912cf4c_69354_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic_hu6ba28221845bc3855a564180a912cf4c_69354_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
     
@@ -311,8 +311,8 @@
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.github.io/project/fnc/gallery/voting.png&#34; &gt;
-  &lt;img src=&#34;https://tobydriscoll.github.io/project/fnc/gallery/voting_hu1084b07da23983f4101a729b753609ca_61390_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/voting.png&#34; &gt;
+  &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/voting_hu1084b07da23983f4101a729b753609ca_61390_0x190_resize_lanczos_2.png&#34; alt=&#34;&#34;&gt;
   &lt;/a&gt;
   
 
@@ -323,10 +323,10 @@
     
     <item>
       <title>Exploring ODEs</title>
-      <link>https://tobydriscoll.github.io/project/explode/</link>
+      <link>https://tobydriscoll.net/project/explode/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/project/explode/</guid>
+      <guid>https://tobydriscoll.net/project/explode/</guid>
       <description>
 
 &lt;ul&gt;
@@ -392,10 +392,10 @@ website&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Learning MATLAB</title>
-      <link>https://tobydriscoll.github.io/project/learning-matlab/</link>
+      <link>https://tobydriscoll.net/project/learning-matlab/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/project/learning-matlab/</guid>
+      <guid>https://tobydriscoll.net/project/learning-matlab/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Buy at the &lt;a href=&#34;http://bookstore.siam.org/OT115&#34; target=&#34;_blank&#34;&gt;SIAM bookstore&lt;/a&gt;. Members of SIAM, including &lt;a href=&#34;http://siam.org/students/memberships.php&#34; target=&#34;_blank&#34;&gt;student members&lt;/a&gt;, get a 30% discount.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Buy at &lt;a href=&#34;http://www.amazon.com/Learning-MATLAB-Tobin-A-Driscoll/dp/0898716837&#34; target=&#34;_blank&#34;&gt;Amazon&lt;/a&gt; in the U.S.&lt;/li&gt;
@@ -432,10 +432,10 @@ very challenging.&lt;/p&gt;
     
     <item>
       <title>Schwarz–Christoffel Mapping</title>
-      <link>https://tobydriscoll.github.io/project/schwarz-christoffel-mapping/</link>
+      <link>https://tobydriscoll.net/project/schwarz-christoffel-mapping/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/project/schwarz-christoffel-mapping/</guid>
+      <guid>https://tobydriscoll.net/project/schwarz-christoffel-mapping/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;SCMContents.pdf&#34; target=&#34;_blank&#34;&gt;See the table of contents&lt;/a&gt; of this book&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.cambridge.org/us/knowledge/isbn/item1169156/Schwarz-Christoffel%20Mapping/?site_locale=en_US&#34; target=&#34;_blank&#34;&gt;Buy the book&lt;/a&gt; directly from CUP&lt;/li&gt;
@@ -454,7 +454,7 @@ very challenging.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Schwarz-Christoffel Mapping&lt;/em&gt; is a monograph by myself and &lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34;&gt;Nick Trefethen&lt;/a&gt; on the constructive and computational aspects of Schwarz–Christoffel conformal maps. These maps transform the interior or exterior of a region bounded by a polygon to the interior of a disk, half-plane, strip, rectangle, or more exotic canonical region. Unlike many other numerical conformal mapping methods, they are substantially faster to compute than the full solution of an elliptic partial differential equation on the same domain. Because the maps are conformal, they offer a powerful way to solve certain classical problems for the Laplacian operator.&lt;/p&gt;
 
-&lt;p&gt;The book includes 76 quantitatively precise figures illustrating theoretical and applied aspects of Schwarz–Christoffel maps. The appendix includes code snippets that produce some of these figures using my free &lt;a href=&#34;https://tobydriscoll.github.io/project/sc-toolbox&#34;&gt;Schwarz-Christoffel Toolbox for MATLAB&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The book includes 76 quantitatively precise figures illustrating theoretical and applied aspects of Schwarz–Christoffel maps. The appendix includes code snippets that produce some of these figures using my free &lt;a href=&#34;https://tobydriscoll.net/project/sc-toolbox&#34;&gt;Schwarz-Christoffel Toolbox for MATLAB&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

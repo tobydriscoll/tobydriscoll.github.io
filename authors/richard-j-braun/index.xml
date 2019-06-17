@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Richard J Braun on Toby Driscoll</title>
-    <link>https://tobydriscoll.github.io/authors/richard-j-braun/</link>
+    <link>https://tobydriscoll.net/authors/richard-j-braun/</link>
     <description>Recent content in Richard J Braun on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://tobydriscoll.github.io/authors/richard-j-braun/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tobydriscoll.net/authors/richard-j-braun/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Models for Tear Break Up Dynamics and Imaging</title>
-      <link>https://tobydriscoll.github.io/publication/braun-models-tear-break-2018/</link>
+      <link>https://tobydriscoll.net/publication/braun-models-tear-break-2018/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/braun-models-tear-break-2018/</guid>
+      <guid>https://tobydriscoll.net/publication/braun-models-tear-break-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Simulation of parabolic flow on an eye-shaped domain with moving boundary</title>
-      <link>https://tobydriscoll.github.io/publication/driscoll-simulation-parabolic-flow-2018/</link>
+      <link>https://tobydriscoll.net/publication/driscoll-simulation-parabolic-flow-2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/driscoll-simulation-parabolic-flow-2018/</guid>
+      <guid>https://tobydriscoll.net/publication/driscoll-simulation-parabolic-flow-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blink Characterization Using Curve Fitting and Clustering Algorithms</title>
-      <link>https://tobydriscoll.github.io/publication/brosch-blink-characterization-using-2017/</link>
+      <link>https://tobydriscoll.net/publication/brosch-blink-characterization-using-2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/brosch-blink-characterization-using-2017/</guid>
+      <guid>https://tobydriscoll.net/publication/brosch-blink-characterization-using-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fundamentals of Numerical Computation</title>
-      <link>https://tobydriscoll.github.io/publication/driscoll-fundamentals-numerical-computation-2017/</link>
+      <link>https://tobydriscoll.net/publication/driscoll-fundamentals-numerical-computation-2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/driscoll-fundamentals-numerical-computation-2017/</guid>
+      <guid>https://tobydriscoll.net/publication/driscoll-fundamentals-numerical-computation-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>On Tear Film Breakup (TBU): Dynamics and Imaging</title>
-      <link>https://tobydriscoll.github.io/publication/braun-tear-film-breakup-2017/</link>
+      <link>https://tobydriscoll.net/publication/braun-tear-film-breakup-2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/braun-tear-film-breakup-2017/</guid>
+      <guid>https://tobydriscoll.net/publication/braun-tear-film-breakup-2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mathematical Modeling of Glob-Driven Tear Film Breakup</title>
-      <link>https://tobydriscoll.github.io/publication/zhong-mathematical-modeling-glob-driven-2016/</link>
+      <link>https://tobydriscoll.net/publication/zhong-mathematical-modeling-glob-driven-2016/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/zhong-mathematical-modeling-glob-driven-2016/</guid>
+      <guid>https://tobydriscoll.net/publication/zhong-mathematical-modeling-glob-driven-2016/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Computed Tear Film and Osmolarity Dynamics on an Eye-Shaped Domain</title>
-      <link>https://tobydriscoll.github.io/publication/li-computed-tear-film-2015/</link>
+      <link>https://tobydriscoll.net/publication/li-computed-tear-film-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/li-computed-tear-film-2015/</guid>
+      <guid>https://tobydriscoll.net/publication/li-computed-tear-film-2015/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Model for the Tear Film and Ocular Surface Temperature for Partial Blinks</title>
-      <link>https://tobydriscoll.github.io/publication/deng-model-tear-film-2013/</link>
+      <link>https://tobydriscoll.net/publication/deng-model-tear-film-2013/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/deng-model-tear-film-2013/</guid>
+      <guid>https://tobydriscoll.net/publication/deng-model-tear-film-2013/</guid>
       <description></description>
     </item>
     

@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>0 on Toby Driscoll</title>
-    <link>https://tobydriscoll.github.io/publication_types/0/</link>
+    <link>https://tobydriscoll.net/publication_types/0/</link>
     <description>Recent content in 0 on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://tobydriscoll.github.io/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tobydriscoll.net/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>An Open Source Software Project for Numerical Conformal Mapping</title>
-      <link>https://tobydriscoll.github.io/publication/driscoll-open-source-software-2015/</link>
+      <link>https://tobydriscoll.net/publication/driscoll-open-source-software-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/driscoll-open-source-software-2015/</guid>
+      <guid>https://tobydriscoll.net/publication/driscoll-open-source-software-2015/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Chebfun for PDEs</title>
-      <link>https://tobydriscoll.github.io/publication/driscoll-chebfun-pd-es-2012/</link>
+      <link>https://tobydriscoll.net/publication/driscoll-chebfun-pd-es-2012/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/driscoll-chebfun-pd-es-2012/</guid>
+      <guid>https://tobydriscoll.net/publication/driscoll-chebfun-pd-es-2012/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Chebfun Version 2</title>
-      <link>https://tobydriscoll.github.io/publication/trefethen-chebfun-version-2009/</link>
+      <link>https://tobydriscoll.net/publication/trefethen-chebfun-version-2009/</link>
       <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/trefethen-chebfun-version-2009/</guid>
+      <guid>https://tobydriscoll.net/publication/trefethen-chebfun-version-2009/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Crash Course in Matlab</title>
-      <link>https://tobydriscoll.github.io/publication/driscoll-crash-course-matlab-2003/</link>
+      <link>https://tobydriscoll.net/publication/driscoll-crash-course-matlab-2003/</link>
       <pubDate>Wed, 01 Jan 2003 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/driscoll-crash-course-matlab-2003/</guid>
+      <guid>https://tobydriscoll.net/publication/driscoll-crash-course-matlab-2003/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Schwarz-Christoffel Toolbox for MATLAB</title>
-      <link>https://tobydriscoll.github.io/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</link>
+      <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</link>
       <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</guid>
+      <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</guid>
       <description></description>
     </item>
     

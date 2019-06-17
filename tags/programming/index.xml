@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>programming on Toby Driscoll</title>
-    <link>https://tobydriscoll.github.io/tags/programming/</link>
+    <link>https://tobydriscoll.net/tags/programming/</link>
     <description>Recent content in programming on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://tobydriscoll.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tobydriscoll.net/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning MATLAB</title>
-      <link>https://tobydriscoll.github.io/project/learning-matlab/</link>
+      <link>https://tobydriscoll.net/project/learning-matlab/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/project/learning-matlab/</guid>
+      <guid>https://tobydriscoll.net/project/learning-matlab/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Buy at the &lt;a href=&#34;http://bookstore.siam.org/OT115&#34; target=&#34;_blank&#34;&gt;SIAM bookstore&lt;/a&gt;. Members of SIAM, including &lt;a href=&#34;http://siam.org/students/memberships.php&#34; target=&#34;_blank&#34;&gt;student members&lt;/a&gt;, get a 30% discount.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Buy at &lt;a href=&#34;http://www.amazon.com/Learning-MATLAB-Tobin-A-Driscoll/dp/0898716837&#34; target=&#34;_blank&#34;&gt;Amazon&lt;/a&gt; in the U.S.&lt;/li&gt;
@@ -53,10 +53,10 @@ very challenging.&lt;/p&gt;
     
     <item>
       <title>MATLAB software</title>
-      <link>https://tobydriscoll.github.io/project/matlabcentral/</link>
+      <link>https://tobydriscoll.net/project/matlabcentral/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/project/matlabcentral/</guid>
+      <guid>https://tobydriscoll.net/project/matlabcentral/</guid>
       <description>&lt;p&gt;In over 25 years of MATLAB programming, I&amp;rsquo;ve &lt;a href=&#34;https://www.mathworks.com/matlabcentral/profile/authors/631894-toby-driscoll?utf8=%E2%9C%93&amp;amp;detail2=&amp;amp;detail=fileexchange&#34; target=&#34;_blank&#34;&gt;contributed a few utilities&lt;/a&gt; and MATLAB gadgets that I&amp;rsquo;ve found helpful. For example:&lt;/p&gt;
 
 &lt;ul&gt;

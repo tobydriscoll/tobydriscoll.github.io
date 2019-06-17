@@ -34,7 +34,7 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
 n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]; A = rand(1200,n); Q = zeros(1200,n); R = zeros(600,600); tic(); R[1,1] = norm(A[:,1]); Q[:,1] = A[:,1]/R[1,1]; for j = 2:n R[1:j-1,j] = Q[:,1:j-1]&#39;*A[:,j]; v = A[:,j] - Q[:,1:j-1]*R[1:j-1,j]; R[j,j] = norm(v); Q[:,j] = v/R[j,j]; end time_[k] = toc(); end using PyPlot loglog(n_,time_,&quot;-o&quot;,n_,(n_/500).">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/">
+  <link rel="alternate" hreflang="en-us" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/">
 
   
 
@@ -121,7 +121,7 @@ n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/">
+  <link rel="canonical" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/">
 
   
   
@@ -136,12 +136,12 @@ n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]
   <meta property="twitter:creator" content="@tobydriscoll">
   
   <meta property="og:site_name" content="Toby Driscoll">
-  <meta property="og:url" content="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/">
+  <meta property="og:url" content="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/">
   <meta property="og:title" content="Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt | Toby Driscoll">
   <meta property="og:description" content="This lecture is about the modified Gram-Schmidt method and flop counting. The notebooks are here.
 I&rsquo;m lost.
 Almost as an afterthought I decided to add a demonstration of the timing of Gram-Schmidt compared to the asymptotic flop count. Both MATLAB and Julia got very close to the trend as got into the hundreds, using vectorized code:
-n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]; A = rand(1200,n); Q = zeros(1200,n); R = zeros(600,600); tic(); R[1,1] = norm(A[:,1]); Q[:,1] = A[:,1]/R[1,1]; for j = 2:n R[1:j-1,j] = Q[:,1:j-1]&#39;*A[:,j]; v = A[:,j] - Q[:,1:j-1]*R[1:j-1,j]; R[j,j] = norm(v); Q[:,j] = v/R[j,j]; end time_[k] = toc(); end using PyPlot loglog(n_,time_,&quot;-o&quot;,n_,(n_/500)."><meta property="og:image" content="https://tobydriscoll.github.io/img/icon-192.png">
+n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]; A = rand(1200,n); Q = zeros(1200,n); R = zeros(600,600); tic(); R[1,1] = norm(A[:,1]); Q[:,1] = A[:,1]/R[1,1]; for j = 2:n R[1:j-1,j] = Q[:,1:j-1]&#39;*A[:,j]; v = A[:,j] - Q[:,1:j-1]*R[1:j-1,j]; R[j,j] = norm(v); Q[:,j] = v/R[j,j]; end time_[k] = toc(); end using PyPlot loglog(n_,time_,&quot;-o&quot;,n_,(n_/500)."><meta property="og:image" content="https://tobydriscoll.net/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2016-09-19T19:44:42&#43;00:00">
@@ -490,35 +490,35 @@ n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%208%3a%20Gram-Schmidt&amp;url=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f"
+         href="https://twitter.com/intent/tweet?text=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%208%3a%20Gram-Schmidt&amp;url=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%208%3a%20Gram-Schmidt"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%208%3a%20Gram-Schmidt"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%208%3a%20Gram-Schmidt"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%208%3a%20Gram-Schmidt"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%208%3a%20Gram-Schmidt&amp;body=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f">
+         href="mailto:?subject=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%208%3a%20Gram-Schmidt&amp;body=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-8-gram-schmidt%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -635,7 +635,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
     
 
     <div class="media-body">
-      <h5 class="card-title" itemprop="name"><a href="https://tobydriscoll.github.io/">Toby Driscoll</a></h5>
+      <h5 class="card-title" itemprop="name"><a href="https://tobydriscoll.net/">Toby Driscoll</a></h5>
       <h6 class="card-subtitle">Professor of Mathematical Sciences</h6>
       <p class="card-text" itemprop="description">My research interests are in scientific computation, mathematical software, and applications of mathematics in the life sciences.</p>
       <ul class="network-icon" aria-hidden="true">

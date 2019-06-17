@@ -33,7 +33,7 @@ Not much happened in Lecture 6, but I got gobsmacked in Lecture 7. It happened w
 A = magic(9); b = (1:9)&#39;; [Q,R] = qr(A); z = Q&#39;*b; x(9,1) = z(9)/R(9,9); for i = 8:-1:1 x(i) = (z(i) - R(i,i&#43;1:9)*x(i&#43;1:9)) / R(i,i); end  Here is what I first tried in Julia.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-6-7/">
+  <link rel="alternate" hreflang="en-us" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-6-7/">
 
   
 
@@ -120,7 +120,7 @@ A = magic(9); b = (1:9)&#39;; [Q,R] = qr(A); z = Q&#39;*b; x(9,1) = z(9)/R(9,9);
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-6-7/">
+  <link rel="canonical" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-6-7/">
 
   
   
@@ -135,11 +135,11 @@ A = magic(9); b = (1:9)&#39;; [Q,R] = qr(A); z = Q&#39;*b; x(9,1) = z(9)/R(9,9);
   <meta property="twitter:creator" content="@tobydriscoll">
   
   <meta property="og:site_name" content="Toby Driscoll">
-  <meta property="og:url" content="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-6-7/">
+  <meta property="og:url" content="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-6-7/">
   <meta property="og:title" content="Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 6-7 | Toby Driscoll">
   <meta property="og:description" content="Here are the Jupyter notebooks for Lecture 6 and Lecture 7. (I finally noticed that a Gist can hold more than one notebook&hellip;duh.)
 Not much happened in Lecture 6, but I got gobsmacked in Lecture 7. It happened when I tried to convert this boring MATLAB code for backward substitution.
-A = magic(9); b = (1:9)&#39;; [Q,R] = qr(A); z = Q&#39;*b; x(9,1) = z(9)/R(9,9); for i = 8:-1:1 x(i) = (z(i) - R(i,i&#43;1:9)*x(i&#43;1:9)) / R(i,i); end  Here is what I first tried in Julia."><meta property="og:image" content="https://tobydriscoll.github.io/img/icon-192.png">
+A = magic(9); b = (1:9)&#39;; [Q,R] = qr(A); z = Q&#39;*b; x(9,1) = z(9)/R(9,9); for i = 8:-1:1 x(i) = (z(i) - R(i,i&#43;1:9)*x(i&#43;1:9)) / R(i,i); end  Here is what I first tried in Julia."><meta property="og:image" content="https://tobydriscoll.net/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2016-09-16T20:27:58&#43;00:00">
@@ -488,35 +488,35 @@ A = magic(9); b = (1:9)&#39;; [Q,R] = qr(A); z = Q&#39;*b; x(9,1) = z(9)/R(9,9);
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lectures%206-7&amp;url=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f"
+         href="https://twitter.com/intent/tweet?text=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lectures%206-7&amp;url=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lectures%206-7"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lectures%206-7"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lectures%206-7"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lectures%206-7"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lectures%206-7&amp;body=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f">
+         href="mailto:?subject=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lectures%206-7&amp;body=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lectures-6-7%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -597,7 +597,7 @@ end
 
 <p>Feels very odd to me still, but okay.</p>
 
-<p>We are not out of the woods yet. This version still fails in the loop body, again vomiting opaque error messages. Remember how, <a href="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-2/" target="_blank">back in Lecture 2, I mentioned</a> that scalars and 1x1 matrices are different things? Inside the loop above, <code>z[i]</code> is a scalar and the product is a length-1 vector. But the subtraction works anyway, as <code>z[i]</code> is silently promoted to a 1-vector also. No, the problem comes with the assignment: you can&rsquo;t assign a 1-vector to an element of an array of numbers.</p>
+<p>We are not out of the woods yet. This version still fails in the loop body, again vomiting opaque error messages. Remember how, <a href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/" target="_blank">back in Lecture 2, I mentioned</a> that scalars and 1x1 matrices are different things? Inside the loop above, <code>z[i]</code> is a scalar and the product is a length-1 vector. But the subtraction works anyway, as <code>z[i]</code> is silently promoted to a 1-vector also. No, the problem comes with the assignment: you can&rsquo;t assign a 1-vector to an element of an array of numbers.</p>
 
 <p>There&rsquo;s a very long (space and time) <a href="https://github.com/JuliaLang/julia/issues/4774#issuecomment-28430963" target="_blank">discussion</a> about this and related issues in Julia. Suffice it to say that what mathematicians do with scalars, vectors, matrices, and tensors isn&rsquo;t rigorously consistent&mdash;or at least, there seem to be multiple, incompatible rigorous ways to use them.</p>
 
@@ -646,7 +646,7 @@ end
     
 
     <div class="media-body">
-      <h5 class="card-title" itemprop="name"><a href="https://tobydriscoll.github.io/">Toby Driscoll</a></h5>
+      <h5 class="card-title" itemprop="name"><a href="https://tobydriscoll.net/">Toby Driscoll</a></h5>
       <h6 class="card-subtitle">Professor of Mathematical Sciences</h6>
       <p class="card-text" itemprop="description">My research interests are in scientific computation, mathematical software, and applications of mathematics in the life sciences.</p>
       <ul class="network-icon" aria-hidden="true">

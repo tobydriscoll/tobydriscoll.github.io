@@ -32,7 +32,7 @@
 The computational parts are almost identical, except for how polynomials are represented. In MATLAB, a vector of coefficients is interpreted as a polynomial in the context of particular functions, such as polyval. The major pain is that the convention is for the coefficients to be ordered from high degree to low, which is almost always the opposite of what you really want.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/">
+  <link rel="alternate" hreflang="en-us" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/">
 
   
 
@@ -119,7 +119,7 @@ The computational parts are almost identical, except for how polynomials are rep
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/">
+  <link rel="canonical" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/">
 
   
   
@@ -134,10 +134,10 @@ The computational parts are almost identical, except for how polynomials are rep
   <meta property="twitter:creator" content="@tobydriscoll">
   
   <meta property="og:site_name" content="Toby Driscoll">
-  <meta property="og:url" content="https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/">
+  <meta property="og:url" content="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/">
   <meta property="og:title" content="Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 11: Least squares | Toby Driscoll">
   <meta property="og:description" content="This week&rsquo;s notebooks (MATLAB and Julia&ndash;now all lectures are together for each language) are about least squares polynomial fitting.
-The computational parts are almost identical, except for how polynomials are represented. In MATLAB, a vector of coefficients is interpreted as a polynomial in the context of particular functions, such as polyval. The major pain is that the convention is for the coefficients to be ordered from high degree to low, which is almost always the opposite of what you really want."><meta property="og:image" content="https://tobydriscoll.github.io/img/icon-192.png">
+The computational parts are almost identical, except for how polynomials are represented. In MATLAB, a vector of coefficients is interpreted as a polynomial in the context of particular functions, such as polyval. The major pain is that the convention is for the coefficients to be ordered from high degree to low, which is almost always the opposite of what you really want."><meta property="og:image" content="https://tobydriscoll.net/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2016-09-28T13:19:16&#43;00:00">
@@ -486,35 +486,35 @@ The computational parts are almost identical, except for how polynomials are rep
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%2011%3a%20Least%20squares&amp;url=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f"
+         href="https://twitter.com/intent/tweet?text=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%2011%3a%20Least%20squares&amp;url=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%2011%3a%20Least%20squares"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%2011%3a%20Least%20squares"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%2011%3a%20Least%20squares"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f&amp;title=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%2011%3a%20Least%20squares"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%2011%3a%20Least%20squares&amp;body=https%3a%2f%2ftobydriscoll.github.io%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f">
+         href="mailto:?subject=Trefethen%20%26%20Bau%20%26%20MATLAB%20%26%20Julia%2c%20Lecture%2011%3a%20Least%20squares&amp;body=https%3a%2f%2ftobydriscoll.net%2fblog%2ftrefethen-bau-matlab-julia-lecture-11-least-squares%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -624,7 +624,7 @@ xlabel!(&quot;year&quot;);  ylabel!(&quot;anomaly (deg C)&quot;)
     
 
     <div class="media-body">
-      <h5 class="card-title" itemprop="name"><a href="https://tobydriscoll.github.io/">Toby Driscoll</a></h5>
+      <h5 class="card-title" itemprop="name"><a href="https://tobydriscoll.net/">Toby Driscoll</a></h5>
       <h6 class="card-subtitle">Professor of Mathematical Sciences</h6>
       <p class="card-text" itemprop="description">My research interests are in scientific computation, mathematical software, and applications of mathematics in the life sciences.</p>
       <ul class="network-icon" aria-hidden="true">

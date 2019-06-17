@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>math on Toby Driscoll</title>
-    <link>https://tobydriscoll.github.io/categories/math/</link>
+    <link>https://tobydriscoll.net/categories/math/</link>
     <description>Recent content in math on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Feb 2017 20:16:10 +0000</lastBuildDate>
     
-	    <atom:link href="https://tobydriscoll.github.io/categories/math/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tobydriscoll.net/categories/math/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Iterative methods</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-iterative-methods/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-iterative-methods/</link>
       <pubDate>Fri, 03 Feb 2017 20:16:10 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-iterative-methods/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-iterative-methods/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m going to wrap up the long-paused MATLAB versus Julia comparison on Trefethen &amp;amp; Bau by chugging through all the lectures on iterative methods in one post.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m back to using gists&amp;ndash;not thrilled with any of the mechanisms for sharing this stuff.&lt;/p&gt;
@@ -27,7 +27,7 @@
 &lt;li&gt;&lt;a href=&#34;https://gist.github.com/tobydriscoll/63212a0c32c473daae5a81a3f6888476&#34; target=&#34;_blank&#34;&gt;Lecture 34 (Arnoldi eigenvalues)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;These are remarkable mainly in that they have such striking similarity in both languages. Aside from square brackets and working around the &lt;a href=&#34;https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-2/&#34; target=&#34;_blank&#34;&gt;1x1/scalar distinction&lt;/a&gt; in Julia, little differs besides the syntax of the &lt;code&gt;eigs&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;These are remarkable mainly in that they have such striking similarity in both languages. Aside from square brackets and working around the &lt;a href=&#34;https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/&#34; target=&#34;_blank&#34;&gt;1x1/scalar distinction&lt;/a&gt; in Julia, little differs besides the syntax of the &lt;code&gt;eigs&lt;/code&gt; command.&lt;/p&gt;
 
 &lt;p&gt;One frustration, though. I decided to try an interesting alternative to PyPlot in Julia, the &lt;a href=&#34;https://juliaplots.github.io/&#34; target=&#34;_blank&#34;&gt;Plots package&lt;/a&gt;. Actually Plots tries to be a generalization of and alternative route to using PyPlot/matplotlib. I decided to try the PlotlyJS backend instead, however. It makes lovely graphics with very responsive interaction. Since the rendering is in Javascript, I thought it would be perfectly portable, but you can&amp;rsquo;t see the output in the gist above, even though it should be embedded in the notebook.&lt;/p&gt;
 
@@ -60,10 +60,10 @@
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 24-29: Eigenvalue stuff</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</link>
       <pubDate>Thu, 27 Oct 2016 14:16:39 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</guid>
       <description>&lt;p&gt;Part V of T&amp;amp;B is on dense methods for eigenvalue and singular value problems. For my course, this is the part of the text that I condense most severely. In part that&amp;rsquo;s due to the need to cover unconstrained nonlinear solving and optimization stuff later on. But I also find that this is the least compelling part of the text for my purposes.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s heavily weighted toward the hermitian case. That&amp;rsquo;s the cleanest situation, so I see the rationale. But it&amp;rsquo;s pretty surprising that the lead author of &lt;a href=&#34;http://press.princeton.edu/titles/8113.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Spectra and Pseudospectra&lt;/em&gt;&lt;/a&gt; mentions eigenvalue conditioning and sensitivity only in a single exercise! (The exercises not in the lecture named &amp;ldquo;Eigenvalue problems,&amp;rdquo; nor the one named &amp;ldquo;Overview of eigenvalue algorithms.&amp;rdquo; It&amp;rsquo;s under &amp;ldquo;Reduction to Hessenberg or tridiagonal form.&amp;rdquo;) In contrast with the tone of earlier parts of the book, one could study the methods of these sections thoroughly and yet not appreciate when the answers are inaccurate, or possibly irrelevant. Because I took this course from Trefethen at a crucial time in the development of his thinking on the subject, my perception of the issues behind computing eigenvalues is quite different from what the text itself conveys.&lt;/p&gt;
@@ -149,10 +149,10 @@ julia&amp;gt; X = X[:,idx];  λ = λ[idx]
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lecture 19, Stability of least squares</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</link>
       <pubDate>Tue, 11 Oct 2016 21:16:35 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</guid>
       <description>&lt;p&gt;Here are &lt;a href=&#34;https://gist.github.com/tobydriscoll/dfb794e2c6891944790e628f68058ba4&#34; target=&#34;_blank&#34;&gt;the notebooks&lt;/a&gt; in MATLAB and Julia.&lt;/p&gt;
 
 &lt;p&gt;The new wrinkle in these codes is extended precision. In MATLAB you need to have the Symbolic Math toolbox to do this in the form of &lt;code&gt;vpa&lt;/code&gt;. In Julia, you have to use version 0.5 or (presumably) later, which had a surprising side effect I&amp;rsquo;ll get to below.&lt;/p&gt;
@@ -229,10 +229,10 @@ x4 = A\b;
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</link>
       <pubDate>Mon, 19 Sep 2016 19:44:42 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</guid>
       <description>&lt;p&gt;This lecture is about the modified Gram-Schmidt method and flop counting. The &lt;a href=&#34;https://gist.github.com/tobydriscoll/bae2a5e864f490e571d79a0af541fb8c&#34; target=&#34;_blank&#34;&gt;notebooks are here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m lost.&lt;/p&gt;
@@ -284,10 +284,10 @@ xlabel(&amp;quot;n&amp;quot;), ylabel(&amp;quot;elapsed time&amp;quot;)
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 4: SVD</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-4-svd/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-4-svd/</link>
       <pubDate>Mon, 12 Sep 2016 12:51:07 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-4-svd/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-4-svd/</guid>
       <description>&lt;p&gt;The notebooks: &lt;a href=&#34;https://gist.github.com/tobydriscoll/08fc56bca086f957920f1088e0844c30&#34; target=&#34;_blank&#34;&gt;matlab&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/324991720db46ff9c644cc43455bd23e&#34; target=&#34;_blank&#34;&gt;julia&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Today is about some little conveniences/quirks in Julia. Starting here:&lt;/p&gt;
@@ -318,10 +318,10 @@ x1,x2 = (cos(t),sin(t));
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 3: Norms</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-3-norms/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-3-norms/</link>
       <pubDate>Wed, 07 Sep 2016 19:32:46 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-3-norms/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-3-norms/</guid>
       <description>&lt;p&gt;Here are the &lt;a href=&#34;https://gist.github.com/tobydriscoll/b620d1b8beaa04cf87707a55928e3449&#34; target=&#34;_blank&#34;&gt;MATLAB&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/2c486e89b12911b073f3c91e514db4f7&#34; target=&#34;_blank&#34;&gt;julia&lt;/a&gt; notebooks.&lt;/p&gt;
 
 &lt;p&gt;The big issue this time around was graphics. This topic dramatically illustrates the advantages on both sides of the commercial/open source fence. On the MATLAB side, it&amp;rsquo;s perfectly clear what you should do. There are many options that have been well constructed, and it&amp;rsquo;s all under a relatively consistent umbrella. There are things to learn and options to choose, but it&amp;rsquo;s clear what functions you will be using to make, say, a scatter plot, and a lot of similarity across commands.&lt;/p&gt;
@@ -357,10 +357,10 @@ operator broadcasts each along the &amp;ldquo;missing&amp;rdquo; dimension. It&a
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 2</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-2/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/</link>
       <pubDate>Fri, 02 Sep 2016 19:12:54 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-2/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/</guid>
       <description>&lt;p&gt;Here are the &lt;a href=&#34;http://nbviewer.jupyter.org/gist/tobydriscoll/8aa30fdad0346f1c5656ff4a468b1b05&#34; target=&#34;_blank&#34;&gt;matlab&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/7f404b36fd47d2878f90dd76a1d7a9b9&#34; target=&#34;_blank&#34;&gt;julia&lt;/a&gt; notebooks.&lt;/p&gt;
 
 &lt;p&gt;Two things stood out this time. First, consider the following snippet.&lt;/p&gt;
@@ -402,10 +402,10 @@ u&#39;*v gives Complex{Int64}[-2 - 3im]
     
     <item>
       <title>Trefethen &amp; Bau, via MATLAB and Julia</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-via-matlab-and-julia/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-via-matlab-and-julia/</link>
       <pubDate>Thu, 01 Sep 2016 18:57:05 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-via-matlab-and-julia/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-via-matlab-and-julia/</guid>
       <description>&lt;p&gt;This semester I&amp;rsquo;m teaching &lt;a href=&#34;https://udel.instructure.com/courses/1335769/assignments/syllabus&#34; target=&#34;_blank&#34;&gt;MATH 612&lt;/a&gt;, which is numerical linear and nonlinear algebra for grad students. Linear algebra dominates the course, and for that I&amp;rsquo;m following the now classic textbook by &lt;a href=&#34;http://bookstore.siam.org/ot50/&#34; target=&#34;_blank&#34;&gt;Trefethen &amp;amp; Bau&lt;/a&gt;. This book has real meaning to me because I learned the subject from &lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwi-qPSJl-7OAhXJ2B4KHTxqBrEQFgghMAA&amp;amp;url=https%3A%2F%2Fpeople.maths.ox.ac.uk%2Ftrefethen%2F&amp;amp;usg=AFQjCNEas_P8d7AHd2BC-vUoVo7V74ONJw&#34; target=&#34;_blank&#34;&gt;Nick Trefethen&lt;/a&gt; at Cornell, just a year or two before the book was written. It&amp;rsquo;s when numerical analysis became an appealing subject to me.&lt;/p&gt;
 
 &lt;p&gt;That course is also when I started to learn &lt;a href=&#34;http://www.matlab.com&#34; target=&#34;_blank&#34;&gt;MATLAB&lt;/a&gt;. I&amp;rsquo;ve been using MATLAB for over 20 years and I&amp;rsquo;m damn good at it. I&amp;rsquo;ve written &lt;a href=&#34;http://dx.doi.org/10.1137/1.9780898717662&#34; target=&#34;_blank&#34;&gt;a book that teaches it&lt;/a&gt;, and &lt;a href=&#34;https://books.google.com/books/about/Schwarz_Christoffel_mapping.html?id=k5KU6clCKssC&amp;amp;hl=en&#34; target=&#34;_blank&#34;&gt;another book&lt;/a&gt; largely based on a&lt;a href=&#34;http://tobydriscoll.net/SC/index.html&#34; target=&#34;_blank&#34;&gt; software package&lt;/a&gt; I wrote for conformal mapping, and I was an early and key contributor to the &lt;a href=&#34;http://www.chebfun.org&#34; target=&#34;_blank&#34;&gt;Chebfun&lt;/a&gt; project. I even dominated a game of MATLAB Jeopardy as a grad student at the &lt;a href=&#34;http://www.colostate.edu/dept/Mathematics/matlab/vol3num3&#34; target=&#34;_blank&#34;&gt;1995 MATLAB Conference&lt;/a&gt; (when version 4.2 of MATLAB ruled the Earth).&lt;/p&gt;
@@ -422,10 +422,10 @@ u&#39;*v gives Complex{Int64}[-2 - 3im]
     
     <item>
       <title>Why not Zoidberg?</title>
-      <link>https://tobydriscoll.github.io/blog/why-not-zoidberg/</link>
+      <link>https://tobydriscoll.net/blog/why-not-zoidberg/</link>
       <pubDate>Fri, 31 Jul 2015 16:11:40 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/why-not-zoidberg/</guid>
+      <guid>https://tobydriscoll.net/blog/why-not-zoidberg/</guid>
       <description>&lt;p&gt;Something fun for Friday?&lt;/p&gt;
 
 &lt;p&gt;My older son binge-watched &lt;a href=&#34;http://www.cc.com/shows/futurama&#34; target=&#34;_blank&#34;&gt;Futurama&lt;/a&gt; on Netflix a few months ago. This was one of the funniest shows of at least recent TV history. Especially if you like nerdy, cultural-reference, rapid-fire style humor like a real &lt;a href=&#34;http://www.pewresearch.org/fact-tank/2014/06/05/generation-x-americas-neglected-middle-child/&#34; target=&#34;_blank&#34;&gt;Gen-Xer&lt;/a&gt;.&lt;/p&gt;
@@ -436,10 +436,10 @@ u&#39;*v gives Complex{Int64}[-2 - 3im]
     
     <item>
       <title>Data science? Data science!</title>
-      <link>https://tobydriscoll.github.io/blog/data-science-data-science/</link>
+      <link>https://tobydriscoll.net/blog/data-science-data-science/</link>
       <pubDate>Thu, 30 Jul 2015 13:36:33 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/data-science-data-science/</guid>
+      <guid>https://tobydriscoll.net/blog/data-science-data-science/</guid>
       <description>&lt;p&gt;I just received a copy of &lt;a href=&#34;http://sinews.siam.org/&#34; target=&#34;_blank&#34;&gt;SIAM News&lt;/a&gt; on a dead tree. It features &lt;a href=&#34;http://sinews.siam.org/DetailsPage/tabid/607/ArticleID/565/Data-Science.aspx&#34; target=&#34;_blank&#34;&gt;a piece&lt;/a&gt; by &lt;a href=&#34;https://www.cs.utah.edu/~crj/&#34; target=&#34;_blank&#34;&gt;Chris Johnson&lt;/a&gt; and &lt;a href=&#34;http://math.uwaterloo.ca/amath-numerical-analysis-and-scientific-computing-group/hans-de-stercks-homepage&#34; target=&#34;_blank&#34;&gt;Hans de Sterck&lt;/a&gt; about &amp;ldquo;Data Science: What Is It and How Is It Taught?&amp;rdquo; As usual in these articles, I find the specifics more interesting than the generalities of a panel discussion. I really liked this bit about the new program in &lt;a href=&#34;http://www.science.vt.edu/ais/cmda/&#34; target=&#34;_blank&#34;&gt;Computational Modeling and Data Analytics at Virginia Tech&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -477,20 +477,20 @@ u&#39;*v gives Complex{Int64}[-2 - 3im]
     
     <item>
       <title>Length of papers</title>
-      <link>https://tobydriscoll.github.io/blog/length-of-papers/</link>
+      <link>https://tobydriscoll.net/blog/length-of-papers/</link>
       <pubDate>Wed, 29 Jul 2015 14:44:07 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/length-of-papers/</guid>
+      <guid>https://tobydriscoll.net/blog/length-of-papers/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34;&gt;Nick Trefethen&lt;/a&gt; has &lt;a href=&#34;http://trefethen.net/2015/06/13/journal-articles-are-getting-longer-2/comment-page-1/#comment-732&#34; target=&#34;_blank&#34;&gt;posted&lt;/a&gt; a wonderful graph showing how the average length of papers published in several &lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0CB4QFjAAahUKEwi4ktrlyYDHAhWCHR4KHXRgBPQ&amp;amp;url=https%3A%2F%2Fwww.siam.org%2Fjournals%2F&amp;amp;ei=mua4VbjdDIK7ePTAkaAP&amp;amp;usg=AFQjCNEAU5ysKpu0RcHiazJR64ftWy1drA&amp;amp;sig2=slnnzBVvgEk_Tt5flE7Jtw&amp;amp;bvm=bv.98717601,d.dmo&#34; target=&#34;_blank&#34;&gt;SIAM journals&lt;/a&gt; has doubled over the last 40 years.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>A retrospective look at college math</title>
-      <link>https://tobydriscoll.github.io/blog/a-retrospective-look-at-college-math/</link>
+      <link>https://tobydriscoll.net/blog/a-retrospective-look-at-college-math/</link>
       <pubDate>Wed, 22 Jul 2015 14:28:44 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/a-retrospective-look-at-college-math/</guid>
+      <guid>https://tobydriscoll.net/blog/a-retrospective-look-at-college-math/</guid>
       <description>&lt;p&gt;I recommend the post &lt;a href=&#34;http://blogs.ams.org/matheducation/2015/07/20/what-i-wish-i-had-learned-more-about-in-college-mathematics/#sthash.6e9g5byf.dpuf&#34; target=&#34;_blank&#34;&gt;What I Wish I Had Learned More About in College Mathematics&lt;/a&gt;, written by Sabrina Schmidt, a former math undergrad at Vassar who now works as a data manager. My favorite quote:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -505,20 +505,20 @@ u&#39;*v gives Complex{Int64}[-2 - 3im]
     
     <item>
       <title>Bio breakfast</title>
-      <link>https://tobydriscoll.github.io/blog/bio-breakfast/</link>
+      <link>https://tobydriscoll.net/blog/bio-breakfast/</link>
       <pubDate>Tue, 14 Jul 2015 12:00:03 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/bio-breakfast/</guid>
+      <guid>https://tobydriscoll.net/blog/bio-breakfast/</guid>
       <description>&lt;p&gt;So here I am at the Delaware &lt;a href=&#34;http://www.delawarebio.org/biobreakfast-series&#34; target=&#34;_blank&#34;&gt;Bio Breakfast&lt;/a&gt;. Nobody is more surprised than I! Making a career out of math seems like an odd path to trying to improve human health, but here I sit.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Making continuous assessment work</title>
-      <link>https://tobydriscoll.github.io/blog/making-continuous-assessment-work/</link>
+      <link>https://tobydriscoll.net/blog/making-continuous-assessment-work/</link>
       <pubDate>Mon, 13 Jul 2015 15:25:46 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/making-continuous-assessment-work/</guid>
+      <guid>https://tobydriscoll.net/blog/making-continuous-assessment-work/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve come to think that in math at least, continuous learning and assessment may be more important even than &lt;a href=&#34;active learning&#34; target=&#34;_blank&#34;&gt;http://www.crlt.umich.edu/tstrategies/tsal&lt;/a&gt;. The traditional model of chunking assessments into weekly or monthly batches encourages the cram-and-dump style of &amp;ldquo;learning.&amp;rdquo; Since students are allowed to delay work on assignments that are crucial to their understanding of incoming material, it&amp;rsquo;s impossible for them to build that understanding in real time. Instead they copy and hope to parse later, when assessment is demanded.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s tempting to say that students should suck it up and organize their time better. This attitude ignores human nature, especially the nature of people in late adolescence and early adulthood. Even a large part of my own work is deadline-driven rather than proactive. And &lt;em&gt;I&lt;/em&gt; love math!&lt;/p&gt;
@@ -546,10 +546,10 @@ u&#39;*v gives Complex{Int64}[-2 - 3im]
     
     <item>
       <title>Addiction</title>
-      <link>https://tobydriscoll.github.io/blog/addiction/</link>
+      <link>https://tobydriscoll.net/blog/addiction/</link>
       <pubDate>Thu, 09 Jul 2015 22:17:20 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/addiction/</guid>
+      <guid>https://tobydriscoll.net/blog/addiction/</guid>
       <description>&lt;p&gt;Last week my 14-year-old son asked rhetorically, &amp;ldquo;How is it that more people aren&amp;rsquo;t addicted to math?&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I know son, I know.&lt;/p&gt;

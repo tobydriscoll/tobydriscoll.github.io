@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>academia on Toby Driscoll</title>
-    <link>https://tobydriscoll.github.io/categories/academia/</link>
+    <link>https://tobydriscoll.net/categories/academia/</link>
     <description>Recent content in academia on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Feb 2018 20:54:56 +0000</lastBuildDate>
     
-	    <atom:link href="https://tobydriscoll.github.io/categories/academia/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tobydriscoll.net/categories/academia/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jekyll for clicker questions</title>
-      <link>https://tobydriscoll.github.io/blog/jekyll-for-clicker-questions/</link>
+      <link>https://tobydriscoll.net/blog/jekyll-for-clicker-questions/</link>
       <pubDate>Fri, 02 Feb 2018 20:54:56 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/jekyll-for-clicker-questions/</guid>
+      <guid>https://tobydriscoll.net/blog/jekyll-for-clicker-questions/</guid>
       <description>&lt;p&gt;For a few years, I&amp;rsquo;ve been a fan of clickers (aka personal response systems) for large lecture sections. Clickers are a simple&amp;ndash;and scalable&amp;ndash;way to incorporate a little widespread active learning in the classroom. They can&amp;rsquo;t work miracles, but they do allow me to reward attendance, rouse the students once in a while, and give good feedback to all of us about how well the latest concepts are sinking in. I like the accountability: If you got the question wrong when 80% of the class got it right, that&amp;rsquo;s on you, but if 20% of the class got it right, that&amp;rsquo;s on me.&lt;/p&gt;
 
 &lt;p&gt;UD is an &lt;a href=&#34;http://www.iclicker.com&#34; target=&#34;_blank&#34;&gt;iclicker&lt;/a&gt; shop. When I want to poll the class, I click a &amp;ldquo;go&amp;rdquo; button on a small toolbar that overlays any other application. When I&amp;rsquo;m done, I click &amp;ldquo;stop.&amp;rdquo; I can show the results and designate the correct answer on the spot, or I can go back later and pick the right answer while looking at a screenshot from when the question started.&lt;/p&gt;
@@ -53,10 +53,10 @@ What is $\dd{}{x}\left(e^x\right)$?
     
     <item>
       <title>Data science? Data science!</title>
-      <link>https://tobydriscoll.github.io/blog/data-science-data-science/</link>
+      <link>https://tobydriscoll.net/blog/data-science-data-science/</link>
       <pubDate>Thu, 30 Jul 2015 13:36:33 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/data-science-data-science/</guid>
+      <guid>https://tobydriscoll.net/blog/data-science-data-science/</guid>
       <description>&lt;p&gt;I just received a copy of &lt;a href=&#34;http://sinews.siam.org/&#34; target=&#34;_blank&#34;&gt;SIAM News&lt;/a&gt; on a dead tree. It features &lt;a href=&#34;http://sinews.siam.org/DetailsPage/tabid/607/ArticleID/565/Data-Science.aspx&#34; target=&#34;_blank&#34;&gt;a piece&lt;/a&gt; by &lt;a href=&#34;https://www.cs.utah.edu/~crj/&#34; target=&#34;_blank&#34;&gt;Chris Johnson&lt;/a&gt; and &lt;a href=&#34;http://math.uwaterloo.ca/amath-numerical-analysis-and-scientific-computing-group/hans-de-stercks-homepage&#34; target=&#34;_blank&#34;&gt;Hans de Sterck&lt;/a&gt; about &amp;ldquo;Data Science: What Is It and How Is It Taught?&amp;rdquo; As usual in these articles, I find the specifics more interesting than the generalities of a panel discussion. I really liked this bit about the new program in &lt;a href=&#34;http://www.science.vt.edu/ais/cmda/&#34; target=&#34;_blank&#34;&gt;Computational Modeling and Data Analytics at Virginia Tech&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -94,10 +94,10 @@ What is $\dd{}{x}\left(e^x\right)$?
     
     <item>
       <title>Length of papers</title>
-      <link>https://tobydriscoll.github.io/blog/length-of-papers/</link>
+      <link>https://tobydriscoll.net/blog/length-of-papers/</link>
       <pubDate>Wed, 29 Jul 2015 14:44:07 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/length-of-papers/</guid>
+      <guid>https://tobydriscoll.net/blog/length-of-papers/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34;&gt;Nick Trefethen&lt;/a&gt; has &lt;a href=&#34;http://trefethen.net/2015/06/13/journal-articles-are-getting-longer-2/comment-page-1/#comment-732&#34; target=&#34;_blank&#34;&gt;posted&lt;/a&gt; a wonderful graph showing how the average length of papers published in several &lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0CB4QFjAAahUKEwi4ktrlyYDHAhWCHR4KHXRgBPQ&amp;amp;url=https%3A%2F%2Fwww.siam.org%2Fjournals%2F&amp;amp;ei=mua4VbjdDIK7ePTAkaAP&amp;amp;usg=AFQjCNEAU5ysKpu0RcHiazJR64ftWy1drA&amp;amp;sig2=slnnzBVvgEk_Tt5flE7Jtw&amp;amp;bvm=bv.98717601,d.dmo&#34; target=&#34;_blank&#34;&gt;SIAM journals&lt;/a&gt; has doubled over the last 40 years.&lt;/p&gt;
 </description>
     </item>

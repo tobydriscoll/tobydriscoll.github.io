@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>computing on Toby Driscoll</title>
-    <link>https://tobydriscoll.github.io/categories/computing/</link>
+    <link>https://tobydriscoll.net/categories/computing/</link>
     <description>Recent content in computing on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Feb 2018 20:54:56 +0000</lastBuildDate>
     
-	    <atom:link href="https://tobydriscoll.github.io/categories/computing/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tobydriscoll.net/categories/computing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jekyll for clicker questions</title>
-      <link>https://tobydriscoll.github.io/blog/jekyll-for-clicker-questions/</link>
+      <link>https://tobydriscoll.net/blog/jekyll-for-clicker-questions/</link>
       <pubDate>Fri, 02 Feb 2018 20:54:56 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/jekyll-for-clicker-questions/</guid>
+      <guid>https://tobydriscoll.net/blog/jekyll-for-clicker-questions/</guid>
       <description>&lt;p&gt;For a few years, I&amp;rsquo;ve been a fan of clickers (aka personal response systems) for large lecture sections. Clickers are a simple&amp;ndash;and scalable&amp;ndash;way to incorporate a little widespread active learning in the classroom. They can&amp;rsquo;t work miracles, but they do allow me to reward attendance, rouse the students once in a while, and give good feedback to all of us about how well the latest concepts are sinking in. I like the accountability: If you got the question wrong when 80% of the class got it right, that&amp;rsquo;s on you, but if 20% of the class got it right, that&amp;rsquo;s on me.&lt;/p&gt;
 
 &lt;p&gt;UD is an &lt;a href=&#34;http://www.iclicker.com&#34; target=&#34;_blank&#34;&gt;iclicker&lt;/a&gt; shop. When I want to poll the class, I click a &amp;ldquo;go&amp;rdquo; button on a small toolbar that overlays any other application. When I&amp;rsquo;m done, I click &amp;ldquo;stop.&amp;rdquo; I can show the results and designate the correct answer on the spot, or I can go back later and pick the right answer while looking at a screenshot from when the question started.&lt;/p&gt;
@@ -53,10 +53,10 @@ What is $\dd{}{x}\left(e^x\right)$?
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 24-29: Eigenvalue stuff</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</link>
       <pubDate>Thu, 27 Oct 2016 14:16:39 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</guid>
       <description>&lt;p&gt;Part V of T&amp;amp;B is on dense methods for eigenvalue and singular value problems. For my course, this is the part of the text that I condense most severely. In part that&amp;rsquo;s due to the need to cover unconstrained nonlinear solving and optimization stuff later on. But I also find that this is the least compelling part of the text for my purposes.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s heavily weighted toward the hermitian case. That&amp;rsquo;s the cleanest situation, so I see the rationale. But it&amp;rsquo;s pretty surprising that the lead author of &lt;a href=&#34;http://press.princeton.edu/titles/8113.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Spectra and Pseudospectra&lt;/em&gt;&lt;/a&gt; mentions eigenvalue conditioning and sensitivity only in a single exercise! (The exercises not in the lecture named &amp;ldquo;Eigenvalue problems,&amp;rdquo; nor the one named &amp;ldquo;Overview of eigenvalue algorithms.&amp;rdquo; It&amp;rsquo;s under &amp;ldquo;Reduction to Hessenberg or tridiagonal form.&amp;rdquo;) In contrast with the tone of earlier parts of the book, one could study the methods of these sections thoroughly and yet not appreciate when the answers are inaccurate, or possibly irrelevant. Because I took this course from Trefethen at a crucial time in the development of his thinking on the subject, my perception of the issues behind computing eigenvalues is quite different from what the text itself conveys.&lt;/p&gt;
@@ -142,10 +142,10 @@ julia&amp;gt; X = X[:,idx];  λ = λ[idx]
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lectures 20, 21, 23: Solving square systems</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/</link>
       <pubDate>Sat, 22 Oct 2016 16:20:15 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/</guid>
       <description>&lt;p&gt;Three in one this time: &lt;a href=&#34;https://gist.github.com/tobydriscoll/e2f44e7756b864050b52c6773aa83b70&#34; target=&#34;_blank&#34;&gt;Lecture 20&lt;/a&gt;, which is on Gaussian elimination / LU factorization, &lt;a href=&#34;https://gist.github.com/tobydriscoll/2b74da569406da55c599a61afe99cf56&#34; target=&#34;_blank&#34;&gt;Lecture 21&lt;/a&gt;, on row pivoting, and &lt;a href=&#34;https://gist.github.com/tobydriscoll/17ce89eb2c827e0b870877219ec64fe8&#34; target=&#34;_blank&#34;&gt;Lecture 23&lt;/a&gt;, on Cholesky factorization. I mainly skipped over Lecture 22, about the curious case of the stability of pivoted LU, but the main example is dropped into the end of my coverage of pivoting.&lt;/p&gt;
 
 &lt;p&gt;The Julia surprises are, not surprisingly, coming less frequently. In Lecture 20 I had some fun with rational representations. I like using MATLAB&amp;rsquo;s &lt;code&gt;format rat&lt;/code&gt; when presenting Gaussian elimination, as it allows me to recall the way the process looks when learned by hand. It&amp;rsquo;s a fun trick, but of course the underlying values are still all double precision, and the rational approximations to them are found ex post facto. By contrast, Julia offers true rational numbers, constructed and shown using the &lt;code&gt;//&lt;/code&gt; operation.&lt;/p&gt;
@@ -251,10 +251,10 @@ U =
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lecture 19, Stability of least squares</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</link>
       <pubDate>Tue, 11 Oct 2016 21:16:35 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</guid>
       <description>&lt;p&gt;Here are &lt;a href=&#34;https://gist.github.com/tobydriscoll/dfb794e2c6891944790e628f68058ba4&#34; target=&#34;_blank&#34;&gt;the notebooks&lt;/a&gt; in MATLAB and Julia.&lt;/p&gt;
 
 &lt;p&gt;The new wrinkle in these codes is extended precision. In MATLAB you need to have the Symbolic Math toolbox to do this in the form of &lt;code&gt;vpa&lt;/code&gt;. In Julia, you have to use version 0.5 or (presumably) later, which had a surprising side effect I&amp;rsquo;ll get to below.&lt;/p&gt;
@@ -331,15 +331,15 @@ x4 = A\b;
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 12-13: Conditioning and floating point</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/</link>
       <pubDate>Tue, 04 Oct 2016 17:57:57 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve run into trouble managing gists with lots of files in them, so I&amp;rsquo;m back to doing one per lecture. Here are &lt;a href=&#34;https://gist.github.com/tobydriscoll/df92e76d369617e2f5e56cf2fdab8117&#34; target=&#34;_blank&#34;&gt;Lecture 12&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/7449b8d30704663835214af91d2b4d90&#34; target=&#34;_blank&#34;&gt;Lecture 13&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;ve entered Part 3 of the book, which is on conditioning and stability matters. The lectures in this part are heavily theoretical and often abstract, so I find a little occasional computer time helps to clear the cobwebs.&lt;/p&gt;
 
-&lt;p&gt;Right off the top, in reproducing Figure 12.1, I ran right into the trap I worried about in &lt;a href=&#34;https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/&#34; target=&#34;_blank&#34;&gt;my last post&lt;/a&gt; regarding polynomials in Julia. In MATLAB, the polynomial coefficients are just a plain vector. That makes perturbing them trivial:&lt;/p&gt;
+&lt;p&gt;Right off the top, in reproducing Figure 12.1, I ran right into the trap I worried about in &lt;a href=&#34;https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/&#34; target=&#34;_blank&#34;&gt;my last post&lt;/a&gt; regarding polynomials in Julia. In MATLAB, the polynomial coefficients are just a plain vector. That makes perturbing them trivial:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;p = poly([1,1,1,0.4,2.2]);    % polynomial with these roots
 q = p + 1e-9*randn(size(p));    % perturb its coefficients
@@ -387,10 +387,10 @@ q = p + Poly(1e-9*randn(6));    # perturb coefficients
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 11: Least squares</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/</link>
       <pubDate>Wed, 28 Sep 2016 13:19:16 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-11-least-squares/</guid>
       <description>&lt;p&gt;This week&amp;rsquo;s notebooks (&lt;a href=&#34;https://gist.github.com/tobydriscoll/8d87997704e9fd400e96ea860d9f6a34#file-tb-lecture-11-ipynb&#34; target=&#34;_blank&#34;&gt;MATLAB&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/3d9b29d953882738c51c9cabdcaf431b#file-tb-lecture-11-ipynb&#34; target=&#34;_blank&#34;&gt;Julia&lt;/a&gt;&amp;ndash;now all lectures are together for each language) are about least squares polynomial fitting.&lt;/p&gt;
 
 &lt;p&gt;The computational parts are almost identical, except for how polynomials are represented. In MATLAB, a vector of coefficients is interpreted as a polynomial in the context of particular functions, such as &lt;code&gt;polyval&lt;/code&gt;. The major pain is that the convention is for the coefficients to be ordered from high degree to low, which is almost always the opposite of what you really want. Hence I&amp;rsquo;ve gotten used to writing code like&lt;/p&gt;
@@ -435,10 +435,10 @@ xlabel!(&amp;quot;year&amp;quot;);  ylabel!(&amp;quot;anomaly (deg C)&amp;quot;)
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</link>
       <pubDate>Mon, 19 Sep 2016 19:44:42 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</guid>
       <description>&lt;p&gt;This lecture is about the modified Gram-Schmidt method and flop counting. The &lt;a href=&#34;https://gist.github.com/tobydriscoll/bae2a5e864f490e571d79a0af541fb8c&#34; target=&#34;_blank&#34;&gt;notebooks are here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m lost.&lt;/p&gt;
@@ -490,10 +490,10 @@ xlabel(&amp;quot;n&amp;quot;), ylabel(&amp;quot;elapsed time&amp;quot;)
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 6-7</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-6-7/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-6-7/</link>
       <pubDate>Fri, 16 Sep 2016 20:27:58 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lectures-6-7/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-6-7/</guid>
       <description>&lt;p&gt;Here are the Jupyter notebooks for &lt;a href=&#34;https://gist.github.com/tobydriscoll/fb438fc942a01e242cc08ee05385af17&#34; target=&#34;_blank&#34;&gt;Lecture 6&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/4d1c8856da0c718e1d99d8171e1babec&#34; target=&#34;_blank&#34;&gt;Lecture 7&lt;/a&gt;. (I finally noticed that a Gist can hold more than one notebook&amp;hellip;duh.)&lt;/p&gt;
 
 &lt;p&gt;Not much happened in Lecture 6, but I got gobsmacked in Lecture 7. It happened when I tried to convert this boring MATLAB code for backward substitution.&lt;/p&gt;
@@ -540,7 +540,7 @@ end
 
 &lt;p&gt;Feels very odd to me still, but okay.&lt;/p&gt;
 
-&lt;p&gt;We are not out of the woods yet. This version still fails in the loop body, again vomiting opaque error messages. Remember how, &lt;a href=&#34;https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-2/&#34; target=&#34;_blank&#34;&gt;back in Lecture 2, I mentioned&lt;/a&gt; that scalars and 1x1 matrices are different things? Inside the loop above, &lt;code&gt;z[i]&lt;/code&gt; is a scalar and the product is a length-1 vector. But the subtraction works anyway, as &lt;code&gt;z[i]&lt;/code&gt; is silently promoted to a 1-vector also. No, the problem comes with the assignment: you can&amp;rsquo;t assign a 1-vector to an element of an array of numbers.&lt;/p&gt;
+&lt;p&gt;We are not out of the woods yet. This version still fails in the loop body, again vomiting opaque error messages. Remember how, &lt;a href=&#34;https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/&#34; target=&#34;_blank&#34;&gt;back in Lecture 2, I mentioned&lt;/a&gt; that scalars and 1x1 matrices are different things? Inside the loop above, &lt;code&gt;z[i]&lt;/code&gt; is a scalar and the product is a length-1 vector. But the subtraction works anyway, as &lt;code&gt;z[i]&lt;/code&gt; is silently promoted to a 1-vector also. No, the problem comes with the assignment: you can&amp;rsquo;t assign a 1-vector to an element of an array of numbers.&lt;/p&gt;
 
 &lt;p&gt;There&amp;rsquo;s a very long (space and time) &lt;a href=&#34;https://github.com/JuliaLang/julia/issues/4774#issuecomment-28430963&#34; target=&#34;_blank&#34;&gt;discussion&lt;/a&gt; about this and related issues in Julia. Suffice it to say that what mathematicians do with scalars, vectors, matrices, and tensors isn&amp;rsquo;t rigorously consistent&amp;mdash;or at least, there seem to be multiple, incompatible rigorous ways to use them.&lt;/p&gt;
 
@@ -558,10 +558,10 @@ end
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia Lecture 5: More on the SVD</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/</link>
       <pubDate>Mon, 12 Sep 2016 19:47:08 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/</guid>
       <description>&lt;p&gt;Notebooks are viewable for &lt;a href=&#34;https://gist.github.com/tobydriscoll/934b88e10ac3b6ce6ac95c8c8f480aef&#34; target=&#34;_blank&#34;&gt;matlab&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/40d7b7670558f58958e9136febaeec20&#34; target=&#34;_blank&#34;&gt;julia&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This is one of my favorite demos. It illustrates low-rank approximation by the SVD to show patterns in voting behavior for the U.S. Congress. With no a priori models, project onto two singular vectors and pow&amp;ndash;&lt;a href=&#34;http://www.nytimes.com/2003/06/24/science/a-mathematician-crunches-the-supreme-court-s-numbers.html&#34; target=&#34;_blank&#34;&gt;meaning and insight jump out&lt;/a&gt;.&lt;/p&gt;
@@ -587,10 +587,10 @@ Compute the histogram of v, optionally using approximately...
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 4: SVD</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-4-svd/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-4-svd/</link>
       <pubDate>Mon, 12 Sep 2016 12:51:07 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-4-svd/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-4-svd/</guid>
       <description>&lt;p&gt;The notebooks: &lt;a href=&#34;https://gist.github.com/tobydriscoll/08fc56bca086f957920f1088e0844c30&#34; target=&#34;_blank&#34;&gt;matlab&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/324991720db46ff9c644cc43455bd23e&#34; target=&#34;_blank&#34;&gt;julia&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Today is about some little conveniences/quirks in Julia. Starting here:&lt;/p&gt;
@@ -621,10 +621,10 @@ x1,x2 = (cos(t),sin(t));
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 3: Norms</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-3-norms/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-3-norms/</link>
       <pubDate>Wed, 07 Sep 2016 19:32:46 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-3-norms/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-3-norms/</guid>
       <description>&lt;p&gt;Here are the &lt;a href=&#34;https://gist.github.com/tobydriscoll/b620d1b8beaa04cf87707a55928e3449&#34; target=&#34;_blank&#34;&gt;MATLAB&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/2c486e89b12911b073f3c91e514db4f7&#34; target=&#34;_blank&#34;&gt;julia&lt;/a&gt; notebooks.&lt;/p&gt;
 
 &lt;p&gt;The big issue this time around was graphics. This topic dramatically illustrates the advantages on both sides of the commercial/open source fence. On the MATLAB side, it&amp;rsquo;s perfectly clear what you should do. There are many options that have been well constructed, and it&amp;rsquo;s all under a relatively consistent umbrella. There are things to learn and options to choose, but it&amp;rsquo;s clear what functions you will be using to make, say, a scatter plot, and a lot of similarity across commands.&lt;/p&gt;
@@ -660,10 +660,10 @@ operator broadcasts each along the &amp;ldquo;missing&amp;rdquo; dimension. It&a
     
     <item>
       <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 2</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-2/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/</link>
       <pubDate>Fri, 02 Sep 2016 19:12:54 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-matlab-julia-lecture-2/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/</guid>
       <description>&lt;p&gt;Here are the &lt;a href=&#34;http://nbviewer.jupyter.org/gist/tobydriscoll/8aa30fdad0346f1c5656ff4a468b1b05&#34; target=&#34;_blank&#34;&gt;matlab&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/7f404b36fd47d2878f90dd76a1d7a9b9&#34; target=&#34;_blank&#34;&gt;julia&lt;/a&gt; notebooks.&lt;/p&gt;
 
 &lt;p&gt;Two things stood out this time. First, consider the following snippet.&lt;/p&gt;
@@ -705,10 +705,10 @@ u&#39;*v gives Complex{Int64}[-2 - 3im]
     
     <item>
       <title>Trefethen &amp; Bau, Lecture 1</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-lecture-1/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-lecture-1/</link>
       <pubDate>Thu, 01 Sep 2016 19:56:08 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-lecture-1/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-lecture-1/</guid>
       <description>&lt;p&gt;Have a look at the &lt;a href=&#34;http://nbviewer.jupyter.org/gist/tobydriscoll/2c2a21256da6efab7433bf42371a43f2&#34; target=&#34;_blank&#34;&gt;MATLAB&lt;/a&gt; and &lt;a href=&#34;http://nbviewer.jupyter.org/gist/tobydriscoll/32708bacb1d569fc589c51571890028b&#34; target=&#34;_blank&#34;&gt;Julia&lt;/a&gt; versions of the notebooks for this lecture.&lt;/p&gt;
 
 &lt;p&gt;The first disappointment in Julia comes right at the start: no &lt;code&gt;magic&lt;/code&gt; command in Julia! Why not? I love demonstrating with magic square matrices:&lt;/p&gt;
@@ -747,10 +747,10 @@ u&#39;*v gives Complex{Int64}[-2 - 3im]
     
     <item>
       <title>Trefethen &amp; Bau, via MATLAB and Julia</title>
-      <link>https://tobydriscoll.github.io/blog/trefethen-bau-via-matlab-and-julia/</link>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-via-matlab-and-julia/</link>
       <pubDate>Thu, 01 Sep 2016 18:57:05 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/trefethen-bau-via-matlab-and-julia/</guid>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-via-matlab-and-julia/</guid>
       <description>&lt;p&gt;This semester I&amp;rsquo;m teaching &lt;a href=&#34;https://udel.instructure.com/courses/1335769/assignments/syllabus&#34; target=&#34;_blank&#34;&gt;MATH 612&lt;/a&gt;, which is numerical linear and nonlinear algebra for grad students. Linear algebra dominates the course, and for that I&amp;rsquo;m following the now classic textbook by &lt;a href=&#34;http://bookstore.siam.org/ot50/&#34; target=&#34;_blank&#34;&gt;Trefethen &amp;amp; Bau&lt;/a&gt;. This book has real meaning to me because I learned the subject from &lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwi-qPSJl-7OAhXJ2B4KHTxqBrEQFgghMAA&amp;amp;url=https%3A%2F%2Fpeople.maths.ox.ac.uk%2Ftrefethen%2F&amp;amp;usg=AFQjCNEas_P8d7AHd2BC-vUoVo7V74ONJw&#34; target=&#34;_blank&#34;&gt;Nick Trefethen&lt;/a&gt; at Cornell, just a year or two before the book was written. It&amp;rsquo;s when numerical analysis became an appealing subject to me.&lt;/p&gt;
 
 &lt;p&gt;That course is also when I started to learn &lt;a href=&#34;http://www.matlab.com&#34; target=&#34;_blank&#34;&gt;MATLAB&lt;/a&gt;. I&amp;rsquo;ve been using MATLAB for over 20 years and I&amp;rsquo;m damn good at it. I&amp;rsquo;ve written &lt;a href=&#34;http://dx.doi.org/10.1137/1.9780898717662&#34; target=&#34;_blank&#34;&gt;a book that teaches it&lt;/a&gt;, and &lt;a href=&#34;https://books.google.com/books/about/Schwarz_Christoffel_mapping.html?id=k5KU6clCKssC&amp;amp;hl=en&#34; target=&#34;_blank&#34;&gt;another book&lt;/a&gt; largely based on a&lt;a href=&#34;http://tobydriscoll.net/SC/index.html&#34; target=&#34;_blank&#34;&gt; software package&lt;/a&gt; I wrote for conformal mapping, and I was an early and key contributor to the &lt;a href=&#34;http://www.chebfun.org&#34; target=&#34;_blank&#34;&gt;Chebfun&lt;/a&gt; project. I even dominated a game of MATLAB Jeopardy as a grad student at the &lt;a href=&#34;http://www.colostate.edu/dept/Mathematics/matlab/vol3num3&#34; target=&#34;_blank&#34;&gt;1995 MATLAB Conference&lt;/a&gt; (when version 4.2 of MATLAB ruled the Earth).&lt;/p&gt;
@@ -767,10 +767,10 @@ u&#39;*v gives Complex{Int64}[-2 - 3im]
     
     <item>
       <title>showall</title>
-      <link>https://tobydriscoll.github.io/blog/showall/</link>
+      <link>https://tobydriscoll.net/blog/showall/</link>
       <pubDate>Thu, 30 Jul 2015 21:14:51 +0000</pubDate>
       
-      <guid>https://tobydriscoll.github.io/blog/showall/</guid>
+      <guid>https://tobydriscoll.net/blog/showall/</guid>
       <description>&lt;p&gt;I just scratched a &lt;a href=&#34;http://matlab.com&#34; target=&#34;_blank&#34;&gt;MATLAB&lt;/a&gt; itch. So many times I&amp;rsquo;ve seen&amp;mdash;and experienced myself&amp;mdash;people popping open figure windows in MATLAB, then trying to juggle them and move them around the screen so that you can see all of them at once. If you know what you&amp;rsquo;re doing, you can dock them into the desktop and lay them out there, but it&amp;rsquo;s still a lot of clicks.&lt;/p&gt;
 
 &lt;p&gt;So, I present &lt;a href=&#34;http://www.mathworks.com/matlabcentral/fileexchange/52344-showall&#34; target=&#34;_blank&#34;&gt;showall.m&lt;/a&gt;, a little function that will automatically bring forward all the figures (or the ones you specify) and lay them out in a grid. Now you can master your figures!&lt;/p&gt;
