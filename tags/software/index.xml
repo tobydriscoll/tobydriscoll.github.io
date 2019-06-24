@@ -22,12 +22,16 @@
 
 
 
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;logo.png&#34; alt=&#34;Chebfun logo&#34; width=&#34;300&#34; /&gt;
+&lt;img src=&#34;logo.png&#34; alt=&#34;Chebfun logo&#34; width=&#34;300&#34; &gt;
 
 
 &lt;/figure&gt;
+
 
 &lt;p&gt;&lt;a href=&#34;http://www.chebfun.org&#34; target=&#34;_blank&#34;&gt;Chebfun&lt;/a&gt; is a free MATLAB package and open source software project. Its aim is to provide numerical computation with functions. My interest in and contribution to the system is most visibly in the solution of ordinary and (1+1 dimensional) partial differential equations. Using familiar MATLAB syntax such as &lt;code&gt;\&lt;/code&gt; and &lt;code&gt;eigs&lt;/code&gt;, solutions to boundary-value or eigenvalue problems can be obtained with full numerical precision automatically.&lt;/p&gt;
 

@@ -26,12 +26,16 @@
 
 
 
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;featured.jpg&#34; alt=&#34;FNC cover&#34; width=&#34;160&#34; /&gt;
+&lt;img src=&#34;featured.jpg&#34; alt=&#34;FNC cover&#34; width=&#34;160&#34; &gt;
 
 
 &lt;/figure&gt;
+
 
 &lt;p&gt;This textbook is designed to introduce undergraduates in math, computer science, engineering, and related fields to the principles and practice of numerical computation. Our approach emphasizes linear algebra and approximation. The text presents mathematical underpinnings and analysis, complemented with 45 functions and over 160 examples coded in MATLAB, all &lt;a href=&#34;http://github.com/tobydriscoll/fnc-extras&#34; target=&#34;_blank&#34;&gt;available for download&lt;/a&gt;. Previous experience in MATLAB is not required. The functions and examples have also been implemented in Julia and Python.&lt;/p&gt;
 
@@ -337,12 +341,16 @@
 
 
 
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;featured.jpg&#34; alt=&#34;Exploring ODEs cover&#34; width=&#34;160&#34; /&gt;
+&lt;img src=&#34;featured.jpg&#34; alt=&#34;Exploring ODEs cover&#34; width=&#34;160&#34; &gt;
 
 
 &lt;/figure&gt;
+
 
 &lt;p&gt;Written by &lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34;&gt;Nick Trefethen&lt;/a&gt;,
 &lt;a href=&#34;https://www.linkedin.com/in/birkisson/?ppe=1&#34; target=&#34;_blank&#34;&gt;Asgeir Birkisson&lt;/a&gt;, and
@@ -404,12 +412,16 @@ website&lt;/a&gt;.&lt;/p&gt;
 
 
 
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;featured.jpg&#34; alt=&#34;LM cover&#34; width=&#34;160&#34; /&gt;
+&lt;img src=&#34;featured.jpg&#34; alt=&#34;LM cover&#34; width=&#34;160&#34; &gt;
 
 
 &lt;/figure&gt;
+
 
 &lt;p&gt;&lt;em&gt;Learning MATLAB&lt;/em&gt; is a concise, essentials-only introduction to MATLAB
 for those who have programming experience in other procedural languages.
@@ -445,12 +457,16 @@ very challenging.&lt;/p&gt;
 
 
 
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;SCMapping.JPG&#34; alt=&#34;SCM cover&#34; width=&#34;150&#34; /&gt;
+&lt;img src=&#34;SCMapping.JPG&#34; alt=&#34;SCM cover&#34; width=&#34;150&#34; &gt;
 
 
 &lt;/figure&gt;
+
 
 &lt;p&gt;&lt;em&gt;Schwarz-Christoffel Mapping&lt;/em&gt; is a monograph by myself and &lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34;&gt;Nick Trefethen&lt;/a&gt; on the constructive and computational aspects of Schwarz–Christoffel conformal maps. These maps transform the interior or exterior of a region bounded by a polygon to the interior of a disk, half-plane, strip, rectangle, or more exotic canonical region. Unlike many other numerical conformal mapping methods, they are substantially faster to compute than the full solution of an elliptic partial differential equation on the same domain. Because the maps are conformal, they offer a powerful way to solve certain classical problems for the Laplacian operator.&lt;/p&gt;
 
@@ -469,12 +485,16 @@ very challenging.&lt;/p&gt;
 
 
 
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;logo.png&#34; alt=&#34;Chebfun logo&#34; width=&#34;300&#34; /&gt;
+&lt;img src=&#34;logo.png&#34; alt=&#34;Chebfun logo&#34; width=&#34;300&#34; &gt;
 
 
 &lt;/figure&gt;
+
 
 &lt;p&gt;&lt;a href=&#34;http://www.chebfun.org&#34; target=&#34;_blank&#34;&gt;Chebfun&lt;/a&gt; is a free MATLAB package and open source software project. Its aim is to provide numerical computation with functions. My interest in and contribution to the system is most visibly in the solution of ordinary and (1+1 dimensional) partial differential equations. Using familiar MATLAB syntax such as &lt;code&gt;\&lt;/code&gt; and &lt;code&gt;eigs&lt;/code&gt;, solutions to boundary-value or eigenvalue problems can be obtained with full numerical precision automatically.&lt;/p&gt;
 
@@ -751,9 +771,12 @@ runs for three periods of the first mode.&lt;/p&gt;
 
 
 
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;drum-anim1.gif&#34; alt=&#34;Drums animation&#34; width=&#34;300&#34; /&gt;
+&lt;img src=&#34;drum-anim1.gif&#34; alt=&#34;Drums animation&#34; width=&#34;300&#34; &gt;
 
 
 
@@ -772,9 +795,13 @@ runs for three periods of the first mode.&lt;/p&gt;
 
 
 
+
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;drum-anim2.gif&#34; alt=&#34;Drums animation&#34; width=&#34;300&#34; /&gt;
+&lt;img src=&#34;drum-anim2.gif&#34; alt=&#34;Drums animation&#34; width=&#34;300&#34; &gt;
 
 
 
@@ -793,9 +820,13 @@ runs for three periods of the first mode.&lt;/p&gt;
 
 
 
+
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;drum-anim3.gif&#34; alt=&#34;Drums animation&#34; width=&#34;300&#34; /&gt;
+&lt;img src=&#34;drum-anim3.gif&#34; alt=&#34;Drums animation&#34; width=&#34;300&#34; &gt;
 
 
 
@@ -814,9 +845,13 @@ runs for three periods of the first mode.&lt;/p&gt;
 
 
 
+
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;drum-anim4.gif&#34; alt=&#34;Drums animation&#34; width=&#34;300&#34; /&gt;
+&lt;img src=&#34;drum-anim4.gif&#34; alt=&#34;Drums animation&#34; width=&#34;300&#34; &gt;
 
 
 
@@ -831,6 +866,7 @@ runs for three periods of the first mode.&lt;/p&gt;
 &lt;/figcaption&gt;
 
 &lt;/figure&gt;
+
 
 &lt;p&gt;The story of these and other isospectral shapes continued to develop from there, mathematically and computationally, but I was not much involved with most of it.&lt;/p&gt;
 

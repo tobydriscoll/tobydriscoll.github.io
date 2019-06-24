@@ -25,12 +25,16 @@
 
 
 
+
+
+
 &lt;figure&gt;
 
-&lt;img src=&#34;featured.jpg&#34; alt=&#34;LM cover&#34; width=&#34;160&#34; /&gt;
+&lt;img src=&#34;featured.jpg&#34; alt=&#34;LM cover&#34; width=&#34;160&#34; &gt;
 
 
 &lt;/figure&gt;
+
 
 &lt;p&gt;&lt;em&gt;Learning MATLAB&lt;/em&gt; is a concise, essentials-only introduction to MATLAB
 for those who have programming experience in other procedural languages.
