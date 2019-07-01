@@ -43,6 +43,22 @@
   </url>
   
   <url>
+    <loc>https://tobydriscoll.net/blog/matlab-vs.-julia-vs.-python/</loc>
+    <lastmod>2019-06-28T14:57:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/post/</loc>
+    <lastmod>2019-06-28T14:57:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/</loc>
+    <lastmod>2019-06-28T14:57:36-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tobydriscoll.net/authors/driscoll/</loc>
     <lastmod>2019-06-27T15:20:05-04:00</lastmod>
   </url>
@@ -59,18 +75,7 @@
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/post/</loc>
-    <lastmod>2019-06-27T15:20:05-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tobydriscoll.net/tags/</loc>
-    <lastmod>2019-06-27T15:20:05-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/</loc>
     <lastmod>2019-06-27T15:20:05-04:00</lastmod>
     <priority>0</priority>
   </url>
