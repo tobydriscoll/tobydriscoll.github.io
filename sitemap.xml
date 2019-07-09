@@ -537,6 +537,22 @@
   </url>
   
   <url>
+    <loc>https://tobydriscoll.net/talk/2015-flipping-experiences/</loc>
+    <lastmod>2015-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/talk/</loc>
+    <lastmod>2015-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/tobin-a.-driscoll/</loc>
+    <lastmod>2015-06-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tobydriscoll.net/publication_types/0/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -1464,10 +1480,6 @@
   
   <url>
     <loc>https://tobydriscoll.net/authors/admin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/talk/</loc>
   </url>
   
 </urlset>
