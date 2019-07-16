@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jun 2019 15:20:05 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jul 2019 11:55:12 -0400</lastBuildDate>
     
 	    <atom:link href="https://tobydriscoll.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>teaching</title>
+      <link>https://tobydriscoll.net/tags/teaching/</link>
+      <pubDate>Tue, 16 Jul 2019 11:55:12 -0400</pubDate>
+      
+      <guid>https://tobydriscoll.net/tags/teaching/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>academia</title>
@@ -71,15 +80,6 @@
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tobydriscoll.net/tags/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>teaching</title>
-      <link>https://tobydriscoll.net/tags/teaching/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/tags/teaching/</guid>
       <description></description>
     </item>
     

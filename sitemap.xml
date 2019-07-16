@@ -43,41 +43,52 @@
   </url>
   
   <url>
+    <loc>https://tobydriscoll.net/authors/driscoll/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/post/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/tags/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/blog/the-sorry-state-of-teaching-odes/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/tags/teaching/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tobydriscoll.net/blog/matlab-vs.-julia-vs.-python/</loc>
     <lastmod>2019-06-28T14:57:36-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/post/</loc>
-    <lastmod>2019-06-28T14:57:36-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/</loc>
-    <lastmod>2019-06-28T14:57:36-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/driscoll/</loc>
-    <lastmod>2019-06-27T15:20:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/</loc>
-    <lastmod>2019-06-27T15:20:05-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tobydriscoll.net/blog/new-look-new-tech/</loc>
     <lastmod>2019-06-27T15:20:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/tags/</loc>
-    <lastmod>2019-06-27T15:20:05-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -124,12 +135,6 @@
   
   <url>
     <loc>https://tobydriscoll.net/tags/software/</loc>
-    <lastmod>2019-06-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/tags/teaching/</loc>
     <lastmod>2019-06-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

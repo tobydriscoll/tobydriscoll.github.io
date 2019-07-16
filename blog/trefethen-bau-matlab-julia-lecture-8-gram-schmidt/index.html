@@ -77,7 +77,7 @@ n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]
 
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Lato|PT+Mono&display=swap">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather|Lato|PT+Mono">
   
 
   
@@ -142,7 +142,7 @@ n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]
 I&rsquo;m lost.
 Almost as an afterthought I decided to add a demonstration of the timing of Gram-Schmidt compared to the asymptotic flop count. Both MATLAB and Julia got very close to the trend as got into the hundreds, using vectorized code:
 n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]; A = rand(1200,n); Q = zeros(1200,n); R = zeros(600,600); tic(); R[1,1] = norm(A[:,1]); Q[:,1] = A[:,1]/R[1,1]; for j = 2:n R[1:j-1,j] = Q[:,1:j-1]&#39;*A[:,j]; v = A[:,j] - Q[:,1:j-1]*R[1:j-1,j]; R[j,j] = norm(v); Q[:,j] = v/R[j,j]; end time_[k] = toc(); end using PyPlot loglog(n_,time_,&quot;-o&quot;,n_,(n_/500)."><meta property="og:image" content="https://tobydriscoll.net/img/icon-192.png">
-  <meta property="twitter:image" content="https://tobydriscoll.net/img/icon-192.png"><meta property="og:locale" content="en-us">
+  <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2016-09-19T19:44:42&#43;00:00">
   
@@ -163,7 +163,7 @@ n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]
 </head>
 
 
-<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="70" >
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -198,7 +198,7 @@ n_ = collect(50:50:500); time_ = zeros(size(n_)); for k = 1:length(n_) n = n_[k]
 
 
   
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
   <div class="container">
 
     
@@ -897,7 +897,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
     
     
     
-    <script src="/js/academic.min.24e4ae3437f67be0520f6066707da44b.js"></script>
+    <script src="/js/academic.min.9ef1b53ee2bde6c7f33b150c6ba4d452.js"></script>
 
     
 
