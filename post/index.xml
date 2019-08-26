@@ -6,10 +6,50 @@
     <description>Recent content in Posts on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jul 2019 11:55:12 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2019 10:59:39 -0400</lastBuildDate>
     
 	    <atom:link href="https://tobydriscoll.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Unquantifying My Grading</title>
+      <link>https://tobydriscoll.net/blog/unquantifying-my-grading/</link>
+      <pubDate>Tue, 20 Aug 2019 10:59:39 -0400</pubDate>
+      
+      <guid>https://tobydriscoll.net/blog/unquantifying-my-grading/</guid>
+      <description>&lt;p&gt;The traditional practice of grading throughout most STEM courses in higher ed makes little sense. Forget the deep questions such as what grades &amp;ldquo;measure&amp;rdquo; or &amp;ldquo;mean;&amp;rdquo; they don&amp;rsquo;t even make mathematical sense.&lt;/p&gt;
+
+&lt;p&gt;Suppose you gave two midterms, one with an observed mean score of 90 with a standard deviation of 4, and a second with mean 70 plus or minus 10. Say Ana gets an 94 on the first and 60 on the second, while Benito gets 86 on the first and 80 on the second. Both Ana and Benito scored one standard deviation below the mean on one exam and one above the mean on the other. Yet Benito has a better average, 83 versus 77 for Ana. Is that fair? Does it accurately represent a difference between the two students?&lt;/p&gt;
+
+&lt;p&gt;You could argue that Benito deserves more credit because he did better on the harder exam. But you&amp;rsquo;re ignoring the fact that there&amp;rsquo;s a lot less room to improve on a 90 than on a 70. And students can only take the exams they&amp;rsquo;re given!&lt;/p&gt;
+
+&lt;p&gt;Or you could take Ana&amp;rsquo;s side and argue for normalizing the scores of each assignment before averaging. That would be an interesting thing to explain to Benito, but it&amp;rsquo;s moot. As an experienced instructor knows, normal distributions of scores are anything but standard in practice. You&amp;rsquo;re at least as likely to see a quasiuniform or bimodal distribution as a central tendency.&lt;/p&gt;
+
+&lt;p&gt;The larger point is that we&amp;rsquo;ve already left the comforting fairy tale that these grades are cold, solid numbers that paint a clear picture. Averaging together scores that have different (finite) ranges, units, and distributions is mathematical malpractice. Yet I&amp;rsquo;ve sat down at the ends of semesters and drawn lines between students whose scores differed in the &lt;em&gt;third significant digit&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I know: the lines have to be drawn somewhere, and while I can&amp;rsquo;t say I always see a difference between a student with a B and one with a B-, I do have some confidence that there is a difference between an A- and a C+. There are defensible cultural and pragmatic reasons for using the system we have. Nevertheless, I think it&amp;rsquo;s important that faculty be mindful of the huge amount of irrationality and arbitrariness in the system. And that&amp;rsquo;s before you even start thinking about, for instance, &lt;a href=&#34;http://revisionisthistory.com/episodes/31-puzzle-rush&#34; target=&#34;_blank&#34;&gt;how bad a proxy a traditional exam may be for anything we really care about&lt;/a&gt;. Like your mother said, life isn&amp;rsquo;t fair, and the system picks winners and losers. It should not be overlooked either that faculty are overwhelmingly the ones who were themselves endorsed as winners.&lt;/p&gt;
+
+&lt;p&gt;This line of thinking has me ready to try a radical experiment with my class this fall. Here are the axioms I am working from:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Each student&amp;rsquo;s grade should reflect how well the student demonstrated mastery of the material in the course.&lt;/li&gt;
+&lt;li&gt;There is no reason to prefer any particular means of achieving mastery over others.&lt;/li&gt;
+&lt;li&gt;Students should be assessed as individuals as much as possible.&lt;/li&gt;
+&lt;li&gt;Students should not be greatly surprised by the grades they receive.&lt;/li&gt;
+&lt;li&gt;Students should believe that the grading process was clear and fair.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Axiom 1 is a mixed bag for the traditional system. Axiom 2 is a weakness—for example, we typically punish students for not getting something right the first time, regardless of where they finish. Axiom 3 could be considered a little controversial; there is some thought that we should explicitly measure how well students function in groups. I&amp;rsquo;m not convinced it&amp;rsquo;s a priority, and I have no idea how to do it properly. What I&amp;rsquo;m really getting at here is unsanctioned group work (i.e., it&amp;rsquo;s the I Have Smart Friends Axiom), which is always a big issue with credit assigned to homework, projects, and take-home exams, particularly with coding assignments. Axioms 4 and 5 are a little tough in that they&amp;rsquo;re not entirely within my control, but it&amp;rsquo;s clear that they are desirable. The traditional system with its universal acceptance is generally okay here, as long as you don&amp;rsquo;t fall behind in returning work.&lt;/p&gt;
+
+&lt;p&gt;What I&amp;rsquo;ve decided to do this semester is that while I will collect some assigned work on a weekly basis as usual, I will return that work with feedback but no score or grade. Students will be free to respond to the comments or resubmit work. Since there will be a lot of active learning work in class, I will have many opportunities to observe them at work directly as well.&lt;/p&gt;
+
+&lt;p&gt;The evaluative centerpiece will be interviews. (Don&amp;rsquo;t call them oral exams.) During the middle and at the end of the semester, each student will come to a 30-minute interview at which we will discuss their submitted work. I&amp;rsquo;ll ask questions to uncover how well they understand what they have submitted under their name, and throw in some other questions to probe the basics. Based on the submissions, observations, and interviews, I&amp;rsquo;ll assign letter grades under the general rubric that A = mastery, B = proficiency, and C = adequacy.&lt;/p&gt;
+
+&lt;p&gt;One of the things I find appealing about this system is that it encourages standing behind one&amp;rsquo;s work for longer than it takes to read the score. It also rewards self-improvement while not requiring busywork from those who can demonstrate skill the first time. And since they are mostly seniors and juniors, it&amp;rsquo;s good for them to start practicing how to speak about their ideas and demonstrate their knowledge under a little pressure. I&amp;rsquo;ll point out that it could help me write stronger recommendation letters for them. What I like most of all is the hope that I will get a chance to truly evaluate them as individuals, rather than us all being beholden to numbers on a spreadsheet.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure this will create a lot of anxiety. Many advanced math and science students thrive in the standard system and will not like having their cheese relocated. I&amp;rsquo;m curious to see how the system affects their motivation and their learning. Hopefully they will come to trust that I have every intention of allowing them to maximize their result.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The sorry state of teaching ODEs</title>

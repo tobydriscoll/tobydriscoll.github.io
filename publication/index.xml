@@ -30,20 +30,20 @@
     </item>
     
     <item>
-      <title>An Adaptive Partition of Unity Method for Multivariate Chebyshev Polynomial Approximations</title>
-      <link>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018-a/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018-a/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>An adaptive partition of unity method for Chebyshev polynomial interpolation</title>
       <link>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Adaptive Partition of Unity Method for Multivariate Chebyshev Polynomial Approximations</title>
+      <link>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018-a/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018-a/</guid>
       <description></description>
     </item>
     
@@ -786,20 +786,20 @@
     </item>
     
     <item>
-      <title>Schwarz-Christoffel Toolbox User&#39;s Guide</title>
-      <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</link>
-      <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Schwarz-Christoffel Toolbox for MATLAB</title>
       <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</link>
       <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
       
       <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Schwarz-Christoffel Toolbox User&#39;s Guide</title>
+      <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</link>
+      <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</guid>
       <description></description>
     </item>
     
