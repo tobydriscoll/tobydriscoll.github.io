@@ -43,31 +43,6 @@
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/post/</loc>
-    <lastmod>2019-08-20T10:59:39-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/tags/</loc>
-    <lastmod>2019-08-20T10:59:39-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/tags/teaching/</loc>
-    <lastmod>2019-08-20T10:59:39-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/</loc>
-    <lastmod>2019-08-20T10:59:39-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/blog/unquantifying-my-grading/</loc>
-    <lastmod>2019-08-20T10:59:39-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tobydriscoll.net/authors/driscoll/</loc>
     <lastmod>2019-07-12T11:55:12-04:00</lastmod>
   </url>
@@ -78,8 +53,78 @@
   </url>
   
   <url>
+    <loc>https://tobydriscoll.net/post/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/tags/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/tags/teaching/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tobydriscoll.net/blog/the-sorry-state-of-teaching-odes/</loc>
     <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/publication_types/2/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/publication/maki-model-tear-film-2019/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/alex-mcmanus/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/dylan-m-chapp/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/kara-l-maki/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/publication_types/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/publication/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/richard-j-braun/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/tobin-a-driscoll/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/william-d-henshaw/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -133,32 +178,12 @@
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/publication_types/2/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tobydriscoll.net/authors/kevin-w-aiton/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/publication/aiton-preconditioned-nonlinear-iterations-2019/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/publication_types/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/publication/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/tobin-a-driscoll/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -189,11 +214,6 @@
   
   <url>
     <loc>https://tobydriscoll.net/authors/p-ewen-king-smith/</loc>
-    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/richard-j-braun/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -613,11 +633,6 @@
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/authors/william-d-henshaw/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tobydriscoll.net/authors/william-henshaw/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -949,11 +964,6 @@
   
   <url>
     <loc>https://tobydriscoll.net/authors/bengt-fornberg/</loc>
-    <lastmod>2007-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/kara-l-maki/</loc>
     <lastmod>2007-01-01T00:00:00+00:00</lastmod>
   </url>
   
