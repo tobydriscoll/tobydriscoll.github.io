@@ -6,7 +6,7 @@
     <description>Recent content in Publication_types on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://tobydriscoll.net/publication_types/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>2</title>
       <link>https://tobydriscoll.net/publication_types/2/</link>
-      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tobydriscoll.net/publication_types/2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>6</title>
+      <link>https://tobydriscoll.net/publication_types/6/</link>
+      <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.net/publication_types/6/</guid>
       <description></description>
     </item>
     
@@ -53,15 +62,6 @@
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tobydriscoll.net/publication_types/4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>6</title>
-      <link>https://tobydriscoll.net/publication_types/6/</link>
-      <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/publication_types/6/</guid>
       <description></description>
     </item>
     

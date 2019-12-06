@@ -6,10 +6,28 @@
     <description>Recent content in Publications on Toby Driscoll</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://tobydriscoll.net/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ComplexRegions.jl: A Julia package for regions in the complex plane</title>
+      <link>https://tobydriscoll.net/publication/driscoll-complexregions-2019/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.net/publication/driscoll-complexregions-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mathematical Models of the Tear Film</title>
+      <link>https://tobydriscoll.net/publication/braun-mathematical-models-2019/</link>
+      <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.net/publication/braun-mathematical-models-2019/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A Model for Tear Film Dynamics during a Realistic Blink</title>
@@ -21,11 +39,11 @@
     </item>
     
     <item>
-      <title>Preconditioned Nonlinear Iterations for Overlapping Chebyshev Discretizations with Independent Grids</title>
-      <link>https://tobydriscoll.net/publication/aiton-preconditioned-nonlinear-iterations-2019/</link>
+      <title>An Adaptive Partition of Unity Method for Multivariate Chebyshev Polynomial Approximations</title>
+      <link>https://tobydriscoll.net/publication/aiton-adaptive-multivariate-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tobydriscoll.net/publication/aiton-preconditioned-nonlinear-iterations-2019/</guid>
+      <guid>https://tobydriscoll.net/publication/aiton-adaptive-multivariate-2019/</guid>
       <description></description>
     </item>
     
@@ -44,15 +62,6 @@
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>An Adaptive Partition of Unity Method for Multivariate Chebyshev Polynomial Approximations</title>
-      <link>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018-a/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018-a/</guid>
       <description></description>
     </item>
     
@@ -795,20 +804,20 @@
     </item>
     
     <item>
-      <title>Schwarz-Christoffel Toolbox for MATLAB</title>
-      <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</link>
-      <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Schwarz-Christoffel Toolbox User&#39;s Guide</title>
       <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</link>
       <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
       
       <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Schwarz-Christoffel Toolbox for MATLAB</title>
+      <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</link>
+      <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
+      
+      <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-matlab-1994/</guid>
       <description></description>
     </item>
     
