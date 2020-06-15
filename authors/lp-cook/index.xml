@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LP Cook on Toby Driscoll</title>
+    <title>LP Cook | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/lp-cook/</link>
-    <description>Recent content in LP Cook on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2012 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/lp-cook/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/lp-cook/index.xml" rel="self" type="application/rss+xml" />
+    <description>LP Cook</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2012 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>LP Cook</title>
+      <link>https://tobydriscoll.net/authors/lp-cook/</link>
+    </image>
     
     <item>
       <title>Thin Film Dynamics on a Prolate Spheroid with Application to the Cornea</title>
       <link>https://tobydriscoll.net/publication/braun-thin-film-dynamics-2012/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/braun-thin-film-dynamics-2012/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>Single-Equation Models for the Tear Film in a Blink Cycle: Realistic Lid Motion</title>
       <link>https://tobydriscoll.net/publication/heryudono-singleequation-models-tear-2007/</link>
       <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/heryudono-singleequation-models-tear-2007/</guid>
       <description></description>
     </item>

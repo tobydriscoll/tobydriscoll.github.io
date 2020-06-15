@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rayanne A Luke | Toby Driscoll</title>
+    <link>https://tobydriscoll.net/authors/rayanne-a-luke/</link>
+      <atom:link href="https://tobydriscoll.net/authors/rayanne-a-luke/index.xml" rel="self" type="application/rss+xml" />
+    <description>Rayanne A Luke</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Rayanne A Luke</title>
+      <link>https://tobydriscoll.net/authors/rayanne-a-luke/</link>
+    </image>
+    
+    <item>
+      <title>Parameter Estimation for Evaporation-Driven Tear Film Thinning</title>
+      <link>https://tobydriscoll.net/publication/luke-parameter-estimation-evaporation-2020/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/luke-parameter-estimation-evaporation-2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

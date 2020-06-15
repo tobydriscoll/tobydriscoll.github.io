@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Joseph K Brosch on Toby Driscoll</title>
+    <title>Joseph K Brosch | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/joseph-k-brosch/</link>
-    <description>Recent content in Joseph K Brosch on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/joseph-k-brosch/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/joseph-k-brosch/index.xml" rel="self" type="application/rss+xml" />
+    <description>Joseph K Brosch</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Joseph K Brosch</title>
+      <link>https://tobydriscoll.net/authors/joseph-k-brosch/</link>
+    </image>
     
     <item>
       <title>Simulation of parabolic flow on an eye-shaped domain with moving boundary</title>
       <link>https://tobydriscoll.net/publication/driscoll-simulation-parabolic-flow-2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-simulation-parabolic-flow-2018/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>Blink Characterization Using Curve Fitting and Clustering Algorithms</title>
       <link>https://tobydriscoll.net/publication/brosch-blink-characterization-using-2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/brosch-blink-characterization-using-2017/</guid>
       <description></description>
     </item>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gilberto Schleiniger on Toby Driscoll</title>
+    <title>Gilberto Schleiniger | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/gilberto-schleiniger/</link>
-    <description>Recent content in Gilberto Schleiniger on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/gilberto-schleiniger/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/gilberto-schleiniger/index.xml" rel="self" type="application/rss+xml" />
+    <description>Gilberto Schleiniger</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Gilberto Schleiniger</title>
+      <link>https://tobydriscoll.net/authors/gilberto-schleiniger/</link>
+    </image>
     
     <item>
       <title>DATA DRIVEN MATHEMATICAL MODELING OF THE SINGLE VENTRICLE ANATOMY AND PHYSIOLOGY</title>
       <link>https://tobydriscoll.net/publication/mcculloch-datadrivenmathematical-2014/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/mcculloch-datadrivenmathematical-2014/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>A Transformative Model for Undergraduate Quantitative Biology Education</title>
       <link>https://tobydriscoll.net/publication/usher-transformative-model-undergraduate-2010-a/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/usher-transformative-model-undergraduate-2010-a/</guid>
       <description></description>
     </item>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>P Fast on Toby Driscoll</title>
+    <title>P Fast | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/p-fast/</link>
-    <description>Recent content in P Fast on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 2007 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/p-fast/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/p-fast/index.xml" rel="self" type="application/rss+xml" />
+    <description>P Fast</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2007 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>P Fast</title>
+      <link>https://tobydriscoll.net/authors/p-fast/</link>
+    </image>
     
     <item>
       <title>A Overset Grid Method for Fourth Order Evolution Equations of Human Tear Film</title>
       <link>https://tobydriscoll.net/publication/maki-overset-grid-method-2007/</link>
       <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/maki-overset-grid-method-2007/</guid>
       <description></description>
     </item>

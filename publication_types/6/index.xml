@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>6 on Toby Driscoll</title>
+    <title>6 | Toby Driscoll</title>
     <link>https://tobydriscoll.net/publication_types/6/</link>
-    <description>Recent content in 6 on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 04 Nov 2019 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/publication_types/6/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/publication_types/6/index.xml" rel="self" type="application/rss+xml" />
+    <description>6</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 04 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>6</title>
+      <link>https://tobydriscoll.net/publication_types/6/</link>
+    </image>
     
     <item>
       <title>Mathematical Models of the Tear Film</title>
       <link>https://tobydriscoll.net/publication/braun-mathematical-models-2019/</link>
       <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/braun-mathematical-models-2019/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>Pade-Based Interpretation and Correction of the Gibbs Phenomenon</title>
       <link>https://tobydriscoll.net/publication/driscoll-padebased-interpretation-correction-2007/</link>
       <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-padebased-interpretation-correction-2007/</guid>
       <description></description>
     </item>

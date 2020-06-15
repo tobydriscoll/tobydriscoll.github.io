@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2 on Toby Driscoll</title>
+    <title>2 | Toby Driscoll</title>
     <link>https://tobydriscoll.net/publication_types/2/</link>
-    <description>Recent content in 2 on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 02 Dec 2019 00:00:00 +0000</lastBuildDate>
+      <atom:link href="https://tobydriscoll.net/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    <description>2</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>2</title>
+      <link>https://tobydriscoll.net/publication_types/2/</link>
+    </image>
     
-	    <atom:link href="https://tobydriscoll.net/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Parameter Estimation for Evaporation-Driven Tear Film Thinning</title>
+      <link>https://tobydriscoll.net/publication/luke-parameter-estimation-evaporation-2020/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/luke-parameter-estimation-evaporation-2020/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ComplexRegions.jl: A Julia package for regions in the complex plane</title>
       <link>https://tobydriscoll.net/publication/driscoll-complexregions-2019/</link>
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-complexregions-2019/</guid>
       <description></description>
     </item>
@@ -24,7 +32,6 @@
       <title>A Model for Tear Film Dynamics during a Realistic Blink</title>
       <link>https://tobydriscoll.net/publication/maki-model-tear-film-2019/</link>
       <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/maki-model-tear-film-2019/</guid>
       <description></description>
     </item>
@@ -33,7 +40,6 @@
       <title>An Adaptive Partition of Unity Method for Multivariate Chebyshev Polynomial Approximations</title>
       <link>https://tobydriscoll.net/publication/aiton-adaptive-multivariate-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/aiton-adaptive-multivariate-2019/</guid>
       <description></description>
     </item>
@@ -42,7 +48,6 @@
       <title>An adaptive partition of unity method for Chebyshev polynomial interpolation</title>
       <link>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/aiton-adaptive-partition-unity-2018/</guid>
       <description></description>
     </item>
@@ -51,7 +56,6 @@
       <title>Simulation of parabolic flow on an eye-shaped domain with moving boundary</title>
       <link>https://tobydriscoll.net/publication/driscoll-simulation-parabolic-flow-2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-simulation-parabolic-flow-2018/</guid>
       <description></description>
     </item>
@@ -60,7 +64,6 @@
       <title>Blink Characterization Using Curve Fitting and Clustering Algorithms</title>
       <link>https://tobydriscoll.net/publication/brosch-blink-characterization-using-2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/brosch-blink-characterization-using-2017/</guid>
       <description></description>
     </item>
@@ -69,7 +72,6 @@
       <title>On Tear Film Breakup (TBU): Dynamics and Imaging</title>
       <link>https://tobydriscoll.net/publication/braun-tear-film-breakup-2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/braun-tear-film-breakup-2017/</guid>
       <description></description>
     </item>
@@ -78,7 +80,6 @@
       <title>New Directions in Numerical Computation</title>
       <link>https://tobydriscoll.net/publication/driscoll-new-directions-numerical-2016/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-new-directions-numerical-2016/</guid>
       <description></description>
     </item>
@@ -87,7 +88,6 @@
       <title>Computed Tear Film and Osmolarity Dynamics on an Eye-Shaped Domain</title>
       <link>https://tobydriscoll.net/publication/li-computed-tear-film-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/li-computed-tear-film-2015/</guid>
       <description></description>
     </item>
@@ -96,7 +96,6 @@
       <title>Rectangular spectral collocation</title>
       <link>https://tobydriscoll.net/publication/driscoll-rectangular-spectral-collocation-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-rectangular-spectral-collocation-2015/</guid>
       <description></description>
     </item>
@@ -105,7 +104,6 @@
       <title>Heat Transfer and Tear Film Dynamics over Multiple Blink Cycles</title>
       <link>https://tobydriscoll.net/publication/deng-heat-transfer-tear-2014/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/deng-heat-transfer-tear-2014/</guid>
       <description></description>
     </item>
@@ -114,7 +112,6 @@
       <title>Optimal domain splitting for interpolation by Chebyshev polynomials</title>
       <link>https://tobydriscoll.net/publication/driscoll-optimal-domain-splitting-2014/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-optimal-domain-splitting-2014/</guid>
       <description></description>
     </item>
@@ -123,7 +120,6 @@
       <title>A Model for the Tear Film and Ocular Surface Temperature for Partial Blinks</title>
       <link>https://tobydriscoll.net/publication/deng-model-tear-film-2013/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/deng-model-tear-film-2013/</guid>
       <description></description>
     </item>
@@ -132,7 +128,6 @@
       <title>A Fast Treecode for Multiquadric Interpolation with Varying Shape Parameters</title>
       <link>https://tobydriscoll.net/publication/deng-fast-treecode-multiquadric-2012-a/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/deng-fast-treecode-multiquadric-2012-a/</guid>
       <description></description>
     </item>
@@ -141,7 +136,6 @@
       <title>Automatic Fréchet Differentiation for the Numerical Solution of Boundary-Value Problems</title>
       <link>https://tobydriscoll.net/publication/birkisson-automatic-frechet-differentiation-2012-a/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/birkisson-automatic-frechet-differentiation-2012-a/</guid>
       <description></description>
     </item>
@@ -150,7 +144,6 @@
       <title>Forming Delocalized Intermediate States with Realistic Quantum Dots</title>
       <link>https://tobydriscoll.net/publication/reid-forming-delocalized-intermediate-2012-a/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/reid-forming-delocalized-intermediate-2012-a/</guid>
       <description></description>
     </item>
@@ -159,7 +152,6 @@
       <title>Thin Film Dynamics on a Prolate Spheroid with Application to the Cornea</title>
       <link>https://tobydriscoll.net/publication/braun-thin-film-dynamics-2012/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/braun-thin-film-dynamics-2012/</guid>
       <description></description>
     </item>
@@ -168,7 +160,6 @@
       <title>Adaptive Methods for Analysis of Composite Plates with Radial Basis Functions</title>
       <link>https://tobydriscoll.net/publication/neves-adaptive-methods-analysis-2011-a/</link>
       <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/neves-adaptive-methods-analysis-2011-a/</guid>
       <description></description>
     </item>
@@ -177,7 +168,6 @@
       <title>A Transformative Model for Undergraduate Quantitative Biology Education</title>
       <link>https://tobydriscoll.net/publication/usher-transformative-model-undergraduate-2010-a/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/usher-transformative-model-undergraduate-2010-a/</guid>
       <description></description>
     </item>
@@ -186,7 +176,6 @@
       <title>Automatic Spectral Collocation for Integral, Integro-Differential, and Integrally Reformulated Differential Equations</title>
       <link>https://tobydriscoll.net/publication/driscoll-automatic-spectral-collocation-2010-a/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-automatic-spectral-collocation-2010-a/</guid>
       <description></description>
     </item>
@@ -195,7 +184,6 @@
       <title>Radial Basis Function Interpolation on Irregular Domain through Conformal Transplantation</title>
       <link>https://tobydriscoll.net/publication/heryudono-radial-basis-function-2010-a/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/heryudono-radial-basis-function-2010-a/</guid>
       <description></description>
     </item>
@@ -204,7 +192,6 @@
       <title>An Overset Grid Method for the Study of Reflex Tearing</title>
       <link>https://tobydriscoll.net/publication/maki-overset-grid-method-2008-a/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/maki-overset-grid-method-2008-a/</guid>
       <description></description>
     </item>
@@ -213,7 +200,6 @@
       <title>Radial and Circular Slit Maps of Unbounded Multiply Connected Circle Domains</title>
       <link>https://tobydriscoll.net/publication/delillo-radial-circular-slit-2008-a/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/delillo-radial-circular-slit-2008-a/</guid>
       <description></description>
     </item>
@@ -222,7 +208,6 @@
       <title>The Chebop System for Automatic Solution of Differential Equations</title>
       <link>https://tobydriscoll.net/publication/driscoll-chebop-system-automatic-2008-a/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-chebop-system-automatic-2008-a/</guid>
       <description></description>
     </item>
@@ -231,7 +216,6 @@
       <title>Adaptive Residual Subsampling Methods for Radial Basis Function Interpolation and Collocation Problems</title>
       <link>https://tobydriscoll.net/publication/driscoll-adaptive-residual-subsampling-2007-a/</link>
       <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-adaptive-residual-subsampling-2007-a/</guid>
       <description></description>
     </item>
@@ -240,7 +224,6 @@
       <title>Searching for Rare Growth Factors Using Multicanonical Monte Carlo Methods</title>
       <link>https://tobydriscoll.net/publication/driscoll-searching-rare-growth-2007-a/</link>
       <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-searching-rare-growth-2007-a/</guid>
       <description></description>
     </item>
@@ -249,7 +232,6 @@
       <title>Single-Equation Models for the Tear Film in a Blink Cycle: Realistic Lid Motion</title>
       <link>https://tobydriscoll.net/publication/heryudono-singleequation-models-tear-2007/</link>
       <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/heryudono-singleequation-models-tear-2007/</guid>
       <description></description>
     </item>
@@ -258,7 +240,6 @@
       <title>Computation of Multiply Connected Schwarz-Christoffel Maps for Exterior Domains</title>
       <link>https://tobydriscoll.net/publication/delillo-computation-multiply-connected-2006-a/</link>
       <pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/delillo-computation-multiply-connected-2006-a/</guid>
       <description></description>
     </item>
@@ -267,7 +248,6 @@
       <title>Eigenvalue Stability of Radial Basis Function Discretizations for Time-Dependent Problems</title>
       <link>https://tobydriscoll.net/publication/platte-eigenvalue-stability-radial-2006-a/</link>
       <pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/platte-eigenvalue-stability-radial-2006-a/</guid>
       <description></description>
     </item>
@@ -276,7 +256,6 @@
       <title>Algorithm 843: Improvements to the Schwarz-Christoffel Toolbox for MATLAB</title>
       <link>https://tobydriscoll.net/publication/driscoll-algorithm-843-improvements-2005/</link>
       <pubDate>Sat, 01 Jan 2005 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-algorithm-843-improvements-2005/</guid>
       <description></description>
     </item>
@@ -285,7 +264,6 @@
       <title>Polynomials and Potential Theory for Gaussian Radial Basis Function Interpolation</title>
       <link>https://tobydriscoll.net/publication/platte-polynomials-potential-theory-2005-a/</link>
       <pubDate>Sat, 01 Jan 2005 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/platte-polynomials-potential-theory-2005-a/</guid>
       <description></description>
     </item>
@@ -294,7 +272,6 @@
       <title>The Effect of the Small-Aspect-Ratio Approximation on Canonical Electrostatic MEMS Models</title>
       <link>https://tobydriscoll.net/publication/pelesko-effect-smallaspectratio-approximation-2005/</link>
       <pubDate>Sat, 01 Jan 2005 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/pelesko-effect-smallaspectratio-approximation-2005/</guid>
       <description></description>
     </item>
@@ -303,7 +280,6 @@
       <title>A Practical Guide to Boundary Element Methods With the Software Library BEMLIB. By C. P OZRIKIDIS. CRC Press, 2002. 440 Pp. ISBN 1584 883235. $99.95 (Hardback)</title>
       <link>https://tobydriscoll.net/publication/driscoll-practical-guide-boundary-2004/</link>
       <pubDate>Thu, 01 Jan 2004 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-practical-guide-boundary-2004/</guid>
       <description></description>
     </item>
@@ -312,7 +288,6 @@
       <title>Computing Eigenmodes of Elliptic Operators Using Radial Basis Functions</title>
       <link>https://tobydriscoll.net/publication/platte-computing-eigenmodes-elliptic-2004-a/</link>
       <pubDate>Thu, 01 Jan 2004 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/platte-computing-eigenmodes-elliptic-2004-a/</guid>
       <description></description>
     </item>
@@ -321,7 +296,6 @@
       <title>Curvature Flow in Conformal Mapping</title>
       <link>https://tobydriscoll.net/publication/collins-curvature-flow-conformal-2004/</link>
       <pubDate>Thu, 01 Jan 2004 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/collins-curvature-flow-conformal-2004/</guid>
       <description></description>
     </item>
@@ -330,7 +304,6 @@
       <title>Isospectral Shapes with Neumann and Alternating Boundary Conditions</title>
       <link>https://tobydriscoll.net/publication/driscoll-isospectral-shapes-neumann-2003-a/</link>
       <pubDate>Wed, 01 Jan 2003 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-isospectral-shapes-neumann-2003-a/</guid>
       <description></description>
     </item>
@@ -339,7 +312,6 @@
       <title>A Composite Runge–Kutta Method for the Spectral Solution of Semilinear PDEs</title>
       <link>https://tobydriscoll.net/publication/driscoll-composite-runge-kutta-2002-a/</link>
       <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-composite-runge-kutta-2002-a/</guid>
       <description></description>
     </item>
@@ -348,7 +320,6 @@
       <title>Interpolation in the Limit of Increasingly Flat Radial Basis Functions</title>
       <link>https://tobydriscoll.net/publication/driscoll-interpolation-limit-increasingly-2002-a/</link>
       <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-interpolation-limit-increasingly-2002-a/</guid>
       <description></description>
     </item>
@@ -357,7 +328,6 @@
       <title>Observations on the Behavior of Radial Basis Function Approximations near Boundaries</title>
       <link>https://tobydriscoll.net/publication/fornberg-observations-behavior-radial-2002-a/</link>
       <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/fornberg-observations-behavior-radial-2002-a/</guid>
       <description></description>
     </item>
@@ -366,7 +336,6 @@
       <title>A General Conformal-Mapping Approach to the Optimum Electrode Design of Coplanar Waveguides with Arbitrary Cross Section</title>
       <link>https://tobydriscoll.net/publication/goano-general-conformalmapping-approach-2001-a/</link>
       <pubDate>Mon, 01 Jan 2001 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/goano-general-conformalmapping-approach-2001-a/</guid>
       <description></description>
     </item>
@@ -375,7 +344,6 @@
       <title>A Padé-Based Algorithm for Overcoming the Gibbs Phenomenon</title>
       <link>https://tobydriscoll.net/publication/driscoll-padebased-algorithm-overcoming-2001-a/</link>
       <pubDate>Mon, 01 Jan 2001 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-padebased-algorithm-overcoming-2001-a/</guid>
       <description></description>
     </item>
@@ -384,7 +352,6 @@
       <title>Note on Nonsymmetric Finite Differences for Maxwell&#39;s Equations</title>
       <link>https://tobydriscoll.net/publication/driscoll-note-nonsymmetric-finite-2000/</link>
       <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-note-nonsymmetric-finite-2000/</guid>
       <description></description>
     </item>
@@ -393,7 +360,6 @@
       <title>Staggered Time Integrators for Wave Equations</title>
       <link>https://tobydriscoll.net/publication/ghrist-staggered-time-integrators-2000-a/</link>
       <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/ghrist-staggered-time-integrators-2000-a/</guid>
       <description></description>
     </item>
@@ -402,7 +368,6 @@
       <title>A Fast Spectral Algorithm for Nonlinear Wave Equations with Linear Dispersion</title>
       <link>https://tobydriscoll.net/publication/fornberg-fast-spectral-algorithm-1999-a/</link>
       <pubDate>Fri, 01 Jan 1999 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/fornberg-fast-spectral-algorithm-1999-a/</guid>
       <description></description>
     </item>
@@ -411,7 +376,6 @@
       <title>A Nonoverlapping Domain Decomposition Method for Symm&#39;s Equation for Conformal Mapping</title>
       <link>https://tobydriscoll.net/publication/driscoll-nonoverlapping-domain-decomposition-1999-a/</link>
       <pubDate>Fri, 01 Jan 1999 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-nonoverlapping-domain-decomposition-1999-a/</guid>
       <description></description>
     </item>
@@ -420,7 +384,6 @@
       <title>Block Pseudospectral Methods for Maxwell&#39;s Equations II: Two-Dimensional, Discontinuous-Coefficient Case</title>
       <link>https://tobydriscoll.net/publication/driscoll-block-pseudospectral-methods-1999/</link>
       <pubDate>Fri, 01 Jan 1999 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-block-pseudospectral-methods-1999/</guid>
       <description></description>
     </item>
@@ -429,7 +392,6 @@
       <title>Computational Conformal Mapping (Book Review)</title>
       <link>https://tobydriscoll.net/publication/driscoll-computational-conformal-mapping-1999/</link>
       <pubDate>Fri, 01 Jan 1999 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-computational-conformal-mapping-1999/</guid>
       <description></description>
     </item>
@@ -438,7 +400,6 @@
       <title>A Block Pseudospectral Method for Maxwell&#39;s Equations: I. One-Dimensional Case</title>
       <link>https://tobydriscoll.net/publication/driscoll-block-pseudospectral-method-1998-a/</link>
       <pubDate>Thu, 01 Jan 1998 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-block-pseudospectral-method-1998-a/</guid>
       <description></description>
     </item>
@@ -447,7 +408,6 @@
       <title>From Potential Theory to Matrix Iterations in Six Steps</title>
       <link>https://tobydriscoll.net/publication/driscoll-potential-theory-matrix-1998-a/</link>
       <pubDate>Thu, 01 Jan 1998 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-potential-theory-matrix-1998-a/</guid>
       <description></description>
     </item>
@@ -456,7 +416,6 @@
       <title>Numerical Conformal Mapping Using Cross-Ratios and Delaunay Triangulation</title>
       <link>https://tobydriscoll.net/publication/driscoll-numerical-conformal-mapping-1998-a/</link>
       <pubDate>Thu, 01 Jan 1998 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-numerical-conformal-mapping-1998-a/</guid>
       <description></description>
     </item>
@@ -465,7 +424,6 @@
       <title>Eigenmodes of Isospectral Drums</title>
       <link>https://tobydriscoll.net/publication/driscoll-eigenmodes-isospectral-drums-1997-a/</link>
       <pubDate>Wed, 01 Jan 1997 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-eigenmodes-isospectral-drums-1997-a/</guid>
       <description></description>
     </item>
@@ -474,7 +432,6 @@
       <title>Algorithm 756: A MATLAB Toolbox for Schwarz-Christoffel Mapping</title>
       <link>https://tobydriscoll.net/publication/driscoll-algorithm-756-matlab-1996/</link>
       <pubDate>Mon, 01 Jan 1996 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-algorithm-756-matlab-1996/</guid>
       <description></description>
     </item>
@@ -483,7 +440,6 @@
       <title>Pseudospectra for the Wave Equation with an Absorbing Boundary</title>
       <link>https://tobydriscoll.net/publication/driscoll-pseudospectra-wave-equation-1996-a/</link>
       <pubDate>Mon, 01 Jan 1996 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-pseudospectra-wave-equation-1996-a/</guid>
       <description></description>
     </item>
@@ -492,7 +448,6 @@
       <title>A Mostly Linear Model of Transition to Turbulence</title>
       <link>https://tobydriscoll.net/publication/baggett-mostly-linear-model-1995/</link>
       <pubDate>Sun, 01 Jan 1995 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/baggett-mostly-linear-model-1995/</guid>
       <description></description>
     </item>
@@ -501,7 +456,6 @@
       <title>Error Bound on the Solution of a Linear Differential Equation in Chebyshev Series</title>
       <link>https://tobydriscoll.net/publication/dzielski-error-bound-solution-1993-a/</link>
       <pubDate>Fri, 01 Jan 1993 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/dzielski-error-bound-solution-1993-a/</guid>
       <description></description>
     </item>
@@ -510,7 +464,6 @@
       <title>Hydrodynamic Stability without Eigenvalues</title>
       <link>https://tobydriscoll.net/publication/trefethen-hydrodynamic-stability-eigenvalues-1993-a/</link>
       <pubDate>Fri, 01 Jan 1993 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-hydrodynamic-stability-eigenvalues-1993-a/</guid>
       <description></description>
     </item>

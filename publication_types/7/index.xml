@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>7 on Toby Driscoll</title>
+    <title>7 | Toby Driscoll</title>
     <link>https://tobydriscoll.net/publication_types/7/</link>
-    <description>Recent content in 7 on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 01 Jan 1991 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/publication_types/7/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/publication_types/7/index.xml" rel="self" type="application/rss+xml" />
+    <description>7</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 1991 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>7</title>
+      <link>https://tobydriscoll.net/publication_types/7/</link>
+    </image>
     
     <item>
       <title>Comparison of Computational Efficiency and Sensitivity of Several Solution Algorithms for the Linear-Quadratic Optimal Control Problem</title>
       <link>https://tobydriscoll.net/publication/driscoll-comparison-computational-efficiency-1991/</link>
       <pubDate>Tue, 01 Jan 1991 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-comparison-computational-efficiency-1991/</guid>
       <description></description>
     </item>

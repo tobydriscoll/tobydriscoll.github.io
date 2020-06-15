@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Quan Deng on Toby Driscoll</title>
+    <title>Quan Deng | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/quan-deng/</link>
-    <description>Recent content in Quan Deng on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/quan-deng/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/quan-deng/index.xml" rel="self" type="application/rss+xml" />
+    <description>Quan Deng</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Quan Deng</title>
+      <link>https://tobydriscoll.net/authors/quan-deng/</link>
+    </image>
     
     <item>
       <title>Heat Transfer and Tear Film Dynamics over Multiple Blink Cycles</title>
       <link>https://tobydriscoll.net/publication/deng-heat-transfer-tear-2014/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/deng-heat-transfer-tear-2014/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>A Model for the Tear Film and Ocular Surface Temperature for Partial Blinks</title>
       <link>https://tobydriscoll.net/publication/deng-model-tear-film-2013/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/deng-model-tear-film-2013/</guid>
       <description></description>
     </item>
@@ -33,7 +32,6 @@
       <title>A Fast Treecode for Multiquadric Interpolation with Varying Shape Parameters</title>
       <link>https://tobydriscoll.net/publication/deng-fast-treecode-multiquadric-2012-a/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/deng-fast-treecode-multiquadric-2012-a/</guid>
       <description></description>
     </item>
@@ -42,7 +40,6 @@
       <title>A Model Problem for Tear Film Distribution on a Moving Rectangular Domain</title>
       <link>https://tobydriscoll.net/publication/deng-model-problem-tear-2012/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/deng-model-problem-tear-2012/</guid>
       <description></description>
     </item>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PE King-Smith on Toby Driscoll</title>
+    <title>PE King-Smith | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/pe-king-smith/</link>
-    <description>Recent content in PE King-Smith on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/pe-king-smith/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/pe-king-smith/index.xml" rel="self" type="application/rss+xml" />
+    <description>PE King-Smith</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>PE King-Smith</title>
+      <link>https://tobydriscoll.net/authors/pe-king-smith/</link>
+    </image>
     
     <item>
       <title>A Model Problem for Blob-Driven Tear Film Breakup (TBU)</title>
       <link>https://tobydriscoll.net/publication/zhong-model-problem-blob-driven-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/zhong-model-problem-blob-driven-2015/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>Solute Dynamics and Imaging in the Tear Film on an Eye-Shaped Domain</title>
       <link>https://tobydriscoll.net/publication/braun-solute-dynamics-imaging-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/braun-solute-dynamics-imaging-2015/</guid>
       <description></description>
     </item>
@@ -33,7 +32,6 @@
       <title>Tear Film Dynamics Around a Rigid Model Blob</title>
       <link>https://tobydriscoll.net/publication/ketelaar-tear-film-dynamics-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/ketelaar-tear-film-dynamics-2015/</guid>
       <description></description>
     </item>
@@ -42,7 +40,6 @@
       <title>Coupling Osmolarity Dynamics within Human Tear Film on an Eye-Shaped Domain</title>
       <link>https://tobydriscoll.net/publication/li-coupling-osmolarity-dynamics-2013/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/li-coupling-osmolarity-dynamics-2013/</guid>
       <description></description>
     </item>
@@ -51,7 +48,6 @@
       <title>An Overset Grid Method for the Study of Reflex Tearing</title>
       <link>https://tobydriscoll.net/publication/maki-overset-grid-method-2008-a/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/maki-overset-grid-method-2008-a/</guid>
       <description></description>
     </item>
@@ -60,7 +56,6 @@
       <title>A Overset Grid Method for Fourth Order Evolution Equations of Human Tear Film</title>
       <link>https://tobydriscoll.net/publication/maki-overset-grid-method-2007/</link>
       <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/maki-overset-grid-method-2007/</guid>
       <description></description>
     </item>
@@ -69,7 +64,6 @@
       <title>Single-Equation Models for the Tear Film in a Blink Cycle: Realistic Lid Motion</title>
       <link>https://tobydriscoll.net/publication/heryudono-singleequation-models-tear-2007/</link>
       <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/heryudono-singleequation-models-tear-2007/</guid>
       <description></description>
     </item>

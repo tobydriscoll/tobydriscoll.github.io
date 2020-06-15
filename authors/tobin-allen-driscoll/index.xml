@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tobin Allen Driscoll on Toby Driscoll</title>
+    <title>Tobin Allen Driscoll | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/tobin-allen-driscoll/</link>
-    <description>Recent content in Tobin Allen Driscoll on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 1996 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/tobin-allen-driscoll/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/tobin-allen-driscoll/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tobin Allen Driscoll</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 1996 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Tobin Allen Driscoll</title>
+      <link>https://tobydriscoll.net/authors/tobin-allen-driscoll/</link>
+    </image>
     
     <item>
       <title>Domain Decomposition Methods for Conformal Mapping and Eigenvalue Problems</title>
       <link>https://tobydriscoll.net/publication/driscoll-domain-decomposition-methods-1996/</link>
       <pubDate>Mon, 01 Jan 1996 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-domain-decomposition-methods-1996/</guid>
       <description></description>
     </item>

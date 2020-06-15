@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>John A Pelesko on Toby Driscoll</title>
+    <title>John A Pelesko | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/john-a-pelesko/</link>
-    <description>Recent content in John A Pelesko on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/john-a-pelesko/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/john-a-pelesko/index.xml" rel="self" type="application/rss+xml" />
+    <description>John A Pelesko</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>John A Pelesko</title>
+      <link>https://tobydriscoll.net/authors/john-a-pelesko/</link>
+    </image>
     
     <item>
       <title>A Transformative Model for Undergraduate Quantitative Biology Education</title>
       <link>https://tobydriscoll.net/publication/usher-transformative-model-undergraduate-2010-a/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/usher-transformative-model-undergraduate-2010-a/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>The Effect of the Small-Aspect-Ratio Approximation on Canonical Electrostatic MEMS Models</title>
       <link>https://tobydriscoll.net/publication/pelesko-effect-smallaspectratio-approximation-2005/</link>
       <pubDate>Sat, 01 Jan 2005 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/pelesko-effect-smallaspectratio-approximation-2005/</guid>
       <description></description>
     </item>
@@ -33,7 +32,6 @@
       <title>Approximations in Canonical Electrostatic MEMS Models</title>
       <link>https://tobydriscoll.net/publication/driscoll-approximations-canonical-electrostatic-2004/</link>
       <pubDate>Thu, 01 Jan 2004 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-approximations-canonical-electrostatic-2004/</guid>
       <description></description>
     </item>

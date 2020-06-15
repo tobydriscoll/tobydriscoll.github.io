@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>N Hale on Toby Driscoll</title>
+    <title>N Hale | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/n-hale/</link>
-    <description>Recent content in N Hale on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 2009 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/n-hale/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/n-hale/index.xml" rel="self" type="application/rss+xml" />
+    <description>N Hale</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Jan 2009 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>N Hale</title>
+      <link>https://tobydriscoll.net/authors/n-hale/</link>
+    </image>
     
     <item>
       <title>Chebfun Version 2</title>
       <link>https://tobydriscoll.net/publication/trefethen-chebfun-version-2009/</link>
       <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-chebfun-version-2009/</guid>
       <description></description>
     </item>

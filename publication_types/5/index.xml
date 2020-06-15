@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>5 on Toby Driscoll</title>
+    <title>5 | Toby Driscoll</title>
     <link>https://tobydriscoll.net/publication_types/5/</link>
-    <description>Recent content in 5 on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/publication_types/5/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/publication_types/5/index.xml" rel="self" type="application/rss+xml" />
+    <description>5</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>5</title>
+      <link>https://tobydriscoll.net/publication_types/5/</link>
+    </image>
     
     <item>
       <title>Exploring ODEs</title>
       <link>https://tobydriscoll.net/publication/trefethen-exploring-od-es-2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-exploring-od-es-2017/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>Fundamentals of Numerical Computation</title>
       <link>https://tobydriscoll.net/publication/driscoll-fundamentals-numerical-computation-2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-fundamentals-numerical-computation-2017/</guid>
       <description></description>
     </item>
@@ -33,7 +32,6 @@
       <title>Chebfun Guide</title>
       <link>https://tobydriscoll.net/publication/driscoll-chebfun-guide-2014/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-chebfun-guide-2014/</guid>
       <description></description>
     </item>
@@ -42,7 +40,6 @@
       <title>Learning MAtlAB</title>
       <link>https://tobydriscoll.net/publication/driscoll-learning-matlab-2009/</link>
       <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-learning-matlab-2009/</guid>
       <description></description>
     </item>
@@ -51,7 +48,6 @@
       <title>Schwarz–Christoffel Mapping</title>
       <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-mapping-2002/</link>
       <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-mapping-2002/</guid>
       <description></description>
     </item>

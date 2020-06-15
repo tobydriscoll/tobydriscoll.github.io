@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Satish C Reddy on Toby Driscoll</title>
+    <title>Satish C Reddy | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/satish-c-reddy/</link>
-    <description>Recent content in Satish C Reddy on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jan 1993 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/satish-c-reddy/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/satish-c-reddy/index.xml" rel="self" type="application/rss+xml" />
+    <description>Satish C Reddy</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 1993 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Satish C Reddy</title>
+      <link>https://tobydriscoll.net/authors/satish-c-reddy/</link>
+    </image>
     
     <item>
       <title>Hydrodynamic Stability without Eigenvalues</title>
       <link>https://tobydriscoll.net/publication/trefethen-hydrodynamic-stability-eigenvalues-1993-a/</link>
       <pubDate>Fri, 01 Jan 1993 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-hydrodynamic-stability-eigenvalues-1993-a/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>A New Direction in Hydrodynamic Stability: Beyond Eigenvalues</title>
       <link>https://tobydriscoll.net/publication/trefethen-new-direction-hydrodynamic-1992/</link>
       <pubDate>Wed, 01 Jan 1992 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-new-direction-hydrodynamic-1992/</guid>
       <description></description>
     </item>

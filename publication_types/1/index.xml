@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>1 on Toby Driscoll</title>
+    <title>1 | Toby Driscoll</title>
     <link>https://tobydriscoll.net/publication_types/1/</link>
-    <description>Recent content in 1 on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>1</title>
+      <link>https://tobydriscoll.net/publication_types/1/</link>
+    </image>
     
     <item>
       <title>Models for Tear Break Up Dynamics and Imaging</title>
       <link>https://tobydriscoll.net/publication/braun-models-tear-break-2018/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/braun-models-tear-break-2018/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>Mathematical Modeling of Glob-Driven Tear Film Breakup</title>
       <link>https://tobydriscoll.net/publication/zhong-mathematical-modeling-glob-driven-2016/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/zhong-mathematical-modeling-glob-driven-2016/</guid>
       <description></description>
     </item>
@@ -33,7 +32,6 @@
       <title>Simulation of Thin Film Equations on an Eye-Shaped Domain with Moving Boundary</title>
       <link>https://tobydriscoll.net/publication/brosch-simulation-thin-film-2016/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/brosch-simulation-thin-film-2016/</guid>
       <description></description>
     </item>
@@ -42,7 +40,6 @@
       <title>A Model Problem for Blob-Driven Tear Film Breakup (TBU)</title>
       <link>https://tobydriscoll.net/publication/zhong-model-problem-blob-driven-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/zhong-model-problem-blob-driven-2015/</guid>
       <description></description>
     </item>
@@ -51,7 +48,6 @@
       <title>Modeling Tear Film Evaporation and Breakup with Duplex Films</title>
       <link>https://tobydriscoll.net/publication/stapf-modeling-tear-film-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/stapf-modeling-tear-film-2015/</guid>
       <description></description>
     </item>
@@ -60,7 +56,6 @@
       <title>Solute Dynamics and Imaging in the Tear Film on an Eye-Shaped Domain</title>
       <link>https://tobydriscoll.net/publication/braun-solute-dynamics-imaging-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/braun-solute-dynamics-imaging-2015/</guid>
       <description></description>
     </item>
@@ -69,7 +64,6 @@
       <title>Tear Film Dynamics Around a Rigid Model Blob</title>
       <link>https://tobydriscoll.net/publication/ketelaar-tear-film-dynamics-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/ketelaar-tear-film-dynamics-2015/</guid>
       <description></description>
     </item>
@@ -78,7 +72,6 @@
       <title>DATA DRIVEN MATHEMATICAL MODELING OF THE SINGLE VENTRICLE ANATOMY AND PHYSIOLOGY</title>
       <link>https://tobydriscoll.net/publication/mcculloch-datadrivenmathematical-2014/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/mcculloch-datadrivenmathematical-2014/</guid>
       <description></description>
     </item>
@@ -87,7 +80,6 @@
       <title>Coupling Osmolarity Dynamics within Human Tear Film on an Eye-Shaped Domain</title>
       <link>https://tobydriscoll.net/publication/li-coupling-osmolarity-dynamics-2013/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/li-coupling-osmolarity-dynamics-2013/</guid>
       <description></description>
     </item>
@@ -96,7 +88,6 @@
       <title>A Model Problem for Tear Film Distribution on a Moving Rectangular Domain</title>
       <link>https://tobydriscoll.net/publication/deng-model-problem-tear-2012/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/deng-model-problem-tear-2012/</guid>
       <description></description>
     </item>
@@ -105,7 +96,6 @@
       <title>Recent Progress on Modeling the Human Tear Film</title>
       <link>https://tobydriscoll.net/publication/braun-recent-progress-modeling-2008/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/braun-recent-progress-modeling-2008/</guid>
       <description></description>
     </item>
@@ -114,7 +104,6 @@
       <title>A Overset Grid Method for Fourth Order Evolution Equations of Human Tear Film</title>
       <link>https://tobydriscoll.net/publication/maki-overset-grid-method-2007/</link>
       <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/maki-overset-grid-method-2007/</guid>
       <description></description>
     </item>
@@ -123,7 +112,6 @@
       <title>Numerical Examination of a Model of Thermo-Acoustic Instabilites in Lean, Pre-Mixed Combustors.</title>
       <link>https://tobydriscoll.net/publication/driscoll-numerical-examination-model-2003/</link>
       <pubDate>Wed, 01 Jan 2003 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-numerical-examination-model-2003/</guid>
       <description></description>
     </item>
@@ -132,7 +120,6 @@
       <title>Schwarz-Christoffel Mapping in the Computer Era</title>
       <link>https://tobydriscoll.net/publication/trefethen-schwarz-christoffel-mapping-computer-1998/</link>
       <pubDate>Thu, 01 Jan 1998 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-schwarz-christoffel-mapping-computer-1998/</guid>
       <description></description>
     </item>
@@ -141,7 +128,6 @@
       <title>Uses of the Berenger PML in Pseudospectral Methods for Maxwell&#39;s Equations</title>
       <link>https://tobydriscoll.net/publication/driscoll-uses-berenger-pml-1998/</link>
       <pubDate>Thu, 01 Jan 1998 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-uses-berenger-pml-1998/</guid>
       <description></description>
     </item>
@@ -150,7 +136,6 @@
       <title>Pseudospectral Methods for Large-Scale Bioacoustic Models</title>
       <link>https://tobydriscoll.net/publication/wojcik-pseudospectral-methods-largescale-1997/</link>
       <pubDate>Wed, 01 Jan 1997 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/wojcik-pseudospectral-methods-largescale-1997/</guid>
       <description></description>
     </item>
@@ -159,7 +144,6 @@
       <title>Computational Efficiency of a Functional Expansion Algorithm for Linear Quadratic Optimal Control</title>
       <link>https://tobydriscoll.net/publication/driscoll-computational-efficiency-functional-1992/</link>
       <pubDate>Wed, 01 Jan 1992 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-computational-efficiency-functional-1992/</guid>
       <description></description>
     </item>

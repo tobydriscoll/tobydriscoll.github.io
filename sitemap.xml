@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -44,14 +44,57 @@
   
   <url>
     <loc>https://tobydriscoll.net/publication_types/2/</loc>
-    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/</loc>
-    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/carolyn-g.-begley/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/deborah-awisi-gyau/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/publication/luke-parameter-estimation-evaporation-2020/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/publication_types/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/publication/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/rayanne-a-luke/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/richard-j-braun/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/tobin-a-driscoll/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -60,49 +103,18 @@
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/publication_types/</loc>
-    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/publication/</loc>
-    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/tobin-a-driscoll/</loc>
-    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/</loc>
-    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tobydriscoll.net/publication_types/6/</loc>
     <lastmod>2019-11-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/carolyn-g-begley/</loc>
     <lastmod>2019-11-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/publication/braun-mathematical-models-2019/</loc>
     <lastmod>2019-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/richard-j-braun/</loc>
-    <lastmod>2019-11-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -118,18 +130,16 @@
   <url>
     <loc>https://tobydriscoll.net/tags/</loc>
     <lastmod>2019-07-12T11:55:12-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/blog/the-sorry-state-of-teaching-odes/</loc>
-    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/tags/teaching/</loc>
     <lastmod>2019-07-12T11:55:12-04:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/blog/the-sorry-state-of-teaching-odes/</loc>
+    <lastmod>2019-07-12T11:55:12-04:00</lastmod>
   </url>
   
   <url>
@@ -140,25 +150,21 @@
   <url>
     <loc>https://tobydriscoll.net/authors/alex-mcmanus/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/dylan-m-chapp/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/kara-l-maki/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/william-d-henshaw/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -167,56 +173,48 @@
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/blog/new-look-new-tech/</loc>
-    <lastmod>2019-06-27T15:20:05-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tobydriscoll.net/tags/academia/</loc>
     <lastmod>2019-06-27T15:20:05-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/tags/computing/</loc>
     <lastmod>2019-06-27T15:20:05-04:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/blog/new-look-new-tech/</loc>
+    <lastmod>2019-06-27T15:20:05-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/project/</loc>
     <lastmod>2019-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/tags/scientific-computing/</loc>
     <lastmod>2019-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/tags/book/</loc>
     <lastmod>2019-06-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/tags/matlab/</loc>
     <lastmod>2019-06-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/tags/programming/</loc>
     <lastmod>2019-06-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/tags/software/</loc>
     <lastmod>2019-06-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -227,25 +225,21 @@
   <url>
     <loc>https://tobydriscoll.net/authors/kevin-w-aiton/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/publication_types/1/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/deborah-antwi/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/lan-zhong/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -256,13 +250,21 @@
   <url>
     <loc>https://tobydriscoll.net/authors/p-ewen-king-smith/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/categories/academia/</loc>
+    <lastmod>2018-02-02T20:54:56+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/categories/</loc>
     <lastmod>2018-02-02T20:54:56+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/categories/computing/</loc>
+    <lastmod>2018-02-02T20:54:56+00:00</lastmod>
   </url>
   
   <url>
@@ -271,21 +273,8 @@
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/categories/academia/</loc>
-    <lastmod>2018-02-02T20:54:56+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/categories/computing/</loc>
-    <lastmod>2018-02-02T20:54:56+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tobydriscoll.net/categories/teaching/</loc>
     <lastmod>2018-02-02T20:54:56+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -296,7 +285,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/joseph-k-brosch/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -305,20 +293,18 @@
   </url>
   
   <url>
+    <loc>https://tobydriscoll.net/categories/math/</loc>
+    <lastmod>2017-02-03T20:16:10+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-iterative-methods/</loc>
     <lastmod>2017-02-03T20:16:10+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/categories/math/</loc>
-    <lastmod>2017-02-03T20:16:10+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tobydriscoll.net/publication_types/5/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -339,13 +325,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/javed-i-siddique/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/lloyd-n-trefethen/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -356,13 +340,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/ziwei-wu/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/%C3%A1sgeir-birkisson/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -373,7 +355,6 @@
   <url>
     <loc>https://tobydriscoll.net/categories/society-and-culture/</loc>
     <lastmod>2016-12-18T15:28:34+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -409,7 +390,6 @@
   <url>
     <loc>https://tobydriscoll.net/categories/uncategorized/</loc>
     <lastmod>2016-09-20T19:52:34+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -455,25 +435,21 @@
   <url>
     <loc>https://tobydriscoll.net/authors/alex-townsend/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/christiaan-f-ketelaar/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/endre-s%C3%BCli/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/joseph-brosch/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -489,13 +465,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/peter-ewen-king-smith/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/richard-braun/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -506,7 +480,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/tobin-driscoll/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -517,7 +490,6 @@
   <url>
     <loc>https://tobydriscoll.net/categories/matlab/</loc>
     <lastmod>2015-07-30T21:14:51+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -543,7 +515,6 @@
   <url>
     <loc>https://tobydriscoll.net/categories/science/</loc>
     <lastmod>2015-07-24T01:06:45+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -594,13 +565,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/tobin-a.-driscoll/</loc>
     <lastmod>2015-06-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/publication_types/0/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -614,27 +583,23 @@
   </url>
   
   <url>
+    <loc>https://tobydriscoll.net/authors/carolyn-begley/</loc>
+    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tobydriscoll.net/authors/cf-ketelaar/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/cg-begley/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/carolyn-begley/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/christiaan-ketelaar/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -645,19 +610,16 @@
   <url>
     <loc>https://tobydriscoll.net/authors/jeffrey-w-banks/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/longfei-li/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/michael-stapf/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -668,23 +630,20 @@
   <url>
     <loc>https://tobydriscoll.net/authors/nicholas-hale/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/pe-king-smith/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/rj-braun/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/publication/driscoll-rectangular-spectral-collocation-2015/</loc>
+    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/rj-braun/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -696,7 +655,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/ta-driscoll/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -707,7 +665,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/william-henshaw/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -723,7 +680,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/gilberto-schleiniger/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -734,19 +690,16 @@
   <url>
     <loc>https://tobydriscoll.net/authors/jac-weideman/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/lei-chen/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/michael-mcculloch/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -757,13 +710,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/quan-deng/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/publication_types/4/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -774,7 +725,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/asgeir-birkisson/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -790,13 +740,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/jw-banks/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/wd-henshaw/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -827,25 +775,21 @@
   <url>
     <loc>https://tobydriscoll.net/authors/gb-mcfadden/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/lp-cook/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/matthew-f-doty/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/r-usha/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -856,25 +800,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/william-m-reid/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/ajm-ferreira/</loc>
-    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/ama-neves/</loc>
-    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/authors/arh-heryudono/</loc>
-    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -883,15 +808,28 @@
   </url>
   
   <url>
+    <loc>https://tobydriscoll.net/authors/ajm-ferreira/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/ama-neves/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tobydriscoll.net/authors/arh-heryudono/</loc>
+    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tobydriscoll.net/authors/cmm-soares/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/rmn-jorge/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -902,7 +840,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/alfa-rh-heryudono/</loc>
     <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -913,37 +850,31 @@
   <url>
     <loc>https://tobydriscoll.net/authors/david-c-usher/</loc>
     <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/harold-b-white/</loc>
     <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/john-a-pelesko/</loc>
     <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/kathleen-pusecker/</loc>
     <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/louis-f-rossi/</loc>
     <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/prasad-dhurjati/</loc>
     <lastmod>2010-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -957,38 +888,33 @@
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/authors/ln-trefethen/</loc>
+    <loc>https://tobydriscoll.net/publication/driscoll-learning-matlab-2009/</loc>
     <lastmod>2009-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tobydriscoll.net/publication/driscoll-learning-matlab-2009/</loc>
+    <loc>https://tobydriscoll.net/authors/ln-trefethen/</loc>
     <lastmod>2009-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/n-hale/</loc>
     <lastmod>2009-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/r-pach%C3%B3n/</loc>
     <lastmod>2009-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/rb-platte/</loc>
     <lastmod>2009-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/alan-r-elcrat/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -999,31 +925,26 @@
   <url>
     <loc>https://tobydriscoll.net/authors/ewen-king-smith/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/folkmar-bornemann/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/ja-pfaltzgraff/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/jeff-mcfadden/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/kl-maki/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1044,19 +965,16 @@
   <url>
     <loc>https://tobydriscoll.net/authors/thomas-k-delillo/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/usha-ranganathan/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/a-heryudono/</loc>
     <lastmod>2007-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1072,13 +990,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/bengt-fornberg/</loc>
     <lastmod>2007-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/p-fast/</loc>
     <lastmod>2007-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1109,13 +1025,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/john-a-pfaltzgraff/</loc>
     <lastmod>2006-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/rodrigo-b-platte/</loc>
     <lastmod>2006-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1146,7 +1060,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/charles-r-collins/</loc>
     <lastmod>2004-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1162,7 +1075,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/kenneth-stephenson/</loc>
     <lastmod>2004-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1178,7 +1090,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/hpw-gottlieb/</loc>
     <lastmod>2003-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1189,7 +1100,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/louis-rossi/</loc>
     <lastmod>2003-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1205,7 +1115,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/grady-wright/</loc>
     <lastmod>2002-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1221,7 +1130,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/richard-charles/</loc>
     <lastmod>2002-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1242,31 +1150,26 @@
   <url>
     <loc>https://tobydriscoll.net/authors/francesco-bertazzi/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/giovanni-ghione/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/michele-goano/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/paolo-caravelli/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/michelle-ghrist/</loc>
     <lastmod>2000-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1312,7 +1215,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/kim-chuan-toh/</loc>
     <lastmod>1998-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1328,7 +1230,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/stephen-a-vavasis/</loc>
     <lastmod>1998-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1339,7 +1240,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/b-fomberg/</loc>
     <lastmod>1997-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1350,25 +1250,21 @@
   <url>
     <loc>https://tobydriscoll.net/authors/g-wojcik/</loc>
     <lastmod>1997-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/j-mould/</loc>
     <lastmod>1997-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/l-carcione/</loc>
     <lastmod>1997-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/l-nikodym/</loc>
     <lastmod>1997-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1379,13 +1275,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/r-waag/</loc>
     <lastmod>1997-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/authors/t-driscoll/</loc>
     <lastmod>1997-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1416,7 +1310,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/tobin-allen-driscoll/</loc>
     <lastmod>1996-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1427,16 +1320,10 @@
   <url>
     <loc>https://tobydriscoll.net/authors/jeffrey-s-baggett/</loc>
     <lastmod>1995-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/publication/driscoll-conformal-mapping-convergence-1994/</loc>
-    <lastmod>1994-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</loc>
     <lastmod>1994-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -1446,9 +1333,13 @@
   </url>
   
   <url>
+    <loc>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</loc>
+    <lastmod>1994-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tobydriscoll.net/authors/anne-e-trefethen/</loc>
     <lastmod>1993-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1464,7 +1355,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/john-e-dzielski/</loc>
     <lastmod>1993-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1475,7 +1365,6 @@
   <url>
     <loc>https://tobydriscoll.net/authors/satish-c-reddy/</loc>
     <lastmod>1993-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -1491,13 +1380,11 @@
   <url>
     <loc>https://tobydriscoll.net/authors/je-dzielski/</loc>
     <lastmod>1992-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tobydriscoll.net/publication_types/7/</loc>
     <lastmod>1991-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

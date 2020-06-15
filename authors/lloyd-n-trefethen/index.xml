@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lloyd N Trefethen on Toby Driscoll</title>
+    <title>Lloyd N Trefethen | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/lloyd-n-trefethen/</link>
-    <description>Recent content in Lloyd N Trefethen on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/lloyd-n-trefethen/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/lloyd-n-trefethen/index.xml" rel="self" type="application/rss+xml" />
+    <description>Lloyd N Trefethen</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Lloyd N Trefethen</title>
+      <link>https://tobydriscoll.net/authors/lloyd-n-trefethen/</link>
+    </image>
     
     <item>
       <title>Exploring ODEs</title>
       <link>https://tobydriscoll.net/publication/trefethen-exploring-od-es-2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-exploring-od-es-2017/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>Chebfun Guide</title>
       <link>https://tobydriscoll.net/publication/driscoll-chebfun-guide-2014/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-chebfun-guide-2014/</guid>
       <description></description>
     </item>
@@ -33,7 +32,6 @@
       <title>The Chebop System for Automatic Solution of Differential Equations</title>
       <link>https://tobydriscoll.net/publication/driscoll-chebop-system-automatic-2008-a/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-chebop-system-automatic-2008-a/</guid>
       <description></description>
     </item>
@@ -42,7 +40,6 @@
       <title>Schwarz–Christoffel Mapping</title>
       <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-mapping-2002/</link>
       <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-mapping-2002/</guid>
       <description></description>
     </item>
@@ -51,7 +48,6 @@
       <title>From Potential Theory to Matrix Iterations in Six Steps</title>
       <link>https://tobydriscoll.net/publication/driscoll-potential-theory-matrix-1998-a/</link>
       <pubDate>Thu, 01 Jan 1998 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-potential-theory-matrix-1998-a/</guid>
       <description></description>
     </item>
@@ -60,7 +56,6 @@
       <title>Schwarz-Christoffel Mapping in the Computer Era</title>
       <link>https://tobydriscoll.net/publication/trefethen-schwarz-christoffel-mapping-computer-1998/</link>
       <pubDate>Thu, 01 Jan 1998 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-schwarz-christoffel-mapping-computer-1998/</guid>
       <description></description>
     </item>
@@ -69,7 +64,6 @@
       <title>Matrix Iterations: The Six Gaps between Potential Theory and Convergence</title>
       <link>https://tobydriscoll.net/publication/driscoll-matrix-iterations-six-1996/</link>
       <pubDate>Mon, 01 Jan 1996 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-matrix-iterations-six-1996/</guid>
       <description></description>
     </item>
@@ -78,7 +72,6 @@
       <title>Pseudospectra for the Wave Equation with an Absorbing Boundary</title>
       <link>https://tobydriscoll.net/publication/driscoll-pseudospectra-wave-equation-1996-a/</link>
       <pubDate>Mon, 01 Jan 1996 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-pseudospectra-wave-equation-1996-a/</guid>
       <description></description>
     </item>
@@ -87,7 +80,6 @@
       <title>A Mostly Linear Model of Transition to Turbulence</title>
       <link>https://tobydriscoll.net/publication/baggett-mostly-linear-model-1995/</link>
       <pubDate>Sun, 01 Jan 1995 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/baggett-mostly-linear-model-1995/</guid>
       <description></description>
     </item>
@@ -96,7 +88,6 @@
       <title>Hydrodynamic Stability without Eigenvalues</title>
       <link>https://tobydriscoll.net/publication/trefethen-hydrodynamic-stability-eigenvalues-1993-a/</link>
       <pubDate>Fri, 01 Jan 1993 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-hydrodynamic-stability-eigenvalues-1993-a/</guid>
       <description></description>
     </item>
@@ -105,7 +96,6 @@
       <title>Pseudospectra of the Wave Operator with an Absorbing Boundary</title>
       <link>https://tobydriscoll.net/publication/driscoll-pseudospectra-wave-operator-1993/</link>
       <pubDate>Fri, 01 Jan 1993 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-pseudospectra-wave-operator-1993/</guid>
       <description></description>
     </item>
@@ -114,7 +104,6 @@
       <title>A New Direction in Hydrodynamic Stability: Beyond Eigenvalues</title>
       <link>https://tobydriscoll.net/publication/trefethen-new-direction-hydrodynamic-1992/</link>
       <pubDate>Wed, 01 Jan 1992 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/trefethen-new-direction-hydrodynamic-1992/</guid>
       <description></description>
     </item>

@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE html><html lang="en-us" >
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.3.1">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
 
   
 
@@ -21,7 +20,7 @@
   
   
 
-  <meta name="author" content="Toby Driscoll">
+  
 
   
   
@@ -29,16 +28,14 @@
     
   
   <meta name="description" content="Notebooks are viewable for matlab and julia.
-This is one of my favorite demos. It illustrates low-rank approximation by the SVD to show patterns in voting behavior for the U.S. Congress. With no a priori models, project onto two singular vectors and pow&ndash;meaning and insight jump out.
-I took one shortcut. I have a MATLAB script that reads the raw voting data from voteview.com and converts it to a matrix. No doubt I would learn a lot about I/O in Julia if I translated it, but I got short on time and instead saved it locally from MATLAB.">
+This is one of my favorite demos. It illustrates low-rank approximation by the SVD to show patterns in voting behavior for the U.S. Congress. With no a priori models, project onto two singular vectors and pow&ndash; meaning and insight jump out.
+I took one shortcut. I have a MATLAB script that reads the raw voting data from voteview.com and converts it to a matrix.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/">
 
   
 
-
-  
 
   
   
@@ -49,11 +46,17 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
   
   
   
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
     
@@ -63,8 +66,8 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
     
       
       
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow-night.min.css" crossorigin="anonymous" title="hl-light">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow-night.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/tomorrow-night.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/tomorrow-night.min.css" crossorigin="anonymous" title="hl-dark" disabled>
       
     
 
@@ -72,53 +75,186 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
 
     
 
-  
-
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather|Lato|PT+Mono">
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="/css/academic.min.ec0c5f788ab93e6c4507419ebc7935b4.css">
-
-  
-    
-    
     
     
       
-    
-    
-    
-    <link rel="stylesheet" href="/css/academic.cb16bea773413839ee417912d85fc2c1.css">
-  
 
-  
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-141510424-1', 'auto');
       
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
+      
+
+      
     
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
     
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141510424-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-141510424-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
   
   
 
   
 
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/">
 
@@ -126,8 +262,12 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
   
   
   
+  
+  
+  
     
     
+  
   
   <meta property="twitter:card" content="summary">
   
@@ -138,14 +278,60 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
   <meta property="og:url" content="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/">
   <meta property="og:title" content="Trefethen &amp; Bau &amp; MATLAB &amp; Julia Lecture 5: More on the SVD | Toby Driscoll">
   <meta property="og:description" content="Notebooks are viewable for matlab and julia.
-This is one of my favorite demos. It illustrates low-rank approximation by the SVD to show patterns in voting behavior for the U.S. Congress. With no a priori models, project onto two singular vectors and pow&ndash;meaning and insight jump out.
-I took one shortcut. I have a MATLAB script that reads the raw voting data from voteview.com and converts it to a matrix. No doubt I would learn a lot about I/O in Julia if I translated it, but I got short on time and instead saved it locally from MATLAB."><meta property="og:image" content="https://tobydriscoll.net/img/icon-192.png">
-  <meta property="og:locale" content="en-us">
+This is one of my favorite demos. It illustrates low-rank approximation by the SVD to show patterns in voting behavior for the U.S. Congress. With no a priori models, project onto two singular vectors and pow&ndash; meaning and insight jump out.
+I took one shortcut. I have a MATLAB script that reads the raw voting data from voteview.com and converts it to a matrix."><meta property="og:image" content="https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2016-09-12T19:47:08&#43;00:00">
+    
+      <meta property="article:published_time" content="2016-09-12T19:47:08&#43;00:00">
+    
+    <meta property="article:modified_time" content="2016-09-12T19:47:08&#43;00:00">
   
-  <meta property="article:modified_time" content="2016-09-12T19:47:08&#43;00:00">
+
   
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/"
+  },
+  "headline": "Trefethen \u0026 Bau \u0026 MATLAB \u0026 Julia Lecture 5: More on the SVD",
+  
+  "datePublished": "2016-09-12T19:47:08Z",
+  "dateModified": "2016-09-12T19:47:08Z",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Toby Driscoll",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Notebooks are viewable for matlab and julia.\nThis is one of my favorite demos. It illustrates low-rank approximation by the SVD to show patterns in voting behavior for the U.S. Congress. With no a priori models, project onto two singular vectors and pow\u0026ndash; meaning and insight jump out.\nI took one shortcut. I have a MATLAB script that reads the raw voting data from voteview.com and converts it to a matrix."
+}
+</script>
+
+  
+
+  
+
 
   
 
@@ -160,8 +346,7 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
 
 </head>
 
-
-<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -179,7 +364,7 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
       <div id="search-box">
         
         <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
         
       </div>
 
@@ -196,24 +381,41 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
 
 
   
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
+    <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="/">Toby Driscoll</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
+    </div>
+    
 
     
-    <div class="collapse navbar-collapse" id="navbar">
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Toby Driscoll</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
 
       
-      
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav d-md-inline-flex">
         
 
         
@@ -363,34 +565,46 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
         
 
       
+
+        
       </ul>
-      <ul class="navbar-nav ml-auto">
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
       
 
-        
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
 
-        
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
+      
 
-        
+    </ul>
 
-        
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-        
-
-      </ul>
-
-    </div>
   </div>
 </nav>
 
 
-  <article class="article" itemscope itemtype="http://schema.org/Article">
+  <article class="article">
 
   
 
@@ -411,17 +625,13 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Trefethen &amp; Bau &amp; MATLAB &amp; Julia Lecture 5: More on the SVD</h1>
+  <h1>Trefethen &amp; Bau &amp; MATLAB &amp; Julia Lecture 5: More on the SVD</h1>
 
   
 
   
     
 
-
-
-<meta content="2016-09-12 19:47:08 &#43;0000 &#43;0000" itemprop="datePublished">
-<meta content="2016-09-12 19:47:08 &#43;0000 &#43;0000" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -434,7 +644,7 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
     
       
     
-    <time>Sep 12, 2016</time>
+    Sep 12, 2016
   </span>
   
 
@@ -449,17 +659,70 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
 
   
   
+  
 
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    <a href="/categories/computing/">computing</a>, <a href="/categories/teaching/">teaching</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/categories/computing/">computing</a>, <a href="/categories/teaching/">teaching</a></span>
   
 
-  
+</div>
+
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Notebooks are viewable for 
+<a href="https://gist.github.com/tobydriscoll/934b88e10ac3b6ce6ac95c8c8f480aef" target="_blank" rel="noopener">matlab</a> and 
+<a href="https://gist.github.com/tobydriscoll/40d7b7670558f58958e9136febaeec20" target="_blank" rel="noopener">julia</a>.</p>
+<p>This is one of my favorite demos. It illustrates low-rank approximation by the SVD to show patterns in voting behavior for the U.S. Congress. With no a priori models, project onto two singular vectors and pow&ndash;
+<a href="http://www.nytimes.com/2003/06/24/science/a-mathematician-crunches-the-supreme-court-s-numbers.html" target="_blank" rel="noopener">meaning and insight jump out</a>.</p>
+<p>I took one shortcut. I have a MATLAB script that reads the raw voting data from 
+<a href="http://voteview.com" target="_blank" rel="noopener">voteview.com</a> and converts it to a matrix. No doubt I would learn a lot about I/O in Julia if I translated it, but I got short on time and instead saved it locally from MATLAB. Then load it using the 
+<a href="https://github.com/simonster/MAT.jl" target="_blank" rel="noopener">MAT package</a> for Julia and Bob&rsquo;s your uncle.</p>
+<p>I did stumble into a nasty gotcha, though. I decided to make histograms for the distributions of the &ldquo;partisan&rdquo; and &ldquo;bipartisan&rdquo; coordinate values. Unfortunately, there&rsquo;s a name clash: MATLAB&rsquo;s best known histogram plotter is called <code>hist</code>, but Julia has a built-in function by that name that just bins the data. I knew there was also a <code>hist()</code> in PyPlot, but to my bafflement the access for it was not <code>PyPlot.hist()</code>, which does exist:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">help<span style="color:#f92672">?&gt;</span> PyPlot<span style="color:#f92672">.</span>hist
+ hist(v, e) <span style="color:#f92672">-&amp;</span>gt; e, counts
+
+Compute the histogram of v <span style="color:#66d9ef">using</span> a vector<span style="color:#f92672">/</span>range e as the edges<span style="color:#f92672">...</span>
+hist(v[, n]) <span style="color:#f92672">-&amp;</span>gt; e, counts
+
+Compute the histogram of v, optionally <span style="color:#66d9ef">using</span> approximately<span style="color:#f92672">...</span>
+</code></pre></div><p>This is Julia&rsquo;s built-in function. The next thing I tried was typing in <code>Pyplot.</code> and hitting tab for a list of completions. Most of the familiar MATLAB-style plotting functions are there, but no <code>hist</code>, just <code>hist2D</code>, which is not equivalent. I don&rsquo;t remember now where I found it, but the way to call the function I want is the bizarre <code>plt[:hist]</code>. Neither <code>?plt</code> nor tab completion gives any whiff of this syntax or possibility. Obviously there&rsquo;s some logic at work here, and no doubt my Julia and Python ignorance are showing, but this was the most frustrating Julia experience I&rsquo;ve had yet.</p>
+<p>(Ironically, MATLAB has a newer plotting function called <code>histogram</code>, which does not seem to conflict with any Julia names!)</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
 <div class="share-box" aria-hidden="true">
   <ul class="share">
     
@@ -485,7 +748,7 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
       
       <li>
         <a href="https://www.facebook.com/sharer.php?u=https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/&amp;t=Trefethen%20&amp;amp;%20Bau%20&amp;amp;%20MATLAB%20&amp;amp;%20Julia%20Lecture%205:%20More%20on%20the%20SVD" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-facebook"></i>
         </a>
       </li>
     
@@ -523,7 +786,7 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Trefethen%20&amp;amp;%20Bau%20&amp;amp;%20MATLAB%20&amp;amp;%20Julia%20Lecture%205:%20More%20on%20the%20SVD%20https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Trefethen%20&amp;amp;%20Bau%20&amp;amp;%20MATLAB%20&amp;amp;%20Julia%20Lecture%205:%20More%20on%20the%20SVD%20https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -545,62 +808,167 @@ I took one shortcut. I have a MATLAB script that reads the raw voting data from 
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+  
   
 
-</div>
 
+
+
+
+  
     
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/authors/driscoll/avatar_hu4e929924294f93c0f179ff7f27e8c366_2280047_270x270_fill_q90_lanczos_center.jpg" alt="">
+      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://tobydriscoll.net/"></a></h5>
+        <h6 class="card-subtitle">Professor of Mathematical Sciences</h6>
+        <p class="card-text">My research interests are in scientific computation, mathematical software, and applications of mathematics in the life sciences.</p>
+        <ul class="network-icon" aria-hidden="true">
   
-</div>
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/tobydriscoll" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=V2c1tmAAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/tobydriscoll" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/channel/UCcDR49dQ8fGiJfF-vAxEDNw" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0002-1490-2545" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://tobydriscoll.github.io/markdown-cv/" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
 
-
-
-  <div class="article-container">
-
-    <div class="article-style" itemprop="articleBody">
-      <p>Notebooks are viewable for <a href="https://gist.github.com/tobydriscoll/934b88e10ac3b6ce6ac95c8c8f480aef" target="_blank">matlab</a> and <a href="https://gist.github.com/tobydriscoll/40d7b7670558f58958e9136febaeec20" target="_blank">julia</a>.</p>
-
-<p>This is one of my favorite demos. It illustrates low-rank approximation by the SVD to show patterns in voting behavior for the U.S. Congress. With no a priori models, project onto two singular vectors and pow&ndash;<a href="http://www.nytimes.com/2003/06/24/science/a-mathematician-crunches-the-supreme-court-s-numbers.html" target="_blank">meaning and insight jump out</a>.</p>
-
-<p>I took one shortcut. I have a MATLAB script that reads the raw voting data from <a href="http://voteview.com" target="_blank">voteview.com</a> and converts it to a matrix. No doubt I would learn a lot about I/O in Julia if I translated it, but I got short on time and instead saved it locally from MATLAB. Then load it using the <a href="https://github.com/simonster/MAT.jl" target="_blank">MAT package</a> for Julia and Bob&rsquo;s your uncle.</p>
-
-<p>I did stumble into a nasty gotcha, though. I decided to make histograms for the distributions of the &ldquo;partisan&rdquo; and &ldquo;bipartisan&rdquo; coordinate values. Unfortunately, there&rsquo;s a name clash: MATLAB&rsquo;s best known histogram plotter is called <code>hist</code>, but Julia has a built-in function by that name that just bins the data. I knew there was also a <code>hist()</code> in PyPlot, but to my bafflement the access for it was not <code>PyPlot.hist()</code>, which does exist:</p>
-
-<pre><code class="language-julia">help?&gt; PyPlot.hist
- hist(v, e) -&amp;gt; e, counts
-
-Compute the histogram of v using a vector/range e as the edges...
-hist(v[, n]) -&amp;gt; e, counts
-
-Compute the histogram of v, optionally using approximately...
-</code></pre>
-
-<p>This is Julia&rsquo;s built-in function. The next thing I tried was typing in <code>Pyplot.</code> and hitting tab for a list of completions. Most of the familiar MATLAB-style plotting functions are there, but no <code>hist</code>, just <code>hist2D</code>, which is not equivalent. I don&rsquo;t remember now where I found it, but the way to call the function I want is the bizarre <code>plt[:hist]</code>. Neither <code>?plt</code> nor tab completion gives any whiff of this syntax or possibility. Obviously there&rsquo;s some logic at work here, and no doubt my Julia and Python ignorance are showing, but this was the most frustrating Julia experience I&rsquo;ve had yet.</p>
-
-<p>(Ironically, MATLAB has a newer plotting function called <code>histogram</code>, which does not seem to conflict with any Julia names!)</p>
-
+      </div>
     </div>
-
-    
-
+  
 
 
-    
-      
+
+
+
+
 
 
 
@@ -610,155 +978,10 @@ Compute the histogram of v, optionally using approximately...
 
 
   
-
-
-
-
-
   
-  
-  
-    
-  
-  
-  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
-    
-      
-      <img class="portrait mr-3" src="/authors/driscoll/avatar_hu4e929924294f93c0f179ff7f27e8c366_2280047_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
-    
-
-    <div class="media-body">
-      <h5 class="card-title" itemprop="name"><a href="https://tobydriscoll.net/">Toby Driscoll</a></h5>
-      <h6 class="card-subtitle">Professor of Mathematical Sciences</h6>
-      <p class="card-text" itemprop="description">My research interests are in scientific computation, mathematical software, and applications of mathematics in the life sciences.</p>
-      <ul class="network-icon" aria-hidden="true">
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a itemprop="sameAs" href="/#contact" >
-              <i class="fas fa-envelope"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a itemprop="sameAs" href="https://twitter.com/tobydriscoll" target="_blank" rel="noopener">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a itemprop="sameAs" href="https://scholar.google.com/citations?user=V2c1tmAAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-              <i class="ai ai-google-scholar"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a itemprop="sameAs" href="https://github.com/tobydriscoll" target="_blank" rel="noopener">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-            
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a itemprop="sameAs" href="https://www.youtube.com/channel/UCcDR49dQ8fGiJfF-vAxEDNw" target="_blank" rel="noopener">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a itemprop="sameAs" href="https://orcid.org/0000-0002-1490-2545" target="_blank" rel="noopener">
-              <i class="ai ai-orcid"></i>
-            </a>
-          </li>
-        
-          
-          
-          
-          
-          
-          
-          
-            
-          
-          <li>
-            <a itemprop="sameAs" href="https://tobydriscoll.github.io/markdown-cv/" target="_blank" rel="noopener">
-              <i class="ai ai-cv"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
 
 
-      
-      
-    
-
-    
-
-    
 
 
   </div>
@@ -769,33 +992,23 @@ Compute the histogram of v, optionally using approximately...
     
     
     
-    <script src="/js/mathjax-config.js"></script>
-    
-
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
       
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
         
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/matlab.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/matlab.min.js"></script>
         
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/julia.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/julia.min.js"></script>
         
       
 
-      
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
-      
     
 
     
@@ -803,27 +1016,29 @@ Compute the histogram of v, optionally using approximately...
 
     
     
+    <script>const code_highlighting = true;</script>
     
 
     
     
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>const isSiteThemeDark = false;</script>
     
 
+    
+    
+    
+    
     
     
     <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "results found",
-        'no_results': "No results found"
-      };
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
       const content_type = {
         'post': "Posts",
         'project': "Projects",
         'publication' : "Publications",
-        'talk' : "Talks"
+        'talk' : "Talks",
+        'slides' : "Slides"
         };
     </script>
     
@@ -857,6 +1072,12 @@ Compute the histogram of v, optionally using approximately...
 
     
     
+
+    
+    
+
+    
+    
     
     
     
@@ -869,7 +1090,7 @@ Compute the histogram of v, optionally using approximately...
     
     
     
-    <script src="/js/academic.min.9ef1b53ee2bde6c7f33b150c6ba4d452.js"></script>
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
 
     
 
@@ -878,6 +1099,7 @@ Compute the histogram of v, optionally using approximately...
 
 
 
+  
   
   <div class="container">
     <footer class="site-footer">
@@ -885,14 +1107,24 @@ Compute the histogram of v, optionally using approximately...
 
   <p class="powered-by">
     
+  </p>
 
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
     <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
     
     <span class="float-right" aria-hidden="true">
-      <a href="#" id="back_to_top">
+      <a href="#" class="back-to-top">
         <span class="button_icon">
           <i class="fas fa-chevron-up fa-2x"></i>
         </span>

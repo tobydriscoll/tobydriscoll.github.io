@@ -1,52 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>academia on Toby Driscoll</title>
+    <title>academia | Toby Driscoll</title>
     <link>https://tobydriscoll.net/categories/academia/</link>
-    <description>Recent content in academia on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 02 Feb 2018 20:54:56 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/categories/academia/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/categories/academia/index.xml" rel="self" type="application/rss+xml" />
+    <description>academia</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 02 Feb 2018 20:54:56 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>academia</title>
+      <link>https://tobydriscoll.net/categories/academia/</link>
+    </image>
     
     <item>
       <title>Jekyll for clicker questions</title>
       <link>https://tobydriscoll.net/blog/jekyll-for-clicker-questions/</link>
       <pubDate>Fri, 02 Feb 2018 20:54:56 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/blog/jekyll-for-clicker-questions/</guid>
       <description>&lt;p&gt;For a few years, I&amp;rsquo;ve been a fan of clickers (aka personal response systems) for large lecture sections. Clickers are a simple&amp;ndash;and scalable&amp;ndash;way to incorporate a little widespread active learning in the classroom. They can&amp;rsquo;t work miracles, but they do allow me to reward attendance, rouse the students once in a while, and give good feedback to all of us about how well the latest concepts are sinking in. I like the accountability: If you got the question wrong when 80% of the class got it right, that&amp;rsquo;s on you, but if 20% of the class got it right, that&amp;rsquo;s on me.&lt;/p&gt;
-
-&lt;p&gt;UD is an &lt;a href=&#34;http://www.iclicker.com&#34; target=&#34;_blank&#34;&gt;iclicker&lt;/a&gt; shop. When I want to poll the class, I click a &amp;ldquo;go&amp;rdquo; button on a small toolbar that overlays any other application. When I&amp;rsquo;m done, I click &amp;ldquo;stop.&amp;rdquo; I can show the results and designate the correct answer on the spot, or I can go back later and pick the right answer while looking at a screenshot from when the question started.&lt;/p&gt;
-
+&lt;p&gt;UD is an 
+&lt;a href=&#34;http://www.iclicker.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;iclicker&lt;/a&gt; shop. When I want to poll the class, I click a &amp;ldquo;go&amp;rdquo; button on a small toolbar that overlays any other application. When I&amp;rsquo;m done, I click &amp;ldquo;stop.&amp;rdquo; I can show the results and designate the correct answer on the spot, or I can go back later and pick the right answer while looking at a screenshot from when the question started.&lt;/p&gt;
 &lt;p&gt;In the past I&amp;rsquo;ve used clickers with handwritten questions projected using a document camera. I don&amp;rsquo;t get the screenshot this way, but it works fine. However, in the best case I&amp;rsquo;m left to manage 50-100 sheets of paper for a course. That&amp;rsquo;s something I&amp;rsquo;m increasingly cranky about doing in my life overall, and I&amp;rsquo;m likely to fail at it during the heat of a lecture, especially when (as I like to do) I start replaying questions from past weeks or months. Plus, if I later decide to tweak a question or the answer choices, I&amp;rsquo;ve got to scrap a page and rewrite it.&lt;/p&gt;
-
-&lt;p&gt;Enter &lt;a href=&#34;http://jekyllrb.com&#34; target=&#34;_blank&#34;&gt;Jekyll&lt;/a&gt;. This is a brilliant software t0ol that converts lightly marked data files into a website. It&amp;rsquo;s blog-centric, but it can be used for other kinds of data as well, and I&amp;rsquo;ve customized it for collecting clicker questions. You can get it for yourself from &lt;a href=&#34;https://github.com/tobydriscoll/clicker-quiz&#34; target=&#34;_blank&#34;&gt;this Github repo&lt;/a&gt;. It requires being comfortable with a command line, but it&amp;rsquo;s not otherwise technically challenging.&lt;/p&gt;
-
+&lt;p&gt;Enter 
+&lt;a href=&#34;http://jekyllrb.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jekyll&lt;/a&gt;. This is a brilliant software t0ol that converts lightly marked data files into a website. It&amp;rsquo;s blog-centric, but it can be used for other kinds of data as well, and I&amp;rsquo;ve customized it for collecting clicker questions. You can get it for yourself from 
+&lt;a href=&#34;https://github.com/tobydriscoll/clicker-quiz&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this Github repo&lt;/a&gt;. It requires being comfortable with a command line, but it&amp;rsquo;s not otherwise technically challenging.&lt;/p&gt;
 &lt;p&gt;For instance, in one file I have&lt;/p&gt;
-
-&lt;pre&gt;---
-layout: question
-chapter: Introduction
-title: Derivative
----
-{::comment}
-The \dd macro is defined in /_includes/texmacros.md.
-{:/comment}
-What is $\dd{}{x}\left(e^x\right)$?
-
-1. *$e^x$*{: #correct}
-1. $x$
-1. $1$
-1. $\ln(x)$
-1. $\tan(x)$&lt;/pre&gt;
-
-&lt;p&gt;The page that results can be viewed &lt;a href=&#34;https://tobydriscoll.github.io/clicker-quiz/questions/introduction/q02.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.  It&amp;rsquo;s pretty easy to see how the output arises from the input. All I do is make one file per question, putting them into subdirectories if I want. They&amp;rsquo;re collected and indexed by the &amp;ldquo;chapter&amp;rdquo; property at the top of the file.&lt;/p&gt;
-
-&lt;p&gt;Having maintained more than one &lt;a href=&#34;http://tobydriscoll.net&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt; of HTML files by hand, I found Jekyll to be a revelation. Headers and footers can be included automatically on all pages set to a certain style. (I use this to define MathJax macros in one file that get copied into all the output question pages.)  Content, such as an index or table of contents, can be generated programmatically based on properties of the data. There&amp;rsquo;s a nice &lt;a href=&#34;https://www.chronicle.com/blogs/profhacker/jekyll1&#34; target=&#34;_blank&#34;&gt;step-by-step series for getting started with Jekyll&lt;/a&gt; on the ProfHacker blog.&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The page that results can be viewed 
+&lt;a href=&#34;https://tobydriscoll.github.io/clicker-quiz/questions/introduction/q02.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.  It&amp;rsquo;s pretty easy to see how the output arises from the input. All I do is make one file per question, putting them into subdirectories if I want. They&amp;rsquo;re collected and indexed by the &amp;ldquo;chapter&amp;rdquo; property at the top of the file.&lt;/p&gt;
+&lt;p&gt;Having maintained more than one 
+&lt;a href=&#34;http://tobydriscoll.net&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt; of HTML files by hand, I found Jekyll to be a revelation. Headers and footers can be included automatically on all pages set to a certain style. (I use this to define MathJax macros in one file that get copied into all the output question pages.)  Content, such as an index or table of contents, can be generated programmatically based on properties of the data. There&amp;rsquo;s a nice 
+&lt;a href=&#34;https://www.chronicle.com/blogs/profhacker/jekyll1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;step-by-step series for getting started with Jekyll&lt;/a&gt; on the ProfHacker blog.&lt;/p&gt;
 &lt;p&gt;Jekyll versus raw HTML is like using a power drill/driver versus the Craftsman screwdriver with the hard plastic handle that digs divots into your palm when there&amp;rsquo;s a job of any decent size. I&amp;rsquo;ll probably move my personal site this blog over to Jekyll at some point.&lt;/p&gt;
 </description>
     </item>
@@ -55,41 +40,52 @@ What is $\dd{}{x}\left(e^x\right)$?
       <title>Data science? Data science!</title>
       <link>https://tobydriscoll.net/blog/data-science-data-science/</link>
       <pubDate>Thu, 30 Jul 2015 13:36:33 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/blog/data-science-data-science/</guid>
-      <description>&lt;p&gt;I just received a copy of &lt;a href=&#34;http://sinews.siam.org/&#34; target=&#34;_blank&#34;&gt;SIAM News&lt;/a&gt; on a dead tree. It features &lt;a href=&#34;http://sinews.siam.org/DetailsPage/tabid/607/ArticleID/565/Data-Science.aspx&#34; target=&#34;_blank&#34;&gt;a piece&lt;/a&gt; by &lt;a href=&#34;https://www.cs.utah.edu/~crj/&#34; target=&#34;_blank&#34;&gt;Chris Johnson&lt;/a&gt; and &lt;a href=&#34;http://math.uwaterloo.ca/amath-numerical-analysis-and-scientific-computing-group/hans-de-stercks-homepage&#34; target=&#34;_blank&#34;&gt;Hans de Sterck&lt;/a&gt; about &amp;ldquo;Data Science: What Is It and How Is It Taught?&amp;rdquo; As usual in these articles, I find the specifics more interesting than the generalities of a panel discussion. I really liked this bit about the new program in &lt;a href=&#34;http://www.science.vt.edu/ais/cmda/&#34; target=&#34;_blank&#34;&gt;Computational Modeling and Data Analytics at Virginia Tech&lt;/a&gt;:&lt;/p&gt;
-
+      <description>&lt;p&gt;I just received a copy of 
+&lt;a href=&#34;http://sinews.siam.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM News&lt;/a&gt; on a dead tree. It features 
+&lt;a href=&#34;http://sinews.siam.org/DetailsPage/tabid/607/ArticleID/565/Data-Science.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a piece&lt;/a&gt; by 
+&lt;a href=&#34;https://www.cs.utah.edu/~crj/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chris Johnson&lt;/a&gt; and 
+&lt;a href=&#34;http://math.uwaterloo.ca/amath-numerical-analysis-and-scientific-computing-group/hans-de-stercks-homepage&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hans de Sterck&lt;/a&gt; about &amp;ldquo;Data Science: What Is It and How Is It Taught?&amp;rdquo; As usual in these articles, I find the specifics more interesting than the generalities of a panel discussion. I really liked this bit about the new program in 
+&lt;a href=&#34;http://www.science.vt.edu/ais/cmda/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Computational Modeling and Data Analytics at Virginia Tech&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In a sense, creating such a program offers the opportunity to rethink curricula on classical topics like calculus that have at many institutions not seen substantial change throughout most of the past century.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;This! Well outside the context of data science, too.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m so sick of teaching calculus as though it were still 1960. Not that calculus has changed, of course, but what we need from it has been utterly transformed. In the age of computing, knowledge of calculus is more useful for posing the right questions&amp;mdash;as opposed to getting answers to mindless exercises that can be done in seconds on &lt;a href=&#34;http://wolframalpha.com&#34; target=&#34;_blank&#34;&gt;Wolfram Alpha&lt;/a&gt;. Don&amp;rsquo;t even get me started on teaching series convergence tests to engineering freshmen.&lt;/p&gt;
-
-&lt;p&gt;As far as how to teach data science&amp;hellip;let me figure out how to learn it, first. I&amp;rsquo;m intrigued by &lt;a href=&#34;https://github.com/okulbilisim/awesome-datascience&#34; target=&#34;_blank&#34;&gt;this repository&lt;/a&gt; as a start.&lt;/p&gt;
-
-
+&lt;p&gt;I&amp;rsquo;m so sick of teaching calculus as though it were still 1960. Not that calculus has changed, of course, but what we need from it has been utterly transformed. In the age of computing, knowledge of calculus is more useful for posing the right questions&amp;mdash;as opposed to getting answers to mindless exercises that can be done in seconds on 
+&lt;a href=&#34;http://wolframalpha.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wolfram Alpha&lt;/a&gt;. Don&amp;rsquo;t even get me started on teaching series convergence tests to engineering freshmen.&lt;/p&gt;
+&lt;p&gt;As far as how to teach data science&amp;hellip;let me figure out how to learn it, first. I&amp;rsquo;m intrigued by 
+&lt;a href=&#34;https://github.com/okulbilisim/awesome-datascience&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this repository&lt;/a&gt; as a start.&lt;/p&gt;
 
 
 
 
 
-&lt;figure&gt;
-
-&lt;img src=&#34;https://camo.githubusercontent.com/9dca9506dbabc0ea73aedb6d2981808152ae6e90/687474703a2f2f692e696d6775722e636f6d2f57344e524964552e706e67&#34; alt=&#34;Thanks to [@kzawadz](http://twitter.com/kzawadz) for the infographic. Covered by [Creative Commons A/NC/SA license](http://creativecommons.org/licenses/by-nc-sa/4.0/).&#34; width=&#34;500&#34; &gt;
 
 
 
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-thanks-to-kzawadzhttptwittercomkzawadz-for-the-infographic-covered-by-creative-commons-ancsa-licensehttpcreativecommonsorglicensesby-nc-sa40&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://camo.githubusercontent.com/9dca9506dbabc0ea73aedb6d2981808152ae6e90/687474703a2f2f692e696d6775722e636f6d2f57344e524964552e706e67&#34; data-caption=&#34;Thanks to &amp;lt;a href=&amp;#34;http://twitter.com/kzawadz&amp;#34;&amp;gt;@kzawadz&amp;lt;/a&amp;gt; for the infographic. Covered by &amp;lt;a href=&amp;#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&amp;#34;&amp;gt;Creative Commons A/NC/SA license&amp;lt;/a&amp;gt;.&#34;&gt;
+
+
+  &lt;img src=&#34;https://camo.githubusercontent.com/9dca9506dbabc0ea73aedb6d2981808152ae6e90/687474703a2f2f692e696d6775722e636f6d2f57344e524964552e706e67&#34; alt=&#34;&#34; width=&#34;500&#34; &gt;
+&lt;/a&gt;
+
+
   
-  &lt;p&gt;
-    Thanks to &lt;a href=&#34;http://twitter.com/kzawadz&#34; target=&#34;_blank&#34;&gt;@kzawadz&lt;/a&gt; for the infographic. Covered by &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34; target=&#34;_blank&#34;&gt;Creative Commons A/NC/SA license&lt;/a&gt;.
-    
-    
-    
-  &lt;/p&gt; 
-&lt;/figcaption&gt;
+  
+  &lt;figcaption&gt;
+    Thanks to &lt;a href=&#34;http://twitter.com/kzawadz&#34;&gt;@kzawadz&lt;/a&gt; for the infographic. Covered by &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;Creative Commons A/NC/SA license&lt;/a&gt;.
+  &lt;/figcaption&gt;
+
 
 &lt;/figure&gt;
 
@@ -100,9 +96,11 @@ What is $\dd{}{x}\left(e^x\right)$?
       <title>Length of papers</title>
       <link>https://tobydriscoll.net/blog/length-of-papers/</link>
       <pubDate>Wed, 29 Jul 2015 14:44:07 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/blog/length-of-papers/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34;&gt;Nick Trefethen&lt;/a&gt; has &lt;a href=&#34;http://trefethen.net/2015/06/13/journal-articles-are-getting-longer-2/comment-page-1/#comment-732&#34; target=&#34;_blank&#34;&gt;posted&lt;/a&gt; a wonderful graph showing how the average length of papers published in several &lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0CB4QFjAAahUKEwi4ktrlyYDHAhWCHR4KHXRgBPQ&amp;amp;url=https%3A%2F%2Fwww.siam.org%2Fjournals%2F&amp;amp;ei=mua4VbjdDIK7ePTAkaAP&amp;amp;usg=AFQjCNEAU5ysKpu0RcHiazJR64ftWy1drA&amp;amp;sig2=slnnzBVvgEk_Tt5flE7Jtw&amp;amp;bvm=bv.98717601,d.dmo&#34; target=&#34;_blank&#34;&gt;SIAM journals&lt;/a&gt; has doubled over the last 40 years.&lt;/p&gt;
+      <description>&lt;p&gt;
+&lt;a href=&#34;http://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nick Trefethen&lt;/a&gt; has 
+&lt;a href=&#34;http://trefethen.net/2015/06/13/journal-articles-are-getting-longer-2/comment-page-1/#comment-732&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;posted&lt;/a&gt; a wonderful graph showing how the average length of papers published in several 
+&lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0CB4QFjAAahUKEwi4ktrlyYDHAhWCHR4KHXRgBPQ&amp;amp;url=https%3A%2F%2Fwww.siam.org%2Fjournals%2F&amp;amp;ei=mua4VbjdDIK7ePTAkaAP&amp;amp;usg=AFQjCNEAU5ysKpu0RcHiazJR64ftWy1drA&amp;amp;sig2=slnnzBVvgEk_Tt5flE7Jtw&amp;amp;bvm=bv.98717601,d.dmo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM journals&lt;/a&gt; has doubled over the last 40 years.&lt;/p&gt;
 </description>
     </item>
     

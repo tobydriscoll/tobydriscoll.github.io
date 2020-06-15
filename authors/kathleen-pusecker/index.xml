@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kathleen Pusecker on Toby Driscoll</title>
+    <title>Kathleen Pusecker | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/kathleen-pusecker/</link>
-    <description>Recent content in Kathleen Pusecker on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/kathleen-pusecker/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/kathleen-pusecker/index.xml" rel="self" type="application/rss+xml" />
+    <description>Kathleen Pusecker</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Kathleen Pusecker</title>
+      <link>https://tobydriscoll.net/authors/kathleen-pusecker/</link>
+    </image>
     
     <item>
       <title>A Transformative Model for Undergraduate Quantitative Biology Education</title>
       <link>https://tobydriscoll.net/publication/usher-transformative-model-undergraduate-2010-a/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/usher-transformative-model-undergraduate-2010-a/</guid>
       <description></description>
     </item>

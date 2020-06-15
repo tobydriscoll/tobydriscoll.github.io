@@ -1,87 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Toby Driscoll</title>
+    <title>Tags | Toby Driscoll</title>
     <link>https://tobydriscoll.net/tags/</link>
-    <description>Recent content in Tags on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jul 2019 11:55:12 -0400</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>teaching</title>
-      <link>https://tobydriscoll.net/tags/teaching/</link>
-      <pubDate>Tue, 16 Jul 2019 11:55:12 -0400</pubDate>
-      
-      <guid>https://tobydriscoll.net/tags/teaching/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>academia</title>
-      <link>https://tobydriscoll.net/tags/academia/</link>
-      <pubDate>Thu, 27 Jun 2019 15:20:05 -0400</pubDate>
-      
-      <guid>https://tobydriscoll.net/tags/academia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>computing</title>
-      <link>https://tobydriscoll.net/tags/computing/</link>
-      <pubDate>Thu, 27 Jun 2019 15:20:05 -0400</pubDate>
-      
-      <guid>https://tobydriscoll.net/tags/computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>scientific computing</title>
-      <link>https://tobydriscoll.net/tags/scientific-computing/</link>
-      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/tags/scientific-computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>book</title>
-      <link>https://tobydriscoll.net/tags/book/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/tags/book/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>matlab</title>
-      <link>https://tobydriscoll.net/tags/matlab/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/tags/matlab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://tobydriscoll.net/tags/programming/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>software</title>
-      <link>https://tobydriscoll.net/tags/software/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tobydriscoll.net/tags/software/</guid>
-      <description></description>
-    </item>
+      <atom:link href="https://tobydriscoll.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 16 Jul 2019 11:55:12 -0400</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Tags</title>
+      <link>https://tobydriscoll.net/tags/</link>
+    </image>
     
   </channel>
 </rss>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Richard Braun on Toby Driscoll</title>
+    <title>Richard Braun | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/richard-braun/</link>
-    <description>Recent content in Richard Braun on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/richard-braun/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/richard-braun/index.xml" rel="self" type="application/rss+xml" />
+    <description>Richard Braun</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Richard Braun</title>
+      <link>https://tobydriscoll.net/authors/richard-braun/</link>
+    </image>
     
     <item>
       <title>Simulation of Thin Film Equations on an Eye-Shaped Domain with Moving Boundary</title>
       <link>https://tobydriscoll.net/publication/brosch-simulation-thin-film-2016/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/brosch-simulation-thin-film-2016/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>Modeling Tear Film Evaporation and Breakup with Duplex Films</title>
       <link>https://tobydriscoll.net/publication/stapf-modeling-tear-film-2015/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/stapf-modeling-tear-film-2015/</guid>
       <description></description>
     </item>
@@ -33,7 +32,6 @@
       <title>A Model Problem for Tear Film Distribution on a Moving Rectangular Domain</title>
       <link>https://tobydriscoll.net/publication/deng-model-problem-tear-2012/</link>
       <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/deng-model-problem-tear-2012/</guid>
       <description></description>
     </item>
@@ -42,7 +40,6 @@
       <title>Recent Progress on Modeling the Human Tear Film</title>
       <link>https://tobydriscoll.net/publication/braun-recent-progress-modeling-2008/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/braun-recent-progress-modeling-2008/</guid>
       <description></description>
     </item>

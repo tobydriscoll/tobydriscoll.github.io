@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Louis Rossi on Toby Driscoll</title>
+    <title>Louis Rossi | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/louis-rossi/</link>
-    <description>Recent content in Louis Rossi on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2003 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/louis-rossi/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/louis-rossi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Louis Rossi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2003 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Louis Rossi</title>
+      <link>https://tobydriscoll.net/authors/louis-rossi/</link>
+    </image>
     
     <item>
       <title>Numerical Examination of a Model of Thermo-Acoustic Instabilites in Lean, Pre-Mixed Combustors.</title>
       <link>https://tobydriscoll.net/publication/driscoll-numerical-examination-model-2003/</link>
       <pubDate>Wed, 01 Jan 2003 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/driscoll-numerical-examination-model-2003/</guid>
       <description></description>
     </item>

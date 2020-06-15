@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rodrigo B Platte on Toby Driscoll</title>
+    <title>Rodrigo B Platte | Toby Driscoll</title>
     <link>https://tobydriscoll.net/authors/rodrigo-b-platte/</link>
-    <description>Recent content in Rodrigo B Platte on Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2006 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="https://tobydriscoll.net/authors/rodrigo-b-platte/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://tobydriscoll.net/authors/rodrigo-b-platte/index.xml" rel="self" type="application/rss+xml" />
+    <description>Rodrigo B Platte</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2006 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
+      <title>Rodrigo B Platte</title>
+      <link>https://tobydriscoll.net/authors/rodrigo-b-platte/</link>
+    </image>
     
     <item>
       <title>Eigenvalue Stability of Radial Basis Function Discretizations for Time-Dependent Problems</title>
       <link>https://tobydriscoll.net/publication/platte-eigenvalue-stability-radial-2006-a/</link>
       <pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/platte-eigenvalue-stability-radial-2006-a/</guid>
       <description></description>
     </item>
@@ -24,7 +24,6 @@
       <title>Polynomials and Potential Theory for Gaussian Radial Basis Function Interpolation</title>
       <link>https://tobydriscoll.net/publication/platte-polynomials-potential-theory-2005-a/</link>
       <pubDate>Sat, 01 Jan 2005 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/platte-polynomials-potential-theory-2005-a/</guid>
       <description></description>
     </item>
@@ -33,7 +32,6 @@
       <title>Computing Eigenmodes of Elliptic Operators Using Radial Basis Functions</title>
       <link>https://tobydriscoll.net/publication/platte-computing-eigenmodes-elliptic-2004-a/</link>
       <pubDate>Thu, 01 Jan 2004 00:00:00 +0000</pubDate>
-      
       <guid>https://tobydriscoll.net/publication/platte-computing-eigenmodes-elliptic-2004-a/</guid>
       <description></description>
     </item>
