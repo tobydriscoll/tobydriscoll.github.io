@@ -132,12 +132,39 @@ The algorithm we have described is encapsulated in [`qrfact`](function-qrfact). 
 
 (function-qrfact)=
 
-```{proof:function}
+```{proof:function} qrfact
 
 **QR factorization by Householder reflections.**
 
 ```{code-block} julia
 :lineno-start: 1
+"""
+    qrfact(A)
+
+QR factorization by Householder reflections. Returns Q and R.
+"""
+function qrfact(A)
+
+    m,n = size(A)
+    Qt = Matrix(Diagonal(ones(m)))
+    R = float(copy(A))
+    for k in 1:n
+      z = R[k:m,k]
+      v = [ -sign(z[1])*norm(z) - z[1]; -z[2:end] ]
+      nrmv = norm(v)
+      if nrmv < eps() continue; end     # nothing is done in this iteration
+      v = v / nrmv;                     # removes v'*v in other formulas
+      # Apply the reflection to each relevant column of A and Q
+      for j in 1:n
+        R[k:m,j] -= v*( 2*(v'*R[k:m,j]) )
+      end
+      for j in 1:m
+        Qt[k:m,j] -= v*( 2*(v'*Qt[k:m,j]) )
+      end
+    end
+    
+    return Qt',triu(R)
+end
 ```
 
 The Julia command `qr` works similarly to, but more efficiently than, [`qrfact`](function-qrfact). It finds the factorization in $\sim(2m n^2-n^3/3)$ flops asymptotically.

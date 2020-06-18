@@ -272,7 +272,35 @@
         
     </div><div class="proof-content">
 <p><strong>Trapezoid formula for numerical integration.</strong></p>
-<div class="highlight-julia notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
+<div class="highlight-julia notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">    trapezoid(f,a,b,n)</span>
+
+<span class="s">Apply the trapezoid integration formula for integrand `f` over interval [`a`,`b`],</span>
+<span class="s">broken up into `n` equal pieces. Returns estimate, vector of nodes, and vector of</span>
+<span class="s">integrand values at the nodes.</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">trapezoid</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">LinRange</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="p">(</span> <span class="n">sum</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="n">n</span><span class="p">])</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">y</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">T</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">y</span>
+<span class="k">end</span>
 </pre></div>
 </td></tr></table></div>
 </div></div><p>In the <a class="reference internal" href="pwlin.html#theorem-placcuracy"><span class="std std-ref">PL convergence theorem</span></a> we stated that the pointwise error in a piecewise linear interpolant with equal node spacing <span class="math notranslate nohighlight">\(h\)</span> is bounded by <span class="math notranslate nohighlight">\(O(h^2)\)</span> as <span class="math notranslate nohighlight">\(h\rightarrow 0\)</span>. Using <span class="math notranslate nohighlight">\(p\)</span> to stand for the piecewise linear interpolant, we obtain</p>

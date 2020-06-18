@@ -180,7 +180,7 @@ However, when `i` equals 1, the range `1:i-1` is empty and the sum fails. To avo
 **Forward substitution to solve a lower-triangular linear system**
 
 ```{code-block} julia
-:linenos:
+:lineno-start: 1
 """
     forwardsub(L,b)
 

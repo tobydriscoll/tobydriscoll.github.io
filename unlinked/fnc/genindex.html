@@ -276,6 +276,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="linsys/overview.html#term-copy"><strong>copy</strong></a>
+</li>
       <li><a href="localapprox/overview.html#term-cubic-spline"><strong>cubic spline</strong></a>
 </li>
       <li><a href="localapprox/overview.html#term-cubicsplineinterpolation"><strong>CubicSplineInterpolation</strong></a>
@@ -330,6 +332,8 @@
 </li>
       <li><a href="nonlineqn/fixed-point.html#index-0">fixed point problem</a>, <a href="nonlineqn/overview.html#term-fixed-point-problem"><strong>[1]</strong></a>
 </li>
+      <li><a href="linsys/overview.html#term-float"><strong>float</strong></a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="intro/floating-point.html#index-0">floating point numbers</a>, <a href="intro/overview.html#term-floating-point-numbers"><strong>[1]</strong></a>
@@ -356,6 +360,8 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="ivp/implicit.html#index-1">generating polynomials</a>, <a href="ivp/multistep.html#index-2">[1]</a>, <a href="ivp/overview.html#term-generating-polynomials"><strong>[2]</strong></a>
+</li>
       <li><a href="ivp/overview.html#term-global-error"><strong>global error</strong></a>
 </li>
       <li><a href="localapprox/integration.html#index-6">Gregory integration formula</a>
@@ -390,16 +396,25 @@
 </li>
       <li><a href="linsys/overview.html#term-induced-matrix-norm"><strong>induced matrix norm</strong></a>
 </li>
+      <li><a href="linsys/overview.html#term-inexacterror"><strong>InexactError</strong></a>
+</li>
       <li><a href="ivp/basics.html#index-0">initial-value problem</a>, <a href="ivp/overview.html#term-initial-value-problem"><strong>[1]</strong></a>
 
       <ul>
         <li><a href="ivp/euler.html#index-1">one-step method for solving</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="leastsq/qr.html#index-2">inner product</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    instability
+
+      <ul>
+        <li><a href="ivp/zerostability.html#index-1">of a mutistep formula</a>
+</li>
+      </ul></li>
       <li><a href="linsys/polyinterp.html#index-0">interpolation</a>, <a href="localapprox/interpolation.html#index-0">[1]</a>, <a href="linsys/overview.html#term-interpolation"><strong>[2]</strong></a>, <a href="localapprox/overview.html#term-interpolation"><strong>[3]</strong></a>
 
       <ul>
@@ -485,6 +500,12 @@
 </li>
       <li><a href="ivp/overview.html#term-multistep"><strong>multistep</strong></a>
 </li>
+      <li><a href="ivp/multistep.html#index-0">multistep method</a>, <a href="ivp/zerostability.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="ivp/implicit.html#index-0">implementation of</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -537,6 +558,8 @@
 
       <ul>
         <li><a href="localapprox/fd-converge.html#index-2">of a finite difference formula</a>
+</li>
+        <li><a href="ivp/multistep.html#index-4">of a multistep IVP formula</a>
 </li>
         <li><a href="ivp/euler.html#index-3">of a one-step IVP solver</a>
 </li>
@@ -615,7 +638,7 @@
 </li>
       <li><a href="ivp/overview.html#term-runge-kutta"><strong>Runge--Kutta</strong></a>
 </li>
-      <li><a href="ivp/rk.html#index-0">Runge--Kutta method</a>
+      <li><a href="ivp/adaptive.html#index-0">Runge--Kutta method</a>, <a href="ivp/multistep.html#index-1">[1]</a>, <a href="ivp/rk.html#index-0">[2]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -665,6 +688,8 @@
 </li>
       <li><a href="ivp/overview.html#term-stiff"><strong>stiff</strong></a>
 </li>
+      <li><a href="ivp/implicit.html#index-2">stiff differential equation</a>
+</li>
       <li><a href="intro/conditioning.html#index-0">subtractive cancellation</a>, <a href="intro/stability.html#index-0">[1]</a>, <a href="leastsq/qr.html#index-3">[2]</a>, <a href="linsys/pivoting.html#index-4">[3]</a>, <a href="localapprox/fd-converge.html#index-3">[4]</a>, <a href="intro/overview.html#term-subtractive-cancellation"><strong>[5]</strong></a>
 </li>
       <li><a href="nonlineqn/secant.html#index-1">superlinear convergence</a>, <a href="nonlineqn/overview.html#term-superlinear-convergence"><strong>[1]</strong></a>
@@ -687,14 +712,16 @@
       </ul></li>
       <li><a href="linsys/linear-systems.html#index-3">triangular matrix</a>, <a href="linsys/overview.html#term-triangular-matrix"><strong>[1]</strong></a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="linsys/structure.html#index-1">tridiagonal matrix</a>, <a href="linsys/overview.html#term-tridiagonal-matrix"><strong>[1]</strong></a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="localapprox/overview.html#term-truncation-error"><strong>truncation error</strong></a>
 
       <ul>
         <li><a href="localapprox/fd-converge.html#index-1">of a finite difference formula</a>
+</li>
+        <li><a href="ivp/multistep.html#index-3">of a multistep IVP formula</a>
 </li>
         <li><a href="ivp/euler.html#index-2">of a one-step IVP solver</a>
 </li>
@@ -736,6 +763,10 @@
 
 <h2 id="Z">Z</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="ivp/zerostability.html#index-2">zero-stability</a>
+</li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="linsys/overview.html#term-zeros"><strong>zeros</strong></a>
 </li>

@@ -24,7 +24,7 @@ t_i = a + ih, \qquad h=\frac{b-a}{n}, \qquad i=0,\ldots,n.
 
 The number $h$ is called the {term}`step size`.
 
-Because we don't get exactly correct values of the solution at the nodes, we need to take some care with the notation. From now on we let $\widehat{u}(t)$ denote the exact solution of the IVP. The approximate value at $t_i$ computed at the nodes by our numerical methods will be denoted by $u_i\approx \widehat{u}(t_i)$. Because we are given the initial value $u(a)=u_0$ exactly, there is no need to distinguish whether we mean $u_0$ as the exact or the numerical solution.
+Because we don't get exactly correct values of the solution at the nodes, we need to take some care with the notation. From now on we let $\hat{u}(t)$ denote the exact solution of the IVP. The approximate value at $t_i$ computed at the nodes by our numerical methods will be denoted by $u_i\approx \hat{u}(t_i)$. Because we are given the initial value $u(a)=u_0$ exactly, there is no need to distinguish whether we mean $u_0$ as the exact or the numerical solution.
 
 Consider a piecewise linear interpolant to the (as yet unknown) values $u_0,u_1,\ldots$, $u_n$. Its derivative is piecewise constant with values
 
@@ -47,15 +47,35 @@ We could also view the left-hand side as a forward-difference approximation to $
 
 Together with the starting value $u_0$ from the initial condition, this formula defines an iteration known as {term}`Euler's method`.  It is an explicit method, meaning that the answer at the new time level is explicitly given in terms of the older time level(s).
 
-A basic implementation of Euler's method is shown in {ref}`function-eulerivp`. It expects the problem to be specified in the form of a function $f$ of two arguments, an interval defining the time domain, and an initial condition. It also requires the number of intervals $n$ defined by the nodes (or equivalently, the number of steps in the iteration). The output of {ref}`function-eulerivp` is a vector of the nodes and a vector of approximate solution values at those nodes.
+A basic implementation of Euler's method is shown in {ref}`function-euler`. It expects the problem to be specified in the form of a function $f$ of two arguments, an interval defining the time domain, and an initial condition. It also requires the number of intervals $n$ defined by the nodes (or equivalently, the number of steps in the iteration). The output of {ref}`function-euler` is a vector of the nodes and a vector of approximate solution values at those nodes.
 
-(function-eulerivp)=
+(function-euler)=
 
-````{proof:function} eulerivp
-**Euler's method for a scalar initial-value problem.**
+````{proof:function} euler
+**Euler's method for an initial-value problem.**
 
 ```{code-block} julia
 :lineno-start: 1
+"""
+    euler(ivp,n)
+
+Apply Euler's method to solve the given IVP using `n` time steps. Returns a vector of times and a vector of solution values.
+"""
+function euler(ivp,n)
+    # Time discretization.
+    a,b = ivp.tspan
+    h = (b-a)/n
+    t = [ a + i*h for i in 0:n ]
+
+    # Initial condition and output setup.
+    u = fill(float(ivp.u0),n+1)
+
+    # The time stepping iteration.
+    for i in 1:n
+        u[i+1] = u[i] + h*ivp.f(u[i],ivp.p,t[i])
+    end
+    return t,u
+end
 ```
 ````
 
@@ -65,20 +85,20 @@ A basic implementation of Euler's method is shown in {ref}`function-eulerivp`. I
 
 ## Local truncation error
 
-It should be clear that Euler's method cannot get the exact solution unless it happens to be piecewise linear. More generally, suppose that an oracle has granted us the exact solution at $t=t_i$, so that $u_i=\widehat{u}(t_i)$. How would we then fare in obtaining $u_{i+1}$ as an approximation to $\widehat{u}(t_{i+1})$? The answer is revealed through a Taylor series:
+It should be clear that Euler's method cannot get the exact solution unless it happens to be piecewise linear. More generally, suppose that an oracle has granted us the exact solution at $t=t_i$, so that $u_i=\hat{u}(t_i)$. How would we then fare in obtaining $u_{i+1}$ as an approximation to $\hat{u}(t_{i+1})$? The answer is revealed through a Taylor series:
 
 ```{math}
   :label: eulerLTE
 \begin{split}
-  \widehat{u}(t_{i+1}) - \bigl[ u_i + hf(t_i,u_i) \bigr]
- &=  \widehat{u}(t_{i+1}) - \bigl[ \widehat{u}(t_i) + hf\bigl(t_i,\widehat{u}(t_i)\bigr) \bigr] \\
- &= \bigl[ \widehat{u}(t_i) + h \widehat{u}'(t_i) + \tfrac{1}{2}h^2 \widehat{u}''(t_i) + \cdots \bigr] \\
- &\qquad\quad  - \bigl[ \widehat{u}(t_i) + h\widehat{u}'(t_i) \bigr] \notag \\
-  &= \tfrac{1}{2}h^2 \widehat{u}''(t_i) + O(h^3),
+  \hat{u}(t_{i+1}) - \bigl[ u_i + hf(t_i,u_i) \bigr]
+ &=  \hat{u}(t_{i+1}) - \bigl[ \hat{u}(t_i) + hf\bigl(t_i,\hat{u}(t_i)\bigr) \bigr] \\
+ &= \bigl[ \hat{u}(t_i) + h \hat{u}'(t_i) + \tfrac{1}{2}h^2 \hat{u}''(t_i) + \cdots \bigr] \\
+ &\qquad\quad  - \bigl[ \hat{u}(t_i) + h\hat{u}'(t_i) \bigr] \notag \\
+  &= \tfrac{1}{2}h^2 \hat{u}''(t_i) + O(h^3),
 \end{split}
 ```
 
-where used the fact that $\widehat{u}$ satisfies the differential equation.
+where used the fact that $\hat{u}$ satisfies the differential equation.
 
 We formalize this calculation as follows. Euler's method may be written in the abstract form
 
@@ -97,26 +117,26 @@ which we call a general **one-step method**. Euler's method is the particular ca
 
 ```{math}
   :label: onestepLTE
-  \tau_{i+1}(h) := \frac{\widehat{u}(t_{i+1})-\widehat{u}(t_i)}{h} - \phi\bigl(t_i,\widehat{u}(t_i),h\bigr).
+  \tau_{i+1}(h) := \frac{\hat{u}(t_{i+1})-\hat{u}(t_i)}{h} - \phi\bigl(t_i,\hat{u}(t_i),h\bigr).
 ```
 
 Compared to {eq}`eulerLTE` there is an extra division by $h$, which we explain below. First, though, note that in the limit $h\rightarrow 0$ in {eq}`onestepLTE`, we obtain
 
 ```{math}
-  \widehat{u}'(t_i) - \phi(t_i,\widehat{u}(t_i),0),
+  \hat{u}'(t_i) - \phi(t_i,\hat{u}(t_i),0),
 ```
 
 which through the ODE is the same as
 
 ```{math}
-  f(t_i,\widehat{u}(t_i)) - \phi(t_i,\widehat{u}(t_i),0).
+  f(t_i,\hat{u}(t_i)) - \phi(t_i,\hat{u}(t_i),0).
 ```
 
 It seems reasonable to expect the LTE to vanish as the step size goes to zero for any ODE, which implies that $\phi(t,u,0)=f(t,u)$ for any function $u$ whatsoever. This condition on the one-step formula is called **consistency**. It is trivially true for Euler's method.
 
 ## Convergence
 
-The local truncation error measures the effect of a single step of the numerical method. It's straightforward to calculate from the formula, but the practical quantity of interest is the {term}`global error`, $\widehat{u}(t_i) - u_i$, over the entire time interval. By {eq}`onestepLTE`, $h\tau_{i+1}(h)$ describes how much error is made by taking a single step, starting from the exact value. If there were no other sources of or effects on the error, we would add up all of those local errors to get the global error.
+The local truncation error measures the effect of a single step of the numerical method. It's straightforward to calculate from the formula, but the practical quantity of interest is the {term}`global error`, $\hat{u}(t_i) - u_i$, over the entire time interval. By {eq}`onestepLTE`, $h\tau_{i+1}(h)$ describes how much error is made by taking a single step, starting from the exact value. If there were no other sources of or effects on the error, we would add up all of those local errors to get the global error.
 
 To reach the time $t=b$ from $t=a$ with step size $h$, we need to take $n=(b-a)/h$ steps. If we want to reach, say, $t=(a+b)/2$, then we would have to take $n/2$ steps, and so on. The point is that to reach any fixed time in the interval, we need to take $O(n)=O(h^{-1})$ steps. That is why we express the error made in one step as $h\tau_{i+1}(h)$, with that extra factor of $h$ taken out. By this reasoning, for instance, the LTE of Euler computed in {eq}`eulerLTE` implies a global error that is $O(h)$.
 
@@ -137,50 +157,50 @@ Suppose that the unit local truncation error of the one-step method {eq}`onestep
 and that
 
 ```{math}
-  :label: GTELip
-  \left| \frac{\partial \phi}{\partial u} \right| \le L
+:label: GTELip
+\left| \frac{\partial \phi}{\partial u} \right| \le L
 ```
 
 for all $t\in[a,b]$, all $u$, and all $h>0$. Then the global error satisfies
 
 ```{math}
-  :label: GTEbound
-  |\widehat{u}(t_i) - u_i| \le \frac{Ch^p}{L} \left[ e^{L(t_i-a)} - 1
-  \right] = O(h^p),
+:label: GTEbound
+|\hat{u}(t_i) - u_i| \le \frac{Ch^p}{L} \left[ e^{L(t_i-a)} - 1
+\right] = O(h^p),
 ```
 
 as $h\rightarrow 0$.
 ````
 
 ````{proof:proof}
-Define the global error sequence $E_i=\widehat{u}(t_i)-u_i$. Using {eq}`onestepODE`, we obtain
+Define the global error sequence $E_i=\hat{u}(t_i)-u_i$. Using {eq}`onestepODE`, we obtain
   
 ```{math}
-  E_{i+1} - E_i = \widehat{u}(t_{i+1}) - \widehat{u}(t_i) - ( \mathbf{u}_{i+1} - u_i ) =
-  \widehat{u}(t_{i+1}) - \widehat{u}(t_i) - h\phi(t_i,u_i,h),
+  E_{i+1} - E_i = \hat{u}(t_{i+1}) - \hat{u}(t_i) - ( \mathbf{u}_{i+1} - u_i ) =
+  \hat{u}(t_{i+1}) - \hat{u}(t_i) - h\phi(t_i,u_i,h),
 ```
 
 or
 
 ```{math}
-  E_{i+1} = E_i + \widehat{u}(t_{i+1}) - \widehat{u}(t_i) - h\phi(t_i,\widehat{u}(t_i),h) +
-  h[\phi(t_i,\widehat{u}(t_i),h)- \phi(t_i,u_i,h)].
+  E_{i+1} = E_i + \hat{u}(t_{i+1}) - \hat{u}(t_i) - h\phi(t_i,\hat{u}(t_i),h) +
+  h[\phi(t_i,\hat{u}(t_i),h)- \phi(t_i,u_i,h)].
 ```
 
 We apply the triangle inequality,  {eq}`onestepLTE`, and {eq}`ULTEbound` to find
 
 ```{math}
-  |E_{i+1}| \le |E_i| + Ch^{p+1} + h \left| \phi(t_i,\widehat{u}(t_i),h)- \phi(t_i,u_i,h)\right|.
+  |E_{i+1}| \le |E_i| + Ch^{p+1} + h \left| \phi(t_i,\hat{u}(t_i),h)- \phi(t_i,u_i,h)\right|.
 ```
 
 The Fundamental Theorem of Calculus implies that
 
 ```{math}
 \begin{split}
-  \left| \phi(t_i,\widehat{u}(t_i),h)- \phi(t_i,u_i,h)\right|
-      & = \left|  \int_{u_i}^{\widehat{u}(t_i)} \frac{\partial \phi}{\partial u} \,du  \right|\\
-    & \le  \int_{u_i}^{\widehat{u}(t_i)} \left|\frac{\partial \phi}{\partial u}\right| \,du \\
-    &= \le L | \widehat{u}(t_i)-u_i| = L\, |E_i|.
+  \left| \phi(t_i,\hat{u}(t_i),h)- \phi(t_i,u_i,h)\right|
+      & = \left|  \int_{u_i}^{\hat{u}(t_i)} \frac{\partial \phi}{\partial u} \,du  \right|\\
+    & \le  \int_{u_i}^{\hat{u}(t_i)} \left|\frac{\partial \phi}{\partial u}\right| \,du \\
+    &= \le L | \hat{u}(t_i)-u_i| = L\, |E_i|.
 \end{split}
 ```
 
@@ -231,7 +251,7 @@ The theorem justifies a general definition of {term}`order of accuracy` as the l
     ````{only} solutions
     ````
 
-2. ⌨️ For each IVP, solve the problem using {ref}`function-eulerivp`. (i) Plot the solution for $n=320$. (ii) For $n=10\cdot2^k$, $k=2,3,\ldots,10$, compute the error at the final time and make a log--log convergence plot, including a reference line for first-order convergence.
+2. ⌨️ For each IVP, solve the problem using {ref}`function-euler`. (i) Plot the solution for $n=320$. (ii) For $n=10\cdot2^k$, $k=2,3,\ldots,10$, compute the error at the final time and make a log--log convergence plot, including a reference line for first-order convergence.
 
     **(a)** $u' = -2t u, \ 0 \le t \le 2, \ u(0) = 2;\  \hat{u}(t) = 2e^{-t^2}$
 
@@ -290,7 +310,7 @@ The theorem justifies a general definition of {term}`order of accuracy` as the l
     ````{only} solutions
     ````
 
-7. ✍️ Suppose that the error in making a step is also subject to roundoff error $\epsilon_{i+1}$, so that $\tau_{i+1}(h) = Ch^p+\epsilon_{i+1} h^{-1}$; assume that $|\epsilon_{i+1}| \le \epsilon$ is the largest roundoff error in the computation and that the initial condition is known exactly. Generalize [theorem](theorem-onestepGTE)` for this case.
+7. ✍️ Suppose that the error in making a step is also subject to roundoff error $\epsilon_{i+1}$, so that $\tau_{i+1}(h) = Ch^p+\epsilon_{i+1} h^{-1}$; assume that $|\epsilon_{i+1}| \le \epsilon$ is the largest roundoff error in the computation and that the initial condition is known exactly. Generalize the [convergence theorem](theorem-onestepGTE) for this case.
 
     ````{only} solutions
     ````

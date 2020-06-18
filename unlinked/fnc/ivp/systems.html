@@ -193,7 +193,13 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#methods-for-ivp-systems" class="nav-link">Methods for IVP systems</a>
+            <a href="#methods-for-ivp-systems" class="nav-link">Methods for IVP systems</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#new-demo-needed-here" class="nav-link">new demo needed here</a>
+        </li>
+    
+            </ul>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -331,21 +337,12 @@ condition of the system is</p>
 <span class="eqno">(178)<a class="headerlink" href="#equation-eulersys" title="Permalink to this equation">¶</a></span>\[  \begin{split}
     \mathbf{u}_{i+1} &amp;= \mathbf{u}_i + h\mathbf{f}(t_i,\mathbf{u}_i), \qquad i=0,\ldots,n-1.
   \end{split}\]</div>
-<p>The vector difference equation <a class="reference internal" href="#equation-eulersys">(178)</a> is just Euler’s formula applied simultaneously to each component of the ODE system.  The method is still explicit for the solution at the new time level.</p>
-<p>Note here that as always in this book, an indexed boldface quantity such as <span class="math notranslate nohighlight">\(\mathbf{u}_i\)</span> is a vector. If we want to refer to component <span class="math notranslate nohighlight">\(j\)</span> of that vector, we would write <span class="math notranslate nohighlight">\(u_{i,j}\)</span>. We could also follow our convention and define an <span class="math notranslate nohighlight">\(m\times (n+1)\)</span> matrix <span class="math notranslate nohighlight">\(\mathbf{U}\)</span> whose columns are the <span class="math notranslate nohighlight">\(\mathbf{u}_i\)</span>. This matrix is the transpose of the one that is returned by the built-in IVP solvers, and our solvers follow the same convention. <a class="reference internal" href="#function-eulersys"><span class="std std-ref">eulersys</span></a> shows our implementation of Euler’s method for systems—it barely differs from <a class="reference internal" href="euler.html#function-eulerivp"><span class="std std-ref">eulerivp</span></a> and completely replaces it.</p>
-<div class="proof proof-type-function" id="id5">
-<span id="function-eulersys"></span>
-    <div class="proof-title">
-        <span class="proof-type">Function 67</span>
-        
-            <span class="proof-title-name">(eulersys)</span>
-        
-    </div><div class="proof-content">
-<p><strong>Euler’s method for a first-order IVP system.</strong></p>
-<div class="highlight-julia notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
-</pre></div>
-</td></tr></table></div>
-</div></div><p>In the rest of this chapter we present methods as though they are for scalar equations, but their application to systems is straightforward. The generalization of error analysis can be more complicated, but our statements about order of accuracy and other properties are true for systems as well as scalars.  Our codes, on the other hand, are written to accept systems.</p>
+<p>The vector difference equation <a class="reference internal" href="#equation-eulersys">(178)</a> is just Euler’s formula applied simultaneously to each component of the ODE system.  The method is still explicit for the solution at the new time level. Note here that as always in this book, an indexed boldface quantity such as <span class="math notranslate nohighlight">\(\mathbf{u}_i\)</span> is a vector. If we want to refer to component <span class="math notranslate nohighlight">\(j\)</span> of that vector, we would write <span class="math notranslate nohighlight">\(u_{i,j}\)</span>.</p>
+<p>It might surprise you that the function <a class="reference internal" href="euler.html#function-euler"><span class="std std-ref">euler</span></a> that we wrote for scalar IVPs works for systems as well. In large part that’s because as we observed with the mathematics, operations such as addition and multiplication translate easily from scalars to vectors. As long as the definition of the IVP correctly handles a vector for the dependent variable and specifies a vector initial condition, we’re all set.</p>
+<div class="section" id="new-demo-needed-here">
+<h3>new demo needed here<a class="headerlink" href="#new-demo-needed-here" title="Permalink to this headline">¶</a></h3>
+<p>In the rest of this chapter we present methods as though they are for scalar equations, but their application to systems is straightforward. The generalization of error analysis can be more complicated, but our statements about order of accuracy and other properties are true for systems as well as scalars.  Our codes, on the other hand, are written to accept systems.</p>
+</div>
 </div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
@@ -369,17 +366,20 @@ condition of the system is</p>
 <p><strong>(c)</strong> <span class="math notranslate nohighlight">\(2 x^2 y'' +3xy' - y = 0, \: y(2) = 1, \: y'(2) = -1/2,  \: \hat{y}(x) = 2/x, h = 1/8\)</span></p>
 <p><strong>(d)</strong> <span class="math notranslate nohighlight">\(2 x^2 y'' +3xy' - y = 0,\: y(1) = 4, \: y'(1) = -1, \: \hat{y}(x) = 2(x^{1/2} + x^{-1}), h=1/4\)</span></p>
 </li>
-<li><p>⌨️ Solve the following IVPs using <a class="reference internal" href="#function-eulersys"><span class="std std-ref">eulersys</span></a> using <span class="math notranslate nohighlight">\(n=100\)</span> steps. Plot <span class="math notranslate nohighlight">\(y(t)\)</span> and <span class="math notranslate nohighlight">\(y'(t)\)</span> as functions of time together on one plot, and plot the error in each component as functions of time on another.</p>
-<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(y''+ 4y = 4t, \: 0&lt; t&lt; 2\pi, \: y(0) = 1,\: y'(0) = 1; \: y(t) = t+\cos (2t)\)</span></p>
-<p><strong>(b)</strong> <span class="math notranslate nohighlight">\(y''+ 9y = \sin(2t), \: 0&lt; t&lt; 2\pi, \: y(0) = 2,\: y'(0) = 1; \: \hat{y}(t) = (1/5) \sin(3t) + 2 \cos (3t)+  (1/5) \sin (2t)\)</span></p>
-<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(y''- 4y = 4t \: 0&lt; t&lt; \pi, \: y(0) = 2,\: y'(0) = -1; \: \hat{y}(t) = e^{2t} + e^{-2t}-t\)</span></p>
-<p><strong>(d)</strong> <span class="math notranslate nohighlight">\(y''+ 4y'+ 4y = t, \: 0&lt; t&lt; 4, \: y(0) = 1,\: y'(0) = 3/4; \: \hat{y}(t) = (3t+5/4)e^{-2t} + (t-1)/4\)</span></p>
+<li><p>⌨️ Solve the following IVPs using <a class="reference internal" href="euler.html#function-euler"><span class="std std-ref">euler</span></a> using <span class="math notranslate nohighlight">\(n=100\)</span> steps. Plot the solution and its first derivative together on one plot, and plot the error in each component as functions of time on another.</p>
+<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(u''+ 4u = 4t, \: 0&lt; t&lt; 2\pi, \: u(0) = 1,\: u'(0) = 1; \: \hat{u}(t) = t+\cos (2t)\)</span></p>
+<p><strong>(b)</strong> <span class="math notranslate nohighlight">\(u''+ 9u = \sin(2t), \: 0&lt; t&lt; 2\pi, \: u(0) = 2,\: u'(0) = 1\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\quad \hat{u}(t) = (1/5) \sin(3t) + 2 \cos (3t)+  (1/5) \sin (2t)\)</span></p>
+<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(u''- 4u = 4t \: 0&lt; t&lt; \pi, \: u(0) = 2,\: u'(0) = -1; \: \hat{u}(t) = e^{2t} + e^{-2t}-t\)</span></p>
+<p><strong>(d)</strong> <span class="math notranslate nohighlight">\(u''+ 4u'+ 4u = t, \: 0&lt; t&lt; 4, \: u(0) = 1,\: u'(0) = 3/4; \: \hat{u}(t) = (3t+5/4)e^{-2t} + (t-1)/4\)</span></p>
 <p><strong>(e)</strong> <span class="math notranslate nohighlight">\(x^2 y'' +5xy' + 4y = 0,\: 1&lt;x&lt;e^2, \: y(1) = 0, \: y'(1) = 2, \: \hat{y}(x) = (2/x^2) \ln x\)</span></p>
 <p><strong>(f)</strong> <span class="math notranslate nohighlight">\(x^2 y'' +5xy' + 4y = 0,\: 1&lt;x&lt;e^2, \: y(1) = 1, \: y'(1) = -1, \: \hat{y}(x) = x^{-2}( 1 + \ln x)\)</span></p>
 <p><strong>(g)</strong> <span class="math notranslate nohighlight">\(2 x^2 y'' +3xy' - y = 0,\: 2&lt;x&lt;20, \: y(2) = 1, \: y'(2) = -1/2, \: \hat{y}(x) = 2/x\)</span></p>
 <p><strong>(h)</strong> <span class="math notranslate nohighlight">\(2 x^2 y'' +3xy' - y = 0,\: 1&lt;x&lt;16, \: y(1) = 4, \: y'(1) = -1, \: \hat{y}(x) = 2(x^{1/2} + x^{-1})\)</span></p>
-<p><strong>(i)</strong> <span class="math notranslate nohighlight">\(x^2 y'' -xy' + 2y = 0,\: 1&lt;x&lt;e^{\pi}, \: y(1) = 3, \: y'(1) = 4, \: \hat{y}(x) = x \left[ 3 \cos \left( \ln x \right)+\sin \left( \ln x \right) \right]\)</span></p>
-<p><strong>(j)</strong> <span class="math notranslate nohighlight">\(x^2 y'' + 3xy' + 4y = 0,\: e^{\pi/12} &lt; x &lt; e^{\pi}, \: y(e^{\pi/12}) = 0,  \: y'(e^{\pi/12}) = -6, \hat{y}(x) = x^{-1} \left[ 3 \cos \left( 3 \ln x \right)+\sin \left( 3 \ln x \right) \right]\)</span></p>
+<p><strong>(i)</strong> <span class="math notranslate nohighlight">\(x^2 y'' -xy' + 2y = 0,\: 1&lt;x&lt;e^{\pi}, \: y(1) = 3, \: y'(1) = 4\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\quad \hat{y}(x) = x \left[ 3 \cos \left( \ln x \right)+\sin \left( \ln x \right) \right]\)</span></p>
+<p><strong>(j)</strong> <span class="math notranslate nohighlight">\(x^2 y'' + 3xy' + 4y = 0,\: e^{\pi/12} &lt; x &lt; e^{\pi}, \: y(e^{\pi/12}) = 0,  \: y'(e^{\pi/12}) = -6\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\quad \hat{y}(x) = x^{-1} \left[ 3 \cos \left( 3 \ln x \right)+\sin \left( 3 \ln x \right) \right]\)</span></p>
 </li>
 <li id="problem-sir"><p>⌨️ A disease that is endemic to a population can be modeled by tracking the fraction of the population that is susceptible to infection, <span class="math notranslate nohighlight">\(v(t)\)</span>, and the fraction that is infectious, <span class="math notranslate nohighlight">\(w(t)\)</span>. (The rest of the population is considered to be recovered and immune.) A typical model is the <strong>SIR model</strong> (see \cite{Britton2003})</p>
 <div class="math notranslate nohighlight">
@@ -411,8 +411,8 @@ condition of the system is</p>
 \end{split}\end{split}\]</div>
 <p>Assume <span class="math notranslate nohighlight">\(v_1(0) = 0.5\)</span>, <span class="math notranslate nohighlight">\(v_2(0) = 0.1\)</span>, <span class="math notranslate nohighlight">\(a = 0.1\)</span>, <span class="math notranslate nohighlight">\(\epsilon = 0.008\)</span>, <span class="math notranslate nohighlight">\(\gamma = 1\)</span>. For each value of <span class="math notranslate nohighlight">\(I\)</span> below, find and plot the solution using <code class="docutils literal notranslate"><span class="pre">solve</span></code> for <span class="math notranslate nohighlight">\(0\le t \le 600\)</span>. The solutions are highly sensitive to <span class="math notranslate nohighlight">\(I\)</span>, and you need to change the requested absolute and relative error tolerances to <span class="math notranslate nohighlight">\(10^{-9}\)</span>. In each case the solution quickly approaches a periodic oscillation.</p>
 <p><strong>(a)</strong> <span class="math notranslate nohighlight">\(I = 0.05527,\quad\)</span>
-<strong>(b)</strong> <span class="math notranslate nohighlight">\(I = 0.05683,\quad\)</span>,
-<strong>(c)</strong> <span class="math notranslate nohighlight">\(I = 0.0568385,\quad\)</span>,
+<strong>(b)</strong> <span class="math notranslate nohighlight">\(I = 0.05683,\quad\)</span>
+<strong>(c)</strong> <span class="math notranslate nohighlight">\(I = 0.0568385,\quad\)</span>
 <strong>(d)</strong> <span class="math notranslate nohighlight">\(I = 0.05740\)</span>.</p>
 <p>This exploration was carried out by Baer and Erneux \cite{BaerErneux86}.</p>
 </li>

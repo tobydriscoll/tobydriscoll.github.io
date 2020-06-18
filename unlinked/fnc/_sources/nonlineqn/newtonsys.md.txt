@@ -137,7 +137,42 @@ An implementation of Newton's method for systems is given in {ref}`function-newt
 
 ```{code-block} julia
 :lineno-start: 1
+"""
+    newtonsys(f,jac,x1)
+
+Use Newton's method to find a root of a system of equations, starting from `x1`. The
+functions `f` and `jac should return the residual vector and the Jacobian matrix, 
+respectively. Returns history of root estimates as a vector of vectors.
+"""
+function newtonsys(f,jac,x1)
+    # Operating parameters.
+    funtol = 1000*eps();  xtol = 1000*eps();  maxiter = 40;
+
+    x = [float(x1)]
+    y,J = f(x1),jac(x1)
+    dx = Inf   # for initial pass below
+    k = 1
+
+    while (norm(dx) > xtol) && (norm(y) > funtol) && (k < maxiter)
+        dx = -(J\y)             # Newton step
+        push!(x,x[k] + dx)    # append to history
+        k += 1
+        y,J = f(x[k]),jac(x[k])
+    end
+
+    if k==maxiter
+        @warn "Maximum number of iterations reached."
+    end
+
+    return x
+end
 ```
+
+````{tip}
+```{toggle}
+The output of {ref}`function-newtonsys` is a vector of vectors representing the entire history of root estimates. Since these are usually floating point, even when the initial estimate is integer, the initial estimate is converted with `float` in line 12.
+```
+````
 
 It is a remarkable effect of the vector-friendliness of Julia that this program is hardly different from the scalar version {ref}`function-newton` presented earlier:
 

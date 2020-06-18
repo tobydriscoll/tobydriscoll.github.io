@@ -142,8 +142,8 @@ Compute the LU factorization of square matrix `A`, returning the factors.
 function lufact(A)
 
 n = size(A,1)
-L = Matrix(I(n))
-U = copy(A)
+L = Matrix(Diagonal(ones(n)))
+U = float(copy(A))
 
 # Gaussian elimination
 for j = 1:n-1
@@ -160,7 +160,9 @@ end
 
 ````{tip}
 ```{toggle}
-Line 10 of {ref}`function-lufact` points out a subtle Julia issue. Arrays, including vectors and matrices, are really just references to blocks of memory. This data is much more efficient to pass around than the complete contents of the array. However, it means that a statement such as `U=A` just clones the array reference into the variable `U`. Any changes made to entries of `U` would then also be made to entries of `A`, because they refer to the same contents. In the context of `lufact` we don't want to change the original `A`, so we use `copy` here to create a clone of the array contents and a new reference to them, which we call `U`.
+Line 10 of {ref}`function-lufact` points out two subtle Julia issues. First, arrays, including vectors and matrices, are really just references to blocks of memory. This data is much more efficient to pass around than the complete contents of the array. However, it means that a statement such as `U=A` just clones the array reference into the variable `U`. Any changes made to entries of `U` would then also be made to entries of `A`, because they refer to the same contents. In the context of `lufact` we don't want to change the original matrix, so we use {term}`copy` here to create an independent clone of the array contents and a new reference to them.
+
+The second issue is that even when `A` has all integer entries, the LU factors may not. So if by copying `A` we create `U` as a matrix of integers, the function will fail with an {term}`InexactError` if we attempt to insert a noninteger result into `U` in line 16. To avoid this eventuality we convert `U` into a floating-point matrix with {term}`float`.
 ```
 ````
 

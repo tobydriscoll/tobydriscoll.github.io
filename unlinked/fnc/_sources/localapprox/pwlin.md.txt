@@ -50,6 +50,33 @@ Note that the definitions of $H_0$ for $x<t_0$ and $H_n$ for $x>t_n$ are irrelev
 
 ```{code-block} julia
 :lineno-start: 1
+"""
+    hatfun(x,t,k)
+
+Evaluate a piecewise linear "hat" function at `x`, where `t` is a vector of
+n+1 interpolation nodes and `k` is an integer in 0:n giving the index of the node
+where the hat function equals one.
+"""
+
+function hatfun(x,t,k)
+    n = length(t)-1
+    # Return correct node given mathematical index k, including fictitious choices.   
+    function node(k)
+        if k < 0
+            2t[1]-t[2]
+        elseif k > n 
+            2t[n+1]-t[n] 
+        else
+            t[k+1]
+        end
+    end
+
+    H1 = (x-node(k-1))/(node(k)-node(k-1))   # upward slope
+    H2 = (node(k+1)-x)/(node(k+1)-node(k))   # downward slope
+
+    H = min(H1,H2)
+    return max(0,H)
+end
 ````
 
 Another trick in {ref}`function-hatfun` is to exploit the observation that at each $x$, $H_k(x)$ is the larger of two options: zero, or the smaller of two linear functions (those appearing in {eq}`hatfun`). This code is not the most efficient one possible, but it is more concise than detecting which particular subinterval each $x$ lies within.
@@ -96,6 +123,16 @@ A final appealing characteristic of the hat function basis is that it depends on
 
 ```{code-block} julia
 :lineno-start: 1
+"""
+    plinterp(t,y)
+
+Create a piecewise linear interpolating function for data values in `y` given at nodes
+in `t`.
+"""
+function plinterp(t,y)
+n = length(t)-1
+return x -> sum( y[k+1]*hatfun(x,t,k) for k in 0:n )
+end
 ```
 ````
 

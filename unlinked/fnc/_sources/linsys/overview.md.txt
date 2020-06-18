@@ -107,8 +107,17 @@ backslash
 comprehension
   Shorthand alternative to loops when creating some vectors and matrices.
 
+`copy`
+  Copy the contents of an array into a new array, so that changes to the new array don't affect the old one.
+
 `end`
   Last element of an array in a particular dimension.
+
+`float`
+  Convert scalar or array to floating-point representation.
+
+`InexactError`
+  Thrown when an implied type conversion is impossible for the given value.
 
 `inv`
   Inverse of a matrix, *not* to be used for solving linear systems.

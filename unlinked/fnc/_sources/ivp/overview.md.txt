@@ -25,6 +25,9 @@ implicit
 local truncation error
   Discretization error made in one time step of a solution method.
 
+generating polynomials
+  A pair of polynomials whose coefficients match those of a multistep method for IVPs.
+
 global error
   Error made by a method over the entire time interval of the solution.
 
@@ -41,7 +44,7 @@ step size
   Increment in time between successive solution values in a numerical IVP solver.
 
 stiff
-  Used to describe an IVP in which stability is a greater restriction than accuracy for many solution methods.
+  Describes an IVP in which stability is a greater restriction than accuracy for many solution methods.
 
 ```
 

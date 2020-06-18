@@ -37,7 +37,7 @@ A more realistic model would cap the growth due to finite resources. Suppose the
 This is the **logistic equation**. Although crude, it is still useful in population models.  The solution relevant for population models has the form
   
 ```{math}
-  u(t) = \frac{k/r}{ 1 + \left( \frac{k}{r u_0} - 1 \right) e^{-kt} }.
+  u(t) = \frac{k/r}{ 1 + \left( \frac{k}{r u_0} - 1 \right) e^{-k t} }.
 ```
 
 For $k,r,u_0>0$, the solution smoothly varies from the initial population $u_0$ to a finite population, equal to $k/r$, that has been limited by competition.

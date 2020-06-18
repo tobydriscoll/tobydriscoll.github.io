@@ -313,10 +313,72 @@
         
     </div><div class="proof-content">
 <p><strong>Newton’s method for a system of equations.</strong></p>
-<div class="highlight-julia notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
+<div class="highlight-julia notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">    newtonsys(f,jac,x1)</span>
+
+<span class="s">Use Newton&#39;s method to find a root of a system of equations, starting from `x1`. The</span>
+<span class="s">functions `f` and `jac should return the residual vector and the Jacobian matrix, </span>
+<span class="s">respectively. Returns history of root estimates as a vector of vectors.</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">function</span> <span class="n">newtonsys</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">jac</span><span class="p">,</span><span class="n">x1</span><span class="p">)</span>
+    <span class="c"># Operating parameters.</span>
+    <span class="n">funtol</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="n">eps</span><span class="p">();</span>  <span class="n">xtol</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="n">eps</span><span class="p">();</span>  <span class="n">maxiter</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">float</span><span class="p">(</span><span class="n">x1</span><span class="p">)]</span>
+    <span class="n">y</span><span class="p">,</span><span class="n">J</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x1</span><span class="p">),</span><span class="n">jac</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="nb">Inf</span>   <span class="c"># for initial pass below</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">xtol</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">funtol</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">k</span> <span class="o">&lt;</span> <span class="n">maxiter</span><span class="p">)</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">J</span><span class="o">\</span><span class="n">y</span><span class="p">)</span>             <span class="c"># Newton step</span>
+        <span class="n">push!</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">+</span> <span class="n">dx</span><span class="p">)</span>    <span class="c"># append to history</span>
+        <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">y</span><span class="p">,</span><span class="n">J</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]),</span><span class="n">jac</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+    <span class="k">end</span>
+
+    <span class="k">if</span> <span class="n">k</span><span class="o">==</span><span class="n">maxiter</span>
+        <span class="nd">@warn</span> <span class="s">&quot;Maximum number of iterations reached.&quot;</span>
+    <span class="k">end</span>
+
+    <span class="k">return</span> <span class="n">x</span>
+<span class="k">end</span>
 </pre></div>
 </td></tr></table></div>
-</div></div><p>It is a remarkable effect of the vector-friendliness of Julia that this program is hardly different from the scalar version <a class="reference internal" href="newton.html#function-newton"><span class="std std-ref">newton</span></a> presented earlier:</p>
+</div></div><div class="alert alert-primary">
+<p class="admonition-title">Tip</p>
+<div class="toggle docutils container">
+<p>The output of <a class="reference internal" href="#function-newtonsys"><span class="std std-ref">newtonsys</span></a> is a vector of vectors representing the entire history of root estimates. Since these are usually floating point, even when the initial estimate is integer, the initial estimate is converted with <code class="docutils literal notranslate"><span class="pre">float</span></code> in line 12.</p>
+</div>
+</div>
+<p>It is a remarkable effect of the vector-friendliness of Julia that this program is hardly different from the scalar version <a class="reference internal" href="newton.html#function-newton"><span class="std std-ref">newton</span></a> presented earlier:</p>
 <ul class="simple">
 <li><p>The root estimates are stored as columns in an array.</p></li>
 <li><p>The Newton step is calculated using a backslash. \index{backslash&#64;\textbackslash}</p></li>

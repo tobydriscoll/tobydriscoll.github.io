@@ -115,10 +115,7 @@ In the last step we can exploit the fact, proved in [the AtA theorem](theorem-AT
 ```{proof:function} lsnormal
 
 ```{code-block} julia
----
-lineno-start: 1
-caption: Solve linear least squares by the normal equations.
----
+:lineno-start: 1
 """
     lsnormal(A,b)
 

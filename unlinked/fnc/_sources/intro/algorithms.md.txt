@@ -44,8 +44,7 @@ As our first example, [horner](function-horner) implements an algorithm that app
 **Horner's rule for evaluating a polynomial**
 
 ```{code-block} julia
-:linenos:
-
+:lineno-start: 1
 """
     horner(c,x)
 
@@ -61,7 +60,6 @@ for k in n-1:-1:1
 end
 
 return y
-
 end
 ```
 ````

@@ -17,22 +17,22 @@ Consider a series expansion of the exact solution to $u'=f(t,u)$,
 
 ```{math}
 :label: taylor2
-\widehat{u}(t_{i+1}) = \widehat{u}(t_i) + h \widehat{u}'(t_i) + \frac{1}{2}h^2 \widehat{u}''(t_i) + O(h^3) .
+\hat{u}(t_{i+1}) = \hat{u}(t_i) + h \hat{u}'(t_i) + \frac{1}{2}h^2 \hat{u}''(t_i) + O(h^3) .
 ```
 
-If we replace $\widehat{u}'$ by $f$ and keep only the first two terms on the right-hand side, we would obtain the Euler method. To get more accuracy we will need to compute or estimate the third term too. Note that
+If we replace $\hat{u}'$ by $f$ and keep only the first two terms on the right-hand side, we would obtain the Euler method. To get more accuracy we will need to compute or estimate the third term too. Note that
 
 ```{math}
-\widehat{u}'' = f' = \frac{d f}{d t} = \frac{\partial f}{\partial t} + \frac{\partial f}{\partial u} \frac{d u}{d t} = f_t + f_u f,
+\hat{u}'' = f' = \frac{d f}{d t} = \frac{\partial f}{\partial t} + \frac{\partial f}{\partial u} \frac{d u}{d t} = f_t + f_u f,
 ```
 
 where we have applied the multidimensional chain rule to the derivative, because both of the arguments to $f$ depend on $t$. Using this expression in {eq}`taylor2`, we obtain
 
 ```{math}
   :label: rkexactexpand
-  \widehat{u}(t_{i+1}) = \widehat{u}(t_i) + h\left[f\bigl(t_i,\widehat{u}(t_i)\bigr) +
-    \frac{h}{2}f_t\bigl(t_i,\widehat{u}(t_i)\bigr) +
-    \frac{h}{2}f\bigl(t_i,\widehat{u}(t_i)\bigr)\,f_u\bigl(t_i,\widehat{u}(t_i)\bigr)\right] \\
+  \hat{u}(t_{i+1}) = \hat{u}(t_i) + h\left[f\bigl(t_i,\hat{u}(t_i)\bigr) +
+    \frac{h}{2}f_t\bigl(t_i,\hat{u}(t_i)\bigr) +
+    \frac{h}{2}f\bigl(t_i,\hat{u}(t_i)\bigr)\,f_u\bigl(t_i,\hat{u}(t_i)\bigr)\right] \\
   + O(h^3).
 ```
 
@@ -40,24 +40,24 @@ We have no desire to calculate and then code those partial derivatives of $f$ di
 
 ```{math}
   :label: mvtaylor2
-  f\bigl(t_i+\alpha,\widehat{u}(t_i)+\beta\bigr) = f\bigl(t_i,\widehat{u}(t_i)\bigr) +
-  \alpha f_t\bigl(t_i,\widehat{u}(t_i)\bigr) + \beta f_u\bigl(t_i,\widehat{u}(t_i)\bigr) +
+  f\bigl(t_i+\alpha,\hat{u}(t_i)+\beta\bigr) = f\bigl(t_i,\hat{u}(t_i)\bigr) +
+  \alpha f_t\bigl(t_i,\hat{u}(t_i)\bigr) + \beta f_u\bigl(t_i,\hat{u}(t_i)\bigr) +
   O\bigl(\alpha^2 + |\alpha\beta| + \beta^2\bigr).
 ```
 
-Matching this expression to the term in brackets in {eq}`rkexactexpand`, it seems natural to select $\alpha = h/2$ and $\beta = \frac{1}{2}h f\bigl(t_i,\widehat{u}(t_i)\bigr)$. Doing so, we find
+Matching this expression to the term in brackets in {eq}`rkexactexpand`, it seems natural to select $\alpha = h/2$ and $\beta = \frac{1}{2}hf\bigl(t_i,\hat{u}(t_i)\bigr)$. Doing so, we find
 
 ```{math}
-  \widehat{u}(t_{i+1}) = \widehat{u}(t_i) + h\left[f\bigl(t_i+\alpha,\widehat{u}(t_i)+\beta\bigr)\right] +
+  \hat{u}(t_{i+1}) = \hat{u}(t_i) + h\left[f\bigl(t_i+\alpha,\hat{u}(t_i)+\beta\bigr)\right] +
   O(h\alpha^2 + h|\alpha \beta| + h\beta^2 + h^3).
 ```
 
 Truncating results in the one-step formula
 
 ```{math}
-  :label: IE
-  \mathbf{u}_{i+1} = u_i +  hf\left(t_i+\tfrac{1}{2}h,u_i+\tfrac{1}{2}h
-    f(t_i,u_i)\right), \qquad i = 0,\ldots,n-1.
+:label: IE
+{u}_{i+1} = u_i +  hf\left(t_i+\tfrac{1}{2}h,u_i+\tfrac{1}{2}h f(t_i,u_i)\right), 
+\qquad i = 0,\ldots,n-1.
 ```
 
 We call this the **improved Euler** method. Thanks to the definitions above of $\alpha$ and $\beta$, the omitted terms are of size
@@ -79,12 +79,12 @@ Runge--Kutta methods are called **multistage** methods. We can see why if we int
 \end{split}
 ```
 
-The second stage employs an Euler-style strategy over the whole time step, but using the value from the first stage to get the slope, rather than using $f(t_i,w_i)$:
+The second stage employs an Euler-style strategy over the whole time step, but using the value from the first stage to get the slope, rather than using $f(t_i,u_i)$:
 
 ```{math}
 \begin{split}
   k_2 &= h f\left(t_i+\tfrac{1}{2}h,v\right)\\
-  \mathbf{u}_{i+1} &= u_i + k_2.
+  {u}_{i+1} &= u_i + k_2.
 \end{split}
 ```
 
@@ -97,6 +97,27 @@ Our implementation of IE2 is shown in {ref}`function-ie2`.
 
 ```{code-block} julia
 :lineno-start: 1
+"""
+    ie2(ivp,n)
+
+Apply the Improved Euler method to solve the given IVP using `n` time steps. Returns a vector of times and a vector of solution values.
+"""
+function ie2(ivp,n)
+    # Time discretization.
+    a,b = ivp.tspan
+    h = (b-a)/n
+    t = [ a + i*h for i in 0:n ]
+
+    # Initialize output.
+    u = fill(float(ivp.u0),n+1)
+
+    # Time stepping.
+    for i in 1:n
+        uhalf = u[i] + h/2*ivp.f(u[i],ivp.p,t[i]);
+        u[i+1] = u[i] + h*ivp.f(uhalf,ivp.p,t[i]+h/2);
+    end
+    return t,u
+end
 ```
 ````
 
@@ -193,6 +214,30 @@ Our implementation is given in {ref}`function-rk4`.
 
 ```{code-block} julia
 :lineno-start: 1
+"""
+    rk4(ivp,n)
+
+Apply "the" Runge-Kutta 4th order method to solve the given IVP using `n` time steps. Returns a vector of times and a vector of solution values.
+"""
+function rk4(ivp,n)
+    # Time discretization.
+    a,b = ivp.tspan
+    h = (b-a)/n
+    t = [ a + i*h for i in 0:n ]
+
+    # Initialize output.
+    u = fill(float(ivp.u0),n+1)
+
+    # Time stepping.
+    for i in 1:n
+        k1 = h*ivp.f( u[i],      ivp.p, t[i]     )
+        k2 = h*ivp.f( u[i]+k1/2, ivp.p, t[i]+h/2 )
+        k3 = h*ivp.f( u[i]+k2/2, ivp.p, t[i]+h/2 )
+        k4 = h*ivp.f( u[i]+k3,   ivp.p, t[i]+h   )
+        u[i+1] = u[i] + (k1 + 2*(k2 + k3) + k4)/6
+    end
+    return t,u
+end
 ```
 ````
 
@@ -256,7 +301,9 @@ The error decreases *geometrically* as the number of stages grows algebraically,
 
     **(a)** $u''+ 9u = 9t, \: 0< t< 2\pi, \: u(0) = 1,\: u'(0) = 1; \: \hat{u}(t) = t+\cos (3t)$
 
-    **(b)** $u''+ 9u = \sin(2t), \: 0< t< 2\pi, \: u(0) = 2,\: u'(0) = 1; \: \hat{u}(t) = (1/5) \sin(3t) + 2 \cos (3t)+ (1/5) \sin (2t)$
+    **(b)** $u''+ 9u = \sin(2t), \: 0< t< 2\pi, \: u(0) = 2,\: u'(0) = 1$;
+
+    $\quad \hat{u}(t) = (1/5) \sin(3t) + 2 \cos (3t)+  (1/5) \sin (2t)$
 
     **(c)** $u''- 9u = 9t, \: 0< t< 1, \: u(0) = 2,\: u'(0) = -1; \: \hat{u}(t) = e^{3t} + e^{-3t}-t$
 
@@ -266,9 +313,13 @@ The error decreases *geometrically* as the number of stages grows algebraically,
 
     **(f)** $2 x^2 y'' +3xy' - y = 0,\: 1<x<16, \: y(1) = 4, \: y'(1) = -1, \: \hat{y}(x) = 2(x^{1/2} + x^{-1})$
 
-    **(g)** $x^2 y'' -xy' + 2y = 0,\: 1<x<e^{\pi}, \: y(1) = 3, \: y'(1) = 4,\: \hat{y}(x) = x \left[ 3 \cos \left( \ln x \right)+\sin \left( \ln x \right) \right]$
+    **(g)** $x^2 y'' -xy' + 2y = 0,\: 1<x<e^{\pi}, \: y(1) = 3, \: y'(1) = 4$;
 
-    **(h)** $x^2 y'' + 3xy' + 4y = 0,\: e^{\pi/12} < x < e^{\pi}, \: y(e^{\pi/12}) = 0, \: y'(e^{\pi/12}) = -6, \quad \hat{y}(x) = x^{-1} \left[ 3 \cos \left( 3 \ln x \right)+\sin \left( 3 \ln x \right) \right]$
+    $\quad \hat{y}(x) = x \left[ 3 \cos \left( \ln x \right)+\sin \left( \ln x \right) \right]$
+
+    **(h)** $x^2 y'' + 3xy' + 4y = 0,\: e^{\pi/12} < x < e^{\pi}, \: y(e^{\pi/12}) = 0,  \: y'(e^{\pi/12}) = -6$;
+
+    $\quad \hat{y}(x) = x^{-1} \left[ 3 \cos \left( 3 \ln x \right)+\sin \left( 3 \ln x \right) \right]$
 
     ````{only} solutions
     ````

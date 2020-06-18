@@ -238,7 +238,8 @@
 %\begin{function}
 %  (function-Bspline)=\\````{proof:function} Bspline
 ****\\```{code-block} julia
-:lineno-start: 1\end{aligned}\end{align} \]</div>
+:lineno-start: 1
+\end{aligned}\end{align} \]</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>%  \caption{Evaluation of a B-spline.}
 %\end{function}
 %
@@ -330,7 +331,45 @@
 %\begin{function}
 %  (function-spinterp)=\\````{proof:function} spinterp
 ****\\```{code-block} julia
-:lineno-start: 1\end{aligned}\end{align} \]</div>
+:lineno-start: 1
+&quot;&quot;&quot;
+    spinterp(t,y)\\Create a cubic not-a-knot spline interpolating function for data values in `y` given at nodes
+in `t`.
+&quot;&quot;&quot;
+function spinterp(t,y)\\    n = length(t)-1
+    h = diff(t)         # differences of all adjacent pairs\\    # Preliminary definitions.
+    Z = zeros(n,n);
+    In = I(n);  E = In[1:n-1,:];
+    J = diagm(0=&gt;ones(n),1=&gt;-ones(n-1))
+    H = diagm(0=&gt;h)\\    # Left endpoint interpolation:
+    AL = [ In Z Z Z ]
+    vL = y[1:n]\\    # Right endpoint interpolation:
+    AR = [ In H H^2 H^3 ];
+    vR = y[2:n+1]\\    # Continuity of first derivative:
+    A1 = E*[ Z J 2*H 3*H^2 ]
+    v1 = zeros(n-1)\\    # Continuity of second derivative:
+    A2 = E*[ Z Z J 3*H ]
+    v2 = zeros(n-1)\\    # Not-a-knot conditions:
+    nakL = [ zeros(1,3*n) [1 -1 zeros(1,n-2)] ]
+    nakR = [ zeros(1,3*n) [zeros(1,n-2) 1 -1] ]\\    # Assemble and solve the full system.
+    A = [ AL; AR; A1; A2; nakL; nakR ]
+    v = [ vL; vR; v1; v2; 0; 0 ]
+    z = A\v\\    # Break the coefficients into separate vectors.
+    rows = 1:n
+    a = z[rows]
+    b = z[n.+rows];  c = z[2*n.+rows];  d = z[3*n.+rows]
+    S = [ Polynomial([a[k],b[k],c[k],d[k]]) for k = 1:n ]
+    # This function evaluates the spline when called with a value for x.
+    function evaluate(x)
+        k = findfirst(&#64;. x&lt;t)   # one greater than interval x belongs to
+        k==1 &amp;&amp; return NaN
+        if isnothing(k)
+            return x==t[end] ? y[end] : NaN
+        end
+        return S[k-1](x-t[k-1])
+    end
+    return evaluate
+end\end{aligned}\end{align} \]</div>
 </div></div><div class="proof proof-type-example" id="id2">
 
     <div class="proof-title">
