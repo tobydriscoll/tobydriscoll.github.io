@@ -5,9 +5,9 @@
     <link>https://tobydriscoll.net/authors/driscoll/</link>
       <atom:link href="https://tobydriscoll.net/authors/driscoll/index.xml" rel="self" type="application/rss+xml" />
     <description>Toby Driscoll</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 16 Jul 2019 11:55:12 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 18 Jul 2020 09:14:51 -0400</lastBuildDate>
     <image>
-      <url>https://tobydriscoll.net/authors/driscoll/avatar_hu4e929924294f93c0f179ff7f27e8c366_2280047_270x270_fill_q90_lanczos_center.jpg</url>
+      <url>https://tobydriscoll.net/images/icon_hub87c779f1881e6e8f3a1cfa061d957a8_23429_512x512_fill_lanczos_center_2.png</url>
       <title>Toby Driscoll</title>
       <link>https://tobydriscoll.net/authors/driscoll/</link>
     </image>
@@ -1046,6 +1046,44 @@ runs for three periods of the first mode.&lt;/p&gt;
 
   
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Putting a math- &amp; code-heavy textbook online</title>
+      <link>https://tobydriscoll.net/blog/putting-a-math-code-heavy-textbook-online/</link>
+      <pubDate>Sat, 18 Jul 2020 09:14:51 -0400</pubDate>
+      <guid>https://tobydriscoll.net/blog/putting-a-math-code-heavy-textbook-online/</guid>
+      <description>&lt;p&gt;Some changes arrive with great drama and attention. Others creep in stealthily, like the gradually warming water that boils the proverbial frog (contrary to 
+&lt;a href=&#34;http://archive-srel.uga.edu/outreach/ecoviews/ecoview071223.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reality&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;I can&amp;rsquo;t think of the last time I welcomed the sight of a printed journal in my mailbox. Though I might print the occasional article that needs to be pored over slowly, I&amp;rsquo;ll recycle that copy after a bit; the electronic version is the one that I archive. I got rid of my last filing cabinet years ago. The old papers and notes that I pulled out and saved from it have lain undisturbed on my bookshelf ever since.&lt;/p&gt;
+&lt;p&gt;Most of my pleasure reading is also done on devices rather than paper now. The portability and lack of clutter usually end up being decisive advantages for me. It&amp;rsquo;s a preference, not an inevitable necessity, unlike, say, the 
+&lt;a href=&#34;https://thewritelife.com/is-the-oxford-comma-necessary/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Oxford comma&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I haven&amp;rsquo;t found solid data on the matter, but my sense is that over the past five years or so, college student preferences for textbooks have been shifting toward the electronic. It&amp;rsquo;s worth considering that the iPhone is still only about 12 years old. Students who have had ubiquitous screens since toddlerhood have yet to make it to college. In other words, it&amp;rsquo;s still early days.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;re also in early days when it comes to exploiting the potential of electronic presentation. Many of the advantages of screens are forfeited when the electronic format is a 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Skeuomorph&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;skeuomorphic&lt;/a&gt; mess. As 
+&lt;a href=&#34;https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pointed out&lt;/a&gt; by James Somers in &lt;em&gt;The Atlantic&lt;/em&gt; in 2018, PDF is essentially a simulation of paper and should be considered obsolete as a method of presenting technical material electronically.&lt;/p&gt;
+&lt;p&gt;Somers profiles two alternatives: &lt;em&gt;Mathematica&lt;/em&gt; and Jupyter notebooks. Both offer semantic markup as well as computational interactivity. However, &lt;em&gt;Mathematica&lt;/em&gt; is a closed, proprietary system, which limits its appeal as a publishing platform. And one does not need to spend a lot of time with Jupyter notebooks to see that they are oriented toward short, standalone documents.&lt;/p&gt;
+&lt;p&gt;There is a middle ground: good old-fashioned HTML, with a dash of 
+&lt;a href=&#34;https://www.mathjax.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MathJax&lt;/a&gt; for equations. It&amp;rsquo;s not (inherently) interactive, but it&amp;rsquo;s light on resources and can display on just about any device. Hence, once I became determined to put my textbook with Rich Braun, 
+&lt;a href=&#34;https://tobydriscoll.net/fnc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Fundamentals of Numerical Computation&lt;/em&gt;&lt;/a&gt;, the question for me became: how do you author a book that includes lots of math and code in HTML form?&lt;/p&gt;
+&lt;p&gt;Now, the original textbook was produced using numerous LaTeX files and MATLAB scripts and functions. In my defense, I had cobbled all that together back when &lt;code&gt;publish&lt;/code&gt; in MATLAB still seemed pretty cool. My scripts actually run and include all the actual code each time the PDF is made. Surely, I thought, the right solution would be to publish directly in HTML rather than PDF. Right?&lt;/p&gt;
+&lt;p&gt;Not right. I&amp;rsquo;m not even going to bother to link to all the LaTeX-to-HTML converters I tried, seeing as how I&amp;rsquo;ve already given enough of my lifetime over to them. It&amp;rsquo;s not that those tools aren&amp;rsquo;t made by clever people, and to some degree they do work. It just seems to be a fiendishly hard problem. Part of the issue is that some of TeX/LaTeX&amp;rsquo;s great strengths, programmability and extensibility, require a monumental effort to duplicate. This is a guess, but I speculate too that the whole foundation of TeX—absolute and precise control over appearance—is the antithesis of the HTML model of &amp;ldquo;let the browser render.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Once I was resigned to the idea that my precious LaTeX files were going to have to be ported into some other form, I began to think about what the destination format should be. I briefly thought about using 
+&lt;a href=&#34;https://jekyllrb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jekyll&lt;/a&gt;, which I&amp;rsquo;ve used for course notes in the past. It&amp;rsquo;s fairly simple, but not quite powerful enough for a book project.&lt;/p&gt;
+&lt;p&gt;Next up was 
+&lt;a href=&#34;https://pretextbook.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PreTeXt&lt;/a&gt;, which I used this past spring to write 
+&lt;a href=&#34;https://tobydriscoll.net/udmath305/frontmatter.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;course notes for an LA/DE course&lt;/a&gt;. This project is maintained by people who care &lt;em&gt;a lot&lt;/em&gt; about putting math on the web, and there&amp;rsquo;s a great 
+&lt;a href=&#34;https://runestone.academy/runestone/books/published/fcla/fcla.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;free linear algebra textbook&lt;/a&gt; based on it. PreTeXt requires authoring directly in XML, though, which is not for the faint of heart. Worse, it has no mechanism for including code other than 
+&lt;a href=&#34;https://www.sagemath.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sage&lt;/a&gt;. Sage is great but not used for this project. I hacked and kludged my way to getting some short MATLAB codes in my PreTeXt notes, but it was not feasible for the level of code integration we need for the textbook.&lt;/p&gt;
+&lt;p&gt;Practically by accident, I found a superior solution for my purposes: 
+&lt;a href=&#34;https://jupyterbook.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jupyter Book&lt;/a&gt;. It allows writing content in Markdown or Jupyter notebooks, or a mixture of both. It supports MathJax equations, cross-references, footnotes, indexing, and bibliographies. Jupyter Book is built on top of 
+&lt;a href=&#34;https://www.sphinx-doc.org/en/master/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sphinx&lt;/a&gt;, which allowed me to fold in an extension for theorems. And it generates static HTML content, but you can direct it to include a link on every notebook page to an interactive 
+&lt;a href=&#34;https://mybinder.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Binder instance&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can see for yourself the result for (at this writing) 
+&lt;a href=&#34;https://fncbook.github.io/fnc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the first 6 chapters of FNC&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is very much a direct import of a book to an online format. I have not yet even enabled interactivity due to painfully slow Julia package loading times. Down the line it makes sense to take greater advantage of the format to include, for instance, 
+&lt;a href=&#34;https://www.youtube.com/playlist?list=PLvUvOH0OYx3BcZivtXMIwP6hKoYv0YvGn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video lectures and demos&lt;/a&gt; of the material, and I&amp;rsquo;m sure further adaptations will be called for. One great thing about an online book is that it is never &amp;ldquo;finished;&amp;rdquo; it can be continuously improved. That&amp;rsquo;s one of the bad things too, in terms of my work-life balance.&lt;/p&gt;
 </description>
     </item>
     
