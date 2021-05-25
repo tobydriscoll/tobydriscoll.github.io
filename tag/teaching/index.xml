@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>teaching | Toby Driscoll</title>
+    <link>https://tobydriscoll.net/tag/teaching/</link>
+      <atom:link href="https://tobydriscoll.net/tag/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <description>teaching</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Tue, 16 Jul 2019 11:55:12 -0400</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png</url>
+      <title>teaching</title>
+      <link>https://tobydriscoll.net/tag/teaching/</link>
+    </image>
+    
+    <item>
+      <title>Fundamentals of Numerical Computation</title>
+      <link>https://tobydriscoll.net/project/fnc/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/project/fnc/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Buy in print&lt;/strong&gt; at the &lt;a href=&#34;http://bookstore.siam.org/OT154&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM bookstore&lt;/a&gt;. Members of SIAM, including &lt;a href=&#34;http://siam.org/students/memberships.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;student members&lt;/a&gt;, get a 30% discount.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Buy an e-book&lt;/strong&gt; at the &lt;a href=&#34;https://bit.ly/FNC-ebook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Play store&lt;/a&gt;. A rental option is also available.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;FNC cover&#34; srcset=&#34;
+               /project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_c4f449af89d789fd603389bf6a1b383f.jpg 400w,
+               /project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_04951d1adb5c46eba5ce4f13d637b693.jpg 760w,
+               /project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_1200x1200_fit_q85_lanczos.jpg 1200w&#34;
+               src=&#34;https://tobydriscoll.net/project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_c4f449af89d789fd603389bf6a1b383f.jpg&#34;
+               width=&#34;160&#34;
+               height=&#34;600&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;This textbook is designed to introduce undergraduates in math, computer science, engineering, and related fields to the principles and practice of numerical computation. Our approach emphasizes linear algebra and approximation. The text presents mathematical underpinnings and analysis, complemented with 45 functions and over 160 examples coded in MATLAB, all &lt;a href=&#34;http://github.com/tobydriscoll/fnc-extras&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;available for download&lt;/a&gt;. Previous experience in MATLAB is not required. The functions and examples have also been implemented in Julia and Python.&lt;/p&gt;
+&lt;p&gt;The text is organized to be useful for either a one-semester introduction or two-semester sequence, with the most advanced techniques and concepts held back for the second half of the book.&lt;/p&gt;
+&lt;p&gt;Please note the &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/blob/master/errata/errata.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;known errata&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
+&lt;p&gt;The book&amp;rsquo;s functions and example scripts can be &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/raw/master/Fundamentals%20of%20Numerical%20Computation.mltbx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;downloaded as a MATLAB toolbox&lt;/a&gt; and installed by double-clicking the file. Alternatively, you can visit the &lt;a href=&#34;http://github.com/tobydriscoll/fnc-extras&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github page&lt;/a&gt; that has the needed files, as well as suggested in-class labs and projects, slides for instructors, and links to some (slightly outdated) videos linked to the text.&lt;/p&gt;
+&lt;p&gt;There are also &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/tree/master/julia&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia versions&lt;/a&gt; and &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/tree/master/python&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python versions&lt;/a&gt; of the function and example files.&lt;/p&gt;
+&lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Numbers, problems, and algorithms
+&lt;ol&gt;
+&lt;li&gt;Floating point numbers&lt;/li&gt;
+&lt;li&gt;Problems and conditioning&lt;/li&gt;
+&lt;li&gt;Stability of algorithms&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Square linear systems
+&lt;ol&gt;
+&lt;li&gt;Polynomial interpolation&lt;/li&gt;
+&lt;li&gt;Computing with matrices&lt;/li&gt;
+&lt;li&gt;Linear systems&lt;/li&gt;
+&lt;li&gt;LU factorization&lt;/li&gt;
+&lt;li&gt;Efficiency of matrix computations&lt;/li&gt;
+&lt;li&gt;Row pivoting&lt;/li&gt;
+&lt;li&gt;Vector and matrix norms&lt;/li&gt;
+&lt;li&gt;Conditioning of linear systems&lt;/li&gt;
+&lt;li&gt;Exploiting matrix structure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Overdetermined linear systems
+&lt;ol&gt;
+&lt;li&gt;Fitting functions to data&lt;/li&gt;
+&lt;li&gt;The normal equations&lt;/li&gt;
+&lt;li&gt;The QR factorization&lt;/li&gt;
+&lt;li&gt;Computing QR factorizations&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Roots of nonlinear equations
+&lt;ol&gt;
+&lt;li&gt;The rootfinding problem&lt;/li&gt;
+&lt;li&gt;Fixed point iteration&lt;/li&gt;
+&lt;li&gt;Newton&amp;rsquo;s method in one variable&lt;/li&gt;
+&lt;li&gt;Interpolation-based methods&lt;/li&gt;
+&lt;li&gt;Newton for nonlinear systems&lt;/li&gt;
+&lt;li&gt;Quasi-Newton methods&lt;/li&gt;
+&lt;li&gt;Nonlinear least squares&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Piecewise interpolation and calculus
+&lt;ol&gt;
+&lt;li&gt;The interpolation problem&lt;/li&gt;
+&lt;li&gt;Piecewise linear interpolation&lt;/li&gt;
+&lt;li&gt;Cubic splines&lt;/li&gt;
+&lt;li&gt;Finite differences&lt;/li&gt;
+&lt;li&gt;Convergence of finite differences&lt;/li&gt;
+&lt;li&gt;Numerical integration&lt;/li&gt;
+&lt;li&gt;Adaptive integration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Initial-value problems for ODEs
+&lt;ol&gt;
+&lt;li&gt;Basics of IVPs&lt;/li&gt;
+&lt;li&gt;Euler&amp;rsquo;s method&lt;/li&gt;
+&lt;li&gt;Systems of differential equations&lt;/li&gt;
+&lt;li&gt;Runge-Kutta methods&lt;/li&gt;
+&lt;li&gt;Adaptive Runge-Kutta&lt;/li&gt;
+&lt;li&gt;Multistep methods&lt;/li&gt;
+&lt;li&gt;Implementation of multistep methods&lt;/li&gt;
+&lt;li&gt;Zero-stability of multistep methods&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Matrix analysis
+&lt;ol&gt;
+&lt;li&gt;From matrix to insight&lt;/li&gt;
+&lt;li&gt;Eigenvalue decomposition&lt;/li&gt;
+&lt;li&gt;Singular value decomposition&lt;/li&gt;
+&lt;li&gt;Symmetry and definiteness&lt;/li&gt;
+&lt;li&gt;Dimension reduction&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Krylov methods in linear algebra
+&lt;ol&gt;
+&lt;li&gt;Sparsity and structure&lt;/li&gt;
+&lt;li&gt;Power iteration&lt;/li&gt;
+&lt;li&gt;Inverse iteration&lt;/li&gt;
+&lt;li&gt;Krylov subspaces&lt;/li&gt;
+&lt;li&gt;GMRES&lt;/li&gt;
+&lt;li&gt;MINRES and conjugate gradients&lt;/li&gt;
+&lt;li&gt;Matrix-free iterations&lt;/li&gt;
+&lt;li&gt;Preconditioning&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Global function approximation
+&lt;ol&gt;
+&lt;li&gt;Polynomial interpolation&lt;/li&gt;
+&lt;li&gt;The barycentric formula&lt;/li&gt;
+&lt;li&gt;Stability of polynomial interpolation&lt;/li&gt;
+&lt;li&gt;Orthogonal polynomials&lt;/li&gt;
+&lt;li&gt;Trigonometric interpolation&lt;/li&gt;
+&lt;li&gt;Spectrally accurate integration&lt;/li&gt;
+&lt;li&gt;Improper integrals&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Boundary-value problems
+&lt;ol&gt;
+&lt;li&gt;Shooting&lt;/li&gt;
+&lt;li&gt;Differentiation matrices&lt;/li&gt;
+&lt;li&gt;Collocation for linear problems&lt;/li&gt;
+&lt;li&gt;Nonlinearity and boundary conditions&lt;/li&gt;
+&lt;li&gt;The Galerkin method&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Diffusion equations
+&lt;ol&gt;
+&lt;li&gt;Black-Scholes equation&lt;/li&gt;
+&lt;li&gt;The method of lines&lt;/li&gt;
+&lt;li&gt;Absolute stability&lt;/li&gt;
+&lt;li&gt;Stiffness&lt;/li&gt;
+&lt;li&gt;Method of lines for parabolic PDEs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Advection equations
+&lt;ol&gt;
+&lt;li&gt;Traffic flow&lt;/li&gt;
+&lt;li&gt;Upwinding and stability&lt;/li&gt;
+&lt;li&gt;Absolute stability for advection&lt;/li&gt;
+&lt;li&gt;The wave equation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Two-dimensional problems
+&lt;ol&gt;
+&lt;li&gt;Tensor-product discretizations&lt;/li&gt;
+&lt;li&gt;Two-dimensional diffusion and advection&lt;/li&gt;
+&lt;li&gt;Laplace and Poisson equations&lt;/li&gt;
+&lt;li&gt;Nonlinear elliptic PDEs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;gallery&#34;&gt;Gallery&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge_hu0f548cfd05e38926eebe46ea28dd5be0_124060_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;Runge.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ac.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ac_hu95970c6c9ea6fae0dbfcfa14ef2df26c_38616_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ac.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ad.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ad_hu793d1d9b879a97c8ab6c3a18cece99e9_129083_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ad.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/blur.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/blur_hu56bbdb49eb2c4fc0bc1ea93c89180c13_145139_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;blur.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres_hub77fff9e6573c7ccbab0d5ca05b6cb46_50706_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;gmres.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/heat.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/heat_hu7f9a8ee2cd7da742aa215ef640b44411_101473_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;heat.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/int.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/int_hu525f77ce78fc11d3dc29e5787fb4ca47_59355_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;int.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon_hu4c9c9cae9716966acab1b15af67e8952_53949_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;oregon.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/pois.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/pois_hu6a09c7b9238211c8194e1ca1518f29c4_83948_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;pois.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse_hu3ef95519f45740ea365b74f9f07a4274_406244_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;sparse.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/stab.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/stab_hu2c15c64b385ef2b8e92ecbe02eba8949_28268_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;stab.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic_hu6ba28221845bc3855a564180a912cf4c_69354_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;traffic.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/voting.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/voting_hu1084b07da23983f4101a729b753609ca_61390_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;voting.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring ODEs</title>
+      <link>https://tobydriscoll.net/project/explode/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/project/explode/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Buy from the &lt;a href=&#34;http://bookstore.siam.org/ot157/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM bookstore&lt;/a&gt;. Members of SIAM, including &lt;a href=&#34;http://siam.org/students/memberships.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;student members&lt;/a&gt;, get a 30% discount.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/ExplODE/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download PDF&lt;/a&gt; for free.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Exploring ODEs cover&#34; srcset=&#34;
+               /project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_85c35fdbd820792d175d4f88f47c6619.jpg 400w,
+               /project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_7fb806aca984d3d580eb8cd948ecdbaf.jpg 760w,
+               /project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_1200x1200_fit_q85_lanczos.jpg 1200w&#34;
+               src=&#34;https://tobydriscoll.net/project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_85c35fdbd820792d175d4f88f47c6619.jpg&#34;
+               width=&#34;160&#34;
+               height=&#34;350&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;Written by &lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nick Trefethen&lt;/a&gt;,
+&lt;a href=&#34;https://www.linkedin.com/in/birkisson/?ppe=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Asgeir Birkisson&lt;/a&gt;, and
+myself, &lt;em&gt;Exploring ODEs&lt;/em&gt; takes a look at ordinary differential equations
+unlike any other text. Rather than focusing on the mechanics of finding
+solutions in a limited number of special problems, we use
+&lt;a href=&#34;www.chebfun.org&#34;&gt;Chebfun&lt;/a&gt; to illustrate the wide range of behavior of
+those solutions for a variety of linear, nonlinear, and multidimensional
+problems, including initial-value, boundary-value, and eigenvalue
+problems. Each short chapter includes a detailed application and a
+favorite reference. The text is accessible as an accompaniment or
+follow-up to a standard first undergraduate text on ODEs. All of the
+MATLAB codes generating the examples and figures are available for
+download, as is the full text in PDF, from &lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/ExplODE/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the book&amp;rsquo;s
+website&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;First-order scalar linear ODEs&lt;/li&gt;
+&lt;li&gt;First-order scalar nonlinear ODEs&lt;/li&gt;
+&lt;li&gt;Second-order equations and damped oscillations&lt;/li&gt;
+&lt;li&gt;Boundary-value problems&lt;/li&gt;
+&lt;li&gt;Eigenvalues of linear BVPs&lt;/li&gt;
+&lt;li&gt;Variable coefficients and adjoints&lt;/li&gt;
+&lt;li&gt;Resonance&lt;/li&gt;
+&lt;li&gt;Second-order equations in the phase plane&lt;/li&gt;
+&lt;li&gt;Systems of equations&lt;/li&gt;
+&lt;li&gt;The fundamental existence theorem&lt;/li&gt;
+&lt;li&gt;Random functions and random ODEs&lt;/li&gt;
+&lt;li&gt;Chaos&lt;/li&gt;
+&lt;li&gt;Linear systems and linearization&lt;/li&gt;
+&lt;li&gt;Stable and unstable fixed points&lt;/li&gt;
+&lt;li&gt;Multiple solutions of nonlinear BVPs&lt;/li&gt;
+&lt;li&gt;Bifurcation&lt;/li&gt;
+&lt;li&gt;Continuation and path-following&lt;/li&gt;
+&lt;li&gt;Periodic ODEs&lt;/li&gt;
+&lt;li&gt;Boundary and interior layers&lt;/li&gt;
+&lt;li&gt;Into the complex plane&lt;/li&gt;
+&lt;li&gt;Time-dependent PDEs&lt;/li&gt;
+&lt;li&gt;Appendix A: Chebfun and its ODE algorithms&lt;/li&gt;
+&lt;li&gt;Appendix B: 100 more examples&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning MATLAB</title>
+      <link>https://tobydriscoll.net/project/learning-matlab/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/project/learning-matlab/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Buy at the &lt;a href=&#34;http://bookstore.siam.org/OT115&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM bookstore&lt;/a&gt;. Members of SIAM, including &lt;a href=&#34;http://siam.org/students/memberships.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;student members&lt;/a&gt;, get a 30% discount.&lt;/li&gt;
+&lt;li&gt;Buy at &lt;a href=&#34;http://www.amazon.com/Learning-MATLAB-Tobin-A-Driscoll/dp/0898716837&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Amazon&lt;/a&gt; in the U.S.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;LM cover&#34; srcset=&#34;
+               /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_5a578f6866cb796fae71afab1f33e061.jpg 400w,
+               /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_b65f08728644ef69b6bec6c95f173436.jpg 760w,
+               /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_1200x1200_fit_q85_lanczos.jpg 1200w&#34;
+               src=&#34;https://tobydriscoll.net/project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_5a578f6866cb796fae71afab1f33e061.jpg&#34;
+               width=&#34;160&#34;
+               height=&#34;220&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;Learning MATLAB&lt;/em&gt; is a concise, essentials-only introduction to MATLAB
+for those who have programming experience in other procedural languages.
+At about 100 pages, it&amp;rsquo;s meant as a supplemental guide in a numerical
+analysis or scientific computing course or as a standalone tutorial for
+those who need to get started quickly in MATLAB. &lt;em&gt;Learning MATLAB&lt;/em&gt; does
+not cover every feature or calling syntax, but focuses on those parts of
+MATLAB that have proven themselves indispensible to me in my 20 years as
+a MATLAB programmer. (Fun fact: I was a runaway winner of &amp;ldquo;MATLAB
+Jeopardy&amp;rdquo; at the 1995 MATLAB Conference.) The book grew out of a summer
+workshop that I taught to grad students for 8 years at Delaware.&lt;/p&gt;
+&lt;p&gt;The chapters in &lt;em&gt;Learning MATLAB&lt;/em&gt; are: Introduction, Arrays and
+matrices, Scripts and functions, More on functions, Graphics, Advanced
+techniques, and Scientific computing. Each feature is demonstrated by
+examples, and every chapter includes exercises ranging from routine to
+very challenging.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The sorry state of teaching ODEs</title>
+      <link>https://tobydriscoll.net/blog/the-sorry-state-of-teaching-odes/</link>
+      <pubDate>Tue, 16 Jul 2019 11:55:12 -0400</pubDate>
+      <guid>https://tobydriscoll.net/blog/the-sorry-state-of-teaching-odes/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve spent the last two spring semesters teaching ODEs (ordinary differential equations) to a total of about 170 biomedical and chemical engineering majors. The content is dictated by a number of constraints: the perceived desires of the client departments, multiple instructors, all of whom have more experience with the course than I do, and traditional expectations. Based on a limited survey of popular textbooks (&lt;a href=&#34;https://www.amazon.com/Differential-Equations-Engineers-David-Kalbaugh/dp/1498798810&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt;, &lt;a href=&#34;https://www.amazon.com/Engineering-Differential-Equations-Theory-Applications/dp/1441979182&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt;, and our choice, &lt;a href=&#34;https://www.amazon.com/Differential-Equations-Introduction-Methods-Applications/dp/1118531779&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brannan and Boyce&lt;/a&gt;), many courses like this are quite similar. (You can look through my &lt;a href=&#34;https://tobydriscoll.net/udmath305/notes.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;notes&lt;/a&gt;, rough as they are.)&lt;/p&gt;
+&lt;p&gt;What I find particularly disheartening about these books, and the courses they imply, is that they share an overwhelming emphasis on hand computations of formulas to produce &amp;ldquo;solutions&amp;rdquo; of particular problems. I scare-quote &amp;ldquo;solutions&amp;rdquo; here because it&amp;rsquo;s become clear that the majority of students can&amp;rsquo;t readily comprehend their own outputs. And really, why should they? Most homework (and, by implication, exam) problems are going to simply ask them to produce the output, not interpret it.&lt;/p&gt;
+&lt;p&gt;Not long ago, this approach was not hard to justify. What could be more important to building a bridge or &lt;a href=&#34;https://www.bbc.co.uk/programmes/w13xttx2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;going to the Moon&lt;/a&gt; than getting the right answer? Of course it&amp;rsquo;s absurd to suggest that getting the right answer no longer matters. But what &lt;em&gt;does&lt;/em&gt; no longer matter is whether the student can crank that answer out by hand.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m old enough to remember a middle school lecture on finding values of logarithms by linearly interpolating values from a table. I sincerely hope this is no longer done, though I can imagine the objections when it was proposed for elimination: &amp;ldquo;Isn&amp;rsquo;t it good for them to learn linear interpolation? What if they&amp;rsquo;re stuck on a desert island without a calculator? How will they recognize when the calculator gives a clearly wrong answer?&amp;rdquo; You&amp;rsquo;ll hear much the same said about many other dubious lessons that are still very much alive today, such as days of calculus devoted to drawing (bad) graphs by hand.&lt;/p&gt;
+&lt;p&gt;Long after the original driving need to compute or do something by hand has vanished, we&amp;rsquo;re able to supply alternative reasons to do it. These reasons seem to come in two flavors: hypothetical utility and tradition. Claims that students &amp;ldquo;learn concepts better&amp;rdquo; by hand computing are almost never substantiated by evidence, and in any case tend to beg the question of which concepts are in play. I think we can conclusively retire the &amp;ldquo;they may not always have a calculator&amp;rdquo; form of manufactured need. As for grimly continuing a tradition, sometimes disguised within a beguiling &amp;ldquo;what&amp;rsquo;s the harm?&amp;rdquo; phrasing, what you get is a recipe for stagnation and irrelevance. The cost is always a lost opportunity to teach something else.&lt;/p&gt;
+&lt;p&gt;I would not suggest that students never solve an example problem by hand. An ODE course graduate who cannot solve, say, $y^{\prime\prime} + 4y=1$ has missed something vital. But I don&amp;rsquo;t see what&amp;rsquo;s to be gained by practicing on $y^{\prime\prime} + 5y&#39; + 4y=t^2e^{-2t}$. All the time and focus needed to wrest an answer from that problem is purely mechanical, never going beyond the application of a rigid algorithm.&lt;/p&gt;
+&lt;p&gt;Not only are such algorithms much better performed by a computer, they are incredibly fragile. The &lt;a href=&#34;https://www.wolframalpha.com/input/?i=solve&amp;#43;y%27%27&amp;#43;%2B&amp;#43;t*y&amp;#43;%3D&amp;#43;1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;analytical solution&lt;/a&gt; of $y^{\prime\prime} + ty=1$ is &lt;em&gt;so much&lt;/em&gt; harder to produce and interpret than $y^{\prime\prime} + 4y=1$ that it might as well be of a different universe altogether. And that&amp;rsquo;s still just a linear problem!&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s sensible to focus on the most fundamental ODE problems with analytical solutions, like the linearly damped oscillator and the logistic equation. We can totally dissect those problems, and they represent the simplest form of more complicated and realistic models. But when we give the impression that analytical solutions are the primary objective of the ODE world, we grossly distort the true picture. Already when I was a graduate student over 25 years ago, there were &lt;a href=&#34;https://dsweb.siam.org/Software/dstool&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;great computational ODE tools&lt;/a&gt; that would give you a fast and detailed understanding of dynamics. If you were inclined and able, you might go on to make some exact analytical (qualitative) conclusions suggested by the numerical and graphical explorations. But that&amp;rsquo;s a pursuit for a modestly sized cadre of mathematically advanced academics. It&amp;rsquo;s not the use case for over 99% of our undergraduates taking their one lifetime ODE course.&lt;/p&gt;
+&lt;p&gt;Rather than trying to turn our students into slow and error-prone Mathematica simulators, we ought to be equipping our students with ODE fluency. Modeling, nondimensionalization, stability, and resonance are all more fundamental and vital than knowing &lt;a href=&#34;http://tutorial.math.lamar.edu/Classes/DE/UndeterminedCoefficients.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;every last case of the method of undetermined coefficients&lt;/a&gt;. Knowing the stability implications of poles in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Transfer_function&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;transfer function&lt;/a&gt; is more important than performing partial fraction decompositions to invert Laplace transforms by hand.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s a more relevant use of time: solving artificial scalar problems carefully selected to have compact analytical solutions, or learning how to simulate &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/abs/10.1002/j.2050-0416.1994.tb00830.x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ODE models of beer fermentation&lt;/a&gt; or &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/10412391&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;passive walking down a ramp&lt;/a&gt;?&lt;/p&gt;
+&lt;p&gt;Someday, perhaps, I will get to teach an ODE course that follows the &lt;a href=&#34;https://tobydriscoll.net/project/explode/&#34;&gt;textbook I co-authored with Trefethen and Birkisson&lt;/a&gt;. We used &lt;a href=&#34;http://www.chebfun.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chebfun&lt;/a&gt; to do the heavy lifting of solving problems and discussed at length how to read an ODE and investigate its behavior thoroughly. By not dwelling on now-archaic analytical solution methods, we were able to include introductions to chaos, stochastics, eigenvalues, bifurcations, and boundary layers, all essential phenomena that never make it into a traditional class.&lt;/p&gt;
+&lt;p&gt;Until that happy day arrives, I guess you can find me trying to motivate 70 engineers to learn how to compute the exponential of 2-by-2 matrices.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4 | Toby Driscoll</title>
+    <link>https://tobydriscoll.net/publication-type/4/</link>
+      <atom:link href="https://tobydriscoll.net/publication-type/4/index.xml" rel="self" type="application/rss+xml" />
+    <description>4</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Tue, 01 Jan 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png</url>
+      <title>4</title>
+      <link>https://tobydriscoll.net/publication-type/4/</link>
+    </image>
+    
+    <item>
+      <title>Automatic Linearity Detection</title>
+      <link>https://tobydriscoll.net/publication/birkisson-automatic-linearity-detection-2013/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/birkisson-automatic-linearity-detection-2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Approximations in Canonical Electrostatic MEMS Models</title>
+      <link>https://tobydriscoll.net/publication/driscoll-approximations-canonical-electrostatic-2004/</link>
+      <pubDate>Thu, 01 Jan 2004 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/driscoll-approximations-canonical-electrostatic-2004/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An Improved Schwarz-Chrisoffel Toolbox for MATLAB</title>
+      <link>https://tobydriscoll.net/publication/driscoll-improved-schwarz-chrisoffel-toolbox-2003/</link>
+      <pubDate>Wed, 01 Jan 2003 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/driscoll-improved-schwarz-chrisoffel-toolbox-2003/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Domain Decomposition Methods for Conformal Mapping and Eigenvalue Problems</title>
+      <link>https://tobydriscoll.net/publication/driscoll-domain-decomposition-methods-1996/</link>
+      <pubDate>Mon, 01 Jan 1996 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/driscoll-domain-decomposition-methods-1996/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matrix Iterations: The Six Gaps between Potential Theory and Convergence</title>
+      <link>https://tobydriscoll.net/publication/driscoll-matrix-iterations-six-1996/</link>
+      <pubDate>Mon, 01 Jan 1996 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/driscoll-matrix-iterations-six-1996/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Numerical Conformal Mapping Using Cross-Ratios and Delaunay Triangulation</title>
+      <link>https://tobydriscoll.net/publication/vavasis-numerical-conformal-mapping-1996/</link>
+      <pubDate>Mon, 01 Jan 1996 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/vavasis-numerical-conformal-mapping-1996/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conformal Mapping and Convergence of Krylov Iterations</title>
+      <link>https://tobydriscoll.net/publication/driscoll-conformal-mapping-convergence-1994/</link>
+      <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/driscoll-conformal-mapping-convergence-1994/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Schwarz-Christoffel Toolbox User&#39;s Guide</title>
+      <link>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</link>
+      <pubDate>Sat, 01 Jan 1994 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/driscoll-schwarz-christoffel-toolbox-user-1994/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pseudospectra of the Wave Operator with an Absorbing Boundary</title>
+      <link>https://tobydriscoll.net/publication/driscoll-pseudospectra-wave-operator-1993/</link>
+      <pubDate>Fri, 01 Jan 1993 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/driscoll-pseudospectra-wave-operator-1993/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A New Direction in Hydrodynamic Stability: Beyond Eigenvalues</title>
+      <link>https://tobydriscoll.net/publication/trefethen-new-direction-hydrodynamic-1992/</link>
+      <pubDate>Wed, 01 Jan 1992 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/trefethen-new-direction-hydrodynamic-1992/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

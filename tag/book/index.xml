@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>book | Toby Driscoll</title>
+    <link>https://tobydriscoll.net/tag/book/</link>
+      <atom:link href="https://tobydriscoll.net/tag/book/index.xml" rel="self" type="application/rss+xml" />
+    <description>book</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png</url>
+      <title>book</title>
+      <link>https://tobydriscoll.net/tag/book/</link>
+    </image>
+    
+    <item>
+      <title>Fundamentals of Numerical Computation</title>
+      <link>https://tobydriscoll.net/project/fnc/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/project/fnc/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Buy in print&lt;/strong&gt; at the &lt;a href=&#34;http://bookstore.siam.org/OT154&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM bookstore&lt;/a&gt;. Members of SIAM, including &lt;a href=&#34;http://siam.org/students/memberships.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;student members&lt;/a&gt;, get a 30% discount.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Buy an e-book&lt;/strong&gt; at the &lt;a href=&#34;https://bit.ly/FNC-ebook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Play store&lt;/a&gt;. A rental option is also available.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;FNC cover&#34; srcset=&#34;
+               /project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_c4f449af89d789fd603389bf6a1b383f.jpg 400w,
+               /project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_04951d1adb5c46eba5ce4f13d637b693.jpg 760w,
+               /project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_1200x1200_fit_q85_lanczos.jpg 1200w&#34;
+               src=&#34;https://tobydriscoll.net/project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_c4f449af89d789fd603389bf6a1b383f.jpg&#34;
+               width=&#34;160&#34;
+               height=&#34;600&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;This textbook is designed to introduce undergraduates in math, computer science, engineering, and related fields to the principles and practice of numerical computation. Our approach emphasizes linear algebra and approximation. The text presents mathematical underpinnings and analysis, complemented with 45 functions and over 160 examples coded in MATLAB, all &lt;a href=&#34;http://github.com/tobydriscoll/fnc-extras&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;available for download&lt;/a&gt;. Previous experience in MATLAB is not required. The functions and examples have also been implemented in Julia and Python.&lt;/p&gt;
+&lt;p&gt;The text is organized to be useful for either a one-semester introduction or two-semester sequence, with the most advanced techniques and concepts held back for the second half of the book.&lt;/p&gt;
+&lt;p&gt;Please note the &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/blob/master/errata/errata.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;known errata&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
+&lt;p&gt;The book&amp;rsquo;s functions and example scripts can be &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/raw/master/Fundamentals%20of%20Numerical%20Computation.mltbx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;downloaded as a MATLAB toolbox&lt;/a&gt; and installed by double-clicking the file. Alternatively, you can visit the &lt;a href=&#34;http://github.com/tobydriscoll/fnc-extras&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github page&lt;/a&gt; that has the needed files, as well as suggested in-class labs and projects, slides for instructors, and links to some (slightly outdated) videos linked to the text.&lt;/p&gt;
+&lt;p&gt;There are also &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/tree/master/julia&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia versions&lt;/a&gt; and &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/tree/master/python&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python versions&lt;/a&gt; of the function and example files.&lt;/p&gt;
+&lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Numbers, problems, and algorithms
+&lt;ol&gt;
+&lt;li&gt;Floating point numbers&lt;/li&gt;
+&lt;li&gt;Problems and conditioning&lt;/li&gt;
+&lt;li&gt;Stability of algorithms&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Square linear systems
+&lt;ol&gt;
+&lt;li&gt;Polynomial interpolation&lt;/li&gt;
+&lt;li&gt;Computing with matrices&lt;/li&gt;
+&lt;li&gt;Linear systems&lt;/li&gt;
+&lt;li&gt;LU factorization&lt;/li&gt;
+&lt;li&gt;Efficiency of matrix computations&lt;/li&gt;
+&lt;li&gt;Row pivoting&lt;/li&gt;
+&lt;li&gt;Vector and matrix norms&lt;/li&gt;
+&lt;li&gt;Conditioning of linear systems&lt;/li&gt;
+&lt;li&gt;Exploiting matrix structure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Overdetermined linear systems
+&lt;ol&gt;
+&lt;li&gt;Fitting functions to data&lt;/li&gt;
+&lt;li&gt;The normal equations&lt;/li&gt;
+&lt;li&gt;The QR factorization&lt;/li&gt;
+&lt;li&gt;Computing QR factorizations&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Roots of nonlinear equations
+&lt;ol&gt;
+&lt;li&gt;The rootfinding problem&lt;/li&gt;
+&lt;li&gt;Fixed point iteration&lt;/li&gt;
+&lt;li&gt;Newton&amp;rsquo;s method in one variable&lt;/li&gt;
+&lt;li&gt;Interpolation-based methods&lt;/li&gt;
+&lt;li&gt;Newton for nonlinear systems&lt;/li&gt;
+&lt;li&gt;Quasi-Newton methods&lt;/li&gt;
+&lt;li&gt;Nonlinear least squares&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Piecewise interpolation and calculus
+&lt;ol&gt;
+&lt;li&gt;The interpolation problem&lt;/li&gt;
+&lt;li&gt;Piecewise linear interpolation&lt;/li&gt;
+&lt;li&gt;Cubic splines&lt;/li&gt;
+&lt;li&gt;Finite differences&lt;/li&gt;
+&lt;li&gt;Convergence of finite differences&lt;/li&gt;
+&lt;li&gt;Numerical integration&lt;/li&gt;
+&lt;li&gt;Adaptive integration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Initial-value problems for ODEs
+&lt;ol&gt;
+&lt;li&gt;Basics of IVPs&lt;/li&gt;
+&lt;li&gt;Euler&amp;rsquo;s method&lt;/li&gt;
+&lt;li&gt;Systems of differential equations&lt;/li&gt;
+&lt;li&gt;Runge-Kutta methods&lt;/li&gt;
+&lt;li&gt;Adaptive Runge-Kutta&lt;/li&gt;
+&lt;li&gt;Multistep methods&lt;/li&gt;
+&lt;li&gt;Implementation of multistep methods&lt;/li&gt;
+&lt;li&gt;Zero-stability of multistep methods&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Matrix analysis
+&lt;ol&gt;
+&lt;li&gt;From matrix to insight&lt;/li&gt;
+&lt;li&gt;Eigenvalue decomposition&lt;/li&gt;
+&lt;li&gt;Singular value decomposition&lt;/li&gt;
+&lt;li&gt;Symmetry and definiteness&lt;/li&gt;
+&lt;li&gt;Dimension reduction&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Krylov methods in linear algebra
+&lt;ol&gt;
+&lt;li&gt;Sparsity and structure&lt;/li&gt;
+&lt;li&gt;Power iteration&lt;/li&gt;
+&lt;li&gt;Inverse iteration&lt;/li&gt;
+&lt;li&gt;Krylov subspaces&lt;/li&gt;
+&lt;li&gt;GMRES&lt;/li&gt;
+&lt;li&gt;MINRES and conjugate gradients&lt;/li&gt;
+&lt;li&gt;Matrix-free iterations&lt;/li&gt;
+&lt;li&gt;Preconditioning&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Global function approximation
+&lt;ol&gt;
+&lt;li&gt;Polynomial interpolation&lt;/li&gt;
+&lt;li&gt;The barycentric formula&lt;/li&gt;
+&lt;li&gt;Stability of polynomial interpolation&lt;/li&gt;
+&lt;li&gt;Orthogonal polynomials&lt;/li&gt;
+&lt;li&gt;Trigonometric interpolation&lt;/li&gt;
+&lt;li&gt;Spectrally accurate integration&lt;/li&gt;
+&lt;li&gt;Improper integrals&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Boundary-value problems
+&lt;ol&gt;
+&lt;li&gt;Shooting&lt;/li&gt;
+&lt;li&gt;Differentiation matrices&lt;/li&gt;
+&lt;li&gt;Collocation for linear problems&lt;/li&gt;
+&lt;li&gt;Nonlinearity and boundary conditions&lt;/li&gt;
+&lt;li&gt;The Galerkin method&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Diffusion equations
+&lt;ol&gt;
+&lt;li&gt;Black-Scholes equation&lt;/li&gt;
+&lt;li&gt;The method of lines&lt;/li&gt;
+&lt;li&gt;Absolute stability&lt;/li&gt;
+&lt;li&gt;Stiffness&lt;/li&gt;
+&lt;li&gt;Method of lines for parabolic PDEs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Advection equations
+&lt;ol&gt;
+&lt;li&gt;Traffic flow&lt;/li&gt;
+&lt;li&gt;Upwinding and stability&lt;/li&gt;
+&lt;li&gt;Absolute stability for advection&lt;/li&gt;
+&lt;li&gt;The wave equation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Two-dimensional problems
+&lt;ol&gt;
+&lt;li&gt;Tensor-product discretizations&lt;/li&gt;
+&lt;li&gt;Two-dimensional diffusion and advection&lt;/li&gt;
+&lt;li&gt;Laplace and Poisson equations&lt;/li&gt;
+&lt;li&gt;Nonlinear elliptic PDEs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;gallery&#34;&gt;Gallery&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge_hu0f548cfd05e38926eebe46ea28dd5be0_124060_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;Runge.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ac.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ac_hu95970c6c9ea6fae0dbfcfa14ef2df26c_38616_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ac.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ad.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ad_hu793d1d9b879a97c8ab6c3a18cece99e9_129083_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ad.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/blur.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/blur_hu56bbdb49eb2c4fc0bc1ea93c89180c13_145139_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;blur.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres_hub77fff9e6573c7ccbab0d5ca05b6cb46_50706_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;gmres.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/heat.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/heat_hu7f9a8ee2cd7da742aa215ef640b44411_101473_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;heat.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/int.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/int_hu525f77ce78fc11d3dc29e5787fb4ca47_59355_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;int.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon_hu4c9c9cae9716966acab1b15af67e8952_53949_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;oregon.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/pois.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/pois_hu6a09c7b9238211c8194e1ca1518f29c4_83948_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;pois.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse_hu3ef95519f45740ea365b74f9f07a4274_406244_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;sparse.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/stab.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/stab_hu2c15c64b385ef2b8e92ecbe02eba8949_28268_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;stab.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic_hu6ba28221845bc3855a564180a912cf4c_69354_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;traffic.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/voting.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/voting_hu1084b07da23983f4101a729b753609ca_61390_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;voting.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring ODEs</title>
+      <link>https://tobydriscoll.net/project/explode/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/project/explode/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Buy from the &lt;a href=&#34;http://bookstore.siam.org/ot157/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM bookstore&lt;/a&gt;. Members of SIAM, including &lt;a href=&#34;http://siam.org/students/memberships.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;student members&lt;/a&gt;, get a 30% discount.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/ExplODE/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download PDF&lt;/a&gt; for free.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;Exploring ODEs cover&#34; srcset=&#34;
+               /project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_85c35fdbd820792d175d4f88f47c6619.jpg 400w,
+               /project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_7fb806aca984d3d580eb8cd948ecdbaf.jpg 760w,
+               /project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_1200x1200_fit_q85_lanczos.jpg 1200w&#34;
+               src=&#34;https://tobydriscoll.net/project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_85c35fdbd820792d175d4f88f47c6619.jpg&#34;
+               width=&#34;160&#34;
+               height=&#34;350&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;Written by &lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nick Trefethen&lt;/a&gt;,
+&lt;a href=&#34;https://www.linkedin.com/in/birkisson/?ppe=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Asgeir Birkisson&lt;/a&gt;, and
+myself, &lt;em&gt;Exploring ODEs&lt;/em&gt; takes a look at ordinary differential equations
+unlike any other text. Rather than focusing on the mechanics of finding
+solutions in a limited number of special problems, we use
+&lt;a href=&#34;www.chebfun.org&#34;&gt;Chebfun&lt;/a&gt; to illustrate the wide range of behavior of
+those solutions for a variety of linear, nonlinear, and multidimensional
+problems, including initial-value, boundary-value, and eigenvalue
+problems. Each short chapter includes a detailed application and a
+favorite reference. The text is accessible as an accompaniment or
+follow-up to a standard first undergraduate text on ODEs. All of the
+MATLAB codes generating the examples and figures are available for
+download, as is the full text in PDF, from &lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/ExplODE/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the book&amp;rsquo;s
+website&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;First-order scalar linear ODEs&lt;/li&gt;
+&lt;li&gt;First-order scalar nonlinear ODEs&lt;/li&gt;
+&lt;li&gt;Second-order equations and damped oscillations&lt;/li&gt;
+&lt;li&gt;Boundary-value problems&lt;/li&gt;
+&lt;li&gt;Eigenvalues of linear BVPs&lt;/li&gt;
+&lt;li&gt;Variable coefficients and adjoints&lt;/li&gt;
+&lt;li&gt;Resonance&lt;/li&gt;
+&lt;li&gt;Second-order equations in the phase plane&lt;/li&gt;
+&lt;li&gt;Systems of equations&lt;/li&gt;
+&lt;li&gt;The fundamental existence theorem&lt;/li&gt;
+&lt;li&gt;Random functions and random ODEs&lt;/li&gt;
+&lt;li&gt;Chaos&lt;/li&gt;
+&lt;li&gt;Linear systems and linearization&lt;/li&gt;
+&lt;li&gt;Stable and unstable fixed points&lt;/li&gt;
+&lt;li&gt;Multiple solutions of nonlinear BVPs&lt;/li&gt;
+&lt;li&gt;Bifurcation&lt;/li&gt;
+&lt;li&gt;Continuation and path-following&lt;/li&gt;
+&lt;li&gt;Periodic ODEs&lt;/li&gt;
+&lt;li&gt;Boundary and interior layers&lt;/li&gt;
+&lt;li&gt;Into the complex plane&lt;/li&gt;
+&lt;li&gt;Time-dependent PDEs&lt;/li&gt;
+&lt;li&gt;Appendix A: Chebfun and its ODE algorithms&lt;/li&gt;
+&lt;li&gt;Appendix B: 100 more examples&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning MATLAB</title>
+      <link>https://tobydriscoll.net/project/learning-matlab/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/project/learning-matlab/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Buy at the &lt;a href=&#34;http://bookstore.siam.org/OT115&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM bookstore&lt;/a&gt;. Members of SIAM, including &lt;a href=&#34;http://siam.org/students/memberships.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;student members&lt;/a&gt;, get a 30% discount.&lt;/li&gt;
+&lt;li&gt;Buy at &lt;a href=&#34;http://www.amazon.com/Learning-MATLAB-Tobin-A-Driscoll/dp/0898716837&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Amazon&lt;/a&gt; in the U.S.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;LM cover&#34; srcset=&#34;
+               /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_5a578f6866cb796fae71afab1f33e061.jpg 400w,
+               /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_b65f08728644ef69b6bec6c95f173436.jpg 760w,
+               /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_1200x1200_fit_q85_lanczos.jpg 1200w&#34;
+               src=&#34;https://tobydriscoll.net/project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_5a578f6866cb796fae71afab1f33e061.jpg&#34;
+               width=&#34;160&#34;
+               height=&#34;220&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;Learning MATLAB&lt;/em&gt; is a concise, essentials-only introduction to MATLAB
+for those who have programming experience in other procedural languages.
+At about 100 pages, it&amp;rsquo;s meant as a supplemental guide in a numerical
+analysis or scientific computing course or as a standalone tutorial for
+those who need to get started quickly in MATLAB. &lt;em&gt;Learning MATLAB&lt;/em&gt; does
+not cover every feature or calling syntax, but focuses on those parts of
+MATLAB that have proven themselves indispensible to me in my 20 years as
+a MATLAB programmer. (Fun fact: I was a runaway winner of &amp;ldquo;MATLAB
+Jeopardy&amp;rdquo; at the 1995 MATLAB Conference.) The book grew out of a summer
+workshop that I taught to grad students for 8 years at Delaware.&lt;/p&gt;
+&lt;p&gt;The chapters in &lt;em&gt;Learning MATLAB&lt;/em&gt; are: Introduction, Arrays and
+matrices, Scripts and functions, More on functions, Graphics, Advanced
+techniques, and Scientific computing. Each feature is demonstrated by
+examples, and every chapter includes exercises ranging from routine to
+very challenging.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Schwarz–Christoffel Mapping</title>
+      <link>https://tobydriscoll.net/project/schwarz-christoffel-mapping/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/project/schwarz-christoffel-mapping/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;SCMContents.pdf&#34;&gt;See the table of contents&lt;/a&gt; of this book&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cambridge.org/us/knowledge/isbn/item1169156/Schwarz-Christoffel%20Mapping/?site_locale=en_US&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Buy the book&lt;/a&gt; directly from CUP&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Schwarz-Christoffel-Cambridge-Monographs-Computational-Mathematics/dp/0521807263/ref=la_B001H6MER8_1_2?ie=UTF8&amp;amp;qid=1371646989&amp;amp;sr=1-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Buy the book&lt;/a&gt; at Amazon (U.S.)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;SCM cover&#34; srcset=&#34;
+               /project/schwarz-christoffel-mapping/SCMapping_hub8e2240b3df829f11baf36b9d4689d32_57038_cb856b70620cd7631a6a20b57424866f.JPG 400w,
+               /project/schwarz-christoffel-mapping/SCMapping_hub8e2240b3df829f11baf36b9d4689d32_57038_b9ae23a1057f4af2e168f302c0eacc04.JPG 760w,
+               /project/schwarz-christoffel-mapping/SCMapping_hub8e2240b3df829f11baf36b9d4689d32_57038_1200x1200_fit_q85_lanczos.JPG 1200w&#34;
+               src=&#34;https://tobydriscoll.net/project/schwarz-christoffel-mapping/SCMapping_hub8e2240b3df829f11baf36b9d4689d32_57038_cb856b70620cd7631a6a20b57424866f.JPG&#34;
+               width=&#34;150&#34;
+               height=&#34;444&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;Schwarz-Christoffel Mapping&lt;/em&gt; is a monograph by myself and &lt;a href=&#34;https://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nick Trefethen&lt;/a&gt; on the constructive and computational aspects of Schwarz–Christoffel conformal maps. These maps transform the interior or exterior of a region bounded by a polygon to the interior of a disk, half-plane, strip, rectangle, or more exotic canonical region. Unlike many other numerical conformal mapping methods, they are substantially faster to compute than the full solution of an elliptic partial differential equation on the same domain. Because the maps are conformal, they offer a powerful way to solve certain classical problems for the Laplacian operator.&lt;/p&gt;
+&lt;p&gt;The book includes 76 quantitatively precise figures illustrating theoretical and applied aspects of Schwarz–Christoffel maps. The appendix includes code snippets that produce some of these figures using my free &lt;a href=&#34;https://tobydriscoll.net/project/sc-toolbox&#34;&gt;Schwarz-Christoffel Toolbox for MATLAB&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

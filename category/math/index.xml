@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>math | Toby Driscoll</title>
+    <link>https://tobydriscoll.net/category/math/</link>
+      <atom:link href="https://tobydriscoll.net/category/math/index.xml" rel="self" type="application/rss+xml" />
+    <description>math</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Fri, 03 Feb 2017 20:16:10 +0000</lastBuildDate>
+    <image>
+      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png</url>
+      <title>math</title>
+      <link>https://tobydriscoll.net/category/math/</link>
+    </image>
+    
+    <item>
+      <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Iterative methods</title>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-iterative-methods/</link>
+      <pubDate>Fri, 03 Feb 2017 20:16:10 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-iterative-methods/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m going to wrap up the long-paused MATLAB versus Julia comparison on Trefethen &amp;amp; Bau by chugging through all the lectures on iterative methods in one post.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m back to using gists&amp;ndash;not thrilled with any of the mechanisms for sharing this stuff.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tobydriscoll/d1fe4e61d05e2b423a55979982a2d38a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 32 (sparse matrices and simple iterations)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tobydriscoll/204bbc93b984c9ddf17bbe51e162399d&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 33 (Arnoldi iteration)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tobydriscoll/63212a0c32c473daae5a81a3f6888476&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 34 (Arnoldi eigenvalues)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are remarkable mainly in that they have such striking similarity in both languages. Aside from square brackets and working around the &lt;a href=&#34;https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/&#34;&gt;1x1/scalar distinction&lt;/a&gt; in Julia, little differs besides the syntax of the &lt;code&gt;eigs&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;One frustration, though. I decided to try an interesting alternative to PyPlot in Julia, the &lt;a href=&#34;https://juliaplots.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plots package&lt;/a&gt;. Actually Plots tries to be a generalization of and alternative route to using PyPlot/matplotlib. I decided to try the PlotlyJS backend instead, however. It makes lovely graphics with very responsive interaction. Since the rendering is in Javascript, I thought it would be perfectly portable, but you can&amp;rsquo;t see the output in the gist above, even though it should be embedded in the notebook.&lt;/p&gt;
+&lt;p&gt;I liked using Plots OK; for the most part it&amp;rsquo;s just different, not better or worse that I could see. I found it awkward to work with subplots. I ended up creating 4 plots individually and then displaying them in a table using another call to &lt;code&gt;plot&lt;/code&gt;. I find MATLAB&amp;rsquo;s setup more convenient. I also could not figure out how to coax a contour plot with a contour at a specified value, which seems like a big lack.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tobydriscoll/f5815ce26dec0f010b4fc481573f3e4b&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 35 (GMRES)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tobydriscoll/a7ecf0c147fa02a4c6156074da0ccd38&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 36 (Lanczos and MINRES)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tobydriscoll/2511c290c58f98c6989672082897d47e&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 37 (Conjugate gradients)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tobydriscoll/d11baaeb88f8145f175d3ea7eac87a95&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 40 (Preconditioning)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Again the differences are minor. In sparse and iterative methods I found Julia to place a greater emphasis on keyword arguments. For example,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;(xCG,~,~,~,resnorm) = cg(A,b,tol=1e-14,maxIter=100);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are default values for &lt;code&gt;tol&lt;/code&gt; and &lt;code&gt;maxIter&lt;/code&gt;, but if you want to override them you must type the keyword. On the other hand, MATLAB&amp;rsquo;s arguments are purely positional:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;[xCG,~,~,~,resnorm] = pcg(A,b,1e-14,100);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If I wanted to specify the maximum number of iterations without changing the default tolerance, then I would need to use an empty matrix in the third position. When one uses a command that does take named parameters as inputs, it&amp;rsquo;s typically done using &lt;code&gt;&#39;propname&#39;,propval&lt;/code&gt; pairs. Except when it isn&amp;rsquo;t, such as for ODEs and optimization. Confusing! As a user I don&amp;rsquo;t love typing out the keywords, but Julia at least lets me skip the quote marks. I also know from experience that Julia&amp;rsquo;s version is a lot easier and clearer to implement on the other side.&lt;/p&gt;
+&lt;p&gt;So that&amp;rsquo;s that. I feel that I am at least ready to get off the bunny slopes with Julia. I haven&amp;rsquo;t found a compelling reason to switch to it, aside from supporting open source software for science (no small thing). Of course I&amp;rsquo;ve barely scratched the surface. On the flip side, MATLAB has a lot of well-designed and -maintained packages, and its environment still makes a smoother experience for newcomers. If you can afford it, it&amp;rsquo;s still a great option for interactive numerical computing.&lt;/p&gt;
+&lt;p&gt;I wonder about the future of Julia. Had Python not gotten a head start, I could see an outpouring of effort to make high-quality Julia packages and Julia being a complete MATLAB reboot. But numpy and scipy do exist, and despite their flaws, they have a huge first-mover advantage. It&amp;rsquo;s a snap to use Python packages in Julia, so there&amp;rsquo;s not a dichotomy here. But if the package you want to use a lot exists only in Python, the case for Julia weakens. Overall though, it&amp;rsquo;s a nice thing that we have several strong, expressive high-level environments for numerical computing. Happy coding!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 24-29: Eigenvalue stuff</title>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</link>
+      <pubDate>Thu, 27 Oct 2016 14:16:39 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/</guid>
+      <description>&lt;p&gt;Part V of T&amp;amp;B is on dense methods for eigenvalue and singular value problems. For my course, this is the part of the text that I condense most severely. In part that&amp;rsquo;s due to the need to cover unconstrained nonlinear solving and optimization stuff later on. But I also find that this is the least compelling part of the text for my purposes.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s heavily weighted toward the hermitian case. That&amp;rsquo;s the cleanest situation, so I see the rationale. But it&amp;rsquo;s pretty surprising that the lead author of &lt;a href=&#34;http://press.princeton.edu/titles/8113.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Spectra and Pseudospectra&lt;/em&gt;&lt;/a&gt; mentions eigenvalue conditioning and sensitivity only in a single exercise! (The exercises not in the lecture named &amp;ldquo;Eigenvalue problems,&amp;rdquo; nor the one named &amp;ldquo;Overview of eigenvalue algorithms.&amp;rdquo; It&amp;rsquo;s under &amp;ldquo;Reduction to Hessenberg or tridiagonal form.&amp;quot;) In contrast with the tone of earlier parts of the book, one could study the methods of these sections thoroughly and yet not appreciate when the answers are inaccurate, or possibly irrelevant. Because I took this course from Trefethen at a crucial time in the development of his thinking on the subject, my perception of the issues behind computing eigenvalues is quite different from what the text itself conveys.&lt;/p&gt;
+&lt;p&gt;(EDIT: If I had but read a few sections more before writing the above, I would have recalled that there is discussion about this in Lecture 34, under &amp;ldquo;A Note of Caution: Nonnormality.&amp;rdquo; It&amp;rsquo;s all laid out in clear language, so mea culpa. The ordering still feels a little awkward. I&amp;rsquo;ll probably have a half or full class period just on nonnormality.)&lt;/p&gt;
+&lt;p&gt;So. In my class I touched on 24-29, and you can find my related &lt;a href=&#34;https://www.dropbox.com/sh/kxyc1on3k4f3sh0/AACnyHY2FmXgUpHmJvSYV6Qaa?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MATLAB notebooks&lt;/a&gt; and &lt;a href=&#34;https://www.dropbox.com/sh/gq3a0nr1gm4p87a/AABlOcb33OAjO40PFG6tkYSva?dl=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia notebooks&lt;/a&gt; on them. (I&amp;rsquo;ve given up on using Gists for these. The web interface can&amp;rsquo;t seem to handle having a lot of notebooks in one Gist, the rendering is slow, and I see no advantage for me beyond static HTML.) They&amp;rsquo;re a little rough in places, as it&amp;rsquo;s been challenging to keep up the pace.&lt;/p&gt;
+&lt;p&gt;There aren&amp;rsquo;t big MATLAB/Julia issues to report. If anything, I think Julia has cleaned up and rationalized some of the quirkiness of the MATLAB versions. In MATLAB, one uses &lt;code&gt;eig&lt;/code&gt; for everything. The results depend on the number of output arguments.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;&amp;gt;&amp;gt; A = hilb(3);
+&amp;gt;&amp;gt; lambda = eig(A)
+lambda =
+    0.0027
+    0.1223
+    1.4083
+&amp;gt;&amp;gt; [X,D] = eig(A)
+X =
+    -0.1277    0.5474    0.8270
+    0.7137   -0.5283    0.4599
+    -0.6887   -0.6490    0.3233
+D =
+    0.0027         0         0
+          0    0.1223         0
+          0         0    1.4083
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It&amp;rsquo;s a bit awkward that the position of the eigenvalue output changes, and that it&amp;rsquo;s a vector in one case and a matrix in the other. And the difference goes beyond cosmetics: the calculation can be significantly faster if eigenvectors are not required. Julia gives you three variants, so you can retrieve exactly what you want.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;julia&amp;gt; A = [1/(i+j) for i=1:3, j=1:3];
+julia&amp;gt; (λ,X) = eig(A)
+([0.000646659,0.0409049,0.875115],
+[0.19925 -0.638787 -0.743136; ...  -0.411255])
+
+julia&amp;gt; λ = eigvals(A)
+3-element Array{Float64,1}:
+  0.000646659
+  0.0409049
+  0.875115
+
+julia&amp;gt; D = eigvecs(A)
+3×3 Array{Float64,2}:
+  0.19925   -0.638787  -0.743136
+  -0.761278   0.376612  -0.527843
+  0.617053   0.670906  -0.411255
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You even have &lt;code&gt;eigmax&lt;/code&gt; and &lt;code&gt;eigmin&lt;/code&gt; when the spectrum is real. One thing neither language gives you is an easy way to specify a sort order for the results. In MATLAB, for instance, one ends up doing things like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;&amp;gt;&amp;gt; [X,D] = eig(A);
+&amp;gt;&amp;gt; lambda = diag(D);
+&amp;gt;&amp;gt; [~,idx] = sort(real(lambda));
+&amp;gt;&amp;gt; X = X(:,idx);  lambda = lambda(idx)
+lambda =
+   -2.1898 + 1.4354i
+   -2.1898 - 1.4354i
+    0.0301 + 0.6095i
+    0.0301 - 0.6095i
+    1.2276 + 2.2020i
+    1.2276 - 2.2020i
+    1.8278 + 0.0000i
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Meh. It&amp;rsquo;s not a lot better in Julia, as far as I can tell.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;julia&amp;gt; A = randn(7,7);
+julia&amp;gt; (λ,X) = eig(A);
+julia&amp;gt; idx = sortperm(real(λ));
+julia&amp;gt; X = X[:,idx];  λ = λ[idx]
+7-element Array{Complex{Float64},1}:
+  -3.38359+0.0im
+  -2.33084+0.233909im
+  -2.33084-0.233909im
+  0.415007+0.0im
+  1.03098+0.0im
+  1.11426+2.34596im
+  1.11426-2.34596im
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Altogether, Julia is feeling less like a foreign country and more like a province. Sometimes I even remember to use square brackets on the first try.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lecture 19, Stability of least squares</title>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</link>
+      <pubDate>Tue, 11 Oct 2016 21:16:35 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/</guid>
+      <description>&lt;p&gt;Here are &lt;a href=&#34;https://gist.github.com/tobydriscoll/dfb794e2c6891944790e628f68058ba4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the notebooks&lt;/a&gt; in MATLAB and Julia.&lt;/p&gt;
+&lt;p&gt;The new wrinkle in these codes is extended precision. In MATLAB you need to have the Symbolic Math toolbox to do this in the form of &lt;code&gt;vpa&lt;/code&gt;. In Julia, you have to use version 0.5 or (presumably) later, which had a surprising side effect I&amp;rsquo;ll get to below.&lt;/p&gt;
+&lt;p&gt;The reason for extended precision is that this lecture presents experiments on the accuracy of different algorithms for linear least squares problems. In order to demonstrate this on a fairly ill conditioned problem, the answer is supposed to be computed in extended precision, yielding a normalization constant that sets the desired quantity to be 1 for at least 16 significant digits.&lt;/p&gt;
+&lt;p&gt;The least squares problem comes from fitting exp(sin(4t)) to a polynomial of degree 14. I see two ways to define how extended precision is to be used. Option (1) is to form the matrix $A$ and the vector $b$ in double precision, then solve the least squares problem with them, but in extended precision. Option (2) is to build in extended precision from the beginning of the problem, creating $A$ and $b$ that differ in the extended digits. I was first attracted to option (1), but option (2) has the clear advantage that the result should be independent of machine and language, whereas in the other case the data could be rounded or computed differently to double precision.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how this looks in MATLAB.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;t = vpa(0:m-1,64)&#39;/vpa(m-1,64);  % 64 sig. digits!
+A = t.^0;
+for j = 1:14, A=[A,t.*A(:,j)]; end
+b = exp(sin(4*t));
+
+[Q,R] = qr(A,0);     % Householder QR
+x1 = R\ (Q&#39;*b);
+[Q,R] = mgs([A b]);  % Gram-Schmidt QR
+x2 = R(1:15,1:15) \ R(1:15,16);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here are the outputs for the last element of x in the four methods:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2006.7874531048518338761038143559
+2006.7874531048518338761038143553
+2006.7874531048518338766907539159
+2006.7874531048518338761038143555
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It&amp;rsquo;s not a problem that the third result disagrees in the last 10 or so digits, since that&amp;rsquo;s an unstable method.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how it went in Julia.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;setprecision(BigFloat,128);  # use 128-bit floats
+t = convert(Array{BigFloat},collect(0:m-1))/convert(BigFloat,m-1);
+A = [t[i].^j for i=1:m, j=0:n-1];
+b = exp(sin(4*t));
+
+(Q,R) = qr(A);
+x1 = R\ (Q&#39;*b);
+(Q,R) = mgs([A b]);
+x2 = R[1:15,1:15] \ R[1:15,16];
+x3 = (A&#39;*A)$$A&#39;*b);
+x4 = A\b;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That first line isn&amp;rsquo;t pretty, but after that it&amp;rsquo;s quite natural. I found Juila&amp;rsquo;s extended precision to be fast compared to MATLAB&amp;rsquo;s. The results:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2.006787453104851833876103814338068195207e+03
+2.006787453104851833876103814355358077263e+03
+2.006787453104851834342923924263804001505e+03
+2.006787453104851833876103814376793404332e+03
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These are the same up to the last couple of digits of MATLAB&amp;rsquo;s answer. Unfortunately, my values don&amp;rsquo;t agree with what&amp;rsquo;s in T&amp;amp;B, which is 2006.787453080206. The text doesn&amp;rsquo;t say much about how this was done, so it&amp;rsquo;s impossible for me to say why.&lt;/p&gt;
+&lt;p&gt;I probably don&amp;rsquo;t pay enough attention to extended precision. I know some people in the radial basis function community who use it to overcome the very poor conditioning of those bases. They seem quite happy with it. It&amp;rsquo;s always felt like cheating to me, but that&amp;rsquo;s hardly a rational argument.&lt;/p&gt;
+&lt;p&gt;Above I said that there was an unexpected side effect related to my using extended precision in Julia. I discovered that (a) it became available in base Julia in version 0.5 and (b) the homebrew Julia I had installed was version 0.4.3, even though 0.5 had apparently been out for a while. Upon upgrading, I found that my MGS routine throwing an error! The offending line was&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;A[:,j+1:n] -= Q[:,j]*R[j,j+1:n];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The issue is that now both of the references on the right-hand side are vectors, which have only one dimension. Therefore the implied outer product is considered undefined. I had to switch to&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;A[:,j+1:n] -= Q[:,j:j]*R[j:j,j+1:n];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Because &lt;code&gt;j:j&lt;/code&gt; is a range, not a scalar, the submatrix references are two-dimensional matrices with appropriate singleton dimensions, so the outer product proceeds.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m not sure how to feel about this. It&amp;rsquo;s disturbing to extract a row of a matrix and get an object without a row shape. In fact you can even say it&amp;rsquo;s got a column shape, because you are allowed to transpose it into a 1-by-n matrix! On the other hand, there are consistent rules governing the indexing, and 0D, 1D, and 2D extractions are all possible. I&amp;rsquo;m starting to think that the true problem is that I learned and conceptualize linear algebra in a way that works up to dimension 2 but contains some implied hacks that break multilinear algebra. I wish I knew this stuff better.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt</title>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</link>
+      <pubDate>Mon, 19 Sep 2016 19:44:42 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/</guid>
+      <description>&lt;p&gt;This lecture is about the modified Gram-Schmidt method and flop counting. The &lt;a href=&#34;https://gist.github.com/tobydriscoll/bae2a5e864f490e571d79a0af541fb8c&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;notebooks are here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m lost.&lt;/p&gt;
+&lt;p&gt;Almost as an afterthought I decided to add a demonstration of the timing of Gram-Schmidt compared to the asymptotic &lt;span class=&#39;MathJax_Preview&#39;&gt;&lt;img src=&#39;https://i2.wp.com/tobydriscoll.net/blog/wp-content/plugins/latex/cache/tex_9f84a66d88d24c3b1bc91df5b5346a13.gif?w=500&#39; style=&#39;vertical-align: middle; border: none; &#39; class=&#39;tex&#39; alt=&#34;O(n^2)&#34; data-recalc-dims=&#34;1&#34; /&gt; flop count. Both MATLAB and Julia got very close to the trend as &lt;span class=&#39;MathJax_Preview&#39;&gt;&lt;img src=&#39;https://i0.wp.com/tobydriscoll.net/blog/wp-content/plugins/latex/cache/tex_7b8b965ad4bca0e41ab51de7b31363a1.gif?w=500&#39; style=&#39;vertical-align: middle; border: none; padding-bottom:2px;&#39; class=&#39;tex&#39; alt=&#34;n&#34; data-recalc-dims=&#34;1&#34; /&gt; got into the hundreds, using vectorized code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;n_ = collect(50:50:500);
+time_ = zeros(size(n_));
+for k = 1:length(n_)
+    n = n_[k];
+    A = rand(1200,n);
+    Q = zeros(1200,n);  R = zeros(600,600); 
+    
+    tic();
+    R[1,1] = norm(A[:,1]);
+    Q[:,1] = A[:,1]/R[1,1];
+    for j = 2:n
+        R[1:j-1,j] = Q[:,1:j-1]&#39;*A[:,j];
+        v = A[:,j] - Q[:,1:j-1]*R[1:j-1,j];
+        R[j,j] = norm(v);
+        Q[:,j] = v/R[j,j];
+    end
+    time_[k] = toc();
+end
+
+using PyPlot
+loglog(n_,time_,&amp;quot;-o&amp;quot;,n_,(n_/500).^2,&amp;quot;--&amp;quot;)
+xlabel(&amp;quot;n&amp;quot;), ylabel(&amp;quot;elapsed time&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I noticed that while the timings were similar, Julia lagged MATLAB just a bit. I decided this would be a great chance for me to see Julia&amp;rsquo;s prowess with speedy loops firsthand.&lt;/p&gt;
+&lt;p&gt;Compare the vectorized and unvectorized Julia versions here:&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/tobydriscoll/c515e9f5bd4ab540b41db9852db53b72.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Look at the last line&amp;ndash;it&amp;rsquo;s allocating 1.4GB of memory to make the nested loop version happen! I thought perhaps I should use &lt;code&gt;copy&lt;/code&gt; to create &lt;code&gt;v&lt;/code&gt; in each pass, but that change didn&amp;rsquo;t help. I even tried writing my own loop for computing the dot product, to no avail.&lt;/p&gt;
+&lt;p&gt;It did help a little to replace the line in which &lt;code&gt;v&lt;/code&gt; is updated with&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;v = broadcast!(-,v,Q[:,i]*R[i,j])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The bang on the name of the function makes it operate in-place, overwriting the current storage. Apparently Julia will create &lt;a href=&#34;https://github.com/JuliaLang/julia/pull/17546&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;some syntactic sugar for this maneuver in version 0.5&lt;/a&gt;. Here it reduced the memory usage to 1.1 GB.&lt;/p&gt;
+&lt;p&gt;Julia&amp;rsquo;s reputation is that it&amp;rsquo;s great with loops, especially compared to MATLAB and Python. As a Julia newbie I recognize that there may still be only a small change I need to make in order to see this for myself. But I feel as though having to use that &lt;code&gt;broadcast!&lt;/code&gt;, or even the more natural &lt;code&gt;.=&lt;/code&gt; that may be coming, is already too much to ask. I&amp;rsquo;m frustrated, confused, and disappointed.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 4: SVD</title>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-4-svd/</link>
+      <pubDate>Mon, 12 Sep 2016 12:51:07 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-4-svd/</guid>
+      <description>&lt;p&gt;The notebooks: &lt;a href=&#34;https://gist.github.com/tobydriscoll/08fc56bca086f957920f1088e0844c30&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;matlab&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/324991720db46ff9c644cc43455bd23e&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;julia&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Today is about some little conveniences/quirks in Julia. Starting here:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;t = linspace(0,2*pi,300);
+x1,x2 = (cos(t),sin(t));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The second line assigns to two variables simultaneously. It&amp;rsquo;s totally unnecessary here, but it helps to emphasize how the quantities are related.&lt;/p&gt;
+&lt;p&gt;Next we have&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;U,σ,V = svd(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I&amp;rsquo;m unreasonably happy about having Greek letters as variable names. Just type in &amp;lsquo;\sigma&amp;rsquo; and hit tab, and voila! It&amp;rsquo;s a reminder of how, in the U.S. at least, we&amp;rsquo;re so used to living within the limitations of ancient 128-character ASCII&amp;mdash;&lt;a href=&#34;https://en.wikipedia.org/wiki/ASCII&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;telegraphs&lt;/a&gt;, really&amp;mdash;that we can be surprised by expanded possibilities.&lt;/p&gt;
+&lt;p&gt;Later on we have &lt;code&gt;diagm(σ)&lt;/code&gt;. In MATLAB, the &lt;code&gt;diag&lt;/code&gt; function has two roles: convert a vector to a diagonal matrix, and extract the diagonal elements of a matrix. This creates a curious edge case for MATLAB: for example, &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;diag([1 2 3])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;returns a 3-by-3 matrix, not the single element 1. This is almost always what you want, but I&amp;rsquo;ve run into gotchas wherein a program works perfectly until an input of the &amp;lsquo;wrong&amp;rsquo; size silently changes the behavior of a function. In Julia the two functionalities are separated into &lt;code&gt;diag&lt;/code&gt; and &lt;code&gt;diagm&lt;/code&gt;, which avoids the edge case ambiguity. I think it&amp;rsquo;s worth the clarity here to have the extra command.&lt;/p&gt;
+&lt;p&gt;The one thing I missed having in the Julia version was MATLAB&amp;rsquo;s &lt;code&gt;format&lt;/code&gt; command, which lets you set the default display of numbers in all following output. In this notebook I just had numbers as placeholders and really wanted just to show shapes and sizes. Julia&amp;rsquo;s full-length output obfuscates the sizes quite a bit, and I&amp;rsquo;d like to tell it to calm down with all those digits for a little while (rather than saying so with each new output). If that capability is there, I overlooked it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 3: Norms</title>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-3-norms/</link>
+      <pubDate>Wed, 07 Sep 2016 19:32:46 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-3-norms/</guid>
+      <description>&lt;p&gt;Here are the &lt;a href=&#34;https://gist.github.com/tobydriscoll/b620d1b8beaa04cf87707a55928e3449&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MATLAB&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/2c486e89b12911b073f3c91e514db4f7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;julia&lt;/a&gt; notebooks.&lt;/p&gt;
+&lt;p&gt;The big issue this time around was graphics. This topic dramatically illustrates the advantages on both sides of the commercial/open source fence. On the MATLAB side, it&amp;rsquo;s perfectly clear what you should do. There are many options that have been well constructed, and it&amp;rsquo;s all under a relatively consistent umbrella. There are things to learn and options to choose, but it&amp;rsquo;s clear what functions you will be using to make, say, a scatter plot, and a lot of similarity across commands.&lt;/p&gt;
+&lt;p&gt;Julia graphics are another story. At this writing, there are two options recommended on &lt;a href=&#34;http://julialang.org/downloads/plotting.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia&amp;rsquo;s official page about plotting packages&lt;/a&gt;: &lt;a href=&#34;https://github.com/stevengj/PyPlot.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyPlot&lt;/a&gt; and &lt;a href=&#34;https://github.com/dcjones/Gadfly.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gadfly&lt;/a&gt;. It doesn&amp;rsquo;t take much exploration to decide that the former is favored by MATLAB veterans and the latter, by R devotees. Confusingly, the &lt;a href=&#34;http://julialang.org/downloads/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;general download page&lt;/a&gt; for Julia mentions a third package called &lt;a href=&#34;https://github.com/tbreloff/Plots.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plots&lt;/a&gt; that is supposed to integrate all of the backends. It&amp;rsquo;s still early days for Julia, and I&amp;rsquo;m sure much remains in flux.&lt;/p&gt;
+&lt;p&gt;Moreover, because you can (quite easily) import and run Python code in Julia, in principle you have access to all Python plotting packages. One of the big players is &lt;a href=&#34;http://matplotlib.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;matplotlib&lt;/a&gt;, which is more or less what Julia&amp;rsquo;s PyPlot is supposed to provide. But there are also &lt;a href=&#34;http://bokeh.pydata.org/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bokeh&lt;/a&gt;, &lt;a href=&#34;https://plot.ly/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;plotly&lt;/a&gt;, and &lt;a href=&#34;http://www.pyqtgraph.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pyqtgraph&lt;/a&gt;&amp;mdash;for all I know, many more besides. All of these can make gorgeous graphics, often highly interactive and even hosted in the cloud. The relative merits are not at all clear.&lt;/p&gt;
+&lt;p&gt;Here we run into the &lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwjuv7-7j_zOAhXG2xoKHdrgAvYQtwIIHjAA&amp;amp;url=http%3A%2F%2Fwww.ted.com%2Ftalks%2Fbarry_schwartz_on_the_paradox_of_choice%3Flanguage%3Den&amp;amp;usg=AFQjCNHkeD4jDrbOc7TgI5YOQfU1IQ7xOQ&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paradox of choice&lt;/a&gt;: having many options, even good ones, can provoke anxiety rather than satisfaction. Which package do I invest time in learning? MATLAB limits choice but provides a sort of editorial, almost paternal, reassurance.&lt;/p&gt;
+&lt;p&gt;My personal goal is to learn Julia from the standpoint of a MATLAB user, so PyPlot it is. All in all, the transition isn&amp;rsquo;t bad, though there are some twists.&lt;/p&gt;
+&lt;p&gt;In the last few years I&amp;rsquo;ve been more often turning to automatic function plotting in MATLAB, using &lt;code&gt;fplot&lt;/code&gt;, &lt;code&gt;ezsurf&lt;/code&gt;, and &lt;code&gt;ezcontour&lt;/code&gt;. If PyPlot supports those, I have yet to find out about them. So it&amp;rsquo;s back to the world of evaluating functions on tensor product grids.  A MATLAB veteran turns to meshgrid, but Julia supports broadcasting across singleton dimensions. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;using PyPlot
+x = linspace(-1,1,90);
+y = x&#39;;
+contour(x[:],y[:],sqrt(x.^2 .+ y.^2))&amp;lt;/pre&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Because &lt;code&gt;x&lt;/code&gt; has a column shape while &lt;code&gt;y&lt;/code&gt; has a row shape, the &lt;code&gt;.+&lt;/code&gt;
+operator broadcasts each along the &amp;ldquo;missing&amp;rdquo; dimension. It&amp;rsquo;s a clever shortcut once you know it. It works just as well for contours of the vector 1-norm, but for the max norm I had to broadcast manually:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;contour(x[:],y[:],broadcast(max,abs(x),abs(y)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It&amp;rsquo;s not clear to me why that broadcast should not happen automatically, given that
+&lt;code&gt;max&lt;/code&gt; is a dedicated elementwise operator.&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s more Julia subtlety hiding in this notebook, but those issues will wait for another time.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 2</title>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/</link>
+      <pubDate>Fri, 02 Sep 2016 19:12:54 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-2/</guid>
+      <description>&lt;p&gt;Here are the &lt;a href=&#34;http://nbviewer.jupyter.org/gist/tobydriscoll/8aa30fdad0346f1c5656ff4a468b1b05&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;matlab&lt;/a&gt; and &lt;a href=&#34;https://gist.github.com/tobydriscoll/7f404b36fd47d2878f90dd76a1d7a9b9&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;julia&lt;/a&gt; notebooks.&lt;/p&gt;
+&lt;p&gt;Two things stood out this time. First, consider the following snippet.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;u = [ 4; -1; 2+2im ]
+v = [ -1; 1im; 1 ]
+println(&amp;quot;dot(u,v) gives &amp;quot;, dot(u,v))
+println(&amp;quot;u&#39;*v gives &amp;quot;,u&#39;*v)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The result is&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dot(u,v) gives -2 - 3im
+u&#39;*v gives Complex{Int64}[-2 - 3im]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Unlike in MATLAB, a scalar is not the same thing as a 1-by-1 matrix. This has consequences. The code &lt;code&gt;(u&#39;*v)*eye(3)&lt;/code&gt; throws a dimension mismatch error, while the equivalent with &lt;code&gt;dot&lt;/code&gt; is fine. In the strict sense this is correct, and I suppose Julia made a decision to be strict in contrast to MATLAB&amp;rsquo;s typical laxity. The price is that little bump introduced into a transition that is normally seamless in the minds of users and programmers 99% of the time.&lt;/p&gt;
+&lt;p&gt;The other difference is in style more than anything else. Compare MATLAB&amp;rsquo;s&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;[Q,~] = qr(A);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;to Julia&amp;rsquo;s&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;Q = qr(A)[1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Julia&amp;rsquo;s version would be easier if you wanted to extract the $n$th output, where $n$ is a variable, though you could manage it in MATLAB with cells. I&amp;rsquo;m not sure how common that situation is. Also, it could be a surprise in MATLAB that&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;Q=qr(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;does &lt;em&gt;not&lt;/em&gt; do the same thing, because the content and meaning of the outputs depend on the number of outputs.&lt;/p&gt;
+&lt;p&gt;A distinction for QR factorization in particular in the two languages is that MATLAB returns the full version by default, while Julia defaults to the skinny form. The latter is nice because an unsuspecting student (or professor) who calls &lt;code&gt;qr(A)&lt;/code&gt; in MATLAB for a really tall matrix might as well kill the process and restart MATLAB Julia makes you do something extra to get the memory-dangerous version.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trefethen &amp; Bau, via MATLAB and Julia</title>
+      <link>https://tobydriscoll.net/blog/trefethen-bau-via-matlab-and-julia/</link>
+      <pubDate>Thu, 01 Sep 2016 18:57:05 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/trefethen-bau-via-matlab-and-julia/</guid>
+      <description>&lt;p&gt;This semester I&amp;rsquo;m teaching &lt;a href=&#34;https://udel.instructure.com/courses/1335769/assignments/syllabus&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MATH 612&lt;/a&gt;, which is numerical linear and nonlinear algebra for grad students. Linear algebra dominates the course, and for that I&amp;rsquo;m following the now classic textbook by &lt;a href=&#34;http://bookstore.siam.org/ot50/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Trefethen &amp;amp; Bau&lt;/a&gt;. This book has real meaning to me because I learned the subject from &lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0ahUKEwi-qPSJl-7OAhXJ2B4KHTxqBrEQFgghMAA&amp;amp;url=https%3A%2F%2Fpeople.maths.ox.ac.uk%2Ftrefethen%2F&amp;amp;usg=AFQjCNEas_P8d7AHd2BC-vUoVo7V74ONJw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nick Trefethen&lt;/a&gt; at Cornell, just a year or two before the book was written. It&amp;rsquo;s when numerical analysis became an appealing subject to me.&lt;/p&gt;
+&lt;p&gt;That course is also when I started to learn &lt;a href=&#34;http://www.matlab.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MATLAB&lt;/a&gt;. I&amp;rsquo;ve been using MATLAB for over 20 years and I&amp;rsquo;m damn good at it. I&amp;rsquo;ve written &lt;a href=&#34;http://dx.doi.org/10.1137/1.9780898717662&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a book that teaches it&lt;/a&gt;, and &lt;a href=&#34;https://books.google.com/books/about/Schwarz_Christoffel_mapping.html?id=k5KU6clCKssC&amp;amp;hl=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;another book&lt;/a&gt; largely based on a&lt;a href=&#34;http://tobydriscoll.net/SC/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; software package&lt;/a&gt; I wrote for conformal mapping, and I was an early and key contributor to the &lt;a href=&#34;http://www.chebfun.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chebfun&lt;/a&gt; project. I even dominated a game of MATLAB Jeopardy as a grad student at the &lt;a href=&#34;http://www.colostate.edu/dept/Mathematics/matlab/vol3num3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1995 MATLAB Conference&lt;/a&gt; (when version 4.2 of MATLAB ruled the Earth).&lt;/p&gt;
+&lt;p&gt;(It isn&amp;rsquo;t quite contemporary, but the &lt;a href=&#34;https://web.archive.org/web/19961213182828/http://cam.cornell.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1996 home page for the Cornell Center for Applied Mathematics&lt;/a&gt; has a banner graphic created in MATLAB&amp;mdash;by yours truly.)&lt;/p&gt;
+&lt;p&gt;The tl;dr is that MATLAB has dominated my professional life since that course. It&amp;rsquo;s still a great tool to use for that course, too&amp;mdash;in my mind, learning the theory and learning the numerics are inextricable. In the context of computing, it&amp;rsquo;s incredible to have a 25-year winning streak!&lt;/p&gt;
+&lt;p&gt;But while the pedagogical value remains as high as ever, MATLAB is a smaller part of the &amp;ldquo;desktop scientific computing&amp;rdquo; landscape than it was. It&amp;rsquo;s still a behemoth, but there are more good options than ever.  For some time I have felt neglectful toward options that are similar but different, namely &lt;a href=&#34;http://scipy.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SciPy&lt;/a&gt; and &lt;a href=&#34;http://julialang.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia&lt;/a&gt;. I&amp;rsquo;ve picked up bits and pieces of them, but not enough to do any serious work.&lt;/p&gt;
+&lt;p&gt;Thus I&amp;rsquo;ve decided to learn Julia the same way I did MATLAB: by using it as we cover elementary numerical linear algebra. The students will still get MATLAB, but I&amp;rsquo;ll be doing Julia in parallel. For each lecture (chapter) of Trefethen &amp;amp; Bau, I&amp;rsquo;ll make two &lt;a href=&#34;http://jupyter.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jupyter&lt;/a&gt; notebooks with identical text and two versions of the codes. I&amp;rsquo;m not rewriting T&amp;amp;B, just trying to illustrate some of the concrete ideas and conclusions in each lecture. I&amp;rsquo;m sure my early Julia efforts will be cringeworthy to the cognoscenti, but just as with learning a human language, you have to risk sounding stupid for a while in order to start sounding less stupid. If I can keep up the pace, I&amp;rsquo;ll blog about what I learn about porting to Julia with each new notebook.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why not Zoidberg?</title>
+      <link>https://tobydriscoll.net/blog/why-not-zoidberg/</link>
+      <pubDate>Fri, 31 Jul 2015 16:11:40 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/why-not-zoidberg/</guid>
+      <description>&lt;p&gt;Something fun for Friday?&lt;/p&gt;
+&lt;p&gt;My older son binge-watched &lt;a href=&#34;http://www.cc.com/shows/futurama&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Futurama&lt;/a&gt; on Netflix a few months ago. This was one of the funniest shows of at least recent TV history. Especially if you like nerdy, cultural-reference, rapid-fire style humor like a real &lt;a href=&#34;http://www.pewresearch.org/fact-tank/2014/06/05/generation-x-americas-neglected-middle-child/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gen-Xer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s also probably the first and only time in television history that &lt;a href=&#34;http://theinfosphere.org/Futurama_theorem&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a new mathematical theorem was proved for and first presented in a series episode&lt;/a&gt;. The whole run of the series had &lt;a href=&#34;http://theinfosphere.org/List_of_mathematics_references&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;numerous mathematical references.&lt;/a&gt; This may have something to do with the fact that co-creator and writer &lt;a href=&#34;https://en.wikipedia.org/wiki/Ken_Keeler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ken Keeler&lt;/a&gt; has a PhD in applied math from Harvard.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data science? Data science!</title>
+      <link>https://tobydriscoll.net/blog/data-science-data-science/</link>
+      <pubDate>Thu, 30 Jul 2015 13:36:33 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/data-science-data-science/</guid>
+      <description>&lt;p&gt;I just received a copy of &lt;a href=&#34;http://sinews.siam.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM News&lt;/a&gt; on a dead tree. It features &lt;a href=&#34;http://sinews.siam.org/DetailsPage/tabid/607/ArticleID/565/Data-Science.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a piece&lt;/a&gt; by &lt;a href=&#34;https://www.cs.utah.edu/~crj/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chris Johnson&lt;/a&gt; and &lt;a href=&#34;http://math.uwaterloo.ca/amath-numerical-analysis-and-scientific-computing-group/hans-de-stercks-homepage&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hans de Sterck&lt;/a&gt; about &amp;ldquo;Data Science: What Is It and How Is It Taught?&amp;rdquo; As usual in these articles, I find the specifics more interesting than the generalities of a panel discussion. I really liked this bit about the new program in &lt;a href=&#34;http://www.science.vt.edu/ais/cmda/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Computational Modeling and Data Analytics at Virginia Tech&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In a sense, creating such a program offers the opportunity to rethink curricula on classical topics like calculus that have at many institutions not seen substantial change throughout most of the past century.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This! Well outside the context of data science, too.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m so sick of teaching calculus as though it were still 1960. Not that calculus has changed, of course, but what we need from it has been utterly transformed. In the age of computing, knowledge of calculus is more useful for posing the right questions&amp;mdash;as opposed to getting answers to mindless exercises that can be done in seconds on &lt;a href=&#34;http://wolframalpha.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wolfram Alpha&lt;/a&gt;. Don&amp;rsquo;t even get me started on teaching series convergence tests to engineering freshmen.&lt;/p&gt;
+&lt;p&gt;As far as how to teach data science&amp;hellip;let me figure out how to learn it, first. I&amp;rsquo;m intrigued by &lt;a href=&#34;https://github.com/okulbilisim/awesome-datascience&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this repository&lt;/a&gt; as a start.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-thanks-to-kzawadzhttptwittercomkzawadz-for-the-infographic-covered-by-creative-commons-ancsa-licensehttpcreativecommonsorglicensesby-nc-sa40&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://camo.githubusercontent.com/9dca9506dbabc0ea73aedb6d2981808152ae6e90/687474703a2f2f692e696d6775722e636f6d2f57344e524964552e706e67&#34; alt=&#34;Thanks to [@kzawadz](http://twitter.com/kzawadz) for the infographic. Covered by [Creative Commons A/NC/SA license](http://creativecommons.org/licenses/by-nc-sa/4.0/).&#34; loading=&#34;lazy&#34; data-zoomable width=&#34;500&#34; /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Thanks to &lt;a href=&#34;http://twitter.com/kzawadz&#34;&gt;@kzawadz&lt;/a&gt; for the infographic. Covered by &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;Creative Commons A/NC/SA license&lt;/a&gt;.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Length of papers</title>
+      <link>https://tobydriscoll.net/blog/length-of-papers/</link>
+      <pubDate>Wed, 29 Jul 2015 14:44:07 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/length-of-papers/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://people.maths.ox.ac.uk/trefethen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nick Trefethen&lt;/a&gt; has &lt;a href=&#34;http://trefethen.net/2015/06/13/journal-articles-are-getting-longer-2/comment-page-1/#comment-732&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;posted&lt;/a&gt; a wonderful graph showing how the average length of papers published in several &lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0CB4QFjAAahUKEwi4ktrlyYDHAhWCHR4KHXRgBPQ&amp;amp;url=https%3A%2F%2Fwww.siam.org%2Fjournals%2F&amp;amp;ei=mua4VbjdDIK7ePTAkaAP&amp;amp;usg=AFQjCNEAU5ysKpu0RcHiazJR64ftWy1drA&amp;amp;sig2=slnnzBVvgEk_Tt5flE7Jtw&amp;amp;bvm=bv.98717601,d.dmo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SIAM journals&lt;/a&gt; has doubled over the last 40 years.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A retrospective look at college math</title>
+      <link>https://tobydriscoll.net/blog/a-retrospective-look-at-college-math/</link>
+      <pubDate>Wed, 22 Jul 2015 14:28:44 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/a-retrospective-look-at-college-math/</guid>
+      <description>&lt;p&gt;I recommend the post &lt;a href=&#34;http://blogs.ams.org/matheducation/2015/07/20/what-i-wish-i-had-learned-more-about-in-college-mathematics/#sthash.6e9g5byf.dpuf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;What I Wish I Had Learned More About in College Mathematics&lt;/a&gt;, written by Sabrina Schmidt, a former math undergrad at Vassar who now works as a data manager. My favorite quote:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I wish that I had been introduced earlier and more often to applications, as they would have provided me with a better idea of potential areas of specialization after graduation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;She goes on to mention &lt;a href=&#34;http://projecteuclid.org/euclid.im/1109190965&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PageRank&lt;/a&gt; (which I usually cover in my numerical computation courses) as an application of linear algebra, and e-commerce as an application of number theory. She also has other STEM courses, statistics, and computer science on her wish list for her former self.&lt;/p&gt;
+&lt;p&gt;Good read.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bio breakfast</title>
+      <link>https://tobydriscoll.net/blog/bio-breakfast/</link>
+      <pubDate>Tue, 14 Jul 2015 12:00:03 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/bio-breakfast/</guid>
+      <description>&lt;p&gt;So here I am at the Delaware &lt;a href=&#34;http://www.delawarebio.org/biobreakfast-series&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bio Breakfast&lt;/a&gt;. Nobody is more surprised than I! Making a career out of math seems like an odd path to trying to improve human health, but here I sit.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Making continuous assessment work</title>
+      <link>https://tobydriscoll.net/blog/making-continuous-assessment-work/</link>
+      <pubDate>Mon, 13 Jul 2015 15:25:46 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/making-continuous-assessment-work/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve come to think that in math at least, continuous learning and assessment may be more important even than [http://www.crlt.umich.edu/tstrategies/tsal](active learning). The traditional model of chunking assessments into weekly or monthly batches encourages the cram-and-dump style of &amp;ldquo;learning.&amp;rdquo; Since students are allowed to delay work on assignments that are crucial to their understanding of incoming material, it&amp;rsquo;s impossible for them to build that understanding in real time. Instead they copy and hope to parse later, when assessment is demanded.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s tempting to say that students should suck it up and organize their time better. This attitude ignores human nature, especially the nature of people in late adolescence and early adulthood. Even a large part of my own work is deadline-driven rather than proactive. And &lt;em&gt;I&lt;/em&gt; love math!&lt;/p&gt;
+&lt;p&gt;Any big change in expectations encounters resistance. Fortunately, breaking through that resistance sometimes spills over into breaking resistance to the tough job of learning itself.  The trick is doing so in a way that feels fair to the students and manageable to the instructor. It&amp;rsquo;s hard to overthrow everything at once.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s what I&amp;rsquo;m thinking for my fall course on numerical computing. Each class meeting (3 times a week) has a cycle associated with it:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Before class:&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;(them) Read/watch and reflect.&lt;/li&gt;
+&lt;li&gt;(them) Take an online quiz on the new material.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;In class:&lt;/em&gt;
+3. (mostly me) Review problem spots. Fill in some of the details.
+4. (us) Work to produce one graph or one table relevant to the new material.
+5. (them) Turn in a description of what is still not clear.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;After class:&lt;/em&gt;
+6. (me) While everything is fresh, I take one last try at explaining material that is still confusing.
+7. (them) Do a couple of homework problems. Before the next meeting, for full credit; before the following meeting, for partial credit.&lt;/p&gt;
+&lt;p&gt;As you can tell, this is a lot of work for everyone, and&amp;ndash;by design&amp;ndash;it&amp;rsquo;s not flexible. To compensate, I won&amp;rsquo;t give exams. There will be some group projects for summative assessments instead.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Addiction</title>
+      <link>https://tobydriscoll.net/blog/addiction/</link>
+      <pubDate>Thu, 09 Jul 2015 22:17:20 +0000</pubDate>
+      <guid>https://tobydriscoll.net/blog/addiction/</guid>
+      <description>&lt;p&gt;Last week my 14-year-old son asked rhetorically, &amp;ldquo;How is it that more people aren&amp;rsquo;t addicted to math?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;I know son, I know.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
