@@ -5,12 +5,20 @@
     <link>https://tobydriscoll.net/publication-type/2/</link>
       <atom:link href="https://tobydriscoll.net/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Mon, 02 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png</url>
       <title>2</title>
       <link>https://tobydriscoll.net/publication-type/2/</link>
     </image>
+    
+    <item>
+      <title>Parameter Estimation for Evaporation-Driven Tear Film Thinning</title>
+      <link>https://tobydriscoll.net/publication/luke-parameter-estimation-evaporation-2020/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/luke-parameter-estimation-evaporation-2020/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ComplexRegions.jl: A Julia package for regions in the complex plane</title>
