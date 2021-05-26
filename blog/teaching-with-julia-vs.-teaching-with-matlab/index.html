@@ -30,12 +30,10 @@
   
     
   
-  <meta name="description" content="This lecture is about the modified Gram-Schmidt method and flop counting. The notebooks are here.
-I&rsquo;m lost.
-Almost as an afterthought I decided to add a demonstration of the timing of Gram-Schmidt compared to the asymptotic flop count." />
+  <meta name="description" content="In fall 2020, I was set to teach our first-semester computational math course using my co-authored book with its couple of hundred or so MATLAB codes. Then I was approached by an honors student about doing an add-on honors section." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/" />
+  <link rel="alternate" hreflang="en-us" href="https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/" />
 
   
 
@@ -317,7 +315,7 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
   <link rel="icon" type="image/png" href="/media/icon_hudca3d2a3171f399896ba920e49ec6cc3_21724_32x32_fill_lanczos_center_2.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hudca3d2a3171f399896ba920e49ec6cc3_21724_180x180_fill_lanczos_center_2.png" />
 
-  <link rel="canonical" href="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/" />
+  <link rel="canonical" href="https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/" />
 
   
   
@@ -337,20 +335,18 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
     <meta property="twitter:creator" content="@tobydriscoll" />
   
   <meta property="og:site_name" content="Toby Driscoll" />
-  <meta property="og:url" content="https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/" />
-  <meta property="og:title" content="Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt | Toby Driscoll" />
-  <meta property="og:description" content="This lecture is about the modified Gram-Schmidt method and flop counting. The notebooks are here.
-I&rsquo;m lost.
-Almost as an afterthought I decided to add a demonstration of the timing of Gram-Schmidt compared to the asymptotic flop count." /><meta property="og:image" content="https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png" />
+  <meta property="og:url" content="https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/" />
+  <meta property="og:title" content="Teaching with Julia vs. teaching with MATLAB | Toby Driscoll" />
+  <meta property="og:description" content="In fall 2020, I was set to teach our first-semester computational math course using my co-authored book with its couple of hundred or so MATLAB codes. Then I was approached by an honors student about doing an add-on honors section." /><meta property="og:image" content="https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png" />
     <meta property="twitter:image" content="https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2016-09-19T19:44:42&#43;00:00"
+        content="2021-05-25T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2016-09-19T19:44:42&#43;00:00">
+    <meta property="article:modified_time" content="2021-05-25T00:00:00&#43;00:00">
   
 
   
@@ -374,12 +370,12 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/"
+    "@id": "https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/"
   },
-  "headline": "Trefethen \u0026 Bau \u0026 MATLAB \u0026 Julia, Lecture 8: Gram-Schmidt",
+  "headline": "Teaching with Julia vs. teaching with MATLAB",
   
-  "datePublished": "2016-09-19T19:44:42Z",
-  "dateModified": "2016-09-19T19:44:42Z",
+  "datePublished": "2021-05-25T00:00:00Z",
+  "dateModified": "2021-05-25T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -394,7 +390,7 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
       "url": "https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "This lecture is about the modified Gram-Schmidt method and flop counting. The notebooks are here.\nI\u0026rsquo;m lost.\nAlmost as an afterthought I decided to add a demonstration of the timing of Gram-Schmidt compared to the asymptotic flop count."
+  "description": "In fall 2020, I was set to teach our first-semester computational math course using my co-authored book with its couple of hundred or so MATLAB codes. Then I was approached by an honors student about doing an add-on honors section."
 }
 </script>
 
@@ -410,11 +406,11 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
 
 
 
-  <title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt | Toby Driscoll</title>
+  <title>Teaching with Julia vs. teaching with MATLAB | Toby Driscoll</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="6f1940a24bd7229cf5c1419751d9b335" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="855ac7eae81bdb3bd394304a9c4b580c" >
 
   
   
@@ -781,7 +777,7 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
   
   
 <div class="article-container pt-3">
-  <h1>Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt</h1>
+  <h1>Teaching with Julia vs. teaching with MATLAB</h1>
 
   
 
@@ -793,6 +789,16 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
 
   
   
+  
+  
+  <div>
+    
+
+  <span >
+      Toby Driscoll</span>
+  </div>
+  
+  
 
   
   <span class="article-date">
@@ -800,7 +806,7 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
     
       
     
-    Sep 19, 2016
+    May 25, 2021
   </span>
   
 
@@ -809,7 +815,7 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    10 min read
   </span>
   
 
@@ -843,41 +849,105 @@ Almost as an afterthought I decided to add a demonstration of the timing of Gram
   <div class="article-container">
 
     <div class="article-style">
-      <p>This lecture is about the modified Gram-Schmidt method and flop counting. The <a href="https://gist.github.com/tobydriscoll/bae2a5e864f490e571d79a0af541fb8c" target="_blank" rel="noopener">notebooks are here</a>.</p>
-<p>I&rsquo;m lost.</p>
-<p>Almost as an afterthought I decided to add a demonstration of the timing of Gram-Schmidt compared to the asymptotic <span class='MathJax_Preview'><img src='https://i2.wp.com/tobydriscoll.net/blog/wp-content/plugins/latex/cache/tex_9f84a66d88d24c3b1bc91df5b5346a13.gif?w=500' style='vertical-align: middle; border: none; ' class='tex' alt="O(n^2)" data-recalc-dims="1" /> flop count. Both MATLAB and Julia got very close to the trend as <span class='MathJax_Preview'><img src='https://i0.wp.com/tobydriscoll.net/blog/wp-content/plugins/latex/cache/tex_7b8b965ad4bca0e41ab51de7b31363a1.gif?w=500' style='vertical-align: middle; border: none; padding-bottom:2px;' class='tex' alt="n" data-recalc-dims="1" /> got into the hundreds, using vectorized code:</p>
-<pre><code class="language-julia">n_ = collect(50:50:500);
-time_ = zeros(size(n_));
-for k = 1:length(n_)
-    n = n_[k];
-    A = rand(1200,n);
-    Q = zeros(1200,n);  R = zeros(600,600); 
-    
-    tic();
-    R[1,1] = norm(A[:,1]);
-    Q[:,1] = A[:,1]/R[1,1];
-    for j = 2:n
-        R[1:j-1,j] = Q[:,1:j-1]'*A[:,j];
-        v = A[:,j] - Q[:,1:j-1]*R[1:j-1,j];
-        R[j,j] = norm(v);
-        Q[:,j] = v/R[j,j];
-    end
-    time_[k] = toc();
+      <p>In fall 2020, I was set to teach our first-semester computational math course using <a href="https://tobydriscoll.net/FNC" target="_blank" rel="noopener">my co-authored book</a> with its couple of hundred or so MATLAB codes. Then I was approached by an honors student about doing an add-on honors section. I&rsquo;ve never quite known what to do with these. How to make a more enriching experience without adding a ton of extra effort for me and for the students?</p>
+<p>However, the timing was interesting. I had been working on a <a href="https://julialang.org" target="_blank" rel="noopener">Julia</a> version of the book for a while, and needed some field testing. So I had five volunteer guinea pigs, among the best and most motivated students. If they couldn&rsquo;t make it work, then probably few students could.</p>
+<p>In short, that field test was a bigger success than I had hoped. The honors students needed surprisingly little coaching through the installation and use of Julia, a <a href="https://github.com/fncbook/FundamentalsNumericalComputation.jl" target="_blank" rel="noopener">package for the book software</a>, and Jupyter. There were no significant bugs.</p>
+<p>What I had not anticipated was how interesting it would be for me to be teaching groups of students the same material simultaneously in both computing languages. It&rsquo;s not an experiment, given the self-selection of the students; in particular, the MATLAB group included both strong and much weaker students. But some differences about the pedagogical use cases were highlighted.</p>
+<p>For me, almost nothing important here comes down to big features like multiple dispatch and threading in Julia, or mature applications packages in MATLAB. Those things are beyond the scope of what I can try to convey, which is decent programming practice in the service of learning concepts. Instead, the differences I encounter when teaching have more to do with what you might call quality of life issues when getting to know a language and its ecosystem.</p>
+<h2 id="in-matlabs-favor">In MATLAB&rsquo;s favor</h2>
+<ol>
+<li>
+<p><strong>Packaging.</strong> <a href="https://wwww.mathworks.com" target="_blank" rel="noopener">MathWorks</a> has been selling MATLAB for decades, and the installation process is about as smooth as a license-locked program could be. An army of service agents is standing by to help, although I don&rsquo;t always hear great things about that experience. There is even some <a href="https://www.mathworks.com/help/matlab/creating_guis/apps-overview.html" target="_blank" rel="noopener">package management</a> built in.</p>
+<p>(Not for the first time, I found it astonishing and discouraging that despite being given a link to the book&rsquo;s files as a <a href="https://github.com/tobydriscoll/fnc-extras/raw/master/Fundamentals%20of%20Numerical%20Computation.mltbx" target="_blank" rel="noopener">one-click installation</a>, many students persisted in typing in the functions—thereby introducing mistakes—or even copying from the PDF to paste into the editor.)</p>
+<p>Julia&rsquo;s <a href="https://docs.julialang.org/en/v1/stdlib/Pkg/" target="_blank" rel="noopener">package manager</a> is superb, possibly unparalleled, and it mostly gets out of the way. Yet it exposes issues that simply don&rsquo;t exist for baby MATLAB users. <a href="https://juliacomputing.com/products/juliapro/" target="_blank" rel="noopener">JuliaPro</a> is one answer, but it still uses Atom/Juno and is, at this moment, behind on the Julia version. For me personally, life is too precious to spend it setting up a <a href="https://jupyter.org/hub" target="_blank" rel="noopener">JupyterHub</a>. There are some cloud solutions, although then payment becomes an issue.</p>
+</li>
+<li>
+<p><strong>Documentation.</strong> The documentation in MATLAB is second to none. It&rsquo;s all mirrored on the web as well as integrated within the IDE and the command line. By contrast, documentation in Julia remains highly variable. Even when there are great and helpful websites, the documentation of individual functions (outside of the base) is often spotty and is sometimes aimed at a sophisticated user. Even when there is good documentation, it can be difficult to find what you want for a function with many methods. Writing documentation is hard and pretty thankless, so it&rsquo;s no surprise that a top-down organization with a lot of money and a big headstart enjoys an advantage. As long as I&rsquo;m taking potshots at Julia here, though, error reporting is also&hellip;not fantastic.</p>
+</li>
+<li>
+<p><strong>Help.</strong> There is an avalanche of texts, videos, and interactive tutorials for learning just about anything for MATLAB, including a nontrivial intersection of free and high-quality. MATLAB has maintained backward compatibility so well that almost all of this help remains accurate, although sometimes obsolete. There is the downside that your students might find a little <em>too much</em> help, of course.</p>
+<p>By contrast, Julia is still young and such a moving target that googling for help can be an adventure. While there are helpful and responsive communities on <a href="https://discourse.julialang.org" target="_blank" rel="noopener">Discourse</a> and <a href="https://reddit.com/r/julia" target="_blank" rel="noopener">Reddit</a>, for example, students are mostly too shy?/guilty?/procrastinating? to seek basic help from them.</p>
+</li>
+<li>
+<p><strong>Flexible numeric types.</strong> Although you <em>can</em> be specific about numeric types in MATLAB when you really want, by default every number is potentially a complex float. While stricter numerical types are important for writing applications, they can get in the way for casual and new users.</p>
+<p>It&rsquo;s not easy to anticipate, for example, that initializing a vector of Newton iterates with <code>0</code> or <code>1</code> will lead to an error when you later try to push a float into that vector, and the <code>InexactError</code> message you get is cryptic at best. For the initiated, it&rsquo;s a trivial thing to use <code>0.</code> or cast with <code>float</code> at the start, and to recognize the source of the problem if you forget. But for students grappling with larger math and computing concepts, every bit of cognitive load and frustrating experience takes a toll.</p>
+</li>
+<li>
+<p><strong>Pass by value vs. reference.</strong> Ask a student whether MATLAB passes matrices by value or by reference, and you will probably get a blank stare. That&rsquo;s because you simply don&rsquo;t have to think about the issue at all. It&rsquo;s not as though it always chooses to pass by value; instead, it analyzes each function, and if the value isn&rsquo;t changed, the matrix is passed by reference.</p>
+<p>I can see why an advanced programmer in search of maximum performance doesn&rsquo;t want that to happen: if you have to acknowledge the computational effort with an explicit copy operation, you may look harder for ways to avoid it. However, that level of control is meaningless to the beginner.</p>
+<p>(And yes, this is fodder for haters of imperative programming, but let&rsquo;s not fight that battle today.)</p>
+</li>
+<li>
+<p><strong>Debugging.</strong> MATLAB&rsquo;s debugger is the most valuable feature of its IDE. I&rsquo;m not often able to get students to take advantage of it, but maybe that&rsquo;s on me. Julia has made great strides in providing the capability, notably in the <a href="https://www.julia-vscode.org/docs/stable/userguide/debugging/" target="_blank" rel="noopener">VS code extension</a>. But it&rsquo;s agonizingly slow, apparently because Julia isn&rsquo;t meant to be run in an interpreted way.</p>
+</li>
+</ol>
+<h2 id="in-julias-favor">In Julia&rsquo;s favor</h2>
+<ol>
+<li>
+<p><strong>Broadcasting.</strong> This has to be my favorite aspect of both teaching with and using Julia. Some students using MATLAB sort of give up on when and how to vectorize, trying <code>*</code> and <code>.*</code> seemingly at random until things work. Julia&rsquo;s <code>@.</code> macro makes vectorization conceptually and syntactically simple. Even better, you can now write all your own functions for scalar arguments, because they can all be broadcast after the fact by a single dot, e. g., <code>foo.(x)</code>.</p>
+<p>Don&rsquo;t even get me started on the disaster that MathWorks created by introducing broadcasting for <code>+</code> and <code>-</code> operations. It&rsquo;s easy to lose track of row/column orientation, and now instead of easily fixed errors, you get bizarre results. Worst. Decision. Ever. Guys, <code>.+</code> and <code>.-</code> were right there!</p>
+</li>
+<li>
+<p><strong>Function definitions inline.</strong> Look, I get it. I remember when MATLAB allowed one function per M-file, period. Things have gotten way better since then. You can even define full-fledged functions within a script, as long as they&rsquo;re at the bottom of the script. That&rsquo;s almost everything you could want.</p>
+<p>Almost.</p>
+</li>
+<li>
+<p><strong>First-class functions.</strong> I can remember a talk by <a href="https://en.wikipedia.org/wiki/Cleve_Moler" target="_blank" rel="noopener">Cleve Moler</a> given at Cornell way back in the 20th century, when an audience member asked if a forthcoming version of MATLAB would treat functions as first-class objects. As a whelp, I had no idea what that meant. At that time, if you wanted to use a function as data, you had to pass the function names as a string and then <code>feval</code> it.</p>
+<p>I believe it was MATLAB 5 that introduced function <em>handles</em>, such as <code>@foo</code>, to address this problem. The same character was tasked to create inline functions, such as <code>foo = @(t) sin(cos(t))</code>. It&rsquo;s all pretty straightforward to programming veterans. But I see a lot of students get confused about when and how to use the <code>@</code> sign. In retrospect, maybe having one symbol serve both purposes was a mistake.</p>
+</li>
+<li>
+<p><strong>Vectors are vectors.</strong> MATLAB makes no distinction between a vector and a matrix with a singleton dimension. Often row and column vectors are interchangeable, but sometimes the distinction matters, and students have a difficult time predicting when. Ranges created using <code>:</code> are row vectors, even though most of modern matrix algebra expects column vectors by default. Then there&rsquo;s the fact that scalars are the same as $1\times 1$ matrices, except there are many edge cases where they are treated differently. The behaviors are usually instinctively correct for the initiated, but newbies can get bollixed up.</p>
+<p>In Julia, vectors have one dimension and scalars have none. It&rsquo;s not quite pure, because in many cases a vector can be used in context as a column vector. But there are no row vectors per se, just adjoints of vectors. I didn&rsquo;t always like this scheme—I was reluctant to see <code>A[i,:]</code> as a quasi-column vector—but in time, I have come to appreciate the consistency it brings to the table.</p>
+</li>
+<li>
+<p><strong>Unicode.</strong> It sounds like mere fluff to allow Unicode in variable and function names. However, form matters. There&rsquo;s a reason why, when we do math, we write π and not &ldquo;pi&rdquo;, x̃ and not &ldquo;x_tilde&rdquo;, and v₁ and not &ldquo;v_1&rdquo;: to be compact and expressive. Being able to make code look more like our math is a subtle but powerful advantage.</p>
+</li>
+<li>
+<p><strong>Local scopes within loops.</strong> I&rsquo;m shocked that I am including this as an advantage, since it really put me off when Julia 1.0 was released. But consider the following pattern in MATLAB:</p>
+<pre><code class="language-{code-block}">n = 50:50:500;
+x = zeros(size(n));
+for i = 1:length(n)
+    ] = euler(f,t,u0,n(i));
+     = u(end);
 end
-
-using PyPlot
-loglog(n_,time_,&quot;-o&quot;,n_,(n_/500).^2,&quot;--&quot;)
-xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
 </code></pre>
-<p>I noticed that while the timings were similar, Julia lagged MATLAB just a bit. I decided this would be a great chance for me to see Julia&rsquo;s prowess with speedy loops firsthand.</p>
-<p>Compare the vectorized and unvectorized Julia versions here:</p>
-<script src="https://gist.github.com/tobydriscoll/c515e9f5bd4ab540b41db9852db53b72.js"></script>
-<p>Look at the last line&ndash;it&rsquo;s allocating 1.4GB of memory to make the nested loop version happen! I thought perhaps I should use <code>copy</code> to create <code>v</code> in each pass, but that change didn&rsquo;t help. I even tried writing my own loop for computing the dot product, to no avail.</p>
-<p>It did help a little to replace the line in which <code>v</code> is updated with</p>
-<pre><code class="language-julia">v = broadcast!(-,v,Q[:,i]*R[i,j])
+<p>``</p>
+<p>This is fine. But there will be plenty of students who forget to use <code>n(i)</code> rather than <code>n</code>, and if there are multiple expressions using it, things get a little cluttered. A Julia counterpart is</p>
+<pre><code class="language-{code-block}">n = 50:50:500
+x = zeros(length(n))
+for (i,n) in enumerate(n)
+    = euler(f,t,u0,n)
+     = u[end]
+end
 </code></pre>
-<p>The bang on the name of the function makes it operate in-place, overwriting the current storage. Apparently Julia will create <a href="https://github.com/JuliaLang/julia/pull/17546" target="_blank" rel="noopener">some syntactic sugar for this maneuver in version 0.5</a>. Here it reduced the memory usage to 1.1 GB.</p>
-<p>Julia&rsquo;s reputation is that it&rsquo;s great with loops, especially compared to MATLAB and Python. As a Julia newbie I recognize that there may still be only a small change I need to make in order to see this for myself. But I feel as though having to use that <code>broadcast!</code>, or even the more natural <code>.=</code> that may be coming, is already too much to ask. I&rsquo;m frustrated, confused, and disappointed.</p>
+<p>``</p>
+<p>OK, the advantages here look tiny. But wait for the next point.</p>
+</li>
+<li>
+<p><strong>Comprehensions.</strong> Goodbye, <code>meshgrid</code>:</p>
+<pre><code class="language-{code-block}">x = y = range(-1,1,length=60)
+U = [ exp(x*y)-2y for x in x, y in y ]
+</code></pre>
+<p>``</p>
+<p>Check and mate.</p>
+</li>
+</ol>
+<h2 id="its-a-draw">It&rsquo;s a draw</h2>
+<ol>
+<li>
+<p><strong>Graphics.</strong> MATLAB&rsquo;s graphics are still great. They are a bit easier to use, with greater unity of design, than Julia&rsquo;s offerings. I favor <code>Plots</code>, which shines at <a href="https://docs.juliaplots.org/latest/animations/" target="_blank" rel="noopener">animations</a>. If you like MATLAB&rsquo;s graphics system, the Matplotlib clone in Python works great in Julia as <a href="https://github.com/JuliaPy/PyPlot.jl" target="_blank" rel="noopener">PyPlot</a>. Still others like <a href="https://makie.juliaplots.org/stable/" target="_blank" rel="noopener">Makie</a>, especially to use GPU hardware. The additional choices in Julia, and their extensibility, essentially make up for whatever you might do a little better or easier in MATLAB.</p>
+</li>
+<li>
+<p><strong>IDE.</strong> MATLAB&rsquo;s desktop IDE is not beautiful or lovable, but it&rsquo;s powerful and quite flexible. At this point, the <a href="https://www.julia-vscode.org/docs/stable/" target="_blank" rel="noopener">VS code extension for Julia</a> is a different animal, and better as a text editor, but this comparison is a wash.</p>
+</li>
+<li>
+<p><strong>Notebooks.</strong> MATLAB has their Live Script format, which is essentially a notebook interface. It&rsquo;s a bit slow and a walled garden, but it gets the job done. Jupyter notebooks are pretty easy to manage through <code>IJulia</code>, and they&rsquo;re fine, though conversion to PDF is easier via browser print than through having to install LaTeX. Interestingly, you can <a href="https://github.com/Calysto/matlab_kernel" target="_blank" rel="noopener">use Jupyter with MATLAB as well</a>, though I&rsquo;ve never tried to talk students through it.</p>
+<p>Both interfaces suffer from the out-of-order execution problem that results from jumping around within the notebook. That can trip up experts, and it can really stymie n00bs. <a href="https://github.com/fonsp/Pluto.jl" target="_blank" rel="noopener"><code>Pluto.jl</code></a> is an interesting all-Julian take on notebooks that don&rsquo;t allow that situation to happen. I like it, but I don&rsquo;t know how students would respond to it.</p>
+</li>
+<li>
+<p><strong>Relevance.</strong> Julia has a lot of power, a great community, an upward trajectory, and a modern feel. MATLAB is a useful blend of stability and progress, and some engineering disciplines more or less expect it to be available and used. The elephant in the room, of course, is Python. While I prefer both Julia and MATLAB to it for teaching computational math, it&rsquo;s impossible to ignore the benefit to many students of having more experience in Python.</p>
+</li>
+</ol>
 
     </div>
 
@@ -887,6 +957,18 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
 
 
 
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/computing/">computing</a>
+  
+  <a class="badge badge-light" href="/tag/teaching/">teaching</a>
+  
+  <a class="badge badge-light" href="/tag/julia/">Julia</a>
+  
+  <a class="badge badge-light" href="/tag/matlab/">MATLAB</a>
+  
+</div>
 
 
 
@@ -901,7 +983,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/&amp;text=Trefethen%20&amp;amp;%20Bau%20&amp;amp;%20MATLAB%20&amp;amp;%20Julia,%20Lecture%208:%20Gram-Schmidt" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/&amp;text=Teaching%20with%20Julia%20vs.%20teaching%20with%20MATLAB" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -914,7 +996,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/&amp;t=Trefethen%20&amp;amp;%20Bau%20&amp;amp;%20MATLAB%20&amp;amp;%20Julia,%20Lecture%208:%20Gram-Schmidt" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/&amp;t=Teaching%20with%20Julia%20vs.%20teaching%20with%20MATLAB" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -927,7 +1009,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
       
       
       <li>
-        <a href="mailto:?subject=Trefethen%20&amp;amp;%20Bau%20&amp;amp;%20MATLAB%20&amp;amp;%20Julia,%20Lecture%208:%20Gram-Schmidt&amp;body=https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Teaching%20with%20Julia%20vs.%20teaching%20with%20MATLAB&amp;body=https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -940,7 +1022,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/&amp;title=Trefethen%20&amp;amp;%20Bau%20&amp;amp;%20MATLAB%20&amp;amp;%20Julia,%20Lecture%208:%20Gram-Schmidt" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/&amp;title=Teaching%20with%20Julia%20vs.%20teaching%20with%20MATLAB" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -953,7 +1035,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
       
       
       <li>
-        <a href="whatsapp://send?text=Trefethen%20&amp;amp;%20Bau%20&amp;amp;%20MATLAB%20&amp;amp;%20Julia,%20Lecture%208:%20Gram-Schmidt%20https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Teaching%20with%20Julia%20vs.%20teaching%20with%20MATLAB%20https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -966,7 +1048,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://tobydriscoll.net/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/&amp;title=Trefethen%20&amp;amp;%20Bau%20&amp;amp;%20MATLAB%20&amp;amp;%20Julia,%20Lecture%208:%20Gram-Schmidt" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/&amp;title=Teaching%20with%20Julia%20vs.%20teaching%20with%20MATLAB" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -986,6 +1068,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
 
   
   
+    
 
 
 
@@ -1127,6 +1210,7 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
   </div>
 
 
+  
 
 
 
@@ -1147,11 +1231,11 @@ xlabel(&quot;n&quot;), ylabel(&quot;elapsed time&quot;)
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/blog/teaching-with-julia-vs.-teaching-with-matlab/">Teaching with Julia vs. teaching with MATLAB</a></li>
-      
       <li><a href="/blog/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 24-29: Eigenvalue stuff</a></li>
       
       <li><a href="/blog/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/">Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lecture 19, Stability of least squares</a></li>
+      
+      <li><a href="/blog/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt</a></li>
       
       <li><a href="/blog/trefethen-bau-matlab-julia-lecture-4-svd/">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 4: SVD</a></li>
       
