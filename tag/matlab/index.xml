@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MATLAB | Toby Driscoll</title>
+    <title>matlab | Toby Driscoll</title>
     <link>https://tobydriscoll.net/tag/matlab/</link>
       <atom:link href="https://tobydriscoll.net/tag/matlab/index.xml" rel="self" type="application/rss+xml" />
-    <description>MATLAB</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate>
+    <description>matlab</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png</url>
-      <title>MATLAB</title>
+      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_3.png</url>
+      <title>matlab</title>
       <link>https://tobydriscoll.net/tag/matlab/</link>
     </image>
     
@@ -210,7 +210,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge_hu0f548cfd05e38926eebe46ea28dd5be0_124060_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;Runge.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge_hu0f548cfd05e38926eebe46ea28dd5be0_124060_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Runge.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -219,7 +219,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ac.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ac_hu95970c6c9ea6fae0dbfcfa14ef2df26c_38616_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ac.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ac_hu95970c6c9ea6fae0dbfcfa14ef2df26c_38616_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ac.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -228,7 +228,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ad.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ad_hu793d1d9b879a97c8ab6c3a18cece99e9_129083_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ad.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ad_hu793d1d9b879a97c8ab6c3a18cece99e9_129083_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ad.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -237,7 +237,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/blur.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/blur_hu56bbdb49eb2c4fc0bc1ea93c89180c13_145139_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;blur.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/blur_hu56bbdb49eb2c4fc0bc1ea93c89180c13_145139_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;blur.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -246,7 +246,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres_hub77fff9e6573c7ccbab0d5ca05b6cb46_50706_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;gmres.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres_hub77fff9e6573c7ccbab0d5ca05b6cb46_50706_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;gmres.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -255,7 +255,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/heat.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/heat_hu7f9a8ee2cd7da742aa215ef640b44411_101473_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;heat.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/heat_hu7f9a8ee2cd7da742aa215ef640b44411_101473_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;heat.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -264,7 +264,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/int.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/int_hu525f77ce78fc11d3dc29e5787fb4ca47_59355_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;int.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/int_hu525f77ce78fc11d3dc29e5787fb4ca47_59355_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;int.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -273,7 +273,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon_hu4c9c9cae9716966acab1b15af67e8952_53949_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;oregon.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon_hu4c9c9cae9716966acab1b15af67e8952_53949_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;oregon.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -282,7 +282,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/pois.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/pois_hu6a09c7b9238211c8194e1ca1518f29c4_83948_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;pois.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/pois_hu6a09c7b9238211c8194e1ca1518f29c4_83948_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;pois.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -291,7 +291,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse_hu3ef95519f45740ea365b74f9f07a4274_406244_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;sparse.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse_hu3ef95519f45740ea365b74f9f07a4274_406244_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;sparse.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -300,7 +300,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/stab.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/stab_hu2c15c64b385ef2b8e92ecbe02eba8949_28268_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;stab.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/stab_hu2c15c64b385ef2b8e92ecbe02eba8949_28268_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;stab.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -309,7 +309,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic_hu6ba28221845bc3855a564180a912cf4c_69354_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;traffic.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic_hu6ba28221845bc3855a564180a912cf4c_69354_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;traffic.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -318,7 +318,7 @@
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/voting.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/voting_hu1084b07da23983f4101a729b753609ca_61390_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;voting.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/voting_hu1084b07da23983f4101a729b753609ca_61390_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;voting.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
 
@@ -492,7 +492,7 @@ very challenging.&lt;/p&gt;
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/channel.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/channel_hu9e1bce225604065302d93a077c9ab2d8_5629_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;channel.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/channel_hu9e1bce225604065302d93a077c9ab2d8_5629_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;channel.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -501,7 +501,7 @@ very challenging.&lt;/p&gt;
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/delaware.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/delaware_hue6ebae6fa85a1b9e1fa009a533e976e1_53385_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;delaware.png&#34; width=&#34;82&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/delaware_hue6ebae6fa85a1b9e1fa009a533e976e1_53385_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;delaware.png&#34; width=&#34;82&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -510,7 +510,7 @@ very challenging.&lt;/p&gt;
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/ell.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/ell_hu5664d63214028e21464e87317bc508c2_7128_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ell.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/ell_hu5664d63214028e21464e87317bc508c2_7128_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ell.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -519,7 +519,7 @@ very challenging.&lt;/p&gt;
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/four.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/four_hue23dbf62a80a4e136bd467621aae8586_10083_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;four.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/four_hue23dbf62a80a4e136bd467621aae8586_10083_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;four.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -528,7 +528,7 @@ very challenging.&lt;/p&gt;
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/maze.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/maze_huce5db714120eade6e4a1347820d70892_39886_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;maze.png&#34; width=&#34;234&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/maze_huce5db714120eade6e4a1347820d70892_39886_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;maze.png&#34; width=&#34;234&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -537,7 +537,7 @@ very challenging.&lt;/p&gt;
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/plus.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/plus_huf7035a3815707085581fa3ae36a77947_5692_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;plus.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/plus_huf7035a3815707085581fa3ae36a77947_5692_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;plus.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -546,7 +546,7 @@ very challenging.&lt;/p&gt;
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/probes.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/probes_hu6a594e50a0e2aaf31b4bb85754542833_5652_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;probes.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/probes_hu6a594e50a0e2aaf31b4bb85754542833_5652_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;probes.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -555,7 +555,7 @@ very challenging.&lt;/p&gt;
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/snowflake.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/snowflake_hud590406ca10e334a4a4660dae6460fb1_10433_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;snowflake.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/snowflake_hud590406ca10e334a4a4660dae6460fb1_10433_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;snowflake.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -564,7 +564,7 @@ very challenging.&lt;/p&gt;
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/zigzag.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/zigzag_hue0e6aa4bb533f3de44ce01cfbbb6a9ba_5850_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;zigzag.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/sc-toolbox/gallery/zigzag_hue0e6aa4bb533f3de44ce01cfbbb6a9ba_5850_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;zigzag.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
 
@@ -585,113 +585,6 @@ very challenging.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.mathworks.com/matlabcentral/fileexchange/13353-sparse-toeplitz-matrix-construction?s_tid=prof_contriblnk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sparse Toeplitz matrix construction&lt;/a&gt; Some practical sparse matrices are Toeplitz. This takes the pain out of constructing them.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.mathworks.com/matlabcentral/fileexchange/15851-piecewise-defined-function-builder?s_tid=prof_contriblnk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;piecewise-defined function builder&lt;/a&gt; Creates a single callable function from a collection of piecewise definitions.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Teaching with Julia vs. teaching with MATLAB</title>
-      <link>https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/</link>
-      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://tobydriscoll.net/blog/teaching-with-julia-vs.-teaching-with-matlab/</guid>
-      <description>&lt;p&gt;In fall 2020, I was set to teach our first-semester computational math course using &lt;a href=&#34;https://tobydriscoll.net/FNC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my co-authored book&lt;/a&gt; with its couple of hundred or so MATLAB codes. Then I was approached by an honors student about doing an add-on honors section. I&amp;rsquo;ve never quite known what to do with these. How to make a more enriching experience without adding a ton of extra effort for me and for the students?&lt;/p&gt;
-&lt;p&gt;However, the timing was interesting. I had been working on a &lt;a href=&#34;https://julialang.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia&lt;/a&gt; version of the book for a while, and needed some field testing. So I had five volunteer guinea pigs, among the best and most motivated students. If they couldn&amp;rsquo;t make it work, then probably few students could.&lt;/p&gt;
-&lt;p&gt;In short, that field test was a bigger success than I had hoped. The honors students needed surprisingly little coaching through the installation and use of Julia, a &lt;a href=&#34;https://github.com/fncbook/FundamentalsNumericalComputation.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;package for the book software&lt;/a&gt;, and Jupyter. There were no significant bugs.&lt;/p&gt;
-&lt;p&gt;What I had not anticipated was how interesting it would be for me to be teaching groups of students the same material simultaneously in both computing languages. It&amp;rsquo;s not an experiment, given the self-selection of the students; in particular, the MATLAB group included both strong and much weaker students. But some differences about the pedagogical use cases were highlighted.&lt;/p&gt;
-&lt;p&gt;For me, almost nothing important here comes down to big features like multiple dispatch and threading in Julia, or mature applications packages in MATLAB. Those things are beyond the scope of what I can try to convey, which is decent programming practice in the service of learning concepts. Instead, the differences I encounter when teaching have more to do with what you might call quality of life issues when getting to know a language and its ecosystem.&lt;/p&gt;
-&lt;h2 id=&#34;in-matlabs-favor&#34;&gt;In MATLAB&amp;rsquo;s favor&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Packaging.&lt;/strong&gt; &lt;a href=&#34;https://wwww.mathworks.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MathWorks&lt;/a&gt; has been selling MATLAB for decades, and the installation process is about as smooth as a license-locked program could be. An army of service agents is standing by to help, although I don&amp;rsquo;t always hear great things about that experience. There is even some &lt;a href=&#34;https://www.mathworks.com/help/matlab/creating_guis/apps-overview.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;package management&lt;/a&gt; built in.&lt;/p&gt;
-&lt;p&gt;(Not for the first time, I found it astonishing and discouraging that despite being given a link to the book&amp;rsquo;s files as a &lt;a href=&#34;https://github.com/tobydriscoll/fnc-extras/raw/master/Fundamentals%20of%20Numerical%20Computation.mltbx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;one-click installation&lt;/a&gt;, many students persisted in typing in the functions—thereby introducing mistakes—or even copying from the PDF to paste into the editor.)&lt;/p&gt;
-&lt;p&gt;Julia&amp;rsquo;s &lt;a href=&#34;https://docs.julialang.org/en/v1/stdlib/Pkg/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;package manager&lt;/a&gt; is superb, possibly unparalleled, and it mostly gets out of the way. Yet it exposes issues that simply don&amp;rsquo;t exist for baby MATLAB users. &lt;a href=&#34;https://juliacomputing.com/products/juliapro/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JuliaPro&lt;/a&gt; is one answer, but it still uses Atom/Juno and is, at this moment, behind on the Julia version. For me personally, life is too precious to spend it setting up a &lt;a href=&#34;https://jupyter.org/hub&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JupyterHub&lt;/a&gt;. There are some cloud solutions, although then payment becomes an issue.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Documentation.&lt;/strong&gt; The documentation in MATLAB is second to none. It&amp;rsquo;s all mirrored on the web as well as integrated within the IDE and the command line. By contrast, documentation in Julia remains highly variable. Even when there are great and helpful websites, the documentation of individual functions (outside of the base) is often spotty and is sometimes aimed at a sophisticated user. Even when there is good documentation, it can be difficult to find what you want for a function with many methods. Writing documentation is hard and pretty thankless, so it&amp;rsquo;s no surprise that a top-down organization with a lot of money and a big headstart enjoys an advantage. As long as I&amp;rsquo;m taking potshots at Julia here, though, error reporting is also&amp;hellip;not fantastic.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Help.&lt;/strong&gt; There is an avalanche of texts, videos, and interactive tutorials for learning just about anything for MATLAB, including a nontrivial intersection of free and high-quality. MATLAB has maintained backward compatibility so well that almost all of this help remains accurate, although sometimes obsolete. There is the downside that your students might find a little &lt;em&gt;too much&lt;/em&gt; help, of course.&lt;/p&gt;
-&lt;p&gt;By contrast, Julia is still young and such a moving target that googling for help can be an adventure. While there are helpful and responsive communities on &lt;a href=&#34;https://discourse.julialang.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Discourse&lt;/a&gt; and &lt;a href=&#34;https://reddit.com/r/julia&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Reddit&lt;/a&gt;, for example, students are mostly too shy?/guilty?/procrastinating? to seek basic help from them.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Flexible numeric types.&lt;/strong&gt; Although you &lt;em&gt;can&lt;/em&gt; be specific about numeric types in MATLAB when you really want, by default every number is potentially a complex float. While stricter numerical types are important for writing applications, they can get in the way for casual and new users.&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s not easy to anticipate, for example, that initializing a vector of Newton iterates with &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt; will lead to an error when you later try to push a float into that vector, and the &lt;code&gt;InexactError&lt;/code&gt; message you get is cryptic at best. For the initiated, it&amp;rsquo;s a trivial thing to use &lt;code&gt;0.&lt;/code&gt; or cast with &lt;code&gt;float&lt;/code&gt; at the start, and to recognize the source of the problem if you forget. But for students grappling with larger math and computing concepts, every bit of cognitive load and frustrating experience takes a toll.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Pass by value vs. reference.&lt;/strong&gt; Ask a student whether MATLAB passes matrices by value or by reference, and you will probably get a blank stare. That&amp;rsquo;s because you simply don&amp;rsquo;t have to think about the issue at all. It&amp;rsquo;s not as though it always chooses to pass by value; instead, it analyzes each function, and if the value isn&amp;rsquo;t changed, the matrix is passed by reference.&lt;/p&gt;
-&lt;p&gt;I can see why an advanced programmer in search of maximum performance doesn&amp;rsquo;t want that to happen: if you have to acknowledge the computational effort with an explicit copy operation, you may look harder for ways to avoid it. However, that level of control is meaningless to the beginner.&lt;/p&gt;
-&lt;p&gt;(And yes, this is fodder for haters of imperative programming, but let&amp;rsquo;s not fight that battle today.)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Debugging.&lt;/strong&gt; MATLAB&amp;rsquo;s debugger is the most valuable feature of its IDE. I&amp;rsquo;m not often able to get students to take advantage of it, but maybe that&amp;rsquo;s on me. Julia has made great strides in providing the capability, notably in the &lt;a href=&#34;https://www.julia-vscode.org/docs/stable/userguide/debugging/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VS code extension&lt;/a&gt;. But it&amp;rsquo;s agonizingly slow, apparently because Julia isn&amp;rsquo;t meant to be run in an interpreted way.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;in-julias-favor&#34;&gt;In Julia&amp;rsquo;s favor&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Broadcasting.&lt;/strong&gt; This has to be my favorite aspect of both teaching with and using Julia. Some students using MATLAB sort of give up on when and how to vectorize, trying &lt;code&gt;*&lt;/code&gt; and &lt;code&gt;.*&lt;/code&gt; seemingly at random until things work. Julia&amp;rsquo;s &lt;code&gt;@.&lt;/code&gt; macro makes vectorization conceptually and syntactically simple. Even better, you can now write all your own functions for scalar arguments, because they can all be broadcast after the fact by a single dot, e. g., &lt;code&gt;foo.(x)&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Don&amp;rsquo;t even get me started on the disaster that MathWorks created by introducing broadcasting for &lt;code&gt;+&lt;/code&gt; and &lt;code&gt;-&lt;/code&gt; operations. It&amp;rsquo;s easy to lose track of row/column orientation, and now instead of easily fixed errors, you get bizarre results. Worst. Decision. Ever. Guys, &lt;code&gt;.+&lt;/code&gt; and &lt;code&gt;.-&lt;/code&gt; were right there!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Function definitions inline.&lt;/strong&gt; Look, I get it. I remember when MATLAB allowed one function per M-file, period. Things have gotten way better since then. You can even define full-fledged functions within a script, as long as they&amp;rsquo;re at the bottom of the script. That&amp;rsquo;s almost everything you could want.&lt;/p&gt;
-&lt;p&gt;Almost.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;First-class functions.&lt;/strong&gt; I can remember a talk by &lt;a href=&#34;https://en.wikipedia.org/wiki/Cleve_Moler&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cleve Moler&lt;/a&gt; given at Cornell way back in the 20th century, when an audience member asked if a forthcoming version of MATLAB would treat functions as first-class objects. As a whelp, I had no idea what that meant. At that time, if you wanted to use a function as data, you had to pass the function names as a string and then &lt;code&gt;feval&lt;/code&gt; it.&lt;/p&gt;
-&lt;p&gt;I believe it was MATLAB 5 that introduced function &lt;em&gt;handles&lt;/em&gt;, such as &lt;code&gt;@foo&lt;/code&gt;, to address this problem. The same character was tasked to create inline functions, such as &lt;code&gt;foo = @(t) sin(cos(t))&lt;/code&gt;. It&amp;rsquo;s all pretty straightforward to programming veterans. But I see a lot of students get confused about when and how to use the &lt;code&gt;@&lt;/code&gt; sign. In retrospect, maybe having one symbol serve both purposes was a mistake.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Vectors are vectors.&lt;/strong&gt; MATLAB makes no distinction between a vector and a matrix with a singleton dimension. Often row and column vectors are interchangeable, but sometimes the distinction matters, and students have a difficult time predicting when. Ranges created using &lt;code&gt;:&lt;/code&gt; are row vectors, even though most of modern matrix algebra expects column vectors by default. Then there&amp;rsquo;s the fact that scalars are the same as $1\times 1$ matrices, except there are many edge cases where they are treated differently. The behaviors are usually instinctively correct for the initiated, but newbies can get bollixed up.&lt;/p&gt;
-&lt;p&gt;In Julia, vectors have one dimension and scalars have none. It&amp;rsquo;s not quite pure, because in many cases a vector can be used in context as a column vector. But there are no row vectors per se, just adjoints of vectors. I didn&amp;rsquo;t always like this scheme—I was reluctant to see &lt;code&gt;A[i,:]&lt;/code&gt; as a quasi-column vector—but in time, I have come to appreciate the consistency it brings to the table.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Unicode.&lt;/strong&gt; It sounds like mere fluff to allow Unicode in variable and function names. However, form matters. There&amp;rsquo;s a reason why, when we do math, we write π and not &amp;ldquo;pi&amp;rdquo;, x̃ and not &amp;ldquo;x_tilde&amp;rdquo;, and v₁ and not &amp;ldquo;v_1&amp;rdquo;: to be compact and expressive. Being able to make code look more like our math is a subtle but powerful advantage.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Local scopes within loops.&lt;/strong&gt; I&amp;rsquo;m shocked that I am including this as an advantage, since it really put me off when Julia 1.0 was released. But consider the following pattern in MATLAB:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{code-block}&#34;&gt;n = 50:50:500;
-x = zeros(size(n));
-for i = 1:length(n)
-    ] = euler(f,t,u0,n(i));
-     = u(end);
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;``&lt;/p&gt;
-&lt;p&gt;This is fine. But there will be plenty of students who forget to use &lt;code&gt;n(i)&lt;/code&gt; rather than &lt;code&gt;n&lt;/code&gt;, and if there are multiple expressions using it, things get a little cluttered. A Julia counterpart is&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{code-block}&#34;&gt;n = 50:50:500
-x = zeros(length(n))
-for (i,n) in enumerate(n)
-    = euler(f,t,u0,n)
-     = u[end]
-end
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;``&lt;/p&gt;
-&lt;p&gt;OK, the advantages here look tiny. But wait for the next point.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Comprehensions.&lt;/strong&gt; Goodbye, &lt;code&gt;meshgrid&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{code-block}&#34;&gt;x = y = range(-1,1,length=60)
-U = [ exp(x*y)-2y for x in x, y in y ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;``&lt;/p&gt;
-&lt;p&gt;Check and mate.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;its-a-draw&#34;&gt;It&amp;rsquo;s a draw&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Graphics.&lt;/strong&gt; MATLAB&amp;rsquo;s graphics are still great. They are a bit easier to use, with greater unity of design, than Julia&amp;rsquo;s offerings. I favor &lt;code&gt;Plots&lt;/code&gt;, which shines at &lt;a href=&#34;https://docs.juliaplots.org/latest/animations/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;animations&lt;/a&gt;. If you like MATLAB&amp;rsquo;s graphics system, the Matplotlib clone in Python works great in Julia as &lt;a href=&#34;https://github.com/JuliaPy/PyPlot.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyPlot&lt;/a&gt;. Still others like &lt;a href=&#34;https://makie.juliaplots.org/stable/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Makie&lt;/a&gt;, especially to use GPU hardware. The additional choices in Julia, and their extensibility, essentially make up for whatever you might do a little better or easier in MATLAB.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;IDE.&lt;/strong&gt; MATLAB&amp;rsquo;s desktop IDE is not beautiful or lovable, but it&amp;rsquo;s powerful and quite flexible. At this point, the &lt;a href=&#34;https://www.julia-vscode.org/docs/stable/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VS code extension for Julia&lt;/a&gt; is a different animal, and better as a text editor, but this comparison is a wash.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Notebooks.&lt;/strong&gt; MATLAB has their Live Script format, which is essentially a notebook interface. It&amp;rsquo;s a bit slow and a walled garden, but it gets the job done. Jupyter notebooks are pretty easy to manage through &lt;code&gt;IJulia&lt;/code&gt;, and they&amp;rsquo;re fine, though conversion to PDF is easier via browser print than through having to install LaTeX. Interestingly, you can &lt;a href=&#34;https://github.com/Calysto/matlab_kernel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;use Jupyter with MATLAB as well&lt;/a&gt;, though I&amp;rsquo;ve never tried to talk students through it.&lt;/p&gt;
-&lt;p&gt;Both interfaces suffer from the out-of-order execution problem that results from jumping around within the notebook. That can trip up experts, and it can really stymie n00bs. &lt;a href=&#34;https://github.com/fonsp/Pluto.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;Pluto.jl&lt;/code&gt;&lt;/a&gt; is an interesting all-Julian take on notebooks that don&amp;rsquo;t allow that situation to happen. I like it, but I don&amp;rsquo;t know how students would respond to it.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Relevance.&lt;/strong&gt; Julia has a lot of power, a great community, an upward trajectory, and a modern feel. MATLAB is a useful blend of stability and progress, and some engineering disciplines more or less expect it to be available and used. The elephant in the room, of course, is Python. While I prefer both Julia and MATLAB to it for teaching computational math, it&amp;rsquo;s impossible to ignore the benefit to many students of having more experience in Python.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     
@@ -718,10 +611,10 @@ U = [ exp(x*y)-2y for x in x, y in y ]
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;Chebfun logo&#34; srcset=&#34;
-               /project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_543d77b58ff82f386e819c97a6c94fea.png 400w,
-               /project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_2f40a44147477f6d09e72a09dac959c8.png 760w,
-               /project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://tobydriscoll.net/project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_543d77b58ff82f386e819c97a6c94fea.png&#34;
+               /project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_001148c5dbcaead123419aa5b4f952c0.png 400w,
+               /project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_90ea1312aacc13cab1abfca2153dd4ca.png 760w,
+               /project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://tobydriscoll.net/project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_001148c5dbcaead123419aa5b4f952c0.png&#34;
                width=&#34;300&#34;
                height=&#34;162&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -753,7 +646,7 @@ U = [ exp(x*y)-2y for x in x, y in y ]
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/chebfun/gallery/AtmosphericTemperature_08.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/AtmosphericTemperature_08_hu8fe09ab37c4700f7087d28e3de8e1ff3_24244_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;AtmosphericTemperature_08.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/AtmosphericTemperature_08_hu8fe09ab37c4700f7087d28e3de8e1ff3_24244_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;AtmosphericTemperature_08.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -762,7 +655,7 @@ U = [ exp(x*y)-2y for x in x, y in y ]
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/chebfun/gallery/Eigenstates_08.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/Eigenstates_08_hue8ba5ca8032e908dc13e51fed27edce6_18433_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;Eigenstates_08.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/Eigenstates_08_hue8ba5ca8032e908dc13e51fed27edce6_18433_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Eigenstates_08.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -771,7 +664,7 @@ U = [ exp(x*y)-2y for x in x, y in y ]
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/chebfun/gallery/GrayScott_01.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/GrayScott_01_huc719ea3d7bb4160a69957ca598749b3b_75290_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;GrayScott_01.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/GrayScott_01_huc719ea3d7bb4160a69957ca598749b3b_75290_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;GrayScott_01.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -780,7 +673,7 @@ U = [ exp(x*y)-2y for x in x, y in y ]
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/chebfun/gallery/GuckenheimerHolmes_01.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/GuckenheimerHolmes_01_hufa79a35f4aeed866980b42836050fb49_6221_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;GuckenheimerHolmes_01.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/GuckenheimerHolmes_01_hufa79a35f4aeed866980b42836050fb49_6221_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;GuckenheimerHolmes_01.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -789,7 +682,7 @@ U = [ exp(x*y)-2y for x in x, y in y ]
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/chebfun/gallery/Kuramoto_04.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/Kuramoto_04_hu98cf7d22e0364c367bfa3599f9281e09_19426_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;Kuramoto_04.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/Kuramoto_04_hu98cf7d22e0364c367bfa3599f9281e09_19426_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Kuramoto_04.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -798,7 +691,7 @@ U = [ exp(x*y)-2y for x in x, y in y ]
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/chebfun/gallery/ParametricSurfaces_03.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/ParametricSurfaces_03_hu42cf92a57adaf06387bbafc721025142_39891_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ParametricSurfaces_03.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/ParametricSurfaces_03_hu42cf92a57adaf06387bbafc721025142_39891_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ParametricSurfaces_03.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -807,7 +700,7 @@ U = [ exp(x*y)-2y for x in x, y in y ]
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/chebfun/gallery/PortraitsWithPoles_02.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/PortraitsWithPoles_02_hu1fd1ed525c827855c8a1e7e7fffeef83_32993_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;PortraitsWithPoles_02.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/PortraitsWithPoles_02_hu1fd1ed525c827855c8a1e7e7fffeef83_32993_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;PortraitsWithPoles_02.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -816,7 +709,7 @@ U = [ exp(x*y)-2y for x in x, y in y ]
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/chebfun/gallery/ResolutionWiggly_01.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/ResolutionWiggly_01_hua0a28c993d1bf1f7b90adb5407ab2be2_19259_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ResolutionWiggly_01.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
+      &lt;img src=&#34;https://tobydriscoll.net/project/chebfun/gallery/ResolutionWiggly_01_hua0a28c993d1bf1f7b90adb5407ab2be2_19259_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ResolutionWiggly_01.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
 
