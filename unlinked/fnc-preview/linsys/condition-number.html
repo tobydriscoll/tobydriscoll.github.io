@@ -1,0 +1,1218 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.8. Conditioning of linear systems &#8212; Fundamentals of Numerical Computation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/proof.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"float": ["\\mathbb{F}"], "real": ["\\mathbb{R}"], "complex": ["\\mathbb{C}"], "nat": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rmn{([^}]*)}{([^}]*)}": ["\\mathbb{R}^{#1 \\times #2}", 2], "dd{([^}]*)}{([^}]*)}": ["\\frac{d #1}{d #2}", 2], "ddd{([^}]*)}{([^}]*)}": ["\\frac{d^2 #1}{d #2^2}", 2], "pp{([^}]*)}{([^}]*)}": ["\\frac{\\partial #1}{\\partial #2}", 2], "ppp{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2^2}", 2], "ppdd{([^}]*)}{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2 \\partial #3}", 3], "norm{([^}]*)}": ["\\| #1 \\|", 1], "twonorm{([^}]*)}": ["\\| #1 \\|_2", 1], "onenorm{([^}]*)}": ["\\| #1 \\|_1", 1], "infnorm{([^}]*)}": ["\\| #1 \\|_\\infty", 1], "anynorm{([^}]*)}{([^}]*)}": ["\\| #1 \\|_#2", 2], "innerprod{([^}]*)}{([^}]*)}": ["\\langle #1,#2 \\rangle", 2], "pr{([^}]*)}": ["^{(#1)}", 1], "kron{([^}]*)}{([^}]*)}": ["#1 \\otimes #2", 2], "eye{([^}]*)}": ["\\mathbf{e}_#1", 1], "meye": ["\\mathbf{I}"], "Qhat": ["\\hat{\\mathbf{Q}}"], "Rhat": ["\\hat{\\mathbf{R}}"], "bfalpha": ["\\mathbf{alpha}"], "bfdelta": ["\\mathbf{delta}"], "bfzero": ["\\boldsymbol{0}"], "macheps": ["\\epsilon_\\text{mach}"], "fl": ["\\operatorname{fl}"], "diag": ["\\operatorname{diag}"], "ign": ["\\operatorname{sign}"], "Re": ["\\operatorname{Re}"], "Im": ["\\operatorname{Im}"], "ee": ["\\times 10^"], "lnorm": ["\\|"], "rnorm": ["\\|"], "floor": ["\\lfloor#1\\rfloor", 1], "cI": ["\\mathcal{I}"], "mtx": ["\\operatorname{mtx}"], "myvec": ["\\operatorname{vec}"], "argmin": ["\\operatorname{argmin}"]}}, "HTML-CSS": {"availableFonts": [], "preferredFont": null, "webfont": "Latin-Modern"}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.9. Exploiting matrix structure" href="structure.html" />
+    <link rel="prev" title="2.7. Vector and matrix norms" href="norms.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Numerical Computation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../frontmatter.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface to the Julia edition
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Main text
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro/overview.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/floating-point.html">
+     1.1. Floating-point numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/conditioning.html">
+     1.2. Problems and conditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/algorithms.html">
+     1.3. Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/stability.html">
+     1.4. Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/next.html">
+     1.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   2. Linear systems of equations
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="polyinterp.html">
+     2.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrices.html">
+     2.2. Computing with matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linear-systems.html">
+     2.3. Linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lu.html">
+     2.4. LU factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="efficiency.html">
+     2.5. Efficiency of matrix computations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pivoting.html">
+     2.6. Row pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="norms.html">
+     2.7. Vector and matrix norms
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.8. Conditioning of linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structure.html">
+     2.9. Exploiting matrix structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="next.html">
+     2.10. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../leastsq/overview.html">
+   3. Overdetermined linear systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/fitting.html">
+     3.1. Fitting functions to data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/normaleqns.html">
+     3.2. The normal equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/qr.html">
+     3.3. The QR factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/house.html">
+     3.4. Computing QR factorizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/next.html">
+     3.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../nonlineqn/overview.html">
+   4. Roots of nonlinear equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/rootproblem.html">
+     4.1. The rootfinding problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/fixed-point.html">
+     4.2. Fixed point iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newton.html">
+     4.3. Newton’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/secant.html">
+     4.4. Interpolation-based methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newtonsys.html">
+     4.5. Newton for nonlinear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/quasinewton.html">
+     4.6. Quasi-Newton methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/nlsq.html">
+     4.7. Nonlinear least squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/next.html">
+     4.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../localapprox/overview.html">
+   5. Piecewise interpolation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/interpolation.html">
+     5.1. The interpolation problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/pwlin.html">
+     5.2. Piecewise linear interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/splines.html">
+     5.3. Cubic splines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/finitediffs.html">
+     5.4. Finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/fd-converge.html">
+     5.5. Convergence of finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/integration.html">
+     5.6. Numerical integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/adaptive.html">
+     5.7. Adaptive integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/next.html">
+     5.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ivp/overview.html">
+   6. Initial-value problems for ODEs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/basics.html">
+     6.1. Basics of IVPs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/euler.html">
+     6.2. Euler’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/systems.html">
+     6.3. IVP systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/rk.html">
+     6.4. Runge–Kutta methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/adaptive.html">
+     6.5. Adaptive Runge–Kutta
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/multistep.html">
+     6.6. Multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/implicit.html">
+     6.7. Implementation of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/zerostability.html">
+     6.8. Zero-stability of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/next.html">
+     6.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../matrixanaly/overview.html">
+   7. Matrix analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/insight.html">
+     7.1. From matrix to insight
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/evd.html">
+     7.2. Eigenvalue decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/svd.html">
+     7.3. Singular value decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/symm-eig.html">
+     7.4. Symmetry and definiteness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/dimreduce.html">
+     7.5. Dimension reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/next.html">
+     7.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../krylov/overview.html">
+   8. Krylov methods in linear algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/structure.html">
+     8.1. Sparsity and structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/power.html">
+     8.2. Power iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/inviter.html">
+     8.3. Inverse iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/subspace.html">
+     8.4. Krylov subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/gmres.html">
+     8.5. GMRES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/minrescg.html">
+     8.6. MINRES and conjugate gradients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/matrixfree.html">
+     8.7. Matrix-free iterations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/precond.html">
+     8.8. Preconditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/next.html">
+     8.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../globalapprox/overview.html">
+   9. Global function approximation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/polynomial.html">
+     9.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/barycentric.html">
+     9.2. The barycentric formula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/stability.html">
+     9.3. Stability of polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/orthogonal.html">
+     9.4. Orthogonal polynomials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/trig.html">
+     9.5. Trigonometric interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/integration.html">
+     9.6. Spectrally accurate integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/improper.html">
+     9.7. Improper integrals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/next.html">
+     9.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../bvp/overview.html">
+   10. Boundary-value problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/tpbvp.html">
+     10.1. Two-point BVP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/shooting.html">
+     10.2. Shooting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/diffmats.html">
+     10.3. Differentiation matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/linear.html">
+     10.4. Collocation for linear problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/nonlinear.html">
+     10.5. Nonlinearity and boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/galerkin.html">
+     10.6. The Galerkin method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/next.html">
+     10.7. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../diffusion/overview.html">
+   11. Diffusion equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/blackscholes.html">
+     11.1. Black–Scholes equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/methodlines.html">
+     11.2. The method of lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/absstab.html">
+     11.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/stiffness.html">
+     11.4. Stiffness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/boundaries.html">
+     11.5. Boundaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/next.html">
+     11.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advection/overview.html">
+   12. Advection equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/traffic.html">
+     12.1. Traffic flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/upwind.html">
+     12.2. Upwinding and stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/absstab.html">
+     12.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/wave.html">
+     12.4. The wave equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/next.html">
+     12.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../twodim/overview.html">
+   13. Two-dimensional problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/tensorprod.html">
+     13.1. Tensor-product discretizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/diffadv.html">
+     13.2. Two-dimensional diffusion and advection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/laplace.html">
+     13.3. Laplace and Poisson equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/nonlinear.html">
+     13.4. Nonlinear elliptic PDEs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/next.html">
+     13.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/linear-algebra.html">
+   Review of linear algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/julia.html">
+   Julia cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../refs.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/linsys/condition-number.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/linsys/condition-number.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tobydriscoll/tobydriscoll.github.io/master?urlpath=tree/linsys/condition-number.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-result">
+   Main result
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#residual-and-backward-error">
+   Residual and backward error
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="conditioning-of-linear-systems">
+<span id="section-linsys-condition-number"></span><h1><span class="section-number">2.8. </span>Conditioning of linear systems<a class="headerlink" href="#conditioning-of-linear-systems" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">We are ready to consider the conditioning of solving the square linear system <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\mathbf{b}\)</span>. In this problem, the data are <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, and the solution is <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>. Both data and result are multidimensional, so we will use norms to measure their magnitudes.</p>
+<p>The motivation for the definition of relative condition number in Chapter 1 was to quantify the response of the result to perturbations of the data. For simplicity, we start by allowing perturbations to <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> only while <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> remains fixed.</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\mathbf{b}\)</span> be perturbed to</p>
+<div class="math notranslate nohighlight">
+\[  \mathbf{A}(\mathbf{x}+\mathbf{h}) = \mathbf{b}+\mathbf{d}.\]</div>
+<p>The condition number should be the relative change in the solution divided by relative change in the data,</p>
+<div class="math notranslate nohighlight">
+\[  \frac{\quad\dfrac{\| \mathbf{h} \| }{\| \mathbf{x} \| }\quad}{\dfrac{\| \mathbf{d} \| }{\| \mathbf{b} \|}} 
+  = \frac{\| \mathbf{h} \|\;\| \mathbf{b} \| }{\| \mathbf{d} \|\; \| \mathbf{x} \| }.\]</div>
+<p>We can bound <span class="math notranslate nohighlight">\(\| \mathbf{h} \|\)</span> in terms of <span class="math notranslate nohighlight">\(\| \mathbf{d} \|\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{split}
+  \mathbf{A}\mathbf{x} +  \mathbf{A} \mathbf{h} &amp;= \mathbf{b} + \mathbf{d} \\
+  \mathbf{A} \mathbf{h} &amp;= \mathbf{d}\\
+  \mathbf{h} &amp;= \mathbf{A}^{-1} \mathbf{d}\\
+  \| \mathbf{h} \| &amp;\le \| \mathbf{A}^{-1}\| \,\| \mathbf{d} \|,
+\end{split}\end{split}\]</div>
+<p>where we have applied <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\mathbf{b}\)</span> and <a class="reference internal" href="norms.html#equation-normineq1">(2.7.6)</a>.
+Since also <span class="math notranslate nohighlight">\(\mathbf{b}=\mathbf{A}\mathbf{x}\)</span> implies <span class="math notranslate nohighlight">\(\| \mathbf{b} \|\le
+\| \mathbf{A} \|\, \| \mathbf{x} \|\)</span>, we derive</p>
+<div class="math notranslate nohighlight">
+\[   \frac{\| \mathbf{h} \|\; \| \mathbf{b} \|}{\| \mathbf{d} \|\; \| \mathbf{x} \|} 
+   \le \frac{\bigl(\| \mathbf{A}^{-1} \|\, \| \mathbf{d} \|\bigr)
+    \bigl(\| \mathbf{A} \|\,\| \mathbf{x} \|\bigr)}{\| \mathbf{d} \|\,\| \mathbf{x} \|} 
+    = \| \mathbf{A}^{-1}\| \, \| \mathbf{A} \|.\]</div>
+<p id="index-1">It is possible to show that this bound is tight, in the sense that the inequalities are in fact equalities for some choices of <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>. This result motivates a new definition.</p>
+<div class="proof proof-type-definition" id="id1">
+<div class="proof-title"> <span class="proof-type">Definition 2.8.1</span>  <span class="proof-title-name">: &nbsp;Matrix condition number</span>  </div><div class="proof-content">
+<p>The <strong>matrix condition number</strong> of an invertible square matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-mxcond">
+<span class="eqno">(2.8.1)<a class="headerlink" href="#equation-mxcond" title="Permalink to this equation">¶</a></span>\[\kappa(\mathbf{A}) = \| \mathbf{A}^{-1}\| \, \| \mathbf{A} \|.\]</div>
+<p>This value depends on the choice of norm; a subscript on <span class="math notranslate nohighlight">\(\kappa\)</span> such as <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(2\)</span>, or <span class="math notranslate nohighlight">\(\infty\)</span> is used if clarification is needed. If <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is singular, we define <span class="math notranslate nohighlight">\(\kappa(\mathbf{A}) = \infty\)</span>.</p>
+</div></div><div class="section" id="main-result">
+<h2>Main result<a class="headerlink" href="#main-result" title="Permalink to this headline">¶</a></h2>
+<p>The matrix condition number <a class="reference internal" href="#equation-mxcond">(2.8.1)</a> is equal to the condition number of solving a linear system of equations. Although we derived this fact above only for perturbations of <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, a similar statement holds when <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is perturbed.</p>
+<p>Using a traditional <span class="math notranslate nohighlight">\(\Delta\)</span> notation for the perturbation in a quantity, we can write the following.</p>
+<div class="proof proof-type-theorem" id="id2">
+<div class="proof-title"> <span class="proof-type">Theorem 2.8.2</span>  <span class="proof-title-name">: &nbsp;Conditioning of linear systems</span>  </div><div class="proof-content">
+<p>If <span class="math notranslate nohighlight">\(\mathbf{A}(\mathbf{x} + \Delta \mathbf{x}) = \mathbf{b} + \Delta \mathbf{b}\)</span>, then</p>
+<div class="math notranslate nohighlight" id="equation-linsyscondb">
+<span class="eqno">(2.8.2)<a class="headerlink" href="#equation-linsyscondb" title="Permalink to this equation">¶</a></span>\[\frac{\| \Delta \mathbf{x} \|}{\| \mathbf{x} \|} \le \kappa(\mathbf{A}) \frac{\| \Delta \mathbf{b} \|}{\| \mathbf{b} \|}.\]</div>
+<p>If <span class="math notranslate nohighlight">\((\mathbf{A}+\Delta \mathbf{A}) (\mathbf{x} + \Delta \mathbf{x}) = \mathbf{b}\)</span>, then</p>
+<div class="math notranslate nohighlight" id="equation-linsysconda">
+<span class="eqno">(2.8.3)<a class="headerlink" href="#equation-linsysconda" title="Permalink to this equation">¶</a></span>\[\frac{\| \Delta \mathbf{x} \|}{\| \mathbf{x} \|} \le \kappa(\mathbf{A}) \frac{\| \Delta \mathbf{A} \|}{\| \mathbf{A} \|},\]</div>
+<p>in the limit <span class="math notranslate nohighlight">\(\| \Delta \mathbf{A} \| \to 0\)</span>.</p>
+</div></div><p>Note that for any induced matrix norm,</p>
+<div class="math notranslate nohighlight">
+\[  1 = \| \mathbf{I} \| = \| \mathbf{A} \mathbf{A}^{-1} \| \le \| \mathbf{A} \|\, \| \mathbf{A}^{-1} \| = \kappa(\mathbf{A}).\]</div>
+<p>A condition number of 1 is the best we can hope for—in that case, the relative perturbation of the solution has the same size as that of the data.  A condition number of size <span class="math notranslate nohighlight">\(10^t\)</span> indicates that in floating-point arithmetic, roughly <span class="math notranslate nohighlight">\(t\)</span> digits are lost (i.e., become incorrect) in computing the solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>. And if <span class="math notranslate nohighlight">\(\kappa(\mathbf{A}) &gt; \epsilon_\text{mach}^{-1}\)</span>, then for computational purposes the matrix is essentially singular.</p>
+<div class="proof proof-type-demo" id="id3">
+<span id="demo-condition-bound"></span><div class="proof-title"> <span class="proof-type">Demo 2.8.3</span>  </div><div class="proof-content">
+</div></div><div class='demo'><div class="sphinx-bs container pb-4 docutils" id="index-2">
+<div class="row docutils">
+<div class="d-flex col-7 left-side docutils">
+<div class="card w-100 border-0 shadow-none docutils">
+<div class="card-body docutils">
+<p class="card-text">Julia has a function <code class="docutils literal notranslate"><span class="pre">cond</span></code> to compute matrix condition numbers. By default, the 2-norm is used. As an example, the family of <em>Hilbert matrices</em> is famously badly conditioned. Here is the <span class="math notranslate nohighlight">\(6\times 6\)</span>  case.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-5 right-side docutils">
+<div class="card w-100 shadow-none comment docutils">
+<div class="card-body docutils">
+<p class="card-text">Type <code class="docutils literal notranslate"><span class="pre">\kappa</span></code> followed by <kbd>Tab</kbd> to get the Greek letter <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">6</span><span class="p">,</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">6</span> <span class="p">]</span>
+<span class="n">κ</span> <span class="o">=</span> <span class="n">cond</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.109816296610315e7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Because <span class="math notranslate nohighlight">\(\kappa\approx 10^8\)</span>, it’s possible to lose nearly 8 digits of accuracy in the process of passing from <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> to <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>. That fact is independent of the algorithm; it’s inevitable once the data are expressed in finite precision.</p>
+<p>Let’s engineer a linear system problem to observe the effect of a perturbation. We will make sure we know the exact answer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">6</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6-element Vector{Float64}:
+ 4.407142857142857
+ 3.564285714285714
+ 3.013095238095238
+ 2.6174603174603175
+ 2.317279942279942
+ 2.0807359307359308
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we perturb the system matrix and vector randomly by <span class="math notranslate nohighlight">\(10^{-10}\)</span> in norm.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">ΔA</span> <span class="o">=</span> <span class="n">randn</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">A</span><span class="p">));</span>  <span class="n">ΔA</span> <span class="o">=</span> <span class="mf">1e-10</span><span class="o">*</span><span class="p">(</span><span class="n">ΔA</span><span class="o">/</span><span class="n">opnorm</span><span class="p">(</span><span class="n">ΔA</span><span class="p">));</span>
+<span class="n">Δb</span> <span class="o">=</span> <span class="n">randn</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">b</span><span class="p">));</span>  <span class="n">Δb</span> <span class="o">=</span> <span class="mf">1e-10</span><span class="o">*</span><span class="n">normalize</span><span class="p">(</span><span class="n">Δb</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We solve the perturbed problem using pivoted LU and see how the solution was changed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">new_x</span> <span class="o">=</span> <span class="p">((</span><span class="n">A</span><span class="o">+</span><span class="n">ΔA</span><span class="p">)</span> <span class="o">\</span> <span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">Δb</span><span class="p">))</span>
+<span class="n">Δx</span> <span class="o">=</span> <span class="n">new_x</span> <span class="o">-</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6-element Vector{Float64}:
+  3.056506313159346e-6
+ -2.5709900620451975e-5
+  3.675077935572091e-5
+  8.064671040663995e-5
+ -0.00020433507859163313
+  0.00011046533141989556
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is the relative error in the solution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">relative_error</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">Δx</span><span class="p">)</span> <span class="o">/</span> <span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>relative_error = norm(Δx) / norm(x) = 2.6202983365958074e-5
+</pre></div>
+</div>
+</div>
+</div>
+<p>And here are upper bounds predicted using the condition number of the original matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Upper bound due to b: </span><span class="si">$</span><span class="p">(</span><span class="n">κ</span><span class="o">*</span><span class="n">norm</span><span class="p">(</span><span class="n">Δb</span><span class="p">)</span><span class="o">/</span><span class="n">norm</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Upper bound due to A: </span><span class="si">$</span><span class="p">(</span><span class="n">κ</span><span class="o">*</span><span class="n">opnorm</span><span class="p">(</span><span class="n">ΔA</span><span class="p">)</span><span class="o">/</span><span class="n">opnorm</span><span class="p">(</span><span class="n">A</span><span class="p">))</span><span class="s">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Upper bound due to b: 0.0006723667712613618
+Upper bound due to A: 0.004566989872745154
+</pre></div>
+</div>
+</div>
+</div>
+<p>Even if we didn’t make any manual perturbations to the data, machine roundoff does so at the relative level of <span class="math notranslate nohighlight">\(\macheps\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Δx</span> <span class="o">=</span> <span class="n">A</span><span class="o">\</span><span class="n">b</span> <span class="o">-</span> <span class="n">x</span>
+<span class="nd">@show</span> <span class="n">relative_error</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">Δx</span><span class="p">)</span> <span class="o">/</span> <span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="nd">@show</span> <span class="n">rounding_bound</span> <span class="o">=</span> <span class="n">κ</span><span class="o">*</span><span class="n">eps</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>relative_error = norm(Δx) / norm(x) = 1.2278255878021855e-9
+rounding_bound = κ * eps() = 1.134607140820324e-8
+</pre></div>
+</div>
+</div>
+</div>
+<p>Larger Hilbert matrices are even more poorly conditioned:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">:</span><span class="mi">14</span><span class="p">,</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="o">:</span><span class="mi">14</span> <span class="p">];</span>
+<span class="n">κ</span> <span class="o">=</span> <span class="n">cond</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.870898056087325e17
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that <span class="math notranslate nohighlight">\(\kappa\)</span> exceeds <span class="math notranslate nohighlight">\(1/\macheps\)</span>. In principle we therefore might end up with an answer that has relative error greater than 100%.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">rounding_bound</span> <span class="o">=</span> <span class="n">κ</span><span class="o">*</span><span class="n">eps</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>85.95120295689817
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s put that prediction to the test.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">14</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">x</span>  
+<span class="n">Δx</span> <span class="o">=</span> <span class="n">A</span><span class="o">\</span><span class="n">b</span> <span class="o">-</span> <span class="n">x</span>
+<span class="nd">@show</span> <span class="n">relative_error</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">Δx</span><span class="p">)</span> <span class="o">/</span> <span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>relative_error = norm(Δx) / norm(x) = 2.3271868502658917
+</pre></div>
+</div>
+</div>
+</div>
+<p>As anticipated, the solution has zero accurate digits in the 2-norm.</p>
+</div></div>
+<div class="section" id="residual-and-backward-error">
+<h2>Residual and backward error<a class="headerlink" href="#residual-and-backward-error" title="Permalink to this headline">¶</a></h2>
+<p>Suppose that <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\mathbf{b}\)</span> and <span class="math notranslate nohighlight">\(\tilde{\mathbf{x}}\)</span> is a computed estimate of the solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>. The most natural quantity to study is the error, <span class="math notranslate nohighlight">\(\mathbf{x}-\tilde{\mathbf{x}}\)</span>. Normally we can’t compute it because we don’t know the exact solution. However, we can compute something related.</p>
+<div class="proof proof-type-definition" id="id4">
+<span id="index-3"></span><div class="proof-title"> <span class="proof-type">Definition 2.8.4</span>  <span class="proof-title-name">: &nbsp;Residual of a linear system</span>  </div><div class="proof-content">
+<p>For the problem <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\mathbf{b}\)</span>, the <strong>residual</strong> at a solution estimate <span class="math notranslate nohighlight">\(\tilde{\mathbf{x}}\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-residual">
+<span class="eqno">(2.8.4)<a class="headerlink" href="#equation-residual" title="Permalink to this equation">¶</a></span>\[  \mathbf{r} = \mathbf{b} - \mathbf{A}\tilde{\mathbf{x}}.\]</div>
+</div></div><p id="index-4">Obviously, a zero residual means that <span class="math notranslate nohighlight">\(\tilde{\mathbf{x}}=\mathbf{x}\)</span>, and we have the exact solution. What happens more generally? Note that <span class="math notranslate nohighlight">\(\mathbf{A}\tilde{\mathbf{x}}=\mathbf{b}-\mathbf{r}\)</span>. That is, <span class="math notranslate nohighlight">\(\tilde{\mathbf{x}}\)</span> solves the linear system problem for a right-hand side that is changed by <span class="math notranslate nohighlight">\(-\mathbf{r}\)</span>. This is precisely what is meant by backward error.</p>
+<p>Hence residual and backward error are the same thing for a linear system. What is the connection to the (forward) error? We can reconnect with <a class="reference internal" href="#equation-linsyscondb">(2.8.2)</a> by the definition <span class="math notranslate nohighlight">\(\mathbf{h} = \tilde{\mathbf{x}}-\mathbf{x}\)</span>, in which case</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{d} = \mathbf{A}(\mathbf{x}+\mathbf{h})-\mathbf{b}=\mathbf{A}\mathbf{h} = -\mathbf{r}.\]</div>
+<p>Thus <a class="reference internal" href="#equation-linsyscondb">(2.8.2)</a> is equivalent to</p>
+<div class="math notranslate nohighlight" id="equation-residualcond">
+<span class="eqno">(2.8.5)<a class="headerlink" href="#equation-residualcond" title="Permalink to this equation">¶</a></span>\[  \frac{\| \mathbf{x}-\tilde{\mathbf{x} \|}}{\| \mathbf{x} \|} \le
+  \kappa(\mathbf{A}) \frac{\| \mathbf{r} \|}{\| \mathbf{b} \|}.\]</div>
+<p>Equation <a class="reference internal" href="#equation-residualcond">(2.8.5)</a> says that the gap between relative error and the relative residual is a multiplication by the matrix condition number.</p>
+<div class="proof proof-type-observation">
+<div class="proof-title"> <span class="proof-type">Observation </span>  </div><div class="proof-content">
+<p>When solving a linear system, all that can be expected is that the backward error, not the error, is small.</p>
+</div></div></div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>⌨ Refer to <a class="reference internal" href="#demo-condition-bound"><span class="std std-numref">Demo 2.8.3</span></a> for the definition of a Hilbert matrix. Make a table of the values of <span class="math notranslate nohighlight">\(\kappa(\mathbf{H}_n)\)</span> in the 2-norm for <span class="math notranslate nohighlight">\(n=2,3,\ldots,16\)</span>. Speculate as to why the growth of <span class="math notranslate nohighlight">\(\kappa\)</span> appears to slow down at <span class="math notranslate nohighlight">\(n=13\)</span>.</p></li>
+<li><p>⌨ The purpose of this problem is to verify, like in <a class="reference internal" href="#demo-condition-bound"><span class="std std-numref">Demo 2.8.3</span></a>, the error bound</p>
+<div class="math notranslate nohighlight">
+\[\frac{\| \mathbf{x}-\tilde{\mathbf{x} \|}}{\| \mathbf{x} \|} \le \kappa(\mathbf{A})
+\frac{\| \mathbf{h} \|}{\| \mathbf{b} \|}.\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\tilde{\mathbf{x}}\)</span> is a numerical approximation to the exact solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{h}\)</span> is an unknown perturbation caused by machine roundoff. We will assume that <span class="math notranslate nohighlight">\(\| \mathbf{d} \|/\| \mathbf{b} \|\)</span> is roughly <code class="docutils literal notranslate"><span class="pre">eps()</span></code>.</p>
+<p>For each <span class="math notranslate nohighlight">\(n=10,20,\ldots,70\)</span> let <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">matrixdepot(&quot;prolate&quot;,n,0.4)</span></code> and let <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> have components <span class="math notranslate nohighlight">\(x_k=k/n\)</span> for <span class="math notranslate nohighlight">\(k=1,\ldots,n\)</span>. Define <code class="docutils literal notranslate"><span class="pre">b=A*x</span></code> and let <span class="math notranslate nohighlight">\(\tilde{\mathbf{x}}\)</span> be the solution produced numerically by backslash.</p>
+<p>Make a table including columns for <span class="math notranslate nohighlight">\(n\)</span>, the condition number of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>, the observed relative error in <span class="math notranslate nohighlight">\(\tilde{\mathbf{x}}\)</span>, and the right-hand side of the inequality above. You should find that the inequality holds in every case.</p>
+</li>
+<li><p>⌨ <a class="reference internal" href="linear-systems.html#problem-ls-triangillcond"><span class="std std-ref">Exercise 2.3.7</span></a> suggests that the solutions of linear systems</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} = \begin{bmatrix} 1 &amp; -1 &amp; 0 &amp; \alpha-\beta &amp; \beta \\ 0 &amp; 1 &amp; -1 &amp;
+  0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; -1  \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}, \quad
+\mathbf{b} = \begin{bmatrix} \alpha \\ 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}\end{split}\]</div>
+<p>become less accurate as <span class="math notranslate nohighlight">\(\beta\)</span> increases. Using <span class="math notranslate nohighlight">\(\alpha=0.1\)</span> and <span class="math notranslate nohighlight">\(\beta=10,100,\ldots,10^{12}\)</span>, make a table with columns for <span class="math notranslate nohighlight">\(\beta\)</span>, <span class="math notranslate nohighlight">\(|x_1-1|\)</span>, and the condition number of the matrix.</p>
+</li>
+<li><p>⌨ Let <span class="math notranslate nohighlight">\(\mathbf{A}_n\)</span> denote the <span class="math notranslate nohighlight">\((n+1)\times(n+1)\)</span> version of the Vandermonde matrix in equation <a class="reference internal" href="polyinterp.html#equation-vandersystem">(2.1.2)</a> based on the equally spaced interpolation nodes <span class="math notranslate nohighlight">\(t_i=i/n\)</span> for <span class="math notranslate nohighlight">\(i=0,\ldots,n\)</span>. Using the 1-norm, graph <span class="math notranslate nohighlight">\(\kappa(\mathbf{A}_n)\)</span> as a function of <span class="math notranslate nohighlight">\(n\)</span> for <span class="math notranslate nohighlight">\(n=4,5,6,\ldots,20\)</span>, using a log scale on the <span class="math notranslate nohighlight">\(y\)</span>-axis. (The graph is nearly a straight line.)</p></li>
+<li><p>⌨ The matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> in <a class="reference internal" href="pivoting.html#equation-plu-stab-a">(2.6.1)</a> has unpivoted LU factors given in <a class="reference internal" href="pivoting.html#equation-plu-stab-lu">(2.6.2)</a> as a function of parameter <span class="math notranslate nohighlight">\(\epsilon\)</span>. For <span class="math notranslate nohighlight">\(\epsilon = 10^{-2},10^{-4},\ldots,10^{-10}\)</span>, make a table with columns for <span class="math notranslate nohighlight">\(\epsilon\)</span>, <span class="math notranslate nohighlight">\(\kappa(\mathbf{A})\)</span>, <span class="math notranslate nohighlight">\(\kappa(\mathbf{L})\)</span>, and <span class="math notranslate nohighlight">\(\kappa(\mathbf{U})\)</span>. (This shows that solution via unpivoted LU factorization is arbitrarily unstable.)</p></li>
+<li><p>✍  Define <span class="math notranslate nohighlight">\(\mathbf{A}_n\)</span> as the <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(\displaystyle\begin{bmatrix}
+   1 &amp; -2 &amp; &amp; &amp;\\
+   &amp; 1 &amp; -2 &amp; &amp; \\
+   &amp; &amp; \ddots &amp; \ddots &amp; \\
+   &amp; &amp; &amp; 1 &amp; -2 \\
+   &amp; &amp; &amp; &amp; 1
+ \end{bmatrix}.\)</span></p>
+<p><strong>(a)</strong> Write out <span class="math notranslate nohighlight">\(\mathbf{A}_2^{-1}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{A}_3^{-1}\)</span>.</p>
+<p><strong>(b)</strong> Write out <span class="math notranslate nohighlight">\(\mathbf{A}_n^{-1}\)</span> in the general case <span class="math notranslate nohighlight">\(n&gt;1\)</span>. (If necessary, look at a few more cases in Julia until you are certain of the pattern.) Make a clear argument why it is correct.</p>
+<p><strong>(c)</strong> Using the <span class="math notranslate nohighlight">\(\infty\)</span>-norm, find <span class="math notranslate nohighlight">\(\kappa(\mathbf{A}_n)\)</span>.</p>
+</li>
+<li><p>✍ <strong>(a)</strong> Prove that for <span class="math notranslate nohighlight">\(n\times n\)</span> nonsingular matrices <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>, <span class="math notranslate nohighlight">\(\kappa(\mathbf{A}\mathbf{B})\le \kappa(\mathbf{A})\kappa(\mathbf{B})\)</span>.</p>
+<p><strong>(b)</strong> Show by means of an example that the result of part (a) cannot be an equality in general.</p>
+</li>
+<li><p>✍  Let <span class="math notranslate nohighlight">\(\mathbf{D}\)</span> be a diagonal <span class="math notranslate nohighlight">\(n\times n\)</span> matrix, not necessarily invertible. Prove that in the 1-norm,</p>
+<div class="math notranslate nohighlight">
+\[\kappa(\mathbf{D}) = \frac{\max_i |D_{ii}|}{\min_i |D_{ii}|}.\]</div>
+<p>(Hint: See <a class="reference internal" href="norms.html#problem-norms-diagnorm"><span class="std std-ref">Exercise 2.7.10</span></a>.)</p>
+</li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-fast"
+        },
+        kernelOptions: {
+            kernelName: "julia-fast",
+            path: "./linsys"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-fast'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="norms.html" title="previous page"><span class="section-number">2.7. </span>Vector and matrix norms</a>
+    <a class='right-next' id="next-link" href="structure.html" title="next page"><span class="section-number">2.9. </span>Exploiting matrix structure</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tobin A. Driscoll and Richard J. Braun<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

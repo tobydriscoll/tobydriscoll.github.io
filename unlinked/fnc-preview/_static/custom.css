@@ -1,0 +1,107 @@
+
+:root {
+	--ud-blue: rgb(0,83,159);
+	--ud-yellow: rgb(255,210,0);
+	--ud-darkblue: rgb(0,60,113);
+	--ud-gray: rgb(189,189,189);
+	--ud-black: rgb(0,0,0);
+	--ud-tan: rgb(238,232,197);
+	--ud-lightblue: rgb(0,160,223);
+	--ud-white: rgb(255,255,255);
+  
+	--light: #e2e3f0;
+	--neutral: #7377a5;
+	--dark: #1d1f3d;
+	--highlight: #29648a;
+  }
+
+/* Fix bug in pygments making things strings after transpose */
+.highlight .s1 { color: black; }
+
+h1.site-logo#site-title {
+	font-size: 1em;
+	font-family: Lithos Pro, sans-serif;
+}
+
+pre {
+	font-family: "Roboto Mono","Monaco","Consolas","Inconsolata","Noto Mono","Liberation Mono","Andale Mono",monospace !important;
+	font-size: 95% !important;
+}
+
+/* .demo a {
+	background-color: rgb(253, 253, 186);
+	padding: 0.5ex 1ex;
+} */
+
+.math.notranslate.nohighlight {
+	font-size: 95%;
+}
+
+.MathJax_Display {
+	overflow-y: hidden;
+	transform: translate(0,-0.5em);
+	/* width: 90% !important; */
+}
+
+div.math span.eqno {
+	font-size: 100% !important;
+	transform: translate(0,100%) translate(0,-0.5em);
+}
+
+.table {
+	margin-left:auto; 
+	margin-right: auto;
+	width: fit-content;
+}
+
+.table tbody {
+	background-color: rgb(240, 240, 240	);
+}
+
+.table thead {
+	background-color: rgb(85,85,85);
+}
+
+.table th p {
+	margin-bottom: 0ex;
+	color:rgb(255, 255, 225);
+}
+
+.table td p {
+	margin-bottom: 0ex;
+}
+
+.std-term {
+	font-weight: bolder;
+}
+
+#exercises.section li {
+	padding-bottom: 1rem;
+}
+
+/* Container for side-by-side cards */
+.sphinx-bs.container.pb-4.docutils {
+	margin: 0;
+}
+
+div.card.comment {
+	font-size: small;
+}
+
+div.left-side {
+	padding-left: 0;
+}
+
+div.left-side .card-body {
+	padding: 0;
+}
+
+div.right-side {
+	padding-right: 0;
+}
+
+div.right-side .card-body {
+	/* padding-right: 0; */
+	padding-top: 0;
+	padding-bottom: 0;
+}

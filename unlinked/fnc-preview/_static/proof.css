@@ -1,0 +1,182 @@
+:root {
+  --note-title-color: rgba(68,138,255,.1);
+  --note-border-color: #007bff;
+  --warning-title-color: rgba(220,53,69,.1);
+  --warning-border-color: #dc3545;
+  --hint-title-color: rgba(255,193,7,.2);
+  --hint-border-color: #ffc107;
+  --caution-title-color: rgba(253,126,20,.1);
+  --caution-border-color: #fd7e14;
+  --grey-title-color: rgba(204,204,204,.2);
+  --grey-border-color: #ccc;
+}
+
+/* Common settings */
+
+.proof {
+	margin: 1.5625em auto;
+	padding: 0 0.6rem 0.8rem !important;
+	overflow: hidden;
+	page-break-inside: avoid;
+	border-left: 0.2rem solid #007bff;
+	border-radius: 0.1rem;
+	box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05), 0 0 0.05rem rgba(0, 0, 0, 0.1);
+	transition: color 0.25s, background-color 0.25s, border-color 0.25s;
+}
+
+.proof > .proof-content {
+	padding: 0.6rem 1rem;
+}
+.proof :last-child {
+	margin-bottom: 0;
+}
+
+.proof .proof-title~* {
+	margin-top:0.4em;
+}
+
+/* .proof .proof-title+* {
+	padding:0 1.4rem;
+} */
+
+.proof .proof-title {
+	position:relative;
+	margin:0 -.6rem!important;
+	padding:.6rem .4rem .6rem 1.6rem;
+	font-weight:700;
+	background-color:rgba(68,138,255,.1)
+}
+
+/* Remove content box from all */
+.proof p.admonition-title::before {
+	content: none;
+}
+	
+/* Demos: Kludge with proof-demo on top of a div class called demo. */
+.proof-type-demo {
+	margin-bottom: 0ex !important;
+	padding-bottom: 0ex !important;
+	border-left: 0.2rem solid var(--hint-border-color);
+	box-shadow: none;
+}
+
+.proof-type-demo > .proof-title {
+	/* padding-bottom: 0; */
+	border-color: var(--hint-border-color);
+}
+
+.proof-type-demo > .proof-content {
+	margin-bottom: 0 !important;
+	padding: 0 !important;
+	border-color: 0.2rem solid var(--hint-border-color);
+	box-shadow: none;
+}
+
+div.demo {
+	box-sizing: border-box;
+	margin: 0 auto 1.5625em;
+	padding: 0.6rem 1rem 0.6rem 1.6rem;
+	overflow: hidden;
+	page-break-inside: avoid;
+	border-left: 0.2rem solid var(--hint-border-color);
+	border-radius: 0.1rem;
+	box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05), 0 0 0.05rem rgba(0, 0, 0, 0.1);
+	transition: color 0.25s, background-color 0.25s, border-color 0.25s;
+}
+
+div.demo p {
+	margin-left: 0;
+}
+
+div.demo .cell {
+	margin-left: 0;
+}
+
+div.demo .toggle-button {
+	right: -1em;
+}
+/* Proof */
+.proof-type-proof {
+padding: .4rem .6rem .4rem 2rem !important;
+border-color: var(--grey-border-color);
+background-color: none;
+}
+
+.proof-type-proof .proof-title{
+	display: inline;
+  background-color: transparent;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* 
+.proof-type-proof > .proof-title:after {
+  content: " ▼";
+}
+
+.proof-type-proof > .proof-title.open:after {
+  content: " ▲";
+} */
+
+/* Theorem */
+.proof-type-theorem {
+	border-color: var(--note-border-color);
+	background-color: var(--note-title-color);
+}
+
+.proof-type-theorem > .proof-title {
+	background-color: var(--note-title-color);
+}
+
+/* Example */
+.proof-type-example {
+	border-color: var(--hint-border-color);
+  background-color: none;
+}
+
+.proof-type-example > .proof-title {
+	background-color: transparent;
+}
+
+/* Demo */
+.proof-type-demo {
+	border-color: var(--hint-border-color);
+  background-color: none;
+}
+
+.proof-type-demo > .proof-title {
+	background-color: transparent;
+}
+
+/* Function */
+.proof-type-function .proof-title {
+	border-color: rgb(252, 130, 90);
+  background-color: rgb(255, 210, 195);
+}
+  
+.proof-type-function .proof-title-name {
+  font-family: "Roboto Mono","Monaco","Consolas","Inconsolata","Noto Mono","Liberation Mono","Andale Mono",monospace;
+}
+
+.proof-type-function {
+	border-color: rgb(252, 130, 90);
+}
+
+.proof-type-function pre {
+  margin: 0rem;
+}
+
+
+/* .proof-type-function .proof-content > p {
+  margin: 0rem;
+  padding-top: 1ex;
+  padding-left: 1rem;
+} */
+  
+/* Content
+.proof-content {
+  border: 1px solid #9fb1b4;
+  background-color: #F5F7F9;
+  padding: 0em 1em;
+} */
+

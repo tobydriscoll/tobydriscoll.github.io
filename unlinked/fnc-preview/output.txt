@@ -1,0 +1,20 @@
+leastsq/fitting.md:359: [redirected permanently] http://boxofficemojo.com to https://www.boxofficemojo.com/
+refs.md:1: [redirected permanently] https://doi.org/10.1007/978-1-4615-5359-5_58 to https://link.springer.com/chapter/10.1007/978-1-4615-5359-5_58
+refs.md:1: [redirected with Found] https://doi.org/10.1080/10586458.2005.10128931 to https://www.tandfonline.com/doi/abs/10.1080/10586458.2005.10128931
+refs.md:1: [redirected with Found] https://doi.org/10.1007/s002110050058 to https://link.springer.com/article/10.1007/s002110050058
+refs.md:1: [redirected with Found] https://doi.org/10.1007/BF00609587 to https://link.springer.com/article/10.1007/BF00609587
+refs.md:1: [redirected with Found] https://doi.org/10.1007/s10665-005-9013-2 to https://link.springer.com/article/10.1007/s10665-005-9013-2
+refs.md:1: [redirected with Found] https://doi.org/10.1090/qam/10666 to https://www.ams.org/journals/qam/1944-02-02/S0033-569X-1944-10666-0/
+refs.md:1: [redirected with Found] https://doi.org/10.1098/rspa.1927.0118 to https://royalsocietypublishing.org/doi/10.1098/rspa.1927.0118
+refs.md:1: [redirected with Found] https://doi.org/10.1090/S0025-5718-1965-0178586-1 to https://www.ams.org/journals/mcom/1965-19-090/S0025-5718-1965-0178586-1/home.html
+refs.md:1: [redirected with Found] https://doi.org/10.1137/0146047 to https://epubs.siam.org/doi/10.1137/0146047
+refs.md:1: [redirected with Found] https://doi.org/10.1137/0111030 to https://epubs.siam.org/doi/10.1137/0111030
+refs.md:1: [redirected with Found] https://doi.org/10.1137/060659831 to https://epubs.siam.org/doi/10.1137/060659831
+refs.md:1: [redirected with Found] https://doi.org/10.1214/ss/1177009871 to https://projecteuclid.org/journals/statistical-science/volume-10/issue-4/A-Conversation-with-Donald-Marquardt/10.1214/ss/1177009871.full
+refs.md:1: [redirected with Found] https://doi.org/10.2977/prims/1195192451 to https://www.ems-ph.org/journals/show_abstract.php?issn=0034-5318&vol=9&iss=3&rank=12
+refs.md:1: [redirected with Found] https://doi.org/10.3109/02713683.2013.822896 to https://www.tandfonline.com/doi/full/10.3109/02713683.2013.822896
+refs.md:1: [redirected with Found] https://doi.org/10.6028/jres.049.044 to https://nvlpubs.nist.gov/nistpubs/jres/049/jresv49n6p409_A1b.pdf
+refs.md:1: [redirected with Found] https://doi.org/10.1137/1031003 to https://epubs.siam.org/doi/10.1137/1031003
+refs.md:1: [redirected with Found] https://doi.org/10.1137/1012041 to https://epubs.siam.org/doi/10.1137/1012041
+refs.md:1: [redirected with Found] https://doi.org/10.1137/140983434 to https://epubs.siam.org/doi/10.1137/140983434
+refs.md:1: [redirected with Found] https://doi.org/10.1137/S1064827594276424 to https://epubs.siam.org/doi/10.1137/S1064827594276424

@@ -1,0 +1,1148 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glossary &#8212; Fundamentals of Numerical Computation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/proof.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"float": ["\\mathbb{F}"], "real": ["\\mathbb{R}"], "complex": ["\\mathbb{C}"], "nat": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rmn{([^}]*)}{([^}]*)}": ["\\mathbb{R}^{#1 \\times #2}", 2], "dd{([^}]*)}{([^}]*)}": ["\\frac{d #1}{d #2}", 2], "ddd{([^}]*)}{([^}]*)}": ["\\frac{d^2 #1}{d #2^2}", 2], "pp{([^}]*)}{([^}]*)}": ["\\frac{\\partial #1}{\\partial #2}", 2], "ppp{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2^2}", 2], "ppdd{([^}]*)}{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2 \\partial #3}", 3], "norm{([^}]*)}": ["\\| #1 \\|", 1], "twonorm{([^}]*)}": ["\\| #1 \\|_2", 1], "onenorm{([^}]*)}": ["\\| #1 \\|_1", 1], "infnorm{([^}]*)}": ["\\| #1 \\|_\\infty", 1], "anynorm{([^}]*)}{([^}]*)}": ["\\| #1 \\|_#2", 2], "innerprod{([^}]*)}{([^}]*)}": ["\\langle #1,#2 \\rangle", 2], "pr{([^}]*)}": ["^{(#1)}", 1], "kron{([^}]*)}{([^}]*)}": ["#1 \\otimes #2", 2], "eye{([^}]*)}": ["\\mathbf{e}_#1", 1], "meye": ["\\mathbf{I}"], "Qhat": ["\\hat{\\mathbf{Q}}"], "Rhat": ["\\hat{\\mathbf{R}}"], "bfalpha": ["\\mathbf{alpha}"], "bfdelta": ["\\mathbf{delta}"], "bfzero": ["\\boldsymbol{0}"], "macheps": ["\\epsilon_\\text{mach}"], "fl": ["\\operatorname{fl}"], "diag": ["\\operatorname{diag}"], "ign": ["\\operatorname{sign}"], "Re": ["\\operatorname{Re}"], "Im": ["\\operatorname{Im}"], "ee": ["\\times 10^"], "lnorm": ["\\|"], "rnorm": ["\\|"], "floor": ["\\lfloor#1\\rfloor", 1], "cI": ["\\mathcal{I}"], "mtx": ["\\operatorname{mtx}"], "myvec": ["\\operatorname{vec}"], "argmin": ["\\operatorname{argmin}"]}}, "HTML-CSS": {"availableFonts": [], "preferredFont": null, "webfont": "Latin-Modern"}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Julia cheatsheet" href="julia.html" />
+    <link rel="prev" title="Review of linear algebra" href="linear-algebra.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Numerical Computation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../frontmatter.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface to the Julia edition
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Main text
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro/overview.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/floating-point.html">
+     1.1. Floating-point numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/conditioning.html">
+     1.2. Problems and conditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/algorithms.html">
+     1.3. Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/stability.html">
+     1.4. Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/next.html">
+     1.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../linsys/overview.html">
+   2. Linear systems of equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/polyinterp.html">
+     2.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/matrices.html">
+     2.2. Computing with matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/linear-systems.html">
+     2.3. Linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/lu.html">
+     2.4. LU factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/efficiency.html">
+     2.5. Efficiency of matrix computations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/pivoting.html">
+     2.6. Row pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/norms.html">
+     2.7. Vector and matrix norms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/condition-number.html">
+     2.8. Conditioning of linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/structure.html">
+     2.9. Exploiting matrix structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/next.html">
+     2.10. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../leastsq/overview.html">
+   3. Overdetermined linear systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/fitting.html">
+     3.1. Fitting functions to data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/normaleqns.html">
+     3.2. The normal equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/qr.html">
+     3.3. The QR factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/house.html">
+     3.4. Computing QR factorizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/next.html">
+     3.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../nonlineqn/overview.html">
+   4. Roots of nonlinear equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/rootproblem.html">
+     4.1. The rootfinding problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/fixed-point.html">
+     4.2. Fixed point iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newton.html">
+     4.3. Newton’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/secant.html">
+     4.4. Interpolation-based methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newtonsys.html">
+     4.5. Newton for nonlinear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/quasinewton.html">
+     4.6. Quasi-Newton methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/nlsq.html">
+     4.7. Nonlinear least squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/next.html">
+     4.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../localapprox/overview.html">
+   5. Piecewise interpolation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/interpolation.html">
+     5.1. The interpolation problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/pwlin.html">
+     5.2. Piecewise linear interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/splines.html">
+     5.3. Cubic splines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/finitediffs.html">
+     5.4. Finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/fd-converge.html">
+     5.5. Convergence of finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/integration.html">
+     5.6. Numerical integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/adaptive.html">
+     5.7. Adaptive integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/next.html">
+     5.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ivp/overview.html">
+   6. Initial-value problems for ODEs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/basics.html">
+     6.1. Basics of IVPs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/euler.html">
+     6.2. Euler’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/systems.html">
+     6.3. IVP systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/rk.html">
+     6.4. Runge–Kutta methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/adaptive.html">
+     6.5. Adaptive Runge–Kutta
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/multistep.html">
+     6.6. Multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/implicit.html">
+     6.7. Implementation of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/zerostability.html">
+     6.8. Zero-stability of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/next.html">
+     6.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../matrixanaly/overview.html">
+   7. Matrix analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/insight.html">
+     7.1. From matrix to insight
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/evd.html">
+     7.2. Eigenvalue decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/svd.html">
+     7.3. Singular value decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/symm-eig.html">
+     7.4. Symmetry and definiteness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/dimreduce.html">
+     7.5. Dimension reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/next.html">
+     7.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../krylov/overview.html">
+   8. Krylov methods in linear algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/structure.html">
+     8.1. Sparsity and structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/power.html">
+     8.2. Power iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/inviter.html">
+     8.3. Inverse iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/subspace.html">
+     8.4. Krylov subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/gmres.html">
+     8.5. GMRES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/minrescg.html">
+     8.6. MINRES and conjugate gradients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/matrixfree.html">
+     8.7. Matrix-free iterations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/precond.html">
+     8.8. Preconditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/next.html">
+     8.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../globalapprox/overview.html">
+   9. Global function approximation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/polynomial.html">
+     9.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/barycentric.html">
+     9.2. The barycentric formula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/stability.html">
+     9.3. Stability of polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/orthogonal.html">
+     9.4. Orthogonal polynomials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/trig.html">
+     9.5. Trigonometric interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/integration.html">
+     9.6. Spectrally accurate integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/improper.html">
+     9.7. Improper integrals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/next.html">
+     9.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../bvp/overview.html">
+   10. Boundary-value problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/tpbvp.html">
+     10.1. Two-point BVP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/shooting.html">
+     10.2. Shooting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/diffmats.html">
+     10.3. Differentiation matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/linear.html">
+     10.4. Collocation for linear problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/nonlinear.html">
+     10.5. Nonlinearity and boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/galerkin.html">
+     10.6. The Galerkin method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/next.html">
+     10.7. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../diffusion/overview.html">
+   11. Diffusion equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/blackscholes.html">
+     11.1. Black–Scholes equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/methodlines.html">
+     11.2. The method of lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/absstab.html">
+     11.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/stiffness.html">
+     11.4. Stiffness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/boundaries.html">
+     11.5. Boundaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/next.html">
+     11.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advection/overview.html">
+   12. Advection equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/traffic.html">
+     12.1. Traffic flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/upwind.html">
+     12.2. Upwinding and stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/absstab.html">
+     12.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/wave.html">
+     12.4. The wave equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/next.html">
+     12.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../twodim/overview.html">
+   13. Two-dimensional problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/tensorprod.html">
+     13.1. Tensor-product discretizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/diffadv.html">
+     13.2. Two-dimensional diffusion and advection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/laplace.html">
+     13.3. Laplace and Poisson equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/nonlinear.html">
+     13.4. Nonlinear elliptic PDEs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/next.html">
+     13.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="linear-algebra.html">
+   Review of linear algebra
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="julia.html">
+   Julia cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../refs.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/appendix/glossary.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<p><strong>adjacency matrix</strong>, <a class="reference internal" href="../matrixanaly/insight.html#section-matrixanaly-insight"><span class="std std-numref">Section 7.1</span></a><br>
+Matrix whose nonzero entries show the links between nodes in a graph.</p>
+<p><strong>adjoint</strong>, <a class="reference internal" href="../linsys/matrices.html#section-linsys-matrices"><span class="std std-numref">Section 2.2</span></a><br>
+Conjugate transpose of a complex matrix.</p>
+<p><strong>advection equation</strong>, <a class="reference internal" href="../advection/traffic.html#section-advection-traffic"><span class="std std-numref">Section 12.1</span></a></br>
+Canonical PDE of hyperbolic type, representing transport phenomena.</p>
+<p><strong>algorithm</strong>, <a class="reference internal" href="../intro/algorithms.html#section-intro-algorithms"><span class="std std-numref">Section 1.3</span></a></br>
+Set of instructions for transforming data into a result.</p>
+<p><strong>Arnoldi iteration</strong>, <a class="reference internal" href="../krylov/subspace.html#section-krylov-subspace"><span class="std std-numref">Section 8.4</span></a></br>
+Stable algorithm for finding orthonormal bases of nested Krylov subspaces.</p>
+<p><strong>asymptotic</strong>, <a class="reference internal" href="../linsys/efficiency.html#section-linsys-efficiency"><span class="std std-numref">Section 2.5</span></a></br>
+Relationship indicating functions have the same leading behavior in some limit.</p>
+<p><strong>backward error</strong>, <a class="reference internal" href="../intro/stability.html#section-intro-stability"><span class="std std-numref">Section 1.4</span></a></br>
+Change in the input required to produce the result found by an inexact algorithm.</p>
+<p><strong>backward substitution</strong>, <a class="reference internal" href="../linsys/linear-systems.html#section-linsys-linear-systems"><span class="std std-numref">Section 2.3</span></a></br>
+Systematic method for solving a linear system with an upper triangular matrix.</p>
+<p><strong>bandwidth</strong>, <a class="reference internal" href="../linsys/structure.html#section-linsys-structure"><span class="std std-numref">Section 2.9</span></a></br>
+The number of diagonals around the main diagonal that have nonzero elements.</p>
+<p><strong>barycentric formula</strong>, <a class="reference internal" href="../globalapprox/barycentric.html#section-globalapprox-barycentric"><span class="std std-numref">Section 9.2</span></a></br>
+Computationally useful expression for the interpolating polynomial as a ratio of rational terms.</p>
+<p><strong>big-O</strong>, <a class="reference internal" href="../linsys/efficiency.html#section-linsys-efficiency"><span class="std std-numref">Section 2.5</span></a></br>
+Relationship indicating that one function is bounded above by a multiple of another in some limit.</p>
+<p><strong>boundary-value problem</strong>, <a class="reference internal" href="../bvp/tpbvp.html#section-bvp-tpbvp"><span class="std std-numref">Section 10.1</span></a></br>
+A differential equation with which partial information about the solution is given at multiple points on the boundary of the domain</p>
+<p><strong>cardinal function</strong>, <a class="reference internal" href="../localapprox/interpolation.html#section-localapprox-interpolation"><span class="std std-numref">Section 5.1</span></a></br>
+Interpolating function that is one at one node and zero at all the others.</p>
+<p><strong>Cholesky factorization</strong>, <a class="reference internal" href="../linsys/structure.html#section-linsys-structure"><span class="std std-numref">Section 2.9</span></a></br>
+Symmetrized version of LU factorization for SPD matrices.</p>
+<p><strong>collocation</strong>, <a class="reference internal" href="../bvp/linear.html#section-bvp-linear"><span class="std std-numref">Section 10.4</span></a></br>
+Solution of a differential equation by imposing it approximately at a set of nodes</p>
+<p><strong>condition number</strong>, <a class="reference internal" href="../intro/conditioning.html#section-intro-conditioning"><span class="std std-numref">Section 1.2</span></a></br>
+Ratio of the size of change in the output of a function to the size of change in the infinitesimal input that produced it.</p>
+<p><strong>cubic spline</strong>, <a class="reference internal" href="../localapprox/splines.html#section-localapprox-splines"><span class="std std-numref">Section 5.3</span></a></br>
+Piecewise cubic function with two globally continuous derivatives, most often used for interpolation or approximation.</p>
+<p><strong>diagonalizable</strong>, <a class="reference internal" href="../matrixanaly/evd.html#section-matrixanaly-evd"><span class="std std-numref">Section 7.2</span></a></br>
+Matrix that admits an eigenvalue decomposition. Also known as nondefective.</p>
+<p><strong>differentiation matrix</strong>, <a class="reference internal" href="../bvp/diffmats.html#section-bvp-diffmats"><span class="std std-numref">Section 10.3</span></a></br>
+Matrix mapping a vector of function values to a vector of approximate derivative values.</p>
+<p><strong>Dirichlet condition</strong>, <a class="reference internal" href="../bvp/tpbvp.html#section-bvp-tpbvp"><span class="std std-numref">Section 10.1</span></a></br>
+Boundary condition specifying the value of the solution</p>
+<p><strong>dominant eigenvalue</strong>, <a class="reference internal" href="../krylov/power.html#section-krylov-power"><span class="std std-numref">Section 8.2</span></a></br>
+Eigenvalue with the largest modulus (absolute value, in the real case).</p>
+<p><strong>double precision</strong>, <a class="reference internal" href="../intro/floating-point.html#section-intro-floating-point"><span class="std std-numref">Section 1.1</span></a></br>
+Typical standard in floating-point representation, using 64 bits to achieve about 16 decimal significant digits of precision.</p>
+<p><strong>eigenvalue</strong>, <a class="reference internal" href="../matrixanaly/evd.html#section-matrixanaly-evd"><span class="std std-numref">Section 7.2</span></a></br>
+Scalar <span class="math notranslate nohighlight">\(\lambda\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x} = \lambda \mathbf{x}\)</span> for a square matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> and nonzero vector <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>.</p>
+<p><strong>eigenvalue decomposition (EVD)</strong>, <a class="reference internal" href="../matrixanaly/evd.html#section-matrixanaly-evd"><span class="std std-numref">Section 7.2</span></a></br>
+Expression of a square matrix as the product of eigenvector and diagonal eigenvalue matrices.</p>
+<p><strong>eigenvector</strong>, <a class="reference internal" href="../matrixanaly/evd.html#section-matrixanaly-evd"><span class="std std-numref">Section 7.2</span></a></br>
+Vector for which the action of a matrix is effectively one-dimensional.</p>
+<p><strong>Euler’s method</strong>, <a class="reference internal" href="../ivp/euler.html#section-ivp-euler"><span class="std std-numref">Section 6.2</span></a></br>
+Prototype of all IVP solution methods, obtained by assuming constant derivatives for the solution over short time intervals.</p>
+<p><strong>evolutionary PDE</strong>, <a class="reference internal" href="../diffusion/blackscholes.html#section-diffusion-blackscholes"><span class="std std-numref">Section 11.1</span></a></br>
+A partial differential equation in which one of the independent variables is time or a close analog.</p>
+<p><strong>extrapolation</strong>, <a class="reference internal" href="../localapprox/integration.html#section-localapprox-integration"><span class="std std-numref">Section 5.6</span></a></br>
+Use of multiple discretization values to cancel out leading terms in an error expansion.</p>
+<p><strong>finite difference</strong>, <a class="reference internal" href="../localapprox/finitediffs.html#section-localapprox-finitediffs"><span class="std std-numref">Section 5.4</span></a></br>
+Linear combination of function values that approximates the value of a derivative of the function at a point.</p>
+<p><strong>finite element method (FEM)</strong>, <a class="reference internal" href="../bvp/galerkin.html#section-bvp-galerkin"><span class="std std-numref">Section 10.6</span></a></br>
+Use of piecewise integration to pose a linear system of equations for the approximate solution of a boundary-value problem</p>
+<p><strong>fixed point iteration</strong>, <a class="reference internal" href="../nonlineqn/fixed-point.html#section-nonlineqn-fixed-point"><span class="std std-numref">Section 4.2</span></a></br>
+Repeated application of a function in hopes of converging to a fixed point.</p>
+<p><strong>fixed point problem</strong>, <a class="reference internal" href="../nonlineqn/fixed-point.html#section-nonlineqn-fixed-point"><span class="std std-numref">Section 4.2</span></a></br>
+Finding a value of a given function where the input and output values are the same; equivalent to rootfinding.</p>
+<p><strong>floating-point numbers</strong>, <a class="reference internal" href="../intro/floating-point.html#section-intro-floating-point"><span class="std std-numref">Section 1.1</span></a></br>
+A finite set that substitutes for the real numbers in machine calculations. Denoted by <span class="math notranslate nohighlight">\(\mathbb{F}\)</span>.</p>
+<p><strong>flops</strong>, <a class="reference internal" href="../linsys/efficiency.html#section-linsys-efficiency"><span class="std std-numref">Section 2.5</span></a></br>
+Arithmetic operations on floating-point numbers, often counted as a proxy for computer runtime.</p>
+<p><strong>forward substitution</strong>, <a class="reference internal" href="../linsys/linear-systems.html#section-linsys-linear-systems"><span class="std std-numref">Section 2.3</span></a></br>
+Systematic method for solving a linear system with a lower triangular matrix.</p>
+<p><strong>Frobenius norm</strong>, <a class="reference internal" href="../linsys/norms.html#section-linsys-norms"><span class="std std-numref">Section 2.7</span></a></br>
+Matrix norm computed by applying the vector 2-norm to a linearized interpretation.</p>
+<p><strong>Gauss–Newton method</strong>, <a class="reference internal" href="../nonlineqn/nlsq.html#section-nonlineqn-nlsq"><span class="std std-numref">Section 4.7</span></a></br>
+Generalization of Newton’s method for nonlinear least squares.</p>
+<p><strong>Gaussian elimination</strong>, <a class="reference internal" href="../linsys/lu.html#section-linsys-lu"><span class="std std-numref">Section 2.4</span></a></br>
+Use of row operations to transform a linear system to an equivalent one in triangular form.</p>
+<p><strong>generating polynomials</strong>, <a class="reference internal" href="../ivp/multistep.html#section-ivp-multistep"><span class="std std-numref">Section 6.6</span></a></br>
+A pair of polynomials whose coefficients match those of a multistep method for IVPs.</p>
+<p><strong>global error</strong>, <a class="reference internal" href="../ivp/euler.html#section-ivp-euler"><span class="std std-numref">Section 6.2</span></a></br>
+Error made by an IVP method over the entire time interval of the solution.</p>
+<p><strong>GMRES</strong>, <a class="reference internal" href="../krylov/gmres.html#section-krylov-gmres"><span class="std std-numref">Section 8.5</span></a></br>
+Iterative solution of a linear system through stable least-squares solutions on nested Krylov subspaces.</p>
+<p><strong>graph</strong>, <a class="reference internal" href="../matrixanaly/insight.html#section-matrixanaly-insight"><span class="std std-numref">Section 7.1</span></a></br>
+Representation of a network as a set of nodes and edges.</p>
+<p><strong>hat functions</strong>, <a class="reference internal" href="../localapprox/pwlin.html#section-localapprox-pwlin"><span class="std std-numref">Section 5.2</span></a></br>
+Cardinal functions for piecewise linear interpolation.</p>
+<p><strong>heat equation</strong>, <a class="reference internal" href="../diffusion/blackscholes.html#section-diffusion-blackscholes"><span class="std std-numref">Section 11.1</span></a></br>
+Canonical parabolic PDE that describes pure diffusion.</p>
+<p><strong>hermitian</strong>, <a class="reference internal" href="../matrixanaly/symm-eig.html#section-matrixanaly-symm-eig"><span class="std std-numref">Section 7.4</span></a></br>
+Combination of transpose and elementwise complex conjugation. Also describes a matrix that equals its own hermitian.</p>
+<p><strong>hermitian positive definite (HPD)</strong>, <a class="reference internal" href="../matrixanaly/symm-eig.html#section-matrixanaly-symm-eig"><span class="std std-numref">Section 7.4</span></a></br>
+Variant of symmetric positive definite for complex-valued matrices.</p>
+<p><strong>identity matrix</strong>, <a class="reference internal" href="../linsys/matrices.html#section-linsys-matrices"><span class="std std-numref">Section 2.2</span></a></br>
+Matrix with ones on the diagonal, acting as the multiplicative identity.</p>
+<p><strong>ill-conditioned</strong>, <a class="reference internal" href="../intro/conditioning.html#section-intro-conditioning"><span class="std std-numref">Section 1.2</span></a></br>
+Exhibiting a large condition number, indicating high sensitivity of a result to changes in the data.</p>
+<p><strong>implicit</strong>, <a class="reference internal" href="../ivp/multistep.html#section-ivp-multistep"><span class="std std-numref">Section 6.6</span></a></br>
+Describing a formula that defines a new solution value as the solution of an implicit equation.</p>
+<p><strong>induced matrix norm</strong>, <a class="reference internal" href="../linsys/norms.html#section-linsys-norms"><span class="std std-numref">Section 2.7</span></a></br>
+Norm computed using the interpretation of a matrix as a linear operator.</p>
+<p><strong>initial-value problem (IVP)</strong>, <a class="reference internal" href="../ivp/basics.html#section-ivp-basics"><span class="std std-numref">Section 6.1</span></a>, <a class="reference internal" href="../ivp/systems.html#section-ivp-systems"><span class="std std-numref">Section 6.3</span></a></br>
+An ordinary differential equation (possibly vector-valued) together with an initial condition.</p>
+<p><strong>inner product</strong>, <a class="reference internal" href="../globalapprox/orthogonal.html#section-globalapprox-orthogonal"><span class="std std-numref">Section 9.4</span></a></br>
+Extension of the vector scalar product to a pair of functions.</p>
+<p><strong>interpolation</strong>, <a class="reference internal" href="../linsys/polyinterp.html#section-linsys-polyinterp"><span class="std std-numref">Section 2.1</span></a>, <a class="reference internal" href="../localapprox/interpolation.html#section-localapprox-interpolation"><span class="std std-numref">Section 5.1</span></a></br>
+Construction of a function that passes through a given set of data points.</p>
+<p><strong>inverse iteration</strong>, <a class="reference internal" href="../krylov/inviter.html#section-krylov-inviter"><span class="std std-numref">Section 8.3</span></a></br>
+Use of a shift, then inverse in power iteration to transform the eigenvalue closest to a target value into a dominant one.</p>
+<p><strong>Jacobian matrix</strong>, <a class="reference internal" href="../nonlineqn/newtonsys.html#section-nonlineqn-newtonsys"><span class="std std-numref">Section 4.5</span></a></br>
+Matrix of first partial derivatives that defines the linearization of a vector-valued function.</p>
+<p><strong>Kronecker product</strong>, <a class="reference internal" href="../twodim/laplace.html#section-twodim-laplace"><span class="std std-numref">Section 13.3</span></a></br>
+Alternative type of matrix multiplication useful for problems on a tensor-product domain.</p>
+<p><strong>Krylov subspace</strong>, <a class="reference internal" href="../krylov/subspace.html#section-krylov-subspace"><span class="std std-numref">Section 8.4</span></a></br>
+Vector space generated by powers of a square matrix that is often useful for reducing the dimension of large problems.</p>
+<p><strong>Lagrange formula</strong>, <a class="reference internal" href="../globalapprox/polynomial.html#section-globalapprox-polynomial"><span class="std std-numref">Section 9.1</span></a></br>
+Theoretically useful expression for an interpolating polynomial.</p>
+<p><strong>Lanczos iteration</strong>, <a class="reference internal" href="../krylov/minrescg.html#section-krylov-minrescg"><span class="std std-numref">Section 8.6</span></a></br>
+Specialization of the Arnoldi iteration to the case of a hermitian (or real symmetric) matrix.</p>
+<p><strong>Laplace equation</strong>, <a class="reference internal" href="../twodim/laplace.html#section-twodim-laplace"><span class="std std-numref">Section 13.3</span></a></br>
+Canonical elliptic PDE describing a steady state.</p>
+<p><strong>linear convergence</strong>, <a class="reference internal" href="../nonlineqn/fixed-point.html#section-nonlineqn-fixed-point"><span class="std std-numref">Section 4.2</span></a></br>
+Sequence for which the difference between values and the limit asymptotically decreases by a constant factor at each term, making a straight line on a log–linear graph.</p>
+<p><strong>linear least squares problem</strong>, <a class="reference internal" href="../leastsq/fitting.html#section-leastsq-fitting"><span class="std std-numref">Section 3.1</span></a></br>
+Minimization of the 2-norm of the residual for an overdetermined linear system.</p>
+<p><strong>local truncation error</strong>, <a class="reference internal" href="../ivp/euler.html#section-ivp-euler"><span class="std std-numref">Section 6.2</span></a>, <a class="reference internal" href="../ivp/multistep.html#section-ivp-multistep"><span class="std std-numref">Section 6.6</span></a></br>
+Discretization error made in one time step of an IVP solution method.</p>
+<p><strong>LU factorization</strong>, <a class="reference internal" href="../linsys/lu.html#section-linsys-lu"><span class="std std-numref">Section 2.4</span></a></br>
+Factorization of a square matrix into the product of a unit lower triangular matrix and an upper triangular matrix.</p>
+<p><strong>machine epsilon</strong>, <a class="reference internal" href="../intro/floating-point.html#section-intro-floating-point"><span class="std std-numref">Section 1.1</span></a></br>
+Distance from 1 to the next-largest floating-point number. Also called unit roundoff or machine precision, though the usages are not completely consistent across different references.</p>
+<p><strong>matrix condition number</strong>, <a class="reference internal" href="../linsys/condition-number.html#section-linsys-condition-number"><span class="std std-numref">Section 2.8</span></a></br>
+Norm of the matrix times the norm of its inverse, equivalent to the condition number for solving a linear system.</p>
+<p><strong>method of lines</strong>, <a class="reference internal" href="../diffusion/methodlines.html#section-diffusion-methodlines"><span class="std std-numref">Section 11.2</span></a></br>
+Solution technique for partial differential equations in which each independent variable is discretized separately</p>
+<p><strong>multistep</strong>, <a class="reference internal" href="../ivp/multistep.html#section-ivp-multistep"><span class="std std-numref">Section 6.6</span></a></br>
+Formula using information over more than a single time step to advance the solution.</p>
+<p><strong>Neumann condition</strong>, <a class="reference internal" href="../bvp/tpbvp.html#section-bvp-tpbvp"><span class="std std-numref">Section 10.1</span></a></br>
+Boundary condition specifying the derivative of the solution</p>
+<p><strong>Newton’s method</strong>, <a class="reference internal" href="../nonlineqn/newton.html#section-nonlineqn-newton"><span class="std std-numref">Section 4.3</span></a></br>
+Rootfinding iteration that uses the tangent line (linearization) of the given function in order to define the next root approximation.</p>
+<p><strong>nodes</strong>, <a class="reference internal" href="../localapprox/interpolation.html#section-localapprox-interpolation"><span class="std std-numref">Section 5.1</span></a></br>
+Values of the independent variable where an interpolant’s values are prescribed.</p>
+<p><strong>nonlinear least squares problem</strong>, <a class="reference internal" href="../nonlineqn/nlsq.html#section-nonlineqn-nlsq"><span class="std std-numref">Section 4.7</span></a></br>
+Minimization of the 2-norm of the residual of a function that depends nonlinearly on a vector.</p>
+<p><strong>norm</strong>, <a class="reference internal" href="../linsys/norms.html#section-linsys-norms"><span class="std std-numref">Section 2.7</span></a></br>
+Means of defining the magnitude of a vector or matrix.</p>
+<p><strong>normal</strong>, <a class="reference internal" href="../matrixanaly/evd.html#section-matrixanaly-evd"><span class="std std-numref">Section 7.2</span></a></br>
+Matrix that has a unitary eigenvalue decomposition.</p>
+<p><strong>normal equations</strong>, <a class="reference internal" href="../leastsq/normaleqns.html#section-leastsq-normaleqns"><span class="std std-numref">Section 3.2</span></a></br>
+Square linear system equivalent to the linear least squares problem.</p>
+<p><strong>numerical integration</strong>, <a class="reference internal" href="../localapprox/integration.html#section-localapprox-integration"><span class="std std-numref">Section 5.6</span></a></br>
+Estimation of a definite integral by combining values of the integrand, rather than by finding an antiderivative.</p>
+<p><strong>one-step IVP method</strong>, <a class="reference internal" href="../ivp/euler.html#section-ivp-euler"><span class="std std-numref">Section 6.2</span></a></br>
+IVP solver that uses information from just one time level to advance to the next.</p>
+<p><strong>ONC matrix</strong>, <a class="reference internal" href="../leastsq/qr.html#section-leastsq-qr"><span class="std std-numref">Section 3.3</span></a></br>
+Matrix whose columns are orthonormal vectors.</p>
+<p><strong>order of accuracy</strong>, , <a class="reference internal" href="../localapprox/fd-converge.html#section-localapprox-fd-converge"><span class="std std-numref">Section 5.5</span></a>, <a class="reference internal" href="../ivp/euler.html#section-ivp-euler"><span class="std std-numref">Section 6.2</span></a>, <a class="reference internal" href="../ivp/multistep.html#section-ivp-multistep"><span class="std std-numref">Section 6.6</span></a>, <a class="reference internal" href="../localapprox/integration.html#section-localapprox-integration"><span class="std std-numref">Section 5.6</span></a></br>
+Leading power of the truncation error as a function of a discretization size parameter.</p>
+<p><strong>orthogonal vectors</strong>, <a class="reference internal" href="../leastsq/qr.html#section-leastsq-qr"><span class="std std-numref">Section 3.3</span></a></br>
+Vectors that have an inner product of zero.</p>
+<p><strong>orthogonal matrix</strong>, <a class="reference internal" href="../leastsq/qr.html#section-leastsq-qr"><span class="std std-numref">Section 3.3</span></a></br>
+Square ONC matrix, i. e., matrix whose transpose is its inverse.</p>
+<p><strong>orthogonal polynomials</strong>, <a class="reference internal" href="../globalapprox/orthogonal.html#section-globalapprox-orthogonal"><span class="std std-numref">Section 9.4</span></a></br>
+Family of polynomials whose distinct members have an integral inner product equal to zero, as with Legendre and Chebyshev polynomials.</p>
+<p><strong>orthonormal vectors</strong>, <a class="reference internal" href="../leastsq/qr.html#section-leastsq-qr"><span class="std std-numref">Section 3.3</span></a></br>
+Vectors that are both mutually orthogonal and all of unit 2-norm.</p>
+<p><strong>outer product</strong>, <a class="reference internal" href="../linsys/lu.html#section-linsys-lu"><span class="std std-numref">Section 2.4</span></a></br>
+Multiplication of two vectors resulting in a rank-1 matrix.</p>
+<p><strong>overdetermined</strong>, <a class="reference internal" href="../leastsq/fitting.html#section-leastsq-fitting"><span class="std std-numref">Section 3.1</span></a></br>
+Characterized by having more constraints than available degrees of freedom.</p>
+<p><strong>piecewise linear</strong>, <a class="reference internal" href="../localapprox/pwlin.html#section-localapprox-pwlin"><span class="std std-numref">Section 5.2</span></a></br>
+Function that is linear between each consecutive pair of nodes, but whose slope may jump at the nodes.</p>
+<p><strong>PLU factorization</strong>, <a class="reference internal" href="../linsys/pivoting.html#section-linsys-pivoting"><span class="std std-numref">Section 2.6</span></a></br>
+LU factorization with row pivoting.</p>
+<p><strong>power iteration</strong>, <a class="reference internal" href="../krylov/power.html#section-krylov-power"><span class="std std-numref">Section 8.2</span></a></br>
+Repeated application of a matrix to a vector, followed by normalization, resulting in convergence to an eigenvector for the dominant eigenvalue.</p>
+<p><strong>preconditioning</strong>, <a class="reference internal" href="../krylov/precond.html#section-krylov-precond"><span class="std std-numref">Section 8.8</span></a></br>
+Use of an approximate inverse to improve the convergence rate of Krylov iterations for a linear system.</p>
+<p><strong>pseudoinverse</strong>, <a class="reference internal" href="../leastsq/normaleqns.html#section-leastsq-normaleqns"><span class="std std-numref">Section 3.2</span></a></br>
+Rectangular matrix that maps data to solution in the linear least squares problem, generalizing the matrix inverse.</p>
+<p><strong>QR factorization</strong>, <a class="reference internal" href="../leastsq/qr.html#section-leastsq-qr"><span class="std std-numref">Section 3.3</span></a></br>
+Representation of a matrix as the product of an orthogonal and an upper triangular matrix.</p>
+<p><strong>quadratic convergence</strong>, <a class="reference internal" href="../nonlineqn/newton.html#section-nonlineqn-newton"><span class="std std-numref">Section 4.3</span></a></br>
+Sequence for which the difference between values and the limit asymptotically decreases by a constant times the difference squared of the preceding difference.</p>
+<p><strong>quasi-Newton methods</strong>, <a class="reference internal" href="../nonlineqn/quasinewton.html#section-nonlineqn-quasinewton"><span class="std std-numref">Section 4.6</span></a></br>
+Rootfinding methods that overcome the issues of Jacobian computation and lack of global convergence in Newton’s method.</p>
+<p><strong>quasimatrix</strong>, <a class="reference internal" href="../globalapprox/orthogonal.html#section-globalapprox-orthogonal"><span class="std std-numref">Section 9.4</span></a></br>
+Collection of functions (such as orthogonal polynomials) that have algebraic parallels to columns of a matrix.</p>
+<p><strong>Rayleigh quotient</strong>, <a class="reference internal" href="../matrixanaly/symm-eig.html#section-matrixanaly-symm-eig"><span class="std std-numref">Section 7.4</span></a></br>
+Function of vectors that equals an eigenvalue when given its eigenvector as input.</p>
+<p><strong>residual</strong>, <a class="reference internal" href="../linsys/condition-number.html#section-linsys-condition-number"><span class="std std-numref">Section 2.8</span></a>, <a class="reference internal" href="../nonlineqn/rootproblem.html#section-nonlineqn-rootproblem"><span class="std std-numref">Section 4.1</span></a></br>
+For a linear system, the difference between <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{A}\tilde{\mathbf{x}}\)</span> for a computed solution approximation <span class="math notranslate nohighlight">\(\tilde{\mathbf{x}}\)</span>. More generally, the actual value of a quantity that is made zero by an exact solution.</p>
+<p><strong>restarting</strong>, <a class="reference internal" href="../krylov/gmres.html#section-krylov-gmres"><span class="std std-numref">Section 8.5</span></a></br>
+Technique used in GMRES to prevent the work per iteration and overall storage from growing unboundedly.</p>
+<p><strong>rootfinding problem</strong>, <a class="reference internal" href="../nonlineqn/rootproblem.html#section-nonlineqn-rootproblem"><span class="std std-numref">Section 4.1</span></a></br>
+Finding a value of a given function that makes the function zero.</p>
+<p><strong>row pivoting</strong>, <a class="reference internal" href="../linsys/pivoting.html#section-linsys-pivoting"><span class="std std-numref">Section 2.6</span></a></br>
+Reordering rows during LU factorization to ensure that the factorization exists and can be computed stably.</p>
+<p><strong>Runge phenomenon</strong>, <a class="reference internal" href="../globalapprox/stability.html#section-globalapprox-stability"><span class="std std-numref">Section 9.3</span></a></br>
+Manifestation of the instability of polynomial interpolation at equally spaced nodes as degree increases.</p>
+<p><strong>Runge–Kutta</strong>, <a class="reference internal" href="../ivp/rk.html#section-ivp-rk"><span class="std std-numref">Section 6.4</span></a></br>
+One-step method for IVPs that evaluates the derivative of the solution more than once to advance a single step.</p>
+<p><strong>secant method</strong>, <a class="reference internal" href="../nonlineqn/secant.html#section-nonlineqn-secant"><span class="std std-numref">Section 4.4</span></a></br>
+Variant of Newton’s method that uses a secant line rather than a tangent line to define a root estimate.</p>
+<p><strong>shooting</strong>, <a class="reference internal" href="../bvp/shooting.html#section-bvp-shooting"><span class="std std-numref">Section 10.2</span></a></br>
+Unstable technique for solving a boundary-value problem in which an initial value is searched for by a rootfinding algorithm.</p>
+<p><strong>simple root</strong>, <a class="reference internal" href="../nonlineqn/rootproblem.html#section-nonlineqn-rootproblem"><span class="std std-numref">Section 4.1</span></a></br>
+Root of a function at which the derivative of the function is nonzero.</p>
+<p><strong>singular value decomposition (SVD)</strong>, <a class="reference internal" href="../matrixanaly/svd.html#section-matrixanaly-svd"><span class="std std-numref">Section 7.3</span></a></br>
+Expression of a matrix as a product of two orthogonal/unitary matrices and a nonnegative diagonal matrix.</p>
+<p><strong>sparse</strong>, <a class="reference internal" href="../linsys/structure.html#section-linsys-structure"><span class="std std-numref">Section 2.9</span></a>, <a class="reference internal" href="../krylov/structure.html#section-krylov-structure"><span class="std std-numref">Section 8.1</span></a></br>
+Describing a matrix that has mostly zero elements for structural reasons.</p>
+<p><strong>spectral convergence</strong>, <a class="reference internal" href="../globalapprox/stability.html#section-globalapprox-stability"><span class="std std-numref">Section 9.3</span></a></br>
+Exponentially rapid decrease in error as the number of interpolation nodes increases, as observed in Chebyshev polynomial and trigonometric interpolation.</p>
+<p><strong>stability region</strong>, <a class="reference internal" href="../diffusion/absstab.html#section-diffusion-absstab"><span class="std std-numref">Section 11.3</span></a></br>
+Region of the complex plane describing when numerical solution of a linear IVP is bounded as <span class="math notranslate nohighlight">\(t\to\infty\)</span></p>
+<p><strong>step size</strong>, <a class="reference internal" href="../ivp/euler.html#section-ivp-euler"><span class="std std-numref">Section 6.2</span></a></br>
+Increment in time between successive solution values in a numerical IVP solver.</p>
+<p><strong>stiff</strong>, <a class="reference internal" href="../ivp/implicit.html#section-ivp-implicit"><span class="std std-numref">Section 6.7</span></a>, <a class="reference internal" href="../diffusion/stiffness.html#section-diffusion-stiffness"><span class="std std-numref">Section 11.4</span></a></br>
+Describes an IVP in which stability is a greater restriction than accuracy for many solution methods, usually favoring the use of an implicit time-stepping method.</p>
+<p><strong>subtractive cancellation</strong>, <a class="reference internal" href="../intro/conditioning.html#section-intro-conditioning"><span class="std std-numref">Section 1.2</span></a></br>
+Growth in relative error that occurs when two numbers are added/subtracted to get a result that is much smaller in magnitude than the operands.</p>
+<p><strong>superlinear convergence</strong>, <a class="reference internal" href="../nonlineqn/secant.html#section-nonlineqn-secant"><span class="std std-numref">Section 4.4</span></a></br>
+Sequence for which the convergence is asymptotically faster than any linear rate.</p>
+<p><strong>symmetric matrix</strong>, <a class="reference internal" href="../linsys/matrices.html#section-linsys-matrices"><span class="std std-numref">Section 2.2</span></a></br>
+Square matrix that is equal to its transpose.</p>
+<p><strong>symmetric positive definite (SPD) matrix</strong>, <a class="reference internal" href="../linsys/structure.html#section-linsys-structure"><span class="std std-numref">Section 2.9</span></a></br>
+Matrix that is symmetric and positive definite, thereby permitting a Cholesky factorization. Correspondingly called hermitian positive definite in the complex case.</p>
+<p><strong>tensor-product domain</strong>, <a class="reference internal" href="../twodim/tensorprod.html#section-twodim-tensorprod"><span class="std std-numref">Section 13.1</span></a></br>
+A domain that can be parameterized using variables that lay in a logical rectangle or cuboid; i. e., each variable independently varies in an interval.</p>
+<p><strong>thin SVD</strong>, <a class="reference internal" href="../matrixanaly/svd.html#section-matrixanaly-svd"><span class="std std-numref">Section 7.3</span></a></br>
+Variant of the singular value decomposition that discards information not needed to fully represent the original matrix.</p>
+<p><strong>trapezoid formula</strong>, <a class="reference internal" href="../localapprox/integration.html#section-localapprox-integration"><span class="std std-numref">Section 5.6</span></a>, <a class="reference internal" href="../ivp/multistep.html#section-ivp-multistep"><span class="std std-numref">Section 6.6</span></a></br>
+Numerical integration method resulting from integration of a piecewise linear interpolant.</p>
+<p><strong>triangular matrix</strong>, <a class="reference internal" href="../linsys/linear-systems.html#section-linsys-linear-systems"><span class="std std-numref">Section 2.3</span></a></br>
+Matrix that is all zero either above (for lower triangular) or below (for upper triangular) the main diagonal.</p>
+<p><strong>tridiagonal matrix</strong>, <a class="reference internal" href="../linsys/structure.html#section-linsys-structure"><span class="std std-numref">Section 2.9</span></a></br>
+Matrix with nonzeros only on the main diagonal and the adjacent two diagonals.</p>
+<p><strong>trigonometric interpolation</strong>, <a class="reference internal" href="../globalapprox/trig.html#section-globalapprox-trig"><span class="std std-numref">Section 9.5</span></a></br>
+Interpolation of a periodic function by a linear combination of real or complex trigonometric functions.</p>
+<p><strong>truncation error</strong>, <a class="reference internal" href="../localapprox/fd-converge.html#section-localapprox-fd-converge"><span class="std std-numref">Section 5.5</span></a>, <a class="reference internal" href="../localapprox/integration.html#section-localapprox-integration"><span class="std std-numref">Section 5.6</span></a></br>
+Difference between an exact value and an approximation, such as one that truncates an infinite series.</p>
+<p><strong>unit triangular matrix</strong>, <a class="reference internal" href="../linsys/lu.html#section-linsys-lu"><span class="std std-numref">Section 2.4</span></a></br>
+Triangular matrix that has a 1 in every position on the main diagonal.</p>
+<p><strong>unit vector</strong>, <a class="reference internal" href="../linsys/norms.html#section-linsys-norms"><span class="std std-numref">Section 2.7</span></a></br>
+A vector whose norm equals one.</p>
+<p><strong>unitary</strong>, <a class="reference internal" href="../matrixanaly/evd.html#section-matrixanaly-evd"><span class="std std-numref">Section 7.2</span></a></br>
+Square matrix with complex-valued entries whose columns are orthogonal.</p>
+<p><strong>unstable</strong>, <a class="reference internal" href="../intro/stability.html#section-intro-stability"><span class="std std-numref">Section 1.4</span></a></br>
+Allowing perturbations of the data to have much larger effects on the results than can be explained by the problem’s condition number.</p>
+<p><strong>upper Hessenberg</strong>, <a class="reference internal" href="../krylov/subspace.html#section-krylov-subspace"><span class="std std-numref">Section 8.4</span></a></br>
+Describing a matrix that has nonzeros only in the upper triangle and first subdiagonal.</p>
+<p><strong>Vandermonde matrix</strong>, <a class="reference internal" href="../linsys/polyinterp.html#section-linsys-polyinterp"><span class="std std-numref">Section 2.1</span></a></br>
+Type of matrix important to describing polynomial interpolation and approximation of data.</p>
+<p><strong>weights</strong>, <a class="reference internal" href="../localapprox/finitediffs.html#section-localapprox-finitediffs"><span class="std std-numref">Section 5.4</span></a>, <a class="reference internal" href="../localapprox/integration.html#section-localapprox-integration"><span class="std std-numref">Section 5.6</span></a>, , <a class="reference internal" href="../globalapprox/integration.html#section-globalapprox-integration"><span class="std std-numref">Section 9.6</span></a></br>
+Coefficients in a linear combination of function values in a finite difference or integration method.</p>
+<p><strong>zero-stable</strong>, <a class="reference internal" href="../ivp/zerostability.html#section-ivp-zerostability"><span class="std std-numref">Section 6.8</span></a></br>
+Boundedness property of multistep methods that is required for convergence.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./appendix"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="linear-algebra.html" title="previous page">Review of linear algebra</a>
+    <a class='right-next' id="next-link" href="julia.html" title="next page">Julia cheatsheet</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tobin A. Driscoll and Richard J. Braun<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

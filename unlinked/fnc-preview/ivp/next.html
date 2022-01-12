@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview: Fundamentals of Numerical Computation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/proof.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"float": ["\\mathbb{F}"], "real": ["\\mathbb{R}"], "complex": ["\\mathbb{C}"], "nat": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rmn{([^}]*)}{([^}]*)}": ["\\mathbb{R}^{#1 \\times #2}", 2], "dd{([^}]*)}{([^}]*)}": ["\\frac{d #1}{d #2}", 2], "ddd{([^}]*)}{([^}]*)}": ["\\frac{d^2 #1}{d #2^2}", 2], "pp{([^}]*)}{([^}]*)}": ["\\frac{\\partial #1}{\\partial #2}", 2], "ppp{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2^2}", 2], "ppdd{([^}]*)}{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2 \\partial #3}", 3], "norm{([^}]*)}": ["\\| #1 \\|", 1], "twonorm{([^}]*)}": ["\\| #1 \\|_2", 1], "onenorm{([^}]*)}": ["\\| #1 \\|_1", 1], "infnorm{([^}]*)}": ["\\| #1 \\|_\\infty", 1], "anynorm{([^}]*)}{([^}]*)}": ["\\| #1 \\|_#2", 2], "innerprod{([^}]*)}{([^}]*)}": ["\\langle #1,#2 \\rangle", 2], "pr{([^}]*)}": ["^{(#1)}", 1], "kron{([^}]*)}{([^}]*)}": ["#1 \\otimes #2", 2], "eye{([^}]*)}": ["\\mathbf{e}_#1", 1], "meye": ["\\mathbf{I}"], "Qhat": ["\\hat{\\mathbf{Q}}"], "Rhat": ["\\hat{\\mathbf{R}}"], "bfalpha": ["\\mathbf{alpha}"], "bfdelta": ["\\mathbf{delta}"], "bfzero": ["\\boldsymbol{0}"], "macheps": ["\\epsilon_\\text{mach}"], "fl": ["\\operatorname{fl}"], "diag": ["\\operatorname{diag}"], "ign": ["\\operatorname{sign}"], "Re": ["\\operatorname{Re}"], "Im": ["\\operatorname{Im}"], "ee": ["\\times 10^"], "lnorm": ["\\|"], "rnorm": ["\\|"], "floor": ["\\lfloor#1\\rfloor", 1], "cI": ["\\mathcal{I}"], "mtx": ["\\operatorname{mtx}"], "myvec": ["\\operatorname{vec}"], "argmin": ["\\operatorname{argmin}"]}}, "HTML-CSS": {"availableFonts": [], "preferredFont": null, "webfont": "Latin-Modern"}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.5. Efficiency of matrix computations" href="efficiency.html" />
+    <link rel="prev" title="2.3. Linear systems" href="linear-systems.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Numerical Computation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../frontmatter.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface to the Julia edition
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Main text
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro/overview.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/floating-point.html">
+     1.1. Floating-point numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/conditioning.html">
+     1.2. Problems and conditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/algorithms.html">
+     1.3. Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/stability.html">
+     1.4. Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/next.html">
+     1.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="overview.html">
+   2. Linear systems of equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="polyinterp.html">
+     2.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrices.html">
+     2.2. Computing with matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linear-systems.html">
+     2.3. Linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lu.html">
+     2.4. LU factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="efficiency.html">
+     2.5. Efficiency of matrix computations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pivoting.html">
+     2.6. Row pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="norms.html">
+     2.7. Vector and matrix norms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="condition-number.html">
+     2.8. Conditioning of linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structure.html">
+     2.9. Exploiting matrix structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="next.html">
+     2.10. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../leastsq/overview.html">
+   3. Overdetermined linear systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/fitting.html">
+     3.1. Fitting functions to data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/normaleqns.html">
+     3.2. The normal equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/qr.html">
+     3.3. The QR factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/house.html">
+     3.4. Computing QR factorizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/next.html">
+     3.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../nonlineqn/overview.html">
+   4. Roots of nonlinear equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/rootproblem.html">
+     4.1. The rootfinding problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/fixed-point.html">
+     4.2. Fixed point iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newton.html">
+     4.3. Newton’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/secant.html">
+     4.4. Interpolation-based methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newtonsys.html">
+     4.5. Newton for nonlinear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/quasinewton.html">
+     4.6. Quasi-Newton methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/nlsq.html">
+     4.7. Nonlinear least squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/next.html">
+     4.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../localapprox/overview.html">
+   5. Piecewise interpolation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/interpolation.html">
+     5.1. The interpolation problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/pwlin.html">
+     5.2. Piecewise linear interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/splines.html">
+     5.3. Cubic splines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/finitediffs.html">
+     5.4. Finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/fd-converge.html">
+     5.5. Convergence of finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/integration.html">
+     5.6. Numerical integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/adaptive.html">
+     5.7. Adaptive integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/next.html">
+     5.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ivp/overview.html">
+   6. Initial-value problems for ODEs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/basics.html">
+     6.1. Basics of IVPs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/euler.html">
+     6.2. Euler’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/systems.html">
+     6.3. IVP systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/rk.html">
+     6.4. Runge–Kutta methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/adaptive.html">
+     6.5. Adaptive Runge–Kutta
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/multistep.html">
+     6.6. Multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/implicit.html">
+     6.7. Implementation of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/zerostability.html">
+     6.8. Zero-stability of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/next.html">
+     6.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../matrixanaly/overview.html">
+   7. Matrix analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/insight.html">
+     7.1. From matrix to insight
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/evd.html">
+     7.2. Eigenvalue decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/svd.html">
+     7.3. Singular value decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/symm-eig.html">
+     7.4. Symmetry and definiteness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/dimreduce.html">
+     7.5. Dimension reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/next.html">
+     7.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../krylov/overview.html">
+   8. Krylov methods in linear algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/structure.html">
+     8.1. Sparsity and structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/power.html">
+     8.2. Power iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/inviter.html">
+     8.3. Inverse iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/subspace.html">
+     8.4. Krylov subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/gmres.html">
+     8.5. GMRES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/minrescg.html">
+     8.6. MINRES and conjugate gradients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/matrixfree.html">
+     8.7. Matrix-free iterations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/precond.html">
+     8.8. Preconditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/next.html">
+     8.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../globalapprox/overview.html">
+   9. Global function approximation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/polynomial.html">
+     9.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/barycentric.html">
+     9.2. The barycentric formula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/stability.html">
+     9.3. Stability of polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/orthogonal.html">
+     9.4. Orthogonal polynomials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/trig.html">
+     9.5. Trigonometric interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/integration.html">
+     9.6. Spectrally accurate integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/improper.html">
+     9.7. Improper integrals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/next.html">
+     9.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../bvp/overview.html">
+   10. Boundary-value problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/tpbvp.html">
+     10.1. Two-point BVP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/shooting.html">
+     10.2. Shooting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/diffmats.html">
+     10.3. Differentiation matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/linear.html">
+     10.4. Collocation for linear problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/nonlinear.html">
+     10.5. Nonlinearity and boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/galerkin.html">
+     10.6. The Galerkin method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/next.html">
+     10.7. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../diffusion/overview.html">
+   11. Diffusion equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/blackscholes.html">
+     11.1. Black–Scholes equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/methodlines.html">
+     11.2. The method of lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/absstab.html">
+     11.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/stiffness.html">
+     11.4. Stiffness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/boundaries.html">
+     11.5. Boundaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/next.html">
+     11.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advection/overview.html">
+   12. Advection equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/traffic.html">
+     12.1. Traffic flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/upwind.html">
+     12.2. Upwinding and stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/absstab.html">
+     12.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/wave.html">
+     12.4. The wave equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/next.html">
+     12.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../twodim/overview.html">
+   13. Two-dimensional problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/tensorprod.html">
+     13.1. Tensor-product discretizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/diffadv.html">
+     13.2. Two-dimensional diffusion and advection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/laplace.html">
+     13.3. Laplace and Poisson equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/nonlinear.html">
+     13.4. Nonlinear elliptic PDEs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/next.html">
+     13.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/linear-algebra.html">
+   Review of linear algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/julia.html">
+   Julia cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../refs.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+ 
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section">
+    <h1>Not available</h1>
+    <p>This page is not available in the limited preview version of the text.
+</div>
+
+ 
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+     </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

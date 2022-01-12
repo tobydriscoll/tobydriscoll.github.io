@@ -1,0 +1,1698 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.5. Efficiency of matrix computations &#8212; Fundamentals of Numerical Computation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/proof.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"float": ["\\mathbb{F}"], "real": ["\\mathbb{R}"], "complex": ["\\mathbb{C}"], "nat": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rmn{([^}]*)}{([^}]*)}": ["\\mathbb{R}^{#1 \\times #2}", 2], "dd{([^}]*)}{([^}]*)}": ["\\frac{d #1}{d #2}", 2], "ddd{([^}]*)}{([^}]*)}": ["\\frac{d^2 #1}{d #2^2}", 2], "pp{([^}]*)}{([^}]*)}": ["\\frac{\\partial #1}{\\partial #2}", 2], "ppp{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2^2}", 2], "ppdd{([^}]*)}{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2 \\partial #3}", 3], "norm{([^}]*)}": ["\\| #1 \\|", 1], "twonorm{([^}]*)}": ["\\| #1 \\|_2", 1], "onenorm{([^}]*)}": ["\\| #1 \\|_1", 1], "infnorm{([^}]*)}": ["\\| #1 \\|_\\infty", 1], "anynorm{([^}]*)}{([^}]*)}": ["\\| #1 \\|_#2", 2], "innerprod{([^}]*)}{([^}]*)}": ["\\langle #1,#2 \\rangle", 2], "pr{([^}]*)}": ["^{(#1)}", 1], "kron{([^}]*)}{([^}]*)}": ["#1 \\otimes #2", 2], "eye{([^}]*)}": ["\\mathbf{e}_#1", 1], "meye": ["\\mathbf{I}"], "Qhat": ["\\hat{\\mathbf{Q}}"], "Rhat": ["\\hat{\\mathbf{R}}"], "bfalpha": ["\\mathbf{alpha}"], "bfdelta": ["\\mathbf{delta}"], "bfzero": ["\\boldsymbol{0}"], "macheps": ["\\epsilon_\\text{mach}"], "fl": ["\\operatorname{fl}"], "diag": ["\\operatorname{diag}"], "ign": ["\\operatorname{sign}"], "Re": ["\\operatorname{Re}"], "Im": ["\\operatorname{Im}"], "ee": ["\\times 10^"], "lnorm": ["\\|"], "rnorm": ["\\|"], "floor": ["\\lfloor#1\\rfloor", 1], "cI": ["\\mathcal{I}"], "mtx": ["\\operatorname{mtx}"], "myvec": ["\\operatorname{vec}"], "argmin": ["\\operatorname{argmin}"]}}, "HTML-CSS": {"availableFonts": [], "preferredFont": null, "webfont": "Latin-Modern"}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.6. Row pivoting" href="pivoting.html" />
+    <link rel="prev" title="2.4. LU factorization" href="lu.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Numerical Computation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../frontmatter.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface to the Julia edition
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Main text
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro/overview.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/floating-point.html">
+     1.1. Floating-point numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/conditioning.html">
+     1.2. Problems and conditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/algorithms.html">
+     1.3. Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/stability.html">
+     1.4. Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/next.html">
+     1.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   2. Linear systems of equations
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="polyinterp.html">
+     2.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrices.html">
+     2.2. Computing with matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linear-systems.html">
+     2.3. Linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lu.html">
+     2.4. LU factorization
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.5. Efficiency of matrix computations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pivoting.html">
+     2.6. Row pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="norms.html">
+     2.7. Vector and matrix norms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="condition-number.html">
+     2.8. Conditioning of linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structure.html">
+     2.9. Exploiting matrix structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="next.html">
+     2.10. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../leastsq/overview.html">
+   3. Overdetermined linear systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/fitting.html">
+     3.1. Fitting functions to data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/normaleqns.html">
+     3.2. The normal equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/qr.html">
+     3.3. The QR factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/house.html">
+     3.4. Computing QR factorizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/next.html">
+     3.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../nonlineqn/overview.html">
+   4. Roots of nonlinear equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/rootproblem.html">
+     4.1. The rootfinding problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/fixed-point.html">
+     4.2. Fixed point iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newton.html">
+     4.3. Newton’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/secant.html">
+     4.4. Interpolation-based methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newtonsys.html">
+     4.5. Newton for nonlinear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/quasinewton.html">
+     4.6. Quasi-Newton methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/nlsq.html">
+     4.7. Nonlinear least squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/next.html">
+     4.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../localapprox/overview.html">
+   5. Piecewise interpolation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/interpolation.html">
+     5.1. The interpolation problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/pwlin.html">
+     5.2. Piecewise linear interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/splines.html">
+     5.3. Cubic splines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/finitediffs.html">
+     5.4. Finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/fd-converge.html">
+     5.5. Convergence of finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/integration.html">
+     5.6. Numerical integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/adaptive.html">
+     5.7. Adaptive integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/next.html">
+     5.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ivp/overview.html">
+   6. Initial-value problems for ODEs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/basics.html">
+     6.1. Basics of IVPs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/euler.html">
+     6.2. Euler’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/systems.html">
+     6.3. IVP systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/rk.html">
+     6.4. Runge–Kutta methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/adaptive.html">
+     6.5. Adaptive Runge–Kutta
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/multistep.html">
+     6.6. Multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/implicit.html">
+     6.7. Implementation of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/zerostability.html">
+     6.8. Zero-stability of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/next.html">
+     6.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../matrixanaly/overview.html">
+   7. Matrix analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/insight.html">
+     7.1. From matrix to insight
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/evd.html">
+     7.2. Eigenvalue decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/svd.html">
+     7.3. Singular value decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/symm-eig.html">
+     7.4. Symmetry and definiteness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/dimreduce.html">
+     7.5. Dimension reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/next.html">
+     7.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../krylov/overview.html">
+   8. Krylov methods in linear algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/structure.html">
+     8.1. Sparsity and structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/power.html">
+     8.2. Power iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/inviter.html">
+     8.3. Inverse iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/subspace.html">
+     8.4. Krylov subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/gmres.html">
+     8.5. GMRES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/minrescg.html">
+     8.6. MINRES and conjugate gradients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/matrixfree.html">
+     8.7. Matrix-free iterations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/precond.html">
+     8.8. Preconditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/next.html">
+     8.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../globalapprox/overview.html">
+   9. Global function approximation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/polynomial.html">
+     9.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/barycentric.html">
+     9.2. The barycentric formula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/stability.html">
+     9.3. Stability of polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/orthogonal.html">
+     9.4. Orthogonal polynomials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/trig.html">
+     9.5. Trigonometric interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/integration.html">
+     9.6. Spectrally accurate integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/improper.html">
+     9.7. Improper integrals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/next.html">
+     9.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../bvp/overview.html">
+   10. Boundary-value problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/tpbvp.html">
+     10.1. Two-point BVP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/shooting.html">
+     10.2. Shooting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/diffmats.html">
+     10.3. Differentiation matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/linear.html">
+     10.4. Collocation for linear problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/nonlinear.html">
+     10.5. Nonlinearity and boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/galerkin.html">
+     10.6. The Galerkin method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/next.html">
+     10.7. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../diffusion/overview.html">
+   11. Diffusion equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/blackscholes.html">
+     11.1. Black–Scholes equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/methodlines.html">
+     11.2. The method of lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/absstab.html">
+     11.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/stiffness.html">
+     11.4. Stiffness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/boundaries.html">
+     11.5. Boundaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/next.html">
+     11.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advection/overview.html">
+   12. Advection equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/traffic.html">
+     12.1. Traffic flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/upwind.html">
+     12.2. Upwinding and stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/absstab.html">
+     12.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/wave.html">
+     12.4. The wave equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/next.html">
+     12.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../twodim/overview.html">
+   13. Two-dimensional problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/tensorprod.html">
+     13.1. Tensor-product discretizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/diffadv.html">
+     13.2. Two-dimensional diffusion and advection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/laplace.html">
+     13.3. Laplace and Poisson equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/nonlinear.html">
+     13.4. Nonlinear elliptic PDEs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/next.html">
+     13.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/linear-algebra.html">
+   Review of linear algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendix/julia.html">
+   Julia cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../refs.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/linsys/efficiency.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/linsys/efficiency.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tobydriscoll/tobydriscoll.github.io/master?urlpath=tree/linsys/efficiency.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asymptotic-analysis">
+   Asymptotic analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flop-counting">
+   Flop counting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-of-linear-systems">
+   Solution of linear systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="efficiency-of-matrix-computations">
+<span id="section-linsys-efficiency"></span><h1><span class="section-number">2.5. </span>Efficiency of matrix computations<a class="headerlink" href="#efficiency-of-matrix-computations" title="Permalink to this headline">¶</a></h1>
+<p>Predicting how long an algorithm will take to solve a particular problem, on a particular computer, as written in a particular way in a particular programming language, is an enormously difficult undertaking. It’s more practical to predict how the required time will scale as a function of the size of the problem. In the case of a linear system of equations, the problem size is <span class="math notranslate nohighlight">\(n\)</span>, the number of equations variables in the system.  Because expressions of computational time are necessarily approximate, it’s customary to suppress all but the term that is dominant as <span class="math notranslate nohighlight">\(n\to\infty\)</span>. We first need to build some terminology for these expressions.</p>
+<div class="section" id="asymptotic-analysis">
+<span id="index-0"></span><h2>Asymptotic analysis<a class="headerlink" href="#asymptotic-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="proof proof-type-definition" id="id3">
+<div class="proof-title"> <span class="proof-type">Definition 2.5.1</span>  <span class="proof-title-name">: &nbsp;Asymptotic notation</span>  </div><div class="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f(n)\)</span> and <span class="math notranslate nohighlight">\(g(n)\)</span> be positive-valued functions. We say <span class="math notranslate nohighlight">\(f(n)=O(g(n))\)</span> (read “<span class="math notranslate nohighlight">\(f\)</span> is <strong>big-O</strong> of <span class="math notranslate nohighlight">\(g\)</span>”) as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span> if <span class="math notranslate nohighlight">\(f(n)/g(n)\)</span> is bounded above as <span class="math notranslate nohighlight">\(n\to\infty\)</span>.</p>
+<p>We say <span class="math notranslate nohighlight">\(f(n)\sim g(n)\)</span> (read “<span class="math notranslate nohighlight">\(f\)</span> is <strong>asymptotic</strong> to <span class="math notranslate nohighlight">\(g\)</span>”) as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span> if <span class="math notranslate nohighlight">\(f(x)/g(x)\rightarrow 1\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>.</p>
+</div></div><p>One immediate consequence is that <span class="math notranslate nohighlight">\(f\sim g\)</span> implies <span class="math notranslate nohighlight">\(f=O(g)\)</span>.<a class="footnote-reference brackets" href="#sets" id="id1">1</a></p>
+<div class="proof proof-type-example" id="id4">
+<div class="proof-title"> <span class="proof-type">Example 2.5.2</span>  </div><div class="proof-content">
+<p>Consider the functions <span class="math notranslate nohighlight">\(f(n) = a_1 n^3 + b_1 n^2 + c_1 n\)</span> and <span class="math notranslate nohighlight">\(g(n) = a_2 n^3\)</span> in the limit <span class="math notranslate nohighlight">\(n\to \infty\)</span>.  Then</p>
+<div class="math notranslate nohighlight">
+\[    \lim_{n \to \infty} \frac{f(n)}{g(n)}
+    = \lim_{n \to \infty} \frac{a_1 + b_1n^{-1} + c_1n^{-2}}{a_2} =
+    \frac{a_1}{a_2} .\]</div>
+<p>Since <span class="math notranslate nohighlight">\(a_1/a_2\)</span> is a constant, <span class="math notranslate nohighlight">\(f(n) = O(g(n))\)</span>; if <span class="math notranslate nohighlight">\(a_1=a_2\)</span>, then <span class="math notranslate nohighlight">\(f \sim g\)</span>.</p>
+</div></div><div class="proof proof-type-example" id="id5">
+<div class="proof-title"> <span class="proof-type">Example 2.5.3</span>  </div><div class="proof-content">
+<p>Consider <span class="math notranslate nohighlight">\(f(n) = \sin (1/n)\)</span>, <span class="math notranslate nohighlight">\(g(n)=1/n\)</span> and <span class="math notranslate nohighlight">\(h(n) = 1/n^2\)</span>. For large <span class="math notranslate nohighlight">\(n\)</span>, Taylor’s theorem with remainder implies that</p>
+<div class="math notranslate nohighlight">
+\[f(n) = \frac{1}{n} - \cos(1/\xi)\frac{1}{6 n^3},\]</div>
+<p>where <span class="math notranslate nohighlight">\(n&lt;\xi&lt;\infty\)</span>.  But</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n\to \infty} \frac{f}{g} = \lim_{n\to \infty} 1-\cos(1/\xi)\frac{1}{6 n^2} = 1,\]</div>
+<p>and so <span class="math notranslate nohighlight">\(f \sim g\)</span>.  On the other hand, comparing <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(h\)</span>, we find</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n\to \infty} \frac{f}{h} = \lim_{n\to \infty}  n-\cos(1/\xi)\frac{1}{6 n} = \infty,\]</div>
+<p>so we cannot say that <span class="math notranslate nohighlight">\(f = O(h)\)</span>. A consideration of <span class="math notranslate nohighlight">\(h/f\)</span> will show that <span class="math notranslate nohighlight">\(h = O(f)\)</span>, however.</p>
+</div></div><p>It’s conventional to use asymptotic notation that is as specific as possible. For instance, while it is true that <span class="math notranslate nohighlight">\(n^2+n=O(n^{10})\)</span>, it’s more informative, and usually expected, to say <span class="math notranslate nohighlight">\(n^2+n=O(n^2)\)</span>. There are additional notations that enforce this requirement strictly, but we will just stick to the informal understanding.</p>
+<p>There is a memorable way to use asymptotic notation to simplify sums:</p>
+<div class="math notranslate nohighlight" id="equation-sumflops">
+<span class="eqno">(2.5.1)<a class="headerlink" href="#equation-sumflops" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{split}
+  \sum_{k=1}^n k&amp;\sim \frac{n^2}{2} = O(n^2), \text{ as $n\to\infty$}, \\
+  \sum_{k=1}^n k^2 &amp;\sim \frac{n^3}{3} = O(n^3), \text{ as $n\to\infty$}, \\
+  &amp;\vdots \\
+  \sum_{k=1}^n k^p &amp;\sim \frac{n^{p+1}}{p+1} = O(n^{p+1}), \text{ as $n\to\infty$},
+\end{split}\end{split}\]</div>
+<p>These formulas greatly resemble the definite integral of <span class="math notranslate nohighlight">\(x^p\)</span>.</p>
+<div class="proof proof-type-example" id="id6">
+<span id="example-efficiency-sums"></span><div class="proof-title"> <span class="proof-type">Example 2.5.4</span>  </div><div class="proof-content">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum_{k=1}^{n-1} 4k^2 + 3 &amp; = 4 \left( \sum_{k=1}^{n-1} k^2\right)  + 3 \sum_{k=1}^{n-1} 1\\ 
+&amp;\sim 4 \left( \frac{1}{3} (n-1)^3 \right) + 3(n-1) \\ 
+&amp; = \frac{4}{3} (n^3 + 3n^2 + 3n - 1)  + 3n - 3 \\ 
+&amp;\sim \frac{4}{3} n^3.
+\end{align*}\]</div>
+</div></div></div>
+<div class="section" id="flop-counting">
+<h2>Flop counting<a class="headerlink" href="#flop-counting" title="Permalink to this headline">¶</a></h2>
+<p id="index-1">Traditionally, in numerical linear algebra we count <strong>floating-point operations</strong>, or <strong>flops</strong> for short. In our interpretation each scalar addition, subtraction, multiplication, division, and square root counts as one flop. Given any algorithm, we can simply add up the number of scalar flops and ignore everything else.</p>
+<div class="proof proof-type-demo" id="id7">
+<span id="demo-flops-mvmult"></span><div class="proof-title"> <span class="proof-type">Demo 2.5.5</span>  </div><div class="proof-content">
+</div></div><div class='demo'><p>Here is a straightforward implementation of matrix-vector multiplication.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">A</span><span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">),</span><span class="n">rand</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">n</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">n</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>    <span class="c"># 1 multiply, 1 add</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each of the loops implies a summation of flops. The total flop count for this algorithm is</p>
+<div class="math notranslate nohighlight">
+\[ \sum_{i=1}^n \sum_{j=1}^n 2 = \sum_{i=1}^n 2n = 2n^2. \]</div>
+<p>Since the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> has <span class="math notranslate nohighlight">\(n^2\)</span> elements, all of which have to be involved in the product, it seems unlikely that we could get a flop count that is smaller than <span class="math notranslate nohighlight">\(O(n^2)\)</span> in the general case.</p>
+<div class="sphinx-bs container pb-4 docutils" id="index-2">
+<div class="row docutils">
+<div class="d-flex col-7 left-side docutils">
+<div class="card w-100 border-0 shadow-none docutils">
+<div class="card-body docutils">
+<p class="card-text">Let’s run an experiment with the built-in matrix-vector multiplication. Note that Julia is unusual in that loops have a variable scope separate from its enclosing code. Thus, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">n</span> <span class="pre">in</span> <span class="pre">n</span></code> below means that inside the loop, the name <code class="docutils literal notranslate"><span class="pre">n</span></code> will take on each one of the values that were previously assigned to the vector <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-5 right-side docutils">
+<div class="card w-100 shadow-none comment docutils">
+<div class="card-body docutils">
+<p class="card-text">The <code class="docutils literal notranslate"><span class="pre">push!</span></code> function attaches a new value to the end of a vector.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">:</span><span class="mi">1000</span><span class="o">:</span><span class="mi">5000</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="n">n</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>  
+    <span class="n">x</span> <span class="o">=</span> <span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="nd">@elapsed</span> <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">80</span><span class="p">;</span> <span class="n">A</span><span class="o">*</span><span class="n">x</span><span class="p">;</span> <span class="k">end</span>
+    <span class="n">push!</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">time</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The reason for doing multiple repetitions at each value of <span class="math notranslate nohighlight">\(n\)</span> in the loop above is to avoid having times so short that the resolution of the timer is significant.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">pretty_table</span><span class="p">((</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="p">),[</span><span class="s">&quot;size&quot;</span> <span class="s">&quot;time&quot;</span><span class="p">;</span><span class="s">&quot;&quot;</span> <span class="s">&quot;(sec)&quot;</span><span class="p">],</span><span class="n">backend</span><span class="o">=</span><span class="ss">:html</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<style>
+  table, td, th {
+      border-collapse: collapse;
+      font-family: sans-serif;
+  }
+
+  td, th {
+      border-bottom: 0;
+      padding: 4px
+  }
+
+  tr:nth-child(odd) {
+      background: #eee;
+  }
+
+  tr:nth-child(even) {
+      background: #fff;
+  }
+
+  tr.header {
+      background: navy !important;
+      color: white;
+      font-weight: bold;
+  }
+
+  tr.subheader {
+      background: lightgray !important;
+      color: black;
+  }
+
+  tr.headerLastRow {
+      border-bottom: 2px solid black;
+  }
+
+  th.rowNumber, td.rowNumber {
+      text-align: right;
+  }
+
+</style>
+<body>
+<table>
+  <tr class = "header">
+    <th style = "text-align: right;">size</th>
+    <th style = "text-align: right;">time</th>
+  </tr>
+  <tr class = "subheader headerLastRow">
+    <th style = "text-align: right;"></th>
+    <th style = "text-align: right;">(sec)</th>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">1000</td>
+    <td style = "text-align: right;">0.0683027</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">2000</td>
+    <td style = "text-align: right;">0.103051</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">3000</td>
+    <td style = "text-align: right;">0.215584</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">4000</td>
+    <td style = "text-align: right;">0.311735</td>
+  </tr>
+  <tr>
+    <td style = "text-align: right;">5000</td>
+    <td style = "text-align: right;">0.493484</td>
+  </tr>
+</table>
+</body>
+</html>
+</div></div>
+</div>
+<div class="sphinx-bs container pb-4 docutils" id="index-3">
+<div class="row docutils">
+<div class="d-flex col-7 left-side docutils">
+<div class="card w-100 border-0 shadow-none docutils">
+<div class="card-body docutils">
+<p class="card-text">Looking at the timings just for <span class="math notranslate nohighlight">\(n=2000\)</span> and <span class="math notranslate nohighlight">\(n=4000\)</span>, they have ratio</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-5 right-side docutils">
+<div class="card w-100 shadow-none comment docutils">
+<div class="card-body docutils">
+<p class="card-text">The expression <code class="docutils literal notranslate"><span class="pre">n.==4000</span></code> here produces a vector of Boolean (true/false) values the same size as <code class="docutils literal notranslate"><span class="pre">n</span></code>. This result is used to index within <code class="docutils literal notranslate"><span class="pre">t</span></code>, accessing only the value for which the comparison is true.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="o">.==</span><span class="mi">4000</span><span class="p">]</span> <span class="o">./</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="o">.==</span><span class="mi">2000</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t[n .== 4000] ./ t[n .== 2000] = [3.0250677866400744]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-element Vector{Float64}:
+ 3.0250677866400744
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the run time is dominated by flops, then we expect this ratio to be <span class="math notranslate nohighlight">\((4000)^2/(2000)^2=4\)</span>.</p>
+</div><p>Suppose that the running time <span class="math notranslate nohighlight">\(t\)</span> of an algorithm obeys a function that is <span class="math notranslate nohighlight">\(O(n^p)\)</span>. For sufficiently large <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(t\approx Cn^p\)</span> for a constant <span class="math notranslate nohighlight">\(C\)</span> should be a good approximation. Hence</p>
+<div class="math notranslate nohighlight" id="equation-loglogfit">
+<span class="eqno">(2.5.2)<a class="headerlink" href="#equation-loglogfit" title="Permalink to this equation">¶</a></span>\[  t \approx Cn^p \qquad \Longleftrightarrow \qquad \log t \approx p(\log n) + \log C.\]</div>
+<p>So we expect that a graph of <span class="math notranslate nohighlight">\(\log t\)</span> as a function of <span class="math notranslate nohighlight">\(\log n\)</span> will be a straight line of slope <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<div class="proof proof-type-demo" id="id8">
+<span id="demo-flops-loglog"></span><div class="proof-title"> <span class="proof-type">Demo 2.5.6</span>  </div><div class="proof-content">
+</div></div><div class='demo'><p>Let’s repeat the experiment of the previous figure for more, and larger, values of <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>  <span class="c"># throwaway to force compilation</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">400</span><span class="o">:</span><span class="mi">200</span><span class="o">:</span><span class="mi">6000</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="n">n</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>  
+    <span class="n">x</span> <span class="o">=</span> <span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="nd">@elapsed</span> <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">50</span><span class="p">;</span> <span class="n">A</span><span class="o">*</span><span class="n">x</span><span class="p">;</span> <span class="k">end</span>
+    <span class="n">push!</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">time</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plotting the time as a function of <span class="math notranslate nohighlight">\(n\)</span> on log-log scales is equivalent to plotting the logs of the variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;data&quot;</span><span class="p">,</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="p">(</span><span class="ss">:log10</span><span class="p">,</span><span class="sa">L</span><span class="s">&quot;n&quot;</span><span class="p">),</span> <span class="n">yaxis</span><span class="o">=</span><span class="p">(</span><span class="ss">:log10</span><span class="p">,</span><span class="s">&quot;elapsed time (sec)&quot;</span><span class="p">),</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">&quot;Timing of matrix-vector multiplications&quot;</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="nb">false</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="320" viewBox="0 0 2000 1280">
+<defs>
+  <clipPath id="clip510">
+    <rect x="0" y="0" width="2000" height="1280"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip510)" d="
+M0 1280 L2000 1280 L2000 0 L0 0  Z
+  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<defs>
+  <clipPath id="clip511">
+    <rect x="400" y="0" width="1401" height="1280"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip510)" d="
+M244.116 1124.67 L1952.76 1124.67 L1952.76 107.256 L244.116 107.256  Z
+  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<defs>
+  <clipPath id="clip512">
+    <rect x="244" y="107" width="1710" height="1018"/>
+  </clipPath>
+</defs>
+<polyline clip-path="url(#clip512)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  -3273.85,1124.67 -3273.85,107.256 
+  "/>
+<polyline clip-path="url(#clip512)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  837.881,1124.67 837.881,107.256 
+  "/>
+<polyline clip-path="url(#clip512)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  4949.61,1124.67 4949.61,107.256 
+  "/>
+<polyline clip-path="url(#clip510)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  244.116,1124.67 1952.76,1124.67 
+  "/>
+<polyline clip-path="url(#clip510)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  -3273.85,1124.67 -3273.85,1105.77 
+  "/>
+<polyline clip-path="url(#clip510)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  837.881,1124.67 837.881,1105.77 
+  "/>
+<polyline clip-path="url(#clip510)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  4949.61,1124.67 4949.61,1105.77 
+  "/>
+<path clip-path="url(#clip510)" d="M-3308.87 1199.74 L-3301.23 1199.74 L-3301.23 1173.37 L-3309.54 1175.04 L-3309.54 1170.78 L-3301.28 1169.11 L-3296.6 1169.11 L-3296.6 1199.74 L-3288.96 1199.74 L-3288.96 1203.67 L-3308.87 1203.67 L-3308.87 1199.74 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M-3269.52 1172.19 Q-3273.13 1172.19 -3274.96 1175.76 Q-3276.76 1179.3 -3276.76 1186.43 Q-3276.76 1193.54 -3274.96 1197.1 Q-3273.13 1200.64 -3269.52 1200.64 Q-3265.88 1200.64 -3264.08 1197.1 Q-3262.25 1193.54 -3262.25 1186.43 Q-3262.25 1179.3 -3264.08 1175.76 Q-3265.88 1172.19 -3269.52 1172.19 M-3269.52 1168.49 Q-3263.71 1168.49 -3260.65 1173.1 Q-3257.57 1177.68 -3257.57 1186.43 Q-3257.57 1195.16 -3260.65 1199.76 Q-3263.71 1204.35 -3269.52 1204.35 Q-3275.33 1204.35 -3278.41 1199.76 Q-3281.46 1195.16 -3281.46 1186.43 Q-3281.46 1177.68 -3278.41 1173.1 Q-3275.33 1168.49 -3269.52 1168.49 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M-3247.87 1150.69 Q-3250.8 1150.69 -3252.29 1153.58 Q-3253.76 1156.46 -3253.76 1162.25 Q-3253.76 1168.03 -3252.29 1170.92 Q-3250.8 1173.8 -3247.87 1173.8 Q-3244.92 1173.8 -3243.45 1170.92 Q-3241.96 1168.03 -3241.96 1162.25 Q-3241.96 1156.46 -3243.45 1153.58 Q-3244.92 1150.69 -3247.87 1150.69 M-3247.87 1147.68 Q-3243.15 1147.68 -3240.66 1151.42 Q-3238.16 1155.14 -3238.16 1162.25 Q-3238.16 1169.34 -3240.66 1173.09 Q-3243.15 1176.81 -3247.87 1176.81 Q-3252.59 1176.81 -3255.09 1173.09 Q-3257.57 1169.34 -3257.57 1162.25 Q-3257.57 1155.14 -3255.09 1151.42 Q-3252.59 1147.68 -3247.87 1147.68 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M803.325 1199.74 L810.964 1199.74 L810.964 1173.37 L802.654 1175.04 L802.654 1170.78 L810.918 1169.11 L815.593 1169.11 L815.593 1199.74 L823.232 1199.74 L823.232 1203.67 L803.325 1203.67 L803.325 1199.74 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M842.677 1172.19 Q839.066 1172.19 837.237 1175.76 Q835.431 1179.3 835.431 1186.43 Q835.431 1193.54 837.237 1197.1 Q839.066 1200.64 842.677 1200.64 Q846.311 1200.64 848.116 1197.1 Q849.945 1193.54 849.945 1186.43 Q849.945 1179.3 848.116 1175.76 Q846.311 1172.19 842.677 1172.19 M842.677 1168.49 Q848.487 1168.49 851.542 1173.1 Q854.621 1177.68 854.621 1186.43 Q854.621 1195.16 851.542 1199.76 Q848.487 1204.35 842.677 1204.35 Q836.866 1204.35 833.788 1199.76 Q830.732 1195.16 830.732 1186.43 Q830.732 1177.68 833.788 1173.1 Q836.866 1168.49 842.677 1168.49 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M867.316 1161.12 Q870.043 1161.71 871.567 1163.55 Q873.109 1165.39 873.109 1168.1 Q873.109 1172.26 870.25 1174.53 Q867.391 1176.81 862.125 1176.81 Q860.357 1176.81 858.477 1176.45 Q856.615 1176.11 854.621 1175.42 L854.621 1171.75 Q856.201 1172.67 858.082 1173.14 Q859.962 1173.61 862.012 1173.61 Q865.586 1173.61 867.448 1172.2 Q869.329 1170.79 869.329 1168.1 Q869.329 1165.62 867.58 1164.23 Q865.849 1162.82 862.746 1162.82 L859.473 1162.82 L859.473 1159.69 L862.896 1159.69 Q865.699 1159.69 867.185 1158.58 Q868.67 1157.46 868.67 1155.35 Q868.67 1153.19 867.128 1152.04 Q865.605 1150.87 862.746 1150.87 Q861.185 1150.87 859.398 1151.21 Q857.611 1151.55 855.467 1152.26 L855.467 1148.88 Q857.63 1148.28 859.511 1147.98 Q861.411 1147.68 863.085 1147.68 Q867.41 1147.68 869.931 1149.65 Q872.451 1151.61 872.451 1154.95 Q872.451 1157.29 871.115 1158.9 Q869.78 1160.5 867.316 1161.12 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M4914.61 1199.74 L4922.25 1199.74 L4922.25 1173.37 L4913.94 1175.04 L4913.94 1170.78 L4922.2 1169.11 L4926.88 1169.11 L4926.88 1199.74 L4934.51 1199.74 L4934.51 1203.67 L4914.61 1203.67 L4914.61 1199.74 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M4953.96 1172.19 Q4950.35 1172.19 4948.52 1175.76 Q4946.71 1179.3 4946.71 1186.43 Q4946.71 1193.54 4948.52 1197.1 Q4950.35 1200.64 4953.96 1200.64 Q4957.59 1200.64 4959.4 1197.1 Q4961.23 1193.54 4961.23 1186.43 Q4961.23 1179.3 4959.4 1175.76 Q4957.59 1172.19 4953.96 1172.19 M4953.96 1168.49 Q4959.77 1168.49 4962.82 1173.1 Q4965.9 1177.68 4965.9 1186.43 Q4965.9 1195.16 4962.82 1199.76 Q4959.77 1204.35 4953.96 1204.35 Q4948.15 1204.35 4945.07 1199.76 Q4942.01 1195.16 4942.01 1186.43 Q4942.01 1177.68 4945.07 1173.1 Q4948.15 1168.49 4953.96 1168.49 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M4975.93 1160.71 Q4973.37 1160.71 4971.86 1162.46 Q4970.38 1164.21 4970.38 1167.25 Q4970.38 1170.28 4971.86 1172.05 Q4973.37 1173.8 4975.93 1173.8 Q4978.49 1173.8 4979.97 1172.05 Q4981.48 1170.28 4981.48 1167.25 Q4981.48 1164.21 4979.97 1162.46 Q4978.49 1160.71 4975.93 1160.71 M4983.47 1148.8 L4983.47 1152.26 Q4982.04 1151.59 4980.57 1151.23 Q4979.12 1150.87 4977.7 1150.87 Q4973.93 1150.87 4971.94 1153.41 Q4969.97 1155.95 4969.68 1161.09 Q4970.79 1159.45 4972.47 1158.58 Q4974.14 1157.7 4976.15 1157.7 Q4980.38 1157.7 4982.83 1160.28 Q4985.29 1162.83 4985.29 1167.25 Q4985.29 1171.58 4982.74 1174.19 Q4980.18 1176.81 4975.93 1176.81 Q4971.06 1176.81 4968.48 1173.09 Q4965.9 1169.34 4965.9 1162.25 Q4965.9 1155.59 4969.06 1151.64 Q4972.22 1147.68 4977.54 1147.68 Q4978.97 1147.68 4980.42 1147.96 Q4981.89 1148.24 4983.47 1148.8 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><g clip-path="url(#clip510)">
+<image width="36" height="30" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAABuUlEQVRYhbVYW4GEMAyMBDRUAhoq
+AQ1IQAMS0FAJaEACGmph7uOue21I+trykR+aHSaZSVuWABAP7z2stSAiGGPgnIOUp8W2bZjnGUSE
+aZpgrcV5nlUY8kMi8Ni2rQh4nufjd3Gs61rEUMlc1wUAtCxLAiqBXNeV5BzH8cnz3sMYk6zf960S
+E8nkOmatTdZjaXKVBwvkCksIhXZLWvMKw/NpmkBE1R6LMbQCit2JuxDCOfcxrfe+2vDcU0VCmulC
+J3gEnw0ntO97XtfOiSnhSAUV5dIItZKRcKRp+yQaY8SX8JFu9U2zZN57dbogGLq3O1JhqodyYzvC
+O8BzHypOWS2hUXIty9JOSDqbesi0FJYFGeWfsK00HR1v+ofjaBPdTGiUf6pP+zf80yJXltAo/3CM
+eZ77CHGgmhvjt7I75971z7qu1V0+juM3R2X6glzaZpjkSov8hthDKJyR1Wb+I1xVWc/+wz8OcoSC
+tNBMPcI//JaZGwqi/zv2a/7hsmtFxd0RCY3wD/DcEHM+iy1RlKt3/+FYGhn+OVQk1EsGSI+f8OL4
+fwMJPytZ7+kex33fDwsQEfZ9F7F/AEI9aqd2YHXbAAAAAElFTkSuQmCC
+" transform="translate(1080, 1227)"/>
+</g>
+<polyline clip-path="url(#clip512)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  244.116,818.064 1952.76,818.064 
+  "/>
+<polyline clip-path="url(#clip512)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  244.116,401.417 1952.76,401.417 
+  "/>
+<polyline clip-path="url(#clip510)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  244.116,1124.67 244.116,107.256 
+  "/>
+<polyline clip-path="url(#clip510)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  244.116,818.064 263.014,818.064 
+  "/>
+<polyline clip-path="url(#clip510)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  244.116,401.417 263.014,401.417 
+  "/>
+<path clip-path="url(#clip510)" d="M113.976 837.856 L121.615 837.856 L121.615 811.491 L113.305 813.157 L113.305 808.898 L121.569 807.232 L126.245 807.232 L126.245 837.856 L133.883 837.856 L133.883 841.792 L113.976 841.792 L113.976 837.856 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M153.328 810.31 Q149.717 810.31 147.888 813.875 Q146.082 817.417 146.082 824.546 Q146.082 831.653 147.888 835.218 Q149.717 838.759 153.328 838.759 Q156.962 838.759 158.768 835.218 Q160.596 831.653 160.596 824.546 Q160.596 817.417 158.768 813.875 Q156.962 810.31 153.328 810.31 M153.328 806.607 Q159.138 806.607 162.193 811.213 Q165.272 815.796 165.272 824.546 Q165.272 833.273 162.193 837.88 Q159.138 842.463 153.328 842.463 Q147.518 842.463 144.439 837.88 Q141.383 833.273 141.383 824.546 Q141.383 815.796 144.439 811.213 Q147.518 806.607 153.328 806.607 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M165.272 800.708 L189.384 800.708 L189.384 803.905 L165.272 803.905 L165.272 800.708 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M200.856 811.184 L214.116 811.184 L214.116 814.381 L196.286 814.381 L196.286 811.184 Q198.449 808.946 202.173 805.184 Q205.916 801.404 206.875 800.313 Q208.699 798.263 209.414 796.852 Q210.147 795.423 210.147 794.05 Q210.147 791.812 208.568 790.401 Q207.007 788.991 204.486 788.991 Q202.7 788.991 200.706 789.611 Q198.731 790.232 196.474 791.492 L196.474 787.655 Q198.769 786.734 200.762 786.264 Q202.756 785.793 204.411 785.793 Q208.775 785.793 211.37 787.975 Q213.965 790.157 213.965 793.805 Q213.965 795.536 213.307 797.097 Q212.668 798.639 210.956 800.746 Q210.486 801.291 207.966 803.905 Q205.446 806.501 200.856 811.184 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M113.675 421.209 L121.314 421.209 L121.314 394.844 L113.004 396.51 L113.004 392.251 L121.268 390.585 L125.944 390.585 L125.944 421.209 L133.583 421.209 L133.583 425.145 L113.675 425.145 L113.675 421.209 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M153.027 393.663 Q149.416 393.663 147.587 397.228 Q145.782 400.77 145.782 407.899 Q145.782 415.006 147.587 418.571 Q149.416 422.112 153.027 422.112 Q156.661 422.112 158.467 418.571 Q160.295 415.006 160.295 407.899 Q160.295 400.77 158.467 397.228 Q156.661 393.663 153.027 393.663 M153.027 389.96 Q158.837 389.96 161.893 394.566 Q164.971 399.149 164.971 407.899 Q164.971 416.626 161.893 421.233 Q158.837 425.816 153.027 425.816 Q147.217 425.816 144.138 421.233 Q141.082 416.626 141.082 407.899 Q141.082 399.149 144.138 394.566 Q147.217 389.96 153.027 389.96 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M164.971 384.061 L189.083 384.061 L189.083 387.258 L164.971 387.258 L164.971 384.061 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip510)" d="M197.941 394.537 L204.148 394.537 L204.148 373.115 L197.396 374.469 L197.396 371.008 L204.11 369.654 L207.909 369.654 L207.909 394.537 L214.116 394.537 L214.116 397.734 L197.941 397.734 L197.941 394.537 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><g clip-path="url(#clip510)">
+<text style="fill:#000000; fill-opacity:1; font-family:Arial,Helvetica Neue,Helvetica,sans-serif; font-size:66px; text-anchor:middle;" transform="rotate(-90, 71.4418, 615.961)" x="71.4418" y="615.961">elapsed time (sec)</text>
+</g>
+<g clip-path="url(#clip510)">
+<text style="fill:#000000; fill-opacity:1; font-family:Arial,Helvetica Neue,Helvetica,sans-serif; font-size:66px; text-anchor:middle;" transform="rotate(0, 1098.44, 57.6)" x="1098.44" y="57.6">Timing of matrix-vector multiplications</text>
+</g>
+<circle clip-path="url(#clip512)" cx="292.474" cy="1095.87" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="533.82" cy="993.913" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="705.059" cy="864.207" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="837.881" cy="743.044" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="946.405" cy="637.351" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1038.16" cy="588.145" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1117.64" cy="531.683" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1187.75" cy="515.95" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1250.47" cy="481.731" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1307.2" cy="446.847" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1358.99" cy="423.546" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1406.63" cy="388.457" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1450.75" cy="368.539" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1491.81" cy="347.81" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1530.23" cy="333.628" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1566.31" cy="313.082" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1600.34" cy="307.662" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1632.52" cy="285.478" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1663.05" cy="278.477" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1692.09" cy="263.549" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1719.78" cy="228.826" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1746.24" cy="236.78" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1771.58" cy="220.139" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1795.87" cy="207.339" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1819.22" cy="193.232" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1841.68" cy="175.759" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1863.33" cy="167.216" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1884.22" cy="155.348" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip512)" cx="1904.4" cy="136.051" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+</svg>
+</div></div>
+</div>
+<p>You can see that while the full story is complicated, the graph is trending to a straight line of positive slope. For comparison, we can plot a line that represents <span class="math notranslate nohighlight">\(O(n^2)\)</span> growth exactly. (All such lines have slope equal to 2.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot!</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="k">end</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="n">n</span><span class="p">[</span><span class="k">end</span><span class="p">])</span><span class="o">.^</span><span class="mi">2</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="ss">:dash</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;O(n^2)&quot;</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="ss">:topleft</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="320" viewBox="0 0 2000 1280">
+<defs>
+  <clipPath id="clip600">
+    <rect x="0" y="0" width="2000" height="1280"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip600)" d="
+M0 1280 L2000 1280 L2000 0 L0 0  Z
+  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<defs>
+  <clipPath id="clip601">
+    <rect x="400" y="0" width="1401" height="1280"/>
+  </clipPath>
+</defs>
+<defs>
+  <clipPath id="clip602">
+    <rect x="244" y="107" width="1710" height="1018"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip600)" d="
+M244.116 1124.67 L1952.76 1124.67 L1952.76 107.256 L244.116 107.256  Z
+  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  -3273.85,1124.67 -3273.85,107.256 
+  "/>
+<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  837.881,1124.67 837.881,107.256 
+  "/>
+<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  4949.61,1124.67 4949.61,107.256 
+  "/>
+<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  244.116,1124.67 1952.76,1124.67 
+  "/>
+<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  -3273.85,1124.67 -3273.85,1105.77 
+  "/>
+<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  837.881,1124.67 837.881,1105.77 
+  "/>
+<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  4949.61,1124.67 4949.61,1105.77 
+  "/>
+<path clip-path="url(#clip600)" d="M-3308.87 1199.74 L-3301.23 1199.74 L-3301.23 1173.37 L-3309.54 1175.04 L-3309.54 1170.78 L-3301.28 1169.11 L-3296.6 1169.11 L-3296.6 1199.74 L-3288.96 1199.74 L-3288.96 1203.67 L-3308.87 1203.67 L-3308.87 1199.74 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M-3269.52 1172.19 Q-3273.13 1172.19 -3274.96 1175.76 Q-3276.76 1179.3 -3276.76 1186.43 Q-3276.76 1193.54 -3274.96 1197.1 Q-3273.13 1200.64 -3269.52 1200.64 Q-3265.88 1200.64 -3264.08 1197.1 Q-3262.25 1193.54 -3262.25 1186.43 Q-3262.25 1179.3 -3264.08 1175.76 Q-3265.88 1172.19 -3269.52 1172.19 M-3269.52 1168.49 Q-3263.71 1168.49 -3260.65 1173.1 Q-3257.57 1177.68 -3257.57 1186.43 Q-3257.57 1195.16 -3260.65 1199.76 Q-3263.71 1204.35 -3269.52 1204.35 Q-3275.33 1204.35 -3278.41 1199.76 Q-3281.46 1195.16 -3281.46 1186.43 Q-3281.46 1177.68 -3278.41 1173.1 Q-3275.33 1168.49 -3269.52 1168.49 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M-3247.87 1150.69 Q-3250.8 1150.69 -3252.29 1153.58 Q-3253.76 1156.46 -3253.76 1162.25 Q-3253.76 1168.03 -3252.29 1170.92 Q-3250.8 1173.8 -3247.87 1173.8 Q-3244.92 1173.8 -3243.45 1170.92 Q-3241.96 1168.03 -3241.96 1162.25 Q-3241.96 1156.46 -3243.45 1153.58 Q-3244.92 1150.69 -3247.87 1150.69 M-3247.87 1147.68 Q-3243.15 1147.68 -3240.66 1151.42 Q-3238.16 1155.14 -3238.16 1162.25 Q-3238.16 1169.34 -3240.66 1173.09 Q-3243.15 1176.81 -3247.87 1176.81 Q-3252.59 1176.81 -3255.09 1173.09 Q-3257.57 1169.34 -3257.57 1162.25 Q-3257.57 1155.14 -3255.09 1151.42 Q-3252.59 1147.68 -3247.87 1147.68 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M803.325 1199.74 L810.964 1199.74 L810.964 1173.37 L802.654 1175.04 L802.654 1170.78 L810.918 1169.11 L815.593 1169.11 L815.593 1199.74 L823.232 1199.74 L823.232 1203.67 L803.325 1203.67 L803.325 1199.74 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M842.677 1172.19 Q839.066 1172.19 837.237 1175.76 Q835.431 1179.3 835.431 1186.43 Q835.431 1193.54 837.237 1197.1 Q839.066 1200.64 842.677 1200.64 Q846.311 1200.64 848.116 1197.1 Q849.945 1193.54 849.945 1186.43 Q849.945 1179.3 848.116 1175.76 Q846.311 1172.19 842.677 1172.19 M842.677 1168.49 Q848.487 1168.49 851.542 1173.1 Q854.621 1177.68 854.621 1186.43 Q854.621 1195.16 851.542 1199.76 Q848.487 1204.35 842.677 1204.35 Q836.866 1204.35 833.788 1199.76 Q830.732 1195.16 830.732 1186.43 Q830.732 1177.68 833.788 1173.1 Q836.866 1168.49 842.677 1168.49 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M867.316 1161.12 Q870.043 1161.71 871.567 1163.55 Q873.109 1165.39 873.109 1168.1 Q873.109 1172.26 870.25 1174.53 Q867.391 1176.81 862.125 1176.81 Q860.357 1176.81 858.477 1176.45 Q856.615 1176.11 854.621 1175.42 L854.621 1171.75 Q856.201 1172.67 858.082 1173.14 Q859.962 1173.61 862.012 1173.61 Q865.586 1173.61 867.448 1172.2 Q869.329 1170.79 869.329 1168.1 Q869.329 1165.62 867.58 1164.23 Q865.849 1162.82 862.746 1162.82 L859.473 1162.82 L859.473 1159.69 L862.896 1159.69 Q865.699 1159.69 867.185 1158.58 Q868.67 1157.46 868.67 1155.35 Q868.67 1153.19 867.128 1152.04 Q865.605 1150.87 862.746 1150.87 Q861.185 1150.87 859.398 1151.21 Q857.611 1151.55 855.467 1152.26 L855.467 1148.88 Q857.63 1148.28 859.511 1147.98 Q861.411 1147.68 863.085 1147.68 Q867.41 1147.68 869.931 1149.65 Q872.451 1151.61 872.451 1154.95 Q872.451 1157.29 871.115 1158.9 Q869.78 1160.5 867.316 1161.12 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M4914.61 1199.74 L4922.25 1199.74 L4922.25 1173.37 L4913.94 1175.04 L4913.94 1170.78 L4922.2 1169.11 L4926.88 1169.11 L4926.88 1199.74 L4934.51 1199.74 L4934.51 1203.67 L4914.61 1203.67 L4914.61 1199.74 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M4953.96 1172.19 Q4950.35 1172.19 4948.52 1175.76 Q4946.71 1179.3 4946.71 1186.43 Q4946.71 1193.54 4948.52 1197.1 Q4950.35 1200.64 4953.96 1200.64 Q4957.59 1200.64 4959.4 1197.1 Q4961.23 1193.54 4961.23 1186.43 Q4961.23 1179.3 4959.4 1175.76 Q4957.59 1172.19 4953.96 1172.19 M4953.96 1168.49 Q4959.77 1168.49 4962.82 1173.1 Q4965.9 1177.68 4965.9 1186.43 Q4965.9 1195.16 4962.82 1199.76 Q4959.77 1204.35 4953.96 1204.35 Q4948.15 1204.35 4945.07 1199.76 Q4942.01 1195.16 4942.01 1186.43 Q4942.01 1177.68 4945.07 1173.1 Q4948.15 1168.49 4953.96 1168.49 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M4975.93 1160.71 Q4973.37 1160.71 4971.86 1162.46 Q4970.38 1164.21 4970.38 1167.25 Q4970.38 1170.28 4971.86 1172.05 Q4973.37 1173.8 4975.93 1173.8 Q4978.49 1173.8 4979.97 1172.05 Q4981.48 1170.28 4981.48 1167.25 Q4981.48 1164.21 4979.97 1162.46 Q4978.49 1160.71 4975.93 1160.71 M4983.47 1148.8 L4983.47 1152.26 Q4982.04 1151.59 4980.57 1151.23 Q4979.12 1150.87 4977.7 1150.87 Q4973.93 1150.87 4971.94 1153.41 Q4969.97 1155.95 4969.68 1161.09 Q4970.79 1159.45 4972.47 1158.58 Q4974.14 1157.7 4976.15 1157.7 Q4980.38 1157.7 4982.83 1160.28 Q4985.29 1162.83 4985.29 1167.25 Q4985.29 1171.58 4982.74 1174.19 Q4980.18 1176.81 4975.93 1176.81 Q4971.06 1176.81 4968.48 1173.09 Q4965.9 1169.34 4965.9 1162.25 Q4965.9 1155.59 4969.06 1151.64 Q4972.22 1147.68 4977.54 1147.68 Q4978.97 1147.68 4980.42 1147.96 Q4981.89 1148.24 4983.47 1148.8 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><g clip-path="url(#clip600)">
+<image width="36" height="30" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAABuUlEQVRYhbVYW4GEMAyMBDRUAhoq
+AQ1IQAMS0FAJaEACGmph7uOue21I+trykR+aHSaZSVuWABAP7z2stSAiGGPgnIOUp8W2bZjnGUSE
+aZpgrcV5nlUY8kMi8Ni2rQh4nufjd3Gs61rEUMlc1wUAtCxLAiqBXNeV5BzH8cnz3sMYk6zf960S
+E8nkOmatTdZjaXKVBwvkCksIhXZLWvMKw/NpmkBE1R6LMbQCit2JuxDCOfcxrfe+2vDcU0VCmulC
+J3gEnw0ntO97XtfOiSnhSAUV5dIItZKRcKRp+yQaY8SX8JFu9U2zZN57dbogGLq3O1JhqodyYzvC
+O8BzHypOWS2hUXIty9JOSDqbesi0FJYFGeWfsK00HR1v+ofjaBPdTGiUf6pP+zf80yJXltAo/3CM
+eZ77CHGgmhvjt7I75971z7qu1V0+juM3R2X6glzaZpjkSov8hthDKJyR1Wb+I1xVWc/+wz8OcoSC
+tNBMPcI//JaZGwqi/zv2a/7hsmtFxd0RCY3wD/DcEHM+iy1RlKt3/+FYGhn+OVQk1EsGSI+f8OL4
+fwMJPytZ7+kex33fDwsQEfZ9F7F/AEI9aqd2YHXbAAAAAElFTkSuQmCC
+" transform="translate(1080, 1227)"/>
+</g>
+<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  244.116,804.001 1952.76,804.001 
+  "/>
+<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  244.116,395.945 1952.76,395.945 
+  "/>
+<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  244.116,1124.67 244.116,107.256 
+  "/>
+<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  244.116,804.001 263.014,804.001 
+  "/>
+<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  244.116,395.945 263.014,395.945 
+  "/>
+<path clip-path="url(#clip600)" d="M113.976 823.793 L121.615 823.793 L121.615 797.428 L113.305 799.094 L113.305 794.835 L121.569 793.169 L126.245 793.169 L126.245 823.793 L133.883 823.793 L133.883 827.729 L113.976 827.729 L113.976 823.793 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M153.328 796.247 Q149.717 796.247 147.888 799.812 Q146.082 803.354 146.082 810.483 Q146.082 817.59 147.888 821.154 Q149.717 824.696 153.328 824.696 Q156.962 824.696 158.768 821.154 Q160.596 817.59 160.596 810.483 Q160.596 803.354 158.768 799.812 Q156.962 796.247 153.328 796.247 M153.328 792.544 Q159.138 792.544 162.193 797.15 Q165.272 801.733 165.272 810.483 Q165.272 819.21 162.193 823.817 Q159.138 828.4 153.328 828.4 Q147.518 828.4 144.439 823.817 Q141.383 819.21 141.383 810.483 Q141.383 801.733 144.439 797.15 Q147.518 792.544 153.328 792.544 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M165.272 786.645 L189.384 786.645 L189.384 789.842 L165.272 789.842 L165.272 786.645 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M200.856 797.121 L214.116 797.121 L214.116 800.318 L196.286 800.318 L196.286 797.121 Q198.449 794.883 202.173 791.121 Q205.916 787.341 206.875 786.25 Q208.699 784.2 209.414 782.789 Q210.147 781.36 210.147 779.987 Q210.147 777.749 208.568 776.338 Q207.007 774.928 204.486 774.928 Q202.7 774.928 200.706 775.548 Q198.731 776.169 196.474 777.429 L196.474 773.592 Q198.769 772.671 200.762 772.201 Q202.756 771.73 204.411 771.73 Q208.775 771.73 211.37 773.912 Q213.965 776.094 213.965 779.742 Q213.965 781.473 213.307 783.034 Q212.668 784.576 210.956 786.683 Q210.486 787.228 207.966 789.842 Q205.446 792.438 200.856 797.121 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M113.675 415.738 L121.314 415.738 L121.314 389.372 L113.004 391.039 L113.004 386.779 L121.268 385.113 L125.944 385.113 L125.944 415.738 L133.583 415.738 L133.583 419.673 L113.675 419.673 L113.675 415.738 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M153.027 388.191 Q149.416 388.191 147.587 391.756 Q145.782 395.298 145.782 402.427 Q145.782 409.534 147.587 413.099 Q149.416 416.64 153.027 416.64 Q156.661 416.64 158.467 413.099 Q160.295 409.534 160.295 402.427 Q160.295 395.298 158.467 391.756 Q156.661 388.191 153.027 388.191 M153.027 384.488 Q158.837 384.488 161.893 389.094 Q164.971 393.678 164.971 402.427 Q164.971 411.154 161.893 415.761 Q158.837 420.344 153.027 420.344 Q147.217 420.344 144.138 415.761 Q141.082 411.154 141.082 402.427 Q141.082 393.678 144.138 389.094 Q147.217 384.488 153.027 384.488 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M164.971 378.589 L189.083 378.589 L189.083 381.786 L164.971 381.786 L164.971 378.589 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M197.941 389.065 L204.148 389.065 L204.148 367.643 L197.396 368.997 L197.396 365.537 L204.11 364.182 L207.909 364.182 L207.909 389.065 L214.116 389.065 L214.116 392.262 L197.941 392.262 L197.941 389.065 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><g clip-path="url(#clip600)">
+<text style="fill:#000000; fill-opacity:1; font-family:Arial,Helvetica Neue,Helvetica,sans-serif; font-size:66px; text-anchor:middle;" transform="rotate(-90, 71.4418, 615.961)" x="71.4418" y="615.961">elapsed time (sec)</text>
+</g>
+<g clip-path="url(#clip600)">
+<text style="fill:#000000; fill-opacity:1; font-family:Arial,Helvetica Neue,Helvetica,sans-serif; font-size:66px; text-anchor:middle;" transform="rotate(0, 1098.44, 57.6)" x="1098.44" y="57.6">Timing of matrix-vector multiplications</text>
+</g>
+<circle clip-path="url(#clip602)" cx="292.474" cy="1076.08" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="533.82" cy="976.224" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="705.059" cy="849.192" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="837.881" cy="730.528" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="946.405" cy="627.015" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1038.16" cy="578.823" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1117.64" cy="523.525" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1187.75" cy="508.117" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1250.47" cy="474.603" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1307.2" cy="440.438" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1358.99" cy="417.618" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1406.63" cy="383.253" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1450.75" cy="363.746" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1491.81" cy="343.444" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1530.23" cy="329.554" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1566.31" cy="309.432" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1600.34" cy="304.124" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1632.52" cy="282.397" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1663.05" cy="275.541" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1692.09" cy="260.92" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1719.78" cy="226.913" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1746.24" cy="234.703" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1771.58" cy="218.405" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1795.87" cy="205.869" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1819.22" cy="192.053" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1841.68" cy="174.94" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1863.33" cy="166.574" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1884.22" cy="154.95" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip602)" cx="1904.4" cy="136.051" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<polyline clip-path="url(#clip602)" style="stroke:#e26f46; stroke-linecap:butt; stroke-linejoin:round; stroke-width:8; stroke-opacity:1; fill:none" stroke-dasharray="32, 20" points="
+  292.474,1095.87 533.82,952.162 705.059,850.198 837.881,771.109 946.405,706.488 1038.16,651.852 1117.64,604.524 1187.75,562.778 1250.47,525.435 1307.2,491.654 
+  1358.99,460.814 1406.63,432.444 1450.75,406.178 1491.81,381.725 1530.23,358.85 1566.31,337.363 1600.34,317.104 1632.52,297.941 1663.05,279.761 1692.09,262.468 
+  1719.78,245.98 1746.24,230.224 1771.58,215.14 1795.87,200.671 1819.22,186.77 1841.68,173.394 1863.33,160.504 1884.22,148.066 1904.4,136.051 
+  "/>
+<path clip-path="url(#clip600)" d="
+M301.071 296.69 L616.525 296.69 L616.525 141.17 L301.071 141.17  Z
+  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  301.071,296.69 616.525,296.69 616.525,141.17 301.071,141.17 301.071,296.69 
+  "/>
+<circle clip-path="url(#clip600)" cx="377.01" cy="193.01" r="23" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="5.46133"/>
+<path clip-path="url(#clip600)" d="M471.862 188.299 L471.862 174.271 L476.121 174.271 L476.121 210.29 L471.862 210.29 L471.862 206.401 Q470.519 208.716 468.459 209.85 Q466.422 210.961 463.551 210.961 Q458.852 210.961 455.89 207.211 Q452.95 203.461 452.95 197.35 Q452.95 191.239 455.89 187.489 Q458.852 183.739 463.551 183.739 Q466.422 183.739 468.459 184.873 Q470.519 185.984 471.862 188.299 M457.348 197.35 Q457.348 202.049 459.269 204.734 Q461.214 207.396 464.593 207.396 Q467.973 207.396 469.917 204.734 Q471.862 202.049 471.862 197.35 Q471.862 192.651 469.917 189.989 Q467.973 187.304 464.593 187.304 Q461.214 187.304 459.269 189.989 Q457.348 192.651 457.348 197.35 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M496.676 197.257 Q491.514 197.257 489.524 198.438 Q487.533 199.618 487.533 202.466 Q487.533 204.734 489.014 206.077 Q490.519 207.396 493.088 207.396 Q496.63 207.396 498.76 204.896 Q500.912 202.373 500.912 198.206 L500.912 197.257 L496.676 197.257 M505.172 195.498 L505.172 210.29 L500.912 210.29 L500.912 206.354 Q499.454 208.716 497.278 209.85 Q495.102 210.961 491.954 210.961 Q487.973 210.961 485.612 208.739 Q483.274 206.493 483.274 202.743 Q483.274 198.368 486.19 196.146 Q489.13 193.924 494.94 193.924 L500.912 193.924 L500.912 193.507 Q500.912 190.567 498.968 188.97 Q497.047 187.35 493.551 187.35 Q491.329 187.35 489.223 187.882 Q487.116 188.415 485.172 189.48 L485.172 185.544 Q487.51 184.642 489.709 184.202 Q491.908 183.739 493.991 183.739 Q499.616 183.739 502.394 186.655 Q505.172 189.572 505.172 195.498 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M518.158 177.003 L518.158 184.364 L526.931 184.364 L526.931 187.674 L518.158 187.674 L518.158 201.748 Q518.158 204.919 519.014 205.822 Q519.894 206.725 522.556 206.725 L526.931 206.725 L526.931 210.29 L522.556 210.29 Q517.625 210.29 515.75 208.461 Q513.875 206.609 513.875 201.748 L513.875 187.674 L510.75 187.674 L510.75 184.364 L513.875 184.364 L513.875 177.003 L518.158 177.003 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M544.315 197.257 Q539.153 197.257 537.162 198.438 Q535.171 199.618 535.171 202.466 Q535.171 204.734 536.653 206.077 Q538.158 207.396 540.727 207.396 Q544.269 207.396 546.398 204.896 Q548.551 202.373 548.551 198.206 L548.551 197.257 L544.315 197.257 M552.81 195.498 L552.81 210.29 L548.551 210.29 L548.551 206.354 Q547.093 208.716 544.917 209.85 Q542.741 210.961 539.593 210.961 Q535.611 210.961 533.25 208.739 Q530.912 206.493 530.912 202.743 Q530.912 198.368 533.829 196.146 Q536.769 193.924 542.579 193.924 L548.551 193.924 L548.551 193.507 Q548.551 190.567 546.607 188.97 Q544.685 187.35 541.19 187.35 Q538.968 187.35 536.861 187.882 Q534.755 188.415 532.81 189.48 L532.81 185.544 Q535.148 184.642 537.347 184.202 Q539.546 183.739 541.63 183.739 Q547.255 183.739 550.033 186.655 Q552.81 189.572 552.81 195.498 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><polyline clip-path="url(#clip600)" style="stroke:#e26f46; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" stroke-dasharray="16, 10" points="
+  320.055,244.85 433.965,244.85 
+  "/>
+<path clip-path="url(#clip600)" d="M486.116 236.243 Q486.116 239.592 484.921 242.918 Q483.75 246.221 481.689 248.938 Q479.628 251.655 477.005 253.763 Q474.381 255.871 471.313 257.042 Q468.245 258.213 465.246 258.213 Q459.93 258.213 456.44 254.723 Q452.95 251.233 452.95 245.401 Q452.95 241.325 454.777 237.273 Q456.604 233.198 459.508 230.176 Q462.412 227.131 466.23 225.234 Q470.072 223.337 473.866 223.337 Q479.253 223.337 482.673 226.92 Q486.116 230.481 486.116 236.243 M481.83 234.369 Q481.83 231.792 481.103 229.848 Q480.377 227.881 479.159 226.756 Q477.965 225.632 476.536 225.093 Q475.131 224.531 473.585 224.531 Q470.587 224.531 467.378 226.475 Q464.169 228.419 461.78 232.027 Q460.492 233.994 459.555 236.36 Q458.618 238.702 458.196 240.787 Q457.775 242.848 457.587 244.3 Q457.423 245.752 457.423 246.759 Q457.423 251.444 459.672 254.208 Q461.92 256.971 465.528 256.971 Q468.362 256.971 471.126 255.308 Q473.889 253.622 475.787 251.21 Q477.473 249.125 478.714 246.619 Q479.979 244.113 480.612 241.817 Q481.244 239.522 481.525 237.671 Q481.83 235.821 481.83 234.369 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M492.452 245.167 Q492.452 237.062 495.473 230.528 Q496.761 227.787 498.565 225.492 Q500.368 223.196 501.563 222.189 Q502.758 221.182 503.085 221.182 Q503.554 221.182 503.577 221.65 Q503.577 221.885 502.945 222.47 Q495.216 230.34 495.239 245.167 Q495.239 260.04 502.758 267.605 Q503.577 268.425 503.577 268.683 Q503.577 269.151 503.085 269.151 Q502.758 269.151 501.61 268.191 Q500.462 267.23 498.682 265.029 Q496.902 262.827 495.614 260.133 Q492.452 253.599 492.452 245.167 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M536.871 250.296 Q536.871 250.483 536.66 251.21 Q536.45 251.936 535.934 253.06 Q535.442 254.184 534.763 255.215 Q534.084 256.222 532.96 256.971 Q531.859 257.698 530.594 257.698 Q528.908 257.698 527.783 256.573 Q526.659 255.449 526.659 253.763 Q526.659 252.826 527.151 251.537 Q530.266 243.222 530.266 240.365 Q530.266 237.016 527.666 237.016 Q526.378 237.016 525.16 237.507 Q523.965 237.976 523.146 238.632 Q522.326 239.287 521.576 240.201 Q520.85 241.091 520.475 241.7 Q520.124 242.286 519.843 242.871 L519.234 245.26 Q519.094 245.916 518.414 248.469 L517.36 252.802 Q516.611 256.035 516.447 256.339 Q516.213 256.995 515.697 257.346 Q515.182 257.698 514.667 257.698 Q514.081 257.698 513.683 257.346 Q513.285 256.995 513.285 256.386 Q513.285 256.292 513.355 255.941 Q513.425 255.59 513.542 255.098 Q513.66 254.606 513.706 254.325 L516.494 243.246 Q517.009 241.232 517.126 240.599 Q517.267 239.943 517.267 239.217 Q517.267 237.016 515.768 237.016 Q514.55 237.016 513.753 238.468 Q512.957 239.92 512.278 242.731 Q512.067 243.504 511.926 243.667 Q511.809 243.831 511.458 243.831 Q510.872 243.808 510.872 243.34 Q510.872 243.222 511.06 242.45 Q511.247 241.677 511.598 240.576 Q511.973 239.451 512.324 238.702 Q512.629 238.14 512.793 237.882 Q512.98 237.601 513.425 237.062 Q513.894 236.5 514.503 236.243 Q515.135 235.962 515.908 235.962 Q517.641 235.962 518.906 237.086 Q520.171 238.187 520.335 240.131 Q523.45 235.962 527.807 235.962 Q530.383 235.962 531.859 237.32 Q533.334 238.679 533.334 241.091 Q533.334 241.653 533.217 242.379 Q533.124 243.082 532.889 243.972 Q532.679 244.862 532.491 245.541 Q532.304 246.221 531.929 247.321 Q531.554 248.399 531.39 248.867 Q531.226 249.336 530.828 250.437 Q530.453 251.514 530.407 251.631 Q529.54 253.809 529.54 255.051 Q529.54 255.871 529.798 256.245 Q530.079 256.62 530.688 256.62 Q532.327 256.62 533.545 255.004 Q534.787 253.364 535.583 250.694 Q535.77 250.109 535.864 249.968 Q535.981 249.828 536.309 249.828 Q536.871 249.828 536.871 250.296 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M541.734 242.814 Q541.734 242.207 541.784 242.027 Q541.849 241.846 542.112 241.568 L548.555 234.386 Q552.08 230.419 552.08 226.959 Q552.08 224.713 550.9 223.106 Q549.736 221.499 547.588 221.499 Q546.112 221.499 544.866 222.401 Q543.62 223.303 543.046 224.91 Q543.144 224.877 543.489 224.877 Q544.325 224.877 544.784 225.402 Q545.26 225.926 545.26 226.631 Q545.26 227.533 544.669 227.976 Q544.095 228.402 543.522 228.402 Q543.292 228.402 542.98 228.353 Q542.685 228.304 542.21 227.844 Q541.734 227.369 541.734 226.533 Q541.734 224.188 543.505 222.319 Q545.292 220.45 548.014 220.45 Q551.096 220.45 553.113 222.286 Q555.146 224.106 555.146 226.959 Q555.146 227.959 554.835 228.877 Q554.539 229.779 554.13 230.484 Q553.736 231.189 552.654 232.321 Q551.572 233.452 550.703 234.255 Q549.834 235.059 547.883 236.764 L544.325 240.223 L550.375 240.223 Q553.326 240.223 553.556 239.961 Q553.884 239.485 554.294 236.977 L555.146 236.977 L554.195 242.814 L541.734 242.814 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M560.134 268.683 Q560.134 268.448 560.743 267.863 Q568.473 259.993 568.473 245.167 Q568.473 230.293 561.048 222.775 Q560.134 221.908 560.134 221.65 Q560.134 221.182 560.603 221.182 Q560.931 221.182 562.078 222.142 Q563.25 223.103 565.006 225.304 Q566.786 227.506 568.098 230.2 Q571.26 236.734 571.26 245.167 Q571.26 253.271 568.239 259.806 Q566.95 262.546 565.147 264.841 Q563.343 267.137 562.149 268.144 Q560.954 269.151 560.603 269.151 Q560.134 269.151 560.134 268.683 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /></svg>
+</div></div>
+</div>
+</div></div>
+<div class="section" id="solution-of-linear-systems">
+<h2>Solution of linear systems<a class="headerlink" href="#solution-of-linear-systems" title="Permalink to this headline">¶</a></h2>
+<p>Recall the steps of <a class="reference internal" href="lu.html#algorithm-lu-solve"><span class="std std-numref">Algorithm 2.4.7</span></a> for the system <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\mathbf{b}\)</span>:</p>
+<ol class="simple">
+<li><p>Factor <span class="math notranslate nohighlight">\(\mathbf{L}\mathbf{U}=\mathbf{A}\)</span> using Gaussian elimination.</p></li>
+<li><p>Solve <span class="math notranslate nohighlight">\(\mathbf{L}\mathbf{z}=\mathbf{b}\)</span> for <span class="math notranslate nohighlight">\(\mathbf{z}\)</span> using forward substitution.</p></li>
+<li><p>Solve <span class="math notranslate nohighlight">\(\mathbf{U}\mathbf{x}=\mathbf{z}\)</span> for <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> using backward substitution.</p></li>
+</ol>
+<p>The second and third steps are solved by <a class="reference internal" href="linear-systems.html#function-forwardsub"><span class="std std-numref">Function 2.3.4</span></a> and <a class="reference internal" href="linear-systems.html#function-backsub"><span class="std std-numref">Function 2.3.5</span></a>. Only one line in each of these functions performs any arithmetic. Take <code class="docutils literal notranslate"><span class="pre">forwardsub</span></code>, for instance. It has a single flop in line 11.  Line 13 computes</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum</span><span class="p">(</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>This line requires <span class="math notranslate nohighlight">\(i-1\)</span> multiplications and <span class="math notranslate nohighlight">\((i-2)\)</span> additions, for a total of <span class="math notranslate nohighlight">\(2i-3\)</span> flops. Line 14 adds two more flops. These lines are performed within a loop as <span class="math notranslate nohighlight">\(i\)</span> ranges from 1 to <span class="math notranslate nohighlight">\(n\)</span>, so the total count is</p>
+<div class="math notranslate nohighlight" id="equation-trisolveflops">
+<span class="eqno">(2.5.3)<a class="headerlink" href="#equation-trisolveflops" title="Permalink to this equation">¶</a></span>\[  1 + \sum_{i=1}^n (2i-3) = 1 - 3n + 2 \sum_{i=1}^n i.\]</div>
+<p>It is not hard to find an exact formula for the sum, but we use <a class="reference internal" href="#equation-sumflops">(2.5.1)</a> to simplify it to <span class="math notranslate nohighlight">\(\sim n^2\)</span>.<a class="footnote-reference brackets" href="#useasymp" id="id2">2</a> An analysis of backward substitution yields the same result.</p>
+<div class="proof proof-type-lemma" id="id9">
+<div class="proof-title"> <span class="proof-type">Lemma 2.5.7</span>  </div><div class="proof-content">
+<p>Solving a triangular <span class="math notranslate nohighlight">\(n\times n\)</span> system by forward or backward substitution takes <span class="math notranslate nohighlight">\(\sim n^2\)</span> flops asymptotically.</p>
+</div></div><p>Before counting flops for the LU factorization, we have to admit that <a class="reference internal" href="lu.html#function-lufact"><span class="std std-numref">Function 2.4.6</span></a> is not written as economically as it could be. Recall from our motivating example in <a class="reference internal" href="lu.html#demo-lu-derive"><span class="std std-numref">Demo 2.4.4</span></a> that we zero out the first row and column of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> with the first outer product, the second row and column with the second outer product, and so on. There is no good reason to do multiplications and additions with values known to be zero, so we could replace lines 15–19 of <code class="docutils literal notranslate"><span class="pre">lufact</span></code> with</p>
+<div class="highlight-julia notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">U</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="o">:</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">Aₖ</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="o">:</span><span class="n">n</span><span class="p">]</span>
+    <span class="n">L</span><span class="p">[</span><span class="n">k</span><span class="o">:</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">Aₖ</span><span class="p">[</span><span class="n">k</span><span class="o">:</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">]</span><span class="o">/</span><span class="n">U</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="p">]</span>
+    <span class="n">Aₖ</span><span class="p">[</span><span class="n">k</span><span class="o">:</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="o">:</span><span class="n">n</span><span class="p">]</span> <span class="o">-=</span> <span class="n">L</span><span class="p">[</span><span class="n">k</span><span class="o">:</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">U</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">k</span><span class="o">:</span><span class="n">n</span><span class="p">]</span><span class="o">&#39;</span>
+<span class="k">end</span>
+</pre></div>
+</td></tr></table></div>
+<p>We will use the following handy fact.</p>
+<div class="proof proof-type-observation" id="id10">
+<div class="proof-title"> <span class="proof-type">Observation 2.5.8</span>  </div><div class="proof-content">
+<p>The range <code class="docutils literal notranslate"><span class="pre">k:n</span></code>, where <span class="math notranslate nohighlight">\(k\le n\)</span>, has <span class="math notranslate nohighlight">\(n-k+1\)</span> elements.</p>
+</div></div><p>Line 17 above divides the each element of the vector <code class="docutils literal notranslate"><span class="pre">Aₖ[k:n,k]</span></code> by a scalar. Hence the number of flops equals the length of the vector, which is <span class="math notranslate nohighlight">\(n-k+1\)</span>.</p>
+<p>Line 18 has an outer product, followed by a matrix subtraction. The definition <a class="reference internal" href="../appendix/linear-algebra.html#equation-def-outerprod">(1)</a> of the outer product makes it clear that that computation takes one flop (multiplication) per element of the result, which here results in <span class="math notranslate nohighlight">\((n-k+1)^2\)</span> flops. The number of subtractions is identical.</p>
+<p>Altogether the factorization takes</p>
+<div class="math notranslate nohighlight" id="equation-gecount1">
+<span class="eqno">(2.5.4)<a class="headerlink" href="#equation-gecount1" title="Permalink to this equation">¶</a></span>\[\sum_{k=1}^{n-1} n-k + 1 + 2(n-k+1)^2.\]</div>
+<p>There are different ways to simplify this expression. We will make a change of summation index using <span class="math notranslate nohighlight">\(j=n-k\)</span>. The endpoints of the sum are <span class="math notranslate nohighlight">\(j=n-1\)</span> when <span class="math notranslate nohighlight">\(k=1\)</span> and <span class="math notranslate nohighlight">\(j=1\)</span> when <span class="math notranslate nohighlight">\(k=n-1\)</span>. Since the order of terms in a sum doesn’t matter, we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sum_{j=1}^{n-1} 1+j+2(j+1)^2 &amp;=  \sum_{j=1}^{n-1} 3 + 5j + 2j^2 \\
+  &amp; \sim  3(n-1) + \frac{5}{2}(n-1)^2 \frac{2}{3}(n-1)^3 \\
+  &amp; \sim \frac{2}{3}n^3.\end{split}\]</div>
+<p>We have proved the following.</p>
+<div class="proof proof-type-theorem" id="id11">
+<div class="proof-title"> <span class="proof-type">Theorem 2.5.9</span>  <span class="proof-title-name">: &nbsp;Efficiency of LU factorization</span>  </div><div class="proof-content">
+<p>The LU factorization of an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix takes <span class="math notranslate nohighlight">\(\sim\frac{2}{3}n^3\)</span> flops as <span class="math notranslate nohighlight">\(n\to \infty\)</span>. This dominates the flops for solving an <span class="math notranslate nohighlight">\(n\times n\)</span> linear system.</p>
+</div></div><div class="proof proof-type-demo" id="id12">
+<span id="demo-flops-lufact"></span><div class="proof-title"> <span class="proof-type">Demo 2.5.10</span>  </div><div class="proof-content">
+</div></div><div class='demo'><div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-7 left-side docutils">
+<div class="card w-100 border-0 shadow-none docutils">
+<div class="card-body docutils">
+<p class="card-text">We’ll test the conclusion of <span class="math notranslate nohighlight">\(O(n^3)\)</span> flops experimentally, using the built-in <code class="docutils literal notranslate"><span class="pre">lu</span></code> function instead of the purely instructive <code class="docutils literal notranslate"><span class="pre">lufact</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-5 right-side docutils">
+<div class="card w-100 shadow-none comment docutils">
+<div class="card-body docutils">
+<p class="card-text">The first time a function is invoked, there may be significant time needed to compile it in memory. Thus, when timing a function, run it at least once before beginning the timing.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">lu</span><span class="p">(</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span>   <span class="c"># throwaway to force compilation</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">400</span><span class="o">:</span><span class="mi">400</span><span class="o">:</span><span class="mi">4000</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="n">n</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>  
+    <span class="n">time</span> <span class="o">=</span> <span class="nd">@elapsed</span> <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">12</span><span class="p">;</span> <span class="n">lu</span><span class="p">(</span><span class="n">A</span><span class="p">);</span> <span class="k">end</span>
+    <span class="n">push!</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">time</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We plot the timings on a log-log graph and compare it to <span class="math notranslate nohighlight">\(O(n^3)\)</span>. The result could vary significantly from machine to machine, but in theory the data should start to parallel the line as <span class="math notranslate nohighlight">\(n\to\infty\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;data&quot;</span><span class="p">,</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="p">(</span><span class="ss">:log10</span><span class="p">,</span><span class="sa">L</span><span class="s">&quot;n&quot;</span><span class="p">),</span> <span class="n">yaxis</span><span class="o">=</span><span class="p">(</span><span class="ss">:log10</span><span class="p">,</span><span class="s">&quot;elapsed time&quot;</span><span class="p">),</span><span class="n">legend</span><span class="o">=</span><span class="ss">:topleft</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="k">end</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="n">n</span><span class="p">[</span><span class="k">end</span><span class="p">])</span><span class="o">.^</span><span class="mi">3</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="ss">:dash</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;O(n^3)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="320" viewBox="0 0 2000 1280">
+<defs>
+  <clipPath id="clip690">
+    <rect x="0" y="0" width="2000" height="1280"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip690)" d="
+M0 1280 L2000 1280 L2000 0 L0 0  Z
+  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<defs>
+  <clipPath id="clip691">
+    <rect x="400" y="0" width="1401" height="1280"/>
+  </clipPath>
+</defs>
+<defs>
+  <clipPath id="clip692">
+    <rect x="243" y="47" width="1710" height="1078"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip690)" d="
+M243.815 1124.67 L1952.76 1124.67 L1952.76 47.2441 L243.815 47.2441  Z
+  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<polyline clip-path="url(#clip692)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  -3902.88,1124.67 -3902.88,47.2441 
+  "/>
+<polyline clip-path="url(#clip692)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  933.743,1124.67 933.743,47.2441 
+  "/>
+<polyline clip-path="url(#clip692)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  5770.37,1124.67 5770.37,47.2441 
+  "/>
+<polyline clip-path="url(#clip690)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  243.815,1124.67 1952.76,1124.67 
+  "/>
+<polyline clip-path="url(#clip690)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  -3902.88,1124.67 -3902.88,1105.77 
+  "/>
+<polyline clip-path="url(#clip690)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  933.743,1124.67 933.743,1105.77 
+  "/>
+<polyline clip-path="url(#clip690)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  5770.37,1124.67 5770.37,1105.77 
+  "/>
+<path clip-path="url(#clip690)" d="M-3937.9 1199.74 L-3930.26 1199.74 L-3930.26 1173.37 L-3938.57 1175.04 L-3938.57 1170.78 L-3930.31 1169.11 L-3925.63 1169.11 L-3925.63 1199.74 L-3917.99 1199.74 L-3917.99 1203.67 L-3937.9 1203.67 L-3937.9 1199.74 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M-3898.55 1172.19 Q-3902.16 1172.19 -3903.99 1175.76 Q-3905.79 1179.3 -3905.79 1186.43 Q-3905.79 1193.54 -3903.99 1197.1 Q-3902.16 1200.64 -3898.55 1200.64 Q-3894.91 1200.64 -3893.11 1197.1 Q-3891.28 1193.54 -3891.28 1186.43 Q-3891.28 1179.3 -3893.11 1175.76 Q-3894.91 1172.19 -3898.55 1172.19 M-3898.55 1168.49 Q-3892.74 1168.49 -3889.68 1173.1 Q-3886.6 1177.68 -3886.6 1186.43 Q-3886.6 1195.16 -3889.68 1199.76 Q-3892.74 1204.35 -3898.55 1204.35 Q-3904.36 1204.35 -3907.44 1199.76 Q-3910.49 1195.16 -3910.49 1186.43 Q-3910.49 1177.68 -3907.44 1173.1 Q-3904.36 1168.49 -3898.55 1168.49 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M-3876.9 1150.69 Q-3879.83 1150.69 -3881.32 1153.58 Q-3882.78 1156.46 -3882.78 1162.25 Q-3882.78 1168.03 -3881.32 1170.92 Q-3879.83 1173.8 -3876.9 1173.8 Q-3873.95 1173.8 -3872.48 1170.92 Q-3870.99 1168.03 -3870.99 1162.25 Q-3870.99 1156.46 -3872.48 1153.58 Q-3873.95 1150.69 -3876.9 1150.69 M-3876.9 1147.68 Q-3872.18 1147.68 -3869.69 1151.42 Q-3867.19 1155.14 -3867.19 1162.25 Q-3867.19 1169.34 -3869.69 1173.09 Q-3872.18 1176.81 -3876.9 1176.81 Q-3881.62 1176.81 -3884.12 1173.09 Q-3886.6 1169.34 -3886.6 1162.25 Q-3886.6 1155.14 -3884.12 1151.42 Q-3881.62 1147.68 -3876.9 1147.68 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M899.187 1199.74 L906.826 1199.74 L906.826 1173.37 L898.516 1175.04 L898.516 1170.78 L906.78 1169.11 L911.456 1169.11 L911.456 1199.74 L919.094 1199.74 L919.094 1203.67 L899.187 1203.67 L899.187 1199.74 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M938.539 1172.19 Q934.928 1172.19 933.099 1175.76 Q931.293 1179.3 931.293 1186.43 Q931.293 1193.54 933.099 1197.1 Q934.928 1200.64 938.539 1200.64 Q942.173 1200.64 943.979 1197.1 Q945.807 1193.54 945.807 1186.43 Q945.807 1179.3 943.979 1175.76 Q942.173 1172.19 938.539 1172.19 M938.539 1168.49 Q944.349 1168.49 947.404 1173.1 Q950.483 1177.68 950.483 1186.43 Q950.483 1195.16 947.404 1199.76 Q944.349 1204.35 938.539 1204.35 Q932.729 1204.35 929.65 1199.76 Q926.594 1195.16 926.594 1186.43 Q926.594 1177.68 929.65 1173.1 Q932.729 1168.49 938.539 1168.49 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M963.178 1161.12 Q965.905 1161.71 967.429 1163.55 Q968.971 1165.39 968.971 1168.1 Q968.971 1172.26 966.112 1174.53 Q963.254 1176.81 957.987 1176.81 Q956.219 1176.81 954.339 1176.45 Q952.477 1176.11 950.483 1175.42 L950.483 1171.75 Q952.063 1172.67 953.944 1173.14 Q955.825 1173.61 957.875 1173.61 Q961.448 1173.61 963.31 1172.2 Q965.191 1170.79 965.191 1168.1 Q965.191 1165.62 963.442 1164.23 Q961.711 1162.82 958.608 1162.82 L955.336 1162.82 L955.336 1159.69 L958.759 1159.69 Q961.561 1159.69 963.047 1158.58 Q964.533 1157.46 964.533 1155.35 Q964.533 1153.19 962.99 1152.04 Q961.467 1150.87 958.608 1150.87 Q957.047 1150.87 955.26 1151.21 Q953.474 1151.55 951.329 1152.26 L951.329 1148.88 Q953.492 1148.28 955.373 1147.98 Q957.273 1147.68 958.947 1147.68 Q963.272 1147.68 965.793 1149.65 Q968.313 1151.61 968.313 1154.95 Q968.313 1157.29 966.978 1158.9 Q965.642 1160.5 963.178 1161.12 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M5735.36 1199.74 L5743 1199.74 L5743 1173.37 L5734.69 1175.04 L5734.69 1170.78 L5742.95 1169.11 L5747.63 1169.11 L5747.63 1199.74 L5755.27 1199.74 L5755.27 1203.67 L5735.36 1203.67 L5735.36 1199.74 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M5774.71 1172.19 Q5771.1 1172.19 5769.27 1175.76 Q5767.47 1179.3 5767.47 1186.43 Q5767.47 1193.54 5769.27 1197.1 Q5771.1 1200.64 5774.71 1200.64 Q5778.35 1200.64 5780.15 1197.1 Q5781.98 1193.54 5781.98 1186.43 Q5781.98 1179.3 5780.15 1175.76 Q5778.35 1172.19 5774.71 1172.19 M5774.71 1168.49 Q5780.52 1168.49 5783.58 1173.1 Q5786.66 1177.68 5786.66 1186.43 Q5786.66 1195.16 5783.58 1199.76 Q5780.52 1204.35 5774.71 1204.35 Q5768.9 1204.35 5765.82 1199.76 Q5762.77 1195.16 5762.77 1186.43 Q5762.77 1177.68 5765.82 1173.1 Q5768.9 1168.49 5774.71 1168.49 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M5796.68 1160.71 Q5794.12 1160.71 5792.62 1162.46 Q5791.13 1164.21 5791.13 1167.25 Q5791.13 1170.28 5792.62 1172.05 Q5794.12 1173.8 5796.68 1173.8 Q5799.24 1173.8 5800.73 1172.05 Q5802.23 1170.28 5802.23 1167.25 Q5802.23 1164.21 5800.73 1162.46 Q5799.24 1160.71 5796.68 1160.71 M5804.22 1148.8 L5804.22 1152.26 Q5802.79 1151.59 5801.33 1151.23 Q5799.88 1150.87 5798.45 1150.87 Q5794.69 1150.87 5792.69 1153.41 Q5790.72 1155.95 5790.44 1161.09 Q5791.55 1159.45 5793.22 1158.58 Q5794.89 1157.7 5796.91 1157.7 Q5801.14 1157.7 5803.58 1160.28 Q5806.05 1162.83 5806.05 1167.25 Q5806.05 1171.58 5803.49 1174.19 Q5800.93 1176.81 5796.68 1176.81 Q5791.81 1176.81 5789.23 1173.09 Q5786.66 1169.34 5786.66 1162.25 Q5786.66 1155.59 5789.82 1151.64 Q5792.98 1147.68 5798.3 1147.68 Q5799.73 1147.68 5801.18 1147.96 Q5802.64 1148.24 5804.22 1148.8 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><g clip-path="url(#clip690)">
+<image width="36" height="30" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAYAAABE4bxTAAABuUlEQVRYhbVYW4GEMAyMBDRUAhoq
+AQ1IQAMS0FAJaEACGmph7uOue21I+trykR+aHSaZSVuWABAP7z2stSAiGGPgnIOUp8W2bZjnGUSE
+aZpgrcV5nlUY8kMi8Ni2rQh4nufjd3Gs61rEUMlc1wUAtCxLAiqBXNeV5BzH8cnz3sMYk6zf960S
+E8nkOmatTdZjaXKVBwvkCksIhXZLWvMKw/NpmkBE1R6LMbQCit2JuxDCOfcxrfe+2vDcU0VCmulC
+J3gEnw0ntO97XtfOiSnhSAUV5dIItZKRcKRp+yQaY8SX8JFu9U2zZN57dbogGLq3O1JhqodyYzvC
+O8BzHypOWS2hUXIty9JOSDqbesi0FJYFGeWfsK00HR1v+ofjaBPdTGiUf6pP+zf80yJXltAo/3CM
+eZ77CHGgmhvjt7I75971z7qu1V0+juM3R2X6glzaZpjkSov8hthDKJyR1Wb+I1xVWc/+wz8OcoSC
+tNBMPcI//JaZGwqi/zv2a/7hsmtFxd0RCY3wD/DcEHM+iy1RlKt3/+FYGhn+OVQk1EsGSI+f8OL4
+fwMJPytZ7+kex33fDwsQEfZ9F7F/AEI9aqd2YHXbAAAAAElFTkSuQmCC
+" transform="translate(1080, 1227)"/>
+</g>
+<polyline clip-path="url(#clip692)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  243.815,1075.58 1952.76,1075.58 
+  "/>
+<polyline clip-path="url(#clip692)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:2; stroke-opacity:0.1; fill:none" points="
+  243.815,397.951 1952.76,397.951 
+  "/>
+<polyline clip-path="url(#clip690)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  243.815,1124.67 243.815,47.2441 
+  "/>
+<polyline clip-path="url(#clip690)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  243.815,1075.58 262.713,1075.58 
+  "/>
+<polyline clip-path="url(#clip690)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  243.815,397.951 262.713,397.951 
+  "/>
+<path clip-path="url(#clip690)" d="M113.675 1095.37 L121.314 1095.37 L121.314 1069 L113.004 1070.67 L113.004 1066.41 L121.268 1064.74 L125.944 1064.74 L125.944 1095.37 L133.583 1095.37 L133.583 1099.3 L113.675 1099.3 L113.675 1095.37 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M153.027 1067.82 Q149.416 1067.82 147.587 1071.39 Q145.782 1074.93 145.782 1082.06 Q145.782 1089.16 147.587 1092.73 Q149.416 1096.27 153.027 1096.27 Q156.661 1096.27 158.467 1092.73 Q160.295 1089.16 160.295 1082.06 Q160.295 1074.93 158.467 1071.39 Q156.661 1067.82 153.027 1067.82 M153.027 1064.12 Q158.837 1064.12 161.893 1068.72 Q164.971 1073.31 164.971 1082.06 Q164.971 1090.78 161.893 1095.39 Q158.837 1099.97 153.027 1099.97 Q147.217 1099.97 144.138 1095.39 Q141.082 1090.78 141.082 1082.06 Q141.082 1073.31 144.138 1068.72 Q147.217 1064.12 153.027 1064.12 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M164.971 1058.22 L189.083 1058.22 L189.083 1061.42 L164.971 1061.42 L164.971 1058.22 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M200.556 1068.7 L213.815 1068.7 L213.815 1071.89 L195.985 1071.89 L195.985 1068.7 Q198.148 1066.46 201.872 1062.7 Q205.615 1058.92 206.574 1057.82 Q208.398 1055.77 209.113 1054.36 Q209.847 1052.93 209.847 1051.56 Q209.847 1049.32 208.267 1047.91 Q206.706 1046.5 204.185 1046.5 Q202.399 1046.5 200.405 1047.12 Q198.43 1047.74 196.173 1049 L196.173 1045.17 Q198.468 1044.25 200.461 1043.77 Q202.455 1043.3 204.11 1043.3 Q208.474 1043.3 211.069 1045.49 Q213.665 1047.67 213.665 1051.32 Q213.665 1053.05 213.006 1054.61 Q212.367 1056.15 210.655 1058.26 Q210.185 1058.8 207.665 1061.42 Q205.145 1064.01 200.556 1068.7 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M143.109 417.743 L150.748 417.743 L150.748 391.378 L142.438 393.044 L142.438 388.785 L150.702 387.119 L155.378 387.119 L155.378 417.743 L163.017 417.743 L163.017 421.679 L143.109 421.679 L143.109 417.743 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M182.461 390.197 Q178.85 390.197 177.021 393.762 Q175.216 397.304 175.216 404.433 Q175.216 411.54 177.021 415.105 Q178.85 418.646 182.461 418.646 Q186.095 418.646 187.901 415.105 Q189.729 411.54 189.729 404.433 Q189.729 397.304 187.901 393.762 Q186.095 390.197 182.461 390.197 M182.461 386.494 Q188.271 386.494 191.327 391.1 Q194.405 395.683 194.405 404.433 Q194.405 413.16 191.327 417.767 Q188.271 422.35 182.461 422.35 Q176.651 422.35 173.572 417.767 Q170.517 413.16 170.517 404.433 Q170.517 395.683 173.572 391.1 Q176.651 386.494 182.461 386.494 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M204.11 368.69 Q201.176 368.69 199.69 371.586 Q198.223 374.464 198.223 380.256 Q198.223 386.03 199.69 388.927 Q201.176 391.804 204.11 391.804 Q207.063 391.804 208.53 388.927 Q210.016 386.03 210.016 380.256 Q210.016 374.464 208.53 371.586 Q207.063 368.69 204.11 368.69 M204.11 365.68 Q208.831 365.68 211.314 369.423 Q213.815 373.147 213.815 380.256 Q213.815 387.347 211.314 391.09 Q208.831 394.814 204.11 394.814 Q199.389 394.814 196.888 391.09 Q194.405 387.347 194.405 380.256 Q194.405 373.147 196.888 369.423 Q199.389 365.68 204.11 365.68 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><g clip-path="url(#clip690)">
+<text style="fill:#000000; fill-opacity:1; font-family:Arial,Helvetica Neue,Helvetica,sans-serif; font-size:66px; text-anchor:middle;" transform="rotate(-90, 71.4418, 585.955)" x="71.4418" y="585.955">elapsed time</text>
+</g>
+<circle clip-path="url(#clip692)" cx="292.181" cy="489.024" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip692)" cx="777.504" cy="389.876" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip692)" cx="1061.4" cy="336.834" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip692)" cx="1262.83" cy="289.627" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip692)" cx="1419.07" cy="260.382" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip692)" cx="1546.72" cy="269.913" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip692)" cx="1654.66" cy="203.906" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip692)" cx="1748.15" cy="151.872" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip692)" cx="1830.62" cy="129.423" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<circle clip-path="url(#clip692)" cx="1904.39" cy="77.7372" r="10" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="2.56"/>
+<polyline clip-path="url(#clip692)" style="stroke:#e26f46; stroke-linecap:butt; stroke-linejoin:round; stroke-width:8; stroke-opacity:1; fill:none" stroke-dasharray="32, 20" points="
+  292.181,1094.17 777.504,788.196 1061.4,609.21 1262.83,482.218 1419.07,383.715 1546.72,303.232 1654.66,235.185 1748.15,176.24 1830.62,124.247 1904.39,77.7372 
+
+  "/>
+<path clip-path="url(#clip690)" d="
+M300.78 238.678 L616.787 238.678 L616.787 83.1582 L300.78 83.1582  Z
+  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<polyline clip-path="url(#clip690)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+  300.78,238.678 616.787,238.678 616.787,83.1582 300.78,83.1582 300.78,238.678 
+  "/>
+<circle clip-path="url(#clip690)" cx="376.733" cy="134.998" r="23" fill="#009af9" fill-rule="evenodd" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="5.46133"/>
+<path clip-path="url(#clip690)" d="M471.597 130.288 L471.597 116.26 L475.857 116.26 L475.857 152.278 L471.597 152.278 L471.597 148.389 Q470.255 150.704 468.195 151.838 Q466.158 152.949 463.287 152.949 Q458.588 152.949 455.625 149.199 Q452.686 145.45 452.686 139.338 Q452.686 133.227 455.625 129.477 Q458.588 125.727 463.287 125.727 Q466.158 125.727 468.195 126.862 Q470.255 127.973 471.597 130.288 M457.084 139.338 Q457.084 144.037 459.005 146.723 Q460.949 149.385 464.329 149.385 Q467.709 149.385 469.653 146.723 Q471.597 144.037 471.597 139.338 Q471.597 134.639 469.653 131.977 Q467.709 129.292 464.329 129.292 Q460.949 129.292 459.005 131.977 Q457.084 134.639 457.084 139.338 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M496.412 139.246 Q491.25 139.246 489.259 140.426 Q487.269 141.607 487.269 144.454 Q487.269 146.723 488.75 148.065 Q490.255 149.385 492.824 149.385 Q496.366 149.385 498.495 146.885 Q500.648 144.362 500.648 140.195 L500.648 139.246 L496.412 139.246 M504.908 137.487 L504.908 152.278 L500.648 152.278 L500.648 148.343 Q499.19 150.704 497.014 151.838 Q494.838 152.949 491.69 152.949 Q487.709 152.949 485.347 150.727 Q483.009 148.482 483.009 144.732 Q483.009 140.357 485.926 138.135 Q488.866 135.913 494.676 135.913 L500.648 135.913 L500.648 135.496 Q500.648 132.556 498.704 130.959 Q496.783 129.338 493.287 129.338 Q491.065 129.338 488.959 129.871 Q486.852 130.403 484.908 131.468 L484.908 127.533 Q487.246 126.63 489.445 126.19 Q491.644 125.727 493.727 125.727 Q499.352 125.727 502.13 128.644 Q504.908 131.561 504.908 137.487 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M517.894 118.991 L517.894 126.352 L526.667 126.352 L526.667 129.663 L517.894 129.663 L517.894 143.737 Q517.894 146.908 518.75 147.811 Q519.63 148.713 522.292 148.713 L526.667 148.713 L526.667 152.278 L522.292 152.278 Q517.361 152.278 515.486 150.449 Q513.611 148.598 513.611 143.737 L513.611 129.663 L510.486 129.663 L510.486 126.352 L513.611 126.352 L513.611 118.991 L517.894 118.991 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M544.051 139.246 Q538.889 139.246 536.898 140.426 Q534.907 141.607 534.907 144.454 Q534.907 146.723 536.389 148.065 Q537.893 149.385 540.463 149.385 Q544.005 149.385 546.134 146.885 Q548.287 144.362 548.287 140.195 L548.287 139.246 L544.051 139.246 M552.546 137.487 L552.546 152.278 L548.287 152.278 L548.287 148.343 Q546.829 150.704 544.653 151.838 Q542.477 152.949 539.329 152.949 Q535.347 152.949 532.986 150.727 Q530.648 148.482 530.648 144.732 Q530.648 140.357 533.565 138.135 Q536.505 135.913 542.315 135.913 L548.287 135.913 L548.287 135.496 Q548.287 132.556 546.342 130.959 Q544.421 129.338 540.926 129.338 Q538.704 129.338 536.597 129.871 Q534.491 130.403 532.546 131.468 L532.546 127.533 Q534.884 126.63 537.083 126.19 Q539.282 125.727 541.366 125.727 Q546.991 125.727 549.768 128.644 Q552.546 131.561 552.546 137.487 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><polyline clip-path="url(#clip690)" style="stroke:#e26f46; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" stroke-dasharray="16, 10" points="
+  319.768,186.838 433.697,186.838 
+  "/>
+<path clip-path="url(#clip690)" d="M485.852 178.596 Q485.852 181.945 484.657 185.271 Q483.486 188.574 481.425 191.291 Q479.364 194.008 476.74 196.116 Q474.117 198.224 471.049 199.395 Q467.98 200.566 464.982 200.566 Q459.665 200.566 456.176 197.076 Q452.686 193.586 452.686 187.754 Q452.686 183.678 454.513 179.626 Q456.339 175.551 459.244 172.529 Q462.148 169.484 465.966 167.587 Q469.807 165.69 473.602 165.69 Q478.989 165.69 482.409 169.274 Q485.852 172.834 485.852 178.596 M481.565 176.722 Q481.565 174.146 480.839 172.201 Q480.113 170.234 478.895 169.11 Q477.701 167.985 476.272 167.447 Q474.867 166.885 473.321 166.885 Q470.323 166.885 467.114 168.829 Q463.905 170.773 461.516 174.38 Q460.228 176.347 459.291 178.713 Q458.354 181.055 457.932 183.14 Q457.511 185.201 457.323 186.653 Q457.159 188.105 457.159 189.112 Q457.159 193.797 459.408 196.561 Q461.656 199.325 465.263 199.325 Q468.098 199.325 470.861 197.662 Q473.625 195.975 475.522 193.563 Q477.209 191.478 478.45 188.972 Q479.715 186.466 480.347 184.17 Q480.98 181.875 481.261 180.025 Q481.565 178.174 481.565 176.722 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M492.188 187.52 Q492.188 179.416 495.209 172.881 Q496.497 170.14 498.301 167.845 Q500.104 165.549 501.299 164.542 Q502.493 163.535 502.821 163.535 Q503.29 163.535 503.313 164.004 Q503.313 164.238 502.681 164.823 Q494.951 172.693 494.975 187.52 Q494.975 202.393 502.493 209.958 Q503.313 210.778 503.313 211.036 Q503.313 211.504 502.821 211.504 Q502.493 211.504 501.346 210.544 Q500.198 209.584 498.418 207.382 Q496.638 205.18 495.35 202.487 Q492.188 195.952 492.188 187.52 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M536.607 192.649 Q536.607 192.837 536.396 193.563 Q536.185 194.289 535.67 195.413 Q535.178 196.537 534.499 197.568 Q533.82 198.575 532.695 199.325 Q531.595 200.051 530.33 200.051 Q528.643 200.051 527.519 198.926 Q526.395 197.802 526.395 196.116 Q526.395 195.179 526.887 193.891 Q530.002 185.576 530.002 182.718 Q530.002 179.369 527.402 179.369 Q526.114 179.369 524.896 179.861 Q523.701 180.329 522.881 180.985 Q522.062 181.641 521.312 182.554 Q520.586 183.444 520.211 184.053 Q519.86 184.639 519.579 185.224 L518.97 187.613 Q518.829 188.269 518.15 190.822 L517.096 195.155 Q516.347 198.388 516.183 198.692 Q515.948 199.348 515.433 199.699 Q514.918 200.051 514.403 200.051 Q513.817 200.051 513.419 199.699 Q513.021 199.348 513.021 198.739 Q513.021 198.645 513.091 198.294 Q513.161 197.943 513.278 197.451 Q513.395 196.959 513.442 196.678 L516.229 185.599 Q516.745 183.585 516.862 182.952 Q517.002 182.297 517.002 181.57 Q517.002 179.369 515.503 179.369 Q514.285 179.369 513.489 180.821 Q512.693 182.273 512.013 185.084 Q511.803 185.857 511.662 186.021 Q511.545 186.185 511.194 186.185 Q510.608 186.161 510.608 185.693 Q510.608 185.576 510.795 184.803 Q510.983 184.03 511.334 182.929 Q511.709 181.805 512.06 181.055 Q512.365 180.493 512.529 180.235 Q512.716 179.954 513.161 179.416 Q513.63 178.853 514.239 178.596 Q514.871 178.315 515.644 178.315 Q517.377 178.315 518.642 179.439 Q519.907 180.54 520.071 182.484 Q523.186 178.315 527.543 178.315 Q530.119 178.315 531.595 179.673 Q533.07 181.032 533.07 183.444 Q533.07 184.006 532.953 184.732 Q532.859 185.435 532.625 186.325 Q532.414 187.215 532.227 187.894 Q532.04 188.574 531.665 189.675 Q531.29 190.752 531.126 191.22 Q530.962 191.689 530.564 192.79 Q530.189 193.867 530.142 193.984 Q529.276 196.163 529.276 197.404 Q529.276 198.224 529.533 198.599 Q529.814 198.973 530.423 198.973 Q532.063 198.973 533.281 197.357 Q534.522 195.718 535.319 193.047 Q535.506 192.462 535.6 192.321 Q535.717 192.181 536.045 192.181 Q536.607 192.181 536.607 192.649 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M541.47 179.913 Q541.47 178.912 542.044 178.437 Q542.618 177.961 543.356 177.961 Q544.126 177.961 544.667 178.47 Q545.225 178.962 545.225 179.831 Q545.225 180.765 544.569 181.29 Q543.93 181.814 543.011 181.683 Q543.815 183.028 545.29 183.634 Q546.782 184.241 548.16 184.241 Q549.603 184.241 550.767 182.995 Q551.947 181.749 551.947 178.699 Q551.947 176.109 550.931 174.617 Q549.93 173.125 547.947 173.125 L546.471 173.125 Q545.963 173.125 545.815 173.076 Q545.668 173.026 545.668 172.748 Q545.668 172.42 546.176 172.354 Q546.684 172.354 547.488 172.256 Q549.439 172.19 550.472 170.501 Q551.406 168.927 551.406 166.681 Q551.406 164.632 550.422 163.779 Q549.455 162.91 548.193 162.91 Q547.012 162.91 545.717 163.402 Q544.422 163.894 543.716 164.992 Q545.799 164.992 545.799 166.681 Q545.799 167.419 545.323 167.911 Q544.864 168.386 544.094 168.386 Q543.356 168.386 542.864 167.927 Q542.372 167.452 542.372 166.648 Q542.372 164.73 544.077 163.402 Q545.799 162.074 548.324 162.074 Q550.816 162.074 552.652 163.386 Q554.505 164.697 554.505 166.714 Q554.505 168.698 553.193 170.321 Q551.882 171.944 549.799 172.616 Q552.357 173.125 553.882 174.863 Q555.407 176.584 555.407 178.699 Q555.407 181.323 553.341 183.257 Q551.275 185.176 548.258 185.176 Q545.471 185.176 543.471 183.667 Q541.47 182.159 541.47 179.913 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip690)" d="M560.39 211.036 Q560.39 210.802 560.999 210.216 Q568.728 202.346 568.728 187.52 Q568.728 172.646 561.303 165.128 Q560.39 164.261 560.39 164.004 Q560.39 163.535 560.858 163.535 Q561.186 163.535 562.334 164.495 Q563.505 165.456 565.262 167.657 Q567.042 169.859 568.353 172.553 Q571.515 179.088 571.515 187.52 Q571.515 195.624 568.494 202.159 Q567.206 204.899 565.402 207.195 Q563.599 209.49 562.404 210.497 Q561.21 211.504 560.858 211.504 Q560.39 211.504 560.39 211.036 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /></svg>
+</div></div>
+</div>
+</div><p>In practice, flops are not the only aspect of an implementation that occupies significant time. Our position is that counting flops as a measure of performance is a useful oversimplification. We will assume that LU factorization (and as a result, the solution of a linear system of <span class="math notranslate nohighlight">\(n\)</span> equations) requires a real-world time that is roughly <span class="math notranslate nohighlight">\(O(n^3)\)</span>. This growth rate is a great deal more tolerable than, say, <span class="math notranslate nohighlight">\(O(2^n)\)</span>, but it does mean that for (at this writing) <span class="math notranslate nohighlight">\(n\)</span> greater than 10,000 or so, something other than general LU factorization will have to be used.</p>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>✍ The following are asymptotic assertions about the limit <span class="math notranslate nohighlight">\(n\rightarrow\infty\)</span>. In each case, prove the statement true or false.</p>
+<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(n^2 = O(\log n),\quad\)</span>
+<strong>(b)</strong> <span class="math notranslate nohighlight">\(n^{a} = O(n^b)\)</span> if <span class="math notranslate nohighlight">\(a\le b,\quad\)</span>
+<strong>(c)</strong> <span class="math notranslate nohighlight">\(e^n \sim e^{2n},\quad\)</span>
+<strong>(d)</strong> <span class="math notranslate nohighlight">\(n+\sqrt{n}\sim n+2\sqrt{n}\)</span>.</p>
+</li>
+<li><p>✍ The following are asymptotic assertions about the limit <span class="math notranslate nohighlight">\(h\to 0\)</span>. In each case, prove the statement true or false.</p>
+<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(h^2\log(h) = O(h^3),\quad\)</span>
+<strong>(b)</strong> <span class="math notranslate nohighlight">\(h^{a} = O(h^b)\)</span> if <span class="math notranslate nohighlight">\(a &lt; b,\quad\)</span>
+<strong>(c)</strong> <span class="math notranslate nohighlight">\(\sin(h) \sim h,\quad\)</span>
+<strong>(d)</strong> <span class="math notranslate nohighlight">\((e^{2h}-1)\sim h\)</span>.</p>
+</li>
+<li><p>✍ Show that the inner product of two <span class="math notranslate nohighlight">\(n\)</span>-vectors takes exactly <span class="math notranslate nohighlight">\(2n-1\)</span> flops.</p></li>
+<li><p>✍ Show that the multiplication of two <span class="math notranslate nohighlight">\(n\times n\)</span> matrices takes <span class="math notranslate nohighlight">\(\sim 2n^3\)</span> flops.</p></li>
+<li><p>✍ This problem is about evaluation of a polynomial <span class="math notranslate nohighlight">\(c_1 + c_2 x + \cdots + c_{n}x^{n-1}\)</span>.</p>
+<p><strong>(a)</strong> Here is a little code to do the evaluation.</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">xpow</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">2</span><span class="o">:</span><span class="n">n</span>
+    <span class="n">xpow</span> <span class="o">*=</span> <span class="n">x</span>
+    <span class="n">y</span> <span class="o">+=</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">xpow</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Assuming that <code class="docutils literal notranslate"><span class="pre">x</span></code> is a scalar, how many flops does this function take, as a function of <span class="math notranslate nohighlight">\(n\)</span>?</p>
+<p><strong>(b)</strong> Compare the count from (a) to the flop count for Horner’s algorithm, <a class="reference internal" href="../intro/algorithms.html#function-horner"><span class="std std-numref">Function 1.3.2</span></a>.</p>
+</li>
+<li><p>The exact sums for <span class="math notranslate nohighlight">\(p=1,2\)</span> in <a class="reference internal" href="#equation-sumflops">(2.5.1)</a> are as follows:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^{n} k = \frac{n(n+1)}{2}, \qquad 
+\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}.\]</div>
+<p><strong>(a)</strong> ✍  Use these to find the exact result for <a class="reference internal" href="#equation-gecount1">(2.5.4)</a>.</p>
+<p><strong>(b)</strong> ⌨ Plot the ratio of your result from (a) and the asymptotic result <span class="math notranslate nohighlight">\(2n^3/3\)</span> for all <span class="math notranslate nohighlight">\(n=10^{1+0.03i}\)</span>, <span class="math notranslate nohighlight">\(i=0,\dots,100\)</span>, using a log scale for <span class="math notranslate nohighlight">\(n\)</span> and a linear scale for the ratio. (The curve should approach 1 asymptotically.)</p>
+</li>
+<li><p>✍ Show that for any nonnegative constant integer <span class="math notranslate nohighlight">\(m\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^{n-m} k^p \sim \frac{n^{p+1}}{p+1}.\]</div>
+</li>
+<li><p>⌨ The <code class="docutils literal notranslate"><span class="pre">UpperTriangular</span></code> and <code class="docutils literal notranslate"><span class="pre">LowerTriangular</span></code> matrix types cause specialized algorithms to be invoked by the backslash. Define</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">tril</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">LowerTriangular</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">&#64;elapsed</span></code> with the backslash solver, time how long it takes to solve the linear system <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\mathbf{b}\)</span> 100 times, then do the same for matrices <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{C}\)</span>. Is the timing for <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> closer to <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> or to <span class="math notranslate nohighlight">\(\mathbf{C}\)</span>? (Hint: Remember to make one timing run without recording results, so that compilation time is not counted.)</p>
+</li>
+</ol>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="sets"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>More precisely, <span class="math notranslate nohighlight">\(O(g)\)</span> and <span class="math notranslate nohighlight">\(\sim g\)</span> are <em>sets</em> of functions, and <span class="math notranslate nohighlight">\(\sim g\)</span> is a subset of <span class="math notranslate nohighlight">\(O(g)\)</span>. That we write <span class="math notranslate nohighlight">\(f=O(g)\)</span> rather than <span class="math notranslate nohighlight">\(f\in O(g)\)</span> is a quirk of convention.</p>
+</dd>
+<dt class="label" id="useasymp"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Since flop counting is only an approximation of true running time, why bother with a more complicated exact expression? The asymptotic formula contains most of whatever relevant information there is.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-fast"
+        },
+        kernelOptions: {
+            kernelName: "julia-fast",
+            path: "./linsys"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-fast'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="lu.html" title="previous page"><span class="section-number">2.4. </span>LU factorization</a>
+    <a class='right-next' id="next-link" href="pivoting.html" title="next page"><span class="section-number">2.6. </span>Row pivoting</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tobin A. Driscoll and Richard J. Braun<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>References &#8212; Fundamentals of Numerical Computation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/proof.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Index" href="genindex.html" />
+    <link rel="prev" title="Julia cheatsheet" href="appendix/julia.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Numerical Computation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="frontmatter.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface.html">
+   Preface to the Julia edition
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Main text
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="intro/overview.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/floating-point.html">
+     1.1. Floating-point numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/conditioning.html">
+     1.2. Problems and conditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/algorithms.html">
+     1.3. Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/stability.html">
+     1.4. Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/next.html">
+     1.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="linsys/overview.html">
+   2. Linear systems of equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/polyinterp.html">
+     2.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/matrices.html">
+     2.2. Computing with matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/linear-systems.html">
+     2.3. Linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/lu.html">
+     2.4. LU factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/efficiency.html">
+     2.5. Efficiency of matrix computations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/pivoting.html">
+     2.6. Row pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/norms.html">
+     2.7. Vector and matrix norms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/condition-number.html">
+     2.8. Conditioning of linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/structure.html">
+     2.9. Exploiting matrix structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/next.html">
+     2.10. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="leastsq/overview.html">
+   3. Overdetermined linear systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/fitting.html">
+     3.1. Fitting functions to data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/normaleqns.html">
+     3.2. The normal equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/qr.html">
+     3.3. The QR factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/house.html">
+     3.4. Computing QR factorizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/next.html">
+     3.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="nonlineqn/overview.html">
+   4. Roots of nonlinear equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/rootproblem.html">
+     4.1. The rootfinding problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/fixed-point.html">
+     4.2. Fixed point iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/newton.html">
+     4.3. Newton’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/secant.html">
+     4.4. Interpolation-based methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/newtonsys.html">
+     4.5. Newton for nonlinear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/quasinewton.html">
+     4.6. Quasi-Newton methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/nlsq.html">
+     4.7. Nonlinear least squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/next.html">
+     4.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="localapprox/overview.html">
+   5. Piecewise interpolation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/interpolation.html">
+     5.1. The interpolation problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/pwlin.html">
+     5.2. Piecewise linear interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/splines.html">
+     5.3. Cubic splines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/finitediffs.html">
+     5.4. Finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/fd-converge.html">
+     5.5. Convergence of finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/integration.html">
+     5.6. Numerical integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/adaptive.html">
+     5.7. Adaptive integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/next.html">
+     5.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="ivp/overview.html">
+   6. Initial-value problems for ODEs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/basics.html">
+     6.1. Basics of IVPs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/euler.html">
+     6.2. Euler’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/systems.html">
+     6.3. IVP systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/rk.html">
+     6.4. Runge–Kutta methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/adaptive.html">
+     6.5. Adaptive Runge–Kutta
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/multistep.html">
+     6.6. Multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/implicit.html">
+     6.7. Implementation of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/zerostability.html">
+     6.8. Zero-stability of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/next.html">
+     6.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="matrixanaly/overview.html">
+   7. Matrix analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/insight.html">
+     7.1. From matrix to insight
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/evd.html">
+     7.2. Eigenvalue decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/svd.html">
+     7.3. Singular value decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/symm-eig.html">
+     7.4. Symmetry and definiteness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/dimreduce.html">
+     7.5. Dimension reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/next.html">
+     7.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="krylov/overview.html">
+   8. Krylov methods in linear algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/structure.html">
+     8.1. Sparsity and structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/power.html">
+     8.2. Power iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/inviter.html">
+     8.3. Inverse iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/subspace.html">
+     8.4. Krylov subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/gmres.html">
+     8.5. GMRES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/minrescg.html">
+     8.6. MINRES and conjugate gradients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/matrixfree.html">
+     8.7. Matrix-free iterations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/precond.html">
+     8.8. Preconditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/next.html">
+     8.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="globalapprox/overview.html">
+   9. Global function approximation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/polynomial.html">
+     9.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/barycentric.html">
+     9.2. The barycentric formula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/stability.html">
+     9.3. Stability of polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/orthogonal.html">
+     9.4. Orthogonal polynomials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/trig.html">
+     9.5. Trigonometric interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/integration.html">
+     9.6. Spectrally accurate integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/improper.html">
+     9.7. Improper integrals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/next.html">
+     9.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="bvp/overview.html">
+   10. Boundary-value problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/tpbvp.html">
+     10.1. Two-point BVP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/shooting.html">
+     10.2. Shooting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/diffmats.html">
+     10.3. Differentiation matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/linear.html">
+     10.4. Collocation for linear problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/nonlinear.html">
+     10.5. Nonlinearity and boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/galerkin.html">
+     10.6. The Galerkin method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/next.html">
+     10.7. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="diffusion/overview.html">
+   11. Diffusion equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/blackscholes.html">
+     11.1. Black–Scholes equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/methodlines.html">
+     11.2. The method of lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/absstab.html">
+     11.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/stiffness.html">
+     11.4. Stiffness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/boundaries.html">
+     11.5. Boundaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/next.html">
+     11.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="advection/overview.html">
+   12. Advection equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/traffic.html">
+     12.1. Traffic flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/upwind.html">
+     12.2. Upwinding and stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/absstab.html">
+     12.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/wave.html">
+     12.4. The wave equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/next.html">
+     12.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="twodim/overview.html">
+   13. Two-dimensional problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/tensorprod.html">
+     13.1. Tensor-product discretizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/diffadv.html">
+     13.2. Two-dimensional diffusion and advection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/laplace.html">
+     13.3. Laplace and Poisson equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/nonlinear.html">
+     13.4. Nonlinear elliptic PDEs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/next.html">
+     13.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="appendix/linear-algebra.html">
+   Review of linear algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="appendix/glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="appendix/julia.html">
+   Julia cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/refs.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p id="id1"><dl class="citation">
+<dt class="label" id="id2"><span class="brackets">AS13</span></dt>
+<dd><p>Milton Abramowitz and Irene A. Stegun, editors. <em>Handbook of Mathematical Functions: With Formulas, Graphs, and Mathematical Tables</em>. Dover Books on Mathematics. Dover Publ, New York, NY, 9. dover print.; [nachdr. der ausg. von 1972] edition, 2013. ISBN 978-0-486-61272-0.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets">AMR95</span></dt>
+<dd><p>U. M. Ascher, Robert M. M. Mattheij, and R. D. Russell. <em>Numerical Solution of Boundary Value Problems for Ordinary Differential Equations</em>. Number 13 in Classics in Applied Mathematics. Society for Industrial and Applied Mathematics, Philadelphia, 1995. ISBN 978-0-89871-354-1.</p>
+</dd>
+<dt class="label" id="id3"><span class="brackets">AP98</span></dt>
+<dd><p>U. M. Ascher and Linda Ruth Petzold. <em>Computer Methods for Ordinary Differential Equations and Differential-Algebraic Equations</em>. Society for Industrial and Applied Mathematics, Philadelphia, 1998. ISBN 978-0-89871-412-8.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets">Atk89</span></dt>
+<dd><p>Kendall E. Atkinson. <em>An Introduction to Numerical Analysis</em>. Wiley, New York, 2nd ed edition, 1989. ISBN 978-0-471-62489-9.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">AH04</span></dt>
+<dd><p>Kendall E. Atkinson and Weimin Han. <em>Elementary Numerical Analysis</em>. J. Wiley &amp; Sons, Hoboken, NJ, 3rd ed edition, 2004. ISBN 978-0-471-43337-8.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets">AMVW15</span></dt>
+<dd><p>Jared L. Aurentz, Thomas Mach, Raf Vandebril, and David S. Watkins. Fast and Backward Stable Computation of Roots of Polynomials. <em>SIAM Journal on Matrix Analysis and Applications</em>, 36(3):942–973, January 2015. <a class="reference external" href="https://doi.org/10.1137/140983434">doi:10.1137/140983434</a>.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets">BE86</span></dt>
+<dd><p>S. M. Baer and T. Erneux. Singular Hopf Bifurcation to Relaxation Oscillations. <em>SIAM Journal on Applied Mathematics</em>, 46(5):721–739, October 1986. <a class="reference external" href="https://doi.org/10.1137/0146047">doi:10.1137/0146047</a>.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets">BJL05</span></dt>
+<dd><p>David H. Bailey, Karthik Jeyabalan, and Xiaoye S. Li. A Comparison of Three High-Precision Quadrature Schemes. <em>Experimental Mathematics</em>, 14(3):317–329, January 2005. <a class="reference external" href="https://doi.org/10.1080/10586458.2005.10128931">doi:10.1080/10586458.2005.10128931</a>.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets">BM98</span></dt>
+<dd><p>A. Berke and S. Mueller. The Kinetics of Lid Motion and its Effects on the Tear Film. In David A. Sullivan, Darlene A. Dartt, and Michele A. Meneray, editors, <em>Lacrimal Gland, Tear Film, and Dry Eye Syndromes 2</em>, volume 438, pages 417–424. Springer US, Boston, MA, 1998. <a class="reference external" href="https://doi.org/10.1007/978-1-4615-5359-5_58">doi:10.1007/978-1-4615-5359-5_58</a>.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets">Bjorck96</span></dt>
+<dd><p>Åke Björck. <em>Numerical Methods for Least Squares Problems</em>. SIAM, Philadelphia, 1996. ISBN 978-0-89871-360-2.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets">BCP96</span></dt>
+<dd><p>Kathryn E. Brenan, S. L. Campbell, and Linda R. Petzold. <em>Numerical Solution of Initial-Value Problems in Differential-Algebraic Equations</em>. Number 14 in Classics in Applied Mathematics. Society for Industrial and Applied Mathematics, Philadelphia, 1996. ISBN 978-0-89871-353-4.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">Bri03</span></dt>
+<dd><p>N. F. Britton. <em>Essential Mathematical Biology</em>. Springer Undergraduate Mathematics Series. Springer, London ; New York, 2003. ISBN 978-1-85233-536-6.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets">BWB+17</span></dt>
+<dd><p>Joseph K Brosch, Ziwei Wu, Carolyn G Begley, Tobin A Driscoll, and Richard J Braun. Blink characterization using curve fitting and clustering algorithms. <em>Journal for Modeling in Ophthalmology</em>, 1(3):60–81, 2017.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets">BF01</span></dt>
+<dd><p>Richard L. Burden and J. Douglas Faires. <em>Numerical Analysis</em>. Brooks/Cole, Australia ; Pacific Grove, CA, 7th ed edition, 2001. ISBN 978-0-534-38216-2.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets">CHQZ88</span></dt>
+<dd><p>Claudio Canuto, M. Yousuff Hussaini, Alfio Quarteroni, and Thomas A Zang. <em>Spectral Methods in Fluid Dynamics</em>. Springer Berlin Heidelberg, Berlin, Heidelberg, 1988. ISBN 978-3-642-84108-8 978-3-540-17371-7.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets">Car70</span></dt>
+<dd><p>G. F. Carrier. Singular Perturbation Theory and Geophysics. <em>SIAM Review</em>, 12(2):175–193, April 1970. <a class="reference external" href="https://doi.org/10.1137/1012041">doi:10.1137/1012041</a>.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets">CK12</span></dt>
+<dd><p>E. Ward Cheney and David R. Kincaid. <em>Numerical Mathematics and Computing</em>. Cengage Learning, May 2012. ISBN 978-1-133-10371-4.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets">Coh94</span></dt>
+<dd><p>A.M. Cohen. Is the polynomial so perfidious? <em>Numerische Mathematik</em>, 68(2):225–238, July 1994. <a class="reference external" href="https://doi.org/10.1007/s002110050058">doi:10.1007/s002110050058</a>.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets">CSV09</span></dt>
+<dd><p>Andrew R. Conn, Katya Scheinberg, and Luis N. Vicente. <em>Introduction to Derivative-Free Optimization</em>. SIAM, April 2009. ISBN 978-0-89871-668-9.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets">CT65</span></dt>
+<dd><p>James W. Cooley and John W. Tukey. An algorithm for the machine calculation of complex Fourier series. <em>Mathematics of Computation</em>, 19(90):297–301, 1965. <a class="reference external" href="https://doi.org/10.1090/S0025-5718-1965-0178586-1">doi:10.1090/S0025-5718-1965-0178586-1</a>.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets">CF13</span></dt>
+<dd><p>Robert M. Corless and Nicolas Fillion. <em>A Graduate Introduction to Numerical Methods: From the Viewpoint of Backward Error Analysis</em>. Springer Science &amp; Business Media, December 2013. ISBN 978-1-4614-8453-0.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets">Dav63</span></dt>
+<dd><p>Philip J. Davis. <em>Interpolation and Approximation</em>. Blaisdell Publishing Company, 1963.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets">DR14</span></dt>
+<dd><p>Philip J. Davis and Philip Rabinowitz. <em>Methods of Numerical Integration</em>. Academic Press, May 2014. ISBN 978-1-4832-6428-8.</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets">For98</span></dt>
+<dd><p>Bengt Fornberg. <em>A Practical Guide to Pseudospectral Methods</em>. Cambridge University Press, October 1998. ISBN 978-0-521-64564-5.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets">GOLeary89</span></dt>
+<dd><p>Gene H. Golub and Dianne P. O'Leary. Some History of the Conjugate Gradient and Lanczos Algorithms: 1948–1976. <em>SIAM Review</em>, 31(1):50–102, March 1989. <a class="reference external" href="https://doi.org/10.1137/1031003">doi:10.1137/1031003</a>.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets">GVL96</span></dt>
+<dd><p>Gene H. Golub and Charles F. Van Loan. <em>Matrix Computations</em>. JHU Press, 3rd edition, October 1996. ISBN 978-0-8018-5414-9.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets">Hab98</span></dt>
+<dd><p>Richard Haberman. <em>Elementary Applied Partial Differential Equations: With Fourier Series and Boundary Value Problems</em>. Prentice Hall, 1998. ISBN 978-0-13-263807-4.</p>
+</dd>
+<dt class="label" id="id30"><span class="brackets">Hah95</span></dt>
+<dd><p>Gerald J. Hahn. A Conversation with Donald Marquardt. <em>Statistical Science</em>, 10(4):377–393, November 1995. <a class="reference external" href="https://doi.org/10.1214/ss/1177009871">doi:10.1214/ss/1177009871</a>.</p>
+</dd>
+<dt class="label" id="id31"><span class="brackets">HNorsettW08</span></dt>
+<dd><p>Ernst Hairer, Syvert P. Nørsett, and Gerhard Wanner. <em>Solving Ordinary Differential Equations I: Nonstiff Problems</em>. Springer Science &amp; Business Media, April 2008. ISBN 978-3-540-56670-0.</p>
+</dd>
+<dt class="label" id="id32"><span class="brackets">HPS13</span></dt>
+<dd><p>Per Christian Hansen, Víctor Pereyra, and Godela Scherer. <em>Least Squares Data Fitting with Applications</em>. JHU Press, January 2013. ISBN 978-1-4214-0786-9.</p>
+</dd>
+<dt class="label" id="id33"><span class="brackets">HS52</span></dt>
+<dd><p>M.R. Hestenes and E. Stiefel. Methods of conjugate gradients for solving linear systems. <em>Journal of Research of the National Bureau of Standards</em>, 49(6):409, December 1952. <a class="reference external" href="https://doi.org/10.6028/jres.049.044">doi:10.6028/jres.049.044</a>.</p>
+</dd>
+<dt class="label" id="id34"><span class="brackets">Hig02</span></dt>
+<dd><p>Nicholas J. Higham. <em>Accuracy and Stability of Numerical Algorithms: Second Edition</em>. SIAM, January 2002. ISBN 978-0-89871-802-7.</p>
+</dd>
+<dt class="label" id="id35"><span class="brackets">Ise96</span></dt>
+<dd><p>Arieh Iserles. <em>A First Course in the Numerical Analysis of Differential Equations</em>. Cambridge University Press, January 1996. ISBN 978-0-521-55655-2.</p>
+</dd>
+<dt class="label" id="id36"><span class="brackets">Jol02</span></dt>
+<dd><p>I. T. Jolliffe. <em>Principal Component Analysis</em>. Springer Science &amp; Business Media, second edition, October 2002. ISBN 978-0-387-95442-4.</p>
+</dd>
+<dt class="label" id="id37"><span class="brackets">Kel95</span></dt>
+<dd><p>C. T. Kelley. <em>Iterative Methods for Linear and Nonlinear Equations</em>. SIAM, January 1995. ISBN 978-0-89871-352-7.</p>
+</dd>
+<dt class="label" id="id38"><span class="brackets">KMW27</span></dt>
+<dd><p>William Ogilvy Kermack, A. G. McKendrick, and Gilbert Thomas Walker. A contribution to the mathematical theory of epidemics. <em>Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character</em>, 115(772):700–721, August 1927. <a class="reference external" href="https://doi.org/10.1098/rspa.1927.0118">doi:10.1098/rspa.1927.0118</a>.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets">Lay12</span></dt>
+<dd><p>David C. Lay. <em>Linear Algebra and Its Applications</em>. Addison-Wesley, Boston, 4th ed edition, 2012. ISBN 978-0-321-38517-8.</p>
+</dd>
+<dt class="label" id="id40"><span class="brackets">Leo06</span></dt>
+<dd><p>Steven J. Leon. <em>Linear Algebra with Applications</em>. Pearson Prentice Hall, 2006. ISBN 978-0-13-185785-8.</p>
+</dd>
+<dt class="label" id="id41"><span class="brackets">Lev44</span></dt>
+<dd><p>Kenneth Levenberg. A method for the solution of certain non-linear problems in least squares. <em>Quarterly of Applied Mathematics</em>, 2(2):164–168, 1944. <a class="reference external" href="https://doi.org/10.1090/qam/10666">doi:10.1090/qam/10666</a>.</p>
+</dd>
+<dt class="label" id="id44"><span class="brackets">LeV92</span></dt>
+<dd><p>Randall J. LeVeque. <em>Numerical Methods for Conservation Laws</em>. Springer Science &amp; Business Media, 1992. ISBN 978-3-7643-2723-1.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets">LeV02</span></dt>
+<dd><p>Randall J. LeVeque. <em>Finite Volume Methods for Hyperbolic Problems</em>. Cambridge University Press, August 2002. ISBN 978-0-521-00924-9.</p>
+</dd>
+<dt class="label" id="id42"><span class="brackets">LeV07</span></dt>
+<dd><p>Randall J. LeVeque. <em>Finite Difference Methods for Ordinary and Partial Differential Equations: Steady-State and Time-Dependent Problems</em>. SIAM, September 2007. ISBN 978-0-89871-629-0.</p>
+</dd>
+<dt class="label" id="id45"><span class="brackets">Mar63</span></dt>
+<dd><p>Donald W. Marquardt. An Algorithm for Least-Squares Estimation of Nonlinear Parameters. <em>Journal of the Society for Industrial and Applied Mathematics</em>, 11(2):431–441, June 1963. <a class="reference external" href="https://doi.org/10.1137/0111030">doi:10.1137/0111030</a>.</p>
+</dd>
+<dt class="label" id="id46"><span class="brackets">MS99</span></dt>
+<dd><p>Douglas B. Meade and A. A. Struthers. Differential equations in the new millennium: The parachute problem. <em>International Journal of Engineering Education</em>, 15(6):417–424, 1999.</p>
+</dd>
+<dt class="label" id="id47"><span class="brackets">Mol10</span></dt>
+<dd><p>Cleve B. Moler. <em>Numerical Computing with MATLAB: Revised Reprint</em>. SIAM, August 2010. ISBN 978-0-89871-660-3.</p>
+</dd>
+<dt class="label" id="id48"><span class="brackets">MM05</span></dt>
+<dd><p>K. W. Morton and D. F. Mayers. <em>Numerical Solution of Partial Differential Equations: An Introduction</em>. Cambridge University Press, second edition, April 2005. ISBN 978-1-139-44320-3.</p>
+</dd>
+<dt class="label" id="id49"><span class="brackets">Nas90</span></dt>
+<dd><p>Stephen Nash. <em>A History of Scientific Computing</em>. Addison-Wesley Publishing Company, 1990. ISBN 978-0-201-50814-7.</p>
+</dd>
+<dt class="label" id="id50"><span class="brackets">NBL+81</span></dt>
+<dd><p>R. Newton, L. J. Broughton, M. J. Lind, P. J. Morrison, H. J. Rogers, and I. D. Bradbrook. Plasma and salivary pharmacokinetics of caffeine in man. <em>European Journal of Clinical Pharmacology</em>, 21(1):45–52, January 1981. <a class="reference external" href="https://doi.org/10.1007/BF00609587">doi:10.1007/BF00609587</a>.</p>
+</dd>
+<dt class="label" id="id51"><span class="brackets">OHLM03</span></dt>
+<dd><p>J. R. Ockendon, Sam Howison, Andrew Lacey, and Alexander Movchan. <em>Applied Partial Differential Equations</em>. Oxford University Press, 2003. ISBN 978-0-19-852771-8.</p>
+</dd>
+<dt class="label" id="id52"><span class="brackets">OLBC10</span></dt>
+<dd><p>Frank W. J. Olver, Daniel W. Lozier, Ronald F. Boisvert, and Charles W. Clark. <em>NIST Handbook of Mathematical Functions Hardback and CD-ROM</em>. Cambridge University Press, May 2010. ISBN 978-0-521-19225-5.</p>
+</dd>
+<dt class="label" id="id53"><span class="brackets">OR14</span></dt>
+<dd><p>J. M. Ortega and W. C. Rheinboldt. <em>Iterative Solution of Nonlinear Equations in Several Variables</em>. Elsevier, May 2014. ISBN 978-1-4832-7672-4.</p>
+</dd>
+<dt class="label" id="id54"><span class="brackets">Par80</span></dt>
+<dd><p>Beresford N. Parlett. <em>The Symmetric Eigenvalue Problem</em>. SIAM, January 1980. ISBN 978-0-89871-402-9.</p>
+</dd>
+<dt class="label" id="id55"><span class="brackets">PD06</span></dt>
+<dd><p>John A. Pelesko and Tobin A. Driscoll. The effect of the small-aspect-ratio approximation on canonical electrostatic MEMS models. <em>Journal of Engineering Mathematics</em>, 53(3-4):239–252, January 2006. <a class="reference external" href="https://doi.org/10.1007/s10665-005-9013-2">doi:10.1007/s10665-005-9013-2</a>.</p>
+</dd>
+<dt class="label" id="id56"><span class="brackets">QSS07</span></dt>
+<dd><p>Alfio Quarteroni, Riccardo Sacco, and Fausto Saleri. <em>Numerical Mathematics</em>. Springer, January 2007. ISBN 978-0-387-22750-4.</p>
+</dd>
+<dt class="label" id="id57"><span class="brackets">Roa98</span></dt>
+<dd><p>Patrick J. Roache. <em>Fundamentals of Computational Fluid Dynamics</em>. Hermosa Publishers, 1998. ISBN 978-0-913478-09-7.</p>
+</dd>
+<dt class="label" id="id58"><span class="brackets">Saa03</span></dt>
+<dd><p>Yousef Saad. <em>Iterative Methods for Sparse Linear Systems: Second Edition</em>. SIAM, January 2003. ISBN 978-0-89871-800-3.</p>
+</dd>
+<dt class="label" id="id59"><span class="brackets">SR97</span></dt>
+<dd><p>Lawrence F. Shampine and Mark W. Reichelt. The MATLAB ODE Suite. <em>SIAM Journal on Scientific Computing</em>, 18(1):1–22, January 1997. <a class="reference external" href="https://doi.org/10.1137/S1064827594276424">doi:10.1137/S1064827594276424</a>.</p>
+</dd>
+<dt class="label" id="id60"><span class="brackets">Smi85</span></dt>
+<dd><p>Gordon D. Smith. <em>Numerical Solution of Partial Differential Equations: Finite Difference Methods</em>. Clarendon Press, 3rd edition, 1985. ISBN 978-0-19-859650-9.</p>
+</dd>
+<dt class="label" id="id61"><span class="brackets">Ste01</span></dt>
+<dd><p>G. W. Stewart. <em>Matrix Algorithms Volume 2: Eigensystems</em>. SIAM, August 2001. ISBN 978-0-89871-503-3.</p>
+</dd>
+<dt class="label" id="id64"><span class="brackets">Str07</span></dt>
+<dd><p>Gilbert Strang. <em>Computational Science and Engineering</em>. Wellesley-Cambridge Press, November 2007. ISBN 978-0-9614088-1-7.</p>
+</dd>
+<dt class="label" id="id65"><span class="brackets">Str16</span></dt>
+<dd><p>Gilbert Strang. <em>Introduction to Linear Algebra</em>. Wellesley-Cambridge Press, August 2016. ISBN 978-0-9802327-7-6.</p>
+</dd>
+<dt class="label" id="id66"><span class="brackets">SB97</span></dt>
+<dd><p>Gilbert Strang and Kai Borre. <em>Linear Algebra, Geodesy, and GPS</em>. SIAM, January 1997. ISBN 978-0-9614088-6-2.</p>
+</dd>
+<dt class="label" id="id63"><span class="brackets">SF97</span></dt>
+<dd><p>Gilbert Strang and George J. Fix. <em>An Analysis of the Finite Element Method</em>. Wellesley-Cambridge Press, 1997. ISBN 978-0-9614088-8-6.</p>
+</dd>
+<dt class="label" id="id67"><span class="brackets">TM73</span></dt>
+<dd><p>Hidetosi Takahasi and Masatake Mori. Double Exponential Formulas for Numerical Integration. <em>Publications of the Research Institute for Mathematical Sciences</em>, 9(3):721–741, December 1973. <a class="reference external" href="https://doi.org/10.2977/prims/1195192451">doi:10.2977/prims/1195192451</a>.</p>
+</dd>
+<dt class="label" id="id68"><span class="brackets">Teu01</span></dt>
+<dd><p>P. J. G. Teunissen. <em>Dynamic Data Processing: Recursive Least-Squares</em>. Series on Mathematical Geodesy and Positioning. VSSD, Delft, the Netherlands, 2001. ISBN 9786610450640.</p>
+</dd>
+<dt class="label" id="id69"><span class="brackets">Tra09</span></dt>
+<dd><p>J. A. Trangenstein. <em>Numerical Solution of Hyperbolic Partial Differential Equations</em>. Cambridge University Press, Cambridge ; New York, 2009. ISBN 978-0-521-87727-5.</p>
+</dd>
+<dt class="label" id="id74"><span class="brackets">Tre00</span></dt>
+<dd><p>Lloyd N. Trefethen. <em>Spectral Methods in MATLAB</em>. SIAM, January 2000. ISBN 978-0-89871-959-8.</p>
+</dd>
+<dt class="label" id="id71"><span class="brackets">Tre08</span></dt>
+<dd><p>Lloyd N. Trefethen. Is Gauss Quadrature Better than Clenshaw–Curtis? <em>SIAM Review</em>, 50(1):67–87, January 2008. <a class="reference external" href="https://doi.org/10.1137/060659831">doi:10.1137/060659831</a>.</p>
+</dd>
+<dt class="label" id="id73"><span class="brackets">Tre11</span></dt>
+<dd><p>Lloyd N. Trefethen. Six myths of polynomial interpolation and quadrature. <em>Mathematics Today</em>, 2011.</p>
+</dd>
+<dt class="label" id="id70"><span class="brackets">Tre13</span></dt>
+<dd><p>Lloyd N. Trefethen. <em>Approximation Theory and Approximation Practice</em>. SIAM, January 2013. ISBN 978-1-61197-239-9.</p>
+</dd>
+<dt class="label" id="id75"><span class="brackets">TE05</span></dt>
+<dd><p>Lloyd N. Trefethen and Mark Embree. <em>Spectra and Pseudospectra: The Behavior of Nonnormal Matrices and Operators</em>. Princeton University Press, August 2005. ISBN 978-0-691-11946-5.</p>
+</dd>
+<dt class="label" id="id72"><span class="brackets">TI97</span></dt>
+<dd><p>Lloyd N. Trefethen and David Bau III. <em>Numerical Linear Algebra</em>. SIAM, June 1997. ISBN 978-0-89871-361-9.</p>
+</dd>
+<dt class="label" id="id77"><span class="brackets">VL00</span></dt>
+<dd><p>Charles F. Van Loan. <em>Introduction to Scientific Computing: A Matrix-Vector Approach Using MATLAB</em>. The MATLAB Curriculum Series. Prentice Hall, Upper Saddle River, NJ, 2000. ISBN 978-0-13-949157-3.</p>
+</dd>
+<dt class="label" id="id78"><span class="brackets">Whi74</span></dt>
+<dd><p>G. B. Whitham. <em>Linear and Nonlinear Waves</em>. John Wiley &amp; Sons, 1974. ISBN 978-1-118-03120-9.</p>
+</dd>
+<dt class="label" id="id79"><span class="brackets">Wil84</span></dt>
+<dd><p>J. H. Wilkinson. The perfidious polynomial. In <em>Studies in Mathematics</em>, volume 24, pages 1–28. Mathematical Association of America, 1984.</p>
+</dd>
+<dt class="label" id="id80"><span class="brackets">WBS+14</span></dt>
+<dd><p>Ziwei Wu, Carolyn G. Begley, Ping Situ, Trefford Simpson, and Haixia Liu. The Effects of Mild Ocular Surface Stimulation and Concentration on Spontaneous Blink Parameters. <em>Current Eye Research</em>, 39(1):9–20, January 2014. <a class="reference external" href="https://doi.org/10.3109/02713683.2013.822896">doi:10.3109/02713683.2013.822896</a>.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets">deBoor78</span></dt>
+<dd><p>Carl de Boor. <em>A Practical Guide to Splines</em>. Springer-Verlag, 1978. ISBN 978-3-540-90356-7.</p>
+</dd>
+<dt class="label" id="id76"><span class="brackets">vandVorst03</span></dt>
+<dd><p>H. A. van der Vorst. <em>Iterative Krylov Methods for Large Linear Systems</em>. Cambridge University Press, April 2003. ISBN 978-0-521-81828-5.</p>
+</dd>
+</dl>
+</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="appendix/julia.html" title="previous page">Julia cheatsheet</a>
+    <a class='right-next' id="next-link" href="genindex.html" title="next page">Index</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tobin A. Driscoll and Richard J. Braun<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,2020 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; Fundamentals of Numerical Computation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/proof.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Numerical Computation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="frontmatter.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface.html">
+   Preface to the Julia edition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface-original.html">
+   Preface to the original edition
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Main text
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="intro/overview.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/floating-point.html">
+     1.1. Floating-point numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/conditioning.html">
+     1.2. Problems and conditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/algorithms.html">
+     1.3. Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/stability.html">
+     1.4. Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro/next.html">
+     1.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="linsys/overview.html">
+   2. Linear systems of equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/polyinterp.html">
+     2.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/matrices.html">
+     2.2. Computing with matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/linear-systems.html">
+     2.3. Linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/lu.html">
+     2.4. LU factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/efficiency.html">
+     2.5. Efficiency of matrix computations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/pivoting.html">
+     2.6. Row pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/norms.html">
+     2.7. Vector and matrix norms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/condition-number.html">
+     2.8. Conditioning of linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/structure.html">
+     2.9. Exploiting matrix structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linsys/next.html">
+     2.10. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="leastsq/overview.html">
+   3. Overdetermined linear systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/fitting.html">
+     3.1. Fitting functions to data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/normaleqns.html">
+     3.2. The normal equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/qr.html">
+     3.3. The QR factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/house.html">
+     3.4. Computing QR factorizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="leastsq/next.html">
+     3.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="nonlineqn/overview.html">
+   4. Roots of nonlinear equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/rootproblem.html">
+     4.1. The rootfinding problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/fixed-point.html">
+     4.2. Fixed point iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/newton.html">
+     4.3. Newton’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/secant.html">
+     4.4. Interpolation-based methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/newtonsys.html">
+     4.5. Newton for nonlinear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/quasinewton.html">
+     4.6. Quasi-Newton methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/nlsq.html">
+     4.7. Nonlinear least squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="nonlineqn/next.html">
+     4.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="localapprox/overview.html">
+   5. Piecewise interpolation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/interpolation.html">
+     5.1. The interpolation problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/pwlin.html">
+     5.2. Piecewise linear interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/splines.html">
+     5.3. Cubic splines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/finitediffs.html">
+     5.4. Finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/fd-converge.html">
+     5.5. Convergence of finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/integration.html">
+     5.6. Numerical integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/adaptive.html">
+     5.7. Adaptive integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="localapprox/next.html">
+     5.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="ivp/overview.html">
+   6. Initial-value problems for ODEs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/basics.html">
+     6.1. Basics of IVPs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/euler.html">
+     6.2. Euler’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/systems.html">
+     6.3. IVP systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/rk.html">
+     6.4. Runge–Kutta methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/adaptive.html">
+     6.5. Adaptive Runge–Kutta
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/multistep.html">
+     6.6. Multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/implicit.html">
+     6.7. Implementation of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/zerostability.html">
+     6.8. Zero-stability of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ivp/next.html">
+     6.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="matrixanaly/overview.html">
+   7. Matrix analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/insight.html">
+     7.1. From matrix to insight
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/evd.html">
+     7.2. Eigenvalue decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/svd.html">
+     7.3. Singular value decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/symm-eig.html">
+     7.4. Symmetry and definiteness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/dimreduce.html">
+     7.5. Dimension reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrixanaly/next.html">
+     7.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="krylov/overview.html">
+   8. Krylov methods in linear algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/structure.html">
+     8.1. Sparsity and structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/power.html">
+     8.2. Power iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/inviter.html">
+     8.3. Inverse iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/subspace.html">
+     8.4. Krylov subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/gmres.html">
+     8.5. GMRES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/minrescg.html">
+     8.6. MINRES and conjugate gradients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/matrixfree.html">
+     8.7. Matrix-free iterations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/precond.html">
+     8.8. Preconditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="krylov/next.html">
+     8.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="globalapprox/overview.html">
+   9. Global function approximation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/polynomial.html">
+     9.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/barycentric.html">
+     9.2. The barycentric formula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/stability.html">
+     9.3. Stability of polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/orthogonal.html">
+     9.4. Orthogonal polynomials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/trig.html">
+     9.5. Trigonometric interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/integration.html">
+     9.6. Spectrally accurate integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/improper.html">
+     9.7. Improper integrals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="globalapprox/next.html">
+     9.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="bvp/overview.html">
+   10. Boundary-value problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/tpbvp.html">
+     10.1. Two-point BVP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/shooting.html">
+     10.2. Shooting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/diffmats.html">
+     10.3. Differentiation matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/linear.html">
+     10.4. Collocation for linear problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/nonlinear.html">
+     10.5. Nonlinearity and boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/galerkin.html">
+     10.6. The Galerkin method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bvp/next.html">
+     10.7. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="diffusion/overview.html">
+   11. Diffusion equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/blackscholes.html">
+     11.1. Black–Scholes equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/methodlines.html">
+     11.2. The method of lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/absstab.html">
+     11.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/stiffness.html">
+     11.4. Stiffness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/boundaries.html">
+     11.5. Boundaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="diffusion/next.html">
+     11.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="advection/overview.html">
+   12. Advection equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/traffic.html">
+     12.1. Traffic flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/upwind.html">
+     12.2. Upwinding and stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/absstab.html">
+     12.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/wave.html">
+     12.4. The wave equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advection/next.html">
+     12.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="twodim/overview.html">
+   13. Two-dimensional problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/tensorprod.html">
+     13.1. Tensor-product discretizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/diffadv.html">
+     13.2. Two-dimensional diffusion and advection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/laplace.html">
+     13.3. Laplace and Poisson equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/nonlinear.html">
+     13.4. Nonlinear elliptic PDEs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="twodim/next.html">
+     13.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="appendix/linear-algebra.html">
+   Review of linear algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="appendix/glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="appendix/julia.html">
+   Julia cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="refs.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#Y"><strong>Y</strong></a>
+ | <a href="#Z"><strong>Z</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="diffusion/stiffness.html#index-4"><strong>A-stability and A(α)-stability</strong></a>
+</li>
+      <li><a href="diffusion/absstab.html#index-2"><strong>absolute stability</strong></a>
+</li>
+      <li><a href="intro/floating-point.html#index-5"><strong>accuracy (relative vs. absolute)</strong></a>
+</li>
+      <li>
+    adaptivity
+
+      <ul>
+        <li><a href="localapprox/adaptive.html#index-2">in integration</a>
+</li>
+        <li><a href="ivp/adaptive.html#index-1">in IVP solver</a>, <a href="ivp/implicit.html#index-3">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="matrixanaly/insight.html#index-0"><strong>adjacency matrix</strong></a>, <a href="krylov/structure.html#index-1">[1]</a>
+</li>
+      <li><a href="linsys/matrices.html#index-0">adjoint</a>
+</li>
+      <li><a href="appendix/linear-algebra.html#index-2"><strong>adjoint of a matrix</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="advection/traffic.html#index-1"><strong>advection equation</strong></a>, <a href="advection/upwind.html#index-0">[1]</a>
+</li>
+      <li><a href="advection/absstab.html#index-1"><strong>advection-diffusion equation</strong></a>, <a href="advection/traffic.html#index-2">[1]</a>, <a href="twodim/diffadv.html#index-3">[2]</a>, <a href="twodim/nonlinear.html#index-2">[3]</a>
+</li>
+      <li><a href="bvp/linear.html#index-5">Airy equation</a>
+</li>
+      <li><a href="intro/algorithms.html#index-0"><strong>algorithm</strong></a>
+</li>
+      <li><a href="globalapprox/trig.html#index-7"><strong>aliasing</strong></a>
+</li>
+      <li><a href="bvp/nonlinear.html#index-3">Allen–Cahn equation</a>, <a href="bvp/shooting.html#index-1">[1]</a>, <a href="bvp/tpbvp.html#index-4">[2]</a>, <a href="diffusion/boundaries.html#index-4">[3]</a>, <a href="twodim/nonlinear.html#index-3">[4]</a>
+</li>
+      <li><a href="leastsq/fitting.html#index-6"><strong>argmin</strong></a>
+</li>
+      <li><a href="krylov/subspace.html#index-2"><strong>Arnoldi iteration</strong></a>, <a href="krylov/minrescg.html#index-1">[1]</a>
+</li>
+      <li><a href="linsys/efficiency.html#index-0"><strong>asymptotic notation</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="localapprox/finitediffs.html#index-1"><strong>backward difference</strong></a>
+</li>
+      <li><a href="intro/stability.html#index-3"><strong>backward error</strong></a>, <a href="nonlineqn/newton.html#index-6">[1]</a>, <a href="nonlineqn/rootproblem.html#index-5">[2]</a>
+
+      <ul>
+        <li><a href="linsys/condition-number.html#index-4">in a linear system</a>
+</li>
+      </ul></li>
+      <li><a href="linsys/linear-systems.html#index-5">backward substitution</a>
+</li>
+      <li><a href="bvp/diffmats.html#index-3">banded matrix</a>, <a href="krylov/structure.html#index-5">[1]</a>
+</li>
+      <li><a href="linsys/structure.html#index-0"><strong>bandwidth of a matrix</strong></a>
+</li>
+      <li><a href="globalapprox/barycentric.html#index-1"><strong>barycentric interpolation formula</strong></a>
+</li>
+      <li><a href="globalapprox/barycentric.html#index-0"><strong>barycentric weights</strong></a>
+</li>
+      <li><a href="matrixanaly/evd.html#index-11"><strong>Bauer–Fike theorem</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="advection/wave.html#index-4">beam equation</a>
+</li>
+      <li><a href="bvp/linear.html#index-4">Bessel equation</a>, <a href="bvp/tpbvp.html#index-2">[1]</a>
+</li>
+      <li><a href="diffusion/blackscholes.html#index-0">Black–Scholes equation</a>
+</li>
+      <li>
+    boundary conditions
+
+      <ul>
+        <li><a href="advection/upwind.html#index-3"><strong>inflow</strong></a>
+</li>
+        <li><a href="bvp/linear.html#index-2">numerical implementation of</a>, <a href="diffusion/blackscholes.html#index-7">[1]</a>, <a href="diffusion/boundaries.html#index-1">[2]</a>, <a href="twodim/diffadv.html#index-2">[3]</a>
+</li>
+        <li><a href="diffusion/methodlines.html#index-0"><strong>periodic</strong></a>
+</li>
+      </ul></li>
+      <li><a href="nonlineqn/quasinewton.html#index-2"><strong>Broyden update</strong></a>
+</li>
+      <li><a href="advection/traffic.html#index-4">Burgers equation</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="bvp/overview.html#index-0">C3PO</a>, <a href="nonlineqn/overview.html#index-0">[1]</a>
+</li>
+      <li><a href="localapprox/interpolation.html#index-6"><strong>cardinal function</strong></a>, <a href="globalapprox/polynomial.html#index-1">[1]</a>, <a href="globalapprox/trig.html#index-2">[2]</a>, <a href="localapprox/pwlin.html#index-4">[3]</a>
+</li>
+      <li><a href="bvp/nonlinear.html#index-4">Carrier equation</a>, <a href="bvp/tpbvp.html#index-2">[1]</a>
+</li>
+      <li><a href="localapprox/finitediffs.html#index-1"><strong>centered difference</strong></a>
+</li>
+      <li><a href="advection/upwind.html#index-2"><strong>CFL condition</strong></a>
+</li>
+      <li><a href="matrixanaly/evd.html#index-2"><strong>characteristic polynomial</strong></a>
+</li>
+      <li><a href="bvp/tpbvp.html#index-3">Chebyshev equation</a>
+</li>
+      <li>
+    Chebyshev points
+
+      <ul>
+        <li><a href="globalapprox/orthogonal.html#index-5"><strong>first kind</strong></a>
+</li>
+        <li><a href="globalapprox/stability.html#index-2"><strong>second kind</strong></a>, <a href="bvp/diffmats.html#index-4">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="globalapprox/orthogonal.html#index-4"><strong>Chebyshev polynomials</strong></a>
+</li>
+      <li><a href="globalapprox/integration.html#index-2"><strong>Clenshaw–Curtis integration</strong></a>
+</li>
+      <li><a href="bvp/linear.html#index-1"><strong>collocation</strong></a>
+</li>
+      <li>
+    condition number
+
+      <ul>
+        <li><a href="krylov/minrescg.html#index-7">of a matrix</a>, <a href="leastsq/normaleqns.html#index-5">[1]</a>, <a href="linsys/condition-number.html#index-1">[2]</a>, <a href="matrixanaly/evd.html#index-8">[3]</a>
+</li>
+        <li><a href="intro/conditioning.html#index-1"><strong>of a scalar function</strong></a>
+</li>
+        <li><a href="matrixanaly/evd.html#index-10">of eigenvalues</a>
+</li>
+        <li><a href="intro/conditioning.html#index-3">of elementary functions</a>
+</li>
+        <li><a href="ivp/basics.html#index-3">of initial-value problems</a>
+</li>
+        <li><a href="localapprox/interpolation.html#index-7">of interpolation</a>, <a href="localapprox/pwlin.html#index-5">[1]</a>
+</li>
+        <li><a href="leastsq/normaleqns.html#index-4">of linear least squares</a>
+</li>
+        <li><a href="linsys/condition-number.html#index-0">of linear system</a>
+</li>
+        <li><a href="leastsq/normaleqns.html#index-6">of normal equations</a>
+</li>
+        <li><a href="nonlineqn/rootproblem.html#index-2">of rootfinding</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="krylov/minrescg.html#index-6"><strong>conjugate gradients</strong></a>
+</li>
+      <li><a href="advection/traffic.html#index-0"><strong>conservation law</strong></a>
+</li>
+      <li><a href="nonlineqn/fixed-point.html#index-5"><strong>contraction mapping</strong></a>
+</li>
+      <li>
+    convergence rate
+
+      <ul>
+        <li><a href="localapprox/pwlin.html#index-6"><strong>algebraic</strong></a>
+</li>
+        <li><a href="nonlineqn/fixed-point.html#index-2"><strong>linear</strong></a>, <a href="krylov/gmres.html#index-1">[1]</a>, <a href="krylov/minrescg.html#index-4">[2]</a>, <a href="krylov/power.html#index-4">[3]</a>
+</li>
+        <li><a href="nonlineqn/newton.html#index-2"><strong>quadratic</strong></a>, <a href="krylov/inviter.html#index-4">[1]</a>
+</li>
+        <li><a href="globalapprox/stability.html#index-3"><strong>spectral</strong></a>, <a href="globalapprox/integration.html#index-0">[1]</a>
+</li>
+        <li><a href="nonlineqn/secant.html#index-2"><strong>superlinear</strong></a>
+</li>
+      </ul></li>
+      <li><a href="diffusion/methodlines.html#index-4">Crank–Nicolson method</a>
+</li>
+      <li><a href="localapprox/splines.html#index-1"><strong>cubic spline</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="advection/wave.html#index-2">D&#39;Alembert&#39;s solution</a>
+</li>
+      <li><a href="diffusion/stiffness.html#index-6">Dahlquist theorems</a>, <a href="ivp/zerostability.html#index-3">[1]</a>
+</li>
+      <li><a href="leastsq/fitting.html#index-2">data fitting</a>
+
+      <ul>
+        <li><a href="leastsq/fitting.html#index-8">by straight line</a>
+</li>
+        <li><a href="nonlineqn/nlsq.html#index-3">nonlinear</a>
+</li>
+        <li><a href="leastsq/fitting.html#index-9">power law</a>
+</li>
+      </ul></li>
+      <li><a href="krylov/structure.html#index-12"><strong>degree matrix</strong></a>
+</li>
+      <li><a href="appendix/linear-algebra.html#index-0"><strong>diagonal matrix</strong></a>, <a href="matrixanaly/evd.html#index-3">[1]</a>, <a href="matrixanaly/svd.html#index-0">[2]</a>
+</li>
+      <li><a href="matrixanaly/evd.html#index-4"><strong>diagonalizable matrix</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="bvp/diffmats.html#index-1"><strong>differentiation matrix</strong></a>, <a href="bvp/diffmats.html#index-5">[1]</a>, <a href="diffusion/methodlines.html#index-2">[2]</a>, <a href="twodim/tensorprod.html#index-1">[3]</a>
+</li>
+      <li>
+    diffusion equation
+
+      <ul>
+        <li>
+    see heat equation
+</li>
+      </ul></li>
+      <li><a href="krylov/subspace.html#index-1">dimension reduction</a>, <a href="matrixanaly/dimreduce.html#index-1">[1]</a>
+</li>
+      <li><a href="diffusion/boundaries.html#index-3">Dirichlet boundary conditions</a>
+</li>
+      <li><a href="bvp/tpbvp.html#index-0"><strong>Dirichlet condition</strong></a>, <a href="diffusion/blackscholes.html#index-2">[1]</a>
+</li>
+      <li><a href="localapprox/adaptive.html#index-2">divide and conquer</a>
+</li>
+      <li><a href="advection/upwind.html#index-1"><strong>domain of dependence</strong></a>
+</li>
+      <li><a href="globalapprox/improper.html#index-1"><strong>double exponential transformation</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="matrixanaly/evd.html#index-0"><strong>eigenvalue</strong></a>, <a href="krylov/subspace.html#index-4">[1]</a>
+
+      <ul>
+        <li><a href="matrixanaly/evd.html#index-10"><strong>conditioning of</strong></a>
+</li>
+        <li><a href="krylov/power.html#index-1"><strong>dominant</strong></a>, <a href="krylov/inviter.html#index-0">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="matrixanaly/evd.html#index-4"><strong>eigenvalue decomposition</strong></a>, <a href="diffusion/absstab.html#index-1">[1]</a>, <a href="krylov/structure.html#index-9">[2]</a>
+</li>
+      <li><a href="matrixanaly/evd.html#index-0"><strong>eigenvector</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="twodim/laplace.html#index-1">elliptic PDE</a>
+</li>
+      <li><a href="ivp/euler.html#index-0"><strong>Euler&#39;s method</strong></a>, <a href="ivp/systems.html#index-1">[1]</a>
+</li>
+      <li><a href="localapprox/integration.html#index-6"><strong>Euler–Maclaurin formula</strong></a>
+</li>
+      <li><a href="diffusion/blackscholes.html#index-1">evolutionary PDE</a>
+</li>
+      <li><a href="localapprox/integration.html#index-7"><strong>extrapolation</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="globalapprox/trig.html#index-5"><strong>FFT (fast Fourier transform)</strong></a>
+</li>
+      <li><a href="matrixanaly/symm-eig.html#index-5">field of values</a>
+</li>
+      <li><a href="krylov/structure.html#index-4">fill-in of sparse matrices</a>
+</li>
+      <li>
+    finite difference
+
+      <ul>
+        <li><a href="diffusion/methodlines.html#index-2">for parabolic PDE</a>
+</li>
+      </ul></li>
+      <li><a href="localapprox/finitediffs.html#index-0"><strong>finite differences</strong></a>, <a href="localapprox/fd-converge.html#index-0">[1]</a>, <a href="nonlineqn/quasinewton.html#index-0">[2]</a>
+
+      <ul>
+        <li><a href="bvp/linear.html#index-0">for boundary value problems</a>
+</li>
+        <li><a href="bvp/diffmats.html#index-0">matrix</a>
+</li>
+        <li><a href="diffusion/blackscholes.html#index-6">parabolic PDE</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="bvp/galerkin.html#index-4"><strong>finite element method</strong></a>
+</li>
+      <li><a href="diffusion/boundaries.html#index-5">Fisher equation</a>
+</li>
+      <li><a href="nonlineqn/fixed-point.html#index-1"><strong>fixed point iteration</strong></a>
+</li>
+      <li><a href="nonlineqn/fixed-point.html#index-0"><strong>fixed point problem</strong></a>
+</li>
+      <li><a href="intro/floating-point.html#index-0"><strong>floating-point numbers</strong></a>, <a href="intro/floating-point.html#index-9">[1]</a>
+</li>
+      <li><a href="linsys/efficiency.html#index-1">flops</a>
+</li>
+      <li><a href="localapprox/finitediffs.html#index-1"><strong>forward difference</strong></a>
+</li>
+      <li><a href="linsys/linear-systems.html#index-4">forward substitution</a>
+</li>
+      <li><a href="matrixanaly/evd.html#index-15"><strong>Francis QR iteration</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="bvp/galerkin.html#index-1"><strong>Galerkin conditions</strong></a>
+</li>
+      <li><a href="linsys/lu.html#index-3">Gaussian elimination</a>
+</li>
+      <li><a href="globalapprox/integration.html#index-3"><strong>Gaussian integration</strong></a>
+</li>
+      <li><a href="nonlineqn/nlsq.html#index-1"><strong>Gauss–Newton method</strong></a>
+</li>
+      <li><a href="ivp/multistep.html#index-4"><strong>generating polynomials</strong></a>
+</li>
+      <li><a href="globalapprox/trig.html#index-8">Gibbs phenomenon</a>
+</li>
+      <li><a href="ivp/euler.html#index-3"><strong>global error</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="krylov/gmres.html#index-0"><strong>GMRES</strong></a>
+
+      <ul>
+        <li><a href="krylov/precond.html#index-0">preconditioning in</a>
+</li>
+        <li><a href="krylov/minrescg.html#index-3">relationship to MINRES</a>
+</li>
+        <li><a href="krylov/gmres.html#index-2"><strong>restarting</strong></a>
+</li>
+      </ul></li>
+      <li><a href="globalapprox/orthogonal.html#index-1"><strong>Gram matrix</strong></a>
+</li>
+      <li><a href="matrixanaly/insight.html#index-0"><strong>graph</strong></a>
+</li>
+      <li><a href="krylov/structure.html#index-12"><strong>graph Laplacian matrix</strong></a>
+</li>
+      <li><a href="localapprox/integration.html#index-9"><strong>Gregory integration formula</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="globalapprox/overview.html#index-0">Han Solo</a>, <a href="ivp/overview.html#index-0">[1]</a>, <a href="leastsq/overview.html#index-0">[2]</a>, <a href="linsys/overview.html#index-0">[3]</a>
+</li>
+      <li><a href="localapprox/pwlin.html#index-2">hat functions</a>
+</li>
+      <li><a href="diffusion/blackscholes.html#index-5"><strong>heat equation</strong></a>, <a href="diffusion/absstab.html#index-4">[1]</a>, <a href="twodim/diffadv.html#index-1">[2]</a>
+</li>
+      <li><a href="krylov/structure.html#index-13"><strong>Helmholtz equation</strong></a>, <a href="krylov/minrescg.html#index-9">[1]</a>
+</li>
+      <li><a href="bvp/tpbvp.html#index-3">Hermite equation</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="appendix/linear-algebra.html#index-2"><strong>hermitian matrix</strong></a>, <a href="linsys/matrices.html#index-0">[1]</a>, <a href="matrixanaly/svd.html#index-4">[2]</a>
+</li>
+      <li>
+    hermitian positive definite matrix
+
+      <ul>
+        <li>
+    see symmetric positive definite matrix
+</li>
+      </ul></li>
+      <li><a href="intro/algorithms.html#index-1"><strong>Horner&#39;s algorithm</strong></a>
+</li>
+      <li><a href="leastsq/house.html#index-1"><strong>Householder reflector</strong></a>
+</li>
+      <li><a href="advection/traffic.html#index-1"><strong>hyperbolic PDE</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="appendix/linear-algebra.html#index-6"><strong>identity matrix</strong></a>, <a href="linsys/matrices.html#index-1">[1]</a>
+</li>
+      <li><a href="intro/floating-point.html#index-10">IEEE 754</a>, <a href="intro/floating-point.html#index-7">[1]</a>
+</li>
+      <li><a href="krylov/matrixfree.html#index-0">image (as a matrix)</a>, <a href="matrixanaly/dimreduce.html#index-2">[1]</a>, <a href="matrixanaly/insight.html#index-2">[2]</a>
+</li>
+      <li><a href="ivp/multistep.html#index-0"><strong>implicit IVP solver</strong></a>, <a href="ivp/implicit.html#index-1">[1]</a>
+</li>
+      <li><a href="globalapprox/improper.html#index-0">improper integral</a>, <a href="localapprox/adaptive.html#index-4">[1]</a>
+</li>
+      <li><a href="diffusion/blackscholes.html#index-3"><strong>initial-boundary-value problem</strong></a>
+</li>
+      <li><a href="ivp/basics.html#index-0"><strong>initial-value problem</strong></a>
+
+      <ul>
+        <li><a href="ivp/euler.html#index-1"><strong>one-step method for</strong></a>
+</li>
+      </ul></li>
+      <li><a href="leastsq/qr.html#index-1">inner product</a>
+
+      <ul>
+        <li><a href="globalapprox/orthogonal.html#index-0"><strong>of functions</strong></a>
+</li>
+        <li><a href="appendix/linear-algebra.html#index-3"><strong>of vectors</strong></a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="globalapprox/orthogonal.html#index-0"><strong>inner product space</strong></a>
+</li>
+      <li><a href="localapprox/interpolation.html#index-0"><strong>interpolation</strong></a>, <a href="linsys/polyinterp.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="bvp/galerkin.html#index-3">by piecewise linear polynomials</a>
+</li>
+        <li><a href="localapprox/integration.html#index-3">by piecewise polynomials</a>, <a href="localapprox/interpolation.html#index-4">[1]</a>, <a href="localapprox/pwlin.html#index-0">[2]</a>, <a href="localapprox/splines.html#index-0">[3]</a>
+</li>
+        <li><a href="globalapprox/polynomial.html#index-0">by polynomials</a>, <a href="leastsq/fitting.html#index-0">[1]</a>, <a href="localapprox/finitediffs.html#index-2">[2]</a>, <a href="localapprox/interpolation.html#index-2">[3]</a>, <a href="nonlineqn/secant.html#index-3">[4]</a>
+</li>
+        <li><a href="globalapprox/trig.html#index-1"><strong>by trigonometric polynomials</strong></a>
+</li>
+      </ul></li>
+      <li><a href="krylov/inviter.html#index-1"><strong>inverse iteration</strong></a>
+</li>
+      <li><a href="appendix/linear-algebra.html#index-7"><strong>invertible matrix</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nonlineqn/newtonsys.html#index-1"><strong>Jacobian matrix</strong></a>, <a href="diffusion/stiffness.html#index-1">[1]</a>, <a href="nonlineqn/quasinewton.html#index-0">[2]</a>
+</li>
+      <li><a href="preface-original.html#index-0">John von</a>
+</li>
+      <li>
+    Julia
+
+      <ul>
+        <li><a href="linsys/polyinterp.html#index-9"><strong>!</strong></a>
+</li>
+        <li><a href="linsys/matrices.html#index-3"><strong>&#39;</strong></a>, <a href="matrixanaly/evd.html#index-13">[1]</a>
+</li>
+        <li><a href="linsys/matrices.html#index-9"><strong>+=</strong></a>
+</li>
+        <li><a href="linsys/polyinterp.html#index-2"><strong>.+</strong></a>
+</li>
+        <li><a href="linsys/polyinterp.html#index-2"><strong>.-</strong></a>
+</li>
+        <li><a href="linsys/matrices.html#index-4"><strong>:</strong></a>, <a href="linsys/matrices.html#index-6">[1]</a>
+</li>
+        <li><a href="intro/stability.html#index-4"><strong>@.</strong></a>
+</li>
+        <li><a href="diffusion/blackscholes.html#index-8"><strong>@animate</strong></a>
+</li>
+        <li><a href="nonlineqn/nlsq.html#index-2"><strong>@sprintf</strong></a>
+</li>
+        <li><a href="linsys/polyinterp.html#index-5"><strong>\</strong></a>, <a href="krylov/structure.html#index-11">[1]</a>, <a href="leastsq/fitting.html#index-4">[2]</a>, <a href="linsys/linear-systems.html#index-1">[3]</a>, <a href="nonlineqn/newtonsys.html#index-4">[4]</a>
+</li>
+        <li><a href="linsys/matrices.html#index-3"><strong>adjoint</strong></a>, <a href="matrixanaly/evd.html#index-13">[1]</a>
+</li>
+        <li><a href="localapprox/pwlin.html#index-3"><strong>annotate!</strong></a>
+</li>
+        <li><a href="linsys/efficiency.html#index-3">Boolean indexing</a>
+</li>
+        <li><a href="nonlineqn/newton.html#index-5"><strong>break</strong></a>
+</li>
+        <li><a href="linsys/polyinterp.html#index-8"><strong>broadcasting</strong></a>, <a href="intro/stability.html#index-4">[1]</a>, <a href="linsys/matrices.html#index-8">[2]</a>, <a href="linsys/polyinterp.html#index-3">[3]</a>
+</li>
+        <li><a href="krylov/minrescg.html#index-8"><strong>cg</strong></a>
+</li>
+        <li><a href="linsys/structure.html#index-10"><strong>cholesky</strong></a>
+</li>
+        <li><a href="bvp/nonlinear.html#index-1"><strong>collect</strong></a>
+</li>
+        <li><a href="linsys/polyinterp.html#index-4"><strong>comprehension</strong></a>
+</li>
+        <li><a href="linsys/condition-number.html#index-2"><strong>cond</strong></a>, <a href="matrixanaly/evd.html#index-14">[1]</a>
+</li>
+        <li><a href="nonlineqn/nlsq.html#index-4"><strong>destructuring</strong></a>
+</li>
+        <li><a href="linsys/structure.html#index-1"><strong>diag</strong></a>, <a href="linsys/structure.html#index-2"><strong>[1]</strong></a>
+</li>
+        <li><a href="linsys/matrices.html#index-7"><strong>diagm</strong></a>, <a href="linsys/linear-systems.html#index-8">[1]</a>, <a href="linsys/structure.html#index-1">[2]</a>
+</li>
+        <li><a href="krylov/precond.html#index-2"><strong>DiagonalPreconditioner</strong></a>
+</li>
+        <li><a href="globalapprox/trig.html#index-3"><strong>eachindex</strong></a>
+</li>
+        <li><a href="matrixanaly/evd.html#index-6"><strong>eigen</strong></a>
+</li>
+        <li><a href="krylov/structure.html#index-10"><strong>eigs</strong></a>
+</li>
+        <li><a href="matrixanaly/evd.html#index-5"><strong>eigvals</strong></a>
+</li>
+        <li><a href="matrixanaly/insight.html#index-4"><strong>eltype</strong></a>
+</li>
+        <li><a href="linsys/matrices.html#index-5"><strong>end</strong></a>
+</li>
+        <li><a href="nonlineqn/newton.html#index-7"><strong>enumerate</strong></a>
+</li>
+        <li><a href="globalapprox/trig.html#index-6"><strong>fft</strong></a>
+</li>
+        <li><a href="linsys/structure.html#index-1"><strong>fill</strong></a>
+</li>
+        <li><a href="krylov/power.html#index-3"><strong>findmax</strong></a>
+</li>
+        <li><a href="localapprox/interpolation.html#index-3"><strong>fit</strong></a>
+</li>
+        <li><a href="intro/algorithms.html#index-5"><strong>FNC</strong></a>
+</li>
+        <li><a href="intro/algorithms.html#index-3"><strong>for</strong></a>, <a href="linsys/efficiency.html#index-2"><strong>[1]</strong></a>
+</li>
+        <li><a href="intro/algorithms.html#index-6"><strong>functions</strong></a>
+</li>
+        <li><a href="krylov/gmres.html#index-4"><strong>gmres</strong></a>
+</li>
+        <li><a href="matrixanaly/insight.html#index-1"><strong>graphplot</strong></a>
+</li>
+        <li><a href="leastsq/house.html#index-3"><strong>I</strong></a>
+</li>
+        <li><a href="krylov/precond.html#index-4"><strong>ilu</strong></a>
+</li>
+        <li><a href="matrixanaly/insight.html#index-3"><strong>Images</strong></a>
+</li>
+        <li><a href="bvp/tpbvp.html#index-1"><strong>in-place function</strong></a>
+</li>
+        <li><a href="linsys/matrices.html#index-5"><strong>indexing arrays</strong></a>, <a href="globalapprox/polynomial.html#index-0">[1]</a>, <a href="intro/algorithms.html#index-2">[2]</a>, <a href="localapprox/interpolation.html#index-1">[3]</a>, <a href="twodim/nonlinear.html#index-1">[4]</a>
+</li>
+        <li><a href="globalapprox/barycentric.html#index-2"><strong>isinf</strong></a>
+</li>
+        <li><a href="globalapprox/trig.html#index-3"><strong>isodd</strong></a>
+</li>
+        <li><a href="nonlineqn/newton.html#index-4"><strong>keyword function arguments</strong></a>, <a href="krylov/gmres.html#index-3">[1]</a>, <a href="localapprox/adaptive.html#index-3">[2]</a>
+</li>
+        <li><a href="twodim/laplace.html#index-4"><strong>kron</strong></a>
+</li>
+        <li><a href="linsys/matrices.html#index-2"><strong>length</strong></a>, <a href="intro/algorithms.html#index-2">[1]</a>
+</li>
+        <li><a href="krylov/matrixfree.html#index-1"><strong>LinearMap</strong></a>
+</li>
+        <li><a href="linsys/norms.html#index-8"><strong>maximum</strong></a>
+</li>
+        <li><a href="linsys/norms.html#index-8"><strong>minimum</strong></a>
+</li>
+        <li><a href="krylov/minrescg.html#index-5"><strong>minres</strong></a>
+</li>
+        <li><a href="intro/algorithms.html#index-5"><strong>namespace</strong></a>
+</li>
+        <li><a href="linsys/pivoting.html#index-1">NaN</a>
+</li>
+        <li><a href="nonlineqn/rootproblem.html#index-1"><strong>nlsolve</strong></a>
+</li>
+        <li><a href="krylov/structure.html#index-2"><strong>nnz</strong></a>
+</li>
+        <li><a href="linsys/norms.html#index-2"><strong>norm</strong></a>, <a href="linsys/norms.html#index-5">[1]</a>
+</li>
+        <li><a href="linsys/norms.html#index-3"><strong>normalize</strong></a>, <a href="leastsq/house.html#index-3">[1]</a>
+</li>
+        <li><a href="ivp/basics.html#index-2"><strong>ODEProblem</strong></a>
+</li>
+        <li><a href="linsys/norms.html#index-7"><strong>opnorm</strong></a>
+</li>
+        <li><a href="linsys/linear-systems.html#index-8"><strong>Pair</strong></a>
+</li>
+        <li><a href="leastsq/fitting.html#index-1">plotting functions</a>
+</li>
+        <li><a href="linsys/efficiency.html#index-2"><strong>push!</strong></a>, <a href="nonlineqn/fixed-point.html#index-3">[1]</a>
+</li>
+        <li><a href="localapprox/integration.html#index-0"><strong>quadgk</strong></a>
+</li>
+        <li><a href="linsys/matrices.html#index-4"><strong>range</strong></a>, <a href="linsys/polyinterp.html#index-7">[1]</a>
+</li>
+        <li><a href="localapprox/finitediffs.html#index-3"><strong>Rational</strong></a>
+</li>
+        <li><a href="twodim/diffadv.html#index-0">reshape</a>
+</li>
+        <li><a href="intro/algorithms.html#index-7"><strong>return</strong></a>
+</li>
+        <li><a href="linsys/polyinterp.html#index-6"><strong>scatter</strong></a>
+</li>
+        <li><a href="intro/stability.html#index-1"><strong>scientific notation</strong></a>
+</li>
+        <li><a href="linsys/matrices.html#index-2"><strong>size</strong></a>
+</li>
+        <li><a href="ivp/basics.html#index-2"><strong>solve</strong></a>
+</li>
+        <li><a href="matrixanaly/evd.html#index-7"><strong>sortby</strong></a>
+</li>
+        <li><a href="krylov/inviter.html#index-3"><strong>sortperm</strong></a>
+</li>
+        <li><a href="krylov/structure.html#index-8"><strong>sparse</strong></a>
+</li>
+        <li><a href="krylov/structure.html#index-7"><strong>spdiagm</strong></a>
+</li>
+        <li><a href="nonlineqn/rootproblem.html#index-3"><strong>splatting</strong></a>
+</li>
+        <li><a href="localapprox/interpolation.html#index-5"><strong>Spline1D</strong></a>
+</li>
+        <li><a href="intro/floating-point.html#index-6"><strong>string interpolation</strong></a>
+</li>
+        <li><a href="linsys/norms.html#index-9"><strong>subplots</strong></a>
+</li>
+        <li><a href="linsys/norms.html#index-8"><strong>sum</strong></a>, <a href="linsys/linear-systems.html#index-6">[1]</a>
+</li>
+        <li><a href="krylov/structure.html#index-3"><strong>summarysize</strong></a>
+</li>
+        <li><a href="matrixanaly/svd.html#index-9"><strong>svd</strong></a>
+</li>
+        <li><a href="matrixanaly/svd.html#index-8"><strong>svdvals</strong></a>
+</li>
+        <li><a href="globalapprox/trig.html#index-3"><strong>ternary operator</strong></a>
+</li>
+        <li><a href="linsys/matrices.html#index-3"><strong>transpose</strong></a>
+</li>
+        <li><a href="linsys/linear-systems.html#index-7"><strong>tril</strong></a>
+</li>
+        <li><a href="linsys/linear-systems.html#index-7"><strong>triu</strong></a>
+</li>
+        <li><a href="intro/algorithms.html#index-4"><strong>using</strong></a>
+</li>
+        <li><a href="twodim/diffadv.html#index-0"><strong>vec operation</strong></a>
+</li>
+        <li><a href="globalapprox/trig.html#index-4"><strong>÷</strong></a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="twodim/laplace.html#index-3"><strong>Kronecker product</strong></a>
+</li>
+      <li><a href="krylov/subspace.html#index-0"><strong>Krylov matrix</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="krylov/subspace.html#index-0"><strong>Krylov subspace</strong></a>
+</li>
+      <li><a href="advection/traffic.html#index-5">Kuramoto–Sivashinsky equation</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="globalapprox/polynomial.html#index-3"><strong>Lagrange interpolation formula</strong></a>
+</li>
+      <li><a href="globalapprox/polynomial.html#index-2"><strong>Lagrange polynomial</strong></a>
+</li>
+      <li><a href="bvp/tpbvp.html#index-3">Laguerre equation</a>
+</li>
+      <li><a href="krylov/minrescg.html#index-2"><strong>Lanczos iteration</strong></a>
+</li>
+      <li><a href="twodim/laplace.html#index-0"><strong>Laplace equation</strong></a>
+</li>
+      <li><a href="bvp/tpbvp.html#index-3">Legendre equation</a>
+</li>
+      <li><a href="globalapprox/orthogonal.html#index-3"><strong>Legendre polynomials</strong></a>
+</li>
+      <li><a href="nonlineqn/quasinewton.html#index-4"><strong>Levenberg&#39;s method</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="appendix/linear-algebra.html#index-5"><strong>linear combination</strong></a>
+</li>
+      <li><a href="nonlineqn/fixed-point.html#index-2"><strong>linear convergence</strong></a>
+</li>
+      <li><a href="leastsq/fitting.html#index-5">linear least squares problem</a>, <a href="leastsq/normaleqns.html#index-0">[1]</a>, <a href="leastsq/qr.html#index-6">[2]</a>
+</li>
+      <li><a href="diffusion/stiffness.html#index-2"><strong>linearization of an ODE</strong></a>
+</li>
+      <li><a href="nonlineqn/fixed-point.html#index-4"><strong>Lipschitz condition</strong></a>
+</li>
+      <li><a href="ivp/basics.html#index-1"><strong>logistic equation</strong></a>, <a href="ivp/basics.html#index-4">[1]</a>
+</li>
+      <li><a href="linsys/lu.html#index-2"><strong>LU factorization</strong></a>, <a href="krylov/precond.html#index-1">[1]</a>, <a href="krylov/structure.html#index-6">[2]</a>
+
+      <ul>
+        <li><a href="krylov/precond.html#index-3"><strong>incomplete</strong></a>
+</li>
+      </ul></li>
+      <li><a href="krylov/overview.html#index-0">Luke Skywalker</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="intro/floating-point.html#index-3"><strong>machine epsilon</strong></a>, <a href="localapprox/fd-converge.html#index-3">[1]</a>, <a href="nonlineqn/quasinewton.html#index-1">[2]</a>
+
+      <ul>
+        <li><a href="intro/floating-point.html#index-7">in double precision</a>
+</li>
+      </ul></li>
+      <li>
+    mantissa
+
+      <ul>
+        <li>
+    see significand
+</li>
+      </ul></li>
+      <li><a href="bvp/galerkin.html#index-2"><strong>mass matrix</strong></a>
+</li>
+      <li><a href="matrixanaly/svd.html#index-3">matrix factorization</a>
+
+      <ul>
+        <li><a href="linsys/structure.html#index-8"><strong>Cholesky</strong></a>
+</li>
+        <li><a href="matrixanaly/evd.html#index-3"><strong>EVD</strong></a>
+</li>
+        <li><a href="linsys/lu.html#index-2"><strong>LU</strong></a>, <a href="linsys/pivoting.html#index-0">[1]</a>
+</li>
+        <li><a href="linsys/pivoting.html#index-3"><strong>pivoted LU</strong></a>
+</li>
+        <li><a href="leastsq/qr.html#index-5"><strong>QR</strong></a>, <a href="leastsq/house.html#index-2">[1]</a>
+</li>
+        <li><a href="matrixanaly/svd.html#index-1"><strong>SVD</strong></a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="appendix/linear-algebra.html#index-7"><strong>matrix inverse</strong></a>, <a href="linsys/linear-systems.html#index-0">[1]</a>
+</li>
+      <li><a href="advection/wave.html#index-1">Maxwell&#39;s equations</a>
+</li>
+      <li><a href="diffusion/methodlines.html#index-3"><strong>method of lines</strong></a>, <a href="advection/absstab.html#index-0">[1]</a>, <a href="diffusion/absstab.html#index-4">[2]</a>, <a href="diffusion/boundaries.html#index-0">[3]</a>
+</li>
+      <li><a href="krylov/minrescg.html#index-3"><strong>MINRES</strong></a>
+</li>
+      <li><a href="ivp/multistep.html#index-0"><strong>multistep method</strong></a>, <a href="ivp/zerostability.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="ivp/implicit.html#index-0">implementation of</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="intro/floating-point.html#index-8">NaN</a>
+</li>
+      <li><a href="preface-original.html#index-0">Neumann</a>
+</li>
+      <li><a href="bvp/tpbvp.html#index-0"><strong>Neumann condition</strong></a>, <a href="diffusion/blackscholes.html#index-2">[1]</a>
+</li>
+      <li><a href="nonlineqn/newton.html#index-0"><strong>Newton&#39;s method</strong></a>, <a href="bvp/nonlinear.html#index-0">[1]</a>, <a href="nonlineqn/newtonsys.html#index-2">[2]</a>
+
+      <ul>
+        <li><a href="nonlineqn/newtonsys.html#index-3"><strong>multidimensional</strong></a>
+</li>
+      </ul></li>
+      <li><a href="nonlineqn/nlsq.html#index-0"><strong>nonlinear least squares</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    norm
+
+      <ul>
+        <li><a href="linsys/norms.html#index-4"><strong>Frobenius</strong></a>
+</li>
+        <li><a href="linsys/norms.html#index-6"><strong>matrix</strong></a>, <a href="matrixanaly/svd.html#index-7">[1]</a>
+</li>
+        <li><a href="linsys/norms.html#index-0"><strong>vector</strong></a>, <a href="leastsq/fitting.html#index-7">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="leastsq/normaleqns.html#index-1"><strong>normal equations</strong></a>, <a href="leastsq/normaleqns.html#index-3">[1]</a>, <a href="leastsq/qr.html#index-7">[2]</a>
+</li>
+      <li><a href="matrixanaly/evd.html#index-12"><strong>normal matrix</strong></a>
+</li>
+      <li><a href="localapprox/integration.html#index-1"><strong>numerical integration</strong></a>, <a href="localapprox/adaptive.html#index-0">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="advection/overview.html#index-0">Obi-Wan Kenobi</a>, <a href="twodim/overview.html#index-0">[1]</a>
+</li>
+      <li><a href="leastsq/qr.html#index-3"><strong>ONC matrix</strong></a>, <a href="matrixanaly/svd.html#index-6">[1]</a>
+</li>
+      <li><a href="globalapprox/polynomial.html#index-4">order of accuracy</a>
+
+      <ul>
+        <li><a href="localapprox/fd-converge.html#index-2"><strong>of a finite difference formula</strong></a>
+</li>
+        <li><a href="bvp/diffmats.html#index-2">of a finite-difference formula</a>
+</li>
+        <li><a href="ivp/euler.html#index-4"><strong>of a one-step IVP method</strong></a>
+</li>
+        <li><a href="localapprox/pwlin.html#index-6"><strong>of an approximation</strong></a>
+</li>
+        <li><a href="localapprox/integration.html#index-5"><strong>of numerical integration</strong></a>
+</li>
+        <li><a href="bvp/galerkin.html#index-5">of the finite element method</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="diffusion/stiffness.html#index-3">Oregonator</a>
+</li>
+      <li><a href="globalapprox/orthogonal.html#index-0"><strong>orthogonal functions</strong></a>
+</li>
+      <li><a href="leastsq/qr.html#index-4"><strong>orthogonal matrix</strong></a>, <a href="leastsq/house.html#index-0">[1]</a>, <a href="leastsq/house.html#index-1">[2]</a>, <a href="matrixanaly/evd.html#index-1">[3]</a>
+</li>
+      <li><a href="globalapprox/orthogonal.html#index-2"><strong>orthogonal polynomials</strong></a>
+</li>
+      <li><a href="leastsq/qr.html#index-0"><strong>orthogonal vectors</strong></a>
+</li>
+      <li><a href="leastsq/qr.html#index-0"><strong>orthonormal vectors</strong></a>
+</li>
+      <li><a href="appendix/linear-algebra.html#index-4"><strong>outer product</strong></a>, <a href="linsys/lu.html#index-0">[1]</a>, <a href="nonlineqn/quasinewton.html#index-3">[2]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="diffusion/blackscholes.html#index-5"><strong>parabolic PDE</strong></a>
+</li>
+      <li><a href="bvp/nonlinear.html#index-2"><strong>parameter continuation</strong></a>
+</li>
+      <li><a href="bvp/shooting.html#index-0">pendulum</a>
+</li>
+      <li><a href="localapprox/pwlin.html#index-1"><strong>piecewise linear interpolant</strong></a>
+</li>
+      <li><a href="linsys/pivoting.html#index-2"><strong>pivoting</strong></a>, <a href="linsys/structure.html#index-3">[1]</a>, <a href="linsys/structure.html#index-9">[2]</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="linsys/pivoting.html#index-3"><strong>PLU factorization</strong></a>
+</li>
+      <li><a href="twodim/laplace.html#index-0"><strong>Poisson equation</strong></a>
+</li>
+      <li><a href="krylov/power.html#index-2"><strong>power iteration</strong></a>
+</li>
+      <li><a href="krylov/precond.html#index-0"><strong>preconditioning</strong></a>
+</li>
+      <li><a href="ivp/systems.html#index-0">predator–prey model</a>
+</li>
+      <li><a href="leastsq/normaleqns.html#index-2"><strong>pseudoinverse</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nonlineqn/newton.html#index-1"><strong>quadratic convergence</strong></a>
+</li>
+      <li>
+    quadrature
+
+      <ul>
+        <li>
+    see numerical integration
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="twodim/nonlinear.html#index-0">quasi-Newton method</a>
+</li>
+      <li><a href="globalapprox/orthogonal.html#index-1"><strong>quasimatrix</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="matrixanaly/symm-eig.html#index-2"><strong>Rayleigh quotient</strong></a>
+</li>
+      <li><a href="linsys/linear-systems.html#index-2">residual</a>, <a href="nonlineqn/newton.html#index-6">[1]</a>
+
+      <ul>
+        <li><a href="linsys/condition-number.html#index-3"><strong>of a linear system</strong></a>
+</li>
+        <li><a href="nonlineqn/rootproblem.html#index-4"><strong>of rootfinding</strong></a>
+</li>
+      </ul></li>
+      <li><a href="krylov/overview.html#index-0">Return of the Jedi</a>
+</li>
+      <li><a href="bvp/tpbvp.html#index-0"><strong>Robin condition</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nonlineqn/rootproblem.html#index-0"><strong>rootfinding problem</strong></a>, <a href="diffusion/boundaries.html#index-2">[1]</a>, <a href="ivp/multistep.html#index-2">[2]</a>
+
+      <ul>
+        <li><a href="nonlineqn/newtonsys.html#index-0"><strong>multidimensional</strong></a>
+</li>
+      </ul></li>
+      <li>
+    roots
+
+      <ul>
+        <li><a href="nonlineqn/rootproblem.html#index-6"><strong>multiplicity of</strong></a>, <a href="nonlineqn/newton.html#index-3">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="globalapprox/stability.html#index-1"><strong>Runge phenomenon</strong></a>
+</li>
+      <li><a href="ivp/rk.html#index-0"><strong>Runge–Kutta method</strong></a>, <a href="ivp/adaptive.html#index-0">[1]</a>, <a href="ivp/multistep.html#index-1">[2]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="nonlineqn/secant.html#index-0"><strong>secant method</strong></a>
+</li>
+      <li>
+    semidiscretization
+
+      <ul>
+        <li><a href="diffusion/methodlines.html#index-1"><strong>see method of lines</strong></a>
+</li>
+      </ul></li>
+      <li>
+    shifted inverse iteration
+
+      <ul>
+        <li>
+    see inverse iteration
+</li>
+      </ul></li>
+      <li><a href="advection/traffic.html#index-3">shock wave</a>
+</li>
+      <li><a href="intro/floating-point.html#index-2"><strong>significand</strong></a>
+</li>
+      <li><a href="intro/floating-point.html#index-4">significant digits</a>
+</li>
+      <li><a href="matrixanaly/evd.html#index-9"><strong>similarity transformation</strong></a>
+</li>
+      <li><a href="localapprox/integration.html#index-8"><strong>Simpson&#39;s formula</strong></a>, <a href="localapprox/adaptive.html#index-1">[1]</a>
+</li>
+      <li><a href="localapprox/adaptive.html#index-5">sine integral function</a>
+</li>
+      <li><a href="advection/wave.html#index-3">sine–Gordon equation</a>
+</li>
+      <li><a href="appendix/linear-algebra.html#index-8"><strong>singular matrix</strong></a>
+</li>
+      <li><a href="matrixanaly/svd.html#index-1"><strong>singular value decomposition</strong></a>, <a href="matrixanaly/dimreduce.html#index-0">[1]</a>
+
+      <ul>
+        <li><a href="matrixanaly/svd.html#index-5"><strong>thin form</strong></a>
+</li>
+      </ul></li>
+      <li><a href="twodim/nonlinear.html#index-4">soap film</a>
+</li>
+      <li><a href="krylov/structure.html#index-0"><strong>sparse matrix</strong></a>, <a href="bvp/diffmats.html#index-3">[1]</a>, <a href="krylov/power.html#index-0">[2]</a>, <a href="krylov/precond.html#index-1">[3]</a>, <a href="linsys/structure.html#index-4">[4]</a>
+</li>
+      <li>
+    SPD matrix
+
+      <ul>
+        <li>
+    see symmetric positive definite matrix
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="localapprox/splines.html#index-1"><strong>spline (cubic spline)</strong></a>
+</li>
+      <li><a href="intro/stability.html#index-0"><strong>stability</strong></a>, <a href="linsys/pivoting.html#index-4">[1]</a>
+
+      <ul>
+        <li><a href="bvp/linear.html#index-3">of collocation</a>
+</li>
+        <li><a href="diffusion/absstab.html#index-0">of IVP solvers</a>
+</li>
+        <li><a href="ivp/zerostability.html#index-1">of multistep methods</a>
+</li>
+        <li><a href="globalapprox/stability.html#index-0">of polynomial interpolation</a>
+</li>
+      </ul></li>
+      <li><a href="diffusion/absstab.html#index-3"><strong>stability region</strong></a>
+</li>
+      <li><a href="advection/overview.html#index-0">Star Wars: A New Hope</a>, <a href="bvp/overview.html#index-1">[1]</a>, <a href="diffusion/overview.html#index-0">[2]</a>, <a href="ivp/overview.html#index-0">[3]</a>, <a href="linsys/overview.html#index-0">[4]</a>, <a href="nonlineqn/overview.html#index-0">[5]</a>, <a href="twodim/overview.html#index-0">[6]</a>
+</li>
+      <li><a href="nonlineqn/quasinewton.html#index-5">steepest descent</a>
+</li>
+      <li><a href="diffusion/stiffness.html#index-0"><strong>stiff differential equation</strong></a>, <a href="ivp/adaptive.html#index-2">[1]</a>, <a href="ivp/implicit.html#index-2">[2]</a>
+</li>
+      <li><a href="bvp/galerkin.html#index-2"><strong>stiffness matrix</strong></a>
+</li>
+      <li><a href="intro/conditioning.html#index-0"><strong>subtractive cancellation</strong></a>, <a href="intro/conditioning.html#index-2">[1]</a>, <a href="intro/stability.html#index-2">[2]</a>, <a href="leastsq/qr.html#index-2">[3]</a>, <a href="localapprox/fd-converge.html#index-4">[4]</a>
+</li>
+      <li><a href="nonlineqn/secant.html#index-1"><strong>superlinear convergence</strong></a>
+</li>
+      <li>
+    SVD
+
+      <ul>
+        <li>
+    see singular value decomposition
+</li>
+      </ul></li>
+      <li><a href="twodim/laplace.html#index-2"><strong>Sylvester equation</strong></a>
+</li>
+      <li><a href="krylov/minrescg.html#index-0">symmetric matrix</a>, <a href="linsys/matrices.html#index-0">[1]</a>, <a href="linsys/structure.html#index-5">[2]</a>, <a href="matrixanaly/symm-eig.html#index-0">[3]</a>
+</li>
+      <li><a href="linsys/structure.html#index-6"><strong>symmetric positive definite matrix</strong></a>, <a href="krylov/minrescg.html#index-6">[1]</a>, <a href="matrixanaly/symm-eig.html#index-3">[2]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="twodim/tensorprod.html#index-0"><strong>tensor-product domain</strong></a>
+</li>
+      <li><a href="globalapprox/overview.html#index-0">The Empire Strikes Back</a>, <a href="intro/overview.html#index-0">[1]</a>, <a href="leastsq/overview.html#index-0">[2]</a>, <a href="localapprox/overview.html#index-0">[3]</a>, <a href="matrixanaly/overview.html#index-0">[4]</a>
+</li>
+      <li><a href="appendix/linear-algebra.html#index-1"><strong>transpose</strong></a>, <a href="linsys/matrices.html#index-0">[1]</a>
+</li>
+      <li>
+    trapezoid formula
+
+      <ul>
+        <li><a href="ivp/multistep.html#index-3"><strong>for an IVP</strong></a>, <a href="diffusion/stiffness.html#index-5">[1]</a>, <a href="ivp/multistep.html#index-6">[2]</a>
+</li>
+        <li><a href="localapprox/integration.html#index-4"><strong>for integration</strong></a>, <a href="globalapprox/integration.html#index-1">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="appendix/linear-algebra.html#index-0"><strong>triangular matrix</strong></a>, <a href="linsys/linear-systems.html#index-3">[1]</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="linsys/structure.html#index-0"><strong>tridiagonal matrix</strong></a>
+</li>
+      <li><a href="globalapprox/trig.html#index-0"><strong>trigonometric polynomial</strong></a>
+</li>
+      <li>
+    truncation error
+
+      <ul>
+        <li><a href="localapprox/fd-converge.html#index-1"><strong>of a finite difference formula</strong></a>
+</li>
+        <li><a href="ivp/multistep.html#index-5"><strong>of a multistep IVP formula</strong></a>
+</li>
+        <li><a href="localapprox/integration.html#index-5"><strong>of a numerical integration formula</strong></a>
+</li>
+        <li><a href="ivp/euler.html#index-2"><strong>of a one-step IVP solver</strong></a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="linsys/lu.html#index-1"><strong>unit lower triangular matrix</strong></a>
+</li>
+      <li>
+    unit roundoff
+
+      <ul>
+        <li><a href="intro/floating-point.html#index-3">see: machine epsilon</a>
+</li>
+      </ul></li>
+      <li><a href="linsys/norms.html#index-1"><strong>unit vector</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="matrixanaly/evd.html#index-1"><strong>unitary matrix</strong></a>, <a href="matrixanaly/evd.html#index-12">[1]</a>, <a href="matrixanaly/svd.html#index-0">[2]</a>, <a href="matrixanaly/symm-eig.html#index-1">[3]</a>
+</li>
+      <li><a href="twodim/diffadv.html#index-0"><strong>unvec</strong></a>
+</li>
+      <li><a href="krylov/subspace.html#index-3"><strong>upper Hessenberg matrix</strong></a>
+</li>
+      <li><a href="advection/upwind.html#index-1"><strong>upwind direction</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="diffusion/stiffness.html#index-7">van der Pol equation</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="linsys/polyinterp.html#index-1"><strong>Vandermonde matrix</strong></a>, <a href="leastsq/fitting.html#index-3">[1]</a>
+</li>
+      <li><a href="twodim/diffadv.html#index-0"><strong>vec</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="advection/wave.html#index-0"><strong>wave equation</strong></a>, <a href="twodim/diffadv.html#index-4">[1]</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="bvp/galerkin.html#index-0"><strong>weak solution</strong></a>
+</li>
+      <li><a href="diffusion/overview.html#index-0">Wedge Antilles</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Y">Y</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="intro/overview.html#index-0">Yoda</a>, <a href="localapprox/overview.html#index-0">[1]</a>, <a href="matrixanaly/overview.html#index-0">[2]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Z">Z</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="ivp/zerostability.html#index-2"><strong>zero-stability</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tobin A. Driscoll and Richard J. Braun<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

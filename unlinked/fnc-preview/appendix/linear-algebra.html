@@ -1,0 +1,1191 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review of linear algebra &#8212; Fundamentals of Numerical Computation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/proof.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"float": ["\\mathbb{F}"], "real": ["\\mathbb{R}"], "complex": ["\\mathbb{C}"], "nat": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rmn{([^}]*)}{([^}]*)}": ["\\mathbb{R}^{#1 \\times #2}", 2], "dd{([^}]*)}{([^}]*)}": ["\\frac{d #1}{d #2}", 2], "ddd{([^}]*)}{([^}]*)}": ["\\frac{d^2 #1}{d #2^2}", 2], "pp{([^}]*)}{([^}]*)}": ["\\frac{\\partial #1}{\\partial #2}", 2], "ppp{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2^2}", 2], "ppdd{([^}]*)}{([^}]*)}{([^}]*)}": ["\\frac{\\partial^2 #1}{\\partial #2 \\partial #3}", 3], "norm{([^}]*)}": ["\\| #1 \\|", 1], "twonorm{([^}]*)}": ["\\| #1 \\|_2", 1], "onenorm{([^}]*)}": ["\\| #1 \\|_1", 1], "infnorm{([^}]*)}": ["\\| #1 \\|_\\infty", 1], "anynorm{([^}]*)}{([^}]*)}": ["\\| #1 \\|_#2", 2], "innerprod{([^}]*)}{([^}]*)}": ["\\langle #1,#2 \\rangle", 2], "pr{([^}]*)}": ["^{(#1)}", 1], "kron{([^}]*)}{([^}]*)}": ["#1 \\otimes #2", 2], "eye{([^}]*)}": ["\\mathbf{e}_#1", 1], "meye": ["\\mathbf{I}"], "Qhat": ["\\hat{\\mathbf{Q}}"], "Rhat": ["\\hat{\\mathbf{R}}"], "bfalpha": ["\\mathbf{alpha}"], "bfdelta": ["\\mathbf{delta}"], "bfzero": ["\\boldsymbol{0}"], "macheps": ["\\epsilon_\\text{mach}"], "fl": ["\\operatorname{fl}"], "diag": ["\\operatorname{diag}"], "ign": ["\\operatorname{sign}"], "Re": ["\\operatorname{Re}"], "Im": ["\\operatorname{Im}"], "ee": ["\\times 10^"], "lnorm": ["\\|"], "rnorm": ["\\|"], "floor": ["\\lfloor#1\\rfloor", 1], "cI": ["\\mathcal{I}"], "mtx": ["\\operatorname{mtx}"], "myvec": ["\\operatorname{vec}"], "argmin": ["\\operatorname{argmin}"]}}, "HTML-CSS": {"availableFonts": [], "preferredFont": null, "webfont": "Latin-Modern"}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Glossary" href="glossary.html" />
+    <link rel="prev" title="13.5. Next steps" href="../twodim/next.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentals of Numerical Computation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../frontmatter.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preface.html">
+   Preface to the Julia edition
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Main text
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../intro/overview.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/floating-point.html">
+     1.1. Floating-point numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/conditioning.html">
+     1.2. Problems and conditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/algorithms.html">
+     1.3. Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/stability.html">
+     1.4. Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../intro/next.html">
+     1.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../linsys/overview.html">
+   2. Linear systems of equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/polyinterp.html">
+     2.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/matrices.html">
+     2.2. Computing with matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/linear-systems.html">
+     2.3. Linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/lu.html">
+     2.4. LU factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/efficiency.html">
+     2.5. Efficiency of matrix computations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/pivoting.html">
+     2.6. Row pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/norms.html">
+     2.7. Vector and matrix norms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/condition-number.html">
+     2.8. Conditioning of linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/structure.html">
+     2.9. Exploiting matrix structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linsys/next.html">
+     2.10. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../leastsq/overview.html">
+   3. Overdetermined linear systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/fitting.html">
+     3.1. Fitting functions to data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/normaleqns.html">
+     3.2. The normal equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/qr.html">
+     3.3. The QR factorization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/house.html">
+     3.4. Computing QR factorizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../leastsq/next.html">
+     3.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../nonlineqn/overview.html">
+   4. Roots of nonlinear equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/rootproblem.html">
+     4.1. The rootfinding problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/fixed-point.html">
+     4.2. Fixed point iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newton.html">
+     4.3. Newton’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/secant.html">
+     4.4. Interpolation-based methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/newtonsys.html">
+     4.5. Newton for nonlinear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/quasinewton.html">
+     4.6. Quasi-Newton methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/nlsq.html">
+     4.7. Nonlinear least squares
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nonlineqn/next.html">
+     4.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../localapprox/overview.html">
+   5. Piecewise interpolation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/interpolation.html">
+     5.1. The interpolation problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/pwlin.html">
+     5.2. Piecewise linear interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/splines.html">
+     5.3. Cubic splines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/finitediffs.html">
+     5.4. Finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/fd-converge.html">
+     5.5. Convergence of finite differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/integration.html">
+     5.6. Numerical integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/adaptive.html">
+     5.7. Adaptive integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../localapprox/next.html">
+     5.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ivp/overview.html">
+   6. Initial-value problems for ODEs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/basics.html">
+     6.1. Basics of IVPs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/euler.html">
+     6.2. Euler’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/systems.html">
+     6.3. IVP systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/rk.html">
+     6.4. Runge–Kutta methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/adaptive.html">
+     6.5. Adaptive Runge–Kutta
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/multistep.html">
+     6.6. Multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/implicit.html">
+     6.7. Implementation of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/zerostability.html">
+     6.8. Zero-stability of multistep methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ivp/next.html">
+     6.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../matrixanaly/overview.html">
+   7. Matrix analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/insight.html">
+     7.1. From matrix to insight
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/evd.html">
+     7.2. Eigenvalue decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/svd.html">
+     7.3. Singular value decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/symm-eig.html">
+     7.4. Symmetry and definiteness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/dimreduce.html">
+     7.5. Dimension reduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../matrixanaly/next.html">
+     7.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../krylov/overview.html">
+   8. Krylov methods in linear algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/structure.html">
+     8.1. Sparsity and structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/power.html">
+     8.2. Power iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/inviter.html">
+     8.3. Inverse iteration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/subspace.html">
+     8.4. Krylov subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/gmres.html">
+     8.5. GMRES
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/minrescg.html">
+     8.6. MINRES and conjugate gradients
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/matrixfree.html">
+     8.7. Matrix-free iterations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/precond.html">
+     8.8. Preconditioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../krylov/next.html">
+     8.9. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../globalapprox/overview.html">
+   9. Global function approximation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/polynomial.html">
+     9.1. Polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/barycentric.html">
+     9.2. The barycentric formula
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/stability.html">
+     9.3. Stability of polynomial interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/orthogonal.html">
+     9.4. Orthogonal polynomials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/trig.html">
+     9.5. Trigonometric interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/integration.html">
+     9.6. Spectrally accurate integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/improper.html">
+     9.7. Improper integrals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../globalapprox/next.html">
+     9.8. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../bvp/overview.html">
+   10. Boundary-value problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/tpbvp.html">
+     10.1. Two-point BVP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/shooting.html">
+     10.2. Shooting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/diffmats.html">
+     10.3. Differentiation matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/linear.html">
+     10.4. Collocation for linear problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/nonlinear.html">
+     10.5. Nonlinearity and boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/galerkin.html">
+     10.6. The Galerkin method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../bvp/next.html">
+     10.7. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../diffusion/overview.html">
+   11. Diffusion equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/blackscholes.html">
+     11.1. Black–Scholes equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/methodlines.html">
+     11.2. The method of lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/absstab.html">
+     11.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/stiffness.html">
+     11.4. Stiffness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/boundaries.html">
+     11.5. Boundaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diffusion/next.html">
+     11.6. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advection/overview.html">
+   12. Advection equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/traffic.html">
+     12.1. Traffic flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/upwind.html">
+     12.2. Upwinding and stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/absstab.html">
+     12.3. Absolute stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/wave.html">
+     12.4. The wave equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advection/next.html">
+     12.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../twodim/overview.html">
+   13. Two-dimensional problems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/tensorprod.html">
+     13.1. Tensor-product discretizations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/diffadv.html">
+     13.2. Two-dimensional diffusion and advection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/laplace.html">
+     13.3. Laplace and Poisson equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/nonlinear.html">
+     13.4. Nonlinear elliptic PDEs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../twodim/next.html">
+     13.5. Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Review of linear algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="julia.html">
+   Julia cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../refs.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/appendix/linear-algebra.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminology">
+   Terminology
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algebra">
+   Algebra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-combinations">
+   Linear combinations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#identity-and-inverse">
+   Identity and inverse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-systems">
+   Linear systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="review-of-linear-algebra">
+<h1>Review of linear algebra<a class="headerlink" href="#review-of-linear-algebra" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="terminology">
+<h2>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
+<p>An <span class="math notranslate nohighlight">\(m\times n\)</span> matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is a rectangular <span class="math notranslate nohighlight">\(m\)</span>-by-<span class="math notranslate nohighlight">\(n\)</span> array of numbers called <strong>elements</strong> or <em>entries</em>.  The numbers <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are called the <strong>row dimension</strong> and the <strong>column dimension</strong>, respectively; collectively they describe the <strong>size</strong> or <em>shape</em> of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>. We say <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> belongs to the set <span class="math notranslate nohighlight">\(\mathbb{R}^{m\times n}\)</span> if its entries are real, or <span class="math notranslate nohighlight">\(\mathbb{C}^{m\times n}\)</span> if they are complex-valued.  A <strong>square</strong> matrix has equal row and column dimensions. A <strong>row vector</strong> has dimension <span class="math notranslate nohighlight">\(1\times n\)</span>, while a <strong>column vector</strong> has dimension <span class="math notranslate nohighlight">\(m \times 1\)</span>.</p>
+<p>In this text the default for a vector is to be a column vector, and we use <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}^n\)</span> to denote spaces of these vectors.  An ordinary number in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> or <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> may be called a <strong>scalar</strong>.</p>
+<p>We use capital letters in bold to refer to matrices, and lowercase bold letters for vectors. In this book, <em>all vectors are column vectors</em>. When a row vector is needed, it is given an explicit transpose symbol (see below). The bold symbol <span class="math notranslate nohighlight">\(\boldsymbol{0}\)</span> may refer to a vector of all zeros or to a zero matrix, depending on context; we use <span class="math notranslate nohighlight">\(0\)</span> as the scalar zero only.</p>
+<p>To refer to a specific element of a matrix, we use the uppercase name of the matrix <em>without</em> boldface. For instance, <span class="math notranslate nohighlight">\(A_{24}\)</span> refers to the <span class="math notranslate nohighlight">\((2,4)\)</span> element of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>. To refer to an element of a vector, we use just one subscript, as in <span class="math notranslate nohighlight">\(x_3\)</span>. A boldface character with one or more subscripts is a matrix (uppercase) or vector (lowercase) that belongs to a numbered collection.</p>
+<p>We will have frequent need to refer to the individual columns of a matrix as vectors. We use a lowercase bold version of the matrix name with a subscript to represent the column number. For example, <span class="math notranslate nohighlight">\(\mathbf{a}_1,\mathbf{a}_2,\ldots,\mathbf{a}_n\)</span> are the columns of the <span class="math notranslate nohighlight">\(m\times n\)</span> matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>. Conversely, whenever we define a sequence of vectors <span class="math notranslate nohighlight">\(\mathbf{v}_1,\ldots,\mathbf{v}_p\)</span>, we can implicitly consider them to be columns of a matrix <span class="math notranslate nohighlight">\(\mathbf{V}\)</span>. Sometimes we might write</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{V}=\bigl[ \mathbf{v}_j \bigr]
+\]</div>
+<p>to emphasize the connection between a matrix and its columns.</p>
+<p>The <strong>diagonal</strong> (more specifically, <em>main diagonal</em>) of an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> refers to the entries <span class="math notranslate nohighlight">\(A_{ii}\)</span>, <span class="math notranslate nohighlight">\(i=1,\ldots,n\)</span>. The entries <span class="math notranslate nohighlight">\(A_{ij}\)</span> where <span class="math notranslate nohighlight">\(j-i=k\)</span> are on a <strong>superdiagonal</strong> if <span class="math notranslate nohighlight">\(k&gt;0\)</span> and a <strong>subdiagonal</strong> if <span class="math notranslate nohighlight">\(k&lt;0\)</span>. The diagonals are numbered as suggested here:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{bmatrix}
+    0 &amp; 1 &amp; 2 &amp; \cdots &amp; n-1 \\
+    -1 &amp; 0 &amp; 1 &amp; \cdots &amp; n-2 \\
+    \vdots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \vdots \\
+    -n+2 &amp; \cdots &amp; -1 &amp; 0 &amp; 1\\
+    -n+1 &amp; \cdots &amp; -2 &amp; -1 &amp; 0
+  \end{bmatrix}.\end{split}\]</div>
+<p id="index-0">A <strong>diagonal matrix</strong> is one whose entries are all zero off the main diagonal.  An <strong>upper triangular matrix</strong> <span class="math notranslate nohighlight">\(\mathbf{U}\)</span> has entries <span class="math notranslate nohighlight">\(U_{ij}\)</span> with <span class="math notranslate nohighlight">\(U_{ij}=0\)</span> if <span class="math notranslate nohighlight">\(i&gt;j\)</span>, and a <strong>lower triangular matrix</strong> <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> has <span class="math notranslate nohighlight">\(L_{ij}=0\)</span> if <span class="math notranslate nohighlight">\(i&lt;j\)</span>.</p>
+<p id="index-1">The <strong>transpose</strong> of <span class="math notranslate nohighlight">\(\mathbf{A}\in\mathbb{C}^{m\times n}\)</span> is the matrix <span class="math notranslate nohighlight">\(\mathbf{A}^T\in\mathbb{C}^{n\times m}\)</span> given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \mathbf{A}^T =
+  \begin{bmatrix}
+    A_{11} &amp; A_{21} &amp; \cdots &amp; A_{m1}\\
+    \vdots &amp; \vdots &amp; &amp; \vdots\\
+    A_{1n} &amp; A_{2n} &amp; \cdots &amp; A_{mn}
+  \end{bmatrix}.\end{split}\]</div>
+<p id="index-2">The <strong>adjoint</strong> or <strong>hermitian</strong> of a matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is given by <span class="math notranslate nohighlight">\(\mathbf{A}^*=\overline{\mathbf{A}^T}\)</span>, where the bar denotes taking a complex conjugate elementwise.<a class="footnote-reference brackets" href="#conj" id="id1">1</a> If <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is real, then <span class="math notranslate nohighlight">\(\mathbf{A}^*=\mathbf{A}^T\)</span>. A square matrix is <strong>symmetric</strong> if <span class="math notranslate nohighlight">\(\mathbf{A}^T=\mathbf{A}\)</span> and <strong>hermitian</strong> if <span class="math notranslate nohighlight">\(\mathbf{A}^*=\mathbf{A}\)</span>.</p>
+</div>
+<div class="section" id="algebra">
+<h2>Algebra<a class="headerlink" href="#algebra" title="Permalink to this headline">¶</a></h2>
+<p>Matrices (and vectors) of the same size may be added elementwise.  Multiplication by a scalar is also defined elementwise. These operations obey the familiar laws of commutativity, associativity, and distributivity. The multiplication of two matrices, on the other hand, is less straightforward.</p>
+<p id="index-3">There are two ways for vectors to be multiplied together. If <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> are in <span class="math notranslate nohighlight">\(\mathbb{C}^n\)</span>, their <strong>inner product</strong> is</p>
+<div class="math notranslate nohighlight">
+\[  \mathbf{v}^* \mathbf{w} = \sum_{k=1}^n \overline{v_k}\, w_k.\]</div>
+<p>Trivially, one finds that <span class="math notranslate nohighlight">\(\mathbf{w}^* \mathbf{v} = \overline{(\mathbf{v}^*\mathbf{w})}\)</span>.</p>
+<p id="index-4">Additionally, any two vectors <span class="math notranslate nohighlight">\(\mathbf{v}\in\mathbb{C}^m\)</span> and <span class="math notranslate nohighlight">\(\mathbf{w}\in\mathbb{C}^n\)</span> (with <span class="math notranslate nohighlight">\(m\neq n\)</span> allowed) have an <strong>outer product</strong>, which is an <span class="math notranslate nohighlight">\(m\times n\)</span> matrix:</p>
+<div class="math notranslate nohighlight" id="equation-def-outerprod">
+<span class="eqno">(1)<a class="headerlink" href="#equation-def-outerprod" title="Permalink to this equation">¶</a></span>\[\begin{split}  \mathbf{v} \mathbf{w}^*
+  = \bigl[ v_i \overline{w_j} \bigr]_{\,i=1,\ldots,m,\, j=1,\ldots,n }
+  = \begin{bmatrix}
+    v_1\,\overline{w_1} &amp; v_1\,\overline{w_2} &amp; \cdots &amp; v_1\,\overline{w_n}\\
+    v_2\,\overline{w_1} &amp; v_2\,\overline{w_2} &amp; \cdots &amp; v_2\,\overline{w_n}\\
+    \vdots &amp; \vdots &amp; &amp; \vdots\\
+    v_m\,\overline{w_1} &amp; v_m\,\overline{w_2} &amp; \cdots &amp; v_m\,\overline{w_n}
+  \end{bmatrix}.\end{split}\]</div>
+<p>For real vectors, the complex conjugates above have no effect and <span class="math notranslate nohighlight">\({}^*\)</span> becomes <span class="math notranslate nohighlight">\({}^T\)</span>.</p>
+<p>In order for matrices <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> to be multiplied, it is necessary that their inner dimensions match. Thus, if <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is <span class="math notranslate nohighlight">\(m\times p\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> must be <span class="math notranslate nohighlight">\(p \times n\)</span>. In terms of scalar components, the <span class="math notranslate nohighlight">\((i,j)\)</span> entry of <span class="math notranslate nohighlight">\(\mathbf{C}=\mathbf{A}\mathbf{B}\)</span> is given by</p>
+<div class="math notranslate nohighlight" id="equation-scalarmatrixmult">
+<span class="eqno">(2)<a class="headerlink" href="#equation-scalarmatrixmult" title="Permalink to this equation">¶</a></span>\[  C_{ij} = \sum_{k=1}^p A_{ik} B_{kj}.\]</div>
+<p>Note that even if <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{B}\)</span> is defined, <span class="math notranslate nohighlight">\(\mathbf{B}\mathbf{A}\)</span> may not be. Moreover, even when both products are defined, they may not equal each other.</p>
+<div class="proof proof-type-observation">
+<div class="proof-title"> <span class="proof-type">Observation </span>  </div><div class="proof-content">
+<p>Matrix multiplication is not commutative, i. e., the order of terms in a product matters to the result.</p>
+</div></div><p>Matrix multiplication is associative, however:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{A}\mathbf{B}\mathbf{C}=(\mathbf{A}\mathbf{B})\mathbf{C}=\mathbf{A}(\mathbf{B}\mathbf{C}).
+\]</div>
+<p>Hence while we cannot change the ordering of the <em>terms</em>, we can change the order of the <em>operations</em>. This is a property that we will use repeatedly. We also note here the important identity</p>
+<div class="math notranslate nohighlight" id="equation-transposeidentity">
+<span class="eqno">(3)<a class="headerlink" href="#equation-transposeidentity" title="Permalink to this equation">¶</a></span>\[  (\mathbf{A}\mathbf{B})^T=\mathbf{B}^T\mathbf{A}^T.\]</div>
+<p>Specifically, if either product is defined, then they both are defined and equal each other.</p>
+</div>
+<div class="section" id="linear-combinations">
+<h2>Linear combinations<a class="headerlink" href="#linear-combinations" title="Permalink to this headline">¶</a></h2>
+<p>It is worth reinterpreting <a class="reference internal" href="#equation-scalarmatrixmult">(2)</a> at a vector level. If <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> has dimensions <span class="math notranslate nohighlight">\(m\times n\)</span>, it can be multiplied on the right by an <span class="math notranslate nohighlight">\(n \times 1\)</span> column vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> to produce an <span class="math notranslate nohighlight">\(m \times 1\)</span> column vector <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{v}\)</span>, which satisfies</p>
+<div class="math notranslate nohighlight" id="equation-mvcol">
+<span class="eqno">(4)<a class="headerlink" href="#equation-mvcol" title="Permalink to this equation">¶</a></span>\[\begin{split}  \mathbf{A}\mathbf{v} =
+  \begin{bmatrix}
+    \displaystyle \sum_k A_{1k}v_k \\[2mm]
+    \displaystyle \sum_k A_{2k}v_k \\
+    \vdots\\
+    \displaystyle \sum_k A_{mk}v_k
+  \end{bmatrix}
+  = v_1
+  \begin{bmatrix}
+    A_{11}\\A_{21}\\\vdots\\A_{m1}
+  \end{bmatrix} +
+  v_2
+  \begin{bmatrix}
+    A_{12}\\A_{22}\\\vdots\\A_{m2}
+  \end{bmatrix} +
+  \cdots + v_n
+  \begin{bmatrix}
+    A_{1n}\\A_{2n}\\\vdots\\A_{mn}
+  \end{bmatrix} = v_1 \mathbf{a}_1 + \cdots + v_n \mathbf{a}_n.\end{split}\]</div>
+<p id="index-5">We say that <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{v}\)</span> is a <strong>linear combination</strong> of the columns of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>.</p>
+<div class="proof proof-type-observation">
+<div class="proof-title"> <span class="proof-type">Observation </span>  </div><div class="proof-content">
+<p>Multiplying a matrix on the right by a column vector produces a linear combination of the columns of the matrix.</p>
+</div></div><p>There is a similar interpretation of multiplying <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> on the left by a row vector. Keeping to our convention that boldface letters represent column vectors, we write, for <span class="math notranslate nohighlight">\(\mathbf{v}\in\mathbb{R}^m\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-mvrow">
+<span class="eqno">(5)<a class="headerlink" href="#equation-mvrow" title="Permalink to this equation">¶</a></span>\[\begin{split}  \begin{split}
+  \mathbf{v}^T \mathbf{A} &amp;=
+  \begin{bmatrix}
+    \displaystyle \sum_k v_k A_{k1} &amp; \displaystyle \sum_k v_k A_{k2} &amp; \cdots &amp; \displaystyle \sum_k v_k A_{kn}
+  \end{bmatrix} \\
+   &amp; = v_1
+  \begin{bmatrix}
+    A_{11} &amp;  \cdots &amp; A_{1n}
+  \end{bmatrix} +
+  v_2
+  \begin{bmatrix}
+    A_{21} &amp; \cdots &amp; A_{2n}
+  \end{bmatrix} +
+  \cdots + v_m
+  \begin{bmatrix}
+    A_{m1} &amp; \cdots &amp; A_{mn}
+  \end{bmatrix}.
+  \end{split}\end{split}\]</div>
+<div class="proof proof-type-observation">
+<div class="proof-title"> <span class="proof-type">Observation </span>  </div><div class="proof-content">
+<p>Multiplying a matrix on the left by a row vector produces a linear combination of the rows of the matrix.</p>
+</div></div><p>These two observations extend to more general matrix-matrix multiplications. One can show that (assuming that <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is <span class="math notranslate nohighlight">\(m\times p\)</span> and <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> is <span class="math notranslate nohighlight">\(p\times n\)</span>)</p>
+<div class="math notranslate nohighlight" id="equation-mmhoriz">
+<span class="eqno">(6)<a class="headerlink" href="#equation-mmhoriz" title="Permalink to this equation">¶</a></span>\[  \mathbf{A}\mathbf{B} =
+  \mathbf{A} \begin{bmatrix}
+    \mathbf{b}_1 &amp; \mathbf{b}_2 &amp; \cdots &amp; \mathbf{b}_n
+  \end{bmatrix}
+  = \begin{bmatrix}
+    \mathbf{A}\mathbf{b}_1 &amp; \mathbf{A}\mathbf{b}_2 &amp; \cdots &amp; A\mathbf{b}_n
+  \end{bmatrix}\]</div>
+<p>Equivalently, if we write <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> in terms of rows, then</p>
+<div class="math notranslate nohighlight" id="equation-mmvert">
+<span class="eqno">(7)<a class="headerlink" href="#equation-mmvert" title="Permalink to this equation">¶</a></span>\[\begin{split}  \mathbf{A} =
+  \begin{bmatrix}
+    \mathbf{w}_1^T \\[2mm] \mathbf{w}_2^T \\ \vdots \\ \mathbf{w}_m^T
+  \end{bmatrix}
+  \qquad \Longrightarrow \qquad
+    \mathbf{A}\mathbf{B} =
+  \begin{bmatrix}
+    \mathbf{w}_1^T \mathbf{B} \\[2mm] \mathbf{w}_2^T \mathbf{B} \\ \vdots \\ \mathbf{w}_m^T \mathbf{B}
+  \end{bmatrix}.\end{split}\]</div>
+<div class="proof proof-type-observation">
+<div class="proof-title"> <span class="proof-type">Observation </span>  </div><div class="proof-content">
+<p>A matrix-matrix product is a horizontal concatenation of matrix-vector products involving the columns of the right-hand matrix. Equivalently, a matrix-matrix product is also a vertical concatenation of vector-matrix products involving the rows of the left-hand matrix.</p>
+</div></div><p>The representations of matrix multiplication are interchangeable; whichever one is most convenient at any moment can be used.</p>
+<div class="proof proof-type-example" id="id2">
+<div class="proof-title"> <span class="proof-type">Example 1</span>  </div><div class="proof-content">
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} = \begin{bmatrix}
+      1 &amp; -1 \\ 0 &amp; 2 \\ -3 &amp; 1
+    \end{bmatrix}, \qquad
+\mathbf{B} = \begin{bmatrix}
+      2 &amp; -1 &amp; 0 &amp; 4 \\ 1 &amp; 1 &amp; 3 &amp; 2
+    \end{bmatrix}.\end{split}\]</div>
+<p>Then, going by <a class="reference internal" href="#equation-scalarmatrixmult">(2)</a>, we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{split}
+  \mathbf{A}\mathbf{B} &amp;= \begin{bmatrix}
+          (1)(2) + (-1)(1) &amp; (1)(-1) + (-1)(1) &amp; (1)(0) + (-1)(3) &amp; (1)(4) + (-1)(2) \\
+          (0)(2) + (2)(1) &amp; (0)(-1) + (2)(1) &amp; (0)(0) + (2)(3) &amp; (0)(4) + (2)(2) \\
+          (-3)(2) + (1)(1) &amp; (-3)(-1) + (1)(1) &amp; (-3)(0) + (1)(3) &amp; (-3)(4) + (1)(2)
+        \end{bmatrix} \\
+  &amp;= \begin{bmatrix}
+      1 &amp; -2 &amp; -3 &amp; 2 \\ 2 &amp; 2 &amp; 6 &amp; 4 \\ -5 &amp; 4 &amp; 3 &amp; -10
+    \end{bmatrix}.
+\end{split}\end{split}\]</div>
+<p>But note also, for instance, that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \mathbf{A} \begin{bmatrix} 2 \\ 1 \end{bmatrix} = 2 \begin{bmatrix} 1 \\ 0 \\ -3
+    \end{bmatrix} + 1 \begin{bmatrix} -1 \\ 2 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ -5 \end{bmatrix},\end{split}\]</div>
+<p>and so on, as according to <a class="reference internal" href="#equation-mmhoriz">(6)</a>.</p>
+</div></div><p>There is also an interpretation, presented in <a class="reference internal" href="../linsys/lu.html#section-linsys-lu"><span class="std std-numref">Section 2.4</span></a>, of matrix products in terms of vector outer products.</p>
+</div>
+<div class="section" id="identity-and-inverse">
+<h2>Identity and inverse<a class="headerlink" href="#identity-and-inverse" title="Permalink to this headline">¶</a></h2>
+<p id="index-6">The <strong>identity matrix</strong> of size <span class="math notranslate nohighlight">\(n\)</span>, called <span class="math notranslate nohighlight">\(\mathbf{I}\)</span> (or sometimes <span class="math notranslate nohighlight">\(\mathbf{I}_n\)</span>), is a diagonal <span class="math notranslate nohighlight">\(n\times n\)</span> matrix with every diagonal entry equal to one. As can be seen from <a class="reference internal" href="#equation-mmhoriz">(6)</a> and <a class="reference internal" href="#equation-mmvert">(7)</a>, it satisfies <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{I}=\mathbf{A}\)</span> for <span class="math notranslate nohighlight">\(\mathbf{A}\in\mathbb{C}^{m\times n}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{I}\mathbf{B}=\mathbf{B}\)</span> for <span class="math notranslate nohighlight">\(\mathbf{B}\in\mathbb{C}^{n\times p}\)</span>. It is therefore the matrix analog of the number 1, the multiplicative identity.</p>
+<div class="proof proof-type-example" id="id3">
+<div class="proof-title"> <span class="proof-type">Example 2</span>  </div><div class="proof-content">
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \mathbf{B} =
+  \begin{bmatrix}
+    2 &amp; 1 &amp; 7 &amp; 4\\
+    6 &amp; 0 &amp; -1 &amp; 0\\
+    -4 &amp; -4 &amp; 0 &amp; 1
+  \end{bmatrix}.\end{split}\]</div>
+<p>Suppose we want to create a zero in the (2,1) entry by adding <span class="math notranslate nohighlight">\(-3\)</span> times the first row to the second row, leaving the other rows unchanged.</p>
+<p>We can express this operation as a product <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{B}\)</span> as follows. From dimensional considerations alone, <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> will need to be <span class="math notranslate nohighlight">\(3\times 3\)</span>. According to <a class="reference internal" href="#equation-mvrow">(5)</a>, we get “<span class="math notranslate nohighlight">\(-3\)</span> times row one plus row two” from left-multiplying <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> by the column vector <span class="math notranslate nohighlight">\(\bigl[ -3,\: 1,\: 0 \bigr]\)</span>. Equation <a class="reference internal" href="#equation-mmvert">(7)</a> tells us that this must be the second row of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>.</p>
+<p>Since the first and third rows of <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{B}\)</span> are the same as those of <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>, similar logic tells us that the first and third rows of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> are the same as the identity matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{bmatrix}
+    1 &amp; 0 &amp; 0\\
+    -3 &amp; 1 &amp; 0\\
+    0 &amp; 0 &amp; 1
+  \end{bmatrix} \mathbf{B}  =
+  \begin{bmatrix}
+    2 &amp; 1 &amp; 7 &amp; 4\\
+    0 &amp; -3 &amp; -22 &amp; -12\\
+    -4 &amp; -4 &amp; 0 &amp; 1
+  \end{bmatrix}.\end{split}\]</div>
+<p>This can be verified using <a class="reference internal" href="#equation-scalarmatrixmult">(2)</a>.</p>
+</div></div><p>Note that a square matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> can always be multiplied by itself to get a matrix of the same size. Hence we can define the integer powers <span class="math notranslate nohighlight">\(\mathbf{A}^2=(\mathbf{A})(\mathbf{A})\)</span>, <span class="math notranslate nohighlight">\(\mathbf{A}^3=(\mathbf{A}^2) \mathbf{A} = (\mathbf{A}) \mathbf{A}^2\)</span> (by associativity), and so on. By definition, <span class="math notranslate nohighlight">\(\mathbf{A}^0=\mathbf{I}\)</span>.</p>
+<p id="index-7">If <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix, then there may be at most one matrix <span class="math notranslate nohighlight">\(\mathbf{Z}\)</span> of the same size such that</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{Z}\mathbf{A} = \mathbf{A}\mathbf{Z} = \mathbf{I}.
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(\mathbf{Z}\)</span> exists, it is called the <strong>inverse</strong> of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> and is written as <span class="math notranslate nohighlight">\(\mathbf{A}^{-1}\)</span>. In this situation we say that <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is <strong>invertible</strong>.</p>
+<p id="index-8">The zero matrix has no inverse. For <span class="math notranslate nohighlight">\(n&gt;1\)</span> there are also nonzero matrices that have no inverse. Such matrices are called <strong>singular</strong>. The properties “invertible” and “singular” are exclusive opposites; thus, <em>nonsingular</em> means invertible and <em>noninvertible</em> means singular.</p>
+</div>
+<div class="section" id="linear-systems">
+<h2>Linear systems<a class="headerlink" href="#linear-systems" title="Permalink to this headline">¶</a></h2>
+<p>Given a square, <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> and  <span class="math notranslate nohighlight">\(n\)</span>-vectors <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, the equation <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\mathbf{b}\)</span> is equivalent to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{split}
+  a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &amp;= b_1 \\
+  a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &amp;= b_2 \\
+  \vdots  \\
+  a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n &amp;= b_n.
+\end{split}\end{split}\]</div>
+<p>The following facts are usually proved in any elementary text on linear algebra.</p>
+<div class="proof proof-type-theorem" id="id4">
+<span id="theorem-singularity"></span><div class="proof-title"> <span class="proof-type">Theorem 3</span>  <span class="proof-title-name">: &nbsp;Linear algebra equivalence</span>  </div><div class="proof-content">
+<p>The following statements are equivalent:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is nonsingular.</p></li>
+<li><p><span class="math notranslate nohighlight">\((\mathbf{A}^{-1})^{-1} = \mathbf{A}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\boldsymbol{0}\)</span> implies that <span class="math notranslate nohighlight">\(\mathbf{x}=\boldsymbol{0}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}=\mathbf{b}\)</span> has a unique solution, <span class="math notranslate nohighlight">\(\mathbf{x}=\mathbf{A}^{-1}\mathbf{b}\)</span>, for any <span class="math notranslate nohighlight">\(n\)</span>-vector <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p></li>
+</ol>
+</div></div></div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>✍ In racquetball, the winner of a rally serves the next rally. Generally, the server has an advantage. Suppose that when Ashley and Barbara are playing racquetball, Ashley wins 60% of the rallies she   serves and Barbara wins 70% of the rallies she serves. If <span class="math notranslate nohighlight">\(\mathbf{x}\in\mathbb{R}^2\)</span> is such that <span class="math notranslate nohighlight">\(x_1\)</span> is the probability that Ashley serves first and <span class="math notranslate nohighlight">\(x_2=1-x_1\)</span> is the probability that Barbara serves first, define a matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}\)</span> is a vector of the probabilities that Ashley and Barbara each serve the second rally. What is the meaning of <span class="math notranslate nohighlight">\(A^{10}\mathbf{x}\)</span>?</p></li>
+<li><p>✍ Suppose we have lists of <span class="math notranslate nohighlight">\(n\)</span> terms and <span class="math notranslate nohighlight">\(m\)</span> documents. We can   define an <span class="math notranslate nohighlight">\(m\times n\)</span> matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> such that <span class="math notranslate nohighlight">\(A_{ij}=1\)</span> if term <span class="math notranslate nohighlight">\(j\)</span>   appears in document <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(A_{ij}=0\)</span> otherwise. Now suppose that the term list is</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;numerical&quot;</span><span class="p">,</span> <span class="s">&quot;analysis&quot;</span><span class="p">,</span> <span class="s">&quot;more&quot;</span><span class="p">,</span> <span class="s">&quot;cool&quot;</span><span class="p">,</span> <span class="s">&quot;accounting&quot;</span>
+</pre></div>
+</div>
+<p>and that <span class="math notranslate nohighlight">\(\mathbf{x} = \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0  \end{bmatrix}^T\)</span>. Give an interpretation of the product <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{x}\)</span>.</p>
+</li>
+<li><p>✍ Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{A} =
+\begin{bmatrix}
+  0 &amp; 1 &amp; 0 &amp; 0 \\
+  0 &amp; 0 &amp; 0 &amp; 1 \\
+  0 &amp; 0 &amp; 0 &amp; 0 \\
+  0 &amp; 0 &amp; 1 &amp; 0
+\end{bmatrix}.\end{split}\]</div>
+<p>Show that <span class="math notranslate nohighlight">\(\mathbf{A}^n=0\)</span> when <span class="math notranslate nohighlight">\(n\ge 4\)</span>.</p>
+</li>
+<li><p>✍  Find two matrices <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>, neither of which is the zero matrix, such that <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{B}=\boldsymbol{0}\)</span>.</p>
+</li>
+<li id="prob-linalg-transposeidentity"><p>✍ Prove that when <span class="math notranslate nohighlight">\(\mathbf{A} \mathbf{B}\)</span> is   defined, <span class="math notranslate nohighlight">\(\mathbf{B}^T\mathbf{A}^T\)</span> is defined too, and use   equation <a class="reference internal" href="#equation-scalarmatrixmult">(2)</a> to show that   <span class="math notranslate nohighlight">\((\mathbf{A}\mathbf{B})^T=\mathbf{B}^T\mathbf{A}^T\)</span>.</p>
+</li>
+<li id="prob-linalg-inversetranspose"><p>✍ Show that if <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is invertible, then  <span class="math notranslate nohighlight">\((\mathbf{A}^T)^{-1}=(\mathbf{A}^{-1})^T\)</span>. (This matrix is often just written as <span class="math notranslate nohighlight">\(\mathbf{A}^{-T}\)</span>.)</p></li>
+<li><p>✍ Prove true, or give a counterexample: The product of upper triangular square matrices is upper triangular.</p></li>
+</ol>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="conj"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The conjugate of a complex number is found by  replacing all references to the imaginary unit <span class="math notranslate nohighlight">\(i\)</span> by <span class="math notranslate nohighlight">\(-i\)</span>. We do not use complex numbers until the second half of the book.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./appendix"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../twodim/next.html" title="previous page"><span class="section-number">13.5. </span>Next steps</a>
+    <a class='right-next' id="next-link" href="glossary.html" title="next page">Glossary</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tobin A. Driscoll and Richard J. Braun<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
