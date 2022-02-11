@@ -5,9 +5,9 @@
     <link>https://tobydriscoll.net/tag/programming/</link>
       <atom:link href="https://tobydriscoll.net/tag/programming/index.xml" rel="self" type="application/rss+xml" />
     <description>programming</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 by Tobin A. Driscoll</copyright><lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png</url>
+      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_3.png</url>
       <title>programming</title>
       <link>https://tobydriscoll.net/tag/programming/</link>
     </image>
@@ -37,8 +37,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;LM cover&#34; srcset=&#34;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;LM cover&#34; srcset=&#34;
                /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_5a578f6866cb796fae71afab1f33e061.jpg 400w,
                /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_b65f08728644ef69b6bec6c95f173436.jpg 760w,
                /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_1200x1200_fit_q85_lanczos.jpg 1200w&#34;

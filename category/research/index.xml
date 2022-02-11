@@ -5,9 +5,9 @@
     <link>https://tobydriscoll.net/category/research/</link>
       <atom:link href="https://tobydriscoll.net/category/research/index.xml" rel="self" type="application/rss+xml" />
     <description>research</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Thu, 09 Sep 2021 15:53:57 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 by Tobin A. Driscoll</copyright><lastBuildDate>Thu, 09 Sep 2021 15:53:57 -0400</lastBuildDate>
     <image>
-      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png</url>
+      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_3.png</url>
       <title>research</title>
       <link>https://tobydriscoll.net/category/research/</link>
     </image>
@@ -17,6 +17,22 @@
       <link>https://tobydriscoll.net/publication/braun-dynamics-mechanisms-breakup-2021/</link>
       <pubDate>Thu, 09 Sep 2021 15:53:57 -0400</pubDate>
       <guid>https://tobydriscoll.net/publication/braun-dynamics-mechanisms-breakup-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic detection of the cornea location in video captures of fluorescence</title>
+      <link>https://tobydriscoll.net/publication/driscoll-automatic-detection-2021/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/driscoll-automatic-detection-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fitting Simplified Models to Machine Learning-Identified Tear Film Breakup</title>
+      <link>https://tobydriscoll.net/publication/luke-fitting-simplified-models-2021/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://tobydriscoll.net/publication/luke-fitting-simplified-models-2021/</guid>
       <description></description>
     </item>
     

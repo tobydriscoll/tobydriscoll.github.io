@@ -5,9 +5,9 @@
     <link>https://tobydriscoll.net/tag/teaching/</link>
       <atom:link href="https://tobydriscoll.net/tag/teaching/index.xml" rel="self" type="application/rss+xml" />
     <description>teaching</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 by Tobin A. Driscoll</copyright><lastBuildDate>Tue, 16 Jul 2019 11:55:12 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 by Tobin A. Driscoll</copyright><lastBuildDate>Tue, 16 Jul 2019 11:55:12 -0400</lastBuildDate>
     <image>
-      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_2.png</url>
+      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_3.png</url>
       <title>teaching</title>
       <link>https://tobydriscoll.net/tag/teaching/</link>
     </image>
@@ -37,8 +37,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;FNC cover&#34; srcset=&#34;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;FNC cover&#34; srcset=&#34;
                /project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_c4f449af89d789fd603389bf6a1b383f.jpg 400w,
                /project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_04951d1adb5c46eba5ce4f13d637b693.jpg 760w,
                /project/fnc/featured_huc4bad6a86c52d6a83ff21912b7fcff6b_234364_1200x1200_fit_q85_lanczos.jpg 1200w&#34;
@@ -195,9 +194,6 @@
 
 
 
-  
-  
-
 
 &lt;div class=&#34;gallery&#34;&gt;
 
@@ -209,8 +205,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/Runge_hu0f548cfd05e38926eebe46ea28dd5be0_124060_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;Runge.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/ac.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/ac_hu95970c6c9ea6fae0dbfcfa14ef2df26c_38616_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ac.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -218,8 +214,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ac.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ac_hu95970c6c9ea6fae0dbfcfa14ef2df26c_38616_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ac.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/ad.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/ad_hu793d1d9b879a97c8ab6c3a18cece99e9_129083_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ad.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -227,8 +223,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/ad.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/ad_hu793d1d9b879a97c8ab6c3a18cece99e9_129083_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;ad.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/blur.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/blur_hu56bbdb49eb2c4fc0bc1ea93c89180c13_145139_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;blur.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -236,8 +232,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/blur.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/blur_hu56bbdb49eb2c4fc0bc1ea93c89180c13_145139_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;blur.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/gmres.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/gmres_hub77fff9e6573c7ccbab0d5ca05b6cb46_50706_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;gmres.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -245,8 +241,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/gmres_hub77fff9e6573c7ccbab0d5ca05b6cb46_50706_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;gmres.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/heat.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/heat_hu7f9a8ee2cd7da742aa215ef640b44411_101473_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;heat.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -254,8 +250,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/heat.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/heat_hu7f9a8ee2cd7da742aa215ef640b44411_101473_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;heat.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/int.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/int_hu525f77ce78fc11d3dc29e5787fb4ca47_59355_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;int.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -263,8 +259,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/int.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/int_hu525f77ce78fc11d3dc29e5787fb4ca47_59355_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;int.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/oregon.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/oregon_hu4c9c9cae9716966acab1b15af67e8952_53949_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;oregon.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -272,8 +268,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/oregon_hu4c9c9cae9716966acab1b15af67e8952_53949_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;oregon.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/pois.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/pois_hu6a09c7b9238211c8194e1ca1518f29c4_83948_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;pois.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -281,8 +277,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/pois.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/pois_hu6a09c7b9238211c8194e1ca1518f29c4_83948_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;pois.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/Runge.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/Runge_hu0f548cfd05e38926eebe46ea28dd5be0_124060_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Runge.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -290,8 +286,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/sparse_hu3ef95519f45740ea365b74f9f07a4274_406244_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;sparse.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/sparse.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/sparse_hu3ef95519f45740ea365b74f9f07a4274_406244_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;sparse.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -299,8 +295,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/stab.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/stab_hu2c15c64b385ef2b8e92ecbe02eba8949_28268_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;stab.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/stab.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/stab_hu2c15c64b385ef2b8e92ecbe02eba8949_28268_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;stab.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -308,8 +304,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/traffic_hu6ba28221845bc3855a564180a912cf4c_69354_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;traffic.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/traffic.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/traffic_hu6ba28221845bc3855a564180a912cf4c_69354_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;traffic.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
     
@@ -317,8 +313,8 @@
     
     
     
-    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://tobydriscoll.net/project/fnc/gallery/voting.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/project/fnc/gallery/voting_hu1084b07da23983f4101a729b753609ca_61390_0x190_resize_lanczos_2.png&#34; loading=&#34;lazy&#34; alt=&#34;voting.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
+    &lt;a data-fancybox=&#34;gallery-fnc&#34; href=&#34;https://tobydriscoll.net/media/albums/fnc/voting.png&#34; &gt;
+      &lt;img src=&#34;https://tobydriscoll.net/media/albums/fnc/voting_hu1084b07da23983f4101a729b753609ca_61390_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;voting.png&#34; width=&#34;285&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
 
@@ -351,8 +347,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;Exploring ODEs cover&#34; srcset=&#34;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Exploring ODEs cover&#34; srcset=&#34;
                /project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_85c35fdbd820792d175d4f88f47c6619.jpg 400w,
                /project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_7fb806aca984d3d580eb8cd948ecdbaf.jpg 760w,
                /project/explode/featured_hu3fdb188ea1c6d990799661e309a86baa_18288_1200x1200_fit_q85_lanczos.jpg 1200w&#34;
@@ -430,8 +425,7 @@ website&lt;/a&gt;.&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;LM cover&#34; srcset=&#34;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;LM cover&#34; srcset=&#34;
                /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_5a578f6866cb796fae71afab1f33e061.jpg 400w,
                /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_b65f08728644ef69b6bec6c95f173436.jpg 760w,
                /project/learning-matlab/featured_hubbe2bcd8abb0606606c576f58b0c22e4_68793_1200x1200_fit_q85_lanczos.jpg 1200w&#34;
