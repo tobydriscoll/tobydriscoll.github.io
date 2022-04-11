@@ -69,7 +69,7 @@ R = zeros(Q[1:n,1:n]);
   A = copy(B);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and all was well. This is an example of how much MATLAB has shaped my thinking about programming. IIRC, MATLAB doesn&amp;rsquo;t always pass by value; if an input argument is not altered, it is not copied. But it&amp;rsquo;s handled by the compiler, not the programmer.&lt;/p&gt;
-&lt;p&gt;If nothing else I&amp;rsquo;m getting ever more clarity on the ways MATLAB keeps things simple. Variables are bound to their values, period. Single precision is an irrevocable choice. Scalars and 1x1 matrices are the same thing. Don&amp;rsquo;t it always seem to go that you don&amp;rsquo;t know what you&amp;rsquo;ve got &amp;lsquo;til it&amp;rsquo;s gone?&lt;/p&gt;
+&lt;p&gt;If nothing else I&amp;rsquo;m getting ever more clarity on the ways MATLAB keeps things simple. Variables are bound to their values, period. Single precision is an irrevocable choice. Scalars and 1x1 matrices are the same thing. Don&amp;rsquo;t it always seem to go that you don&amp;rsquo;t know what you&amp;rsquo;ve got &amp;rsquo;til it&amp;rsquo;s gone?&lt;/p&gt;
 </description>
     </item>
     
