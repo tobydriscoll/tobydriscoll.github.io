@@ -1,268 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>software | Toby Driscoll</title>
-    <link>https://tobydriscoll.net/tag/software/</link>
-      <atom:link href="https://tobydriscoll.net/tag/software/index.xml" rel="self" type="application/rss+xml" />
-    <description>software</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 by Tobin A. Driscoll</copyright><lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_3.png</url>
-      <title>software</title>
-      <link>https://tobydriscoll.net/tag/software/</link>
-    </image>
-    
-    <item>
-      <title>Schwarz–Christoffel Toolbox for MATLAB</title>
-      <link>https://tobydriscoll.net/project/sc-toolbox/</link>
-      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://tobydriscoll.net/project/sc-toolbox/</guid>
-      <description>&lt;p&gt;The SC Toolbox is a problem-solving environment for computation and interaction with conformal maps to regions bounded by polygons, including unbounded regions, logical quadrilaterals, and channels. It includes a module for the solution of the Laplace equation on such regions with piecewise constant boundary conditions, to ten digits or more in seconds. Nearly all of the Toolbox functions are accessible through a graphical interface.&lt;/p&gt;
-&lt;p&gt;The software is distributed primarily &lt;a href=&#34;https://github.com/tobydriscoll/sc-toolbox&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;on Github&lt;/a&gt;.  You can directly download a zip archive of the &lt;a href=&#34;https://github.com/tobydriscoll/sc-toolbox/releases/latest&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;latest release&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;There is an old &lt;a href=&#34;guide.pdf&#34;&gt;user guide&lt;/a&gt; that remains fairly relevant. There are also many usage examples in &lt;a href=&#34;http://www.amazon.com/Schwarz-Christoffel-Mapping-Tobin-Driscoll/dp/0521807263/ref=sr_1_3/103-8277620-2257413?ie=UTF8&amp;amp;s=books&amp;amp;qid=1179175719&amp;amp;sr=8-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my book&lt;/a&gt;, which has a lot of mathematical and computational information about S–C maps.&lt;/p&gt;
-&lt;p&gt;If you need a copy for an older version of MATLAB (major versions 4,5,6), please &lt;a href=&#34;https://tobydriscoll.net/#contact&#34;&gt;contact me&lt;/a&gt;.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;gallery&#34;&gt;
-
-  
-  
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-sc-toolbox&#34; href=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/channel.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/channel_hu9e1bce225604065302d93a077c9ab2d8_5629_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;channel.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-sc-toolbox&#34; href=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/delaware.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/delaware_hue6ebae6fa85a1b9e1fa009a533e976e1_53385_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;delaware.png&#34; width=&#34;82&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-sc-toolbox&#34; href=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/ell.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/ell_hu5664d63214028e21464e87317bc508c2_7128_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ell.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-sc-toolbox&#34; href=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/four.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/four_hue23dbf62a80a4e136bd467621aae8586_10083_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;four.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-sc-toolbox&#34; href=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/maze.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/maze_huce5db714120eade6e4a1347820d70892_39886_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;maze.png&#34; width=&#34;234&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-sc-toolbox&#34; href=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/plus.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/plus_huf7035a3815707085581fa3ae36a77947_5692_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;plus.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-sc-toolbox&#34; href=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/probes.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/probes_hu6a594e50a0e2aaf31b4bb85754542833_5652_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;probes.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-sc-toolbox&#34; href=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/snowflake.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/snowflake_hud590406ca10e334a4a4660dae6460fb1_10433_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;snowflake.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-sc-toolbox&#34; href=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/zigzag.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/sc-toolbox/zigzag_hue0e6aa4bb533f3de44ce01cfbbb6a9ba_5850_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;zigzag.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>MATLAB software</title>
-      <link>https://tobydriscoll.net/project/matlabcentral/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://tobydriscoll.net/project/matlabcentral/</guid>
-      <description>&lt;p&gt;In over 25 years of MATLAB programming, I&amp;rsquo;ve &lt;a href=&#34;https://www.mathworks.com/matlabcentral/profile/authors/631894-toby-driscoll?utf8=%E2%9C%93&amp;amp;detail2=&amp;amp;detail=fileexchange&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;contributed a few utilities&lt;/a&gt; and MATLAB gadgets that I&amp;rsquo;ve found helpful. For example:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.mathworks.com/matlabcentral/fileexchange/2831-unplot?s_tid=prof_contriblnk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;unplot&lt;/a&gt; Delete the most recently plotted object(s). Used it so, so many times.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.mathworks.com/matlabcentral/fileexchange/2832-latex?s_tid=prof_contriblnk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;latex&lt;/a&gt; Convert a matrix into a LaTeX matrix or table. Maybe the table data type in MATLAB has obsoleted this, but it&amp;rsquo;s still handy for writing papers from time to time.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.mathworks.com/matlabcentral/fileexchange/3148-gslope?s_tid=prof_contriblnk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gslope&lt;/a&gt; Click twice on a plot and get the slope between the points. Useful for determining convergence rates.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.mathworks.com/matlabcentral/fileexchange/13353-sparse-toeplitz-matrix-construction?s_tid=prof_contriblnk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sparse Toeplitz matrix construction&lt;/a&gt; Some practical sparse matrices are Toeplitz. This takes the pain out of constructing them.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.mathworks.com/matlabcentral/fileexchange/15851-piecewise-defined-function-builder?s_tid=prof_contriblnk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;piecewise-defined function builder&lt;/a&gt; Creates a single callable function from a collection of piecewise definitions.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Chebfun</title>
-      <link>https://tobydriscoll.net/project/chebfun/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://tobydriscoll.net/project/chebfun/</guid>
-      <description>
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Chebfun logo&#34; srcset=&#34;
-               /project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_001148c5dbcaead123419aa5b4f952c0.png 400w,
-               /project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_90ea1312aacc13cab1abfca2153dd4ca.png 760w,
-               /project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://tobydriscoll.net/project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_001148c5dbcaead123419aa5b4f952c0.png&#34;
-               width=&#34;300&#34;
-               height=&#34;162&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.chebfun.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chebfun&lt;/a&gt; is a free MATLAB package and open source software project. Its aim is to provide numerical computation with functions. My interest in and contribution to the system is most visibly in the solution of ordinary and (1+1 dimensional) partial differential equations. Using familiar MATLAB syntax such as &lt;code&gt;\&lt;/code&gt; and &lt;code&gt;eigs&lt;/code&gt;, solutions to boundary-value or eigenvalue problems can be obtained with full numerical precision automatically.&lt;/p&gt;
-&lt;h3 id=&#34;gallery&#34;&gt;Gallery&lt;/h3&gt;
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;gallery&#34;&gt;
-
-  
-  
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-chebfun&#34; href=&#34;https://tobydriscoll.net/media/albums/chebfun/AtmosphericTemperature_08.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/chebfun/AtmosphericTemperature_08_hu8fe09ab37c4700f7087d28e3de8e1ff3_24244_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;AtmosphericTemperature_08.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-chebfun&#34; href=&#34;https://tobydriscoll.net/media/albums/chebfun/Eigenstates_08.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/chebfun/Eigenstates_08_hue8ba5ca8032e908dc13e51fed27edce6_18433_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Eigenstates_08.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-chebfun&#34; href=&#34;https://tobydriscoll.net/media/albums/chebfun/GrayScott_01.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/chebfun/GrayScott_01_huc719ea3d7bb4160a69957ca598749b3b_75290_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;GrayScott_01.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-chebfun&#34; href=&#34;https://tobydriscoll.net/media/albums/chebfun/GuckenheimerHolmes_01.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/chebfun/GuckenheimerHolmes_01_hufa79a35f4aeed866980b42836050fb49_6221_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;GuckenheimerHolmes_01.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-chebfun&#34; href=&#34;https://tobydriscoll.net/media/albums/chebfun/Kuramoto_04.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/chebfun/Kuramoto_04_hu98cf7d22e0364c367bfa3599f9281e09_19426_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Kuramoto_04.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-chebfun&#34; href=&#34;https://tobydriscoll.net/media/albums/chebfun/ParametricSurfaces_03.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/chebfun/ParametricSurfaces_03_hu42cf92a57adaf06387bbafc721025142_39891_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ParametricSurfaces_03.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-chebfun&#34; href=&#34;https://tobydriscoll.net/media/albums/chebfun/PortraitsWithPoles_02.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/chebfun/PortraitsWithPoles_02_hu1fd1ed525c827855c8a1e7e7fffeef83_32993_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;PortraitsWithPoles_02.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-    &lt;a data-fancybox=&#34;gallery-chebfun&#34; href=&#34;https://tobydriscoll.net/media/albums/chebfun/ResolutionWiggly_01.png&#34; &gt;
-      &lt;img src=&#34;https://tobydriscoll.net/media/albums/chebfun/ResolutionWiggly_01_hua0a28c993d1bf1f7b90adb5407ab2be2_19259_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;ResolutionWiggly_01.png&#34; width=&#34;422&#34; height=&#34;190&#34;&gt;
-    &lt;/a&gt;
-  
-
-&lt;/div&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>software | Toby Driscoll</title><link>https://tobydriscoll.net/tag/software/</link><atom:link href="https://tobydriscoll.net/tag/software/index.xml" rel="self" type="application/rss+xml"/><description>software</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 by Tobin A. Driscoll</copyright><lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate><image><url>https://tobydriscoll.net/media/logo_hueac33246f157bcd904a645b7aca24b63_24178_300x300_fit_lanczos_3.png</url><title>software</title><link>https://tobydriscoll.net/tag/software/</link></image><item><title>Schwarz–Christoffel Toolbox for MATLAB</title><link>https://tobydriscoll.net/project/sc-toolbox/</link><pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate><guid>https://tobydriscoll.net/project/sc-toolbox/</guid><description>&lt;p>The SC Toolbox is a problem-solving environment for computation and interaction with conformal maps to regions bounded by polygons, including unbounded regions, logical quadrilaterals, and channels. It includes a module for the solution of the Laplace equation on such regions with piecewise constant boundary conditions, to ten digits or more in seconds. Nearly all of the Toolbox functions are accessible through a graphical interface.&lt;/p>
+&lt;p>The software is distributed primarily &lt;a href="https://github.com/tobydriscoll/sc-toolbox" target="_blank" rel="noopener">on Github&lt;/a>. You can directly download a zip archive of the &lt;a href="https://github.com/tobydriscoll/sc-toolbox/releases/latest" target="_blank" rel="noopener">latest release&lt;/a>.&lt;/p>
+&lt;p>There is an old &lt;a href="guide.pdf">user guide&lt;/a> that remains fairly relevant. There are also many usage examples in &lt;a href="http://www.amazon.com/Schwarz-Christoffel-Mapping-Tobin-Driscoll/dp/0521807263/ref=sr_1_3/103-8277620-2257413?ie=UTF8&amp;amp;s=books&amp;amp;qid=1179175719&amp;amp;sr=8-3" target="_blank" rel="noopener">my book&lt;/a>, which has a lot of mathematical and computational information about S–C maps.&lt;/p>
+&lt;p>If you need a copy for an older version of MATLAB (major versions 4,5,6), please &lt;a href="https://tobydriscoll.net/#contact">contact me&lt;/a>.&lt;/p>
+&lt;div class="gallery-grid">
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-sc-toolbox" href="https://tobydriscoll.net/media/albums/sc-toolbox/channel.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/sc-toolbox/channel_hu9e1bce225604065302d93a077c9ab2d8_5629_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="channel.png" width="216" height="216">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-sc-toolbox" href="https://tobydriscoll.net/media/albums/sc-toolbox/delaware.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/sc-toolbox/delaware_hue6ebae6fa85a1b9e1fa009a533e976e1_53385_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="delaware.png" width="155" height="360">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-sc-toolbox" href="https://tobydriscoll.net/media/albums/sc-toolbox/ell.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/sc-toolbox/ell_hu5664d63214028e21464e87317bc508c2_7128_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="ell.png" width="216" height="216">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-sc-toolbox" href="https://tobydriscoll.net/media/albums/sc-toolbox/four.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/sc-toolbox/four_hue23dbf62a80a4e136bd467621aae8586_10083_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="four.png" width="216" height="216">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-sc-toolbox" href="https://tobydriscoll.net/media/albums/sc-toolbox/maze.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/sc-toolbox/maze_huce5db714120eade6e4a1347820d70892_39886_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="maze.png" width="287" height="233">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-sc-toolbox" href="https://tobydriscoll.net/media/albums/sc-toolbox/plus.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/sc-toolbox/plus_huf7035a3815707085581fa3ae36a77947_5692_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="plus.png" width="216" height="216">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-sc-toolbox" href="https://tobydriscoll.net/media/albums/sc-toolbox/probes.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/sc-toolbox/probes_hu6a594e50a0e2aaf31b4bb85754542833_5652_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="probes.png" width="216" height="216">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-sc-toolbox" href="https://tobydriscoll.net/media/albums/sc-toolbox/snowflake.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/sc-toolbox/snowflake_hud590406ca10e334a4a4660dae6460fb1_10433_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="snowflake.png" width="216" height="216">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-sc-toolbox" href="https://tobydriscoll.net/media/albums/sc-toolbox/zigzag.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/sc-toolbox/zigzag_hue0e6aa4bb533f3de44ce01cfbbb6a9ba_5850_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="zigzag.png" width="216" height="216">
+&lt;/a>
+&lt;/div>
+&lt;/div></description></item><item><title>MATLAB software</title><link>https://tobydriscoll.net/project/matlabcentral/</link><pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate><guid>https://tobydriscoll.net/project/matlabcentral/</guid><description>&lt;p>In over 25 years of MATLAB programming, I&amp;rsquo;ve &lt;a href="https://www.mathworks.com/matlabcentral/profile/authors/631894-toby-driscoll?utf8=%E2%9C%93&amp;amp;detail2=&amp;amp;detail=fileexchange" target="_blank" rel="noopener">contributed a few utilities&lt;/a> and MATLAB gadgets that I&amp;rsquo;ve found helpful. For example:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/2831-unplot?s_tid=prof_contriblnk" target="_blank" rel="noopener">unplot&lt;/a> Delete the most recently plotted object(s). Used it so, so many times.&lt;/li>
+&lt;li>&lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/2832-latex?s_tid=prof_contriblnk" target="_blank" rel="noopener">latex&lt;/a> Convert a matrix into a LaTeX matrix or table. Maybe the table data type in MATLAB has obsoleted this, but it&amp;rsquo;s still handy for writing papers from time to time.&lt;/li>
+&lt;li>&lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/3148-gslope?s_tid=prof_contriblnk" target="_blank" rel="noopener">gslope&lt;/a> Click twice on a plot and get the slope between the points. Useful for determining convergence rates.&lt;/li>
+&lt;li>&lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/13353-sparse-toeplitz-matrix-construction?s_tid=prof_contriblnk" target="_blank" rel="noopener">sparse Toeplitz matrix construction&lt;/a> Some practical sparse matrices are Toeplitz. This takes the pain out of constructing them.&lt;/li>
+&lt;li>&lt;a href="https://www.mathworks.com/matlabcentral/fileexchange/15851-piecewise-defined-function-builder?s_tid=prof_contriblnk" target="_blank" rel="noopener">piecewise-defined function builder&lt;/a> Creates a single callable function from a collection of piecewise definitions.&lt;/li>
+&lt;/ul></description></item><item><title>Chebfun</title><link>https://tobydriscoll.net/project/chebfun/</link><pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate><guid>https://tobydriscoll.net/project/chebfun/</guid><description>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Chebfun logo" srcset="
+/project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_98646903f1468ce7fefc86b36d371df9.webp 400w,
+/project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_b401adc4cded521262b93b279619bf63.webp 760w,
+/project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_1200x1200_fit_q85_h2_lanczos_3.webp 1200w"
+src="https://tobydriscoll.net/project/chebfun/logo_hu9e2b371467d78f060726a9d7513762f8_783321_98646903f1468ce7fefc86b36d371df9.webp"
+width="300"
+height="162"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;p>&lt;a href="http://www.chebfun.org" target="_blank" rel="noopener">Chebfun&lt;/a> is a free MATLAB package and open source software project. Its aim is to provide numerical computation with functions. My interest in and contribution to the system is most visibly in the solution of ordinary and (1+1 dimensional) partial differential equations. Using familiar MATLAB syntax such as &lt;code>\&lt;/code> and &lt;code>eigs&lt;/code>, solutions to boundary-value or eigenvalue problems can be obtained with full numerical precision automatically.&lt;/p>
+&lt;h3 id="gallery">Gallery&lt;/h3>
+&lt;div class="gallery-grid">
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-chebfun" href="https://tobydriscoll.net/media/albums/chebfun/AtmosphericTemperature_08.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/chebfun/AtmosphericTemperature_08_hu8fe09ab37c4700f7087d28e3de8e1ff3_24244_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="AtmosphericTemperature_08.png" width="600" height="270">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-chebfun" href="https://tobydriscoll.net/media/albums/chebfun/Eigenstates_08.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/chebfun/Eigenstates_08_hue8ba5ca8032e908dc13e51fed27edce6_18433_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="Eigenstates_08.png" width="600" height="270">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-chebfun" href="https://tobydriscoll.net/media/albums/chebfun/GrayScott_01.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/chebfun/GrayScott_01_huc719ea3d7bb4160a69957ca598749b3b_75290_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="GrayScott_01.png" width="600" height="270">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-chebfun" href="https://tobydriscoll.net/media/albums/chebfun/GuckenheimerHolmes_01.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/chebfun/GuckenheimerHolmes_01_hufa79a35f4aeed866980b42836050fb49_6221_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="GuckenheimerHolmes_01.png" width="600" height="270">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-chebfun" href="https://tobydriscoll.net/media/albums/chebfun/Kuramoto_04.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/chebfun/Kuramoto_04_hu98cf7d22e0364c367bfa3599f9281e09_19426_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="Kuramoto_04.png" width="600" height="270">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-chebfun" href="https://tobydriscoll.net/media/albums/chebfun/ParametricSurfaces_03.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/chebfun/ParametricSurfaces_03_hu42cf92a57adaf06387bbafc721025142_39891_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="ParametricSurfaces_03.png" width="600" height="270">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-chebfun" href="https://tobydriscoll.net/media/albums/chebfun/PortraitsWithPoles_02.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/chebfun/PortraitsWithPoles_02_hu1fd1ed525c827855c8a1e7e7fffeef83_32993_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="PortraitsWithPoles_02.png" width="600" height="270">
+&lt;/a>
+&lt;/div>
+&lt;div class="gallery-item gallery-item--medium">
+&lt;a data-fancybox="gallery-chebfun" href="https://tobydriscoll.net/media/albums/chebfun/ResolutionWiggly_01.png" >
+&lt;img src="https://tobydriscoll.net/media/albums/chebfun/ResolutionWiggly_01_hua0a28c993d1bf1f7b90adb5407ab2be2_19259_750x750_fit_q85_h2_lanczos_3.webp" loading="lazy" alt="ResolutionWiggly_01.png" width="600" height="270">
+&lt;/a>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
