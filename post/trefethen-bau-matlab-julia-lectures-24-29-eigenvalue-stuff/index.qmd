@@ -1,0 +1,98 @@
+---
+title: 'Trefethen & Bau & MATLAB & Julia, Lectures 24-29: Eigenvalue stuff'
+date: 2016-10-27T14:16:39+00:00
+author: "Toby Driscoll"
+categories:
+  - computing
+  - math
+  - teaching
+---
+
+
+
+Part V of T&B is on dense methods for eigenvalue and singular value problems. For my course, this is the part of the text that I condense most severely. In part that's due to the need to cover unconstrained nonlinear solving and optimization stuff later on. But I also find that this is the least compelling part of the text for my purposes.
+
+
+
+It's heavily weighted toward the hermitian case. That's the cleanest situation, so I see the rationale. But it's pretty surprising that the lead author of [*Spectra and Pseudospectra*](http://press.princeton.edu/titles/8113.html) mentions eigenvalue conditioning and sensitivity only in a single exercise! (The exercises not in the lecture named "Eigenvalue problems," nor the one named "Overview of eigenvalue algorithms." It's under "Reduction to Hessenberg or tridiagonal form.") In contrast with the tone of earlier parts of the book, one could study the methods of these sections thoroughly and yet not appreciate when the answers are inaccurate, or possibly irrelevant. Because I took this course from Trefethen at a crucial time in the development of his thinking on the subject, my perception of the issues behind computing eigenvalues is quite different from what the text itself conveys.
+
+
+
+(EDIT: If I had but read a few sections more before writing the above, I would have recalled that there is discussion about this in Lecture 34, under "A Note of Caution: Nonnormality." It's all laid out in clear language, so mea culpa. The ordering still feels a little awkward. I'll probably have a half or full class period just on nonnormality.)
+
+
+
+So. In my class I touched on 24-29, and you can find my related [MATLAB notebooks](https://www.dropbox.com/sh/kxyc1on3k4f3sh0/AACnyHY2FmXgUpHmJvSYV6Qaa?dl=0) and [Julia notebooks](https://www.dropbox.com/sh/gq3a0nr1gm4p87a/AABlOcb33OAjO40PFG6tkYSva?dl=0) on them. (I've given up on using Gists for these. The web interface can't seem to handle having a lot of notebooks in one Gist, the rendering is slow, and I see no advantage for me beyond static HTML.) They're a little rough in places, as it's been challenging to keep up the pace.
+
+
+
+There aren't big MATLAB/Julia issues to report. If anything, I think Julia has cleaned up and rationalized some of the quirkiness of the MATLAB versions. In MATLAB, one uses `eig` for everything. The results depend on the number of output arguments.
+```matlab
+>> A = hilb(3);
+>> lambda = eig(A)
+lambda =
+    0.0027
+    0.1223
+    1.4083
+>> [X,D] = eig(A)
+X =
+    -0.1277    0.5474    0.8270
+    0.7137   -0.5283    0.4599
+    -0.6887   -0.6490    0.3233
+D =
+    0.0027         0         0
+          0    0.1223         0
+          0         0    1.4083
+```
+It's a bit awkward that the position of the eigenvalue output changes, and that it's a vector in one case and a matrix in the other. And the difference goes beyond cosmetics: the calculation can be significantly faster if eigenvectors are not required. Julia gives you three variants, so you can retrieve exactly what you want.
+```julia
+julia> A = [1/(i+j) for i=1:3, j=1:3];
+julia> (λ,X) = eig(A)
+([0.000646659,0.0409049,0.875115],
+[0.19925 -0.638787 -0.743136; ...  -0.411255])
+
+julia> λ = eigvals(A)
+3-element Array{Float64,1}:
+  0.000646659
+  0.0409049
+  0.875115
+
+julia> D = eigvecs(A)
+3×3 Array{Float64,2}:
+  0.19925   -0.638787  -0.743136
+  -0.761278   0.376612  -0.527843
+  0.617053   0.670906  -0.411255
+```
+You even have `eigmax` and `eigmin` when the spectrum is real. One thing neither language gives you is an easy way to specify a sort order for the results. In MATLAB, for instance, one ends up doing things like:
+```matlab
+>> [X,D] = eig(A);
+>> lambda = diag(D);
+>> [~,idx] = sort(real(lambda));
+>> X = X(:,idx);  lambda = lambda(idx)
+lambda =
+   -2.1898 + 1.4354i
+   -2.1898 - 1.4354i
+    0.0301 + 0.6095i
+    0.0301 - 0.6095i
+    1.2276 + 2.2020i
+    1.2276 - 2.2020i
+    1.8278 + 0.0000i
+```
+Meh. It's not a lot better in Julia, as far as I can tell.
+```julia
+julia> A = randn(7,7);
+julia> (λ,X) = eig(A);
+julia> idx = sortperm(real(λ));
+julia> X = X[:,idx];  λ = λ[idx]
+7-element Array{Complex{Float64},1}:
+  -3.38359+0.0im
+  -2.33084+0.233909im
+  -2.33084-0.233909im
+  0.415007+0.0im
+  1.03098+0.0im
+  1.11426+2.34596im
+  1.11426-2.34596im
+```
+
+Altogether, Julia is feeling less like a foreign country and more like a province. Sometimes I even remember to use square brackets on the first try.
+

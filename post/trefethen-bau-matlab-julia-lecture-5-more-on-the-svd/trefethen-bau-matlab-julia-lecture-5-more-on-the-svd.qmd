@@ -1,0 +1,43 @@
+---
+title: 'Trefethen & Bau & MATLAB & Julia Lecture 5: More on the SVD'
+date: 2016-09-12T19:47:08+00:00
+author: "Toby Driscoll"
+categories:
+  - computing
+  - teaching
+---
+
+
+
+Notebooks are viewable for [matlab](https://gist.github.com/tobydriscoll/934b88e10ac3b6ce6ac95c8c8f480aef) and [julia](https://gist.github.com/tobydriscoll/40d7b7670558f58958e9136febaeec20).
+
+
+
+This is one of my favorite demos. It illustrates low-rank approximation by the SVD to show patterns in voting behavior for the U.S. Congress. With no a priori models, project onto two singular vectors and pow--[meaning and insight jump out](http://www.nytimes.com/2003/06/24/science/a-mathematician-crunches-the-supreme-court-s-numbers.html).
+
+
+
+I took one shortcut. I have a MATLAB script that reads the raw voting data from [voteview.com](http://voteview.com) and converts it to a matrix. No doubt I would learn a lot about I/O in Julia if I translated it, but I got short on time and instead saved it locally from MATLAB. Then load it using the [MAT package](https://github.com/simonster/MAT.jl) for Julia and Bob's your uncle.
+
+
+
+I did stumble into a nasty gotcha, though. I decided to make histograms for the distributions of the "partisan" and "bipartisan" coordinate values. Unfortunately, there's a name clash: MATLAB's best known histogram plotter is called `hist`, but Julia has a built-in function by that name that just bins the data. I knew there was also a `hist()` in PyPlot, but to my bafflement the access for it was not `PyPlot.hist()`, which does exist:
+
+``` julia
+help?> PyPlot.hist
+ hist(v, e) -&gt; e, counts
+
+Compute the histogram of v using a vector/range e as the edges...
+hist(v[, n]) -&gt; e, counts
+
+Compute the histogram of v, optionally using approximately...
+```
+
+This is Julia's built-in function. The next thing I tried was typing in `Pyplot.` and hitting tab for a list of completions. Most of the familiar MATLAB-style plotting functions are there, but no `hist`, just `hist2D`, which is not equivalent. I don't remember now where I found it, but the way to call the function I want is the bizarre `plt[:hist]`. Neither `?plt` nor tab completion gives any whiff of this syntax or possibility. Obviously there's some logic at work here, and no doubt my Julia and Python ignorance are showing, but this was the most frustrating Julia experience I've had yet.
+
+
+
+(Ironically, MATLAB has a newer plotting function called `histogram`, which does not seem to conflict with any Julia names!)
+
+
+

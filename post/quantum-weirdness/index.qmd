@@ -1,0 +1,24 @@
+---
+title: 'Quantum weirdness'
+date: 2015-07-24
+author: "Toby Driscoll"
+categories:
+  - science
+---
+
+
+
+  I'm a little late getting this news, but I'm fascinated by [an experiment at Australian National University](http://physicsworld.com/cws/article/news/2015/may/26/do-atoms-going-through-a-double-slit-know-if-they-are-being-observed) showing (once again) in a vivid way [how strange the quantum mechanical world is](http://www.physics.org/toplistdetail.asp?id=17).
+
+
+
+  The experiment was a variation on the celebrated [double slit experiment](https://www.britannica.com/science/light/Youngs-double-slit-experiment) that shows how photons are both particles *and* waves, at least in some interpretations of the universe. That's freakish in a not-news kind of way, as is the fact that the same is true of good old atoms, which might seem more as though they should stay particular all the time.
+
+
+
+  One amusing view of the ANU experiment is that an atom can "decide" to be either particle-like or wave-like *based on information from the future.* Just like [the restaurant at the end of the universe](http://hitchhikers.wikia.com/wiki/Milliways), that is, of course, impossible.
+
+
+
+  If I were a better physicist I could explain this to you, but in all honesty it was just the lack of intuitiveness about high energy physics (and maybe the contemporaneous demise of the [Superconducting Super Collider](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0CCgQFjABahUKEwi22sOdyfLGAhVM04AKHa4-CHQ&url=http%3A%2F%2Fwww.scientificamerican.com%2Farticle%2Fthe-supercollider-that-never-was%2F&ei=9o6xVbaHH8ymgwSu_aCgBw&usg=AFQjCNF6MtpZrD2FsH7s0Y8Hlp-t-QbspQ&sig2=NfTuJoyEzlpEgDq5RPY74g&bvm=bv.98476267,d.eXY)) that turned me off to the subject as an undergraduate. Still, what a universe to live in, eh Horatio?
+

@@ -1,0 +1,13 @@
+---
+title: MATLAB software
+description: "Contributions to the MATLAB ecosystem."
+---
+
+In over 25 years of MATLAB programming, I've [contributed a few utilities](https://www.mathworks.com/matlabcentral/profile/authors/631894-toby-driscoll?utf8=%E2%9C%93&detail2=&detail=fileexchange) and MATLAB gadgets that I've found helpful. For example:
+
+* [unplot](https://www.mathworks.com/matlabcentral/fileexchange/2831-unplot?s_tid=prof_contriblnk) Delete the most recently plotted object(s). Used it so, so many times. 
+* [latex](https://www.mathworks.com/matlabcentral/fileexchange/2832-latex?s_tid=prof_contriblnk) Convert a matrix into a LaTeX matrix or table. Maybe the table data type in MATLAB has obsoleted this, but it's still handy for writing papers from time to time. 
+* [gslope](https://www.mathworks.com/matlabcentral/fileexchange/3148-gslope?s_tid=prof_contriblnk) Click twice on a plot and get the slope between the points. Useful for determining convergence rates. 
+* [sparse Toeplitz matrix construction](https://www.mathworks.com/matlabcentral/fileexchange/13353-sparse-toeplitz-matrix-construction?s_tid=prof_contriblnk) Some practical sparse matrices are Toeplitz. This takes the pain out of constructing them. 
+* [piecewise-defined function builder](https://www.mathworks.com/matlabcentral/fileexchange/15851-piecewise-defined-function-builder?s_tid=prof_contriblnk) Creates a single callable function from a collection of piecewise definitions. 
+

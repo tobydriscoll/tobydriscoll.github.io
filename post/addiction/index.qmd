@@ -1,0 +1,12 @@
+---
+title: "Addiction"
+description: "Kids say the darndest things."
+author: "Toby Driscoll"
+date: "7/9/2015"
+categories:
+  - math
+---
+
+Last week my 14-year-old son asked rhetorically, “How is it that more people aren’t addicted to math?”
+
+I know son, I know.

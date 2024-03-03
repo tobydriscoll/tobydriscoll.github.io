@@ -1,0 +1,25 @@
+---
+title: "New look, new tech"
+author: "Toby Driscoll"
+categories:
+  - math
+  - research
+date: 2019-06-27T15:20:05-04:00
+---
+At long last, I've refreshed the look for this site. Previously it was based on a "Metro UI" style for HTML, which looked nice to me at the time. Actually it still looks pretty nice, but it was named for the Metro design introduced with Windows 8, which tells you that it wasn't exactly a modern look. 
+
+More importantly to me, I've ditched writing raw HTML for creating a site using the [Hugo](https://gohugo.io) content creation system. It's such a headache trying to maintain menus, headers, footers, etc. in raw HTML that updating the old site became too painful to contemplate. On the blogging side, I had been using [Wordpress](https://wordpress.com), which I found incredibly slow, wonky, and frustrating. Including snippets of code or math was way too hard, even with extension modules loaded that were supposed to handle it for me, and the results were inconsistent. 
+
+In Hugo you create content within a folder hierarchy that holds plain text files. These can be in HTML as necessary, but the real workhorse is Markdown, which lets you enter content with simply annotated text. As with all markup languages, the idea is to label the structure of the content and let the formatting be specified separately. Unlike HTML, though, the syntax is concise and easy to type, though of course limited to just the most important element types. 
+
+Hugo then converts the Markdown sources into a working site. It's static, not dynamic, meaning that all the pages are created at once rather than in response to a browser request. This keeps it fast and lean, which is appropriate for a modest personal site. 
+
+One strength of Hugo is that it supports tons of [themes](http://themes.gohugo.io/). Of these, the [Academic](https://themes.gohugo.io/academic/) theme quickly jumped out at me. It's written to provide what a typical personal page in academia requires. To be honest, I feel as though it took me too long to grok how to use the theme, and Hugo in general. You can see the [sources for this site](https://github.com/tobydriscoll/academic-kickstart) if you want to get a feeling by example, which is what I recommend.  
+
+The last piece was to generate a screen-native CV. I've been getting increasingly frustrated with PDF online. It was a huge step forward when it was introduced in 1993, when hardcopy was still the norm. But while we haven't gone fully paperless, lots of systems such as job applications or promotion documentation simply can't function any way but fully online now. Yet as pointed out in this great [*Atlantic* piece on the obsolescence of the scientific paper](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/), PDF is intrinsically a simulation of a piece of paper. Because it prioritizes display over structure, it's often hard to extract information from, and it can't do something as fundamental as wrap lines of text to fit a screen width. 
+
+For decades I maintained my CV in LaTeX, with PDF as the output format. This was okay, but getting output from LaTeX in a truly screen-friendly form (basically, HTML) Is. Not. Fun. While the first 80% is easy, the last 20% can be excruciating. Fortunately, with a little regexp replacement, I was able to convert the source to Markdown with manageable effort. Then, thanks to [markdown-cv](http://elipapa.github.io/markdown-cv), I'm able to render this as a [great-looking document](https://tobydriscoll.net/markdown-cv/). Yes, I make a [PDF version](https://tobydriscoll.net/cv.pdf) available still—by printing the "real" version from a browser. 
+
+My dream had been to have the publications part of the CV auto-generated from the data in my [publications](https://tobydriscoll.net/publication/) website section. If I were a more dedicated Hugo hacker, I'm sure I could do it, but I threw in the towel. Besides, there's something to be said for making sure the CV really looks the way you expect it, and the work of double-entering the publications isn't *that* odious. 
+
+This being summer, I haven't yet migrated whatever teaching content from the old site I feel is still worthwhile. But it feels nice to have my online presence up to snuff once more. I hope it motivates me to renew a dedication to blogging. 

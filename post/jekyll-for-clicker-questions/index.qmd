@@ -1,0 +1,58 @@
+---
+title: 'Jekyll for clicker questions'
+date: 2018-02-02T20:54:56+00:00
+author: "Toby Driscoll"
+categories:
+  - academia
+  - computing
+  - teaching
+---
+
+
+
+For a few years, I've been a fan of clickers (aka personal response systems) for large lecture sections. Clickers are a simple--and scalable--way to incorporate a little widespread active learning in the classroom. They can't work miracles, but they do allow me to reward attendance, rouse the students once in a while, and give good feedback to all of us about how well the latest concepts are sinking in. I like the accountability: If you got the question wrong when 80% of the class got it right, that's on you, but if 20% of the class got it right, that's on me.
+
+
+
+UD is an [iclicker](http://www.iclicker.com) shop. When I want to poll the class, I click a "go" button on a small toolbar that overlays any other application. When I'm done, I click "stop." I can show the results and designate the correct answer on the spot, or I can go back later and pick the right answer while looking at a screenshot from when the question started.
+
+
+
+In the past I've used clickers with handwritten questions projected using a document camera. I don't get the screenshot this way, but it works fine. However, in the best case I'm left to manage 50-100 sheets of paper for a course. That's something I'm increasingly cranky about doing in my life overall, and I'm likely to fail at it during the heat of a lecture, especially when (as I like to do) I start replaying questions from past weeks or months. Plus, if I later decide to tweak a question or the answer choices, I've got to scrap a page and rewrite it.
+
+
+
+Enter [Jekyll](http://jekyllrb.com). This is a brilliant software t0ol that converts lightly marked data files into a website. It's blog-centric, but it can be used for other kinds of data as well, and I've customized it for collecting clicker questions. You can get it for yourself from [this Github repo](https://github.com/tobydriscoll/clicker-quiz). It requires being comfortable with a command line, but it's not otherwise technically challenging.
+
+
+
+For instance, in one file I have
+
+
+<pre>---
+layout: question
+chapter: Introduction
+title: Derivative
+---
+{::comment}
+The \dd macro is defined in /_includes/texmacros.md.
+{:/comment}
+What is $\dd{}{x}\left(e^x\right)$?
+
+1. *$e^x$*{: #correct}
+1. $x$
+1. $1$
+1. $\ln(x)$
+1. $\tan(x)$</pre>
+
+
+The page that results can be viewed [here](https://tobydriscoll.github.io/clicker-quiz/questions/introduction/q02.html).  It's pretty easy to see how the output arises from the input. All I do is make one file per question, putting them into subdirectories if I want. They're collected and indexed by the "chapter" property at the top of the file.
+
+
+
+Having maintained more than one [website](http://tobydriscoll.net) of HTML files by hand, I found Jekyll to be a revelation. Headers and footers can be included automatically on all pages set to a certain style. (I use this to define MathJax macros in one file that get copied into all the output question pages.)  Content, such as an index or table of contents, can be generated programmatically based on properties of the data. There's a nice [step-by-step series for getting started with Jekyll](https://www.chronicle.com/blogs/profhacker/jekyll1) on the ProfHacker blog.
+
+
+
+Jekyll versus raw HTML is like using a power drill/driver versus the Craftsman screwdriver with the hard plastic handle that digs divots into your palm when there's a job of any decent size. I'll probably move my personal site this blog over to Jekyll at some point.
+

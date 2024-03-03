@@ -1,0 +1,15 @@
+---
+title: 'Flipping experiences'
+description: "Experiences with flipping the classroom in a numerical computation course."
+date: 2015-07-20
+author: "Toby Driscoll"
+categories:
+  - teaching
+---
+
+
+
+  In June I attended a [MathWorks](http://mathworks.com) faculty research summit in Boston. The idea was to bring together academics and industry reps. As one of the very few non-engineers, it didn't give me much fodder for research. But there was a parallel session for educators with a couple of crossover sessions. I [spoke](/talk/2015-flipping-experiences/) in one of those about what I have learned from flipping the classroom in my numerical computation course.  You can [view the slides online](https://www.icloud.com/keynote/0vEAS1_9IWdUXSTHO-98-ECzg#Flipping-classroom).
+
+  The executive summary: Connecting with students in person is the main thing separating me from a [MOOC](https://www.coursera.org/course/scicomp). Major challenges in this particular course are the wide variety of backgrounds of the students, and material that spans advanced mathematics as well as some skill with computer coding. My goal is to teach how to bridge the two, to become fluent enough in both types of thinking to at least know when to go the experts and what to ask. Flipping lets students have time to fill in soft spots in their knowledge while absorbing new material, and to get help from me and their peers while they wrestle with putting new ideas into practice. I have no data on whether they do better in this style of class. (They believe they do a bit better, though like it a bit less.) But I know that *I* am more engaged, and so I'm giving them the best that I have to offer.
+

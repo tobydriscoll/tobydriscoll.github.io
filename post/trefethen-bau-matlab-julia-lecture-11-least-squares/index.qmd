@@ -1,0 +1,59 @@
+---
+title: 'Trefethen & Bau & MATLAB & Julia, Lecture 11: Least squares'
+date: 2016-09-28T13:19:16+00:00
+author: "Toby Driscoll"
+categories:
+  - computing
+  - teaching
+---
+
+
+
+This week's notebooks ([MATLAB](https://gist.github.com/tobydriscoll/8d87997704e9fd400e96ea860d9f6a34#file-tb-lecture-11-ipynb) and [Julia](https://gist.github.com/tobydriscoll/3d9b29d953882738c51c9cabdcaf431b#file-tb-lecture-11-ipynb)--now all lectures are together for each language) are about least squares polynomial fitting.
+
+
+
+The computational parts are almost identical, except for how polynomials are represented. In MATLAB, a vector of coefficients is interpreted as a polynomial in the context of particular functions, such as `polyval`. The major pain is that the convention is for the coefficients to be ordered from high degree to low, which is almost always the opposite of what you really want. Hence I've gotten used to writing code like
+```
+p = @(x) polyval( c(end: -1:1), x-1955 );
+```
+It's not a big deal, but it trips up some students every semester.
+
+
+
+Julia has a full-fledged polynomial type, if you care to add and load the package. And, it expects ordering from the constant term to the highest degree. So I came up with
+```julia
+p = Poly(c);  
+q = t -> p(t-1955);
+```
+Simple enough, but I find two disappointments. First, it's a bare-bones class. For instance, the second object `q` above is also a polynomial, but we'll never know it formally, or be able to get its coefficients. A `shiftvar` method or something similar would be nice. Second, in the effort to clone the MATLAB interface, a potential for serious confusion was introduced. The command `p=poly(c)`
+also works, but (like MATLAB's counterpart) constructs a polynomial whose roots, not coefficients, are given. This is *way* too easy a mistake to make.
+
+
+
+Another element this time was that I tried using the nascent [Plots package](https://juliaplots.github.io/) for Julia. It's an interesting attempt to graft a graceful interface onto the various graphics backends that already exist. I was motivated to try it because AFAIK, the `PyPlots` package lacks a counterpart to `fplot` from MATLAB. Perhaps in part because of my time with the [Chebfun project](http://www.chebfun.org), I have been putting more emphasis in my teaching on representing functions as such, rather than implicitly as vectors of numbers. It bothers me now, for example, that functions such as `interp1` and `ode45` return numbers or structures rather than callable functions, which is what their algorithms should be doing in the deep sense.
+
+
+
+Anyhow, I end up using `fplot` a lot because of my emphasis on functions, and couldn't find a counterpart in `PyPlot`. In `Plots`, however, the `plot` command handles both numerical and functional arguments alike. Here's a snippet from the notebook:
+```julia
+p = Poly(c);  
+plot( t->p(t-1955), 1955,2000 )
+plot!( year,anomaly, m=:o,l=nothing );
+title!("World temperature anomaly");
+xlabel!("year");  ylabel!("anomaly (deg C)")
+```
+
+
+Not bad! You can see a couple of quirks though. One is the use of [keyword arguments](http://docs.julialang.org/en/release-0.5/manual/functions/#keyword-arguments) in line 3; the arguments `m=:o` and `l=nothing` respectively set the point markers to circles and the lines connecting points to be suppressed. This takes getting used to, but it's memorable and compact enough. 
+
+The other quirk that you see above is the use of the banged commands like `plot!` and `title!`. The bang in Julia is a convention meaning "operate in place" or "overwrite existing." By default, the MATLAB-like commands replace the existing plot, so they have to be banged in order to build on top of it instead. This is a bit dubious in the case of titles and labels––why would I create a new plot by issuing a title?––but it is at least consistent, and, unlike the global state used in MATLAB by the `hold` command, works the same regardless of context and history.
+
+
+
+One quirk––to me, a bug––that you don't see is that the default in `Plots` is that every plot creates or adds to a legend. I'm not a big fan of plot legends in most contexts, but you're welcome to them if you like them. However, I don't find it reasonable to have one forced on me for a graph with a single curve that I didn't give a label to! I turned off this travesty by starting off with
+```julia 
+using Plots;  pyplot(legend=false);
+```
+which at least is straightforward, though entangled with my choice of backend.
+

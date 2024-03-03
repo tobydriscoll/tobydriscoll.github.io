@@ -1,0 +1,25 @@
+---
+title: Chebfun
+description: "Computing with functions instead of numbers."
+lightbox: true
+---
+
+![](logo.png){width=300 alt="Chebfun logo"}
+
+[Chebfun](http://www.chebfun.org) is a free MATLAB package and open source software project. Its aim is to provide numerical computation with functions. My interest in and contribution to the system is most visibly in the solution of ordinary and (1+1 dimensional) partial differential equations. Using familiar MATLAB syntax such as `\` and `eigs`, solutions to boundary-value or eigenvalue problems can be obtained with full numerical precision automatically.
+
+### Gallery 
+
+:::{layout-ncol=3}
+![](Eigenstates_08.png){group="chebfun"}
+
+![](Kuramoto_04.png){group="chebfun"}
+
+![](PortraitsWithPoles_02.png){group="chebfun"}
+
+![](AtmosphericTemperature_08.png){group="chebfun"}
+
+![](GrayScott_01.png){group="chebfun"}
+
+![](ParametricSurfaces_03.png){group="chebfun"}
+:::

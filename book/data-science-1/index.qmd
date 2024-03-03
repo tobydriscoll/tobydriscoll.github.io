@@ -1,0 +1,12 @@
+---
+title: "Data Science 1"
+description: "Free course on Data Science at the sophomore level"
+---
+
+![](UD-cluster.png){alt="Clustering example" width=120}
+
+For my Math 219 class, I was determined to create an introduction to data science for students who have finished a calculus course and plan to study more math. It's intended to cover the subject at about the same level as calculus ABC, not expecting a lot of mathematical sophistication but also not shying away from the math that's necessary. It introduces vectors, matrices, and related simple linear algebra in a gradual and concrete way that will motivate and smooth the transition to a more rigorous linear algebra course later on.
+
+The course also provides programming foundations in Pandas, Seaborn, and Scikit-Learn, assuming only basic Python skill as a prereuqisite. 
+
+Because I couldn't find a textbook that I liked, I created [my own](https://ud-math-data-science-1.github.io). It's got over 150 examples and demos, most of which are accompanied by short explanatory videos. It also shows students how to set up VS Code to run Jupyter notebooks and employ Copilot AI assistance. 

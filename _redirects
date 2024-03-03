@@ -1,7 +1,0 @@
-# Netlify redirects
-# Automatically generated
-# Documentation: http://bit.ly/netlify-deployment
-/FNC/ /project/fnc/
-/fnc/ /project/fnc/
-/SC/ /project/sc-toolbox/
-/sc/ /project/sc-toolbox/

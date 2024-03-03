@@ -1,0 +1,17 @@
+---
+title: "A retrospective look at college math"
+description: "A former math undergrad reflects on what she wishes she had learned more about in college."
+author: "Toby Driscoll"
+date: "7/22/2015"
+categories:
+  - math
+  - teaching
+---
+
+I recommend the post [What I Wish I Had Learned More About in College Mathematics](http://blogs.ams.org/matheducation/2015/07/20/what-i-wish-i-had-learned-more-about-in-college-mathematics/#sthash.6e9g5byf.dpuf), written by Sabrina Schmidt, a former math undergrad at Vassar who now works as a data manager. My favorite quote:
+
+> I wish that I had been introduced earlier and more often to applications, as they would have provided me with a better idea of potential areas of specialization after graduation.
+
+She goes on to mention PageRank (which I usually cover in my numerical computation courses) as an application of linear algebra, and e-commerce as an application of number theory. She also has other STEM courses, statistics, and computer science on her wish list for her former self.
+
+Good read.

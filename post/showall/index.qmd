@@ -1,0 +1,16 @@
+---
+title: 'showall'
+date: 2015-07-30T21:14:51+00:00
+author: "Toby Driscoll"
+categories:
+  - computing
+---
+
+
+
+  I just scratched a [MATLAB](http://matlab.com) itch. So many times I've seen---and experienced myself---people popping open figure windows in MATLAB, then trying to juggle them and move them around the screen so that you can see all of them at once. If you know what you're doing, you can dock them into the desktop and lay them out there, but it's still a lot of clicks.
+
+
+
+  So, I present [showall.m](http://www.mathworks.com/matlabcentral/fileexchange/52344-showall), a little function that will automatically bring forward all the figures (or the ones you specify) and lay them out in a grid. Now you can master your figures!
+

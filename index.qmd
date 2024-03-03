@@ -1,0 +1,53 @@
+---
+title: "Toby Driscoll"
+form:
+  id: Contact
+  action: "https://formspree.io/f/driscoll@udel.edu"
+  submit: "Send"
+  method: POST
+  fields:
+  - name: "name"
+    type: text
+    id: "name"
+    label: "Your name"
+    required: true
+  - name: "email"
+    label: "Email"
+    id: "email"
+    type: "email"
+    required: true
+  - name: "message"
+    id: "message"
+    label: "Message"
+    type: "textarea"
+    required: true
+about:
+  template: solana
+  image: _media/TAD_headshot.jpg
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/tobydriscoll
+    - icon: orcid
+      text: ORCID
+      href: https://orcid.org/0000-0002-1490-2545
+
+---
+Toby Driscoll is a Unidel Chaired Professor in the 
+[Department of Mathematical Sciences](https://mathsci.udel.edu) at the [University of Delaware](https://www.udel.edu).
+
+{{< fa file-pdf >}} [CV](/_media/cv.pdf)
+
+## UD Affiliations
+- Department of Biomedical Engineering
+- [Data Science Institute](https://dsi.udel.edu)
+- Director, [Master of Science in Data Science](https://msds.udel.edu) program
+
+## Contact info
+- Email: [driscoll@udel.edu](mailto:driscoll@udel.edu)
+- Office: [Ewing Hall](https://www.google.com/maps/place/Ewing+Hall,+Newark,+DE+19716/@39.6813258,-75.7575794,17z/data=!3m1!4b1!4m6!3m5!1s0x89c7aa2dfb461021:0x24a1fedcbff4eb35!8m2!3d39.6813258!4d-75.7549991!16s%2Fg%2F1tfjx7jz?entry=ttu) 515
+- Zoom: [https://udel.zoom.us/my/tobydriscoll](https://udel.zoom.us/my/tobydriscoll)
+
+## Send a message
+
+{{< form >}}

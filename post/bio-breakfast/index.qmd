@@ -1,0 +1,11 @@
+---
+title: "Bio Breakfast"
+description: "How to do better at teaching without driving everyone crazy. Maybe."
+author: "Toby Driscoll"
+date: "7/14/2015"
+categories:
+  - math
+  - research
+---
+
+So here I am at the Delaware Bio Breakfast. Nobody is more surprised than I! Making a career out of math seems like an odd path to trying to improve human health, but here I sit.

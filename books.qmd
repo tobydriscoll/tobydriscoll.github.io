@@ -1,0 +1,7 @@
+---
+title: "Books"
+listing:
+  contents: book
+  type: default
+  categories: false
+---

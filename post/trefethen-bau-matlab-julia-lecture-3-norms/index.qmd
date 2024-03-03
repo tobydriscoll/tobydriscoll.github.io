@@ -1,0 +1,59 @@
+---
+title: 'Trefethen & Bau & MATLAB & Julia, Lecture 3: Norms'
+date: 2016-09-07T19:32:46+00:00
+author: "Toby Driscoll"
+categories:
+  - computing
+  - math
+  - teaching
+---
+
+
+
+Here are the [MATLAB](https://gist.github.com/tobydriscoll/b620d1b8beaa04cf87707a55928e3449) and [julia](https://gist.github.com/tobydriscoll/2c486e89b12911b073f3c91e514db4f7) notebooks.
+
+
+
+The big issue this time around was graphics. This topic dramatically illustrates the advantages on both sides of the commercial/open source fence. On the MATLAB side, it's perfectly clear what you should do. There are many options that have been well constructed, and it's all under a relatively consistent umbrella. There are things to learn and options to choose, but it's clear what functions you will be using to make, say, a scatter plot, and a lot of similarity across commands.
+
+
+
+Julia graphics are another story. At this writing, there are two options recommended on [Julia's official page about plotting packages](http://julialang.org/downloads/plotting.html): [PyPlot](https://github.com/stevengj/PyPlot.jl) and [Gadfly](https://github.com/dcjones/Gadfly.jl). It doesn't take much exploration to decide that the former is favored by MATLAB veterans and the latter, by R devotees. Confusingly, the [general download page](http://julialang.org/downloads/) for Julia mentions a third package called [Plots](https://github.com/tbreloff/Plots.jl) that is supposed to integrate all of the backends. It's still early days for Julia, and I'm sure much remains in flux.
+
+
+
+Moreover, because you can (quite easily) import and run Python code in Julia, in principle you have access to all Python plotting packages. One of the big players is [matplotlib](http://matplotlib.org/), which is more or less what Julia's PyPlot is supposed to provide. But there are also [Bokeh](http://bokeh.pydata.org/en/latest/), [plotly](https://plot.ly/), and [pyqtgraph](http://www.pyqtgraph.org/)---for all I know, many more besides. All of these can make gorgeous graphics, often highly interactive and even hosted in the cloud. The relative merits are not at all clear.
+
+
+
+Here we run into the [paradox of choice](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjuv7-7j_zOAhXG2xoKHdrgAvYQtwIIHjAA&url=http%3A%2F%2Fwww.ted.com%2Ftalks%2Fbarry_schwartz_on_the_paradox_of_choice%3Flanguage%3Den&usg=AFQjCNHkeD4jDrbOc7TgI5YOQfU1IQ7xOQ): having many options, even good ones, can provoke anxiety rather than satisfaction. Which package do I invest time in learning? MATLAB limits choice but provides a sort of editorial, almost paternal, reassurance.
+
+
+
+My personal goal is to learn Julia from the standpoint of a MATLAB user, so PyPlot it is. All in all, the transition isn't bad, though there are some twists.
+
+
+
+In the last few years I've been more often turning to automatic function plotting in MATLAB, using `fplot`, `ezsurf`, and `ezcontour`. If PyPlot supports those, I have yet to find out about them. So it's back to the world of evaluating functions on tensor product grids.  A MATLAB veteran turns to meshgrid, but Julia supports broadcasting across singleton dimensions. For example:
+
+``` julia
+using PyPlot
+x = linspace(-1,1,90);
+y = x';
+contour(x[:],y[:],sqrt(x.^2 .+ y.^2))</pre>
+```
+
+Because `x` has a column shape while `y` has a row shape, the `.+` 
+operator broadcasts each along the "missing" dimension. It's a clever shortcut once you know it. It works just as well for contours of the vector 1-norm, but for the max norm I had to broadcast manually:
+
+``` julia
+contour(x[:],y[:],broadcast(max,abs(x),abs(y)))
+```
+
+It's not clear to me why that broadcast should not happen automatically, given that
+`max` is a dedicated elementwise operator.
+
+
+
+There's more Julia subtlety hiding in this notebook, but those issues will wait for another time.
+

@@ -1,0 +1,7 @@
+---
+title: "Projects"
+listing:
+  contents: project
+  type: default
+  categories: false
+---

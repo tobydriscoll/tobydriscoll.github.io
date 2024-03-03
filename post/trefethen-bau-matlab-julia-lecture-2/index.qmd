@@ -1,0 +1,48 @@
+---
+title: 'Trefethen & Bau & MATLAB & Julia, Lecture 2'
+date: 2016-09-02T19:12:54+00:00
+author: "Toby Driscoll"
+categories:
+  - computing
+  - math
+  - teaching
+---
+
+
+
+  Here are the [matlab](http://nbviewer.jupyter.org/gist/tobydriscoll/8aa30fdad0346f1c5656ff4a468b1b05) and [julia](https://gist.github.com/tobydriscoll/7f404b36fd47d2878f90dd76a1d7a9b9) notebooks.
+
+
+Two things stood out this time. First, consider the following snippet.
+``` julia
+u = [ 4; -1; 2+2im ]
+v = [ -1; 1im; 1 ]
+println("dot(u,v) gives ", dot(u,v))
+println("u'*v gives ",u'*v)
+```
+The result is
+```
+dot(u,v) gives -2 - 3im
+u'*v gives Complex{Int64}[-2 - 3im]
+```
+Unlike in MATLAB, a scalar is not the same thing as a 1-by-1 matrix. This has consequences. The code `(u'*v)*eye(3)` throws a dimension mismatch error, while the equivalent with `dot` is fine. In the strict sense this is correct, and I suppose Julia made a decision to be strict in contrast to MATLAB's typical laxity. The price is that little bump introduced into a transition that is normally seamless in the minds of users and programmers 99% of the time.
+
+
+The other difference is in style more than anything else. Compare MATLAB's
+``` matlab
+[Q,~] = qr(A);
+```
+to Julia's
+``` julia
+Q = qr(A)[1]
+```
+Julia's version would be easier if you wanted to extract the $n$th output, where $n$ is a variable, though you could manage it in MATLAB with cells. I'm not sure how common that situation is. Also, it could be a surprise in MATLAB that
+``` matlab
+Q=qr(A)
+```
+does *not* do the same thing, because the content and meaning of the outputs depend on the number of outputs.
+
+
+
+A distinction for QR factorization in particular in the two languages is that MATLAB returns the full version by default, while Julia defaults to the skinny form. The latter is nice because an unsuspecting student (or professor) who calls `qr(A)` in MATLAB for a really tall matrix might as well kill the process and restart MATLAB Julia makes you do something extra to get the memory-dangerous version.
+

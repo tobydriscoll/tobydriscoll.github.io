@@ -1,0 +1,86 @@
+---
+title: 'Trefethen & Bau & MATLAB & Julia, Lectures 6-7'
+date: 2016-09-16T20:27:58+00:00
+author: "Toby Driscoll"
+categories:
+  - teaching
+  - computing
+---
+
+
+
+Here are the Jupyter notebooks for [Lecture 6](https://gist.github.com/tobydriscoll/fb438fc942a01e242cc08ee05385af17) and [Lecture 7](https://gist.github.com/tobydriscoll/4d1c8856da0c718e1d99d8171e1babec). (I finally noticed that a Gist can hold more than one notebook...duh.)
+
+
+
+Not much happened in Lecture 6, but I got gobsmacked in Lecture 7. It happened when I tried to convert this boring MATLAB code for backward substitution.
+
+``` matlab
+A = magic(9);   b = (1:9)';
+[Q,R] = qr(A);
+z = Q'*b;
+x(9,1) = z(9)/R(9,9);
+for i = 8:-1:1
+    x(i) = (z(i) - R(i,i+1:9)*x(i+1:9)) / R(i,i);
+end
+```
+Here is what I first tried in Julia.
+
+``` julia
+A = round(10*rand(9,9));  b = (1:9);
+m = 9;
+(Q,R) = qr(A);
+z = Q'*b;
+x = zeros(m);
+x[m] = z[m]/R[m,m];
+for i = m-1:-1:1
+    x[i] = (z[i] - R[i,i+1:m]*x[i+1:m]) / R[i,i];
+end
+```
+Seems straightforward, but line 4 gives an error. I'm not going to copy the error message here, in case you're using mobile data right now. What I mean is that it is verbose, not to mention obscure. You don't appreciate simple, clear error messages until you get something else!
+
+
+
+Anyhow, I then remembered that in Julia, the colon construction `(1:9)` produces a Range, not a Vector. As I understand it, Julia embraces a lazy design philosophy: it avoids evaluation of an expression until the last possible moment. Suppose the only use of that Range is to describe a loop iteration---in that case, why have a vector?
+
+
+
+I'm all for lazy philosophy. (Haw haw!) It's not clear to me why the context `Q'*b`
+does not automatically convert the Range into a Vector. It's even less clear why they have deprecated the idiom `[1:9]` to create a Vector; it works for now but gives a warning. Instead one should use `collect`:
+
+``` julia
+A = round(10*rand(9,9));  b = collect(1:9);
+m = 9;
+(Q,R) = qr(A);
+z = Q'*b;
+x = zeros(m);
+x[m] = z[m]/R[m,m];
+for i = m-1:-1:1
+    x[i] = (z[i] - R[i,i+1:m]*x[i+1:m]) / R[i,i];
+end
+```
+Feels very odd to me still, but okay.
+
+
+
+We are not out of the woods yet. This version still fails in the loop body, again vomiting opaque error messages. Remember how, [back in Lecture 2, I mentioned]({{< ref "/post/2016-09-02-trefethen-bau-matlab-julia-lecture-2.md">}}) that scalars and 1x1 matrices are different things? Inside the loop above, `z[i]` is a scalar and the product is a length-1 vector. But the subtraction works anyway, as `z[i]` is silently promoted to a 1-vector also. No, the problem comes with the assignment: you can't assign a 1-vector to an element of an array of numbers.
+
+
+
+There's a very long (space and time) [discussion](https://github.com/JuliaLang/julia/issues/4774#issuecomment-28430963) about this and related issues in Julia. Suffice it to say that what mathematicians do with scalars, vectors, matrices, and tensors isn't rigorously consistent---or at least, there seem to be multiple, incompatible rigorous ways to use them.
+
+
+
+In this particular case I have found two unsatisfying workarounds. The idiom
+`x[i:i]` produces a Vector, not a scalar, so the assignment goes through. Or we can work on the other side of the assignment and pull out the scalar from the vector:
+``` julia
+(z[i] - R[i,i+1:m]*x[i+1:m])[1] / R[i,i]
+```
+
+
+Now, it's pleasing that this syntax does work, as there is no good MATLAB equivalent for indexing into a temporary expression. I just wish it was in the service of something less dismal.
+
+
+
+Again: Julia's designers have solid reasons for doing things this way. I wouldn't consider it a dealbreaker for research codes, but this episode is not something I would want to explain to undergrads who are just wrapping their heads around LU factorization. It pulls you right out of thinking about math and into thinking about strict-typing, pinhead-dancing angels. How unfortunate.
+
