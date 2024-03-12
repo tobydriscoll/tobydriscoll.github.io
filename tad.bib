@@ -3104,19 +3104,7 @@
   pmid = {17099391}
 }
 
-@article{DriscollAAARational2023,
-  title = {{{AAA}} Rational Approximation on a Continuum},
-  author = {Driscoll, Tobin A. and Nakatsukasa, Yuji and Trefethen, Lloyd N.},
-  year = {2023},
-  month = may,
-  journal = {SIAM Journal on Scientific Computing},
-  pages = {to appear},
-  urldate = {2023-05-08},
-  copyright = {All rights reserved},
-  keywords = {41A20 65D15,Mathematics - Numerical Analysis,No DOI found}
-}
-
-@article{DriscollAAARational2023a,
+@misc{DriscollAAARational2023,
   title = {{{AAA}} Rational Approximation on a Continuum},
   author = {Driscoll, Toby and Nakatsukasa, Yuji and Trefethen, Lloyd N.},
   year = {2023},
@@ -3129,21 +3117,20 @@
   file = {/Users/driscoll/Dropbox/library/Preprint/Driscoll et al_2023_AAA rational approximation on a continuum.pdf}
 }
 
-@misc{DriscollAAARational2023arx,
-  title = {{{AAA}} Rational Approximation on a Continuum},
-  author = {Driscoll, Toby and Nakatsukasa, Yuji and Trefethen, Lloyd N.},
-  year = {2023},
-  month = may,
-  number = {arXiv:2305.03677},
-  eprint = {2305.03677},
-  primaryclass = {cs, math},
-  publisher = {{arXiv}},
-  urldate = {2023-05-08},
-  abstract = {AAA rational approximation has normally been carried out on a discrete set, typically hundreds or thousands of points in a real interval or complex domain. Here we introduce a continuum AAA algorithm that discretizes a domain adaptively as it goes. This enables fast computation of high-accuracy rational approximations on domains such as the unit interval, the unit circle, and the imaginary axis, even in some cases where resolution of singularities requires exponentially clustered sample points, support points, and poles. Prototype MATLAB (or Octave) and Julia codes aaax, aaaz, and aaai are provided for these three special domains; the latter two are equivalent by a Moebius transformation. Execution is very fast since the matrices whose SVDs are computed have only three times as many rows as columns. The codes include a AAA-Lawson option for improvement of a AAA approximant to minimax, so long as the accuracy is well above machine precision. The result returned is pole-free in the approximation domain.},
-  archiveprefix = {arxiv},
+@article{DriscollAAARational2024,
+  title = {{{AAA Rational Approximation}} on a {{Continuum}}},
+  author = {Driscoll, Tobin A. and Nakatsukasa, Yuji and Trefethen, Lloyd N.},
+  year = {2024},
+  month = apr,
+  journal = {SIAM Journal on Scientific Computing},
+  volume = {46},
+  number = {2},
+  pages = {A929-A952},
+  issn = {1064-8275, 1095-7197},
+  doi = {10.1137/23M1570508},
+  urldate = {2024-03-12},
   copyright = {All rights reserved},
-  keywords = {41A20 65D15,Mathematics - Numerical Analysis},
-  file = {/Users/driscoll/Zotero/storage/EXEYTPJD/2305.html}
+  langid = {english}
 }
 
 @article{DriscollAdaptiveResidual2007,
@@ -3422,7 +3409,8 @@
   abstract = {\&lt;p\&gt;\&lt;em\&gt;Purpose:\&lt;/em\&gt; Several elements are developed to quantitatively determine the contribution of different physical and chemical effects to tear breakup (TBU) in subjects with no self-reported history of dry eye (DED) or other ocular surface disease. Fluorescence (FL) imaging is employed to visualize the tear film (TF) and to determine TF thinning and potential TBU.\&lt;/p\&gt;\&lt;p\&gt;\&lt;em\&gt;Methods:\&lt;/em\&gt; An automated system using a convolutional neural network that was trained and tested on more than 50,000 images from FL imaging experiments was deployed. The trained system could identify multiple TBU instances in each trial. Once identified, extracted FL intensity data was fit by mathematical models that included tangential flow along the eye, evaporation, osmosis, and FL intensity of emission from the TF. The mathematical models consisted of systems of ordinary differential equations for the aqueous layer thickness, osmolarity, and the FL concentration; they are a local approximation to TF thinning and/or TBU dynamics. FL intensity was computed using the resulting thickness and FL concentration. Optimizing the fit of the models to the FL intensity data determined the mechanism(s) driving each instance of TBU and produced an estimate of the osmolarity within TBU.\&lt;/p\&gt;\&lt;p\&gt;\&lt;em\&gt;Results:\&lt;/em\&gt; Initial estimates for FL concentration and initial TF thickness agree well with prior results. Fits were produced for \&lt;em\&gt;N\&lt;/em\&gt; = 467 instances of potential TBU from 15 non-DED subjects. The results showed a distribution of causes of TBU in these healthy subjects, as reflected by estimated flow and evaporation rates, which appear to agree well with previously published data. Final osmolarity depended strongly on the TBU mechanism, generally increasing with evaporation rate but complicated by the dependence on flow.\&lt;/p\&gt;\&lt;p\&gt;\&lt;em\&gt;Conclusion:\&lt;/em\&gt; The method has the potential to classify TBU instances based on the mechanism and dynamics, and to estimate the final osmolarity at the TBU locus. The results suggest that it might be possible to classify individual subjects and provide a baseline for comparison and potential classification of DED subjects.\&lt;/p\&gt;},
   chapter = {Original Articles},
   copyright = {All rights reserved},
-  keywords = {FOS: Mathematics,No DOI found,Numerical Analysis (math.NA)}
+  keywords = {FOS: Mathematics,No DOI found,Numerical Analysis (math.NA)},
+  file = {/Users/driscoll/Dropbox/library/Journal Article/Driscoll et al_2023_Fitting ODE models of tear film breakup.pdf}
 }
 
 @book{DriscollFundamentalsNumerical2018,
@@ -3620,7 +3608,8 @@
   volume = {505},
   pages = {378--379},
   doi = {10.1017/s0022112004008201},
-  copyright = {All rights reserved}
+  copyright = {All rights reserved},
+  file = {/Users/driscoll/Dropbox/library/Journal Article/Driscoll_2004_A Practical Guide to Boundary Element Methods With the Software Library BEMLIB.pdf}
 }
 
 @techreport{DriscollPseudospectraWave1993,
@@ -3643,6 +3632,20 @@
   issn = {03770427},
   doi = {10.1016/0377-0427(95)00021-6},
   copyright = {All rights reserved}
+}
+
+@misc{DriscollRationalFunctionApproximationJl2023,
+  title = {{{RationalFunctionApproximation}}.Jl: {{Rational}} Function Approximatoin in {{Julia}}},
+  author = {Driscoll, Tobin A.},
+  year = {2023},
+  month = sep,
+  doi = {10.5281/ZENODO.8355790},
+  urldate = {2024-02-27},
+  abstract = {This package uses the continuous form of the AAA algorithm to adaptively compute rational approximations of functions on intervals and other domains in the complex plane. For the mathematical description, see https://arxiv.org/abs/2305.03677, which is to appear in SISC.},
+  copyright = {MIT License, Open Access},
+  howpublished = {Zenodo},
+  langid = {english},
+  keywords = {complex analysis,function approximation,rational functions}
 }
 
 @article{DriscollRectangularSpectral2015,
