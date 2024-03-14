@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.339">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -84,13 +84,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
+  "limit": 20,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -99,7 +98,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -117,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
@@ -201,7 +199,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-
 <p>I’m going to wrap up the long-paused MATLAB versus Julia comparison on Trefethen &amp; Bau by chugging through all the lectures on iterative methods in one post.</p>
 <p>I’m back to using gists–not thrilled with any of the mechanisms for sharing this stuff.</p>
 <ul>
@@ -209,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://gist.github.com/tobydriscoll/204bbc93b984c9ddf17bbe51e162399d">Lecture 33 (Arnoldi iteration)</a></li>
 <li><a href="https://gist.github.com/tobydriscoll/63212a0c32c473daae5a81a3f6888476">Lecture 34 (Arnoldi eigenvalues)</a></li>
 </ul>
-<p>These are remarkable mainly in that they have such striking similarity in both languages. Aside from square brackets and working around the <a href="[ref []{.quarto-shortcode__-param data-is-shortcode=&quot;1&quot; data-value=&quot;/post/2016-09-02-trefethen-bau-matlab-julia-lecture-2.md&quot; data-raw=&quot;&quot;/post/2016-09-02-trefethen-bau-matlab-julia-lecture-2.md&quot;&quot;}]{.quarto-shortcode__ data-is-shortcode=&quot;1&quot; data-raw=&quot;&quot;}">1x1/scalar distinction</a> in Julia, little differs besides the syntax of the <code>eigs</code> command.</p>
+<p>These are remarkable mainly in that they have such striking similarity in both languages. Aside from square brackets and working around the <a href="../post/2016-09-02-trefethen-bau-matlab-julia-lecture-2">1x1/scalar distinction</a> in Julia, little differs besides the syntax of the <code>eigs</code> command.</p>
 <p>One frustration, though. I decided to try an interesting alternative to PyPlot&nbsp;in Julia, the <a href="https://juliaplots.github.io/">Plots package</a>. Actually Plots tries to be a generalization of and alternative route to using PyPlot/matplotlib. I decided to try the PlotlyJS backend instead, however. It makes lovely graphics with very responsive interaction. Since the rendering is in Javascript, I thought it would be perfectly portable, but you can’t see the output in the gist above, even though it should be embedded in the notebook.</p>
 <p>I liked using Plots OK; for the most part it’s just different, not better or worse that I could see. I found it awkward to work with subplots. I ended up creating 4 plots individually and then displaying them in a table using another call to&nbsp;<code>plot</code>. I find MATLAB’s setup more convenient. I also could not figure out how to coax a contour plot with a contour at a specified value, which seems like a big lack.</p>
 <ul>
@@ -501,28 +498,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
+    if (id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
         }
         return container.innerHTML
       } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
         return note.innerHTML;
       }
     } else {
@@ -531,15 +515,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -581,29 +557,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
       }
     }, function(instance) {
     });
@@ -679,6 +632,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     window.addEventListener(
       "resize",
       throttle(() => {
+        console.log("RESIZE");
         elRect = undefined;
         if (selectedAnnoteEl) {
           selectCodeLines(selectedAnnoteEl);

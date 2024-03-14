@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.339">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,13 +50,12 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
+  "limit": 20,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -65,7 +64,6 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -105,33 +103,6 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Toby Driscoll - Posts">
 <meta property="og:site_name" content="Toby Driscoll">
@@ -141,7 +112,7 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
@@ -214,33 +185,34 @@ window.Quarto = {
 
 
 
-
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="teaching" data-listing-date-sort="1563292512000" data-listing-file-modified-sort="1709503334758" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="921">
+<div class="quarto-post image-right" data-index="0" data-categories="teaching" data-listing-date-sort="1563292512000" data-listing-file-modified-sort="1710422819642" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="921">
 <div class="thumbnail">
-<p><a href="./post/the-sorry-state-of-teaching-odes/index.html" class="no-external"></a></p><a href="./post/the-sorry-state-of-teaching-odes/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/the-sorry-state-of-teaching-odes/index.html" class="no-external"></a></p>
+<p><a href="./post/the-sorry-state-of-teaching-odes/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/the-sorry-state-of-teaching-odes/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/the-sorry-state-of-teaching-odes/index.html" class="no-external">The sorry state of teaching ODEs</a>
+The sorry state of teaching ODEs
 </h3>
 <div class="listing-subtitle">
-<a href="./post/the-sorry-state-of-teaching-odes/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
+<a href="./post/the-sorry-state-of-teaching-odes/index.html">
 <div class="listing-description">
-<a href="./post/the-sorry-state-of-teaching-odes/index.html" class="no-external">I’ve spent the last two spring semesters teaching ODEs (ordinary differential equations) to a total of about 170 biomedical and chemical engineering majors. The content is…</a>
+I’ve spent the last two spring semesters teaching ODEs (ordinary differential equations) to a total of about 170 biomedical and chemical engineering majors. The content is…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/the-sorry-state-of-teaching-odes/index.html" class="no-external">
+<a href="./post/the-sorry-state-of-teaching-odes/index.html">
 <div class="listing-date">
 Jul 16, 2019
 </div>
@@ -250,30 +222,32 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="computing" data-listing-date-sort="1561748256000" data-listing-file-modified-sort="1709503334760" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2207">
+<div class="quarto-post image-right" data-index="1" data-categories="computing" data-listing-date-sort="1561748256000" data-listing-file-modified-sort="1710422819641" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2207">
 <div class="thumbnail">
-<p><a href="./post/matlab-vs.-julia-vs.-python/index.html" class="no-external"></a></p><a href="./post/matlab-vs.-julia-vs.-python/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/matlab-vs.-julia-vs.-python/index.html" class="no-external"></a></p>
+<p><a href="./post/matlab-vs.-julia-vs.-python/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/matlab-vs.-julia-vs.-python/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/matlab-vs.-julia-vs.-python/index.html" class="no-external">Matlab vs.&nbsp;Julia vs.&nbsp;Python</a>
+Matlab vs.&nbsp;Julia vs.&nbsp;Python
 </h3>
 <div class="listing-subtitle">
-<a href="./post/matlab-vs.-julia-vs.-python/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
 </div>
 </div>
+<a href="./post/matlab-vs.-julia-vs.-python/index.html">
 <div class="listing-description">
-<a href="./post/matlab-vs.-julia-vs.-python/index.html" class="no-external">I’ve used MATLAB for over 25 years. (And before that, I even used MATRIXx, a late, unlamented attempt at a spinoff, or maybe a ripoff.) It’s not the first language I learned…</a>
+I’ve used MATLAB for over 25 years. (And before that, I even used MATRIXx, a late, unlamented attempt at a spinoff, or maybe a ripoff.) It’s not the first language I learned…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/matlab-vs.-julia-vs.-python/index.html" class="no-external">
+<a href="./post/matlab-vs.-julia-vs.-python/index.html">
 <div class="listing-date">
 Jun 28, 2019
 </div>
@@ -283,19 +257,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="math,research" data-listing-date-sort="1561663205000" data-listing-file-modified-sort="1709503334749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="670">
+<div class="quarto-post image-right" data-index="2" data-categories="math,research" data-listing-date-sort="1561663205000" data-listing-file-modified-sort="1710422819641" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="670">
 <div class="thumbnail">
-<p><a href="./post/new-look-new-tech/index.html" class="no-external"></a></p><a href="./post/new-look-new-tech/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/new-look-new-tech/index.html" class="no-external"></a></p>
+<p><a href="./post/new-look-new-tech/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/new-look-new-tech/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/new-look-new-tech/index.html" class="no-external">New look, new tech</a>
+New look, new tech
 </h3>
 <div class="listing-subtitle">
-<a href="./post/new-look-new-tech/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math'); return false;">
 math
@@ -304,12 +278,14 @@ math
 research
 </div>
 </div>
+<a href="./post/new-look-new-tech/index.html">
 <div class="listing-description">
-<a href="./post/new-look-new-tech/index.html" class="no-external">At long last, I’ve refreshed the look for this site. Previously it was based on a “Metro UI” style for HTML, which looked nice to me at the time. Actually it still looks…</a>
+At long last, I’ve refreshed the look for this site. Previously it was based on a “Metro UI” style for HTML, which looked nice to me at the time. Actually it still looks…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/new-look-new-tech/index.html" class="no-external">
+<a href="./post/new-look-new-tech/index.html">
 <div class="listing-date">
 Jun 27, 2019
 </div>
@@ -319,19 +295,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="academia,computing,teaching" data-listing-date-sort="1517604896000" data-listing-file-modified-sort="1709503334765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="531">
+<div class="quarto-post image-right" data-index="3" data-categories="academia,computing,teaching" data-listing-date-sort="1517604896000" data-listing-file-modified-sort="1710422819640" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="531">
 <div class="thumbnail">
-<p><a href="./post/jekyll-for-clicker-questions/index.html" class="no-external"></a></p><a href="./post/jekyll-for-clicker-questions/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/jekyll-for-clicker-questions/index.html" class="no-external"></a></p>
+<p><a href="./post/jekyll-for-clicker-questions/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/jekyll-for-clicker-questions/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/jekyll-for-clicker-questions/index.html" class="no-external">Jekyll for clicker questions</a>
+Jekyll for clicker questions
 </h3>
 <div class="listing-subtitle">
-<a href="./post/jekyll-for-clicker-questions/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('academia'); return false;">
 academia
@@ -343,12 +319,14 @@ computing
 teaching
 </div>
 </div>
+<a href="./post/jekyll-for-clicker-questions/index.html">
 <div class="listing-description">
-<a href="./post/jekyll-for-clicker-questions/index.html" class="no-external">For a few years, I’ve been a fan of clickers (aka personal response systems) for large lecture sections. Clickers are a simple–and scalable–way to incorporate a little…</a>
+For a few years, I’ve been a fan of clickers (aka personal response systems) for large lecture sections. Clickers are a simple–and scalable–way to incorporate a little…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/jekyll-for-clicker-questions/index.html" class="no-external">
+<a href="./post/jekyll-for-clicker-questions/index.html">
 <div class="listing-date">
 Feb 2, 2018
 </div>
@@ -358,30 +336,32 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="math" data-listing-date-sort="1486152970000" data-listing-file-modified-sort="1709503334767" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="597">
+<div class="quarto-post image-right" data-index="4" data-categories="math" data-listing-date-sort="1486152970000" data-listing-file-modified-sort="1710426458213" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="595">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Iterative methods</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Iterative methods
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math'); return false;">
 math
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html" class="no-external">I’m going to wrap up the long-paused MATLAB versus Julia comparison on Trefethen &amp; Bau by chugging through all the lectures on iterative methods in one post.</a>
+I’m going to wrap up the long-paused MATLAB versus Julia comparison on Trefethen &amp; Bau by chugging through all the lectures on iterative methods in one post.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-iterative-methods/index.html">
 <div class="listing-date">
 Feb 3, 2017
 </div>
@@ -391,30 +371,32 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="society and culture" data-listing-date-sort="1482074914000" data-listing-file-modified-sort="1709503334763" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="715">
+<div class="quarto-post image-right" data-index="5" data-categories="society and culture" data-listing-date-sort="1482074914000" data-listing-file-modified-sort="1710422819640" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="715">
 <div class="thumbnail">
-<p><a href="./post/it-already-has-happenend-here/index.html" class="no-external"></a></p><a href="./post/it-already-has-happenend-here/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/it-already-has-happenend-here/index.html" class="no-external"></a></p>
+<p><a href="./post/it-already-has-happenend-here/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/it-already-has-happenend-here/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/it-already-has-happenend-here/index.html" class="no-external">It already has happened here</a>
+It already has happened here
 </h3>
 <div class="listing-subtitle">
-<a href="./post/it-already-has-happenend-here/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('society and culture'); return false;">
 society and culture
 </div>
 </div>
+<a href="./post/it-already-has-happenend-here/index.html">
 <div class="listing-description">
-<a href="./post/it-already-has-happenend-here/index.html" class="no-external">I’ve just finished one of the most remarkable fiction reading experiences I’ve had in quite some time:&nbsp;<em>It Can’t Happen Here</em>, by Sinclair Lewis.</a>
+I’ve just finished one of the most remarkable fiction reading experiences I’ve had in quite some time:&nbsp;<em>It Can’t Happen Here</em>, by Sinclair Lewis.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/it-already-has-happenend-here/index.html" class="no-external">
+<a href="./post/it-already-has-happenend-here/index.html">
 <div class="listing-date">
 Dec 18, 2016
 </div>
@@ -424,19 +406,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="computing,math,teaching" data-listing-date-sort="1477577799000" data-listing-file-modified-sort="1709503334759" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="760">
+<div class="quarto-post image-right" data-index="6" data-categories="computing,math,teaching" data-listing-date-sort="1477577799000" data-listing-file-modified-sort="1710422819644" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="760">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 24-29: Eigenvalue stuff</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 24-29: Eigenvalue stuff
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -448,12 +430,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html" class="no-external">Part V of T&amp;B is on dense methods for eigenvalue and singular value problems. For my course, this is the part of the text that I condense most severely. In part that’s due…</a>
+Part V of T&amp;B is on dense methods for eigenvalue and singular value problems. For my course, this is the part of the text that I condense most severely. In part that’s due…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lectures-24-29-eigenvalue-stuff/index.html">
 <div class="listing-date">
 Oct 27, 2016
 </div>
@@ -463,19 +447,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="computing,teaching" data-listing-date-sort="1477153215000" data-listing-file-modified-sort="1709503334739" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1284">
+<div class="quarto-post image-right" data-index="7" data-categories="computing,teaching" data-listing-date-sort="1477153215000" data-listing-file-modified-sort="1710422819644" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1284">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lectures 20, 21, 23: Solving square systems</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lectures 20, 21, 23: Solving square systems
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -484,12 +468,14 @@ computing
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html" class="no-external">Three in one this time: Lecture 20, which is on Gaussian elimination / LU factorization, Lecture 21, on row pivoting, and Lecture 23, on Cholesky factorization. I mainly…</a>
+Three in one this time: Lecture 20, which is on Gaussian elimination / LU factorization, Lecture 21, on row pivoting, and Lecture 23, on Cholesky factorization. I mainly…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lectures-20-21-23-solving-square-systems/index.html">
 <div class="listing-date">
 Oct 22, 2016
 </div>
@@ -499,19 +485,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="computing,math,teaching" data-listing-date-sort="1476220595000" data-listing-file-modified-sort="1709503334747" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="690">
+<div class="quarto-post image-right" data-index="8" data-categories="computing,math,teaching" data-listing-date-sort="1476220595000" data-listing-file-modified-sort="1710422819643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="690">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lecture 19, Stability of least squares</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lecture 19, Stability of least squares
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -523,12 +509,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html" class="no-external">Here are the notebooks in MATLAB and Julia.</a>
+Here are the notebooks in MATLAB and Julia.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lecture-19-stability-of-least-squares/index.html">
 <div class="listing-date">
 Oct 11, 2016
 </div>
@@ -538,19 +526,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="computing,teaching" data-listing-date-sort="1475603877000" data-listing-file-modified-sort="1709503334748" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="495">
+<div class="quarto-post image-right" data-index="9" data-categories="computing,teaching" data-listing-date-sort="1475603877000" data-listing-file-modified-sort="1710426486412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="492">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 12-13: Conditioning and floating point</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 12-13: Conditioning and floating point
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -559,12 +547,14 @@ computing
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html" class="no-external">I’ve run into trouble managing gists with lots of files in them, so I’m back to doing one per lecture. Here are Lecture 12 and Lecture 13.</a>
+I’ve run into trouble managing gists with lots of files in them, so I’m back to doing one per lecture. Here are Lecture 12 and Lecture 13.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lectures-12-13-conditioning-and-floating-point/index.html">
 <div class="listing-date">
 Oct 4, 2016
 </div>
@@ -574,19 +564,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="computing,teaching" data-listing-date-sort="1475068756000" data-listing-file-modified-sort="1709503334743" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="647">
+<div class="quarto-post image-right" data-index="10" data-categories="computing,teaching" data-listing-date-sort="1475068756000" data-listing-file-modified-sort="1710422819642" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="647">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 11: Least squares</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 11: Least squares
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -595,12 +585,14 @@ computing
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html" class="no-external">This week’s notebooks (MATLAB and Julia–now all lectures are together for each language) are about least squares polynomial fitting.</a>
+This week’s notebooks (MATLAB and Julia–now all lectures are together for each language) are about least squares polynomial fitting.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lecture-11-least-squares/index.html">
 <div class="listing-date">
 Sep 28, 2016
 </div>
@@ -610,19 +602,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="math,teaching" data-listing-date-sort="1474401154000" data-listing-file-modified-sort="1709503334754" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="661">
+<div class="quarto-post image-right" data-index="11" data-categories="math,teaching" data-listing-date-sort="1474401154000" data-listing-file-modified-sort="1710422819644" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="661">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 9: MATLAB</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 9: MATLAB
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math'); return false;">
 math
@@ -631,12 +623,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html" class="no-external">For today’s notebooks I got caught on a problem I anticipated in theory but failed to spot in practice for longer than I would like to admit.</a>
+For today’s notebooks I got caught on a problem I anticipated in theory but failed to spot in practice for longer than I would like to admit.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lecture-9-matlab/index.html">
 <div class="listing-date">
 Sep 20, 2016
 </div>
@@ -646,19 +640,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="computing,math,teaching" data-listing-date-sort="1474314282000" data-listing-file-modified-sort="1709503334738" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="395">
+<div class="quarto-post image-right" data-index="12" data-categories="computing,math,teaching" data-listing-date-sort="1474314282000" data-listing-file-modified-sort="1710422819643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="395">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 8: Gram-Schmidt
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -670,12 +664,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html" class="no-external">This lecture is about the modified Gram-Schmidt method and flop counting. The notebooks are here.</a>
+This lecture is about the modified Gram-Schmidt method and flop counting. The notebooks are here.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lecture-8-gram-schmidt/index.html">
 <div class="listing-date">
 Sep 19, 2016
 </div>
@@ -685,19 +681,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="teaching,computing" data-listing-date-sort="1474057678000" data-listing-file-modified-sort="1709503334751" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="569">
+<div class="quarto-post image-right" data-index="13" data-categories="teaching,computing" data-listing-date-sort="1474057678000" data-listing-file-modified-sort="1710426424011" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="564">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 6-7</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lectures 6-7
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
@@ -706,12 +702,14 @@ teaching
 computing
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html" class="no-external">Here are the Jupyter notebooks for Lecture 6 and Lecture 7. (I finally noticed that a Gist can hold more than one notebook…duh.)</a>
+Here are the Jupyter notebooks for Lecture 6 and Lecture 7. (I finally noticed that a Gist can hold more than one notebook…duh.)
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lectures-6-7/index.html">
 <div class="listing-date">
 Sep 16, 2016
 </div>
@@ -721,19 +719,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="computing,teaching" data-listing-date-sort="1473709628000" data-listing-file-modified-sort="1709503334753" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="322">
+<div class="quarto-post image-right" data-index="14" data-categories="computing,teaching" data-listing-date-sort="1473709628000" data-listing-file-modified-sort="1710422819643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="322">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia Lecture 5: More on the SVD</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia Lecture 5: More on the SVD
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -742,12 +740,14 @@ computing
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html" class="no-external">Notebooks are viewable for matlab and julia.</a>
+Notebooks are viewable for matlab and julia.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd/trefethen-bau-matlab-julia-lecture-5-more-on-the-svd.html">
 <div class="listing-date">
 Sep 12, 2016
 </div>
@@ -757,19 +757,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="computing,math,teaching" data-listing-date-sort="1473684667000" data-listing-file-modified-sort="1709503334746" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="284">
+<div class="quarto-post image-right" data-index="15" data-categories="computing,math,teaching" data-listing-date-sort="1473684667000" data-listing-file-modified-sort="1710422819643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="284">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 4: SVD</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 4: SVD
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -781,12 +781,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html" class="no-external">The notebooks: matlab and julia.</a>
+The notebooks: matlab and julia.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lecture-4-svd/index.html">
 <div class="listing-date">
 Sep 12, 2016
 </div>
@@ -796,19 +798,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="computing,math,teaching" data-listing-date-sort="1473276766000" data-listing-file-modified-sort="1709503334764" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="451">
+<div class="quarto-post image-right" data-index="16" data-categories="computing,math,teaching" data-listing-date-sort="1473276766000" data-listing-file-modified-sort="1710422819643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="451">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 3: Norms</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 3: Norms
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -820,12 +822,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html" class="no-external">Here are the MATLAB and julia notebooks.</a>
+Here are the MATLAB and julia notebooks.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lecture-3-norms/index.html">
 <div class="listing-date">
 Sep 7, 2016
 </div>
@@ -835,19 +839,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="computing,math,teaching" data-listing-date-sort="1472843574000" data-listing-file-modified-sort="1709503334752" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="266">
+<div class="quarto-post image-right" data-index="17" data-categories="computing,math,teaching" data-listing-date-sort="1472843574000" data-listing-file-modified-sort="1710422819643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="266">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html" class="no-external">Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 2</a>
+Trefethen &amp; Bau &amp; MATLAB &amp; Julia, Lecture 2
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -859,12 +863,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html" class="no-external">Here are the&nbsp;matlab&nbsp;and julia notebooks.</a>
+Here are the&nbsp;matlab&nbsp;and julia notebooks.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html" class="no-external">
+<a href="./post/trefethen-bau-matlab-julia-lecture-2/index.html">
 <div class="listing-date">
 Sep 2, 2016
 </div>
@@ -874,19 +880,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="computing,teaching" data-listing-date-sort="1472759768000" data-listing-file-modified-sort="1709503334766" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="474">
+<div class="quarto-post image-right" data-index="18" data-categories="computing,teaching" data-listing-date-sort="1472759768000" data-listing-file-modified-sort="1710422819642" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="474">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-lecture-1/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-lecture-1/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-lecture-1/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-lecture-1/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-lecture-1/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-lecture-1/index.html" class="no-external">Trefethen &amp; Bau, Lecture 1</a>
+Trefethen &amp; Bau, Lecture 1
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-lecture-1/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
@@ -895,12 +901,14 @@ computing
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-lecture-1/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-lecture-1/index.html" class="no-external">Have a look at the MATLAB and Julia versions of the notebooks for this lecture.</a>
+Have a look at the MATLAB and Julia versions of the notebooks for this lecture.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-lecture-1/index.html" class="no-external">
+<a href="./post/trefethen-bau-lecture-1/index.html">
 <div class="listing-date">
 Sep 1, 2016
 </div>
@@ -910,19 +918,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="math,computing,teaching" data-listing-date-sort="1472756225000" data-listing-file-modified-sort="1709503334753" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="419">
+<div class="quarto-post image-right" data-index="19" data-categories="math,computing,teaching" data-listing-date-sort="1472756225000" data-listing-file-modified-sort="1710422819645" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="419">
 <div class="thumbnail">
-<p><a href="./post/trefethen-bau-via-matlab-and-julia/index.html" class="no-external"></a></p><a href="./post/trefethen-bau-via-matlab-and-julia/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/trefethen-bau-via-matlab-and-julia/index.html" class="no-external"></a></p>
+<p><a href="./post/trefethen-bau-via-matlab-and-julia/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/trefethen-bau-via-matlab-and-julia/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/trefethen-bau-via-matlab-and-julia/index.html" class="no-external">Trefethen &amp; Bau, via MATLAB and Julia</a>
+Trefethen &amp; Bau, via MATLAB and Julia
 </h3>
 <div class="listing-subtitle">
-<a href="./post/trefethen-bau-via-matlab-and-julia/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math'); return false;">
 math
@@ -934,12 +942,14 @@ computing
 teaching
 </div>
 </div>
+<a href="./post/trefethen-bau-via-matlab-and-julia/index.html">
 <div class="listing-description">
-<a href="./post/trefethen-bau-via-matlab-and-julia/index.html" class="no-external">This semester I’m teaching MATH 612, which is numerical linear and nonlinear algebra for grad students. Linear algebra dominates the course, and for that&nbsp;I’m following&nbsp;the…</a>
+This semester I’m teaching MATH 612, which is numerical linear and nonlinear algebra for grad students. Linear algebra dominates the course, and for that&nbsp;I’m following&nbsp;the…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/trefethen-bau-via-matlab-and-julia/index.html" class="no-external">
+<a href="./post/trefethen-bau-via-matlab-and-julia/index.html">
 <div class="listing-date">
 Sep 1, 2016
 </div>
@@ -949,19 +959,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="math,society and culture" data-listing-date-sort="1438359100000" data-listing-file-modified-sort="1709503334759" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="101">
+<div class="quarto-post image-right" data-index="20" data-categories="math,society and culture" data-listing-date-sort="1438359100000" data-listing-file-modified-sort="1710422819645" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="101">
 <div class="thumbnail">
-<p><a href="./post/why-not-zoidberg/index.html" class="no-external"></a></p><a href="./post/why-not-zoidberg/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/why-not-zoidberg/index.html" class="no-external"></a></p>
+<p><a href="./post/why-not-zoidberg/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/why-not-zoidberg/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/why-not-zoidberg/index.html" class="no-external">Why not Zoidberg?</a>
+Why not Zoidberg?
 </h3>
 <div class="listing-subtitle">
-<a href="./post/why-not-zoidberg/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math'); return false;">
 math
@@ -970,12 +980,14 @@ math
 society and culture
 </div>
 </div>
+<a href="./post/why-not-zoidberg/index.html">
 <div class="listing-description">
-<a href="./post/why-not-zoidberg/index.html" class="no-external">Something fun for Friday?</a>
+Something fun for Friday?
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/why-not-zoidberg/index.html" class="no-external">
+<a href="./post/why-not-zoidberg/index.html">
 <div class="listing-date">
 Jul 31, 2015
 </div>
@@ -985,30 +997,32 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="computing" data-listing-date-sort="1438290891000" data-listing-file-modified-sort="1709503334742" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<div class="quarto-post image-right" data-index="21" data-categories="computing" data-listing-date-sort="1438290891000" data-listing-file-modified-sort="1710422819641" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
 <div class="thumbnail">
-<p><a href="./post/showall/index.html" class="no-external"></a></p><a href="./post/showall/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/showall/index.html" class="no-external"></a></p>
+<p><a href="./post/showall/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/showall/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/showall/index.html" class="no-external">showall</a>
+showall
 </h3>
 <div class="listing-subtitle">
-<a href="./post/showall/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computing'); return false;">
 computing
 </div>
 </div>
+<a href="./post/showall/index.html">
 <div class="listing-description">
-<a href="./post/showall/index.html" class="no-external">I just scratched a MATLAB itch. So many times I’ve seen—and experienced myself—people popping open figure windows in&nbsp;MATLAB, then trying to juggle them and move them around…</a>
+I just scratched a MATLAB itch. So many times I’ve seen—and experienced myself—people popping open figure windows in&nbsp;MATLAB, then trying to juggle them and move them around…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/showall/index.html" class="no-external">
+<a href="./post/showall/index.html">
 <div class="listing-date">
 Jul 30, 2015
 </div>
@@ -1018,19 +1032,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="academia,math,teaching" data-listing-date-sort="1438228800000" data-listing-file-modified-sort="1709503334764" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="202">
+<div class="quarto-post image-right" data-index="22" data-categories="academia,math,teaching" data-listing-date-sort="1438228800000" data-listing-file-modified-sort="1710422819639" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="202">
 <div class="thumbnail">
-<p><a href="./post/data-science-data-science/index.html" class="no-external"></a></p><a href="./post/data-science-data-science/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/data-science-data-science/index.html" class="no-external"></a></p>
+<p><a href="./post/data-science-data-science/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/data-science-data-science/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/data-science-data-science/index.html" class="no-external">Data science? Data science!</a>
+Data science? Data science!
 </h3>
 <div class="listing-subtitle">
-<a href="./post/data-science-data-science/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('academia'); return false;">
 academia
@@ -1042,12 +1056,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/data-science-data-science/index.html">
 <div class="listing-description">
-<a href="./post/data-science-data-science/index.html" class="no-external">I just received a copy of&nbsp;SIAM News&nbsp;on a dead tree. It features&nbsp;a piece&nbsp;by&nbsp;Chris Johnson&nbsp;and&nbsp;Hans de Sterck&nbsp;about “Data Science: What Is It and How Is It Taught?” As usual…</a>
+I just received a copy of&nbsp;SIAM News&nbsp;on a dead tree. It features&nbsp;a piece&nbsp;by&nbsp;Chris Johnson&nbsp;and&nbsp;Hans de Sterck&nbsp;about “Data Science: What Is It and How Is It Taught?” As usual…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/data-science-data-science/index.html" class="no-external">
+<a href="./post/data-science-data-science/index.html">
 <div class="listing-date">
 Jul 30, 2015
 </div>
@@ -1057,19 +1073,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="academia,math" data-listing-date-sort="1438142400000" data-listing-file-modified-sort="1709503334741" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
+<div class="quarto-post image-right" data-index="23" data-categories="academia,math" data-listing-date-sort="1438142400000" data-listing-file-modified-sort="1710422819640" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
 <div class="thumbnail">
-<p><a href="./post/length-of-papers/index.html" class="no-external"></a></p><a href="./post/length-of-papers/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/length-of-papers/index.html" class="no-external"></a></p>
+<p><a href="./post/length-of-papers/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/length-of-papers/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/length-of-papers/index.html" class="no-external">Length of papers</a>
+Length of papers
 </h3>
 <div class="listing-subtitle">
-<a href="./post/length-of-papers/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('academia'); return false;">
 academia
@@ -1078,12 +1094,14 @@ academia
 math
 </div>
 </div>
+<a href="./post/length-of-papers/index.html">
 <div class="listing-description">
-<a href="./post/length-of-papers/index.html" class="no-external">Nick Trefethen has&nbsp;posted&nbsp;a wonderful graph showing how the average length of papers published in several SIAM journals has doubled over the last 40 years.</a>
+Nick Trefethen has&nbsp;posted&nbsp;a wonderful graph showing how the average length of papers published in several SIAM journals has doubled over the last 40 years.
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/length-of-papers/index.html" class="no-external">
+<a href="./post/length-of-papers/index.html">
 <div class="listing-date">
 Jul 29, 2015
 </div>
@@ -1093,30 +1111,32 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="science" data-listing-date-sort="1437710400000" data-listing-file-modified-sort="1709503334761" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
+<div class="quarto-post image-right" data-index="24" data-categories="science" data-listing-date-sort="1437710400000" data-listing-file-modified-sort="1710422819641" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
 <div class="thumbnail">
-<p><a href="./post/quantum-weirdness/index.html" class="no-external"></a></p><a href="./post/quantum-weirdness/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/quantum-weirdness/index.html" class="no-external"></a></p>
+<p><a href="./post/quantum-weirdness/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/quantum-weirdness/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/quantum-weirdness/index.html" class="no-external">Quantum weirdness</a>
+Quantum weirdness
 </h3>
 <div class="listing-subtitle">
-<a href="./post/quantum-weirdness/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('science'); return false;">
 science
 </div>
 </div>
+<a href="./post/quantum-weirdness/index.html">
 <div class="listing-description">
-<a href="./post/quantum-weirdness/index.html" class="no-external">I’m a little late getting this news, but I’m fascinated by&nbsp;an experiment at Australian National University&nbsp;showing (once again) in a vivid&nbsp;way&nbsp;how strange the quantum…</a>
+I’m a little late getting this news, but I’m fascinated by&nbsp;an experiment at Australian National University&nbsp;showing (once again) in a vivid&nbsp;way&nbsp;how strange the quantum…
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/quantum-weirdness/index.html" class="no-external">
+<a href="./post/quantum-weirdness/index.html">
 <div class="listing-date">
 Jul 24, 2015
 </div>
@@ -1126,19 +1146,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="math,teaching" data-listing-date-sort="1437537600000" data-listing-file-modified-sort="1709503334755" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="112">
+<div class="quarto-post image-right" data-index="25" data-categories="math,teaching" data-listing-date-sort="1437537600000" data-listing-file-modified-sort="1710422819639" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="112">
 <div class="thumbnail">
-<p><a href="./post/a-retrospective-look-at-college-math/index.html" class="no-external"></a></p><a href="./post/a-retrospective-look-at-college-math/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/a-retrospective-look-at-college-math/index.html" class="no-external"></a></p>
+<p><a href="./post/a-retrospective-look-at-college-math/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/a-retrospective-look-at-college-math/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/a-retrospective-look-at-college-math/index.html" class="no-external">A retrospective look at college math</a>
+A retrospective look at college math
 </h3>
 <div class="listing-subtitle">
-<a href="./post/a-retrospective-look-at-college-math/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math'); return false;">
 math
@@ -1147,12 +1167,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/a-retrospective-look-at-college-math/index.html">
 <div class="listing-description">
-<a href="./post/a-retrospective-look-at-college-math/index.html" class="no-external">A former math undergrad reflects on what she wishes she had learned more about in college.</a>
+<p>A former math undergrad reflects on what she wishes she had learned more about in college.</p>
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/a-retrospective-look-at-college-math/index.html" class="no-external">
+<a href="./post/a-retrospective-look-at-college-math/index.html">
 <div class="listing-date">
 Jul 22, 2015
 </div>
@@ -1162,30 +1184,32 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="teaching" data-listing-date-sort="1437364800000" data-listing-file-modified-sort="1709503334744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="232">
+<div class="quarto-post image-right" data-index="26" data-categories="teaching" data-listing-date-sort="1437364800000" data-listing-file-modified-sort="1710422819640" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="232">
 <div class="thumbnail">
-<p><a href="./post/flipping-experiences/index.html" class="no-external"></a></p><a href="./post/flipping-experiences/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/flipping-experiences/index.html" class="no-external"></a></p>
+<p><a href="./post/flipping-experiences/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/flipping-experiences/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/flipping-experiences/index.html" class="no-external">Flipping experiences</a>
+Flipping experiences
 </h3>
 <div class="listing-subtitle">
-<a href="./post/flipping-experiences/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
+<a href="./post/flipping-experiences/index.html">
 <div class="listing-description">
-<a href="./post/flipping-experiences/index.html" class="no-external">Experiences with flipping the classroom in a numerical computation course.</a>
+<p>Experiences with flipping the classroom in a numerical computation course.</p>
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/flipping-experiences/index.html" class="no-external">
+<a href="./post/flipping-experiences/index.html">
 <div class="listing-date">
 Jul 20, 2015
 </div>
@@ -1195,30 +1219,32 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="teaching" data-listing-date-sort="1437105600000" data-listing-file-modified-sort="1709503334762" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="374">
+<div class="quarto-post image-right" data-index="27" data-categories="teaching" data-listing-date-sort="1437105600000" data-listing-file-modified-sort="1710422819641" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="374">
 <div class="thumbnail">
-<p><a href="./post/promotion-system/index.html" class="no-external"></a></p><a href="./post/promotion-system/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/promotion-system/index.html" class="no-external"></a></p>
+<p><a href="./post/promotion-system/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/promotion-system/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/promotion-system/index.html" class="no-external">Promotion system</a>
+Promotion system
 </h3>
 <div class="listing-subtitle">
-<a href="./post/promotion-system/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
+<a href="./post/promotion-system/index.html">
 <div class="listing-description">
-<a href="./post/promotion-system/index.html" class="no-external">Can mastery-based learning work in a college math course?</a>
+<p>Can mastery-based learning work in a college math course?</p>
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/promotion-system/index.html" class="no-external">
+<a href="./post/promotion-system/index.html">
 <div class="listing-date">
 Jul 17, 2015
 </div>
@@ -1228,19 +1254,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="math,research" data-listing-date-sort="1436846400000" data-listing-file-modified-sort="1709503334757" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
+<div class="quarto-post image-right" data-index="28" data-categories="math,research" data-listing-date-sort="1436846400000" data-listing-file-modified-sort="1710422819639" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
 <div class="thumbnail">
-<p><a href="./post/bio-breakfast/index.html" class="no-external"></a></p><a href="./post/bio-breakfast/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/bio-breakfast/index.html" class="no-external"></a></p>
+<p><a href="./post/bio-breakfast/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/bio-breakfast/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/bio-breakfast/index.html" class="no-external">Bio Breakfast</a>
+Bio Breakfast
 </h3>
 <div class="listing-subtitle">
-<a href="./post/bio-breakfast/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math'); return false;">
 math
@@ -1249,12 +1275,14 @@ math
 research
 </div>
 </div>
+<a href="./post/bio-breakfast/index.html">
 <div class="listing-description">
-<a href="./post/bio-breakfast/index.html" class="no-external">How to do better at teaching without driving everyone crazy. Maybe.</a>
+<p>How to do better at teaching without driving everyone crazy. Maybe.</p>
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/bio-breakfast/index.html" class="no-external">
+<a href="./post/bio-breakfast/index.html">
 <div class="listing-date">
 Jul 14, 2015
 </div>
@@ -1264,30 +1292,32 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="teaching" data-listing-date-sort="1436846400000" data-listing-file-modified-sort="1709503334762" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="392">
+<div class="quarto-post image-right" data-index="29" data-categories="teaching" data-listing-date-sort="1436846400000" data-listing-file-modified-sort="1710422819640" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="392">
 <div class="thumbnail">
-<p><a href="./post/grades-and-motivation/index.html" class="no-external"></a></p><a href="./post/grades-and-motivation/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/grades-and-motivation/index.html" class="no-external"></a></p>
+<p><a href="./post/grades-and-motivation/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/grades-and-motivation/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/grades-and-motivation/index.html" class="no-external">Grades and motivation</a>
+Grades and motivation
 </h3>
 <div class="listing-subtitle">
-<a href="./post/grades-and-motivation/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
 teaching
 </div>
 </div>
+<a href="./post/grades-and-motivation/index.html">
 <div class="listing-description">
-<a href="./post/grades-and-motivation/index.html" class="no-external">What even is a grade, anyway?</a>
+<p>What even is a grade, anyway?</p>
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/grades-and-motivation/index.html" class="no-external">
+<a href="./post/grades-and-motivation/index.html">
 <div class="listing-date">
 Jul 14, 2015
 </div>
@@ -1297,19 +1327,19 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-categories="math,teaching" data-listing-date-sort="1436760000000" data-listing-file-modified-sort="1709503334756" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="323">
+<div class="quarto-post image-right" data-index="30" data-categories="math,teaching" data-listing-date-sort="1436760000000" data-listing-file-modified-sort="1710422819640" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="323">
 <div class="thumbnail">
-<p><a href="./post/making-continuous-assessment-work/index.html" class="no-external"></a></p><a href="./post/making-continuous-assessment-work/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/making-continuous-assessment-work/index.html" class="no-external"></a></p>
+<p><a href="./post/making-continuous-assessment-work/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/making-continuous-assessment-work/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/making-continuous-assessment-work/index.html" class="no-external">Making continuous assessment work</a>
+Making continuous assessment work
 </h3>
 <div class="listing-subtitle">
-<a href="./post/making-continuous-assessment-work/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math'); return false;">
 math
@@ -1318,12 +1348,14 @@ math
 teaching
 </div>
 </div>
+<a href="./post/making-continuous-assessment-work/index.html">
 <div class="listing-description">
-<a href="./post/making-continuous-assessment-work/index.html" class="no-external">How to do better at teaching without driving everyone crazy. Maybe.</a>
+<p>How to do better at teaching without driving everyone crazy. Maybe.</p>
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/making-continuous-assessment-work/index.html" class="no-external">
+<a href="./post/making-continuous-assessment-work/index.html">
 <div class="listing-date">
 Jul 13, 2015
 </div>
@@ -1333,30 +1365,32 @@ Toby Driscoll
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="31" data-categories="math" data-listing-date-sort="1436414400000" data-listing-file-modified-sort="1709503334740" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
+<div class="quarto-post image-right" data-index="31" data-categories="math" data-listing-date-sort="1436414400000" data-listing-file-modified-sort="1710422819639" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
 <div class="thumbnail">
-<p><a href="./post/addiction/index.html" class="no-external"></a></p><a href="./post/addiction/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./post/addiction/index.html" class="no-external"></a></p>
+<p><a href="./post/addiction/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
 </div>
 <div class="body">
+<a href="./post/addiction/index.html">
 <h3 class="no-anchor listing-title">
-<a href="./post/addiction/index.html" class="no-external">Addiction</a>
+Addiction
 </h3>
 <div class="listing-subtitle">
-<a href="./post/addiction/index.html" class="no-external"></a>
+
 </div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math'); return false;">
 math
 </div>
 </div>
+<a href="./post/addiction/index.html">
 <div class="listing-description">
-<a href="./post/addiction/index.html" class="no-external">Kids say the darndest things.</a>
+<p>Kids say the darndest things.</p>
 </div>
+</a>
 </div>
 <div class="metadata">
-<a href="./post/addiction/index.html" class="no-external">
+<a href="./post/addiction/index.html">
 <div class="listing-date">
 Jul 9, 2015
 </div>
@@ -1646,28 +1680,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
+    if (id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
         }
         return container.innerHTML
       } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
         return note.innerHTML;
       }
     } else {
@@ -1676,15 +1697,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1726,29 +1739,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
       }
     }, function(instance) {
     });
@@ -1824,6 +1814,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     window.addEventListener(
       "resize",
       throttle(() => {
+        console.log("RESIZE");
         elRect = undefined;
         if (selectedAnnoteEl) {
           selectCodeLines(selectedAnnoteEl);

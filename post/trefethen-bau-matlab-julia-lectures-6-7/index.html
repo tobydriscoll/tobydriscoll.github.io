@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.339">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -84,13 +84,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
+  "limit": 20,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -99,7 +98,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -117,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
@@ -202,7 +200,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-
 <p>Here are the Jupyter notebooks for <a href="https://gist.github.com/tobydriscoll/fb438fc942a01e242cc08ee05385af17">Lecture 6</a> and <a href="https://gist.github.com/tobydriscoll/4d1c8856da0c718e1d99d8171e1babec">Lecture 7</a>. (I finally noticed that a Gist can hold more than one notebook…duh.)</p>
 <p>Not much happened in Lecture 6, but I got gobsmacked in Lecture 7. It happened when I tried to convert this boring MATLAB code for backward substitution.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">A</span> <span class="op">=</span> <span class="va">magic</span>(<span class="fl">9</span>)<span class="op">;</span>   <span class="va">b</span> <span class="op">=</span> (<span class="fl">1</span><span class="op">:</span><span class="fl">9</span>)<span class="op">';</span></span>
@@ -235,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    x[i] <span class="op">=</span> (z[i] <span class="op">-</span> R[i,i<span class="op">+</span><span class="fl">1</span><span class="op">:</span>m]<span class="op">*</span>x[i<span class="op">+</span><span class="fl">1</span><span class="op">:</span>m]) <span class="op">/</span> R[i,i];</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Feels very odd to me still, but okay.</p>
-<p>We are not out of the woods yet. This version still fails in the loop body, again vomiting opaque&nbsp;error messages. Remember how, <a href="[ref []{.quarto-shortcode__-param data-is-shortcode=&quot;1&quot; data-value=&quot;/post/2016-09-02-trefethen-bau-matlab-julia-lecture-2.md&quot; data-raw=&quot;&quot;/post/2016-09-02-trefethen-bau-matlab-julia-lecture-2.md&quot;&quot;}]{.quarto-shortcode__ data-is-shortcode=&quot;1&quot; data-raw=&quot;&quot;}">back in Lecture 2, I mentioned</a> that scalars and 1x1 matrices are different things? Inside the loop above, <code>z[i]</code> is a scalar and the product is a length-1 vector. But the subtraction works anyway, as <code>z[i]</code> is silently promoted to a 1-vector also. No, the problem comes with the assignment: you can’t assign a 1-vector to an element of an array of numbers.</p>
+<p>We are not out of the woods yet. This version still fails in the loop body, again vomiting opaque&nbsp;error messages. Remember how, <a href="../post/trefethen-bau-matlab-julia-lecture-2">back in Lecture 2, I mentioned</a> that scalars and 1x1 matrices are different things? Inside the loop above, <code>z[i]</code> is a scalar and the product is a length-1 vector. But the subtraction works anyway, as <code>z[i]</code> is silently promoted to a 1-vector also. No, the problem comes with the assignment: you can’t assign a 1-vector to an element of an array of numbers.</p>
 <p>There’s a very long (space and time) <a href="https://github.com/JuliaLang/julia/issues/4774#issuecomment-28430963">discussion</a> about this and related issues in Julia. Suffice it to say that what mathematicians do with scalars, vectors, matrices, and tensors isn’t rigorously consistent—or at least, there seem to be multiple, incompatible rigorous&nbsp;ways to use them.</p>
 <p>In this particular case I have found two unsatisfying workarounds. The idiom <code>x[i:i]</code> produces a Vector, not a scalar, so the assignment goes through. Or we can work on the other side of the assignment and pull out the scalar from the vector:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(z[i] <span class="op">-</span> R[i,i<span class="op">+</span><span class="fl">1</span><span class="op">:</span>m]<span class="op">*</span>x[i<span class="op">+</span><span class="fl">1</span><span class="op">:</span>m])[<span class="fl">1</span>] <span class="op">/</span> R[i,i]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -517,28 +514,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
+    if (id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
         }
         return container.innerHTML
       } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
         return note.innerHTML;
       }
     } else {
@@ -547,15 +531,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -597,29 +573,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
       }
     }, function(instance) {
     });
@@ -695,6 +648,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     window.addEventListener(
       "resize",
       throttle(() => {
+        console.log("RESIZE");
         elRect = undefined;
         if (selectedAnnoteEl) {
           selectCodeLines(selectedAnnoteEl);
