@@ -17,7 +17,7 @@ We've entered Part 3 of the book, which is on conditioning and stability matters
 
 
 
-Right off the top, in reproducing Figure 12.1, I ran right into the trap I worried about in [my last post]({{< ref "/post/2016-09-28-trefethen-bau-matlab-julia-lecture-11-least-squares.md" >}}) regarding polynomials in Julia. In MATLAB, the polynomial coefficients are just a plain vector. That makes perturbing them trivial:
+Right off the top, in reproducing Figure 12.1, I ran right into the trap I worried about in [my last post](../post/trefethen-bau-matlab-julia-lecture-11-least-squares) regarding polynomials in Julia. In MATLAB, the polynomial coefficients are just a plain vector. That makes perturbing them trivial:
 ```matlab
 p = poly([1,1,1,0.4,2.2]);    % polynomial with these roots
 q = p + 1e-9*randn(size(p));    % perturb its coefficients

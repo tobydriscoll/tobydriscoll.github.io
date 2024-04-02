@@ -19,7 +19,7 @@ I'm back to using gists--not thrilled with any of the mechanisms for sharing thi
 * [Lecture 34 (Arnoldi eigenvalues)](https://gist.github.com/tobydriscoll/63212a0c32c473daae5a81a3f6888476)
 
 
-These are remarkable mainly in that they have such striking similarity in both languages. Aside from square brackets and working around the [1x1/scalar distinction]({{< ref "/post/2016-09-02-trefethen-bau-matlab-julia-lecture-2.md">}}) in Julia, little differs besides the syntax of the `eigs` command. 
+These are remarkable mainly in that they have such striking similarity in both languages. Aside from square brackets and working around the [1x1/scalar distinction](../post/2016-09-02-trefethen-bau-matlab-julia-lecture-2) in Julia, little differs besides the syntax of the `eigs` command. 
 
 
 One frustration, though. I decided to try an interesting alternative to PyPlot in Julia, the [Plots package](https://juliaplots.github.io/). Actually Plots tries to be a generalization of and alternative route to using PyPlot/matplotlib. I decided to try the PlotlyJS backend instead, however. It makes lovely graphics with very responsive interaction. Since the rendering is in Javascript, I thought it would be perfectly portable, but you can't see the output in the gist above, even though it should be embedded in the notebook.
