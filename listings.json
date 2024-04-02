@@ -37,15 +37,6 @@
     ]
   },
   {
-    "listing": "/projects.html",
-    "items": [
-      "/project/chebfun/index.html",
-      "/project/drums/index.html",
-      "/project/matlabcentral/index.html",
-      "/project/sc-toolbox/index.html"
-    ]
-  },
-  {
     "listing": "/books.html",
     "items": [
       "/book/data-science-1/index.html",
@@ -53,6 +44,15 @@
       "/book/fnc/index.html",
       "/book/learning-matlab/index.html",
       "/book/schwarz-christoffel-mapping/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/project/chebfun/index.html",
+      "/project/drums/index.html",
+      "/project/matlabcentral/index.html",
+      "/project/sc-toolbox/index.html"
     ]
   }
 ]
