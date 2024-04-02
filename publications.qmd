@@ -7,7 +7,7 @@ You can also visit my [Zotero profile](https://www.zotero.org/tobydriscoll), my 
 ::: {.bibitems}
   
 &nbsp;
-: Driscoll, T. A., Nakatsukasa, Y., & Trefethen, L. N. (2024). AAA Rational Approximation on a Continuum. SIAM Journal on Scientific Computing, 46(2), A929–A952. https://doi.org/10.1137/23M1570508
+: Driscoll, T. A., Nakatsukasa, Y., & Trefethen, L. N. (2024). [AAA Rational Approximation on a Continuum.](_docs/driscoll-rational-approximation-continuum-2024.pdf) SIAM Journal on Scientific Computing, 46(2), A929–A952. https://doi.org/10.1137/23M1570508
 : Driscoll, T. A., Braun, R. J., Luke, R. A., Sinopoli, D., Phatak, A., Dorsch, J., Begley, C. G., & Awisi-Gyau, D. (2023). [Fitting ODE models of tear film breakup.](_docs/driscoll-fitting-ode-models-tear-2023.pdf) Modeling and Artificial Intelligence in Ophthalmology, 5(1), 1–36. [10.35119/maio.v5i1.128](https://doi.org/10.35119/maio.v5i1.128)
 : Taranchuk, M. J., Cummings, L. J., Driscoll, T. A., & Braun, R. J. (2023). [Extensional flow of a free film of nematic liquid crystal with moderate elasticity.](_docs/taranchuk-extensional-flow-free-2023.pdf) Physics of Fluids, 35(6), 062113. [10.1063/5.0151809](https://doi.org/10.1063/5.0151809)
 : Driscoll, T., Braun, R. J., & Begley, C. G. (2021). [Automatic detection of the cornea location in video captures of fluorescence.](_docs/driscoll-automatic-detection-2021.pdf) Modeling and Artificial Intelligence in Ophthalmology, 3(1), Article 1. [10.35119/maio.v3i1.113](https://doi.org/10.35119/maio.v3i1.113)
