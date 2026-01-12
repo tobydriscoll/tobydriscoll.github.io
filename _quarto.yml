@@ -6,11 +6,20 @@ website:
   site-url: https://tobydriscoll.net
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - publications.qmd
+      - href: cv.qmd
+        text: CV
+      - text: Publications
+        menu:
+          - href: "cv.html#sec-publications"
+            text: List
+          - books.qmd
+          - href: https://scholar.google.com/citations?user=V2c1tmAAAAAJ&hl=en
+            text: Google Scholar
+          - href: https://www.zotero.org/tobydriscoll
+            text: Zotero library
+          - href: https://arxiv.org/a/driscoll_t_1.html
+            text: arXiv page
       - projects.qmd
-      - books.qmd
       - blog.qmd
   open-graph: true
   favicon: _media/favicon.ico
@@ -18,9 +27,10 @@ website:
 format:
   html:
     theme: 
-      light: lumen
+      light: zephyr
       dark: darkly
-    css: styles.css
+    respect-user-color-scheme: true
+    # css: styles.css
     toc: true
 
 

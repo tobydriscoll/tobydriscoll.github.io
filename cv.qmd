@@ -1,0 +1,451 @@
+---
+title: "Curriculum Vitae for Tobin A. Driscoll"
+format:
+  html:
+    toc: true
+  pdf:
+    author: Tobin A. Driscoll
+    pdf-engine: weasyprint
+css: cv.css
+format-links: [pdf]
+---
+
+:::{.print-only .contact-block}
+tobydriscoll.net
+:::
+
+:::{.no-print} 
+{{< fa file-pdf >}} [PDF](cv.pdf)
+:::
+
+## Research interests
+* Numerical analysis & scientific computing
+* Applications of mathematics and computing to the life sciences and medicine
+* Scientific machine learning
+* Mathematical software in MATLAB and Julia
+
+## Professional experience
+
+### University of Delaware
+
+- Unidel Chaired Professor of Mathematical Sciences [2023–present]{.cvdate} 
+- Professor, Department of Mathematical Sciences [2010–present]{.cvdate} 
+- Director, Master of science in data science program [2023–2025]{.cvdate} 
+- Affiliated Faculty, Department of Biomedical Engineering [2010–present]{.cvdate} 
+- Associate Professor, Department of Mathematical Sciences [2004–2010]{.cvdate} 
+- Assistant Professor, Department of Mathematical Sciences [2000–2004]{.cvdate} 
+
+
+### University of Colorado at Boulder
+
+- Postdoctoral research fellow, Department of Applied Mathematics [1996–1999]{.cvdate}
+
+## Education
+
+### Ph.D. in Applied Mathematics 
+
+*Cornell University* [1991–1996]{.cvdate}
+
+- Dissertation: Domain decomposition methods for conformal mapping and eigenvalue problems
+- Advisor: Lloyd N. Trefethen
+
+### B.S. in Mathematics with honors, B.S. in Physics
+
+*Pennsylvania State University* [1987–1991]{.cvdate}
+	
+- Honors thesis title: Comparison of computational efficiency and sensitivity of several solution algorithms for the linear–quadratic optimal control problem
+- Advisor: John E. Dzielski
+
+## Honors and awards
+
+- Unidel Chaired Professorship, University of Delaware [2023]{.cvdate}
+- Outstanding Scholar Award, College of Arts & Sciences, University of Delaware [2014]{.cvdate} 
+- Winner, 100 Digit Challenge (SIAM) [2002]{.cvdate}
+- NSF VIGRE Postdoctoral Fellow, University of Colorado [1999–2000]{.cvdate}
+- NSF Mathematical Sciences Postdoctoral Research Fellow [1996–1999]{.cvdate}
+- SIAM Outstanding Paper Prize [1999]{.cvdate}
+- Runner-up, Richard C. DiPrima Dissertation Prize [1998]{.cvdate}
+- Second Prize, Leslie Fox Competition [1997]{.cvdate}
+- SIAM Student Paper Prize Honorable Mention [1995]{.cvdate}  
+- NSF Graduate Research Fellow [1991–1994]{.cvdate}
+- A. D. White Fellow (Cornell University graduate study) [1991–1994]{.cvdate}
+- Braddock Scholar (Penn State University undergraduate study) [1987–1991]{.cvdate}
+
+
+::: {.no-print}
+:::
+
+## Grants
+
+- R. J. Braun (PI), T. A. Driscoll (co-PI). Models for Tear Film Structure, Dynamics and Parameter Identification. NSF DMS-1909846, $375,000. [2019–2022]{.cvdate}
+- R. J. Braun (PI), T. A. Driscoll, and K. L. Maki (co-PIs). Collaborative Research: Tear Film Dynamics: Modeling, Blinking, and Computation. NSF DMS-1412085, $375,003. [2014–2017]{.cvdate}
+- M. McCulloch (PI), T. A. Driscoll, and G. Schleiniger (co-PIs). Data driven mathematical modeling of the hypoplastic left heart syndrome circulation. NIH Delaware INBRE III, $60,724. [2014–2016]{.cvdate}
+- T. A. Driscoll. Special support from The MathWorks, Inc. [2013–2015]{.cvdate}
+- M. McCulloch (PI), T. A. Driscoll, and G. Schleiniger (co-PIs). Computer simulation of the single ventricle anatomy and physiology explaining mechanisms for sudden cardiac death. NIH Delaware INBRE Grant, $44,182. [2013–2014]{.cvdate}
+- T. A. Driscoll (PI) with 5 other key personnel. Meeting the need in mathematics at the University of Delaware. U.S. Department of Education  Graduate Assistance in Areas of National Need, $527,700. [2012–2015]{.cvdate}
+- R. J. Braun (PI) and T. A. Driscoll (co-PI), Modeling tear film dynamics. NSF DMS-1022706, $444,000. [2010–2013]{.cvdate}
+- L. F. Rossi, T. Driscoll, and R. Luke (co-PIs), Strengthening mathematics instruction with automated algorithmic mastery activities. Center for Teaching Effectiveness (UD), $20,000. [2007]{.cvdate}
+- R. Braun (PI), L. P. Cook, and T. A. Driscoll (co-PIs), Modeling the blink cycle and lipid dynamics in the tear film. NSF DMS-0616483, $325,000. [2006–2009]{.cvdate}
+- H. B. White et al. (co-PIs), with T. A. Driscoll and others as senior personnel. Howard Hughes Medical Institute Undergraduate Science Education grant, $1,500,000. [2006–2010]{.cvdate}
+- R. Braun, T. A. Driscoll, P. Monk, L. F. Rossi (co-PIs). NSF Scientific Computing Research Environments for the Mathematical Sciences. NSF DMS-0322583, $68,460. [2003]{.cvdate}
+- University of Delaware International Travel Award [2003]{.cvdate}
+- T. A. Driscoll (PI). Novel fast and accurate methods for partial differential equations. NSF DMS-0104229, $88,407. [2001–2004]{.cvdate}
+- T. A. Driscoll (PI). Fast time stepping for the computational simulation of differential equations. University of Delaware Research Foundation, $21,042. [2001–2002]{.cvdate}
+- T. A. Driscoll (PI). NSF Mathematical Sciences Postdoctoral Research Fellowship (University of Colorado). NSF DMS-9627677, $75,000. [1996–1999]{.cvdate}
+
+## Scholarly works {#sec-publications}
+See also my [Google Scholar site](https://scholar.google.com/citations?user=V2c1tmAAAAAJ&hl=en). 
+
+### Books
+- T. A. Driscoll and R. J. Braun. *Fundamentals of Numerical Computation*,  [online edition](https://fncbook.com) in Julia, MATLAB, and Python [2025]{.cvdate}
+- T. A. Driscoll and R. J. Braun. *Fundamentals of Numerical Computation: Julia Edition*, SIAM [2022]{.cvdate} 
+- L. N. Trefethen, A. Birkisson, and T. A. Driscoll. *Exploring ODEs*, SIAM [2018]{.cvdate}
+- T. A. Driscoll and R. J. Braun. *Fundamentals of Numerical Computation*, SIAM [2017]{.cvdate}
+- T. A. Driscoll, N. Hale, and L. N. Trefethen, eds. *Chebfun Guide*, 1st edition. Oxford, UK [2014]{.cvdate}
+- T. A. Driscoll, *Learning MATLAB*, Society for Industrial and Applied Mathematics [2009]{.cvdate}
+- T. A. Driscoll and L. N. Trefethen. *Schwarz–Christoffel Mapping*, Cambridge University Press [2002]{.cvdate}
+ 
+### Book chapters
+- R. J. Braun, T. A. Driscoll, and C. G. Begley, “Mathematical Models of the Tear Film,” in *Ocular Fluid Dynamics: Anatomy, Physiology, Imaging Techniques, and Mathematical Modeling*, Springer-Birkhäuser, 2019.
+- T. A. Driscoll and B. Fornberg. Padé-based interpretation
+ and correction of the Gibbs phenomenon. In *Advances in the Gibbs Phenomenon*, ed. by A. Jerri, Sigma Sampling Publishing, Potsdam, NY, 2007. 
+-  T. A. Driscoll and L. N. Trefethen. Numerical construction of conformal maps. Appendix to *Fundamentals of Complex Analysis with Applications to Engineering, Science, and Mathematics*, 3rd edition, by E. D. Saff and A. D. Snider, Prentice Hall, 2002.
+
+### Preprints
+
+- Driscoll, Tobin A., and Yuxing Zhou. Greedy Thiele Continued-Fraction Approximation on Continuum Domains in the Complex Plane. [arXiv:2510.07295](https://doi.org/10.48550/arXiv.2510.072h95). Preprint, October 2025. 
+- Driscoll, Tobin A. RationalFunctionApproximation.Jl: Rational Approximation On Discrete and Continuous Domains. [arXiv:2512.06140](https://doi.org/10.48550/arXiv.2512.06140). Preprint, arXiv, December 2025. 
+- Chen, Q. and T. A. Driscoll and A. Roy. Operator learning for models of tear film breakup. Submitted to *Applied Numerical Mathematics*, 2025.
+
+### Refereed articles
+
+<!-- set list length in cv.css .pubs element -->
+::: {.pubs}
+- Chen, Q., Driscoll, T. A., and Braun, R. J. Evaporation-driven tear film thinning and breakup in two space dimensions. Journal of Engineering Mathematics 149, no. 1 (2024): 5. [10.1007/s10665-024-10407-6](https://doi.org/10.1007/s10665-024-10407-6).
+- Driscoll, T. A., Nakatsukasa, Y., and Trefethen, L. N. (2024). [AAA Rational Approximation on a Continuum.](_docs/driscoll-rational-approximation-continuum-2024.pdf) SIAM Journal on Scientific Computing, 46(2), A929–A952, 2024. [10.1137/23M1570508](https://doi.org/10.1137/23M1570508)
+- Driscoll, T. A., Braun, R. J., Luke, R. A., Sinopoli, D., Phatak, A., Dorsch, J., Begley, C. G., and Awisi-Gyau, D. (2023). [Fitting ODE models of tear film breakup.](_docs/driscoll-fitting-ode-models-tear-2023.pdf) Modeling and Artificial Intelligence in Ophthalmology, 5(1), 1–36. [10.35119/maio.v5i1.128](https://doi.org/10.35119/maio.v5i1.128)
+- Taranchuk, M. J., Cummings, L. J., Driscoll, T. A., and Braun, R. J. (2023). [Extensional flow of a free film of nematic liquid crystal with moderate elasticity.](_docs/taranchuk-extensional-flow-free-2023.pdf) Physics of Fluids, 35(6), 062113. [10.1063/5.0151809](https://doi.org/10.1063/5.0151809)
+- Driscoll, T., Braun, R. J., and Begley, C. G. (2021). [Automatic detection of the cornea location in video captures of fluorescence.](_docs/driscoll-automatic-detection-2021.pdf) Modeling and Artificial Intelligence in Ophthalmology, 3(1), Article 1. [10.35119/maio.v3i1.113](https://doi.org/10.35119/maio.v3i1.113)
+- Luke, R. A., Braun, R. J., Driscoll, T. A., Awisi-Gyau, D., and Begley, C. G. (2021). [Parameter Estimation for Mixed-Mechanism Tear Film Thinning.](_docs/luke-parameter-estimation-mixed-2021.pdf) Bulletin of Mathematical Biology, 83(5), 56. [10.1007/s11538-021-00871-x](https://doi.org/10.1007/s11538-021-00871-x)
+- Braun, R. J., Luke, R. A., Driscoll, T. A., and Begley, C. G. (2021). [Dynamics and mechanisms for tear breakup (TBU) on the ocular surface.](_docs/braun-dynamics-mechanisms-breakup-2021.pdf) Mathematical Biosciences and Engineering, 18(5), Article mbe-18-05-262. [10.3934/mbe.2021262](https://doi.org/10.3934/mbe.2021262)
+- Luke, R. A., Braun, R. J., Driscoll, T. A., Begley, C. G., and Awisi-Gyau, D. (2020). [Parameter Estimation for Evaporation-Driven Tear Film Thinning.](_docs/luke-parameter-estimation-evaporation-2020.pdf) Bulletin of Mathematical Biology, 82(6), 71. [10.1007/s11538-020-00745-8](https://doi.org/10.1007/s11538-020-00745-8)
+- Aiton, K. W., and Driscoll, T. A. (2020). [Preconditioned Nonlinear Iterations for Overlapping Chebyshev Discretizations with Independent Grids.](_docs/aiton-preconditioned-nonlinear-iterations-2020.pdf) SIAM Journal on Scientific Computing, 42(4), A2360–A2370. [10.1137/19m1242483](https://doi.org/10.1137/19m1242483)
+- Driscoll, T. (2019). ComplexRegions.jl: A Julia package for regions in the complex plane. Journal of Open Source Software, 4(44), 1811. [10.21105/joss.01811](https://doi.org/10.21105/joss.01811)
+- Aiton, K. W., and Driscoll, T. A. (2019). [An Adaptive Partition of Unity Method for Multivariate Chebyshev Polynomial Approximations.](_docs/aiton-adaptive-multivariate-2019.pdf) SIAM Journal on Scientific Computing, 41(5), A3230–A3245. [10.1137/18m1184904](https://doi.org/10.1137/18m1184904)
+- Maki, K. L., Henshaw, W. D., McManus, A., Braun, R. J., Chapp, D. M., and Driscoll, T. A. (2019). [A model for tear film dynamics during a realistic blink.](_docs/maki-model-tear-film-2019.pdf) Journal for Modeling in Ophthalmology, 3, 21–27. [10.35119/maio.v2i3.91](https://doi.org/10.35119/maio.v2i3.91)
+- Braun, R. J., Driscoll, T. A., Begley, C. G., King-Smith, P. E., and Siddique, J. I. (2018). [On tear film breakup (TBU): Dynamics and imaging.](_docs/braun-tear-film-breakup-2017.pdf) Mathematical Medicine and Biology, 35(2), 145–180. [10.1093/imammb/dqw023](https://doi.org/10.1093/imammb/dqw023)
+- Aiton, K. W., and Driscoll, T. A. (2018). [An adaptive partition of unity method for Chebyshev polynomial interpolation.](_docs/aiton-adaptive-partition-unity-2018.pdf) SIAM Journal on Scientific Computing, 40(1), A251–A265. [10.1137/17m112052x](https://doi.org/10.1137/17m112052x)
+- Driscoll, T. A., Braun, R. J., and Brosch, J. K. (2018). [Simulation of parabolic flow on an eye-shaped domain with moving boundary.](_docs/driscoll-simulation-parabolic-flow-2018.pdf) Journal of Engineering Mathematics, 111(1), 111–126. [10.1007/s10665-018-9957-7](https://doi.org/10.1007/s10665-018-9957-7)
+- Brosch, J. K., Wu, Z., Begley, C. G., Driscoll, T. A., and Braun, R. J. (2017). [Blink characterization using curve fitting and clustering algorithms.](_docs/brosch-blink-characterization-using-2017.pdf) Journal for Modeling in Ophthalmology, 1(3), 60–81. [10.35119/maio.v1i3.38](https://doi.org/10.35119/maio.v1i3.38)
+- Li, L., Braun, R. J., Driscoll, T. A., Henshaw, W. D., Banks, J. W., and King-Smith, P. E. (2016). [Computed tear film and osmolarity dynamics on an eye-shaped domain.](_docs/li-computed-tear-film-2015.pdf) Mathematical Medicine and Biology, 33(2), 123–157. [10.1093/imammb/dqv013](https://doi.org/10.1093/imammb/dqv013)
+- Driscoll, T. A., Süli, E., and Townsend, A. (2016). [New directions in numerical computation.](_docs/driscoll-new-directions-numerical-2016.pdf) Notices of the American Mathematical Society, 63(4), 398–400. [10.1090/noti1363](https://doi.org/10.1090/noti1363)
+- Driscoll, T. A., and Hale, N. (2015). [Rectangular spectral collocation.](_docs/driscoll-rectangular-spectral-collocation-2015.pdf) IMA Journal of Numerical Analysis, 36(1), 108–132. [10.1093/imanum/dru062](https://doi.org/10.1093/imanum/dru062)
+- Deng, Q., Braun, R., and Driscoll, T. A. (2014). [Heat transfer and tear film dynamics over multiple blink cycles.](_docs/deng-heat-transfer-tear-2014.pdf) Physics of Fluids, 26(7), 071901. [10.1063/1.4887341](https://doi.org/10.1063/1.4887341)
+- Driscoll, T. A., and Weideman, J. (2014). [Optimal domain splitting for interpolation by Chebyshev polynomials.](_docs/driscoll-optimal-domain-splitting-2014.pdf) SIAM Journal on Numerical Analysis, 52(4), 1913–1927. [10.1137/130919428](https://doi.org/10.1137/130919428)
+- Deng, Q., Braun, R. J., Driscoll, T. A., and King-Smith, P. E. (2013). [A model for the tear film and ocular surface temperature for partial blinks.](_docs/deng-model-tear-film-2013.pdf) Interfacial Phenomena and Heat Transfer, 1(4), 357–381. [10.1615/interfacphenomheattransfer.v1.i4.40](https://doi.org/10.1615/interfacphenomheattransfer.v1.i4.40)
+- Birkisson, A., and Driscoll, T. A. (2012). [Automatic Fréchet Differentiation for the Numerical Solution of Boundary-Value Problems.](_docs/birkisson-automatic-frechet-differentiation-2012-a.pdf) ACM Transactions on Mathematical Software, 38(4), 1–29. [10.1145/2331130.2331134](https://doi.org/10.1145/2331130.2331134)
+- Deng, Q., and Driscoll, T. A. (2012). [A Fast Treecode for Multiquadric Interpolation with Varying Shape Parameters.](_docs/deng-fast-treecode-multiquadric-2012-a.pdf) SIAM Journal on Scientific Computing, 34(2), A1126–A1140. [10.1137/110836225](https://doi.org/10.1137/110836225)
+- Braun, R., Usha, R., McFadden, G., Driscoll, T. A., Cook, L., and King-Smith, P. E. (2012). [Thin film dynamics on a prolate spheroid with application to the cornea.](_docs/braun-thin-film-dynamics-2012.pdf) Journal of Engineering Mathematics, 73(1), 121–138. [10.1007/s10665-011-9482-4](https://doi.org/10.1007/s10665-011-9482-4)
+- Reid, W. M., Driscoll, T. A., and Doty, M. F. (2012). [Forming delocalized intermediate states with realistic quantum dots.](_docs/reid-forming-delocalized-intermediate-2012-a.pdf) Journal of Applied Physics, 111, 056102. [10.1063/1.3691113](https://doi.org/10.1063/1.3691113)
+- Neves, A. M. A., Driscoll, T. A., Heryudono, A. R. H., Ferreira, A. J. M., Soares, C. M. M., and Jorge, R. M. N. (2011). [Adaptive Methods for Analysis of Composite Plates with Radial Basis Functions.](_docs/neves-adaptive-methods-analysis-2011-a.pdf) Mechanics of Advanced Materials and Structures, 18(6), 420–430. [10.1080/15376494.2010.528155](https://doi.org/10.1080/15376494.2010.528155)
+- Driscoll, T. A. (2010). [Automatic spectral collocation for integral, integro-differential, and integrally reformulated differential equations.](_docs/driscoll-automatic-spectral-collocation-2010-a.pdf) Journal of Computational Physics, 229(17), 5980–5998. [10.1016/j.jcp.2010.04.029](https://doi.org/10.1016/j.jcp.2010.04.029)
+- Heryudono, A. R. H., and Driscoll, T. A. (2010). [Radial Basis Function Interpolation on Irregular Domain through Conformal Transplantation.](_docs/heryudono-radial-basis-function-2010-a.pdf) Journal of Scientific Computing, 44(3), 286–300. [10.1007/s10915-010-9380-3](https://doi.org/10.1007/s10915-010-9380-3)
+- Usher, D. C., Driscoll, T. A., Dhurjati, P., Pelesko, J. A., Rossi, L. F., Schleiniger, G., Pusecker, K., and White, H. B. (2010). [A transformative model for undergraduate quantitative biology education.](_docs/usher-transformative-model-undergraduate-2010-a.pdf) CBE Life Sciences Education, 9(3), 181–188. [10.1187/cbe.10-03-0029](https://doi.org/10.1187/cbe.10-03-0029)
+- DeLillo, T. K., Driscoll, T. A., Elcrat, A. R., and Pfaltzgraff, J. A. (2008). [Radial and circular slit maps of unbounded multiply connected circle domains.](_docs/delillo-radial-circular-slit-2008-a.pdf) Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, 464(2095), 1719–1737. [10.1098/rspa.2008.0006](https://doi.org/10.1098/rspa.2008.0006)
+- Driscoll, T. A., Bornemann, F., and Trefethen, L. N. (2008). [The chebop system for automatic solution of differential equations.](_docs/driscoll-chebop-system-automatic-2008-a.pdf) BIT Numerical Mathematics, 48(4), 701–723. [10.1007/s10543-008-0198-4](https://doi.org/10.1007/s10543-008-0198-4)
+- Maki, K. L., Braun, R. J., Driscoll, T. A., and King-Smith, P. E. (2008). [An overset grid method for the study of reflex tearing.](_docs/maki-overset-grid-method-2008-a.pdf) Math. Med. Biol., 25, 187–214. [10.1093/imammb/dqn013](https://doi.org/10.1093/imammb/dqn013)
+- Driscoll, T. A., and Heryudono, A. R. H. (2007). [Adaptive residual subsampling methods for radial basis function interpolation and collocation problems.](_docs/driscoll-adaptive-residual-subsampling-2007-a.pdf) Computers and Mathematics with Applications, 53(6), 927–939. [10.1016/j.camwa.2006.06.005](https://doi.org/10.1016/j.camwa.2006.06.005)
+- Driscoll, T. A., and Maki, K. L. (2007). [Searching for Rare Growth Factors Using Multicanonical Monte Carlo Methods.](_docs/driscoll-searching-rare-growth-2007-a.pdf) SIAM Review, 49(4), 673–692. [10.1137/050637662](https://doi.org/10.1137/050637662)
+- Heryudono, A., Braun, R. J., Driscoll, T. A., Maki, K. L., Cook, Lp., and PE, K.-S. (2007). [Single-equation models for the tear film in a blink cycle: Realistic lid motion.](_docs/heryudono-singleequation-models-tear-2007.pdf) Mathematical Medicine and Biology-a Journal of The Ima, 24(4), 347–377. [10.1093/imammb/dqm004](https://doi.org/10.1093/imammb/dqm004)
+- DeLillo, T. K., Driscoll, T. A., Elcrat, A. R., and Pfaltzgraff, J. A. (2006). [Computation of Multiply Connected Schwarz-Christoffel Maps for Exterior Domains.](_docs/delillo-computation-multiply-connected-2006-a.pdf) Computational Methods and Function Theory, 6(2), 301–315. [10.1007/BF03321616](https://doi.org/10.1007/BF03321616)
+- Pelesko, J. A., and Driscoll, T. A. (2006). [The effect of the small-aspect-ratio approximation on canonical electrostatic MEMS models.](_docs/pelesko-effect-smallaspectratio-approximation-2005.pdf) Journal of Engineering Mathematics, 53(3–4), 239–252. [10.1007/s10665-005-9013-2](https://doi.org/10.1007/s10665-005-9013-2)
+- Platte, R. B., and Driscoll, T. A. (2006). [Eigenvalue stability of radial basis function discretizations for time-dependent problems.](_docs/platte-eigenvalue-stability-radial-2006-a.pdf) Computers and Mathematics with Applications, 51(8), 1251–1268. [10.1016/j.camwa.2006.04.007](https://doi.org/10.1016/j.camwa.2006.04.007)
+- Driscoll, T. A. (2005). [Algorithm 843: Improvements to the Schwarz-Christoffel toolbox for MATLAB.](_docs/driscoll-algorithm-843-improvements-2005.pdf) ACM Transactions on Mathematical Software (TOMS), 31(2), 239–251. [10.1145/1067967.1067971](https://doi.org/10.1145/1067967.1067971)
+- Platte, R. B., and Driscoll, T. A. (2005). [Polynomials and Potential Theory for Gaussian Radial Basis Function Interpolation.](_docs/platte-polynomials-potential-theory-2005-a.pdf) SIAM Journal on Numerical Analysis, 43(2), 750–766. [10.1137/040610143](https://doi.org/10.1137/040610143)
+- Collins, C. R., Driscoll, T. A., and Stephenson, K. (2004). [Curvature flow in conformal mapping.](_docs/collins-curvature-flow-conformal-2004.pdf) Computational Methods and Function Theory, 3(1), 325–347. [10.1007/bf03321041](https://doi.org/10.1007/bf03321041)
+- Driscoll, T. (2004). [Book Review: A Practical Guide to Boundary Element Methods With the Software Library BEMLIB.](_docs/driscoll-practical-guide-boundary-2004.pdf) By C. P OZRIKIDIS. CRC Press, 2002. Journal of Fluid Mechanics, 505, 378–379. [10.1017/s0022112004008201](https://doi.org/10.1017/s0022112004008201)
+- Platte, R. B., and Driscoll, T. A. (2004). [Computing eigenmodes of elliptic operators using radial basis functions.](_docs/platte-computing-eigenmodes-elliptic-2004-a.pdf) Computers and Mathematics with Applications, 48(3–4), 561–576. [10.1016/j.camwa.2003.08.007](https://doi.org/10.1016/j.camwa.2003.08.007)
+- Driscoll, T. A., and Gottlieb, H. (2003). [Isospectral shapes with Neumann and alternating boundary conditions.](_docs/driscoll-isospectral-shapes-neumann-2003-a.pdf) Physical Review E, 68(1), 016702. [10.1103/physreve.68.016702](https://doi.org/10.1103/physreve.68.016702)
+- Driscoll, T. A. (2002). [A Composite Runge–Kutta Method for the Spectral Solution of Semilinear PDEs.](_docs/driscoll-composite-runge-kutta-2002-a.pdf) Journal of Computational Physics, 182(2), 357–367. [10.1006/jcph.2002.7127](https://doi.org/10.1006/jcph.2002.7127)
+- Driscoll, T. A., and Fornberg, B. (2002). [Interpolation in the limit of increasingly flat radial basis functions.](_docs/driscoll-interpolation-limit-increasingly-2002-a.pdf) Computers and Mathematics with Applications, 43(3–5), 413–422. [10.1016/s0898-1221(01)00295-4](https://doi.org/10.1016/s0898-1221(01)00295-4)
+- Fornberg, B., Driscoll, T. A., Wright, G., and Charles, R. (2002). [Observations on the behavior of radial basis function approximations near boundaries.](_docs/fornberg-observations-behavior-radial-2002-a.pdf) Computers and Mathematics with Applications, 43(3–5), 473–490. [10.1016/s0898-1221(01)00299-1](https://doi.org/10.1016/s0898-1221(01)00299-1)
+- Driscoll, T. A., and Fornberg, B. (2001). [A Padé-based algorithm for overcoming the Gibbs phenomenon.](_docs/driscoll-padebased-algorithm-overcoming-2001-a.pdf) Numerical Algorithms, 26(1), 77–92. [10.1023/A:1016648530648](https://doi.org/10.1023/A:1016648530648)
+- Goano, M., Bertazzi, F., Caravelli, P., Ghione, G., and Driscoll, T. A. (2001). [A general conformal-mapping approach to the optimum electrode design of coplanar waveguides with arbitrary cross section.](_docs/goano-general-conformalmapping-approach-2001-a.pdf) IEEE Transactions on Microwave Theory and Techniques, 49(9), 1573–1580. [10.1109/22.942569](https://doi.org/10.1109/22.942569)
+- Driscoll, T. A., and Fornberg, B. (2000). [Note on nonsymmetric finite differences for Maxwell’s equations.](_docs/driscoll-note-nonsymmetric-finite-2000.pdf) Journal of Computational Physics, 161(2), 723–727. [10.1006/jcph.2000.6524](https://doi.org/10.1006/jcph.2000.6524)
+- Ghrist, M., Fornberg, B., and Driscoll, T. A. (2000). [Staggered time integrators for wave equations.](_docs/ghrist-staggered-time-integrators-2000-a.pdf) SIAM Journal on Numerical Analysis, 38(3), 718–741. [10.1137/s0036142999351777](https://doi.org/10.1137/s0036142999351777)
+- Driscoll, T. A. (1999). [A Nonoverlapping Domain Decomposition Method for Symm’s Equation for Conformal Mapping.](_docs/driscoll-nonoverlapping-domain-decomposition-1999-a.pdf) SIAM Journal on Numerical Analysis, 36(3), 922–934. [10.1137/S0036142997324162](https://doi.org/10.1137/S0036142997324162)
+- Driscoll, T. A. (1999). Computational Conformal Mapping (book review). SIAM Review, 41(4), 832–834.
+- Driscoll, T. A., and Fornberg, B. (1999). [Block pseudospectral methods for Maxwell’s equations II: Two-dimensional, discontinuous-coefficient case.](_docs/driscoll-block-pseudospectral-methods-1999.pdf) SIAM Journal on Scientific Computing, 21(3), 1146–1167. [10.1137/s106482759833320x](https://doi.org/10.1137/s106482759833320x)
+- Fornberg, B., and Driscoll, T. A. (1999). [A fast spectral algorithm for nonlinear wave equations with linear dispersion.](_docs/fornberg-fast-spectral-algorithm-1999-a.pdf) Journal of Computational Physics, 155(2), 456–467. [10.1006/jcph.1999.6351](https://doi.org/10.1006/jcph.1999.6351)
+- Driscoll, T. A., Toh, K.-C., and Trefethen, L. N. (1998). [From Potential Theory to Matrix Iterations in Six Steps.](_docs/driscoll-potential-theory-matrix-1998-a.pdf) SIAM Review, 40(3), 547–578. [10.1137/S0036144596305582](https://doi.org/10.1137/S0036144596305582)
+- Driscoll, T. A., and Fornberg, B. (1998). [A Block Pseudospectral Method for Maxwell’s Equations: I. One-Dimensional Case.](_docs/driscoll-block-pseudospectral-method-1998-a.pdf) J. Comput. Phys., 140, 1–19. [10.1006/jcph.1998.5883](https://doi.org/10.1006/jcph.1998.5883)
+- Driscoll, T. A., and Vavasis, S. A. (1998). [Numerical conformal mapping using cross-ratios and Delaunay triangulation.](_docs/driscoll-numerical-conformal-mapping-1998-a.pdf) SIAM Journal on Scientific Computing, 19(6), 1783–1803. [10.1137/s1064827596298580](https://doi.org/10.1137/s1064827596298580)
+- Driscoll, T. A. (1997). [Eigenmodes of Isospectral Drums.](_docs/driscoll-eigenmodes-isospectral-drums-1997-a.pdf) SIAM Review, 39(1), 1–17. [10.1137/S0036144595285069](https://doi.org/10.1137/S0036144595285069)
+- Driscoll, T. A., and Trefethen, L. N. (1996). [Pseudospectra for the wave equation with an absorbing boundary.](_docs/driscoll-pseudospectra-wave-equation-1996-a.pdf) Journal of Computational and Applied Mathematics, 69(1), 125–142. [10.1016/0377-0427(95)00021-6](https://doi.org/10.1016/0377-0427(95)00021-6)
+- Driscoll, T. A. (1996). [Algorithm 756: A MATLAB toolbox for Schwarz-Christoffel mapping.](_docs/driscoll-algorithm-756-matlab-1996.pdf) ACM Transactions on Mathematical Software (TOMS), 22(2), 168–186. [10.1145/229473.229475](https://doi.org/10.1145/229473.229475)
+- Baggett, J. S., Driscoll, T. A., and Trefethen, L. N. (1995). [A mostly linear model of transition to turbulence.](_docs/baggett-mostly-linear-model-1995.pdf) Physics of Fluids, 7(4), 833–838. [10.1063/1.868606](https://doi.org/10.1063/1.868606)
+- Dzielski, J. E., and Driscoll, T. A. (1993). Error bound on the solution of a linear differential equation in Chebyshev series. International Journal of Systems Science, 24(7), 1317–1327. [10.1080/00207729308949562](https://doi.org/10.1080/00207729308949562)
+- Trefethen, L. N., Trefethen, A. E., Reddy, S. C., and Driscoll, T. A. (1993). Hydrodynamic stability without eigenvalues. Science, 261(5121), 578–584. [10.1126/science.261.5121.578](https://doi.org/10.1126/science.261.5121.578)
+
+:::
+
+### Refereed proceedings and posters
+
+- R. J. Braun, T. Driscoll, C. Begley, P. Situ, A. Tichenor, and R. Luke, “Tear Breakup (TBU) Analysis with Fluorescence (FL) and Thermal (TH) imaging,” Investigative Ophthalmology & Visual Science, vol. 64, no. 8, pp. 186–186, Jun. 2023.
+- R. J. Braun, T. A. Driscoll et al., “Data and Analysis from Tear Breakup (TBU) in Normal Subjects,” Investigative Ophthalmology & Visual Science, vol. 63, no. 7, pp. 3950-A0230, Jun. 2022.
+- R. A. Luke et al., “Fitting Simplified Models to Machine Learning-Identified Tear Film Breakup,” in Investigative Ophthalmology & Visual Science, Jun. 2021, vol. 62, p. 1315.
+- R. J. Braun, L. Zhong, T. A. Driscoll, C. G. Begley, D. Antwi, P. E. King-Smith. Models for Tear Break Up Dynamics and Imaging. 7th European Conference on Computational Fluid Dynamics, 2018.
+- Joseph Brosch, T. A. Driscoll, Richard Braun. Simulation of Thin Film Equations on an Eye-Shaped Domain with Moving Boundary. APS March Meeting Abstracts, 2016.
+- Lan Zhong, C. F. Ketelaar, R. J. Braun, T. A. Driscoll, P. E. King-Smith, C. G. Begley. Mathematical Modeling of Glob-Driven Tear Film Breakup. Investigative Ophthalmology & Visual Science, 2016.
+- L. Zhong, C. F. Ketelaar, R. J. Braun, T. A. Driscoll, P. E. King-Smith, and C. G. Begley. A Model Problem for Blob-Driven Tear Film Breakup (TBU). Bull. Amer. Physical Soc. 60: 68th Annual Meeting of the APS Division of Fluid Dynamics, Boston, 2015.
+- M. Stapf, R. J. Braun, C. G. Begley, T. A. Driscoll, and P. E. King-Smith. Modeling Tear Film Evaporation and Breakup with Duplex Films. Bull. Amer. Physical Soc. 60: 68th Annual Meeting of the APS Division of Fluid Dynamics Boston, 2015.
+- R. J. Braun, L. Li, W. Henshaw, T. A. Driscoll, and P. E. King-Smith. Solute Dynamics and Imaging in the Tear Film on an Eye-shaped Domain, Bull. Amer. Physical Soc. 60: 68th Annual Meeting of the APS Division of Fluid Dynamics, Boston, MA, 2015.
+- C. Ketelaar, L. Zhong, R. J. Braun, T. A. Driscoll, P. E. King-Smith, and C. G. Begley. Tear Film Dynamics Around a Rigid Model Blob, Bull. Amer. Physical Soc. 60: 68th Annual Meeting of the APS Division of Fluid Dynamics, Boston, 2015.
+- M. McCulloch, G. Schleiniger, L. Chen, S. Gidding, and T. A. Driscoll. Data driven mathematical modeling of the single ventricle anatomy and physiology. Highlighted Poster (refereed), NISBRE IDeA Conference, 2014. 
+- L. N. Trefethen and T. A. Driscoll. Schwarz--Christoffel mapping in the computer era. Proceedings of the International Congress of Mathematicians, Vol. III (Berlin, 1998). *Doc. Math.*  1998, Extra Vol. III, 533--542 (electronic).
+- G. Wojcik, B. Fornberg, R. Waag, J. Mould, T. A. Driscoll, and L. Nikodym. Pseudospectral methods for large-scale bioacoustic models. Proceedings of the 1997 IEEE Ultrasonics Symposium.
+
+
+### Software
+
+- T. A. Driscoll. [RationalFunctionApproximation.jl](https://github.com/complexvariables/RationalFunctionApproximation.jl). Approximation by rational functions on complex domains in Julia. 
+- T. A. Driscoll. [ComplexRegions.jl](https://github.com/complexvariables/ComplexRegions.jl). Complex regions and paths in Julia. 
+- L. N. Trefethen and others, [Chebfun](http://www.chebfun.org). (Major Driscoll contributions noted for the releases below.)
+	* 2014: Version 5.0 (with many collaborators): Design and rewrite of software for object-oriented modularity. 
+    * 2011: Version 4.0 (with N. Hale): Rectangular formulations for robust ODE systems
+	* 2009: Version 3.0 (with A. Birkisson): Automatic differentiation and solution for nonlinear operators
+	* 2008: Version 2.0 (with F. Bornemann):  Chebop, for automatic solutions of differential equations (BVP, eigenvalue, PDE)
+- T. A. Driscoll. [Schwarz--Christoffel Toolbox for MATLAB](http://github.com/tobydriscoll/sc-toolbox)
+	* 2002: Module for solving Laplace's equation with piecewise constant boundary conditions.
+	* 2000: Object-oriented interface for polygons and maps.
+	* 1996: Inclusion of CRDT algorithm for elongated regions.
+	* 1994: Initial release.
+* See also [my GitHub page](https://github.com/tobydriscoll).
+
+
+### Presentations
+- "Computational rational approximation of functions." Plenary speaker, Annual meeting of the Australian Mathematical Society, La Trobe University, Australia. [2025]{.cvdate}
+- "Why your calculator is (slightly) lying—and why that’s OK." Public lecture, Annual meeting of the Australian Mathematical Society, La Trobe University, Australia. [2025]{.cvdate}
+- "A software package for rational approximation." Invited talk at Banff International Research Station, Banff, Alberta. [2025]{.cvdate}
+- "Numerical rational approximation in Julia, MATLAB, and Python." Invited seminar at Harvard University. [2025]{.cvdate}
+- "RationalFunctionApproximation.jl." JuliaCon 2025 contributed talk, Pittsburgh, PA. [2025]{.cvdate}
+- "Data-driven modeling and simulation of the human tear film." Delaware Math Modeling Camp (for high-school students). [2025]{.cvdate}
+- "Modeling and simulation of the human tear film." Colloquium at Temple University, Philadelphia, PA. [2024]{.cvdate}
+- "Data-driven modeling and simulation of the human tear film." Delaware Math Modeling Camp (for high-school students). [2024]{.cvdate}
+- "The AAA algorithm in the complex plane." Plenary speaker, Numerical Analysis in the 21st Century, University of Oxford. [2023]{.cvdate}
+- "Data-driven discovery of dynamics." Delaware Data Science Symposium, University of Delaware. [2023]{.cvdate}
+- "Putting course notes online." Seminar, University of Delaware. [2023]{.cvdate}
+- "Data-driven modeling and simulation of the human tear film." Colloquium, Michigan Technological University, Houghton, MI. [2023]{.cvdate}
+- "AAA in the complex plane." Invited seminar for the Complex Analysis Video Seminar (CAvid) [2023]{.cvdate}
+- "Analysis of tear-film breakup using fluorescence video recordings." Colloquium at Appalachian State University. [2022]{.cvdate}
+- "Detection of tear film breakup using Julia." JuliaCon 2021 contributed talk. [2021]{.cvdate}
+- "Simulation of tear film dynamics with blinking." SIAM Annual Meeting, online. [2020]{.cvdate}
+- "Preconditioning nonlinear equations with domain decomposition." AMS Eastern Sectional Meeting, University of Delaware. [2018]{.cvdate}
+- "Exploring differential equations using Chebfun." SIAM Annual Meeting Minisymposium, Portland, OR. [2018]{.cvdate}
+- "Dynamics on a model blinking eye-shaped domain." SIAM Annual Meeting Minisymposium, Portland, OR. [2018]{.cvdate}
+- "Mathematical and computational modeling of the tear film." Center for Bioinformatics & Computational Biology Seminar, University of Delaware. [2017]{.cvdate}
+- "Dynamics on a model blinking eye-shaped domain." SIAM Annual Meeting Minisymposium, Boston, [2016]{.cvdate}
+- "Data-driven systemic modeling of infant hypoplastic left heart syndrome." Center for Cardiovascular Health Symposium, University of Delaware. [2015]{.cvdate}
+- "Flipping the classroom for numerical computation." MathWorks Research Summit, Natick, MA. [2015]{.cvdate}
+- "Automatic multivariate approximation." SIAM Computational Science and Engineering Conference Minisymposium, Salt Lake City, AZ. [2015]{.cvdate}
+- "An open-source software project for numerical conformal mapping." Invited talk at the BIRS Workshop on Modern Applications of Complex Variables, Banff, Canada. [2015]{.cvdate}
+- "New directions in spectral methods." Numerical Analysis Seminar, Cornell University. [2014]{.cvdate}
+- "Optimal splitting in spectral collocation." Numerical Analysis Group Seminar, Universtiy of Oxford. [2013]{.cvdate}
+- "Numerical computing with functions." Colloquium, Wichita State University. [2013]{.cvdate}
+- "Reflections on flipping a math classroom." Summer Faculty Institute, University of Delaware. [2013]{.cvdate}
+- "Optimal splitting in spectral collocation." Seminar, Arizona State University, Tempe, AZ. [2013]{.cvdate}
+- "Numerical computing with functions." Colloquium, Temple University, Philadelphia, PA. [2012]{.cvdate}
+- "Chebfun beyond the ordinary (DE)," Chebfun and Beyond Workshop, University of Oxford. [2012]{.cvdate}
+- "Spectral deferred correction for time-dependent PDEs in Chebfun," SIAM Annual Meeting minisymposium, Minneapolis [2012]{.cvdate}
+- "Chebfun for PDE," [Eigenvalues/singular values and fast PDE algorithms: acceleration, conditioning, and stability](http://www.birs.ca/events/2012/5-day-workshops/12w5021), Banff International Research Station, Banff, Alberta. [2012]{.cvdate}
+- "Optimal splitting in spectral collocation," Del-Mar Numerical Analysis Day, University of Delaware. [2012]{.cvdate}
+- "Differential equations in Chebfun." Seventh International Congress on Industrial and Applied Mathematics minisymposium, Vancouver, BC. [2011]{.cvdate} 
+- "Rectangular projections for reliable spectral collocation," Seventh International Congress on Industrial and Applied Mathematics minisymposium, Vancouver, BC. [2011]{.cvdate}
+- "Chebfun: A software system for interacting with functions," NSF-CBMS Conference on Radial Basis Functions, Dartmouth, MA. [2011]{.cvdate}
+- "Approximation Theory, Spectral Methods, and Chebfun" (with L. N. Trefethen), Fifth annual Dobbiaco Summer School, Dobbiaco, Italy. [2011]{.cvdate}
+- "Automatic Fréchet differentiation for the spectral solution of boundary-value problems," SIAM Annual Meeting minisymposium, Pittsburgh, PA. [2010]{.cvdate}
+- "Automatic solution of differential equations in the Chebfun system," Annual Meeting of the Canadian Applied and Industrial Mathematics Society, University of Western Ontario. [2009]{.cvdate} 
+- "Automatic solution of differential equations in the Chebfun system," SIAM Southeastern-Atlantic Section Conference, University of South Carolina, [2009]{.cvdate} 
+- "Automatic solution of differential equations in the Chebfun system," Seminar at the Courant Institute, [2009]{.cvdate}
+- "Solving continuous differential equations numerically: Chebfun and chebop."
+SIAM Annual Meeting, San Diego. [2008]{.cvdate} 
+- "Least squares methods for conformal mapping and boundary value problems." SIAM Annual Meeting, San Diego, CA. [2008]{.cvdate}
+- "Solving continuous differential equations numerically: Chebfun and chebop."
+Seminar at the University of Manchester, Manchester, UK. [2008]{.cvdate}
+- "Solving continuous differential equations numerically: Chebfun and chebop."
+Numerical Analysis Group Seminar, University of Oxford, [2008]{.cvdate}
+- "Solving continuous differential equations numerically: Chebfun and chebop." Seminar at the University of Dundee, Dundee, UK. [2008]{.cvdate}
+- "Modeling and simulation of human tear film dynamics," Colloquium, SUNY Buffalo. [2007]{.cvdate}
+- "Detection and approximation of jumps using complex-variable techniques." 7th International Conference on Spectral and High-Order Methods (ICOSAHOM) minisymposium, Beijing, China. [2007]{.cvdate} 
+- "Spectral least-squares for conformal mapping and potential theory." Computational and Conformal Geometry Workshop, SUNY Stony Brook. [2007]{.cvdate}
+- "Radial basis function methods for meshless PDE computation," Seminar, New Jersey Institute of Technology. [2007]{.cvdate} 
+- "Radial basis function methods for meshless PDE computation," Seminar at the Oxford University Computing Laboratory. [2007]{.cvdate} 
+- "Conformal mapping 2.0," Colloquium, Dartmouth College. [2006]{.cvdate}
+- "Developing a computational framework for conformal mapping," SIAM Annual Meeting, Boston. [2006]{.cvdate}
+- "Optimal node placement for Gaussian radial basis function interpolation," SIAM Annual Meeting, Boston. [2006]{.cvdate}
+- "Optimal node placement for Gaussian radial basis function interpolation," Seminar, Tufts University. [2006]{.cvdate}
+- "SVD-based importance sampling for finding rare events in noisy optical transmission," Rice University. [2004]{.cvdate}
+- "SVD-based importance sampling for an optics-based dynamical system," SIAM Nonlinear Waves and Coherent Structures, University of Central Florida. [2004]{.cvdate}
+- "Schwarz--Christoffel maps to surfaces in space," University of Maryland, Baltimore County. [2004]{.cvdate}
+- "High-order time stepping methods for electromagnetics," Computational Electromagnetics workshop, Math. Forschungsinstitut Oberwolfach. [2004]{.cvdate} 
+- "Solution of Laplace's equation by conformal mapping." Oxford University Computing Laboratory. [2003]{.cvdate}
+- "The EigTool system for exploring matrix eigenmode problems," International Congress on Industrial and Applied Mathematics minisymposium, Sydney, Australia, [2003]{.cvdate}
+- "Numerical conformal mapping in 2003: A survey," International Congress on Industrial and Applied Mathematics minisymposium, Sydney, Australia. [2003]{.cvdate}
+- "Overdetermined formulations for eigenmode problems," International Congress on Industrial and Applied Mathematics minisymposium, Sydney, Australia. [2003]{.cvdate}
+- "Directed random walks and importance sampling for noisy optical communications," IMACS Conference on Nonlinear Evolution Equations and Wave Phenomena, [2003]{.cvdate}
+- "Schwarz–Christoffel mapping in MATLAB." European Microwave Week, Milan, Italy. [2002]{.cvdate} 
+- "Use of the SVD for finding rare events in noisy optical communications." SIAM Annual Meeting [2002]{.cvdate}
+- "Schwarz–Christoffel conformal mapping." University of Delaware. [2002]{.cvdate}
+- "Significant perturbations of NLS from SVD analysis," Northwestern University. [2002]{.cvdate}
+- "Significant perturbations of NLS from SVD analysis," University of Maryland, Baltimore County. [2001]{.cvdate}
+- "Schwarz–Christoffel conformal mapping," Plenary speaker at Computational Methods and Function Theory, University of Aveiro, Portugal. [2001]{.cvdate}
+- "Fast time stepping methods for semilinear evolution equations," Northwestern University. [2001]{.cvdate}
+- "Wavenumber-dependent time stepping methods for semilinear evolution equations," IMACS Conference on Nonlinear Waves minisymposium, University of Georgia, Athens, GA. [2001]{.cvdate}
+- "Radial basis functions for the simulation of PDEs." [2000]{.cvdate}
+  * Courant Institute
+  * University of Delaware
+  * Brown University
+- "High-order space and time methods for propagation problems." [2000]{.cvdate}
+  * University of California--Santa Barbara
+  * University of Michigan
+  * University of Delaware
+- "High-order space and time methods for propagation problems," Georgia Institute of Technology. [1999]{.cvdate}
+- "An efficient spectral method for the solution of nonlinear wave equations." Dundee Numerical Analysis Conference. [1999]{.cvdate}
+- "An efficient spectral method for the solution of nonlinear wave equations." Colorado Days at Los Alamos National Laboratory. [1999]{.cvdate}
+- "Staggered time integrators for wave equations," Oxford University Computing Laboratory. [1999]{.cvdate}
+- "Block pseudospectral methods for Maxwell's equations in inhomogeneous media." [1998]{.cvdate}
+  * SIAM Annual Meeting
+  * SIAM Conference on Wave Propagation
+  * Los Alamos Days at Colorado
+- "Spectrally accurate summation of Fourier series for functions with jump discontinuities." University of Colorado, Boulder. [1998]{.cvdate}
+- "Block pseudospectral methods for Maxwell's equations in inhomogeneous media," Oak Ridge National Laboratory seminar. [1998]{.cvdate}
+- "Schwarz–Christoffel mapping in MATLAB," Seminar at the University of Tennessee, Knoxville. [1998]{.cvdate}
+- "Uses of the Berenger PML with psuedospectral methods for Maxwell's equations." Poster at IUTAM: Computational Methods for Unbounded Domains, Boulder, CO. [1997]{.cvdate}
+- "Numerical conformal mapping using cross-ratios and Delaunay triangulation."
+Computational Methods and Function Theory. [1997]{.cvdate}
+- "Numerical conformal mapping using cross-ratios and Delaunay triangulation." ISAAC Conference, University of Delaware. [1997]{.cvdate}
+- "Numerical conformal mapping using cross-ratios and Delaunay triangulation." Lesile Fox Prize Competition, University of Dundee. [1997]{.cvdate}
+- "Eigenmodes of isospectral drums." [1997]{.cvdate} 
+  * Colorado State University
+  * Colorado School of Mines
+  * University of Colorado, Denver
+  * MIT
+- "Numerical conformal mapping using cross-ratios and Delaunay triangulation," University of Colorado, Boulder, CO. [1996]{.cvdate}
+- "Schwarz–Christoffel mapping in MATLAB." [1996]{.cvdate}
+  * Wichita State University
+  * University of Colorado
+- "Eigenmodes of isospectral drums." [1995]{.cvdate}
+  * MATLAB conference, Natick, MA
+  * SIAM Annual Meeting
+  * ICOSAHOM
+  * Cornell University
+- "Conformal mapping and the convergence of Krylov iterations." Colorado Conference on Iterative Methods, Breckenridge, CO. [1994]{.cvdate}
+- "Schwarz–Christoffel mapping in MATLAB." [1994]{.cvdate}
+  * Universität Karlsruhe
+  * ETH, Zürich
+- "Pseudospectra of the wave operator with an absorbing boundar." SIAM Annual Meeting contributed talk. [1993]{.cvdate}
+- "Schwarz–Christoffel mapping in MATLAB." Cornell Numerical Analysis Day. [1993]{.cvdate}
+
+### Other works
+
+- T. A. Driscoll. Review of *Elements of Scientific Computing*, by Tveito, Langtangen, Nielsen, and Cai. *SIAM Review* 53, 807--808, 2011.
+- M. Hassner, D. V. Leykin, and T. A. Driscoll. An analytic model of MR/GMR head sensitivity function. IBM Research Report RJ 10167, 1999.
+- T. A. Driscoll. Review of *Computational Conformal Mapping*, by P. K. Kythe. *SIAM Review* 41 (1999), 832--834.
+- T. A. Driscoll. Uses of the Berenger PML in pseudospectral methods for Maxwell's equations. Proceedings of the 1997 IUTAM Symposium on Computational Methods for Unbounded Domains, T. L. Geers, ed.
+- T. A. Driscoll. *Domain Decomposition Methods for Conformal Mapping and Eigenvalue Problems.* Ph.D. thesis, Center for Applied Mathematics, Cornell University, 1996.
+- T. A. Driscoll and B. Land. Vibrations of isospectral drums. Computer animation video produced at the Cornell Theory Center, 1995.
+- T. A. Driscoll. Schwarz--Christoffel Toolbox user's guide. Cornell Computer Science Technical Report TR 94-1422, 1994.
+
+## Teaching
+
+### Graduate students supervised
+- Yuxing Zhou, Ph. D. in progress
+- Arnab Roy, Ph. D. candidate
+- Qinying Chen, Ph. D. expected 2026
+- Kevin Aiton, Ph.D., 2019
+- Shawn Abernethy, M.S. with thesis, 2013
+- Quan Deng, Ph.D., 2013
+- Alfa Heryudono, Ph.D., 2008
+- Rodrigo Platte, Ph.D., 2005
+
+### Philosophy
+While I enjoy lecturing, I no longer believe it should be the only or even primary way of teaching most math classes. The marginal benefits of a live lecture over a recorded one are overshadowed by supervised active learning, where the instructor shares expertise with students as they wrestle with the material themselves. I use techniques such as problem-based learning, laboratory exploration, personal response systems, and flipping the classroom to create active learning opportunities. In addition, I believe mathematics needs to embrace teaching computation throughout the curriculum, rather than quarantining it into a few courses or lab sections. 
+
+### Undergraduate courses
+- Introduction to data science (freshman/sophomore level)
+- Calculus A,B,C (including special section of Calculus A for life sciences majors)
+- Honors Calculus B
+- Linear algebra (math and engineering majors)
+- ODEs (math and engineering majors)
+- PDEs (math and engineering majors)
+- Computational mathematics (two-semester sequence)
+- Honors computational mathematics
+- Complex analysis
+
+### Graduate courses
+- Numerical linear algebra and nonlinear equations
+- Numerical ODEs/PDEs
+- Spectral/high-order methods for PDEs
+- Radial basis functions
+
+
+## Service activities
+
+### Department of Mathematical Sciences
+
+- Director of Graduate Studies (Delaware), 2011–2014
+- Director of Undergraduate Studies (Delaware), 2018–2021
+- Member of ad hoc committee to create the B.S. degree in Quantitative Biology
+- Initial proposer of B.S. degree in Applied Mathematics
+- Chaired ad hoc committee to create B.S. degree in Data Science
+- Created Math 219, Data Science I
+
+### College and university
+
+- Director of the Master of Science program in Data Science, 2023–2025
+- ADVANCE Fellow and Senior Fellow, 2020–2023
+- Faculty Senate Ad-Hoc Subcommittee on Promotion Criteria for Continuing Track Faculty, 2021–2022
+- University Strategic Planning Working Group on Redefining Creativity, Innovation and Entrepreneurship, 2021
+- Faculty Senate Promotion and Tenure Committee, 2018–2020 (Chair for 2019–2020)
+- Faculty Senate Undergraduate Studies Committee, 2008–2010
+- Arts & Sciences Educational Affairs Committee, 2004–2005
+
+### Profession
+
+- Editor-in-Chief of the SIAM book series on Software, Environments, and Tools, 2026–present
+- Communicating Editor of *Advances in Computational Mathematics*, 2019–present
+- At-Large Member of the SIAM Council, 2015–2018
+- Associate Editor of *Journal of Engineering Mathematics*, 2010–2015
+- Associate Editor of the *SIAM Journal on Scientific
+Computing*, 2008–2014
+- Organizing committee of Mathematical Problems in Industry, 2004 (Delaware)
+
+<!-- Referee for SISC, SINUM, J.\ Comput.\ Phys., Proc.\ Royal Soc.\
+A, J.\ Comput.\ Appl.\ Math., Computers Math.\ Appl., J. Sci.\
+Comput., Num.\ Meth.\ Fluids, J.\ Phys.\ A, Phys.\ Rev.\ E, SIAM J.\ on
+Applied Dynamical Systems, Constr.\ Approx., Complex Var.,
+Comput. Meth. Func. Theory 
+Book reviewer for SIAM Review, Wiley, J.\ Flu.\ Mech.
+
+Reviewer of grant proposals for NSF and the Swiss National Science
+Foundation -->
+<!-- 
+
+## Academic visits
+Institute for Mathematics and Its Applications, University of Minnesota, September–December 2010
+
+Oxford University Computing Laboratory, January–June 2008
+
+Oxford University Computing Laboratory, Summer 1999
+
+ETH Supercomputing Institute, Zürich, Summer 1994
+
+## Consultations
+United Technologies, 2002–2003
+* Contact: Fabio Bertolotti. Use of spectral methods in investigating thermoacoustic instability in power-generating turbines.
+	
+Weidlinger Associates, 1998–2000
+* Contact: Greg Wojcik. High-order and spectral methods in space and time for the numerical simulation of acoustic wave propagation in tissue.
+	 
+IBM Almaden Research Center, 1995–2001
+* Contact: Martin Hassner. Applications of conformal mapping to inductive and magnetoresistive read heads for hard drives. -->
