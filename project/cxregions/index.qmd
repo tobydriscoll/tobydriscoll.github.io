@@ -1,0 +1,23 @@
+---
+title: Complex regions
+description: "Representation of path and regions in the complex plane."
+lightbox: true
+---
+
+![](shapes.png){width=300 alt="ComplexRegions logo"}
+
+[ComplexRegions.jl](https://github.com/complexvariables/ComplexRegions.jl) is an open-source Julia package for the representation of curves, paths, and regions in the complex plane. It includes facilities for Mobius transformations, and there is a [Python interface](https://pypi.org/project/cxregions/) as well.
+
+### Gallery 
+
+:::{layout-ncol=3}
+![](bone.png){group="cxregions"}
+
+![](channel.png){group="cxregions"}
+
+![](exterior.png){group="cxregions"}
+
+![](probes.png){group="cxregions"}
+
+![](snowflake.png){group="cxregions"}
+:::

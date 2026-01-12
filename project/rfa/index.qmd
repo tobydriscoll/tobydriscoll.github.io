@@ -1,0 +1,19 @@
+---
+title: Rational function approximation
+description: "Computing with rational functions."
+lightbox: true
+---
+
+![](logo-med.png){width=160 alt="RFA logo"}
+
+[RationalFunctionApproximation.jl](https://github.com/complexvariables/RationalFunctionApproximation.jl) is an open-source Julia package for automatic representation of sampled data by rational functions in the complex plane. It implements the well-known AAA algorithm of Nakatsukasa, Sète, and Trefethen (2018) as well as a new variant for Thiele continued fractions, and it is easy to call from Python.
+
+### Gallery 
+
+:::{layout-ncol=3}
+![](circle_poles.png){group="rfa"}
+
+![](cross.png){group="rfa"}
+
+![](half-plane.png){group="rfa"}
+:::
