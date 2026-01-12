@@ -18,7 +18,7 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Install extensions
-        run: quarto install extension schochastics/academicons && quarto add quarto-ext/fontawesome
+        run: quarto add --no-prompt schochastics/academicons && quarto add --no-prompt quarto-ext/fontawesome
 
       - name: Render CV as pdf
         run: quarto render cv.qmd --to pdf && cp -f _site/cv.pdf _media/cv.pdf
