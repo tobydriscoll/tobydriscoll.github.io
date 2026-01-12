@@ -3,3 +3,4 @@ _site
 **/*.quarto_ipynb
 /.luarc.json
 .DS_Store
+.vscode/ltex.dictionary.en-US.txt
