@@ -1,5 +1,26 @@
 [
   {
+    "listing": "/projects.html",
+    "items": [
+      "/project/chebfun/index.html",
+      "/project/cxregions/index.html",
+      "/project/drums/index.html",
+      "/project/matlabcentral/index.html",
+      "/project/rfa/index.html",
+      "/project/sc-toolbox/index.html"
+    ]
+  },
+  {
+    "listing": "/books.html",
+    "items": [
+      "/book/data-science-1/index.html",
+      "/book/explODE/index.html",
+      "/book/fnc/index.html",
+      "/book/learning-matlab/index.html",
+      "/book/schwarz-christoffel-mapping/index.html"
+    ]
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/post/the-sorry-state-of-teaching-odes/index.html",
@@ -30,31 +51,10 @@
       "/post/a-retrospective-look-at-college-math/index.html",
       "/post/flipping-experiences/index.html",
       "/post/promotion-system/index.html",
-      "/post/bio-breakfast/index.html",
       "/post/grades-and-motivation/index.html",
+      "/post/bio-breakfast/index.html",
       "/post/making-continuous-assessment-work/index.html",
       "/post/addiction/index.html"
-    ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": [
-      "/project/chebfun/index.html",
-      "/project/cxregions/index.html",
-      "/project/drums/index.html",
-      "/project/matlabcentral/index.html",
-      "/project/rfa/index.html",
-      "/project/sc-toolbox/index.html"
-    ]
-  },
-  {
-    "listing": "/books.html",
-    "items": [
-      "/book/data-science-1/index.html",
-      "/book/explODE/index.html",
-      "/book/fnc/index.html",
-      "/book/learning-matlab/index.html",
-      "/book/schwarz-christoffel-mapping/index.html"
     ]
   }
 ]
