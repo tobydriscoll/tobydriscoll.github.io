@@ -45,7 +45,7 @@ about:
 Toby Driscoll is a Unidel Chaired Professor in the 
 [Department of Mathematical Sciences](https://mathsci.udel.edu) at the [University of Delaware](https://www.udel.edu).
 
-CV as [page](cv.qmd) or [PDF](cv.pdf)
+CV as [page](cv.qmd) or [PDF](_media/cv.pdf)
 
 
 ## UD Affiliations 

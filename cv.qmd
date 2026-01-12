@@ -15,7 +15,7 @@ tobydriscoll.net
 :::
 
 :::{.no-print} 
-{{< fa file-pdf >}} [PDF](cv.pdf)
+{{< fa file-pdf >}} [PDF](_media/cv.pdf)
 :::
 
 ## Research interests
