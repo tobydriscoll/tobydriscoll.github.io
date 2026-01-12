@@ -42,10 +42,19 @@ about:
       href: https://arxiv.org/a/driscoll_t_1.html
 
 ---
+
+<!-- :::{.no-print}
+[{{< ai google-scholar >}} Google Scholar](https://scholar.google.com/citations?user=V2c1tmAAAAAJ&hl=en){.btn .btn-secondary}
+[{{< ai orcid >}} ORCID](https://orcid.org/0000-0002-1490-2545){.btn .btn-secondary}
+[{{< fa code-branch >}} Github](https://github.com/tobydriscoll){.btn .btn-secondary}
+[Zotero](https://www.zotero.org/tobydriscoll){.btn .btn-secondary}
+[arXiv](https://arxiv.org/a/driscoll_t_1.html){.btn .btn-secondary}
+::: -->
+
 Toby Driscoll is a Unidel Chaired Professor in the 
 [Department of Mathematical Sciences](https://mathsci.udel.edu) at the [University of Delaware](https://www.udel.edu).
 
-CV as [page](cv.qmd) or [PDF](_media/cv.pdf)
+**Get my CV as a [page](cv.qmd) or [PDF](_media/cv.pdf)**
 
 
 ## UD Affiliations 
@@ -57,3 +66,8 @@ CV as [page](cv.qmd) or [PDF](_media/cv.pdf)
 - Email: [driscoll@udel.edu](mailto:driscoll@udel.edu)
 - Office: [Ewing Hall](https://www.google.com/maps/place/Ewing+Hall,+Newark,+DE+19716/@39.6813258,-75.7575794,17z/data=!3m1!4b1!4m6!3m5!1s0x89c7aa2dfb461021:0x24a1fedcbff4eb35!8m2!3d39.6813258!4d-75.7549991!16s%2Fg%2F1tfjx7jz?entry=ttu) Room 515
 - Zoom: [https://udel.zoom.us/my/tobydriscoll](https://udel.zoom.us/my/tobydriscoll)
+
+## Online books/course notes
+- [Fundamentals of Numerical Computation](https://fncbook.com), with R. J. Braun (print edition via SIAM)
+- [Data Science I (Math 219)](https://ud-math-data-science-1.github.io/book/)
+- [Finite differences and spectral methods for PDEs (Math 817)](https://tobydriscoll.net/fd-spectral-notes/intro.html)
