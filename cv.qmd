@@ -191,6 +191,9 @@ See also my [Google Scholar site](https://scholar.google.com/citations?user=V2c1
 
 ### Refereed proceedings and posters
 
+- Tichenor, A. A., P. Situ, T. A. Driscoll, C. G. Begley, and R. J. Braun. “Linking TBU Mechanisms and the Neurosensory Response in Dry Eye Subjects.” Investigative Ophthalmology & Visual Science 65, no. 7 (2024): 6572–6572.
+- Situ, P., A. A. Tichenor, T. A. Driscoll, C. G. Begley, and R. J. Braun. “Neurosensory Function Changes Induced by Tear Film Instability (TFI)-Related Stress in Dry Eye: A Pilot Study.” Investigative Ophthalmology & Visual Science 65, no. 7 (2024): 6566–6566.
+- Driscoll, T. A., A. A. Tichenor, P. Situ, R. J. Braun, and C. G. Begley. “Optimized Models of Tear Breakup (TBU) Mechanisms in Dry-Eye (DE) and Non-DE Subjects.” Investigative Ophthalmology & Visual Science 65, no. 7 (2024): 6559–6559.
 - R. J. Braun, T. Driscoll, C. Begley, P. Situ, A. Tichenor, and R. Luke, “Tear Breakup (TBU) Analysis with Fluorescence (FL) and Thermal (TH) imaging,” Investigative Ophthalmology & Visual Science, vol. 64, no. 8, pp. 186–186, Jun. 2023.
 - R. J. Braun, T. A. Driscoll et al., “Data and Analysis from Tear Breakup (TBU) in Normal Subjects,” Investigative Ophthalmology & Visual Science, vol. 63, no. 7, pp. 3950-A0230, Jun. 2022.
 - R. A. Luke et al., “Fitting Simplified Models to Machine Learning-Identified Tear Film Breakup,” in Investigative Ophthalmology & Visual Science, Jun. 2021, vol. 62, p. 1315.
