@@ -17,6 +17,9 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Install weasyprint
+        run: sudo apt-get install -y weasyprint
+
       - name: Install extensions
         run: quarto add --no-prompt schochastics/academicons && quarto add --no-prompt quarto-ext/fontawesome
 
