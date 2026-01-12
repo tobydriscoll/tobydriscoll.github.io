@@ -1,0 +1,24 @@
+name: Update Quarto Extensions
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Daily at midnight UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: mcanouil/quarto-extensions-updater@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
