@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A different kind of introduction to ODEs.">
+<meta name="description" content="Computing with rational functions.">
 
-<title>Exploring ODEs – Toby Driscoll</title>
+<title>Rational function approximation – Toby Driscoll</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,6 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-a25750924116104412f7a457768fb952.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-0d4a9d19931feb4fee1ddab4b2489000.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/bootstrap/bootstrap-a25750924116104412f7a457768fb952.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,11 +79,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Exploring ODEs – Toby Driscoll">
-<meta property="og:description" content="A different kind of introduction to ODEs.">
-<meta property="og:image" content="https://tobydriscoll.net/book/explODE/featured.jpg">
+<meta property="og:title" content="Rational function approximation – Toby Driscoll">
+<meta property="og:description" content="Computing with rational functions.">
+<meta property="og:image" content="https://tobydriscoll.net/project/rfa/logo-med.png">
 <meta property="og:site_name" content="Toby Driscoll">
-<meta property="og:image:alt" content="Exploring ODEs cover">
+<meta property="og:image:alt" content="RFA logo">
+<meta property="og:image:height" content="375">
+<meta property="og:image:width" content="375">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -327,7 +332,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#contents" id="toc-contents" class="nav-link active" data-scroll-target="#contents">Contents</a></li>
+  <li><a href="#gallery" id="toc-gallery" class="nav-link active" data-scroll-target="#gallery">Gallery</a></li>
   </ul>
 </nav>
     </div>
@@ -337,12 +342,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exploring ODEs</h1>
+<h1 class="title">Rational function approximation</h1>
 </div>
 
 <div>
   <div class="description">
-    A different kind of introduction to ODEs.
+    Computing with rational functions.
   </div>
 </div>
 
@@ -359,48 +364,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="quarto-layout-panel" data-layout-ncol="2">
+<p><a href="logo-med.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="logo-med.png" class="img-fluid" alt="RFA logo" width="160"></a></p>
+<p><a href="https://github.com/complexvariables/RationalFunctionApproximation.jl">RationalFunctionApproximation.jl</a> is an open-source Julia package for automatic representation of sampled data by rational functions in the complex plane. It implements the well-known AAA algorithm of Nakatsukasa, Sète, and Trefethen (2018) as well as a new variant for Thiele continued fractions, and it is easy to call from Python.</p>
+<section id="gallery" class="level3">
+<h3 class="anchored" data-anchor-id="gallery">Gallery</h3>
+<div class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li>Buy from the <a href="http://bookstore.siam.org/ot157/">SIAM bookstore</a>. Members of SIAM, including <a href="http://siam.org/students/memberships.php">student members</a>, get a 30% discount.</li>
-<li><a href="https://people.maths.ox.ac.uk/trefethen/ExplODE/">Download the PDF</a> for free.</li>
-</ul>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="circle_poles.png" class="lightbox" data-gallery="rfa"><img src="circle_poles.png" class="img-fluid"></a></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="featured.jpg" class="preview-image img-fluid" alt="Exploring ODEs cover" width="120"></p>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="cross.png" class="lightbox" data-gallery="rfa"><img src="cross.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="half-plane.png" class="lightbox" data-gallery="rfa"><img src="half-plane.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
-<p>Written by <a href="https://people.maths.ox.ac.uk/trefethen/">Nick Trefethen</a>, <a href="https://www.linkedin.com/in/birkisson/?ppe=1">Asgeir Birkisson</a>, and myself, <em>Exploring ODEs</em> takes a look at ordinary differential equations unlike any other text. Rather than focusing on the mechanics of finding solutions in a limited number of special problems, we use <a href="www.chebfun.org">Chebfun</a> to illustrate the wide range of behavior of those solutions for a variety of linear, nonlinear, and multidimensional problems, including initial-value, boundary-value, and eigenvalue problems. Each short chapter includes a detailed application and a favorite reference. The text is accessible as an accompaniment or follow-up to a standard first undergraduate text on ODEs. All of the MATLAB codes generating the examples and figures are available for download, as is the full text in PDF, from <a href="https://people.maths.ox.ac.uk/trefethen/ExplODE/">the book’s website</a>.</p>
-<section id="contents" class="level3">
-<h3 class="anchored" data-anchor-id="contents">Contents</h3>
-<ol type="1">
-<li>Introduction</li>
-<li>First-order scalar linear ODEs</li>
-<li>First-order scalar nonlinear ODEs</li>
-<li>Second-order equations and damped oscillations</li>
-<li>Boundary-value problems</li>
-<li>Eigenvalues of linear BVPs</li>
-<li>Variable coefficients and adjoints</li>
-<li>Resonance</li>
-<li>Second-order equations in the phase plane</li>
-<li>Systems of equations</li>
-<li>The fundamental existence theorem</li>
-<li>Random functions and random ODEs</li>
-<li>Chaos</li>
-<li>Linear systems and linearization</li>
-<li>Stable and unstable fixed points</li>
-<li>Multiple solutions of nonlinear BVPs</li>
-<li>Bifurcation</li>
-<li>Continuation and path-following</li>
-<li>Periodic ODEs</li>
-<li>Boundary and interior layers</li>
-<li>Into the complex plane</li>
-<li>Time-dependent PDEs</li>
-<li>Appendix A: Chebfun and its ODE algorithms</li>
-<li>Appendix B: 100 more examples</li>
-</ol>
 
 
 </section>
@@ -820,6 +800,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

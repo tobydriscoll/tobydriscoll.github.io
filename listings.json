@@ -40,8 +40,10 @@
     "listing": "/projects.html",
     "items": [
       "/project/chebfun/index.html",
+      "/project/cxregions/index.html",
       "/project/drums/index.html",
       "/project/matlabcentral/index.html",
+      "/project/rfa/index.html",
       "/project/sc-toolbox/index.html"
     ]
   },
