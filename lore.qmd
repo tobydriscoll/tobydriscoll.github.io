@@ -1,0 +1,33 @@
+# Grad student lore
+
+## Writing
+
+- Clear writing is clear thinking.
+- Most of the effort of writing is rewriting. You have to get something down, but then you have to read it over and over and make improvements. 
+- One way to get better at writing is by reading. If you want to be writing research papers, you have to be reading them.
+- It's not enough to be right. You also have to be persuasive.
+
+## Tech tools
+
+- Spend 95% of your time working with familiar tools, and 5% trying new ones.
+- Any tool that makes it hard to do something essential isn't the right one.
+- Corollary: Latex beamer is awful. You shouldn't have to work so hard to use video, arrows, highlights, and so on.
+- For putting latex output into Powerpoint or anything else, you can use [latexit](https://www.chachatelier.fr/latexit/) (Mac) or [KLatexFormula](https://klatexformula.sourceforge.io/) (Windows/Linux/Mac).
+- Use [Detexify](https://detexify.kirelabs.org/classify.html) to search for a latex symbol by drawing it.
+- PDF simulates a piece of paper. It's terrible for most things done on a computer screen.
+- Automate repetitive tasks. Doing so can be like growing a new arm—painful, but handy.
+- Use version control fanatically. Check in changes atomically, not in huge chunks. Use branches to try new ideas. I have relearned these lessons many times.
+- Learn to track and document all of your work as you go. Use a format based on plain text documents. Those are the only ones that are sure to still work in 20 years.
+
+## Research computing
+
+- Numerical experimentation is more like a laboratory science than math. If you don't develop a system of keeping meticulous track of what you have done, you will go in circles and make big mistakes.
+- Clarity in coding is more valuable than cleverness.
+- Math is often about the 0.1% of cases that don't work. Computing should be about the 99.9% that do.
+- If you haven't tested your package, then I don't trust it.
+
+## Math
+
+- When you encounter a new idea, start with the simplest example you can fully understand.
+- There's no sense trying to solve a hard problem if you can't first solve a simpler version of it.
+- Infinity can be incredibly useful, but in applied math, it can be an unwelcome distraction.
