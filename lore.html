@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Toby Driscoll">
-<meta name="dcterms.date" content="2016-10-22">
 
-<title>Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lectures 20, 21, 23: Solving square systems – Toby Driscoll</title>
+<title>lore – Toby Driscoll</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,67 +20,32 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../_media/favicon.ico" rel="icon">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0b90554db41e1e94df75aa9c52e681fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-0b90554db41e1e94df75aa9c52e681fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./_media/favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0b90554db41e1e94df75aa9c52e681fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-0b90554db41e1e94df75aa9c52e681fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,8 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lectures 20, 21, 23: Solving square systems – Toby Driscoll">
-<meta property="og:description" content="">
+<meta property="og:title" content="Toby Driscoll">
 <meta property="og:site_name" content="Toby Driscoll">
 </head>
 
@@ -295,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Toby Driscoll</span>
     </a>
   </div>
@@ -306,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../cv.html"> 
+    <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -315,11 +277,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-publications">    
         <li>
-    <a class="dropdown-item" href="../../cv.html#sec-publications">
+    <a class="dropdown-item" href="./cv.html#sec-publications">
  <span class="dropdown-text">List</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../books.html">
+    <a class="dropdown-item" href="./books.html">
  <span class="dropdown-text">Books</span></a>
   </li>  
         <li>
@@ -337,11 +299,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html"> 
+    <a class="nav-link" href="./projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
@@ -356,119 +318,73 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#grad-student-lore" id="toc-grad-student-lore" class="nav-link active" data-scroll-target="#grad-student-lore">Grad student lore</a>
+  <ul class="collapse">
+  <li><a href="#writing" id="toc-writing" class="nav-link" data-scroll-target="#writing">Writing</a></li>
+  <li><a href="#tech-tools" id="toc-tech-tools" class="nav-link" data-scroll-target="#tech-tools">Tech tools</a></li>
+  <li><a href="#research-computing" id="toc-research-computing" class="nav-link" data-scroll-target="#research-computing">Research computing</a></li>
+  <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math">Math</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Trefethen &amp; Bau &amp; MATLAB &amp; Julia: Lectures 20, 21, 23: Solving square systems</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">computing</div>
-    <div class="quarto-category">teaching</div>
-  </div>
-  </div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Toby Driscoll </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 22, 2016</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
 
 
-</header>
+<section id="grad-student-lore" class="level1">
+<h1>Grad student lore</h1>
+<section id="writing" class="level2">
+<h2 class="anchored" data-anchor-id="writing">Writing</h2>
+<ul>
+<li>Clear writing is clear thinking.</li>
+<li>Most of the effort of writing is rewriting. You have to get something down, but then you have to read it over and over and make improvements.</li>
+<li>One way to get better at writing is by reading. If you want to be writing research papers, you have to be reading them.</li>
+<li>It’s not enough to be right. You also have to be persuasive.</li>
+</ul>
+</section>
+<section id="tech-tools" class="level2">
+<h2 class="anchored" data-anchor-id="tech-tools">Tech tools</h2>
+<ul>
+<li>Spend 95% of your time working with familiar tools, and 5% trying new ones.</li>
+<li>Any tool that makes it hard to do something essential isn’t the right one.</li>
+<li>Corollary: Latex beamer is awful. You shouldn’t have to work so hard to use video, arrows, highlights, and so on.</li>
+<li>For putting latex output into Powerpoint or anything else, you can use <a href="https://www.chachatelier.fr/latexit/">latexit</a> (Mac) or <a href="https://klatexformula.sourceforge.io/">KLatexFormula</a> (Windows/Linux/Mac).</li>
+<li>Use <a href="https://detexify.kirelabs.org/classify.html">Detexify</a> to search for a latex symbol by drawing it.</li>
+<li>PDF simulates a piece of paper. It’s terrible for most things done on a computer screen.</li>
+<li>Automate repetitive tasks. Doing so can be like growing a new arm—painful, but handy.</li>
+<li>Use version control fanatically. Check in changes atomically, not in huge chunks. Use branches to try new ideas. I have relearned these lessons many times.</li>
+<li>Learn to track and document all of your work as you go. Use a format based on plain text documents. Those are the only ones that are sure to still work in 20 years.</li>
+</ul>
+</section>
+<section id="research-computing" class="level2">
+<h2 class="anchored" data-anchor-id="research-computing">Research computing</h2>
+<ul>
+<li>Numerical experimentation is more like a laboratory science than math. If you don’t develop a system of keeping meticulous track of what you have done, you will go in circles and make big mistakes.</li>
+<li>Clarity in coding is more valuable than cleverness.</li>
+<li>Math is often about the 0.1% of cases that don’t work. Computing should be about the 99.9% that do.</li>
+<li>If you haven’t tested your package, then I don’t trust it.</li>
+</ul>
+</section>
+<section id="math" class="level2">
+<h2 class="anchored" data-anchor-id="math">Math</h2>
+<ul>
+<li>When you encounter a new idea, start with the simplest example you can fully understand.</li>
+<li>There’s no sense trying to solve a hard problem if you can’t first solve a simpler version of it.</li>
+<li>Infinity can be incredibly useful, but in applied math, it can be an unwelcome distraction.</li>
+</ul>
 
 
-<p>Three in one this time: <a href="https://gist.github.com/tobydriscoll/e2f44e7756b864050b52c6773aa83b70">Lecture 20</a>, which is on Gaussian elimination / LU factorization, <a href="https://gist.github.com/tobydriscoll/2b74da569406da55c599a61afe99cf56">Lecture 21</a>, on row pivoting, and <a href="https://gist.github.com/tobydriscoll/17ce89eb2c827e0b870877219ec64fe8">Lecture 23</a>, on Cholesky factorization. I mainly skipped over Lecture 22,&nbsp;about&nbsp;the curious case of the stability of pivoted LU, but the main example is dropped into the end of my coverage of pivoting.</p>
-<p>The Julia surprises are, not surprisingly, coming less frequently. In Lecture 20 I had some fun with rational representations. I like using MATLAB’s <code>format rat</code> when presenting Gaussian elimination, as it allows me to recall the way the process looks when learned by hand. It’s a fun trick, but of course the underlying values are still all double precision, and the rational approximations to them are found ex post facto. By contrast, Julia offers true rational numbers, constructed and shown using the <code>//</code> operation.</p>
-<p>Compare the MATLAB</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">format</span> <span class="va">rat</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">I</span> <span class="op">=</span> <span class="va">eye</span>(<span class="fl">4</span>)<span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">L21</span> <span class="op">=</span> <span class="va">I</span> <span class="op">+</span> (<span class="op">-</span><span class="fl">5</span><span class="op">/</span><span class="fl">17</span>)<span class="op">*</span><span class="va">I</span>(<span class="op">:,</span><span class="fl">2</span>)<span class="op">*</span><span class="va">I</span>(<span class="op">:,</span><span class="fl">1</span>)<span class="op">';</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">L31</span> <span class="op">=</span> <span class="va">I</span> <span class="op">+</span> (<span class="op">-</span><span class="fl">9</span><span class="op">/</span><span class="fl">17</span>)<span class="op">*</span><span class="va">I</span>(<span class="op">:,</span><span class="fl">3</span>)<span class="op">*</span><span class="va">I</span>(<span class="op">:,</span><span class="fl">1</span>)<span class="op">';</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="va">L41</span> <span class="op">=</span> <span class="va">I</span> <span class="op">+</span> (<span class="op">-</span><span class="fl">4</span><span class="op">/</span><span class="fl">17</span>)<span class="op">*</span><span class="va">I</span>(<span class="op">:,</span><span class="fl">4</span>)<span class="op">*</span><span class="va">I</span>(<span class="op">:,</span><span class="fl">1</span>)<span class="op">';</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>to the Julia</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> <span class="fu">eye</span>(<span class="dt">Rational</span>,<span class="fl">4</span>);</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>L21 <span class="op">=</span> <span class="fu">copy</span>(I);  L21[<span class="fl">2</span>,<span class="fl">1</span>] <span class="op">=</span> <span class="op">-</span><span class="fl">5</span><span class="op">//</span><span class="fl">17</span>;</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>L31 <span class="op">=</span> <span class="fu">copy</span>(I);  L31[<span class="fl">3</span>,<span class="fl">1</span>] <span class="op">=</span> <span class="op">-</span><span class="fl">9</span><span class="op">//</span><span class="fl">17</span>;</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>L41 <span class="op">=</span> <span class="fu">copy</span>(I);  L41[<span class="fl">4</span>,<span class="fl">1</span>] <span class="op">=</span> <span class="op">-</span><span class="fl">4</span><span class="op">//</span><span class="fl">17</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The MATLAB code requires only the <code>format</code> call, because it’s only the display of results that is affected. The Julia code is doing something deeper and needs more changes as a result.</p>
-<p>Julia could use something like a <code>format</code> command. I almost always find MATLAB’s terminal output more readable, or at least easier to manipulate into a good form. Here’s one example using the rational output. First, MATLAB:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fl">17</span>              <span class="fl">2</span>              <span class="fl">3</span>             <span class="fl">13</span>             <span class="fl">93</span>       </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> <span class="fl">0</span>            <span class="fl">194</span><span class="op">/</span><span class="fl">17</span>         <span class="fl">155</span><span class="op">/</span><span class="fl">17</span>          <span class="fl">71</span><span class="op">/</span><span class="fl">17</span>         <span class="fl">963</span><span class="op">/</span><span class="fl">17</span>    </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> <span class="fl">0</span>            <span class="fl">101</span><span class="op">/</span><span class="fl">17</span>          <span class="fl">92</span><span class="op">/</span><span class="fl">17</span>          <span class="fl">87</span><span class="op">/</span><span class="fl">17</span>         <span class="fl">574</span><span class="op">/</span><span class="fl">17</span>    </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a> <span class="fl">0</span>            <span class="fl">230</span><span class="op">/</span><span class="fl">17</span>         <span class="fl">243</span><span class="op">/</span><span class="fl">17</span>         <span class="op">-</span><span class="fl">18</span><span class="op">/</span><span class="fl">17</span>        <span class="fl">1158</span><span class="op">/</span><span class="fl">17</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>And the Julia:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span>x5 <span class="dt">Array</span>{<span class="dt">Rational</span>{T<span class="op">&amp;</span>lt;<span class="op">:</span><span class="dt">Integer</span>},<span class="fl">2</span>}<span class="op">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fl">17</span><span class="op">//</span><span class="fl">1</span>    <span class="fl">2</span><span class="op">//</span><span class="fl">1</span>     <span class="fl">3</span><span class="op">//</span><span class="fl">1</span>    <span class="fl">13</span><span class="op">//</span><span class="fl">1</span>    <span class="fl">93</span><span class="op">//</span><span class="fl">2</span> </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0</span><span class="op">//</span><span class="fl">1</span>  <span class="fl">194</span><span class="op">//</span><span class="fl">17</span>  <span class="fl">155</span><span class="op">//</span><span class="fl">17</span>   <span class="fl">71</span><span class="op">//</span><span class="fl">17</span>  <span class="fl">963</span><span class="op">//</span><span class="fl">34</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0</span><span class="op">//</span><span class="fl">1</span>  <span class="fl">101</span><span class="op">//</span><span class="fl">17</span>   <span class="fl">92</span><span class="op">//</span><span class="fl">17</span>   <span class="fl">87</span><span class="op">//</span><span class="fl">17</span>  <span class="fl">287</span><span class="op">//</span><span class="fl">17</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0</span><span class="op">//</span><span class="fl">1</span>  <span class="fl">230</span><span class="op">//</span><span class="fl">17</span>  <span class="fl">243</span><span class="op">//</span><span class="fl">17</span>  <span class="op">-</span><span class="fl">18</span><span class="op">//</span><span class="fl">17</span>  <span class="fl">579</span><span class="op">//</span><span class="fl">17</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>I almost never need that header line that Julia gives. The numbers are already showing themselves to be Rational, and the shape of the array is self-evident. (Though I now see that MATLAB 2016b is adding such headers to non-float output.) The zero structure also jumps out more clearly in the MATLAB case, though it’s profligate with whitespace.</p>
-<p>Another comparison, of MATLAB (using the default format):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">1</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fl">0</span>     <span class="fl">1</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">2</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">1</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">4</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">1</span>     <span class="fl">0</span>     <span class="fl">8</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">1</span>    <span class="fl">16</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">0</span>     <span class="fl">0</span>    <span class="fl">32</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>versus Julia:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fl">6</span><span class="op">×</span><span class="fl">6</span> <span class="dt">Array</span>{<span class="dt">Float64</span>,<span class="fl">2</span>}<span class="op">:</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>   <span class="fl">1.0</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.0</span>  <span class="fl">1.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>   <span class="fl">2.0</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">1.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>   <span class="fl">4.0</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">1.0</span>  <span class="fl">0.0</span>   <span class="fl">8.0</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">1.0</span>  <span class="fl">16.0</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">0.0</span>  <span class="fl">32.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>There’s nothing wrong per se about Julia’s. But which version would you write down, or expect to see in print? One last case, of a matrix that is supposed to be triangular but for a little roundoff. First, Julia:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span><span class="op">×</span><span class="fl">4</span> <span class="dt">Array</span>{<span class="dt">Float64</span>,<span class="fl">2</span>}<span class="op">:</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fl">17.0</span>           <span class="fl">2.0</span>      <span class="fl">3.0</span>          <span class="fl">13.0</span>    </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.0</span>          <span class="fl">13.5294</span>  <span class="fl">14.2941</span>       <span class="op">-</span><span class="fl">1.05882</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.0</span>           <span class="fl">0.0</span>     <span class="op">-</span><span class="fl">2.93913</span>       <span class="fl">5.06957</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fl">5.55112e-16</span>   <span class="fl">0.0</span>     <span class="op">-</span><span class="fl">4.44089e-16</span>   <span class="fl">4.09024</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>And MATLAB, using the default format:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fl">17.0000</span>    <span class="fl">2.0000</span>    <span class="fl">3.0000</span>   <span class="fl">13.0000</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>      <span class="fl">0</span>   <span class="fl">13.5294</span>   <span class="fl">14.2941</span>   <span class="op">-</span><span class="fl">1.0588</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>      <span class="fl">0</span>         <span class="fl">0</span>   <span class="op">-</span><span class="fl">2.9391</span>    <span class="fl">5.0696</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fl">0.0000</span>         <span class="fl">0</span>   <span class="op">-</span><span class="fl">0.0000</span>    <span class="fl">4.0902</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Julia has chosen to align on the decimal point. It’s also suppressing trailing zeros, except for the first, giving an odd and false impression of values that have a precise number of significant digits. MATLAB’s choice of right alignment is visually superior, and only exact zero gets a special display. True, you might want that exponential notation for the tiny values; you can get it by changing the format.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span> <span class="va">format</span> <span class="va">short</span> <span class="va">e</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span> <span class="va">U</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="va">U</span> <span class="op">=</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.7000e+01</span>   <span class="fl">2.0000e+00</span>   <span class="fl">3.0000e+00</span>   <span class="fl">1.3000e+01</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0</span>   <span class="fl">1.3529e+01</span>   <span class="fl">1.4294e+01</span>  <span class="op">-</span><span class="fl">1.0588e+00</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0</span>            <span class="fl">0</span>  <span class="op">-</span><span class="fl">2.9391e+00</span>   <span class="fl">5.0696e+00</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="fl">5.5511e-16</span>            <span class="fl">0</span>  <span class="op">-</span><span class="fl">4.4409e-16</span>   <span class="fl">4.0902e+00</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span> <span class="va">format</span> <span class="va">short</span> <span class="va">g</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span> <span class="va">U</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="va">U</span> <span class="op">=</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>            <span class="fl">17</span>            <span class="fl">2</span>            <span class="fl">3</span>           <span class="fl">13</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0</span>       <span class="fl">13.529</span>       <span class="fl">14.294</span>      <span class="op">-</span><span class="fl">1.0588</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0</span>            <span class="fl">0</span>      <span class="op">-</span><span class="fl">2.9391</span>       <span class="fl">5.0696</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="fl">5.5511e-16</span>            <span class="fl">0</span>  <span class="op">-</span><span class="fl">4.4409e-16</span>       <span class="fl">4.0902</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It’s nice to have options.</p>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
