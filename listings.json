@@ -1,16 +1,5 @@
 [
   {
-    "listing": "/projects.html",
-    "items": [
-      "/project/chebfun/index.html",
-      "/project/cxregions/index.html",
-      "/project/drums/index.html",
-      "/project/matlabcentral/index.html",
-      "/project/rfa/index.html",
-      "/project/sc-toolbox/index.html"
-    ]
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/post/the-sorry-state-of-teaching-odes/index.html",
@@ -55,6 +44,17 @@
       "/book/fnc/index.html",
       "/book/learning-matlab/index.html",
       "/book/schwarz-christoffel-mapping/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/project/chebfun/index.html",
+      "/project/cxregions/index.html",
+      "/project/drums/index.html",
+      "/project/matlabcentral/index.html",
+      "/project/rfa/index.html",
+      "/project/sc-toolbox/index.html"
     ]
   }
 ]
