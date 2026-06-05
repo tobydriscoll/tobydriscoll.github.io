@@ -94,28 +94,28 @@ tobydriscoll.net
 - T. A. Driscoll (PI). NSF Mathematical Sciences Postdoctoral Research Fellowship (University of Colorado). NSF DMS-9627677, $75,000. [1996–1999]{.cvdate}
 
 ## Scholarly works {#sec-publications}
-See also my [Google Scholar site](https://scholar.google.com/citations?user=V2c1tmAAAAAJ&hl=en). 
+See also my [Google Scholar site](https://scholar.google.com/citations?user=V2c1tmAAAAAJ&hl=en), my [GitHub profile](https://github.com/tobydriscoll), my [MathWorks profile](https://www.mathworks.com/matlabcentral/profile/authors/631894), my [PyPI profile](https://pypi.org/user/tobydriscoll/), and my [ORCID profile](https://orcid.org/0000-0002-1490-2545).
 
 ### Books
 - T. A. Driscoll and R. J. Braun. *Fundamentals of Numerical Computation*,  [online edition](https://fncbook.com) in Julia, MATLAB, and Python [2025]{.cvdate}
-- T. A. Driscoll and R. J. Braun. *Fundamentals of Numerical Computation: Julia Edition*, SIAM [2022]{.cvdate} 
-- L. N. Trefethen, A. Birkisson, and T. A. Driscoll. *Exploring ODEs*, SIAM [2018]{.cvdate}
-- T. A. Driscoll and R. J. Braun. *Fundamentals of Numerical Computation*, SIAM [2017]{.cvdate}
+- T. A. Driscoll and R. J. Braun. *Fundamentals of Numerical Computation: Julia Edition*, Society for Industrial and Applied Mathematics  [2022]{.cvdate} 
+- L. N. Trefethen, A. Birkisson, and T. A. Driscoll. *Exploring ODEs*, Society for Industrial and Applied Mathematics  [2018]{.cvdate}
+- T. A. Driscoll and R. J. Braun. *Fundamentals of Numerical Computation*, Society for Industrial and Applied Mathematics  [2017]{.cvdate}
 - T. A. Driscoll, N. Hale, and L. N. Trefethen, eds. *Chebfun Guide*, 1st edition. Oxford, UK [2014]{.cvdate}
 - T. A. Driscoll, *Learning MATLAB*, Society for Industrial and Applied Mathematics [2009]{.cvdate}
 - T. A. Driscoll and L. N. Trefethen. *Schwarz–Christoffel Mapping*, Cambridge University Press [2002]{.cvdate}
  
 ### Book chapters
 - R. J. Braun, T. A. Driscoll, and C. G. Begley, “Mathematical Models of the Tear Film,” in *Ocular Fluid Dynamics: Anatomy, Physiology, Imaging Techniques, and Mathematical Modeling*, Springer-Birkhäuser, 2019.
-- T. A. Driscoll and B. Fornberg. Padé-based interpretation
- and correction of the Gibbs phenomenon. In *Advances in the Gibbs Phenomenon*, ed. by A. Jerri, Sigma Sampling Publishing, Potsdam, NY, 2007. 
+- T. A. Driscoll and B. Fornberg. Padé-based interpretation and correction of the Gibbs phenomenon. In *Advances in the Gibbs Phenomenon*, ed. by A. Jerri, Sigma Sampling Publishing, Potsdam, NY, 2007. 
 -  T. A. Driscoll and L. N. Trefethen. Numerical construction of conformal maps. Appendix to *Fundamentals of Complex Analysis with Applications to Engineering, Science, and Mathematics*, 3rd edition, by E. D. Saff and A. D. Snider, Prentice Hall, 2002.
 
 ### Preprints
 
-- Driscoll, Tobin A., and Yuxing Zhou. Greedy Thiele Continued-Fraction Approximation on Continuum Domains in the Complex Plane. [arXiv:2510.07295](https://doi.org/10.48550/arXiv.2510.072h95). Preprint, October 2025. 
-- Driscoll, Tobin A. RationalFunctionApproximation.Jl: Rational Approximation On Discrete and Continuous Domains. [arXiv:2512.06140](https://doi.org/10.48550/arXiv.2512.06140). Preprint, arXiv, December 2025. 
-- Chen, Q. and T. A. Driscoll and A. Roy. Operator learning for models of tear film breakup. Submitted to *Applied Numerical Mathematics*, 2025.
+- Driscoll, Tobin A. and Yuxing Zhou. [Stable evaluation of derivatives for barycentric and continued fraction representations of rational functions.](https://doi.org/10.48550/arXiv.2601.10667)  Preprint, arXiv, 2026. 
+- Chen, Q., T. A. Driscoll, and A. Roy. [Operator learning for models of tear film breakup.](https://doi.org/10.48550/arXiv.2601.08001) Preprint, arXiv, 2026.
+- Driscoll, Tobin A. and Yuxing Zhou. [Greedy Thiele continued-fraction approximation on continuum domains in the complex plane.](https://doi.org/10.48550/arXiv.2510.07295) Preprint, arXiv, 2025. 
+- Driscoll, Tobin A. [RationalFunctionApproximation.Jl: Rational approximation on discrete and continuous domains.](https://doi.org/10.48550/arXiv.2512.06140) Preprint, arXiv, 2025. 
 
 ### Refereed articles
 
