@@ -4,3 +4,7 @@ _site
 /.luarc.json
 .DS_Store
 .vscode/ltex.dictionary.en-US.txt
+
+# cv-short.pdf Times New Roman workaround (local one-off; broken system fontconfig)
+_fonts/
+_fontconfig.conf
