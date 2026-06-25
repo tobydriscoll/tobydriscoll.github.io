@@ -1,33 +1,58 @@
 # Grad student lore
 
-## Writing
-
-- Clear writing is clear thinking.
-- Most of the effort of writing is rewriting. You have to get something down, but then you have to read it over and over and make improvements. 
-- One way to get better at writing is by reading. If you want to be writing research papers, you have to be reading them.
-- It's not enough to be right. You also have to be persuasive.
-
-## Tech tools
-
-- Spend 95% of your time working with familiar tools, and 5% trying new ones.
-- Any tool that makes it hard to do something essential isn't the right one.
-- Corollary: Latex beamer is awful. You shouldn't have to work so hard to use video, arrows, highlights, and so on.
-- For putting latex output into Powerpoint or anything else, you can use [latexit](https://www.chachatelier.fr/latexit/) (Mac) or [KLatexFormula](https://klatexformula.sourceforge.io/) (Windows/Linux/Mac).
-- Use [Detexify](https://detexify.kirelabs.org/classify.html) to search for a latex symbol by drawing it.
-- PDF simulates a piece of paper. It's terrible for most things done on a computer screen.
-- Automate repetitive tasks. Doing so can be like growing a new arm—painful, but handy.
-- Use version control fanatically. Check in changes atomically, not in huge chunks. Use branches to try new ideas. I have relearned these lessons many times.
-- Learn to track and document all of your work as you go. Use a format based on plain text documents. Those are the only ones that are sure to still work in 20 years.
-
-## Research computing
-
-- Numerical experimentation is more like a laboratory science than math. If you don't develop a system of keeping meticulous track of what you have done, you will go in circles and make big mistakes.
-- Clarity in coding is more valuable than cleverness.
-- Math is often about the 0.1% of cases that don't work. Computing should be about the 99.9% that do.
-- If you haven't tested your package, then I don't trust it.
-
 ## Math
 
 - When you encounter a new idea, start with the simplest example you can fully understand.
 - There's no sense trying to solve a hard problem if you can't first solve a simpler version of it.
 - Infinity can be incredibly useful, but in applied math, it can be an unwelcome distraction.
+
+## Research computing
+
+- Numerical experimentation is more like a laboratory science than math. If you don't develop a system of keeping meticulous track of what you have done, you will go in circles and make big mistakes.
+- Clarity in coding is more valuable than cleverness.
+- Math is often about the 1% of cases that don't work. Computing should mostly be about the 99% that do.
+- If you haven't tested your package, then I don't trust it.
+
+## Writing papers
+
+- Clear writing is clear thinking.
+- It's not enough to be right. You also have to be persuasive.
+- It's hard to be good at writing without doing a lot of reading.
+- Most of the effort of writing is rewriting. You have to get something down, but then you have to read it over and over and make improvements. 
+- Overleaf is pretty good. Pay attention to errors that it logs during processing.
+- Use [Detexify](https://detexify.kirelabs.org/classify.html) to search for a latex symbol by drawing it.
+
+## Managing references
+
+- Use [Zotero](https://www.zotero.org/) to manage your references. Install the browser extension. Also install the Better BibTeX, ZotMeta, and ZotMoov plugins. 
+- For books, the ISBN is like a serial number. For published articles and software, the DOI serves the same purpose. ArXiv has its own identifier (the arXiv ID). These are meant to be the permanent, unambiguous identifiers, so put them into Zotero. You can click on them there to go to the publisher's page for the item.
+- **Every time you encounter an article worth remembering, add it to Zotero.** The easiest way is to click the browser extension button when you are on the article's page. Zotero will usually generate an accurate entry and attach the PDF to it, if you have access.
+- Zotero's "folders" are really just labels. An item can belong to more than one folder, which is very handy. You can sort them into topical folders if you want, even if the topics overlap.
+- If you read PDFs within Zotero, then you can take notes on them right there. 
+- When you write a paper, create a folder for it and drag references into it. Then you can right-click on the folder and select "Export", then "Better BibTeX" to generate a .bib file for your paper. 
+- Let Better BiBTeX generate citation keys for you. They will be unique and consistent, which is what you want. Long keys are fine, as they are more descriptive.
+  
+## Writing talks
+
+- Always start by thinking about the audience. 
+- A talk is not a paper. Talks should not have equation numbers, section numbers, figure numbers or captions, or a bibliography.
+- You don't have to use complete sentences or formal grammar.
+- Don't overestimate the audience's memory. There's an old rule of "7 plus or minus 2" for the number of things a person can hold in short-term memory. 
+- Corollary: It's often a good idea to repeat an equation or picture if it was last seen more than one or two slides ago.
+- A talk is both a visual and an auditory experience. Don't make the audience choose between reading and listening. 
+- It's fine to have a page or two of notes to keep yourself on track, as long as you don't read them aloud verbatim.
+- LaTeX beamer has some severe drawbacks. 
+  - Your talk looks like everyone else's.
+  - It abstracts away the visual aspect of a talk. 
+  - It makes videos, arrows, shapes, and other useful visual elements unreasonably hard to use, so you end up not using them.
+- Keynote and PowerPoint are fine. You can use [latexit](https://www.chachatelier.fr/latexit/) (Mac) or [KLatexFormula](https://klatexformula.sourceforge.io/) (Windows/Linux/Mac) to drag and drop in equations. The only thing that's hard is to mix text and math within a single line, but it turns out that you don't often need to do that.
+- Rehearse a talk fully at least three times before you give it. Nothing is more cringe than a speaker who seems to be surprised by their own slides.
+
+## Tech tools
+
+- Spend 95% of your time working with familiar tools, and 5% trying new ones.
+- Any tool that makes it hard to do something essential isn't the right one.
+- PDF simulates a piece of paper. It's terrible for most things done on screens, which is just about everything.
+- Automate repetitive tasks. Doing so can be like growing a new arm—painful, but handy.
+- Use version control fanatically. Check in changes atomically, not in huge chunks. Use branches to try new ideas. I have relearned these lessons many times.
+- Learn to track and document all of your work as you go. Use a format such as Markdown that is based on plain text. Don't depend on companies to keep your work accessible for 20 years.
