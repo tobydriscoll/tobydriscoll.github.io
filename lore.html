@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-421f628edb0054855121f39a96099253.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-bf3f322ac8d240d639fe1d97eccc3f5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-421f628edb0054855121f39a96099253.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1c2b39b91d62c1bd2d977d21438fc985.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5685cd926c25366c96d9f1407e584118.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-1c2b39b91d62c1bd2d977d21438fc985.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -327,10 +327,12 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#grad-student-lore" id="toc-grad-student-lore" class="nav-link active" data-scroll-target="#grad-student-lore">Grad student lore</a>
   <ul class="collapse">
-  <li><a href="#writing" id="toc-writing" class="nav-link" data-scroll-target="#writing">Writing</a></li>
-  <li><a href="#tech-tools" id="toc-tech-tools" class="nav-link" data-scroll-target="#tech-tools">Tech tools</a></li>
-  <li><a href="#research-computing" id="toc-research-computing" class="nav-link" data-scroll-target="#research-computing">Research computing</a></li>
   <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math">Math</a></li>
+  <li><a href="#research-computing" id="toc-research-computing" class="nav-link" data-scroll-target="#research-computing">Research computing</a></li>
+  <li><a href="#writing-papers" id="toc-writing-papers" class="nav-link" data-scroll-target="#writing-papers">Writing papers</a></li>
+  <li><a href="#managing-references" id="toc-managing-references" class="nav-link" data-scroll-target="#managing-references">Managing references</a></li>
+  <li><a href="#writing-talks" id="toc-writing-talks" class="nav-link" data-scroll-target="#writing-talks">Writing talks</a></li>
+  <li><a href="#tech-tools" id="toc-tech-tools" class="nav-link" data-scroll-target="#tech-tools">Tech tools</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -344,27 +346,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="grad-student-lore" class="level1">
 <h1>Grad student lore</h1>
-<section id="writing" class="level2">
-<h2 class="anchored" data-anchor-id="writing">Writing</h2>
+<section id="math" class="level2">
+<h2 class="anchored" data-anchor-id="math">Math</h2>
 <ul>
-<li>Clear writing is clear thinking.</li>
-<li>Most of the effort of writing is rewriting. You have to get something down, but then you have to read it over and over and make improvements.</li>
-<li>One way to get better at writing is by reading. If you want to be writing research papers, you have to be reading them.</li>
-<li>It’s not enough to be right. You also have to be persuasive.</li>
-</ul>
-</section>
-<section id="tech-tools" class="level2">
-<h2 class="anchored" data-anchor-id="tech-tools">Tech tools</h2>
-<ul>
-<li>Spend 95% of your time working with familiar tools, and 5% trying new ones.</li>
-<li>Any tool that makes it hard to do something essential isn’t the right one.</li>
-<li>Corollary: Latex beamer is awful. You shouldn’t have to work so hard to use video, arrows, highlights, and so on.</li>
-<li>For putting latex output into Powerpoint or anything else, you can use <a href="https://www.chachatelier.fr/latexit/">latexit</a> (Mac) or <a href="https://klatexformula.sourceforge.io/">KLatexFormula</a> (Windows/Linux/Mac).</li>
-<li>Use <a href="https://detexify.kirelabs.org/classify.html">Detexify</a> to search for a latex symbol by drawing it.</li>
-<li>PDF simulates a piece of paper. It’s terrible for most things done on a computer screen.</li>
-<li>Automate repetitive tasks. Doing so can be like growing a new arm—painful, but handy.</li>
-<li>Use version control fanatically. Check in changes atomically, not in huge chunks. Use branches to try new ideas. I have relearned these lessons many times.</li>
-<li>Learn to track and document all of your work as you go. Use a format based on plain text documents. Those are the only ones that are sure to still work in 20 years.</li>
+<li>When you encounter a new idea, start with the simplest example you can fully understand.</li>
+<li>There’s no sense trying to solve a hard problem if you can’t first solve a simpler version of it.</li>
+<li>Infinity can be incredibly useful, but in applied math, it can be an unwelcome distraction.</li>
 </ul>
 </section>
 <section id="research-computing" class="level2">
@@ -372,16 +359,62 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Numerical experimentation is more like a laboratory science than math. If you don’t develop a system of keeping meticulous track of what you have done, you will go in circles and make big mistakes.</li>
 <li>Clarity in coding is more valuable than cleverness.</li>
-<li>Math is often about the 0.1% of cases that don’t work. Computing should be about the 99.9% that do.</li>
+<li>Math is often about the 1% of cases that don’t work. Computing should mostly be about the 99% that do.</li>
 <li>If you haven’t tested your package, then I don’t trust it.</li>
 </ul>
 </section>
-<section id="math" class="level2">
-<h2 class="anchored" data-anchor-id="math">Math</h2>
+<section id="writing-papers" class="level2">
+<h2 class="anchored" data-anchor-id="writing-papers">Writing papers</h2>
 <ul>
-<li>When you encounter a new idea, start with the simplest example you can fully understand.</li>
-<li>There’s no sense trying to solve a hard problem if you can’t first solve a simpler version of it.</li>
-<li>Infinity can be incredibly useful, but in applied math, it can be an unwelcome distraction.</li>
+<li>Clear writing is clear thinking.</li>
+<li>It’s not enough to be right. You also have to be persuasive.</li>
+<li>It’s hard to be good at writing without doing a lot of reading.</li>
+<li>Most of the effort of writing is rewriting. You have to get something down, but then you have to read it over and over and make improvements.</li>
+<li>Overleaf is pretty good. Pay attention to errors that it logs during processing.</li>
+<li>Use <a href="https://detexify.kirelabs.org/classify.html">Detexify</a> to search for a latex symbol by drawing it.</li>
+</ul>
+</section>
+<section id="managing-references" class="level2">
+<h2 class="anchored" data-anchor-id="managing-references">Managing references</h2>
+<ul>
+<li>Use <a href="https://www.zotero.org/">Zotero</a> to manage your references. Install the browser extension. Also install the Better BibTeX, ZotMeta, and ZotMoov plugins.</li>
+<li>For books, the ISBN is like a serial number. For published articles and software, the DOI serves the same purpose. ArXiv has its own identifier (the arXiv ID). These are meant to be the permanent, unambiguous identifiers, so put them into Zotero. You can click on them there to go to the publisher’s page for the item.</li>
+<li><strong>Every time you encounter an article worth remembering, add it to Zotero.</strong> The easiest way is to click the browser extension button when you are on the article’s page. Zotero will usually generate an accurate entry and attach the PDF to it, if you have access.</li>
+<li>Zotero’s “folders” are really just labels. An item can belong to more than one folder, which is very handy. You can sort them into topical folders if you want, even if the topics overlap.</li>
+<li>If you read PDFs within Zotero, then you can take notes on them right there.</li>
+<li>When you write a paper, create a folder for it and drag references into it. Then you can right-click on the folder and select “Export”, then “Better BibTeX” to generate a .bib file for your paper.</li>
+<li>Let Better BiBTeX generate citation keys for you. They will be unique and consistent, which is what you want. Long keys are fine, as they are more descriptive.</li>
+</ul>
+</section>
+<section id="writing-talks" class="level2">
+<h2 class="anchored" data-anchor-id="writing-talks">Writing talks</h2>
+<ul>
+<li>Always start by thinking about the audience.</li>
+<li>A talk is not a paper. Talks should not have equation numbers, section numbers, figure numbers or captions, or a bibliography.</li>
+<li>You don’t have to use complete sentences or formal grammar.</li>
+<li>Don’t overestimate the audience’s memory. There’s an old rule of “7 plus or minus 2” for the number of things a person can hold in short-term memory.</li>
+<li>Corollary: It’s often a good idea to repeat an equation or picture if it was last seen more than one or two slides ago.</li>
+<li>A talk is both a visual and an auditory experience. Don’t make the audience choose between reading and listening.</li>
+<li>It’s fine to have a page or two of notes to keep yourself on track, as long as you don’t read them aloud verbatim.</li>
+<li>LaTeX beamer has some severe drawbacks.
+<ul>
+<li>Your talk looks like everyone else’s.</li>
+<li>It abstracts away the visual aspect of a talk.</li>
+<li>It makes videos, arrows, shapes, and other useful visual elements unreasonably hard to use, so you end up not using them.</li>
+</ul></li>
+<li>Keynote and PowerPoint are fine. You can use <a href="https://www.chachatelier.fr/latexit/">latexit</a> (Mac) or <a href="https://klatexformula.sourceforge.io/">KLatexFormula</a> (Windows/Linux/Mac) to drag and drop in equations. The only thing that’s hard is to mix text and math within a single line, but it turns out that you don’t often need to do that.</li>
+<li>Rehearse a talk fully at least three times before you give it. Nothing is more cringe than a speaker who seems to be surprised by their own slides.</li>
+</ul>
+</section>
+<section id="tech-tools" class="level2">
+<h2 class="anchored" data-anchor-id="tech-tools">Tech tools</h2>
+<ul>
+<li>Spend 95% of your time working with familiar tools, and 5% trying new ones.</li>
+<li>Any tool that makes it hard to do something essential isn’t the right one.</li>
+<li>PDF simulates a piece of paper. It’s terrible for most things done on screens, which is just about everything.</li>
+<li>Automate repetitive tasks. Doing so can be like growing a new arm—painful, but handy.</li>
+<li>Use version control fanatically. Check in changes atomically, not in huge chunks. Use branches to try new ideas. I have relearned these lessons many times.</li>
+<li>Learn to track and document all of your work as you go. Use a format such as Markdown that is based on plain text. Don’t depend on companies to keep your work accessible for 20 years.</li>
 </ul>
 
 
