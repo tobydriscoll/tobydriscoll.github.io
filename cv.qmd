@@ -227,6 +227,10 @@ See also my [Google Scholar site](https://scholar.google.com/citations?user=V2c1
 
 
 ### Presentations
+- "Rational function approximation by continued fractions." SIAM Annual Meeting, Cleveland, OH. [2026]{.cvdate}
+- "Rational function approximation by continued fractions." Plenary talk at Bengt Fornber's 80th Birthday Conference, Michigan Tech, Houghton, MI. [2026]{.cvdate}
+- "Rectangular pseudospectral methods." Plenary talk at Bengt Fornber's 80th Birthday Conference, Michigan Tech, Houghton, MI. [2026]{.cvdate}
+- "Fast(er) rational function approximation by continued fractions." MIT NMPDE seminar, Cambridge, MA. [2026]{.cvdate}
 - "Computational rational approximation of functions." Plenary speaker, Annual meeting of the Australian Mathematical Society, La Trobe University, Australia. [2025]{.cvdate}
 - "Why your calculator is (slightly) lying—and why that’s OK." Public lecture, Annual meeting of the Australian Mathematical Society, La Trobe University, Australia. [2025]{.cvdate}
 - "A software package for rational approximation." Invited talk at Banff International Research Station, Banff, Alberta. [2025]{.cvdate}
