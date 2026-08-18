@@ -30,7 +30,7 @@ ul > li {
 
 .pubs ul {
     list-style-type:none;
-    counter-reset: item 66;
+    counter-reset: item 67;
 }
 .pubs ul > li {
     counter-increment:item -1;
