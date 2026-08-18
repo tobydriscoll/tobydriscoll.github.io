@@ -7,6 +7,8 @@ description: "An online undergraduate textbook in computational mathematics."
 lightbox: true
 ---
 
+**By T. A. Driscoll and R. J. Braun.**
+
 :::{layout-ncol="2"}
 * **Free online** at [fncbook.com](https://fncbook.com).
 * **Buy in print** at the SIAM bookstore [for MATLAB](https://epubs.siam.org/doi/10.1137/1.9781611975086) or [for Julia](https://epubs.siam.org/doi/10.1137/1.9781611977011). Members of SIAM, including [student members](http://siam.org/students/memberships.php), get a 30% discount. 
