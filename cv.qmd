@@ -113,13 +113,13 @@ See also my [Google Scholar site](https://scholar.google.com/citations?user=V2c1
 ### Preprints
 
 - Driscoll, Tobin A. and Yuxing Zhou. [Stable evaluation of derivatives for barycentric and continued fraction representations of rational functions.](https://doi.org/10.48550/arXiv.2601.10667)  Preprint, arXiv, 2026. 
-- Chen, Q., T. A. Driscoll, and A. Roy. [Operator learning for models of tear film breakup.](https://doi.org/10.48550/arXiv.2601.08001) Preprint, arXiv, 2026.
 - Driscoll, Tobin A. and Yuxing Zhou. [Greedy Thiele continued-fraction approximation on continuum domains in the complex plane.](https://doi.org/10.48550/arXiv.2510.07295) Preprint, arXiv, 2025. 
 
 ### Refereed articles
 
 <!-- set list length in cv.css .pubs element -->
 ::: {.pubs}
+- Chen, Q., Roy, A., and Driscoll, T. A. [Operator learning for models of tear film breakup.](https://academic.oup.com/imammb/advance-article/doi/10.1093/imammb/dqag009/8767527?utm_source=authortollfreelink&utm_campaign=imammb&utm_medium=email&guestAccessKey=721cba54-60e2-40b6-ad58-2e8e7b5dfc49) Mathematical Medicine and Biology: A Journal of the IMA, August 21, 2026, dqag009. DOI: [10.1093/imammb/dqag009](https://dx/doi.org/10.1093/imammb/dqag009).
 - Driscoll, T. A., (2026). [RationalFunctionApproximation.jl: Rational approximation on discrete and continuous domains.](https://doi.org/10.21105/jcon.00208) The Proceedings of the JuliaCon Conferences, 8(86), 208. 
 - Chen, Q., Driscoll, T. A., and Braun, R. J. Evaporation-driven tear film thinning and breakup in two space dimensions. Journal of Engineering Mathematics 149, no. 1 (2024): 5. [10.1007/s10665-024-10407-6](https://doi.org/10.1007/s10665-024-10407-6).
 - Driscoll, T. A., Nakatsukasa, Y., and Trefethen, L. N. (2024). [AAA rational approximation on a continuum.](https://tobydriscoll.net/_docs/driscoll-rational-approximation-continuum-2024.pdf) SIAM Journal on Scientific Computing, 46(2), A929–A952, 2024. [10.1137/23M1570508](https://doi.org/10.1137/23M1570508)
